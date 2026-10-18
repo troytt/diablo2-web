@@ -92,7 +92,7 @@ describe('AutomapView act-mode merge offsets (issue #845)', () => {
         { cellNo: 1, cellX: 1, cellY: 1, xPixel: (1 - 1) * 8, yPixel: (1 + 1) * 4 },
         { cellNo: 1, cellX: 4, cellY: 1, xPixel: (4 - 1) * 8, yPixel: (4 + 1) * 4 },
       ],
-      entrances: [{ x: 5, y: 5, toLevelId: 1 }],
+      entrances: [{ x: 5, y: 5, toLevelId: 3 }],
     })
 
     const automap = new AutomapView({

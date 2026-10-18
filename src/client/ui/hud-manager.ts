@@ -19,6 +19,7 @@
  * - `hud-world-overlays.ts`: Main HUD frame renderer, ground item beams, speech bubbles, chat & cursor layer
  */
 
+import type { PotionShortageKind } from './potion-shortage-badge.ts'
 import { D2FontRenderer } from './font.ts'
 import type { GroundItemLabelBox } from '../../common/items/ground-items.ts'
 import { GlobesHud } from './globes.ts'
@@ -29,9 +30,17 @@ import { BAKED_UI_MANIFEST } from '../../common/items/baked-ui-meta.ts'
 import { resolveHirelingName } from '../../common/units/hireling-table.ts'
 import {
   InventoryPanel,
+  canPlayerUseUiItem,
+  isUiItemUnidentified,
   type EquipSlotId,
   type UiInventoryItem,
 } from './inventory.ts'
+import { upgradeVerdict, type BuildProfile, type UpgradeVerdict } from '../../common/items/item-comparison.ts'
+import { XpRateTracker } from './xp-bar.ts'
+import { onlineItemDataToUiInventoryItem } from '../../common/items/item-bridge.ts'
+import type { ItemData } from '../../netproto/index.ts'
+import { groundLabelDetails, isLootHidden, type ItemInfoConfig } from './ground-item-info.ts'
+import { upgradeSuffix } from './upgrade-marker.ts'
 import { D2_EXPERIENCE_TABLE_99 } from '../../common/skills/formulas.ts'
 import { CharacterSheetPanel, type BaseStatKey } from './character-sheet.ts'
 import { SkillTreePanel } from './skill-tree-panel.ts'
@@ -306,6 +315,7 @@ export interface HudCommandSink {
   vendorRepairAll(): void
   /** Gold dialog mode 3: `0x4F` button 0x14. */
   depositGold(amount: number): void
+  depositAllToStash?(): Promise<unknown>
   /** Gold dialog mode 4: `0x4F` button 0x13. */
   withdrawGold(amount: number): void
   /** Stash panel closed: `0x4F` button 0x12 (no reply). */
@@ -359,7 +369,7 @@ export class HudManager {
   readonly inventory = new InventoryPanel()
   readonly charSheet = new CharacterSheetPanel()
   readonly skillTree = new SkillTreePanel()
-  readonly worldPanels = new WorldPanelsHud()
+  readonly worldPanels = Object.assign(new WorldPanelsHud(), { upgradeVerdictFor: (item: UiInventoryItem) => this.upgradeVerdictFor(item) })
   readonly cursor = new CursorController()
 
   /**
@@ -399,7 +409,14 @@ export class HudManager {
     }
   }
   isRunning = true
-  showGroundLabels = false
+  itemInfo: ItemInfoConfig | null = null
+  private altGroundLabels = false
+  get showGroundLabels(): boolean {
+    return this.altGroundLabels || Boolean(this.itemInfo?.alwaysShow)
+  }
+  set showGroundLabels(shown: boolean) {
+    this.altGroundLabels = shown
+  }
   /** Screen-space (800x600 viewport) ground item label boxes laid out for the current frame. */
   groundItemLabelBoxes: readonly GroundItemLabelBox[] = []
   /** Screen-space (logical viewport) Diablo III-style loot beams for Unique/Set ground items (Issue #957). */
@@ -479,6 +496,16 @@ export class HudManager {
   chatInputOpen = false
   /** D2Client.dll `0x6fb8a468` (`g_wszChatInputBuffer`): active typed string in in-game chat input box. */
   chatInputText = ''
+  showXpBar = false
+  readonly xpRate = new XpRateTracker()
+  upgradeHints = false
+  resolveGroundItem: ((unitId: number) => ItemData | undefined) | null = null
+  resolveBuild: (() => BuildProfile) | null = null
+  private readonly groundUiItems = new WeakMap<ItemData, UiInventoryItem>()
+  private upgradeVerdicts = new Map<UiInventoryItem, UpgradeVerdict | null>()
+  private upgradeMarkersKey = ''
+  autoCombatBadge: { readonly on: boolean; readonly key: string } | null = null
+  potionShortage: PotionShortageKind | null = null
   currentFps = 0
   pingMs = 0
   trade: any = null
@@ -817,7 +844,7 @@ export class HudManager {
       font: D2FontRenderer,
       logicalWidth: number,
       logicalHeight: number,
-    ) => void
+    ) => number | null | void
     onCastTownPortal?: (source?: 'tbk' | 'tsc', item?: UiInventoryItem) => boolean | void
     onDropItemToGround?: (item: UiInventoryItem, mousePos?: { x: number; y: number }) => void
     onDropGoldToGround?: (amount: number, mousePos?: { x: number; y: number }) => void
@@ -839,7 +866,7 @@ export class HudManager {
         font: D2FontRenderer,
         logicalWidth: number,
         logicalHeight: number,
-      ) => void
+      ) => number | null | void
       onCastTownPortal?: (source?: 'tbk' | 'tsc', item?: UiInventoryItem) => boolean | void
       onDropItemToGround?: (item: UiInventoryItem, mousePos?: { x: number; y: number }) => void
       onDropGoldToGround?: (amount: number, mousePos?: { x: number; y: number }) => void
@@ -1776,6 +1803,15 @@ export class HudManager {
     return drinkHudBeltSlot(this, col, shiftToMerc)
   }
 
+  drinkInventoryPotion(itemId: number, code: string): boolean {
+    const sink = this._commandSink
+    if (!sink) return false
+    this.playItemUseUiSound(code)
+    if (sink.onUseInventoryItem) sink.onUseInventoryItem(itemId)
+    else sink.useItem(itemId)
+    return true
+  }
+
   private triggerResurrect(): void {
     triggerHudResurrect(this)
   }
@@ -1848,6 +1884,45 @@ export class HudManager {
 
   private computeActiveSkillDmgString(skillId: number): string {
     return computeHudSkillDamageString(skillId, this)
+  }
+
+  upgradeVerdictFor(item: UiInventoryItem): UpgradeVerdict | null {
+    if (!this.upgradeHints) return null
+    const context = this.inventory.playerContext
+    const build = this.resolveBuild?.()
+    const key = `${Object.values(this.inventory.equipped).map((e) => (typeof e === 'object' && e ? e.id : '-')).join(',')}|${JSON.stringify(context)}|${build?.classIndex}:${[...(build?.skillPoints ?? [])].join(';')}`
+    if (key !== this.upgradeMarkersKey) [this.upgradeVerdicts, this.upgradeMarkersKey] = [new Map(), key]
+    if (!this.upgradeVerdicts.has(item)) {
+      const unidentified = isUiItemUnidentified(item)
+      const requirementsView = unidentified ? { ...item, identified: true, isGambleMystery: false, rawItem: undefined } : item
+      this.upgradeVerdicts.set(item, upgradeVerdict(item, this.inventory.equipped, { canUse: canPlayerUseUiItem(requirementsView, context), unidentified, ...(build ? { build } : {}) }))
+    }
+    return this.upgradeVerdicts.get(item) ?? null
+  }
+
+  setItemInfo(config: ItemInfoConfig | null): void {
+    this.itemInfo = config
+    this.worldPanels.showItemLevel = Boolean(config?.itemLevel)
+  }
+
+  private groundUiItem(data: ItemData): UiInventoryItem {
+    return this.groundUiItems.get(data) ?? this.groundUiItems.set(data, onlineItemDataToUiInventoryItem(data)).get(data)!
+  }
+
+  groundUpgradeVerdict(unitId: number): UpgradeVerdict | null {
+    const data = this.upgradeHints ? this.resolveGroundItem?.(unitId) : undefined
+    return data ? this.upgradeVerdictFor(this.groundUiItem(data)) : null
+  }
+
+  groundLabelSuffix(unitId: number, isEn: boolean): string {
+    const data = this.itemInfo?.labelDetails ? this.resolveGroundItem?.(unitId) : undefined
+    return (data ? groundLabelDetails(data, isEn) : '') + upgradeSuffix(this.groundUpgradeVerdict(unitId))
+  }
+
+  hidesGroundItem(unitId: number): boolean {
+    const filter = this.itemInfo?.lootFilter ?? 'off'
+    const data = filter === 'off' ? undefined : this.resolveGroundItem?.(unitId)
+    return data !== undefined && isLootHidden(data, this.groundUiItem(data).allowedSlots.length > 0, filter)
   }
 
   private buildControlBarState() {

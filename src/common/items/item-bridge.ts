@@ -2367,6 +2367,7 @@ export function onlineItemDataToUiInventoryItem(
       socketed: Boolean(item.socketed || totalSockets > 0),
       runeword: isRuneword,
       ...(isGambleMystery ? { gamble: true } : {}),
+      ...(item.simple ? { simple: true } : {}),
     },
     ...(isGambleMystery ? { isGambleMystery: true } : {}),
     ...(itemVariant !== undefined ? { variant: itemVariant, graphicIndex: itemVariant } : {}),

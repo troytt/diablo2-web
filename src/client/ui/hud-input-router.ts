@@ -1536,6 +1536,7 @@ export function handleHudMouseDown(
           }
         },
         onStashGoldButton: () => hud.openGoldDialog(4),
+        onStashDepositAll: () => void hud.commandSink?.depositAllToStash?.(),
         onVendorBuy: (item, shiftFill) => requireSink('vendorBuy').vendorBuy(serverItemIdOf(item), shiftFill),
         onVendorSell: (item) => requireSink('vendorSell').vendorSell(serverItemIdOf(item)),
         onVendorRepairAll: () => requireSink('vendorRepairAll').vendorRepairAll(),

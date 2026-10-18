@@ -348,7 +348,8 @@ ${paletteLookup}${discardAlpha}
   if (u_lightMode == 1 && u_blendMode == 0 && v_additive == 0 && v_prelit == 0) {
     // 1.13c grid light T[I][C]/255 (room ambient included): texel x vertex colour, like D3D MODULATE / Glide.
     vec4 lightSample = texture(u_lightmap, v_lightUv);
-    outColor = vec4(texel.rgb * lightSample.rgb * v_tint.rgb, texel.a * v_tint.a);
+    float dither = (fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(0.06711056, 0.00583715)))) - 0.5) / 255.0;
+    outColor = vec4(texel.rgb * lightSample.rgb * v_tint.rgb + dither, texel.a * v_tint.a);
   } else if (u_blendMode == 2) {
     // eDrawMode 4 multiply (D2Direct3D 0x6F886C41 ZERO/SRCCOLOR): dst *= src. Transparent / partially transparent
     // texels resolve towards white so they leave the destination unchanged instead of multiplying it to black.
@@ -712,6 +713,8 @@ export class SpriteRenderer {
   get postProcessPassCount(): number {
     return this.postProcessPass?.passCount ?? 0
   }
+
+  pixelScale = 1
 
   /**
    * Configure the logical game viewport dimensions (e.g. `1068x600`) rendered into the offscreen scene FBO
@@ -1847,7 +1850,7 @@ export class SpriteRenderer {
       this.cachedViewportHeight = vpHeight
     }
 
-    const zoom = this.camera.zoom
+    const zoom = this.camera.zoom * this.pixelScale
     if (zoom !== this.cachedZoom) {
       if (typeof gl.uniform1f === 'function') {
         gl.uniform1f(this.uniformZoom, zoom)

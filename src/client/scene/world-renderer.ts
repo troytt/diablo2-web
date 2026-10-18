@@ -2273,8 +2273,10 @@ export function renderSceneSourceFrame(ctx: SceneSourceRenderContext): SceneFram
         : snapshot.playerWorld
     const camX = effectivePlayerWorld.x + panelShiftX
     const camY = effectivePlayerWorld.y + CAMERA_Y_OFFSET
-    const renderCamX = camX + (snapshot.shakeOffsetX ?? 0)
-    const renderCamY = camY + (snapshot.shakeOffsetY ?? 0)
+    const pixelScale = renderer?.pixelScale ?? 1
+    const snapToPixel = (v: number) => Math.round(v * pixelScale) / pixelScale
+    const renderCamX = snapToPixel(camX + (snapshot.shakeOffsetX ?? 0))
+    const renderCamY = snapToPixel(camY + (snapshot.shakeOffsetY ?? 0))
 
     if (renderer !== null) {
       ctx.tileGpuCache?.ensureActPalette(snapshot.actId)
@@ -2821,7 +2823,7 @@ export function renderSceneSourceFrame(ctx: SceneSourceRenderContext): SceneFram
           })
         }
         const forceUniqueSetLabel = alwaysShowUniqueSetLabels && lootBeamQuality !== null
-        if (!showAll && !isUnitHovered && !forceUniqueSetLabel) continue
+        if (!isUnitHovered && ((!showAll && !forceUniqueSetLabel) || hudManager.hidesGroundItem(u.unitId))) continue
         const screenX = itemScreenX
         const screenY = Math.round(u.worldY - 14 - camY + vpH / 2)
         if (screenX < -60 || screenX > vpW + 60 || screenY < -10 || screenY > vpH + 20) {
@@ -2839,9 +2841,10 @@ export function renderSceneSourceFrame(ctx: SceneSourceRenderContext): SceneFram
                 u.goldAmount,
               )
             : undefined
-        const labelText = isEn
-          ? (u.name || meta?.labelEn || rawCode || `Item #${u.unitId}`)
-          : (u.nameZh || meta?.labelZh || u.name || meta?.labelEn || rawCode || `Item #${u.unitId}`)
+        const labelText =
+          (isEn
+            ? (u.name || meta?.labelEn || rawCode || `Item #${u.unitId}`)
+            : (u.nameZh || meta?.labelZh || u.name || meta?.labelEn || rawCode || `Item #${u.unitId}`)) + hudManager.groundLabelSuffix(u.unitId, isEn)
         const color =
           u.itemColor ||
           meta?.color ||

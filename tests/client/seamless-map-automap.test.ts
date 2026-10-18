@@ -496,4 +496,40 @@ describe('Seamless Multi-Level Big Map & Automap Rendering (No Discrete Level Sw
     // Border tile (world tile 15, 5 -> moor local cell 0, 5) was already explored in worldSet when player stood at (14, 5) in Town!
     expect(minimap.isCellExplored(moorMinimapLevel, 0, 5)).toBe(true)
   })
+
+  it('labels only exits leading out of the current area, not a stitched neighbour exit back into it', () => {
+    const townView = makeBorderTestLevelView({
+      areaId: 1,
+      tileOriginX: 0,
+      tileOriginY: 0,
+      layerId: 1,
+      entrances: [{ x: 15, y: 5, interiorX: 15, interiorY: 5, toLevelId: 2, side: null, kind: 'gate' }],
+    })
+    const moorView = makeBorderTestLevelView({
+      areaId: 2,
+      tileOriginX: 15,
+      tileOriginY: 0,
+      layerId: 1,
+      entrances: [
+        { x: 0, y: 5, interiorX: 0, interiorY: 5, toLevelId: 1, side: null, kind: 'gate' },
+        { x: 14, y: 9, interiorX: 14, interiorY: 9, toLevelId: 8, side: null, kind: 'preset' },
+      ],
+    })
+    const viewFor = (areaId: number) => (areaId === 1 ? townView : moorView)
+    const automapView = new AutomapView({
+      mapService: {
+        getActiveAct: () => 0,
+        loadAct: () => townView,
+        getLevelView: viewFor,
+        peekLevelView: viewFor,
+        getLoadedLevelView: viewFor,
+        getConnectedLevelViews: (primaryAreaId: number) => (primaryAreaId === 1 ? [moorView] : [townView]),
+      } as unknown as MapService,
+      initialMode: 'off',
+    })
+    automapView.setContext(0x12345678, 0, 1, townView)
+
+    const exits = automapView.buildMinimapLevel('ENG', 1).markers.filter((m) => m.kind === 'exit')
+    expect(exits.map((m) => m.toLevelId).sort()).toEqual([2, 8])
+  })
 })

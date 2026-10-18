@@ -39,8 +39,8 @@ export type RateLimitAcquireResult = RateLimitDecision
 export type RateLimiterConfig = OutboundRateLimiterConfig
 
 /**
- * Production defaults: 120ms movement coalescing cooldown (`0x01`..`0x04`) so rapid left-click /
- * hold movement commands within the debounce window are coalesced into `pendingMove` and flushed
+ * Production defaults: 120ms movement coalescing cooldown (`0x01`..`0x04`) so hold movement
+ * commands within the debounce window are coalesced into `pendingMove` and flushed
  * on `tick()`, while non-movement commands (skills, interactions, chat) have 0ms interval throttle
  * (#575). Byte-identical wire packet suppression lives in `c2s-identical-dedupe-113c.ts`.
  */
@@ -155,7 +155,7 @@ export class OutboundRateLimiter {
    * If a movement command is throttled by cooldown, it is coalesced as `pendingMove`
    * so `flushPendingMove(nowMs)` can emit the latest cursor destination when the cooldown expires.
    */
-  tryAcquire(cmd: ClientCommand, nowMs: number = performance.now()): RateLimitDecision {
+  tryAcquire(cmd: ClientCommand, nowMs: number = performance.now(), options?: { readonly freshPress?: boolean }): RateLimitDecision {
     this.refillTokens(nowMs)
     const category = classifyClientCommand(cmd)
 
@@ -165,7 +165,7 @@ export class OutboundRateLimiter {
       return { allowed: true, category, retryAfterMs: 0 }
     }
 
-    const minInterval = this.minIntervalForCategory(category)
+    const minInterval = options?.freshPress && category === 'movement' ? 0 : this.minIntervalForCategory(category)
     const lastCatMs = this.lastSentByCategory.get(category)
     if (lastCatMs !== undefined && nowMs - lastCatMs < minInterval) {
       const retryAfterMs = Math.max(1, minInterval - (nowMs - lastCatMs))

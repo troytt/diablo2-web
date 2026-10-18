@@ -96,6 +96,7 @@ import {
 import { Toolbar } from './toolbar/toolbar.ts'
 import { HudModel } from './ui-model/hud-model.ts'
 import type { SceneFrameSnapshot } from './view/scene-source.ts'
+import { syncCrispBackingStore } from './view/crisp-scale.ts'
 import {
   applyViewportProfileToDom,
   getViewportProfile,
@@ -107,6 +108,11 @@ import {
   weatherPanelFromSidePanels,
   weatherWorldDrawnFromSidePanels,
 } from './weather/weather-render-pass.ts'
+
+const togglePortFor = <K extends PropertyKey>(target: Record<K, boolean>, key: K) => ({
+  isEnabled: () => target[key],
+  setEnabled: (enabled: boolean) => void (target[key] = enabled),
+})
 
 const PRELOAD_MONSTER_IDS = [
   'fallen1',
@@ -492,9 +498,7 @@ export async function startPlayApp(options?: {
   })
 
   const hudManager = new HudManager(hudCanvas, {
-    onRenderAutomapOverlay: (ctx, font, logicalWidth, logicalHeight) => {
-      minimap.drawHudOverlay(ctx, font, logicalWidth, logicalHeight)
-    },
+    onRenderAutomapOverlay: (ctx, font, logicalWidth, logicalHeight) => minimap.drawHudOverlay(ctx, font, logicalWidth, logicalHeight),
     onToggleAutomap: () => {
       sessionRef?.hudModel.toggleAutomap()
     },
@@ -624,6 +628,18 @@ export async function startPlayApp(options?: {
     settingsStore,
     enforceClientDefaults: true,
     quickCast: quickCastPort,
+    dragInteract: togglePortFor(session.commandMapper, 'dragInteractMode'),
+    stashDepositAll: togglePortFor(hudManager.worldPanels, 'stashDepositAllEnabled'),
+    xpBar: togglePortFor(hudManager, 'showXpBar'),
+    autoGoldPickup: togglePortFor(session.commandMapper, 'autoGoldPickup'),
+    upgradeHints: togglePortFor(hudManager, 'upgradeHints'),
+    monsterResists: togglePortFor(hudManager.worldPanels, 'showMonsterResists'),
+    itemInfo: { getConfig: () => hudManager.itemInfo, setConfig: (config) => hudManager.setItemInfo(config) },
+    autoCombat: { getKey: () => session.commandMapper.autoCombatKey, setKey: (key) => void (session.commandMapper.autoCombatKey = key) },
+    autoPotion: {
+      getThresholds: () => session.commandMapper.autoPotionThresholds,
+      setThresholds: (thresholds) => void (session.commandMapper.autoPotionThresholds = thresholds),
+    },
   })
   const pluginMenu = new PluginMenu({
     host: plugins,
@@ -1630,7 +1646,7 @@ export async function startPlayApp(options?: {
   // `push 0xa ; call [Sleep]` @0x6FAECB94). Hidden tabs get no requestAnimationFrame, so a
   // timer runs the owed ticks until the tab is visible again.
   let hiddenTickTimer: ReturnType<typeof setInterval> | null = null
-  let lastWorldRenderMs: number | null = null
+  let nextWorldRenderMs: number | null = null
   trackListener(document, 'visibilitychange', () => {
     if (document.hidden) {
       if (hiddenTickTimer === null) {
@@ -1721,16 +1737,10 @@ export async function startPlayApp(options?: {
     // only the world+HUD draw is postponed.
     const worldRenderFpsCap = settingsStore.get().worldRenderFps === 30 ? 30 : 0
     if (worldRenderFpsCap > 0) {
-      // 2ms slack: rAF timestamps jitter ±0.5ms, and an exact-multiple cap
-      // (e.g. 33.3ms on 60Hz) otherwise flaps at the boundary and skips to the
-      // next frame slot (a "30" cap measuring ~22).
-      const capMs = 1000 / worldRenderFpsCap - 2
-      if (lastWorldRenderMs !== null && nowMs - lastWorldRenderMs < capMs) {
-        return
-      }
-    }
-    lastWorldRenderMs = nowMs
-
+      const frameMs = 1000 / worldRenderFpsCap
+      if (nextWorldRenderMs !== null && nowMs < nextWorldRenderMs - 2) return
+      nextWorldRenderMs = nextWorldRenderMs === null || nowMs - nextWorldRenderMs > frameMs ? nowMs + frameMs : nextWorldRenderMs + frameMs
+    } else nextWorldRenderMs = null
     const currentSettings = settingsStore.get()
     const profile = getViewportProfile(currentSettings.viewport)
     renderer.setSceneViewportSize(profile.width, profile.height)
@@ -1746,13 +1756,15 @@ export async function startPlayApp(options?: {
       renderer.isPostProcessEnabled() &&
       viewCanvas.clientWidth > 0 &&
       viewCanvas.clientHeight > 0
-    const targetCanvasW = useUpscaledBackbuffer ? Math.max(profile.width, Math.round(cssW * dpr)) : profile.width
-    const targetCanvasH = useUpscaledBackbuffer ? Math.max(profile.height, Math.round(cssH * dpr)) : profile.height
-
-    if (viewCanvas.width !== targetCanvasW || viewCanvas.height !== targetCanvasH) {
-      viewCanvas.width = targetCanvasW
-      viewCanvas.height = targetCanvasH
+    if (useUpscaledBackbuffer) {
+      const targetCanvasW = Math.max(profile.width, Math.round(cssW * dpr))
+      const targetCanvasH = Math.max(profile.height, Math.round(cssH * dpr))
+      if (viewCanvas.width !== targetCanvasW || viewCanvas.height !== targetCanvasH) {
+        viewCanvas.width = targetCanvasW
+        viewCanvas.height = targetCanvasH
+      }
     }
+    renderer.pixelScale = useUpscaledBackbuffer ? 1 : syncCrispBackingStore(viewCanvas, profile.width, profile.height)
 
     lastRenderSnapshot = renderSceneSourceFrame({
       source: session.sceneSource,

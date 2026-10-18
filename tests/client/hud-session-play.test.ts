@@ -419,15 +419,12 @@ describe('Milestone M5 — HudModel, CommandMapper, and OnlineSession', () => {
       expect(predictor.getSnapshot().moving).toBe(true)
       mapper.handlePointerUp(0)
 
-      // 3. Rapid second left-click within 40ms is coalesced by rate limiter and flushed after 120ms
-      const coalescedRec = mapper.handlePointerDown(592, 316, 0, 2040)
-      expect(coalescedRec?.rateLimit.allowed).toBe(false)
-      expect(coalescedRec?.rateLimit.coalesced).toBe(true)
+      const secondRec = mapper.handlePointerDown(592, 316, 0, 2040)
+      expect(secondRec?.rateLimit.allowed).toBe(true)
+      expect(secondRec?.command.type).toBe('Move')
       mapper.handlePointerUp(0)
 
-      const flushed = mapper.tick(2170)
-      expect(flushed).not.toBeNull()
-      expect(flushed?.type).toBe('Move')
+      expect(mapper.tick(2170)).toBeNull()
 
       // 4a. Right-click on empty ground with the default right-hand Attack (#0, a melee skill) and no Shift:
       //     1.13c D2Client walks/runs to the clicked spot instead of swinging in place (Issue #1298).

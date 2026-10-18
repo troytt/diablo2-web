@@ -198,6 +198,7 @@ export const STASH_PANEL_ORIGIN = { x: 80, y: 60, width: 320, height: 432, w: 32
 export const STASH_GRID_ORIGIN = { x: 80 + 74, y: 60 + 82, cols: 6, rows: 8, cellPx: 29 } as const
 /** Panel-relative click rect of the stash gold coin button (inclusive, D2Client stash panel). */
 export const STASH_GOLD_BTN_HIT = { relX0: 73, relX1: 150, relY0: 24, relY1: 41 } as const
+export const STASH_DEPOSIT_ALL_BTN = { relX0: 95, relX1: 220, relY0: 388, relY1: 410 } as const
 
 /**
  * `Panel\TradeStash.dc6` (`public/ui/stash-bg.png`, 320x432 anchored at `ox = 80, oy = 60`)

@@ -1057,7 +1057,7 @@ export class AutomapView {
 
         if (Array.isArray(otherView.entrances)) {
           for (const ent of otherView.entrances) {
-            if (ent.toLevelId > 0 && ent.toLevelId !== otherAreaId) {
+            if (ent.toLevelId > 0 && ent.toLevelId !== otherAreaId && ent.toLevelId !== this.currentAreaId) {
               const entPreRevealed = otherAlwaysPreRevealed
                 ? true
                 : isOtherCellRevealed !== null && isOtherCellRevealed(ent.x, ent.y)

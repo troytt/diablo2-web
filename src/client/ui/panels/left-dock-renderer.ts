@@ -6,11 +6,24 @@ import { BAKED_UI_MANIFEST } from '../../../common/items/baked-ui-meta.ts'
 import { buildQuestLogPage, trueTombSymbolFrame113c, INVPS_FRAME_W, INVPS_FRAME_H, INVPS_DRAW_REL_X, INVPS_DRAW_REL_BOTTOM_Y } from '../../world/quest-log-state.ts'
 import { D2_COLOR_INDEX_TO_NAME, MSG_LOG_MAX_VISIBLE_LINES, resolveChatTblIndex, wrapChatText113c, type WrappedChatLine113c } from '../../../common/chat/chat-113c.ts'
 import { drawStoneBoxFrame } from './npc-dialog-menu.ts'
-import { type LeftDockPanelKind, type WorldPanelType, BARKSCROLL_RUNE_POS, BARKSCROLL_GLOW_POS, BARKSCROLL_STEP_THRESHOLDS, STONE_BOX_BG_FILL, BUTTON_HOVER_BOX_PAD_X, BUTTON_HOVER_BOX_MIN_W, BUTTON_HOVER_BOX_H, BUTTON_HOVER_TEXT_OFFSET_Y, VENDOR_BUTTON_HOVER_ANCHOR_Y, VENDOR_STATUS_TEXT_POS, ACT_TAB_LAYOUT, QUEST_SOCKET_DC6_FRAME, questIconTopLeft113c, questSocketTopLeft113c, hitTestQuestSlot113c, STASH_GRID_ORIGIN, STASH_GOLD_BTN_HIT, CUBE_PANEL_ORIGIN, CUBE_GRID_ORIGIN, CUBE_TRANSMUTE_BTN_BOUNDS, CUBE_CLOSE_BTN_BOUNDS, VENDOR_GRID_ORIGIN, VENDOR_GOLD_BOX_RECESS, VENDOR_BUTTON_TABLE_X, VENDOR_BUTTON_DRAW_Y, VENDOR_BUTTON_HIT_Y_MIN, VENDOR_BUTTON_HIT_Y_MAX, VENDOR_BUTTON_HIT_W, VENDOR_BUTTON_SPECS, resolveVendorButtonLayout, VENDOR_TABS, type UseItemPanelKind, isUseItemPanel, USE_ITEM_LAYOUT, USE_ITEM_INSTRUCTION_TBL, USE_ITEM_BUTTON_TBL, hitTestUseItemButton, hitTestUseItemSlot, wrapUseItemText } from './panel-layout-constants.ts'
+import { type LeftDockPanelKind, type WorldPanelType, BARKSCROLL_RUNE_POS, BARKSCROLL_GLOW_POS, BARKSCROLL_STEP_THRESHOLDS, STONE_BOX_BG_FILL, BUTTON_HOVER_BOX_PAD_X, BUTTON_HOVER_BOX_MIN_W, BUTTON_HOVER_BOX_H, BUTTON_HOVER_TEXT_OFFSET_Y, VENDOR_BUTTON_HOVER_ANCHOR_Y, VENDOR_STATUS_TEXT_POS, ACT_TAB_LAYOUT, QUEST_SOCKET_DC6_FRAME, questIconTopLeft113c, questSocketTopLeft113c, hitTestQuestSlot113c, STASH_GRID_ORIGIN, STASH_GOLD_BTN_HIT, STASH_DEPOSIT_ALL_BTN, CUBE_PANEL_ORIGIN, CUBE_GRID_ORIGIN, CUBE_TRANSMUTE_BTN_BOUNDS, CUBE_CLOSE_BTN_BOUNDS, VENDOR_GRID_ORIGIN, VENDOR_GOLD_BOX_RECESS, VENDOR_BUTTON_TABLE_X, VENDOR_BUTTON_DRAW_Y, VENDOR_BUTTON_HIT_Y_MIN, VENDOR_BUTTON_HIT_Y_MAX, VENDOR_BUTTON_HIT_W, VENDOR_BUTTON_SPECS, resolveVendorButtonLayout, VENDOR_TABS, type UseItemPanelKind, isUseItemPanel, USE_ITEM_LAYOUT, USE_ITEM_INSTRUCTION_TBL, USE_ITEM_BUTTON_TBL, hitTestUseItemButton, hitTestUseItemSlot, wrapUseItemText } from './panel-layout-constants.ts'
 import { questFlagWordIndex, getActQuests, resolveWaypointName, getActWaypoints, WAYPOINT_ROW_OFFSETS_Y, getWaypointRowOffsetY, getWaypointTextOffsetY } from './quest-waypoint-data.ts'
 
 /** D2Client.dll 0x6fb4c32c `mov ebx, 1` -> 0x6fb4c341 PlaySound: store button mousedown sound (Sounds.txt 1 `cursor_pass`). */
 export const VENDOR_BUTTON_PRESS_SOUND_ID = 1
+
+const isInsideRelRect = (x: number, y: number, r: { readonly relX0: number; readonly relX1: number; readonly relY0: number; readonly relY1: number }): boolean =>
+  x >= r.relX0 && x <= r.relX1 && y >= r.relY0 && y <= r.relY1
+
+function drawStashDepositAllButton(ctx: CanvasRenderingContext2D, font: D2FontRenderer, ox: number, oy: number, label: string): void {
+  const { relX0, relX1, relY0, relY1 } = STASH_DEPOSIT_ALL_BTN
+  const [x, y, w, h] = [ox + relX0, oy + relY0, relX1 - relX0, relY1 - relY0]
+  ctx.fillStyle = STONE_BOX_BG_FILL
+  ctx.fillRect(x, y, w, h)
+  ctx.strokeStyle = '#8c7448'
+  ctx.strokeRect(x + 0.5, y + 0.5, w - 1, h - 1)
+  font.drawText(ctx, label, x + w / 2, y + h - 6, { font: 'font16', color: 'gold', align: 'center' })
+}
 
 export function handleMouseMoveImpl(this: WorldPanelsHud, logicalX: number, logicalY: number): void {
   if (this._activePanel === 'hire') {
@@ -358,6 +371,7 @@ export function handleLeftDockClickImpl(
         ) => void
         /** Stash gold coin button: open the withdraw gold dialog. */
         onStashGoldButton?: () => void
+        onStashDepositAll?: () => void
         /** Vendor grid click on a store item (buy / gamble). `shiftFill`: Shift held (0x32 shift-fill flag). */
         onVendorBuy?: (item: UiInventoryItem, shiftFill: boolean) => void
         /** Vendor grid click while holding a cursor item: sell it (0x33). */
@@ -708,6 +722,10 @@ export function handleLeftDockClickImpl(
       return true
     }
   } else if (kind === 'stash') {
+    if (this.stashDepositAllEnabled && isInsideRelRect(logicalX - ox, logicalY - oy, STASH_DEPOSIT_ALL_BTN)) {
+      if (!callbacks.isRightClick) callbacks.onStashDepositAll?.()
+      return true
+    }
     // Stash gold coin button (panel-relative x 73..150, y 24..41): opens the withdraw dialog.
     if (
       logicalX >= ox + STASH_GOLD_BTN_HIT.relX0 &&
@@ -1215,6 +1233,8 @@ export function drawLeftDockPanelImpl(
         align: 'center',
       },
     )
+
+    if (this.stashDepositAllEnabled) drawStashDepositAllButton(ctx, font, ox, oy, this.lang === 'ENG' ? 'Deposit All' : '全部存入')
 
     // 6x8 grid cell borders
     for (let r = 0; r < STASH_GRID_ORIGIN.rows; r++) {

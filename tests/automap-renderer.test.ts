@@ -323,6 +323,34 @@ describe('R3 Authentic 1.13c Isometric Sprite Automap & Minimap UI', () => {
   })
 
   describe('Strict 4-Layer Draw Order (floors -> walls -> objects -> extras) & Scissor Clipping', () => {
+    it('scales the scissor rect to the renderer backing store so a 2x canvas still shows the minimap', () => {
+      const minimap = new Minimap()
+      registerSyntheticAtlases(minimap)
+      minimap.mode = 'minimap'
+      const level = makeAutomapTestLevel()
+      minimap.reveal(level, 4, 4, 0, 320, true)
+
+      const { renderer, scissors } = createMockRenderer()
+      ;(renderer as { pixelScale: number }).pixelScale = 2
+      minimap.draw(
+        renderer,
+        level,
+        4,
+        4,
+        { x: 0, y: 320, zoom: 1 },
+        { width: 800, height: 600 },
+        { playerWorldX: 0, playerWorldY: 320, levelId: 1 },
+      )
+
+      const vp = minimap.lastRenderStats.viewport
+      expect(scissors[0]).toEqual({
+        x: vp.vpX * 2,
+        y: (600 - (vp.vpY + vp.vpH)) * 2,
+        width: vp.vpW * 2,
+        height: vp.vpH * 2,
+      })
+    })
+
     it('draws automap sprites in exact 1.13c layer order and skips cellNo < 0', () => {
       const minimap = new Minimap()
       registerSyntheticAtlases(minimap)
@@ -675,6 +703,7 @@ describe('R3 Authentic 1.13c Isometric Sprite Automap & Minimap UI', () => {
         align?: string
       }[] = []
       const mockFont = {
+        measureText: (text: string) => text.length * 10,
         drawText(
           _ctx: CanvasRenderingContext2D,
           text: string,

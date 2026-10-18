@@ -12,6 +12,7 @@
  */
 
 import { CursorController } from '../ui/cursor.ts'
+import { syncCrispBackingStore } from '../view/crisp-scale.ts'
 import type { FontAtlasMeta } from '../ui/font.ts'
 import {
   CAMPFIRE_CLASS_ORDER,
@@ -1894,6 +1895,9 @@ export class FrontendRenderer {
   private renderInner(nowMs: number): void {
     this.lastRenderNowMs = nowMs
     const ctx = this.ctx
+    const pixelScale = syncCrispBackingStore(this.canvas, 800, 600)
+    ctx.setTransform?.(pixelScale, 0, 0, pixelScale, 0, 0)
+    ctx.imageSmoothingEnabled = false
     ctx.clearRect(0, 0, 800, 600)
 
     switch (this.state.stage) {

@@ -213,6 +213,24 @@ describe('Diablo II 1.13c In-Game Chat System (Issue #910)', () => {
       expect(renderedTexts).toContain('Line 25')
       expect(fillRectCalls.filter((r) => r.fillStyle === 'rgba(0, 0, 0, 0.65)')).toHaveLength(18)
     })
+
+    it('glides the remaining lines up when the top line expires instead of jumping a line', () => {
+      const { canvas, ctx, fillRectCalls } = createMockCanvas(800, 600)
+      const hud = new HudManager(canvas)
+      const line = (text: string, expireAtMs: number) => ({ text, color: 0, createdAtMs: 1000, expireAtMs })
+      hud.chatOverlayMessages = [line('Old', 2010), line('Newer', 9000)]
+      const newerTopAt = (nowMs: number) => {
+        fillRectCalls.length = 0
+        hud.renderChatOverlay(ctx, 800, nowMs)
+        return fillRectCalls.filter((r) => r.fillStyle === 'rgba(0, 0, 0, 0.65)').at(-1)!.y
+      }
+      const before = newerTopAt(2000)
+      const [justExpired, midGlide, settled] = [2016, 2066, 2400].map(newerTopAt)
+      expect(justExpired).toBe(before)
+      expect(midGlide).toBeLessThan(before)
+      expect(midGlide).toBeGreaterThan(settled)
+      expect(settled).toBe(before - CHAT_OVERLAY_LINE_HEIGHT)
+    })
   })
 
   describe('R2. Unit Overhead Speech Bubble (!text Overhead Speech, 0x6fb2b470 / 0x6fb2dc00 / 0x6fb2af20)', () => {

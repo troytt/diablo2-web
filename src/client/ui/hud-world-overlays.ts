@@ -23,6 +23,11 @@ import {
   isUiItemEthereal,
 } from './inventory.ts'
 import { requireTbl, type TblLang } from '../i18n/lang.ts'
+import { LineGlide } from './line-glide.ts'
+import { drawXpBar } from './xp-bar.ts'
+import { drawAutoCombatBadge } from './auto-combat-badge.ts'
+import { drawPotionShortageBadge } from './potion-shortage-badge.ts'
+import { drawUpgradeCrosses } from './upgrade-marker.ts'
 import type { GroundItemEnhancementsConfig } from '../settings/client-settings.ts'
 import {
   CHAT_OVERLAY_LINE_HEIGHT,
@@ -35,10 +40,10 @@ import {
   resolveOverheadBubbleText113c,
   wrapChatText113c,
   type OverheadSpeechRect113c,
-  type WrappedChatLine113c,
 } from '../../common/chat/chat-113c.ts'
 import {
   computeDockingLayout,
+  crispHudDpr,
   shouldRenderHudFrame,
   type DockingLayout,
 } from './hud-viewport-layout.ts'
@@ -63,7 +68,7 @@ interface HudRenderInternal {
       font: D2FontRenderer,
       logicalWidth: number,
       logicalHeight: number,
-    ) => void
+    ) => number | null | void
   }
   syncResolutionMode(): boolean
   resolveLocalizedMercLabel(merc: any, lang?: TblLang): string
@@ -132,6 +137,8 @@ export function hudRepaintUnchanged(hud: HudManager, nowMs: number): boolean {
     internal.hudCanvas.height,
     hud.mouseX,
     hud.mouseY,
+    hud.autoCombatBadge?.on ?? -1,
+    hud.potionShortage ?? '',
     // On the dedicated cursor layer the animation cell no longer touches the
     // HUD canvas, so it stops participating in the skip signature there.
     ...(internal.cursorCanvas !== null ? [] : [cursorInfo.frame?.x ?? -1, cursorInfo.frame?.y ?? -1]),
@@ -224,6 +231,7 @@ export function renderHudFrame(
   }
   if (
     hud.enableIdleThrottle &&
+    !isHudTextMoving(hud, nowMs) &&
     !shouldRenderHudFrame(internal.lastHudFrameTiming, hud.mouseX, hud.mouseY, nowMs)
   ) {
     return
@@ -238,7 +246,7 @@ export function renderHudFrame(
   // cursor animation cell) and no timed overlay is active, the canvas
   // already shows exactly what a repaint would produce — skip the whole
   // rasterization.
-  if (hud.enableIdleThrottle && internal.hudRepaintUnchanged(nowMs)) {
+  if (hud.enableIdleThrottle && !isHudTextMoving(hud, nowMs) && internal.hudRepaintUnchanged(nowMs)) {
     return
   }
   internal.lastFullHudRepaintMs = nowMs
@@ -246,11 +254,11 @@ export function renderHudFrame(
   const is640 = internal.syncResolutionMode()
   const profile = hud.viewportProfile
   const hasWindow = typeof window !== 'undefined'
-  const dpr = Math.min(hasWindow && window.devicePixelRatio ? window.devicePixelRatio : 1, 2)
   const winW = hasWindow && window.innerWidth ? window.innerWidth : profile.width
   const winH = hasWindow && window.innerHeight ? window.innerHeight : profile.height
   const cssW = Math.max(320, internal.hudCanvas.clientWidth || winW)
   const cssH = Math.max(240, internal.hudCanvas.clientHeight || winH)
+  const dpr = crispHudDpr(cssW, cssH, profile)
   const targetW = Math.round(cssW * dpr)
   const targetH = Math.round(cssH * dpr)
   if (internal.hudCanvas.width !== targetW || internal.hudCanvas.height !== targetH) {
@@ -291,14 +299,9 @@ export function renderHudFrame(
   ctx.clearRect(0, 0, targetW, targetH)
 
   // 0. Automap 2D Text Overlay (Warp/Stash Font6 labels, NPC names, Top-Right Gold Font16 Level Name + Difficulty)
-  // Drawn in full-viewport CSS pixel space (0..cssW, 0..cssH) to align 1:1 with the WebGL automap canvas
-  ctx.save()
-  ctx.scale(dpr, dpr)
-  internal.callbacks.onRenderAutomapOverlay?.(ctx, hud.font, cssW, cssH)
-  ctx.restore()
-
   ctx.translate(Math.round(offsetX * dpr), Math.round(offsetY * dpr))
   ctx.scale(uiScale * dpr, uiScale * dpr)
+  const areaTitleLeft = internal.callbacks.onRenderAutomapOverlay?.(ctx, hud.font, profile.width, profile.height) ?? profile.width
 
   // 0b. Top-Left Mercenary Portrait & Life Bar (R3.3) + Summoned Minions + Party Mini-Portraits (R5.1)
   if (hud.leftPanel === 'none' && hud.showPartyPortraits !== false) {
@@ -452,6 +455,7 @@ export function renderHudFrame(
         color: d2Color,
         align: 'center',
       })
+      drawUpgradeCrosses(ctx, hud.font, box.text, hud.groundUpgradeVerdict(box.id), textCenterX, textBaselineY)
     }
     ctx.restore()
   }
@@ -694,6 +698,14 @@ export function renderHudFrame(
 
   // 2b. Top-Left Real-Time Chat & Event Message Stream Overlay (`D2Client.dll` `0x6fb2b730` `MSG_DrawChatOverlay`)
   hud.renderChatOverlay(ctx, profile.width, nowMs)
+  const overlayLang = hud.lang === 'ENG' ? 'ENG' : 'CHI'
+  if (hud.autoCombatBadge !== null) drawAutoCombatBadge(ctx, hud.font, hud.autoCombatBadge, barOffsetX, barOffsetY, overlayLang)
+  if (hud.potionShortage !== null) drawPotionShortageBadge(ctx, hud.font, hud.potionShortage, barOffsetX, barOffsetY, overlayLang)
+  if (hud.showXpBar && hud.leftPanel === 'none' && hud.rightPanel === 'none' && !hud.worldPanels.escapeMenuOpen) {
+    const xpState = internal.buildControlBarState()
+    hud.xpRate.record(xpState.xp, nowMs)
+    drawXpBar(ctx, hud.font, xpState, profile.width, overlayLang, { perHour: hud.xpRate.perHour(nowMs), mouseX: hud.mouseX, mouseY: hud.mouseY, rightLimit: areaTitleLeft })
+  }
 
   // 3..6. Bottom Control Panel, Globes, Belt, and Skill Hotkeys (translated by barOffsetX, barOffsetY)
   const activeCtrlPnlImg = is640
@@ -1325,6 +1337,18 @@ export function renderOverheadSpeechBubbles(
  * Renders the top-left active chat & event message stream (`10,000 ms` TTL, max 6 wrapped lines per message,
  * max 18 active lines total, portrait & left-panel avoidance, `15px` line height with translucent black rect).
  */
+const chatOverlayGlides = new WeakMap<HudManager, LineGlide>()
+
+const chatOverlayGlide = (hud: HudManager): LineGlide =>
+  chatOverlayGlides.get(hud) ?? chatOverlayGlides.set(hud, new LineGlide()).get(hud)!
+
+const isSpeechAutoScrolling = (speech: HudManager['worldPanels']['npcSpeech']): boolean =>
+  speech?.autoScroll === true && (speech.scrollY ?? 0) < (speech.maxScrollY ?? 0)
+
+const isHudTextMoving = (hud: HudManager, nowMs: number): boolean =>
+  isSpeechAutoScrolling(hud.worldPanels.npcSpeech) ||
+  chatOverlayGlides.get(hud)?.isMoving(nowMs) === true
+
 export function renderChatOverlay(
   hud: HudManager,
   ctx: CanvasRenderingContext2D,
@@ -1356,25 +1380,25 @@ export function renderChatOverlay(
   })
 
   const measureFn = (s: string) => hud.font.measureText(s, 'font16')
-  const allLines: WrappedChatLine113c[] = []
-  for (const msg of activeMsgs) {
-    const wrapped = wrapChatText113c(msg.text, measureFn, layout.maxWrapWidth, msg.color ?? 0)
-    for (const wLine of wrapped) {
-      allLines.push(wLine)
-    }
-  }
+  const allLines = activeMsgs.flatMap((msg) =>
+    wrapChatText113c(msg.text, measureFn, layout.maxWrapWidth, msg.color ?? 0).map((line, wrapIndex) => ({ ...line, key: `${msg.createdAtMs ?? ''}|${msg.text}|${wrapIndex}` })),
+  )
   if (allLines.length === 0) return
 
-  const visibleLines =
-    allLines.length > CHAT_OVERLAY_MAX_ACTIVE_LINES
-      ? allLines.slice(allLines.length - CHAT_OVERLAY_MAX_ACTIVE_LINES)
-      : allLines
+  const visibleStart = Math.max(0, allLines.length - CHAT_OVERLAY_MAX_ACTIVE_LINES)
+  const glide = chatOverlayGlide(hud).update(allLines.map((l) => l.key), visibleStart, allLines.length - visibleStart, CHAT_OVERLAY_LINE_HEIGHT, nowMs)
+  const firstDrawn = Math.max(0, visibleStart - Math.ceil(Math.max(0, glide) / CHAT_OVERLAY_LINE_HEIGHT))
 
   const lang: TblLang = hud.lang === 'ENG' ? 'ENG' : 'CHI'
   ctx.save()
-  for (let i = 0; i < visibleLines.length; i++) {
-    const line = visibleLines[i]!
-    const lineY = layout.startY + i * CHAT_OVERLAY_LINE_HEIGHT
+  if (glide !== 0) {
+    ctx.beginPath()
+    ctx.rect(0, layout.startY - 14, screenWidth, CHAT_OVERLAY_MAX_ACTIVE_LINES * CHAT_OVERLAY_LINE_HEIGHT + 2)
+    ctx.clip()
+  }
+  for (let i = firstDrawn; i < allLines.length; i++) {
+    const line = allLines[i]!
+    const lineY = layout.startY + (i - visibleStart) * CHAT_OVERLAY_LINE_HEIGHT + glide
     const bgX = layout.startX - 5
     const bgY = lineY - 14
     const bgW = Math.max(20, line.width) + 10
@@ -1522,11 +1546,11 @@ export function renderCursorLayer(hud: HudManager, nowMs: number): void {
   const ctx = internal.ensureCanvas2DContext(rawCtx)
   const profile = hud.viewportProfile
   const hasWindow = typeof window !== 'undefined'
-  const dpr = Math.min(hasWindow && window.devicePixelRatio ? window.devicePixelRatio : 1, 2)
   const winW = hasWindow && window.innerWidth ? window.innerWidth : profile.width
   const winH = hasWindow && window.innerHeight ? window.innerHeight : profile.height
   const cssW = Math.max(320, canvas.clientWidth || winW)
   const cssH = Math.max(240, canvas.clientHeight || winH)
+  const dpr = crispHudDpr(cssW, cssH, profile)
   const targetW = Math.round(cssW * dpr)
   const targetH = Math.round(cssH * dpr)
   if (canvas.width !== targetW || canvas.height !== targetH) {

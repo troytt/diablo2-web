@@ -44,6 +44,7 @@ import {
   type PluginInstance,
   type PluginLogger,
   type PluginQuickCastPort,
+  type PluginTogglePort,
   type PluginSessionView,
   type PluginStatus,
   type PluginToolbarContributionSpec,
@@ -106,7 +107,12 @@ export interface PluginDescriptorSnapshot {
   readonly error: string | null
 }
 
-export interface PluginHostOptions {
+const TOGGLE_PORT_NAMES = ['quickCast', 'dragInteract', 'stashDepositAll', 'xpBar', 'autoGoldPickup', 'upgradeHints', 'monsterResists'] as const
+type TogglePortName = (typeof TOGGLE_PORT_NAMES)[number]
+type SettingPortName = 'autoCombat' | 'autoPotion' | 'itemInfo'
+type WiredPortOptions = { readonly [K in Exclude<TogglePortName, 'quickCast'> | SettingPortName]?: PluginContext[K] | null | undefined }
+
+export interface PluginHostOptions extends WiredPortOptions {
   readonly plugins: readonly D2WebPlugin[]
   readonly session: PluginSessionView
   readonly toolbar?: PluginHostToolbarPort | null | undefined
@@ -121,6 +127,11 @@ export interface PluginHostOptions {
    * toggle).
    */
   readonly quickCast?: PluginQuickCastPort | null | undefined
+}
+
+const requireWiredPort = <T>(port: T, name: string, pluginId: string): NonNullable<T> => {
+  if (!port) throw new Error(`[plugin-host] ${name} port is not wired by the composition root (plugin "${pluginId}")`)
+  return port
 }
 
 interface InternalPluginRecord {
@@ -154,9 +165,8 @@ export class PluginHost {
   private fallbackAllowedViewports: readonly ViewportResolution[] =
     DEFAULT_ALLOWED_VIEWPORT_RESOLUTIONS
   private readonly unsubConfig: () => void
-  private readonly quickCastPort: PluginQuickCastPort | null
-  /** Plugins currently claiming Quick Cast (Issue #952); empty set = vanilla behavior. */
-  private readonly quickCastClaims = new Set<string>()
+  private readonly settingPorts: Pick<WiredPortOptions, SettingPortName>
+  private readonly togglePorts: ReadonlyMap<TogglePortName, { readonly port: PluginTogglePort | null; readonly claims: Set<string> }>
   private ready = false
   private destroyed = false
   private startPromise: Promise<void> | null = null
@@ -165,7 +175,8 @@ export class PluginHost {
     validatePluginRegistry(options.plugins)
     this.session = options.session
     this.toolbar = options.toolbar ?? null
-    this.quickCastPort = options.quickCast ?? null
+    this.settingPorts = { autoCombat: options.autoCombat, autoPotion: options.autoPotion, itemInfo: options.itemInfo }
+    this.togglePorts = new Map(TOGGLE_PORT_NAMES.map((name) => [name, { port: options[name] ?? null, claims: new Set<string>() }]))
     this.settingsStore = options.settingsStore ?? getGlobalSettingsStore()
     this.enforceClientDefaults = options.enforceClientDefaults ?? false
     this.configStore =
@@ -486,44 +497,41 @@ export class PluginHost {
   }
 
   /**
-   * NOT 1.13c: Per-plugin Quick Cast toggle (Issue #952). Claims are host-tracked so the
+   * NOT 1.13c: Per-plugin toggle (Quick Cast, Issue #952). Claims are host-tracked so the
    * capability is released automatically on deactivate; the last release restores the
    * vanilla select-on-press behavior.
    */
-  private createQuickCastPort(
-    record: InternalPluginRecord,
-    isDisposed: () => boolean,
-  ): PluginQuickCastPort {
+  private createClaimedTogglePort(record: InternalPluginRecord, isDisposed: () => boolean, name: TogglePortName): PluginTogglePort {
     const pluginId = record.plugin.id
-    const requirePort = (): PluginQuickCastPort => {
-      if (!this.quickCastPort) {
-        throw new Error(
-          `[plugin-host] quickCast port is not wired by the composition root (plugin "${pluginId}")`,
-        )
-      }
-      return this.quickCastPort
-    }
+    const { port, claims } = this.togglePorts.get(name)!
     return {
-      isEnabled: (): boolean => this.quickCastClaims.size > 0,
-      setEnabled: (enabled: boolean): void => {
+      isEnabled: () => claims.size > 0,
+      setEnabled: (enabled) => {
         if (isDisposed()) return
-        requirePort()
+        const wiredPort = requireWiredPort(port, name, pluginId)
         const release = (): void => {
           record.disposers.delete(release)
-          this.quickCastClaims.delete(pluginId)
-          if (this.quickCastClaims.size === 0 && this.quickCastPort) {
-            this.quickCastPort.setEnabled(false)
-          }
+          claims.delete(pluginId)
+          if (claims.size === 0) wiredPort.setEnabled(false)
         }
-        if (enabled) {
-          if (this.quickCastClaims.has(pluginId)) return
-          this.quickCastClaims.add(pluginId)
-          record.disposers.add(release)
-          this.quickCastPort!.setEnabled(true)
-        } else {
-          release()
-        }
+        if (!enabled) return release()
+        if (claims.has(pluginId)) return
+        claims.add(pluginId)
+        record.disposers.add(release)
+        wiredPort.setEnabled(true)
       },
+    }
+  }
+
+  private createWiredPorts(record: InternalPluginRecord, isDisposed: () => boolean): Pick<PluginContext, TogglePortName | SettingPortName> {
+    const pluginId = record.plugin.id
+    const { autoCombat, autoPotion, itemInfo } = this.settingPorts
+    const wired = <K extends SettingPortName>(name: K) => requireWiredPort(this.settingPorts[name], name, pluginId)
+    return {
+      ...(Object.fromEntries(TOGGLE_PORT_NAMES.map((name) => [name, this.createClaimedTogglePort(record, isDisposed, name)])) as Record<TogglePortName, PluginTogglePort>),
+      autoCombat: { getKey: () => autoCombat?.getKey() ?? null, setKey: (key) => wired('autoCombat').setKey(key) },
+      autoPotion: { getThresholds: () => autoPotion?.getThresholds() ?? null, setThresholds: (thresholds) => wired('autoPotion').setThresholds(thresholds) },
+      itemInfo: { getConfig: () => itemInfo?.getConfig() ?? null, setConfig: (config) => wired('itemInfo').setConfig(config) },
     }
   }
 
@@ -1427,7 +1435,7 @@ export class PluginHost {
         }
       })(),
       client: this.createClientCapabilities(record, () => contextDisposed),
-      quickCast: this.createQuickCastPort(record, () => contextDisposed),
+      ...this.createWiredPorts(record, () => contextDisposed),
       lang: (() => {
         const subscribe = (fn: (lang: GameLang) => void): (() => void) => {
           if (contextDisposed) {

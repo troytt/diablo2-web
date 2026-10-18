@@ -580,6 +580,12 @@ describe('BUILTIN_PLUGINS Registry & Built-In Plugin Lifecycles', () => {
         isEnabled: () => false,
         setEnabled() {},
       },
+      ...Object.fromEntries(
+        ['dragInteract', 'stashDepositAll', 'xpBar', 'autoGoldPickup', 'upgradeHints', 'monsterResists'].map((name) => [name, { isEnabled: () => false, setEnabled() {} }]),
+      ),
+      autoCombat: { getKey: () => null, setKey() {} },
+      autoPotion: { getThresholds: () => null, setThresholds() {} },
+      itemInfo: { getConfig: () => null, setConfig() {} },
     })
     await host.start()
 

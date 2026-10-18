@@ -148,6 +148,7 @@ import {
   syncVitalsFromWorldImpl,
 } from './hud-world-sync.ts'
 import { aggregateUnit } from './stat-engine.ts'
+import { depositAllToStash, type StashDepositResult } from './stash-deposit.ts'
 import type { VendorPriceContext, VendorPriceFn, VendorRepairAllFn } from './vendor-price.ts'
 
 export * from './hud-skill-bonuses.ts'
@@ -442,6 +443,11 @@ export class HudModel implements HudCommandSink {
   private bindHudCallbacks(hud: HudManager): void {
     this.boundHudInstance = hud
     hud.commandSink = this
+    hud.resolveGroundItem = (unitId) => this.world.containers.ground.get(unitId)
+    hud.resolveBuild = () => ({
+      classIndex: this.world.self.charClass ?? -1,
+      skillPoints: new Map([...this.world.self.skillEntries.values()].map((s) => [s.skillId, s.baseLevel ?? s.level])),
+    })
     hud.questAlert = this.world.questLog
     if (this.uiSound) {
       hud.onPlayUiSound = (soundId) => {
@@ -1523,6 +1529,12 @@ export class HudModel implements HudCommandSink {
   /** Gold dialog mode 3: `0x4F ClickButton` 0x14 DepositGold. Non-positive amounts send nothing. */
   depositGold(amount: number): void {
     depositGoldImpl(this, amount)
+  }
+
+  private stashDepositRun: Promise<StashDepositResult> | null = null
+
+  depositAllToStash(): Promise<StashDepositResult> {
+    return (this.stashDepositRun ??= depositAllToStash(this, () => this.hudManager?.leftPanel === 'stash').finally(() => void (this.stashDepositRun = null)))
   }
 
   /** Gold dialog mode 4: `0x4F ClickButton` 0x13 WithdrawGold. Non-positive amounts send nothing. */

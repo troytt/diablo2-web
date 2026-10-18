@@ -25,6 +25,7 @@ import {
   type ViewportProfile,
 } from '../view/viewport-profile.ts'
 import type { HudManager } from './hud-manager.ts'
+import { crispRenderDpr, devicePixelRatioOrOne } from '../view/crisp-scale.ts'
 
 export interface GroundItemBeamDescriptor {
   readonly id: number
@@ -85,6 +86,9 @@ export function computeHudLayout(
     physicalOffsetY: Math.round(offsetY * safeDpr),
   }
 }
+
+export const crispHudDpr = (cssW: number, cssH: number, profile: ViewportProfile): number =>
+  crispRenderDpr(computeDockingLayout(cssW, cssH, 1, profile).uiScale, devicePixelRatioOrOne())
 
 /**
  * On-demand HUD repaint decision. The HUD is a 2D canvas covering the viewport

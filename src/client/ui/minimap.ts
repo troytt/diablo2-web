@@ -1362,10 +1362,11 @@ export class Minimap {
     if (gl && typeof gl.enable === 'function' && typeof gl.scissor === 'function') {
       renderer.flush()
       gl.enable(gl.SCISSOR_TEST)
-      const scissorX = Math.max(0, Math.round(vp.vpX))
-      const scissorY = Math.max(0, Math.round(screenH - (vp.vpY + vp.vpH)))
-      const scissorW = Math.max(1, Math.round(vp.vpW))
-      const scissorH = Math.max(1, Math.round(vp.vpH))
+      const pixelScale = renderer.pixelScale ?? 1
+      const scissorX = Math.max(0, Math.round(vp.vpX * pixelScale))
+      const scissorY = Math.max(0, Math.round((screenH - (vp.vpY + vp.vpH)) * pixelScale))
+      const scissorW = Math.max(1, Math.round(vp.vpW * pixelScale))
+      const scissorH = Math.max(1, Math.round(vp.vpH * pixelScale))
       gl.scissor(scissorX, scissorY, scissorW, scissorH)
     }
 
@@ -1935,8 +1936,8 @@ export class Minimap {
     font: D2FontRenderer,
     logicalWidth = 800,
     logicalHeight = 600,
-  ): void {
-    if (!this.visible) return
+  ): number | null {
+    if (!this.visible) return null
 
     const vp = this.lastRenderStats.viewport
     const scaleX = vp.screenWidth > 0 && logicalWidth > 0 ? logicalWidth / vp.screenWidth : 1
@@ -1986,7 +1987,9 @@ export class Minimap {
           shadow: true,
         })
       }
+      return rightX - font.measureText(hudText.levelName, 'font16')
     }
+    return null
   }
 
   /**

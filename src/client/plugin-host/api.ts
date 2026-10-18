@@ -19,6 +19,8 @@ import {
   type LightingPresetConfig,
 } from '../scene/lighting-presets.ts'
 import type { OnlineSession } from '../session/online-session.ts'
+import type { AutoPotionThresholds } from '../input/auto-potion.ts'
+import type { ItemInfoConfig, LootFilter } from '../ui/ground-item-info.ts'
 import {
   DEFAULT_VIEWPORT_RESOLUTION,
   VALID_AUTOMAP_REVEAL_MODES,
@@ -219,6 +221,46 @@ export interface PluginQuickCastPort {
   setEnabled(enabled: boolean): void
 }
 
+export type PluginTogglePort = PluginQuickCastPort
+
+export interface PluginAutoCombatPort {
+  getKey(): string | null
+  setKey(key: string | null): void
+}
+
+export type { AutoPotionThresholds, ItemInfoConfig, LootFilter }
+
+export interface PluginItemInfoPort {
+  getConfig(): ItemInfoConfig | null
+  setConfig(config: ItemInfoConfig | null): void
+}
+
+export interface PluginAutoPotionPort {
+  getThresholds(): AutoPotionThresholds | null
+  setThresholds(thresholds: AutoPotionThresholds | null): void
+}
+
+const ACTIVE_STATUS: PluginStatus = { level: 'ok', text: { zh: '已开启', en: 'Active' } }
+const INACTIVE_STATUS: PluginStatus = { level: 'warn', text: { zh: '未开启', en: 'Inactive' } }
+
+export function createTogglePlugin({
+  port,
+  defaultEnabled = true,
+  ...meta
+}: Pick<D2WebPlugin, 'id' | 'name' | 'description'> & { readonly port: (ctx: PluginContext) => PluginTogglePort; readonly defaultEnabled?: boolean }): D2WebPlugin {
+  return {
+    ...meta,
+    defaultEnabled,
+    activate: (ctx) => {
+      port(ctx).setEnabled(true)
+      return {
+        getStatus: () => (port(ctx).isEnabled() ? ACTIVE_STATUS : INACTIVE_STATUS),
+        deactivate: () => port(ctx).setEnabled(false),
+      }
+    },
+  }
+}
+
 export interface ToolbarContributionPatch {
   readonly label?: LocalizedText | undefined
   readonly tooltip?: LocalizedText | undefined
@@ -281,6 +323,15 @@ export interface PluginContext {
    * host releases it automatically when the plugin deactivates (vanilla behavior restored).
    */
   readonly quickCast: PluginQuickCastPort
+  readonly dragInteract: PluginTogglePort
+  readonly stashDepositAll: PluginTogglePort
+  readonly xpBar: PluginTogglePort
+  readonly autoGoldPickup: PluginTogglePort
+  readonly upgradeHints: PluginTogglePort
+  readonly monsterResists: PluginTogglePort
+  readonly itemInfo: PluginItemInfoPort
+  readonly autoCombat: PluginAutoCombatPort
+  readonly autoPotion: PluginAutoPotionPort
   readonly lang: {
     get(): GameLang
     subscribe(fn: (lang: GameLang) => void): () => void
