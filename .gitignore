@@ -1,0 +1,71 @@
+# 依赖与构建产物（用 npm 脚本可重建）
+node_modules
+node_modules/
+dist/
+dist-game/
+dist-acts/
+*.log
+
+# 用户自备的游戏数据与本机参考源码：体积大 / 无再分发许可，绝不入库
+# 注意用 `samples/*` 而不是 `samples/`：只有父目录本身没被整体排除，才可能反选回
+# `samples/fixtures/`（git 不允许反选被排除目录里的内容）。
+samples/*
+# 夹具美术（自产）与烘焙图集包（原版美术的衍生数据，仓库已私有）入库；
+# 原版 MPQ 与其它的自备数据不入库。
+!samples/fixtures/
+# 图集包不入 Git：63 MB 的索引 PNG 每次重烘都会让仓库再长一份（PNG 无法 delta 压缩）。
+# 改为发布归档，见 README「资源包从哪来」：
+#   https://www.laiseek.xyz/diablo2/assets/d2-packs-<日期>.tar.xz
+#（Gitea 的 Release 附件在本实例上是坏的：任何大小都返回 HTTP 500）
+public/act-packs/
+public/asset-manifest.json
+*.mpq
+# 夹具里的 fixture.mpq 是我们自己生成的（make-map-fixtures.ts），要入库
+!samples/fixtures/*.mpq
+reference/
+Diablo II*/
+
+# 临时调试产物与测试截图
+.tmp/
+scratch/
+proof/
+bugs/
+__pycache__/
+.DS_Store
+.agents/
+.worktrees/
+tests/*.png
+*audit*.png
+public/*audit*.png
+public/ui/*audit*.png
+AGENTS.md
+CLAUDE.md
+BRIEFING.md
+ORIGINAL_REQUEST.md
+PROJECT.md
+TEST_INFRA.md
+TEST_READY.md
+docs/d2kb/
+docs/LOCAL_DATA.md
+
+# 本地烘焙产物目录（避免污染 git status，统一存放在 public/ 下并由 npm run bake 自动重建）
+public/act-packs/
+public/anim/
+public/asset-manifest.json
+public/chars/
+public/entities/
+public/missiles/
+public/overlays/
+public/packs/
+public/skills/
+public/sound/
+public/ui/
+public/weather/
+
+# 覆盖率报告由 `npm run test:coverage` 生成，可随时重建
+coverage/
+
+# 首页「最近更新」与联系方式静态数据文件（由服务器本地独立维护，不入 Git）
+public/updates.json
+
+

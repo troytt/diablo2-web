@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diablo II: Lord of Destruction · 击杀统计 (Kill Statistics)</title>
+    <style>
+      @font-face {
+        font-family: "D2Exocet";
+        src: url("/ui/fonts/D2Exocet.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2Formal436";
+        src: url("/ui/fonts/D2Formal436.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: dark;
+        --font-display: "D2Exocet", "Cinzel", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", serif;
+        --font-body: "D2Formal436", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", serif;
+        --d2-bg: #080706;
+        --d2-panel: #12100d;
+        --d2-panel-alt: #181510;
+        --d2-border: #3d3322;
+        --d2-gold: #c7b377;
+        --d2-gold-bright: #e8d28c;
+        --d2-text: #d9d0be;
+        --d2-muted: #938873;
+        --d2-danger: #c94a4a;
+        --d2-hc: #d84b39;
+        --d2-ladder: #58a6ff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: var(--d2-bg);
+        color: var(--d2-text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      #d2-stats-app,
+      .d2-stats-shell {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .d2-stats__sidebar {
+        width: 300px;
+        min-width: 260px;
+        max-width: 340px;
+        height: 100vh;
+        overflow-y: auto;
+        background: var(--d2-panel);
+        border-right: 1px solid var(--d2-border);
+        padding: 16px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .d2-stats__main {
+        flex: 1 1 auto;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 20px 24px 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .d2-stats__sidebar-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--d2-border);
+      }
+      .d2-stats__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 16px;
+        color: var(--d2-gold);
+        letter-spacing: 0.04em;
+      }
+      .d2-stats__sidebar-section-title {
+        font-size: 12px;
+        color: var(--d2-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .d2-stats__all-btn,
+      .d2-stats__account-btn,
+      .d2-stats__char-btn {
+        width: 100%;
+        text-align: left;
+        background: var(--d2-panel-alt);
+        color: var(--d2-text);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-family: var(--font-body);
+        font-size: 13px;
+        transition: border-color 0.15s ease, background 0.15s ease;
+      }
+      .d2-stats__all-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+      .d2-stats__account-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        color: var(--d2-gold);
+      }
+      .d2-stats__all-btn:hover,
+      .d2-stats__account-btn:hover,
+      .d2-stats__char-btn:hover {
+        border-color: var(--d2-gold);
+      }
+      .d2-stats__nav-item--active {
+        border-color: var(--d2-gold-bright);
+        background: #251e13;
+        box-shadow: inset 0 0 0 1px rgba(199, 179, 119, 0.35);
+      }
+      .d2-stats__account-tree {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .d2-stats__account-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .d2-stats__char-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 10px;
+        border-left: 1px solid var(--d2-border);
+      }
+      .d2-stats__char-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .d2-stats__char-meta {
+        display: flex;
+         flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+        font-size: 11px;
+        color: var(--d2-muted);
+      }
+      .d2-stats__nav-count {
+        font-variant-numeric: tabular-nums;
+        color: var(--d2-gold);
+        font-size: 12px;
+      }
+      .d2-stats__badge {
+        display: inline-block;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: 700;
+        border: 1px solid var(--d2-border);
+        background: #1d1912;
+        color: var(--d2-gold);
+      }
+      .d2-stats__badge--hc {
+        color: #ff8b7b;
+        border-color: rgba(216, 75, 57, 0.6);
+        background: rgba(216, 75, 57, 0.14);
+      }
+      .d2-stats__badge--ladder {
+        color: #8cc4ff;
+        border-color: rgba(88, 166, 255, 0.5);
+        background: rgba(88, 166, 255, 0.12);
+      }
+      .d2-stats__badge--boss {
+        color: #f3b562;
+        border-color: rgba(243, 181, 98, 0.5);
+      }
+      .d2-stats__badge--su {
+        color: #d2b4ff;
+        border-color: rgba(185, 140, 255, 0.45);
+      }
+      .d2-stats__banner {
+        padding: 10px 14px;
+        border-radius: 4px;
+        font-size: 13px;
+        border: 1px solid var(--d2-border);
+      }
+      .d2-stats__banner--error {
+        background: rgba(201, 74, 74, 0.18);
+        border-color: var(--d2-danger);
+        color: #ffd0d0;
+      }
+      .d2-stats__banner--info {
+        background: rgba(199, 179, 119, 0.14);
+        border-color: var(--d2-gold);
+        color: var(--d2-gold-bright);
+      }
+      .d2-stats__banner--warn {
+        display: block;
+        border-color: rgba(215, 168, 78, 0.58);
+        background: rgba(58, 41, 14, 0.85);
+        color: #f0d699;
+        margin-bottom: 10px;
+      }
+      .d2-stats__banner--warn[hidden] {
+        display: none !important;
+      }
+      .d2-stats__summary-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(130px, 1fr));
+        gap: 12px;
+      }
+      .d2-stats__card {
+        background: var(--d2-panel);
+        border: 1px solid var(--d2-border);
+        border-radius: 6px;
+        padding: 12px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .d2-stats__card--total {
+        border-color: var(--d2-gold);
+      }
+      .d2-stats__card-label {
+        font-size: 12px;
+        color: var(--d2-muted);
+      }
+      .d2-stats__card-val {
+        font-family: var(--font-display);
+        font-size: 24px;
+        color: var(--d2-gold-bright);
+        font-variant-numeric: tabular-nums;
+      }
+      .d2-stats__controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: var(--d2-panel);
+        border: 1px solid var(--d2-border);
+        border-radius: 6px;
+        padding: 10px 14px;
+      }
+      .d2-stats__controls-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+      }
+      .d2-stats__checkbox-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .d2-stats__btn {
+        background: var(--d2-panel-alt);
+        color: var(--d2-gold);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 6px 11px;
+        font-family: var(--font-body);
+        font-size: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .d2-stats__btn:hover:not(:disabled) {
+        border-color: var(--d2-gold);
+        color: var(--d2-gold-bright);
+      }
+      .d2-stats__btn:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+      .d2-stats__btn--danger {
+        color: #ff9c9c;
+        border-color: rgba(201, 74, 74, 0.5);
+      }
+      .d2-stats__section {
+        background: var(--d2-panel);
+        border: 1px solid var(--d2-border);
+        border-radius: 6px;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .d2-stats__section-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .d2-stats__title-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .d2-stats__section-title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 16px;
+        color: var(--d2-gold);
+      }
+      .d2-stats__section-subtitle {
+        font-size: 12px;
+        color: var(--d2-muted);
+        margin-top: 2px;
+      }
+      .d2-stats__section-badge {
+        background: var(--d2-panel-alt);
+        border: 1px solid var(--d2-border);
+        color: var(--d2-gold);
+        border-radius: 12px;
+        padding: 2px 10px;
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+      .d2-stats__search-input {
+        background: var(--d2-bg);
+        color: var(--d2-text);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 6px 10px;
+        min-width: 240px;
+        font-family: var(--font-body);
+        font-size: 13px;
+      }
+      .d2-stats__table-wrap {
+        width: 100%;
+        overflow-x: auto;
+      }
+      .d2-stats__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+      .d2-stats__table th,
+      .d2-stats__table td {
+        padding: 7px 10px;
+        border-bottom: 1px solid #241e15;
+        text-align: left;
+      }
+      .d2-stats__table th {
+        color: var(--d2-gold);
+        font-weight: 600;
+        background: #17130d;
+      }
+      .d2-stats__table .d2-stats__num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      .d2-stats__num--total {
+        color: var(--d2-gold-bright);
+        font-weight: 700;
+      }
+      .d2-stats__entity-name {
+        font-weight: 600;
+        color: var(--d2-text);
+      }
+      .d2-stats__entity-subtitle {
+        margin-left: 8px;
+        font-size: 11px;
+        color: var(--d2-muted);
+        font-family: monospace;
+      }
+      .d2-stats__sort-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+        padding: 0;
+      }
+      .d2-stats__table-empty,
+      .d2-stats__sidebar-empty {
+        text-align: center;
+        color: var(--d2-muted);
+        padding: 18px 8px;
+        font-size: 13px;
+      }
+      .d2-stats__empty-state {
+        background: var(--d2-panel);
+        border: 1px dashed var(--d2-border);
+        border-radius: 6px;
+        padding: 18px 20px;
+      }
+      .d2-stats__empty-title {
+        margin: 0 0 6px;
+        font-family: var(--font-display);
+        font-size: 15px;
+        color: var(--d2-gold);
+      }
+      .d2-stats__empty-body {
+        margin: 0;
+        font-size: 13px;
+        color: var(--d2-muted);
+        line-height: 1.5;
+      }
+      .d2-stats__footnote {
+        font-size: 12px;
+        color: var(--d2-muted);
+        line-height: 1.5;
+        padding-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d2-stats-app"></div>
+    <script type="module" src="/plugins/kill-stats/page-main.ts"></script>
+  </body>
+</html>

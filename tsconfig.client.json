@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": [],
+    "noEmit": true
+  },
+  "include": [
+    "src/client/**/*.ts",
+    "src/common/**/*.ts",
+    "src/common/**/*.d.ts",
+    "src/netproto/**/*.ts",
+    "plugins/**/*.ts"
+  ],
+  "exclude": [
+    "src/server",
+    "src/server/**",
+    "src/baker",
+    "src/baker/**",
+    "tools",
+    "tools/**",
+    "tests",
+    "tests/**"
+  ]
+}

@@ -1,0 +1,491 @@
+/**
+ * Deterministic 1.13c Binary Table Extractor (`D2Net.dll`, `Fog.dll`, `D2Client.dll`).
+ *
+ * Reads the authoritative Diablo II: Lord of Destruction v1.13c DLLs from
+ * `samples/d2` (or `D2_DATA_DIR`), verifies their SHA-1
+ * digests, and generates:
+ * - `src/netproto/d2gs/tables/s2c-sizes.ts`
+ * - `src/netproto/d2gs/tables/huffman.ts`
+ */
+
+import { createHash } from 'node:crypto'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const ROOT_DIR = resolve(__dirname, '../../..')
+const D2_DATA_DIR = process.env.D2_DATA_DIR ?? resolve(ROOT_DIR, 'samples/d2')
+
+const EXPECTED_D2NET_SHA1 = '4b2579f301bedc03d2510c911949584d372f59ce'
+const EXPECTED_FOG_SHA1 = 'fc9e40e6b81e8c65703afdaaae010aace85d0969'
+const EXPECTED_D2CLIENT_SHA1 = '26c2b536744ec8bba05dc43150b179313404d5ee'
+
+// D2Net.dll image base & table offsets (1.13c)
+const D2NET_IMAGE_BASE = 0x6fbf0000
+const D2NET_S2C_TABLE_OFFSET = 0x0000a900
+const D2NET_S2C_COUNT = 181 // 0x00..0xB4
+const D2NET_C2S_TABLE_OFFSET = 0x0000abd8
+const D2NET_C2S_COUNT = 113 // 0x00..0x70
+const D2NET_VARLEN_FN_VA = 0x6fbf6750
+const D2NET_SWITCH_INDEX_OFFSET = 0x00006970
+const D2NET_SWITCH_TABLE_OFFSET = 0x00006934
+
+// Fog.dll image base & Huffman table offsets (1.13c)
+const FOG_IMAGE_BASE = 0x6ff50000
+const FOG_HUFFMAN_LENGTHS_OFFSET = 0x0002f210
+const FOG_HUFFMAN_MASKS_OFFSET = 0x0002f310
+const FOG_HUFFMAN_BUILD_FN_VA = 0x6ff6efd0
+const FOG_HUFFMAN_DECOMPRESS_FN_VA = 0x6ff6eda0
+
+// D2Client.dll image base & S->C handler table offset (1.13c)
+const D2CLIENT_IMAGE_BASE = 0x6fab0000
+const D2CLIENT_S2C_HANDLERS_OFFSET = 0x000dde60
+const D2CLIENT_S2C_HANDLERS_COUNT = 175 // 0x00..0xAE
+
+function sha1Hex(buf: Uint8Array): string {
+  return createHash('sha1').update(buf).digest('hex')
+}
+
+function readInt32ArrayLE(buf: Buffer, offset: number, count: number): number[] {
+  const out: number[] = []
+  for (let i = 0; i < count; i++) {
+    out.push(buf.readInt32LE(offset + i * 4))
+  }
+  return out
+}
+
+function readUint32ArrayLE(buf: Buffer, offset: number, count: number): number[] {
+  const out: number[] = []
+  for (let i = 0; i < count; i++) {
+    out.push(buf.readUInt32LE(offset + i * 4))
+  }
+  return out
+}
+
+interface CanonicalHuffmanEntry {
+  readonly symbol: number
+  readonly bitLength: number
+  readonly code: number
+}
+
+/**
+ * Replicates `Fog.10219` (`0x6ff6efd0`) canonical MSB-first Huffman code assignment.
+ */
+function computeCanonicalHuffman(bitLengths: readonly number[]): CanonicalHuffmanEntry[] {
+  const sortedSymbols = Array.from({ length: 256 }, (_, i) => i)
+  sortedSymbols.sort((a, b) => {
+    const lenDiff = bitLengths[b]! - bitLengths[a]!
+    if (lenDiff !== 0) return lenDiff
+    return a - b
+  })
+
+  const codes = new Array<number>(256).fill(0)
+  let code = 0
+  codes[sortedSymbols[0]!] = 0
+  for (let i = 0; i < 255; i++) {
+    const symCur = sortedSymbols[i]!
+    const symNext = sortedSymbols[i + 1]!
+    const shift = bitLengths[symCur]! - bitLengths[symNext]!
+    code = (code + 1) >>> shift
+    codes[symNext] = code
+  }
+
+  return Array.from({ length: 256 }, (_, sym) => ({
+    symbol: sym,
+    bitLength: bitLengths[sym]!,
+    code: codes[sym]!,
+  }))
+}
+
+function formatHex(n: number, width = 2): string {
+  return '0x' + (n >>> 0).toString(16).padStart(width, '0')
+}
+
+function generateS2cSizesTs(
+  d2netSha1: string,
+  d2clientSha1: string,
+  s2cSizes: readonly number[],
+  c2sSizes: readonly number[],
+  varLenJumpTargets: ReadonlyMap<number, number>,
+  d2clientHandlers: readonly { opcode: number; handlerVa: number; expectedSize: number; unitHandlerVa: number }[],
+): string {
+  const s2cRows: string[] = []
+  for (let i = 0; i < s2cSizes.length; i += 16) {
+    const slice = s2cSizes.slice(i, Math.min(i + 16, s2cSizes.length))
+    const comment = `/* ${formatHex(i)}..${formatHex(Math.min(i + 15, s2cSizes.length - 1))} */`
+    s2cRows.push(`  ${comment} ${slice.map(v => String(v).padStart(3, ' ')).join(', ')},`)
+  }
+
+  const c2sRows: string[] = []
+  for (let i = 0; i < c2sSizes.length; i += 16) {
+    const slice = c2sSizes.slice(i, Math.min(i + 16, c2sSizes.length))
+    const comment = `/* ${formatHex(i)}..${formatHex(Math.min(i + 15, c2sSizes.length - 1))} */`
+    c2sRows.push(`  ${comment} ${slice.map(v => String(v).padStart(3, ' ')).join(', ')},`)
+  }
+
+  const varLenEntries: string[] = []
+  for (const [opcode, targetVa] of varLenJumpTargets.entries()) {
+    varLenEntries.push(`  ${formatHex(opcode)}: ${formatHex(targetVa, 8)},`)
+  }
+
+  const handlerEntries: string[] = []
+  for (const h of d2clientHandlers) {
+    handlerEntries.push(
+      `  { opcode: ${formatHex(h.opcode)}, handlerVa: ${formatHex(h.handlerVa, 8)}, expectedSize: ${String(h.expectedSize).padStart(3, ' ')}, unitHandlerVa: ${formatHex(h.unitHandlerVa, 8)} },`,
+    )
+  }
+
+  return `/**
+ * AUTO-GENERATED by \`scripts/extract-d2net-tables.ts\` — DO NOT EDIT MANUALLY.
+ *
+ * Ground-Truth 1.13c Binary Sources:
+ * - \`D2Net.dll\` SHA-1: \`${d2netSha1}\` (ImageBase \`${formatHex(D2NET_IMAGE_BASE, 8)}\`)
+ *   - S->C Size Table: VA \`${formatHex(D2NET_IMAGE_BASE + D2NET_S2C_TABLE_OFFSET, 8)}\`, FileOffset \`${formatHex(D2NET_S2C_TABLE_OFFSET, 6)}\` (${D2NET_S2C_COUNT} entries, opcodes 0x00..0xB4)
+ *   - S->C Variable-Length Resolver \`D2NET_10033\`: VA \`${formatHex(D2NET_VARLEN_FN_VA, 8)}\`, FileOffset \`0x006750\`
+ *   - C->S Size Table: VA \`${formatHex(D2NET_IMAGE_BASE + D2NET_C2S_TABLE_OFFSET, 8)}\`, FileOffset \`${formatHex(D2NET_C2S_TABLE_OFFSET, 6)}\` (${D2NET_C2S_COUNT} entries, opcodes 0x00..0x70)
+ * - \`D2Client.dll\` SHA-1: \`${d2clientSha1}\` (ImageBase \`${formatHex(D2CLIENT_IMAGE_BASE, 8)}\`)
+ *   - S->C Handler Table: VA \`${formatHex(D2CLIENT_IMAGE_BASE + D2CLIENT_S2C_HANDLERS_OFFSET, 8)}\`, FileOffset \`${formatHex(D2CLIENT_S2C_HANDLERS_OFFSET, 6)}\` (${D2CLIENT_S2C_HANDLERS_COUNT} entries, opcodes 0x00..0xAE)
+ */
+
+export const D2NET_DLL_SHA1 = '${d2netSha1}' as const
+export const D2CLIENT_DLL_SHA1 = '${d2clientSha1}' as const
+
+export const D2NET_S2C_TABLE_VA = ${formatHex(D2NET_IMAGE_BASE + D2NET_S2C_TABLE_OFFSET, 8)} as const
+export const D2NET_S2C_TABLE_FILE_OFFSET = ${formatHex(D2NET_S2C_TABLE_OFFSET, 6)} as const
+export const D2NET_VARLEN_RESOLVER_VA = ${formatHex(D2NET_VARLEN_FN_VA, 8)} as const
+
+export const D2NET_C2S_TABLE_VA = ${formatHex(D2NET_IMAGE_BASE + D2NET_C2S_TABLE_OFFSET, 8)} as const
+export const D2NET_C2S_TABLE_FILE_OFFSET = ${formatHex(D2NET_C2S_TABLE_OFFSET, 6)} as const
+
+export const D2CLIENT_S2C_HANDLERS_VA = ${formatHex(D2CLIENT_IMAGE_BASE + D2CLIENT_S2C_HANDLERS_OFFSET, 8)} as const
+export const D2CLIENT_S2C_HANDLERS_FILE_OFFSET = ${formatHex(D2CLIENT_S2C_HANDLERS_OFFSET, 6)} as const
+
+/**
+ * 181-entry S->C packet size table (\`0x00..0xB4\`) from \`D2Net.dll\` @ \`0x6fbfa900\`.
+ * - \`> 0\`: fixed byte length (including the 1-byte opcode)
+ * - \`-1\`: variable length resolved by \`D2NET_10033\` (\`0x6fbf6750\`)
+ * - \`0\`: invalid / unused opcode
+ */
+export const S2C_PACKET_SIZES: readonly number[] = [
+${s2cRows.join('\n')}
+] as const
+
+/**
+ * 113-entry C->S packet size table (\`0x00..0x70\`) from \`D2Net.dll\` @ \`0x6fbfabd8\`.
+ * - \`> 0\`: fixed byte length (including the 1-byte opcode)
+ * - \`-1\`: variable length resolved by \`D2NET_10006\` (\`0x6fbf65d0\`)
+ * - \`0\`: invalid / unused opcode
+ */
+export const C2S_PACKET_SIZES: readonly number[] = [
+${c2sRows.join('\n')}
+] as const
+
+/**
+ * Switch jump targets in \`D2Net.dll\` \`D2NET_10033\` (\`0x6fbf6750\`) for the 14 variable-length S->C opcodes.
+ */
+export const S2C_VARLEN_SWITCH_VAS: Readonly<Record<number, number>> = {
+${varLenEntries.join('\n')}
+} as const
+
+export interface D2ClientHandlerEntry {
+  readonly opcode: number
+  readonly handlerVa: number
+  readonly expectedSize: number
+  readonly unitHandlerVa: number
+}
+
+/**
+ * 175-entry S->C handler table (\`0x00..0xAE\`) from \`D2Client.dll\` @ \`0x6fb8de60\`.
+ */
+export const D2CLIENT_S2C_HANDLERS: readonly D2ClientHandlerEntry[] = [
+${handlerEntries.join('\n')}
+] as const
+
+export type S2cSizeResolution =
+  | { readonly status: 'ok'; readonly size: number }
+  | { readonly status: 'incomplete' }
+  | { readonly status: 'invalid'; readonly opcode: number; readonly reason: string }
+
+/**
+ * Exact implementation of \`D2NET_10033_GetServerPacketSize\` (\`0x6fbf6750\`) and caller
+ * buffer check (\`0x6fbf6db6\`).
+ *
+ * @param buf - Buffer containing decompressed S->C packet stream.
+ * @param offset - Start index of the packet in \`buf\`.
+ * @param availableLen - Number of readable bytes starting at \`offset\`.
+ */
+export function resolveS2cPacketSize(
+  buf: Uint8Array,
+  offset = 0,
+  availableLen = buf.length - offset,
+): S2cSizeResolution {
+  if (availableLen <= 0) {
+    return { status: 'incomplete' }
+  }
+  const opcode = buf[offset]!
+  if (opcode >= S2C_PACKET_SIZES.length) {
+    return { status: 'invalid', opcode, reason: \`opcode \${opcode} >= 0xB5 out of range\` }
+  }
+  const tableEntry = S2C_PACKET_SIZES[opcode]!
+  if (tableEntry === 0) {
+    return { status: 'invalid', opcode, reason: \`opcode 0x\${opcode.toString(16).padStart(2, '0')} has size 0 in D2Net.dll table\` }
+  }
+  if (tableEntry > 0) {
+    if (availableLen < tableEntry) {
+      return { status: 'incomplete' }
+    }
+    return { status: 'ok', size: tableEntry }
+  }
+
+  // Variable-length S->C packets (tableEntry === -1), matching D2NET_10033 switch @ 0x6fbf6934
+  let size = 0
+  switch (opcode) {
+    case 0x16: {
+      // VA 0x6fbf67a4: u16 LE at +1 (min 3 bytes for header; D2Net checks >= 13)
+      if (availableLen < 3) return { status: 'incomplete' }
+      size = buf[offset + 1]! | (buf[offset + 2]! << 8)
+      break
+    }
+    case 0x26: {
+      // VA 0x6fbf67b8: 10-byte fixed prefix + null-terminated charName + null-terminated text
+      if (availableLen < 10) return { status: 'incomplete' }
+      let p = offset + 10
+      const end = offset + availableLen
+      while (p < end && buf[p] !== 0) p++
+      if (p >= end) return { status: 'incomplete' }
+      p++ // skip first NUL
+      while (p < end && buf[p] !== 0) p++
+      if (p >= end) return { status: 'incomplete' }
+      p++ // skip second NUL
+      size = p - offset
+      break
+    }
+    case 0x3e: {
+      // VA 0x6fbf6834: u8 size at +1
+      if (availableLen < 2) return { status: 'incomplete' }
+      size = buf[offset + 1]!
+      break
+    }
+    case 0x5b: {
+      // VA 0x6fbf67f4: u16 LE size at +1 (PlayerInGame, min 34 bytes in D2Net)
+      if (availableLen < 3) return { status: 'incomplete' }
+      size = buf[offset + 1]! | (buf[offset + 2]! << 8)
+      break
+    }
+    case 0x94: {
+      // VA 0x6fbf6808: BaseSkillLevels, (buf[1] + 2) * 3 = 6 + 3 * count
+      if (availableLen < 2) return { status: 'incomplete' }
+      size = (buf[offset + 1]! + 2) * 3
+      break
+    }
+    case 0x9c: {
+      // VA 0x6fbf6820: ItemActionWorld, u8 size at +2
+      if (availableLen < 3) return { status: 'incomplete' }
+      size = buf[offset + 2]!
+      break
+    }
+    case 0x9d: {
+      // VA 0x6fbf6848: ItemActionOwned, u8 size at +2
+      if (availableLen < 3) return { status: 'incomplete' }
+      size = buf[offset + 2]!
+      break
+    }
+    case 0xa6: {
+      // VA 0x6fbf685a: u16 LE size at +2
+      if (availableLen < 4) return { status: 'incomplete' }
+      size = buf[offset + 2]! | (buf[offset + 3]! << 8)
+      break
+    }
+    case 0xa8: {
+      // VA 0x6fbf686e: SetState, u8 size at +6
+      if (availableLen < 7) return { status: 'incomplete' }
+      size = buf[offset + 6]!
+      break
+    }
+    case 0xaa: {
+      // VA 0x6fbf6886: AddUnit, u8 size at +6
+      if (availableLen < 7) return { status: 'incomplete' }
+      size = buf[offset + 6]!
+      break
+    }
+    case 0xac: {
+      // VA 0x6fbf689c: AssignNPC, u8 size at +12
+      if (availableLen < 13) return { status: 'incomplete' }
+      size = buf[offset + 12]!
+      break
+    }
+    case 0xae: {
+      // VA 0x6fbf68b4: WardenRequest, u16 LE payloadLen at +1 (if <= 0x1fd, payloadLen + 3, else 3)
+      if (availableLen < 3) return { status: 'incomplete' }
+      const payloadLen = buf[offset + 1]! | (buf[offset + 2]! << 8)
+      size = (payloadLen <= 0x1fd ? payloadLen : 0) + 3
+      break
+    }
+    case 0xaf: {
+      // VA 0x6fbf68db: CompressionInfo, buf[1] == 0 ? 2 : buf[1] + 1
+      if (availableLen < 2) return { status: 'incomplete' }
+      size = buf[offset + 1] === 0 ? 2 : buf[offset + 1]! + 1
+      break
+    }
+    case 0xb3: {
+      // VA 0x6fbf6907: SaveDataChunk, buf[1] + 7
+      if (availableLen < 2) return { status: 'incomplete' }
+      size = buf[offset + 1]! + 7
+      break
+    }
+    default:
+      return { status: 'invalid', opcode, reason: \`unhandled variable-length opcode 0x\${opcode.toString(16)}\` }
+  }
+
+  if (size <= 0) {
+    return { status: 'invalid', opcode, reason: \`variable-length opcode 0x\${opcode.toString(16)} computed non-positive size \${size}\` }
+  }
+  if (availableLen < size) {
+    return { status: 'incomplete' }
+  }
+  return { status: 'ok', size }
+}
+`
+}
+
+function generateHuffmanTs(
+  fogSha1: string,
+  bitLengths: readonly number[],
+  bitMasks: readonly number[],
+  canonical: readonly CanonicalHuffmanEntry[],
+): string {
+  const lenRows: string[] = []
+  for (let i = 0; i < 256; i += 16) {
+    const slice = bitLengths.slice(i, i + 16)
+    const comment = `/* ${formatHex(i)}..${formatHex(i + 15)} */`
+    lenRows.push(`  ${comment} ${slice.map(v => formatHex(v)).join(', ')},`)
+  }
+
+  const codeRows: string[] = []
+  for (let i = 0; i < 256; i += 8) {
+    const slice = canonical.slice(i, i + 8)
+    const comment = `/* ${formatHex(i)}..${formatHex(i + 7)} */`
+    codeRows.push(`  ${comment} ${slice.map(e => formatHex(e.code)).join(', ')},`)
+  }
+
+  return `/**
+ * AUTO-GENERATED by \`scripts/extract-d2net-tables.ts\` — DO NOT EDIT MANUALLY.
+ *
+ * Ground-Truth 1.13c Binary Source:
+ * - \`Fog.dll\` SHA-1: \`${fogSha1}\` (ImageBase \`${formatHex(FOG_IMAGE_BASE, 8)}\`)
+ *   - Static Huffman Bit-Length Table (\`g_HuffmanBitLengths[256]\`): VA \`${formatHex(FOG_IMAGE_BASE + FOG_HUFFMAN_LENGTHS_OFFSET, 8)}\`, FileOffset \`${formatHex(FOG_HUFFMAN_LENGTHS_OFFSET, 6)}\`
+ *   - Bit-Mask Table (\`g_BitMasks[16]\`): VA \`${formatHex(FOG_IMAGE_BASE + FOG_HUFFMAN_MASKS_OFFSET, 8)}\`, FileOffset \`${formatHex(FOG_HUFFMAN_MASKS_OFFSET, 6)}\`
+ *   - Canonical Huffman Builder (\`Fog.10219\`): VA \`${formatHex(FOG_HUFFMAN_BUILD_FN_VA, 8)}\`, FileOffset \`0x01efd0\`
+ *   - MSB-First Huffman Decompressor (\`Fog.10224\`): VA \`${formatHex(FOG_HUFFMAN_DECOMPRESS_FN_VA, 8)}\`, FileOffset \`0x01eda0\`
+ */
+
+export const FOG_DLL_SHA1 = '${fogSha1}' as const
+export const FOG_HUFFMAN_LENGTHS_VA = ${formatHex(FOG_IMAGE_BASE + FOG_HUFFMAN_LENGTHS_OFFSET, 8)} as const
+export const FOG_HUFFMAN_LENGTHS_FILE_OFFSET = ${formatHex(FOG_HUFFMAN_LENGTHS_OFFSET, 6)} as const
+export const FOG_HUFFMAN_MASKS_VA = ${formatHex(FOG_IMAGE_BASE + FOG_HUFFMAN_MASKS_OFFSET, 8)} as const
+export const FOG_HUFFMAN_BUILD_VA = ${formatHex(FOG_HUFFMAN_BUILD_FN_VA, 8)} as const
+export const FOG_HUFFMAN_DECOMPRESS_VA = ${formatHex(FOG_HUFFMAN_DECOMPRESS_FN_VA, 8)} as const
+
+/**
+ * 256-entry static Huffman symbol bit-length table (\`0x00..0xFF\`) from \`Fog.dll\` @ \`0x6ff7f210\`.
+ * Bit lengths range from 1 (\`0x00\`) to 11 bits.
+ */
+export const HUFFMAN_BIT_LENGTHS: readonly number[] = [
+${lenRows.join('\n')}
+] as const
+
+/**
+ * 16-entry bit-mask table from \`Fog.dll\` @ \`0x6ff7f310\`.
+ */
+export const HUFFMAN_BIT_MASKS: readonly number[] = [
+  ${bitMasks.map(m => formatHex(m, 4)).join(', ')}
+] as const
+
+/**
+ * 256-entry canonical MSB-first Huffman codewords computed by \`Fog.10219\` (\`0x6ff6efd0\`)
+ * for the default \`HUFFMAN_BIT_LENGTHS\` table.
+ */
+export const HUFFMAN_CODES: readonly number[] = [
+${codeRows.join('\n')}
+] as const
+`
+}
+
+function main(): void {
+  const d2netPath = resolve(D2_DATA_DIR, 'D2Net.dll')
+  const fogPath = resolve(D2_DATA_DIR, 'Fog.dll')
+  const d2clientPath = resolve(D2_DATA_DIR, 'D2Client.dll')
+
+  const d2netBuf = readFileSync(d2netPath)
+  const fogBuf = readFileSync(fogPath)
+  const d2clientBuf = readFileSync(d2clientPath)
+
+  const d2netSha1 = sha1Hex(d2netBuf)
+  const fogSha1 = sha1Hex(fogBuf)
+  const d2clientSha1 = sha1Hex(d2clientBuf)
+
+  if (d2netSha1 !== EXPECTED_D2NET_SHA1) {
+    throw new Error(`D2Net.dll SHA-1 mismatch: expected ${EXPECTED_D2NET_SHA1}, got ${d2netSha1}`)
+  }
+  if (fogSha1 !== EXPECTED_FOG_SHA1) {
+    throw new Error(`Fog.dll SHA-1 mismatch: expected ${EXPECTED_FOG_SHA1}, got ${fogSha1}`)
+  }
+  if (d2clientSha1 !== EXPECTED_D2CLIENT_SHA1) {
+    throw new Error(`D2Client.dll SHA-1 mismatch: expected ${EXPECTED_D2CLIENT_SHA1}, got ${d2clientSha1}`)
+  }
+
+  const s2cSizes = readInt32ArrayLE(d2netBuf, D2NET_S2C_TABLE_OFFSET, D2NET_S2C_COUNT)
+  const c2sSizes = readInt32ArrayLE(d2netBuf, D2NET_C2S_TABLE_OFFSET, D2NET_C2S_COUNT)
+
+  // Extract switch jump table in D2NET_10033 (opcodes 0x16..0xB3)
+  const jumpTableVas = readUint32ArrayLE(d2netBuf, D2NET_SWITCH_TABLE_OFFSET, 15)
+  const varLenJumpTargets = new Map<number, number>()
+  for (let opcode = 0; opcode < s2cSizes.length; opcode++) {
+    if (s2cSizes[opcode] === -1) {
+      const idx = d2netBuf.readUInt8(D2NET_SWITCH_INDEX_OFFSET + (opcode - 0x16))
+      const va = jumpTableVas[idx]
+      if (va === undefined || idx >= 14) {
+        throw new Error(`Unexpected switch index ${idx} for variable-length opcode 0x${opcode.toString(16)}`)
+      }
+      varLenJumpTargets.set(opcode, va)
+    }
+  }
+
+  // Extract D2Client.dll S->C handler table (175 entries of 12 bytes)
+  const d2clientHandlers: { opcode: number; handlerVa: number; expectedSize: number; unitHandlerVa: number }[] = []
+  for (let opcode = 0; opcode < D2CLIENT_S2C_HANDLERS_COUNT; opcode++) {
+    const off = D2CLIENT_S2C_HANDLERS_OFFSET + opcode * 12
+    const handlerVa = d2clientBuf.readUInt32LE(off)
+    const expectedSize = d2clientBuf.readInt32LE(off + 4)
+    const unitHandlerVa = d2clientBuf.readUInt32LE(off + 8)
+    d2clientHandlers.push({ opcode, handlerVa, expectedSize, unitHandlerVa })
+  }
+
+  // Extract Fog.dll Huffman tables
+  const bitLengths: number[] = []
+  for (let i = 0; i < 256; i++) {
+    bitLengths.push(fogBuf.readUInt8(FOG_HUFFMAN_LENGTHS_OFFSET + i))
+  }
+  const bitMasks = readUint32ArrayLE(fogBuf, FOG_HUFFMAN_MASKS_OFFSET, 16)
+  const canonical = computeCanonicalHuffman(bitLengths)
+
+  const outDir = resolve(ROOT_DIR, 'src/netproto/d2gs/tables')
+  mkdirSync(outDir, { recursive: true })
+
+  const s2cSizesPath = resolve(outDir, 's2c-sizes.ts')
+  const huffmanPath = resolve(outDir, 'huffman.ts')
+
+  writeFileSync(
+    s2cSizesPath,
+    generateS2cSizesTs(d2netSha1, d2clientSha1, s2cSizes, c2sSizes, varLenJumpTargets, d2clientHandlers),
+    'utf8',
+  )
+  writeFileSync(huffmanPath, generateHuffmanTs(fogSha1, bitLengths, bitMasks, canonical), 'utf8')
+
+  console.log(`[extract-d2net-tables] Verified D2Net.dll (${d2netSha1}), Fog.dll (${fogSha1}), D2Client.dll (${d2clientSha1})`)
+  console.log(`[extract-d2net-tables] Wrote ${s2cSizesPath} (${s2cSizes.length} S->C, ${c2sSizes.length} C->S, ${varLenJumpTargets.size} var-len)`)
+  console.log(`[extract-d2net-tables] Wrote ${huffmanPath} (256 Huffman symbols)`)
+}
+
+main()

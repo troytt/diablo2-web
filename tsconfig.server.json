@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "WebWorker"],
+    "types": [],
+    "noEmit": true
+  },
+  "include": [
+    "src/server/**/*.ts",
+    "src/common/**/*.ts",
+    "src/common/**/*.d.ts",
+    "src/netproto/**/*.ts"
+  ],
+  "exclude": [
+    "src/client",
+    "src/client/**",
+    "src/baker",
+    "src/baker/**",
+    "tools",
+    "tools/**",
+    "tests",
+    "tests/**"
+  ]
+}

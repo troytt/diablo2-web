@@ -1,0 +1,57 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>quest slots verify (#914)</title>
+<style>body{margin:0;background:#111;color:#ccc;font:12px monospace} canvas{display:block;margin:2px;float:left}</style></head>
+<body>
+<script type="module">
+import { WorldPanelsHud, QUEST_SLOTS_113C } from '/src/client/ui/world-panels.ts'
+import { D2FontRenderer } from '/src/client/ui/font.ts'
+const loadImg = (src) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error('load ' + src)); i.src = src })
+const font = new D2FontRenderer()
+await font.load('/ui/fonts')
+const [questBg, tabs, atlas, sockets, last, btn] = await Promise.all(
+  ['/ui/quest-bg.png', '/ui/quest-tabs.png', '/ui/quests-atlas.png', '/ui/questsockets.png', '/ui/questlast.png', '/ui/buysellbtn.png'].map(loadImg),
+)
+const OX = 80, OY = 60
+const render = (withIcons, act, selected) => {
+  const cv = document.createElement('canvas'); cv.width = 480; cv.height = 520
+  document.body.appendChild(cv)
+  const ctx = cv.getContext('2d')
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height)
+  const wp = new WorldPanelsHud()
+  wp.selectedActTab = act
+  for (let a = 1; a <= 5; a++) for (let q = 1; q <= 6; q++) wp.setQuestStatus(`a${a}q${q}`, 'active')
+  wp.selectedQuestIdx = selected
+  // A transparent 1x1 atlas when icons are disabled keeps the exact same draw path for the background.
+  const blank = document.createElement('canvas'); blank.width = 432; blank.height = 1548
+  const blankSockets = document.createElement('canvas'); blankSockets.width = 160; blankSockets.height = 95
+  wp.drawLeftDockPanel(ctx, 'quest', {
+    borderLeftImg: null, questBgImg: questBg, questTabsImg: tabs,
+    questsAtlasImg: withIcons ? atlas : blank, questSocketsImg: withIcons ? sockets : blankSockets,
+    questLastImg: last, waypointBgImg: null, stashBgImg: null, cubeBgImg: null, vendorBgImg: null, buySellBtnImg: btn,
+  }, font)
+  return ctx
+}
+const results = []
+for (const act of [1, 2, 3, 4, 5]) {
+  const full = render(true, act, -1)
+  const bare = render(false, act, -1)
+  const rows = (ctx, y0, y1) => ctx.getImageData(OX, OY + y0, 320, y1 - y0).data
+  const same = (a, b) => { let d = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++; return d }
+  // Rows below the lowest socket bottom (drawY + 5 = 223) up to the text box must be untouched.
+  const belowDiff = same(rows(full, 224, 270), rows(bare, 224, 270))
+  // Rows above the highest socket top (121 + 5 - 95 = 31) must be untouched.
+  const aboveDiff = same(rows(full, 0, 31), rows(bare, 0, 31))
+  // Every visible slot's hit-rect centre must be covered by icon art.
+  const slotCount = act === 4 ? 3 : 6
+  const covered = []
+  for (let i = 0; i < slotCount; i++) {
+    const s = QUEST_SLOTS_113C[i]
+    const cx = OX + s.hitX + 28, cy = OY + s.hitY + 26
+    covered.push(same(full.getImageData(cx - 3, cy - 3, 7, 7).data, bare.getImageData(cx - 3, cy - 3, 7, 7).data) > 0)
+  }
+  results.push({ act, belowDiff, aboveDiff, covered })
+}
+render(true, 2, 5)
+window.__questSlotResults = results
+window.__questSlotReady = true
+</script></body></html>

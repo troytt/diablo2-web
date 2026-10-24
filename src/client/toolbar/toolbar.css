@@ -1,0 +1,577 @@
+/* Persistent Top DOM Toolbar (#d2-toolbar) — Diablo II v1.13c Web Port */
+
+#d2-toolbar,
+.d2-toolbar {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 32px;
+  min-height: 32px;
+  max-height: 32px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #211b14 0%, #120f0a 55%, #0a0806 100%);
+  border-bottom: 1px solid #634e2b;
+  box-shadow: inset 0 1px 0 rgba(255, 226, 158, 0.14), 0 2px 8px rgba(0, 0, 0, 0.85);
+  color: #e2cfa0;
+  font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "Songti SC", "PingFang SC", Georgia, serif);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+}
+
+.d2-toolbar__left,
+.d2-toolbar__group {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.d2-toolbar__right {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.d2-toolbar__actions {
+  gap: 5px;
+}
+
+.d2-toolbar > .d2-toolbar__group + .d2-toolbar__group {
+  padding-left: 10px;
+  border-left: 1px solid rgba(199, 179, 119, 0.2);
+}
+
+.d2-toolbar__group--segmented {
+  gap: 0;
+}
+
+.d2-toolbar__group--segmented .d2-toolbar__btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0 8px;
+}
+
+.d2-toolbar__group--segmented .d2-toolbar__btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+  padding: 0 8px;
+  font-family: "JetBrains Mono", "Consolas", var(--font-body, serif);
+  font-size: 11px;
+}
+
+.d2-toolbar__group--segmented .d2-toolbar__btn--active {
+  position: relative;
+  z-index: 1;
+}
+
+.d2-toolbar__divider {
+  width: 1px;
+  height: 18px;
+  background: linear-gradient(180deg, rgba(199, 179, 119, 0.08) 0%, rgba(199, 179, 119, 0.48) 50%, rgba(199, 179, 119, 0.08) 100%);
+  flex-shrink: 0;
+}
+
+/* Connection Status & RTT */
+.d2-toolbar__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 22px;
+  padding: 0 9px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #0e0b08 0%, #17130d 100%);
+  border: 1px solid #463720;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.85), 0 1px 0 rgba(255, 226, 158, 0.06);
+  color: #e4d4a8;
+  font-size: 11.5px;
+}
+
+.d2-toolbar__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  background: #6b6b6b;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.d2-toolbar__status-dot--disconnected {
+  background: #767676;
+}
+
+.d2-toolbar__status-dot--connecting {
+  background: #e6a822;
+  box-shadow: 0 0 6px #e6a822;
+}
+
+.d2-toolbar__status-dot--bncs {
+  background: #4495e8;
+  box-shadow: 0 0 6px #4495e8;
+}
+
+.d2-toolbar__status-dot--mcp {
+  background: #36c5d6;
+  box-shadow: 0 0 6px #36c5d6;
+}
+
+.d2-toolbar__status-dot--d2gs {
+  background: #2ecc71;
+  box-shadow: 0 0 6px #2ecc71;
+}
+
+.d2-toolbar__status-dot--error {
+  background: #e74c3c;
+  box-shadow: 0 0 6px #e74c3c;
+}
+
+.d2-toolbar__rtt {
+  padding-left: 6px;
+  border-left: 1px solid #352a19;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: #a89974;
+}
+
+/* Labels, Inputs, Selects, Buttons */
+.d2-toolbar__label {
+  color: #b89f65;
+  font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "Songti SC", Georgia, serif);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+}
+
+.d2-toolbar__input {
+  width: 136px;
+  height: 22px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  background: #090806;
+  border: 1px solid #4a3c24;
+  border-radius: 3px;
+  color: #efe1b6;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 11px;
+  outline: none;
+}
+
+.d2-toolbar__input:focus {
+  border-color: #c7b377;
+}
+
+.d2-toolbar__input--invalid {
+  border-color: #e74c3c;
+  color: #ffb8b0;
+}
+
+.d2-toolbar__select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 22px;
+  padding: 0 22px 0 8px;
+  box-sizing: border-box;
+  background-color: #14100b;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23c7b377' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #261f14 0%, #130f0a 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 6px center, 0 0;
+  border: 1px solid #5a482a;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 230, 165, 0.1), 0 1px 2px rgba(0, 0, 0, 0.55);
+  color: #ebd9a8;
+  font-family: "JetBrains Mono", "Consolas", var(--font-body, serif);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+
+.d2-toolbar__select option {
+  background: #14100b;
+  color: #ebd9a8;
+}
+
+.d2-toolbar__select:hover,
+.d2-toolbar__btn:hover:not(:disabled) {
+  border-color: #d4bc7c;
+  color: #fff4ce;
+  box-shadow: inset 0 1px 0 rgba(255, 240, 190, 0.22), 0 0 6px rgba(212, 180, 106, 0.2);
+}
+
+.d2-toolbar__btn,
+a.d2-toolbar__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 9px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #2e2518 0%, #17120b 100%);
+  border: 1px solid #5e4b2b;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 230, 165, 0.14), 0 1px 2px rgba(0, 0, 0, 0.55);
+  color: #e6d29e;
+  font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "Songti SC", "PingFang SC", Georgia, serif);
+  font-size: 11.5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 120ms ease, color 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+.d2-toolbar__btn--icon {
+  padding: 0 7px;
+  min-width: 26px;
+}
+
+.d2-toolbar__btn--primary {
+  background: linear-gradient(180deg, #5e4923 0%, #332711 100%);
+  border-color: #c7a456;
+  color: #fff5d6;
+}
+
+.d2-toolbar__btn:active:not(:disabled),
+a.d2-toolbar__btn:active {
+  transform: translateY(1px);
+}
+
+.d2-toolbar__btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  line-height: 0;
+  color: #d4b872;
+}
+
+.d2-toolbar__btn-icon svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.d2-toolbar__btn-label {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.d2-toolbar__lang-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: "JetBrains Mono", "Consolas", var(--font-body, serif);
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1;
+  color: #efe1b6;
+}
+
+.d2-toolbar__btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.d2-toolbar__btn--active {
+  background: linear-gradient(180deg, #5e4923 0%, #332711 100%);
+  border-color: #dfbe73;
+  box-shadow: inset 0 1px 0 rgba(255, 244, 204, 0.32), 0 0 6px rgba(212, 180, 106, 0.25);
+  color: #fff6db;
+}
+
+.d2-toolbar__btn--warn {
+  border-color: #d4882a;
+  color: #ffb84d;
+}
+
+/* Diablo II 1.13c Item Quality Badge Colors in Toolbar */
+.d2-toolbar__drop-prefix {
+  margin-right: 4px;
+}
+
+.d2-toolbar__drop-set {
+  color: #3ad649;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.d2-toolbar__drop-unique {
+  color: #e2be68;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.d2-toolbar__drop-rune {
+  color: #ff9c38;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.d2-toolbar__drop-sep {
+  color: #7d6d4c;
+  margin: 0 2px;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 10px;
+}
+
+/* Diagnostic / Validation Banner */
+.d2-toolbar__diag {
+  position: absolute;
+  top: 32px;
+  left: 12px;
+  right: 12px;
+  z-index: 1001;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: rgba(38, 12, 10, 0.96);
+  border: 1px solid #a93226;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  color: #ffd6d1;
+  font-size: 12px;
+}
+
+.d2-toolbar__diag--visible {
+  display: flex;
+}
+
+/* Config & Bug Report Modal Overlays */
+.d2-toolbar-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(4, 3, 2, 0.78);
+  font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "PingFang SC", Georgia, serif);
+  color: #e6d6b0;
+  white-space: normal;
+  cursor: default;
+}
+
+.d2-toolbar-modal-overlay[hidden] {
+  display: none !important;
+}
+
+.d2-toolbar-modal {
+  width: 480px;
+  max-width: 94vw;
+  max-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #17130d 0%, #0b0906 100%);
+  border: 1px solid #9c7c42;
+  border-radius: 4px;
+  box-shadow: 0 12px 42px rgba(0, 0, 0, 0.95), inset 0 0 18px rgba(156, 124, 66, 0.14);
+  overflow: hidden;
+}
+
+.d2-toolbar-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 8px;
+  border-bottom: 1px solid #4a3c24;
+  background: rgba(27, 21, 14, 0.92);
+  flex: 0 0 auto;
+}
+
+.d2-toolbar-modal__title {
+  margin: 0;
+  font-family: var(--font-display, "D2Exocet", "Cinzel", Georgia, serif);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #dfc478;
+}
+
+.d2-toolbar-modal__close {
+  height: 24px;
+  padding: 0 10px;
+  background: linear-gradient(180deg, #2b2316 0%, #17120b 100%);
+  border: 1px solid #6b5632;
+  border-radius: 2px;
+  color: #dfc991;
+  font-family: var(--font-display, "D2Exocet", Georgia, serif);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.d2-toolbar-modal__close:hover {
+  border-color: #d4b46a;
+  color: #fff5d6;
+}
+
+.d2-toolbar-modal__subtitle {
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #b5a178;
+  background: rgba(16, 13, 9, 0.9);
+  border-bottom: 1px solid #2e2517;
+  flex: 0 0 auto;
+}
+
+.d2-toolbar-modal__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d2-toolbar-modal__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  background: rgba(20, 16, 11, 0.72);
+  border: 1px solid #352a19;
+  border-radius: 3px;
+}
+
+.d2-toolbar-modal__row-label {
+  color: #d8c28c;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.d2-toolbar-modal__row-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.d2-toolbar-modal__volume-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.d2-toolbar__slider {
+  width: 120px;
+  height: 6px;
+  accent-color: #c7a456;
+  cursor: pointer;
+}
+
+.d2-toolbar__volume-value {
+  min-width: 36px;
+  text-align: right;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: #ebd9a8;
+}
+
+.d2-toolbar-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.d2-toolbar-modal__input,
+.d2-toolbar-modal__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 9px;
+  background: #0d0a07;
+  border: 1px solid #5a482a;
+  border-radius: 3px;
+  color: #efe1b6;
+  font-family: var(--font-body, "D2Formal436", "Noto Serif SC", Georgia, serif);
+  font-size: 12px;
+  line-height: 1.45;
+  outline: none;
+  user-select: text;
+}
+
+.d2-toolbar-modal__input:focus,
+.d2-toolbar-modal__textarea:focus {
+  border-color: #d4bc7c;
+  box-shadow: 0 0 6px rgba(212, 180, 106, 0.2);
+}
+
+.d2-toolbar-modal__textarea {
+  resize: vertical;
+  min-height: 84px;
+}
+
+.d2-toolbar-modal__select {
+  width: 100%;
+  height: 28px;
+  font-size: 12px;
+}
+
+.d2-toolbar-modal__status {
+  padding: 7px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.d2-toolbar-modal__status[hidden] {
+  display: none !important;
+}
+
+.d2-toolbar-modal__status--ok {
+  background: rgba(16, 48, 24, 0.9);
+  border: 1px solid #2ecc71;
+  color: #d4ffe4;
+}
+
+.d2-toolbar-modal__status--error {
+  background: rgba(58, 16, 14, 0.92);
+  border: 1px solid #e74c3c;
+  color: #ffd6d1;
+}
+
+.d2-toolbar-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 10px 16px;
+  border-top: 1px solid #352a19;
+  background: rgba(18, 14, 10, 0.95);
+}

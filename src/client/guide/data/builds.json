@@ -1,0 +1,37 @@
+{
+  "Amazon": {
+    "start": { "strength": 20, "dexterity": 25, "vitality": 20, "energy": 15 },
+    "stats": { "strength": { "weight": 1, "upTo": 60 }, "dexterity": { "weight": 1, "upTo": 90 }, "vitality": { "weight": 2 } },
+    "skills": [["Jab", 1], ["Inner Sight", 1], ["Critical Strike", 1], ["Jab", 3], ["Power Strike", 1], ["Dodge", 1], ["Power Strike", 6], ["Lightning Bolt", 1], ["Charged Strike", 1], ["Slow Missiles", 1], ["Avoid", 1], ["Charged Strike", 8], ["Lightning Fury", 20], ["Charged Strike", 20], ["Lightning Strike", 20], ["Lightning Bolt", 20], ["Valkyrie", 1], ["Decoy", 1]]
+  },
+  "Sorceress": {
+    "start": { "strength": 10, "dexterity": 25, "vitality": 10, "energy": 35 },
+    "stats": { "strength": { "weight": 1, "upTo": 35 }, "vitality": { "weight": 3 } },
+    "skills": [["Fire Bolt", 1], ["Warmth", 1], ["Fire Bolt", 2], ["Frozen Armor", 1], ["Fire Bolt", 5], ["Charged Bolt", 1], ["Telekinesis", 1], ["Static Field", 1], ["Fire Bolt", 8], ["Fire Ball", 20], ["Teleport", 1], ["Meteor", 1], ["Fire Mastery", 1], ["Fire Bolt", 20], ["Meteor", 20], ["Fire Mastery", 20]]
+  },
+  "Necromancer": {
+    "start": { "strength": 15, "dexterity": 25, "vitality": 15, "energy": 25 },
+    "stats": { "strength": { "weight": 1, "upTo": 45 }, "vitality": { "weight": 3 } },
+    "skills": [["Teeth", 1], ["Amplify Damage", 1], ["Bone Armor", 1], ["Teeth", 6], ["Corpse Explosion", 1], ["Bone Wall", 1], ["Teeth", 10], ["Bone Spear", 20], ["Bone Spirit", 20], ["Teeth", 20], ["Bone Wall", 20], ["Clay Golem", 1]]
+  },
+  "Paladin": {
+    "start": { "strength": 25, "dexterity": 20, "vitality": 25, "energy": 15 },
+    "stats": { "strength": { "weight": 1, "upTo": 60 }, "dexterity": { "weight": 1, "upTo": 40 }, "vitality": { "weight": 3 } },
+    "skills": [["Might", 1], ["Sacrifice", 1], ["Prayer", 1], ["Smite", 1], ["Holy Fire", 1], ["Sacrifice", 5], ["Holy Bolt", 1], ["Zeal", 1], ["Holy Fire", 6], ["Charge", 1], ["Blessed Aim", 1], ["Blessed Hammer", 20], ["Concentration", 20], ["Vigor", 20], ["Holy Shield", 1], ["Blessed Aim", 20]]
+  },
+  "Barbarian": {
+    "start": { "strength": 30, "dexterity": 20, "vitality": 25, "energy": 10 },
+    "stats": { "strength": { "weight": 2, "upTo": 120 }, "dexterity": { "weight": 1, "upTo": 70 }, "vitality": { "weight": 3 } },
+    "skills": [["Bash", 1], ["Howl", 1], ["Double Swing", 1], ["Bash", 3], ["Shout", 1], ["Find Potion", 1], ["Stun", 1], ["Double Swing", 6], ["Taunt", 1], ["Concentrate", 1], ["Leap", 1], ["Double Swing", 12], ["Battle Command", 1], ["Battle Orders", 1], ["Leap Attack", 1], ["Whirlwind", 20], ["Battle Orders", 20], ["Natural Resistance", 5], ["Iron Skin", 5]]
+  },
+  "Druid": {
+    "start": { "strength": 15, "dexterity": 20, "vitality": 25, "energy": 20 },
+    "stats": { "strength": { "weight": 1, "upTo": 45 }, "vitality": { "weight": 3 } },
+    "skills": [["Firestorm", 1], ["Raven", 1], ["Firestorm", 3], ["Molten Boulder", 1], ["Oak Sage", 1], ["Firestorm", 8], ["Fissure", 20], ["Summon Spirit Wolf", 1], ["Volcano", 20], ["Molten Boulder", 20], ["Firestorm", 20]]
+  },
+  "Assassin": {
+    "start": { "strength": 20, "dexterity": 20, "vitality": 20, "energy": 25 },
+    "stats": { "strength": { "weight": 1, "upTo": 60 }, "dexterity": { "weight": 1, "upTo": 50 }, "vitality": { "weight": 3 } },
+    "skills": [["Fire Blast", 1], ["Claw Mastery", 1], ["Fire Blast", 3], ["Psychic Hammer", 1], ["Shock Web", 1], ["Burst of Speed", 1], ["Charged Bolt Sentry", 1], ["Fire Blast", 8], ["Shadow Warrior", 1], ["Lightning Sentry", 20], ["Death Sentry", 20], ["Shock Web", 20], ["Charged Bolt Sentry", 20], ["Fade", 1]]
+  }
+}

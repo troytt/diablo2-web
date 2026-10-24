@@ -1,0 +1,34 @@
+{
+  "soughtUniques": [
+    "Harlequin Crest", "The Stone of Jordan", "Arachnid Mesh", "Mara's Kaleidoscope", "Griffon's Eye", "Fathom", "Tyrael's Might", "Windforce",
+    "Herald of Zakarum", "Titan's Revenge", "Andariel's Visage", "Hellfire Torch", "Annihilus", "The Oculus", "Skin of the Vipermagi", "Wartraveler",
+    "Crown of Ages", "Raven Frost", "Bul Katho's Wedding Band", "Highlord's Wrath", "Dracul's Grasp", "Magefist", "Nightwing's Veil", "Arreat's Face",
+    "Jalal's Mane", "Homunculus", "Spirit Ward", "Wizardspike", "Eschuta's temper", "Thudergod's Vigor", "Verdugo's Hearty Cord", "Gorerider",
+    "Sandstorm Trek", "Waterwalk", "String of Ears", "Chance Guards", "Nagelring", "Lidless Wall", "Stormshield", "The Grandfather", "Doombringer",
+    "Ormus' Robes", "Shaftstop", "Duriel's Shell", "Leviathan", "Kira's Guardian", "Vampiregaze", "Seraph's Hymn", "Atma's Scarab", "Lycander's Aim",
+    "Buriza-Do Kyanon", "Eaglehorn", "Thunderstroke", "Headhunter's Glory", "Medusa's Gaze", "Steel Carapice", "Frostburn"
+  ],
+  "soughtSets": [
+    "Tal Rasha's Wrappings", "Immortal King", "Griswold's Legacy", "M'avina's Battle Hymn", "Natalya's Odium",
+    "Trang-Oul's Avatar", "Aldur's Watchtower", "The Disciple", "Bul-Kathos' Children"
+  ],
+  "supplies": [
+    "hp1", "hp2", "hp3", "hp4", "hp5", "mp1", "mp2", "mp3", "mp4", "mp5", "rvs", "rvl", "yps", "vps", "wms",
+    "isc", "tsc", "tbk", "ibk", "key", "aqv", "cqv", "opl", "opm", "ops", "gpl", "gpm", "gps"
+  ],
+  "jewelry": ["rin", "amu", "ci0", "ci1", "ci2", "ci3"],
+  "charms": { "cm1": "small", "cm2": "large", "cm3": "grand" },
+  "charmScore": {
+    "small": { "good": 12, "great": 30, "unidentified": "good" },
+    "large": { "good": 18, "great": 40, "unidentified": "keep" },
+    "grand": { "good": 25, "great": 50, "unidentified": "good" }
+  },
+  "slotsByBodyLocation": { "1": "helm", "2": "amulet", "3": "armor", "4": "weapon1", "5": "weapon2", "6": "ring1", "7": "ring2", "8": "belt", "9": "boots", "10": "gloves" },
+  "slotNames": { "helm": "helm", "amulet": "amulet", "armor": "armor", "weapon1": "weapon", "weapon2": "shield", "gloves": "gloves", "ring1": "ring", "ring2": "ring", "belt": "belt", "boots": "boots" },
+  "gemSlots": [
+    { "slot": "weapon", "mods": "weaponMods", "text": "weaponsEn" },
+    { "slot": "helm or armor", "mods": "helmMods", "text": "helmsEn" },
+    { "slot": "shield", "mods": "shieldMods", "text": "shieldsEn" }
+  ],
+  "imbue": { "questWord": 3, "rewardPending": 2, "alwaysWorthTypes": ["circ"] }
+}

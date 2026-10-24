@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANCTUARY TAVERN · WURLITZER 113C JUKEBOX (musicbox.html)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --amber-glow: #f59e0b;
+      --amber-bright: #fbbf24;
+      --crimson-neon: #f43f5e;
+      --teal-neon: #14b8a6;
+      --chrome-grad: linear-gradient(90deg, #52525b 0%, #e4e4e7 25%, #71717a 50%, #f4f4f5 75%, #3f3f46 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #0b0908;
+      background-image: 
+        radial-gradient(circle at 50% 15%, rgba(245, 158, 11, 0.14) 0%, transparent 55%),
+        radial-gradient(circle at 15% 80%, rgba(244, 63, 94, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(20, 184, 166, 0.08) 0%, transparent 45%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 24px);
+      color: #f5f0e6;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Animated Neon Bubble Tube Pillars */
+    .neon-tube-left {
+      background: linear-gradient(90deg, #9f1239 0%, #fb7185 35%, #f59e0b 70%, #78350f 100%);
+      box-shadow: 0 0 18px rgba(244, 63, 94, 0.45), inset 0 0 8px rgba(255, 255, 255, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .neon-tube-right {
+      background: linear-gradient(90deg, #78350f 0%, #f59e0b 30%, #fb7185 65%, #9f1239 100%);
+      box-shadow: 0 0 18px rgba(245, 158, 11, 0.45), inset 0 0 8px rgba(255, 255, 255, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes bubbleRise {
+      0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+      15% { opacity: 0.85; }
+      85% { opacity: 0.85; }
+      100% { transform: translateY(-40px) scale(1.15); opacity: 0; }
+    }
+
+    .bubble {
+      position: absolute;
+      left: 20%;
+      width: 60%;
+      aspect-ratio: 1;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(254, 243, 199, 0.35));
+      filter: blur(0.5px);
+      animation: bubbleRise linear infinite;
+    }
+
+    /* Metallic Chrome & Brass Trim */
+    .brass-border {
+      border: 1px solid rgba(230, 198, 135, 0.35);
+      box-shadow: inset 0 1px 0 rgba(255, 248, 220, 0.25), 0 8px 24px rgba(0, 0, 0, 0.75);
+    }
+
+    .chrome-rib {
+      background: var(--chrome-grad);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .wood-cabinet {
+      background: linear-gradient(180deg, #231710 0%, #160e09 50%, #100a07 100%);
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.85);
+    }
+
+    /* Nixie / Vacuum Fluorescent Display (VFD) */
+    .vfd-screen {
+      background: #090c0a;
+      border: 2px solid #2d261e;
+      box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.95), 0 1px 0 rgba(230, 198, 135, 0.2);
+      position: relative;
+    }
+    .vfd-screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(20, 184, 166, 0.08) 1px, transparent 0);
+      background-size: 3px 3px;
+      pointer-events: none;
+    }
+    .nixie-amber {
+      color: #ffb72b;
+      text-shadow: 0 0 8px rgba(245, 158, 11, 0.85), 0 0 18px rgba(217, 119, 6, 0.45);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .vfd-cyan {
+      color: #2dd4bf;
+      text-shadow: 0 0 8px rgba(45, 212, 191, 0.75), 0 0 14px rgba(20, 184, 166, 0.4);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Spinning Vinyl Record & Grooves */
+    @keyframes spinRecord {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .vinyl-disc {
+      background: 
+        conic-gradient(
+          from 25deg,
+          rgba(255,255,255,0.0) 0deg,
+          rgba(255,255,255,0.13) 25deg,
+          rgba(255,255,255,0.0) 55deg,
+          rgba(255,255,255,0.0) 180deg,
+          rgba(255,255,255,0.13) 205deg,
+          rgba(255,255,255,0.0) 235deg
+        ),
+        repeating-radial-gradient(
+          circle at center,
+          #09090b 0px,
+          #09090b 2px,
+          #18181b 3px,
+          #09090b 4px
+        );
+      box-shadow: 
+        0 14px 36px rgba(0, 0, 0, 0.9),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+      animation: spinRecord 4.2s linear infinite;
+      animation-play-state: running;
+    }
+    .vinyl-disc.paused {
+      animation-play-state: paused;
+    }
+
+    /* Album Sleeve Frame */
+    .album-sleeve {
+      box-shadow: 
+        0 3px 8px rgba(0, 0, 0, 0.65),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+    .album-sleeve::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 45%, rgba(0,0,0,0.3) 100%);
+      pointer-events: none;
+    }
+
+    /* Tonearm */
+    .tonearm-assembly {
+      transform-origin: 78% 18%;
+      transition: transform 0.55s cubic-bezier(0.34, 1.3, 0.64, 1);
+    }
+    .tonearm-playing {
+      transform: rotate(22deg);
+    }
+    .tonearm-parked {
+      transform: rotate(-10deg);
+    }
+
+    /* Mechanical Push Buttons (Bakelite & Chrome) */
+    .mech-key {
+      background: linear-gradient(180deg, #322922 0%, #1c1612 100%);
+      border: 1px solid #574739;
+      box-shadow: 
+        0 3px 0 #0c0907,
+        0 4px 6px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+      transition: all 0.08s ease;
+    }
+    .mech-key:hover {
+      background: linear-gradient(180deg, #3f332a 0%, #261e18 100%);
+      border-color: #9a7b56;
+    }
+    .mech-key:active, .mech-key.active-key {
+      transform: translateY(2px);
+      background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+      color: #090604;
+      border-color: #fde68a;
+      box-shadow: 
+        0 1px 0 #0c0907,
+        0 0 12px rgba(245, 158, 11, 0.7),
+        inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Paper Title Strip (Classic Jukebox Song Tag) */
+    .title-strip {
+      background: linear-gradient(180deg, #fbf6e9 0%, #f1e4c3 50%, #fbf6e9 100%);
+      color: #1c130c;
+      border: 2px solid #991b1b;
+      box-shadow: 
+        0 2px 6px rgba(0,0,0,0.6),
+        inset 0 0 12px rgba(180, 83, 9, 0.14);
+      position: relative;
+      transition: all 0.18s ease;
+    }
+    .title-strip.boss-strip {
+      background: linear-gradient(180deg, #fdf2f2 0%, #fecdd3 50%, #fdf2f2 100%);
+      border-color: #9f1239;
+    }
+    .title-strip:hover {
+      transform: translateY(-2px);
+      border-color: #dc2626;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.75), 0 0 12px rgba(245, 158, 11, 0.35);
+    }
+    .title-strip.selected-strip {
+      border-color: #d97706;
+      background: linear-gradient(180deg, #fffbeb 0%, #fde68a 50%, #fffbeb 100%);
+      box-shadow: 0 0 18px rgba(245, 158, 11, 0.65), inset 0 0 8px rgba(217, 119, 6, 0.3);
+    }
+
+    /* Custom Scrollbars for Isolated Scroll Containers */
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(15, 10, 7, 0.6);
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(217, 119, 6, 0.45);
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(245, 158, 11, 0.75);
+    }
+
+    /* Warm VU Meter Animation */
+    @keyframes vuBounce {
+      0%, 100% { transform: scaleY(0.22); }
+      50% { transform: scaleY(0.95); }
+    }
+    .vu-bar {
+      transform-origin: bottom;
+      transition: transform 0.12s ease;
+      transform: scaleY(0.18);
+    }
+    .vu-active {
+      animation: vuBounce 0.55s ease-in-out infinite;
+    }
+
+    /* Speaker Grille Texture */
+    .speaker-grille {
+      background-color: #120c08;
+      background-image: 
+        radial-gradient(#050302 35%, transparent 36%),
+        radial-gradient(#291d14 15%, transparent 16%);
+      background-size: 8px 8px;
+      background-position: 0 0, 4px 4px;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen overflow-hidden flex flex-col select-none">
+
+  <!-- Hidden HTML5 Audio Engine for Baked Opus/WebM Streams -->
+  <audio id="jukeboxAudio" preload="auto"></audio>
+
+  <!-- TOP ARCH CROWN HEADER (Neon Sign + Coin Acceptor + Ambient Controls) -->
+  <header class="h-16 shrink-0 wood-cabinet border-b-2 border-[#6b4c0b] px-4 flex items-center justify-between relative z-20 shadow-2xl">
+    <!-- Left: Bar Brand & Neon Badge -->
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-amber-400/70 bg-gradient-to-br from-amber-500/20 to-rose-600/20 shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+        <span class="text-amber-300 font-black tracking-tighter text-base">45</span>
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-lg font-black tracking-wider uppercase text-amber-100 drop-shadow-[0_0_10px_rgba(245,158,11,0.6)]">
+            SANCTUARY TAVERN · WURLITZER 113C
+          </h1>
+          <span class="px-2 py-0.5 text-xs font-bold uppercase tracking-widest rounded bg-rose-950/90 text-rose-300 border border-rose-500/50 shadow-[0_0_10px_rgba(244,63,94,0.4)]">
+            43 TRACKS + 5 BOSS VOICES
+          </span>
+        </div>
+        <p class="text-xs text-amber-200/60 tracking-widest uppercase font-mono">
+          DIABLO II v1.13c &amp; LORD OF DESTRUCTION · BAKED OPUS WEBM MUSIC &amp; ACT BOSS SPEECH
+        </p>
+      </div>
+    </div>
+
+    <!-- Center: Warm Illuminated Glass Marquee -->
+    <div class="hidden xl:flex items-center gap-3 bg-[#120b07] border border-amber-500/30 rounded-full px-5 py-1.5 shadow-inner max-w-md">
+      <span id="marqueeDot" class="w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0"></span>
+      <span id="marqueeStatus" class="text-xs font-mono tracking-wider uppercase text-amber-300 truncate">
+        READY [A-1] · #4699 毁灭之王交响序曲 (LOD INTRO EDIT)
+      </span>
+    </div>
+
+    <!-- Right: Coin Slot & Credit Counter -->
+    <div class="flex items-center gap-3">
+      <!-- Ambient Tube Glow Toggle -->
+      <div class="flex items-center gap-1 bg-black/50 border border-amber-500/25 rounded-lg p-1">
+        <button id="btnMoodWarm" onclick="setNeonMood('warm')" class="px-2.5 py-1 rounded text-xs font-bold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-400/50 transition cursor-pointer">
+          琥珀暖光
+        </button>
+        <button id="btnMoodCyber" onclick="setNeonMood('jazz')" class="px-2.5 py-1 rounded text-xs font-bold tracking-wider uppercase text-stone-400 hover:text-teal-300 transition cursor-pointer">
+          午夜蓝调
+        </button>
+      </div>
+
+      <!-- Nixie Credit Display -->
+      <div class="vfd-screen rounded-lg px-3 py-1 flex items-center gap-2.5">
+        <div class="text-right">
+          <div class="text-xs text-amber-200/50 font-mono uppercase leading-none">CREDITS</div>
+          <div class="text-xs text-teal-400/80 font-mono uppercase leading-none mt-0.5">投币余额</div>
+        </div>
+        <span id="creditCount" class="nixie-amber text-2xl font-black tracking-widest px-1">08</span>
+      </div>
+
+      <!-- Physical Coin Return / Insert Button -->
+      <button id="btnInsertCoin" onclick="insertCoin()" class="mech-key active:translate-y-1 rounded-lg px-3 py-2 flex items-center gap-2 border-amber-500/50 group cursor-pointer">
+        <div class="w-2 h-5 rounded-sm bg-black border border-amber-300/60 shadow-inner group-hover:border-amber-300"></div>
+        <div class="text-left">
+          <div class="text-xs font-black tracking-wider text-amber-300 uppercase leading-none">INSERT 25¢</div>
+          <div class="text-xs text-amber-100/70 leading-none mt-0.5">投币加歌 (+1)</div>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN JUKEBOX BODY (3-Column Isolated Scroll Layout + Left/Right Bubble Tubes) -->
+  <div class="flex-1 flex min-h-0 overflow-hidden relative">
+
+    <!-- LEFT NEON BUBBLE PILLAR -->
+    <div id="leftNeonTube" class="w-4 shrink-0 neon-tube-left hidden sm:block">
+      <div class="bubble" style="animation-duration: 4.2s; animation-delay: 0s;"></div>
+      <div class="bubble" style="animation-duration: 5.5s; animation-delay: 1.3s;"></div>
+      <div class="bubble" style="animation-duration: 3.8s; animation-delay: 2.5s;"></div>
+      <div class="bubble" style="animation-duration: 4.9s; animation-delay: 3.1s;"></div>
+    </div>
+
+    <!-- MAIN CABINET INTERIOR -->
+    <main class="flex-1 grid grid-cols-12 gap-3 p-3 min-h-0 overflow-hidden bg-[#110c09]">
+
+      <!-- COLUMN 1 (LEFT 4 COLS): TURNTABLE CHAMBER & TUBE AMPLIFIER -->
+      <section class="col-span-12 lg:col-span-4 flex flex-col gap-3 min-h-0 overflow-y-auto custom-scroll pr-1">
+        
+        <!-- Glass Arch Turntable Window -->
+        <div class="wood-cabinet brass-border rounded-t-[36px] rounded-b-xl p-4 flex flex-col items-center relative overflow-hidden shrink-0">
+          <!-- Top Chrome Rib -->
+          <div class="w-28 h-1.5 chrome-rib rounded-full mb-2"></div>
+          <div class="text-xs font-mono uppercase tracking-[0.2em] text-amber-300/80 mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]"></span>
+            45 RPM OPUS WEBM RECORD CHANGER
+            <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]"></span>
+          </div>
+
+          <!-- Turntable Platter Stage -->
+          <div class="relative w-60 h-60 flex items-center justify-center my-0.5 cursor-pointer" onclick="togglePlay()" title="点击唱盘播放/暂停">
+            <!-- Warm Backlight Behind Platter -->
+            <div id="platterGlow" class="absolute inset-2 rounded-full bg-amber-500/20 blur-xl pointer-events-none transition-all duration-700"></div>
+
+            <!-- Metallic Platter Rim -->
+            <div class="w-56 h-56 rounded-full border-4 border-stone-600/80 bg-[#0d0a08] flex items-center justify-center shadow-2xl relative">
+              <!-- Strobe Dots on Rim -->
+              <div class="absolute inset-0 rounded-full border-2 border-dashed border-amber-400/30"></div>
+
+              <!-- Spinning 45 RPM Vinyl Disc with Album Cover Label -->
+              <div id="vinylDisc" class="vinyl-disc paused w-52 h-52 rounded-full flex items-center justify-center relative">
+                <!-- Outer Gold Ring around Album Cover Label -->
+                <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-amber-600 via-amber-200 to-amber-700 shadow-[0_0_16px_rgba(0,0,0,0.9)] flex items-center justify-center relative">
+                  <!-- Spinning Album Cover Image on Record Center -->
+                  <div class="w-full h-full rounded-full overflow-hidden relative border border-stone-900">
+                    <img id="vinylCoverImg" src="" alt="Vinyl Cover" class="w-full h-full object-cover" />
+                    <!-- Subtle Vintage Label Overlay & Code Tag -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/45 flex flex-col items-center justify-between py-2 px-1 text-center">
+                      <span id="labelCode" class="px-1.5 py-0.2 rounded bg-black/75 border border-amber-300/60 text-xs font-black text-amber-300 tracking-widest uppercase leading-none">
+                        A-1
+                      </span>
+                      <span id="labelTitle" class="text-xs font-extrabold text-amber-100 leading-tight line-clamp-1 drop-shadow px-1">
+                        LOD INTRO
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Center 45 RPM Spider Adapter Hole -->
+                  <div class="absolute w-5 h-5 rounded-full bg-[#0d0a08] border-2 border-amber-400/80 shadow-inner flex items-center justify-center">
+                    <div class="w-1.5 h-1.5 rounded-full bg-stone-500"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mechanical Chrome Tonearm -->
+            <div id="tonearm" class="tonearm-assembly tonearm-parked absolute top-2 right-2 w-28 h-44 pointer-events-none z-10">
+              <!-- Pivot Base -->
+              <div class="absolute top-2 right-2 w-11 h-11 rounded-full bg-gradient-to-br from-stone-200 via-stone-500 to-stone-800 border-2 border-amber-300/50 shadow-lg flex items-center justify-center">
+                <div class="w-4 h-4 rounded-full bg-stone-900 border border-amber-400/60"></div>
+              </div>
+              <!-- Arm Rod -->
+              <div class="absolute top-7 right-7 w-2 h-32 chrome-rib rounded-full origin-top transform rotate-12 shadow-md"></div>
+              <!-- Cobra Cartridge Head -->
+              <div class="absolute bottom-3 left-7 w-7 h-10 rounded-md bg-gradient-to-b from-rose-700 to-stone-900 border border-amber-400/60 transform rotate-12 shadow-lg flex items-end justify-center pb-1">
+                <div class="w-1.5 h-1.5 rounded-full bg-amber-300 shadow-[0_0_6px_#fbbf24]"></div>
+              </div>
+            </div>
+
+            <!-- Floating Mini Now-Playing Sleeve Preview in Corner of Chamber -->
+            <div class="absolute bottom-1 left-1 flex items-center gap-1.5 bg-black/85 border border-amber-500/40 rounded-lg p-1 shadow-lg">
+              <img id="chamberMiniCover" src="" alt="Sleeve" class="w-8 h-8 rounded object-cover border border-amber-300/40" />
+              <div class="pr-1.5">
+                <div id="chamberArchiveTag" class="text-xs font-mono text-amber-300 leading-none">D2xMusic</div>
+                <div id="chamberSoundIdTag" class="text-xs font-mono text-stone-400 leading-none mt-0.5">ID #4699</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Now Playing VFD Tube Display (with Cover Slot & Block Jumpers) -->
+          <div class="w-full vfd-screen rounded-xl p-3 mt-2">
+            <div class="flex items-center justify-between border-b border-stone-800 pb-1.5 mb-2">
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 border border-amber-400/50 nixie-amber text-xs font-bold shrink-0" id="nowCode">A-1</span>
+                <span class="vfd-cyan text-xs uppercase tracking-wider truncate" id="nowGenre">4699 · music_lod_introedit</span>
+              </div>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <span id="playStateDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span id="playStateText" class="text-xs font-mono text-amber-400 uppercase">READY</span>
+              </div>
+            </div>
+
+            <!-- Song Cover + Metadata inside VFD Display -->
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-12 h-12 rounded-lg overflow-hidden border border-amber-400/50 shrink-0 shadow-md relative bg-stone-900">
+                <img id="nowPlayingCover" src="" alt="Now Playing Cover" class="w-full h-full object-cover" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <div id="nowTitle" class="text-sm font-bold text-amber-100 truncate">毁灭之王交响序曲 (LoD Intro Edit)</div>
+                <div id="nowArtist" class="text-xs text-amber-300/70 line-clamp-1 mt-0.5">D2xMusic.mpq · introedit.wav</div>
+              </div>
+            </div>
+
+            <!-- Section / Block Jump Buttons or Boss Voice Line Switcher -->
+            <div id="blockJumpContainer" class="flex items-center gap-1.5 flex-wrap mb-2 empty:hidden"></div>
+
+            <!-- Progress Scrubber & Time -->
+            <div class="space-y-1">
+              <div class="w-full h-2.5 bg-stone-900 rounded-full overflow-hidden border border-stone-700/70 cursor-pointer relative" onclick="seekTrack(event)">
+                <div id="progressBar" class="h-full bg-gradient-to-r from-amber-500 via-rose-500 to-amber-300 w-0 transition-all duration-150"></div>
+              </div>
+              <div class="flex justify-between text-xs font-mono text-amber-200/70">
+                <span id="currentTime">00:00</span>
+                <span id="loopIndicator" onclick="toggleLoopMode()" class="text-amber-400/90 hover:text-amber-200 cursor-pointer underline decoration-dotted">
+                  LOOP: AUTO
+                </span>
+                <span id="totalTime">01:40</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mechanical Transport Deck Controls (Pure Vector SVGs) -->
+          <div class="w-full grid grid-cols-4 gap-2 mt-3">
+            <button onclick="prevTrack()" class="mech-key rounded-lg py-2 flex flex-col items-center justify-center text-amber-200 cursor-pointer">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+              <span class="text-xs font-mono uppercase mt-1">上一张</span>
+            </button>
+            <button id="btnPlayPause" onclick="togglePlay()" class="mech-key rounded-lg py-2 flex flex-col items-center justify-center text-amber-300 border-amber-500/60 cursor-pointer">
+              <span id="playPauseIcon" class="flex items-center justify-center h-4">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span id="playPauseLabel" class="text-xs font-mono uppercase mt-1">放下唱针</span>
+            </button>
+            <button onclick="nextTrack()" class="mech-key rounded-lg py-2 flex flex-col items-center justify-center text-amber-200 cursor-pointer">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+              <span class="text-xs font-mono uppercase mt-1">切歌退盘</span>
+            </button>
+            <button onclick="randomSelect()" class="mech-key rounded-lg py-2 flex flex-col items-center justify-center text-rose-300 cursor-pointer">
+              <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+              <span class="text-xs font-mono uppercase mt-1">随机盲选</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Speaker Grille & Analog Tube Equalizer -->
+        <div class="wood-cabinet brass-border rounded-xl p-3.5 flex-1 flex flex-col justify-between min-h-[140px]">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-amber-300/80">ANALOG TUBE VU &amp; OPUS STREAM</span>
+            <span id="streamStatusBadge" class="text-xs font-mono text-teal-400">22.05kHz · OPUS WEBM</span>
+          </div>
+
+          <!-- Dual Channel VU Visualizer -->
+          <div class="speaker-grille rounded-lg p-2.5 border border-amber-900/50 flex items-end justify-between gap-1.5 h-16">
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-12" style="animation-delay: 0.05s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-14" style="animation-delay: 0.2s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-10" style="animation-delay: 0.35s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-14" style="animation-delay: 0.12s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-9" style="animation-delay: 0.45s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-14" style="animation-delay: 0.28s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-11" style="animation-delay: 0.18s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-14" style="animation-delay: 0.4s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-8" style="animation-delay: 0.08s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-12" style="animation-delay: 0.32s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-14" style="animation-delay: 0.22s"></div>
+            <div class="vu-bar w-full bg-gradient-to-t from-emerald-500 via-amber-400 to-rose-500 rounded-t h-10" style="animation-delay: 0.5s"></div>
+          </div>
+
+          <!-- Real Audio Volume & WebAudio Vinyl Crackle Synthesizer Sliders -->
+          <div class="grid grid-cols-2 gap-3 mt-2 pt-2 border-t border-stone-800/80">
+            <div>
+              <div class="flex justify-between text-xs font-mono text-amber-200/80 mb-1">
+                <span>MASTER VOLUME</span>
+                <span id="volVal">85%</span>
+              </div>
+              <input id="volumeSlider" type="range" min="0" max="100" value="85" oninput="setMasterVolume(this.value)" class="w-full accent-amber-500 cursor-pointer h-1.5 bg-stone-800 rounded-lg" />
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-mono text-amber-200/80 mb-1">
+                <span>VINYL CRACKLE 炒豆音</span>
+                <span id="crackleVal">15%</span>
+              </div>
+              <input id="crackleSlider" type="range" min="0" max="100" value="15" oninput="setCrackleVolume(this.value)" class="w-full accent-rose-500 cursor-pointer h-1.5 bg-stone-800 rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- COLUMN 2 (CENTER 5 COLS): FLIPBOOK TITLE STRIP RACK (43 MUSIC TRACKS + 10 ACT BOSS VOICES) -->
+      <section class="col-span-12 lg:col-span-5 flex flex-col min-h-0 wood-cabinet brass-border rounded-xl p-4 overflow-hidden">
+        
+        <!-- Rack Header, Search & Category Flipper Tabs -->
+        <div class="shrink-0 pb-2 border-b border-amber-500/20">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div>
+              <h2 class="text-base font-black tracking-wider uppercase text-amber-200 flex items-center gap-2">
+                <span class="w-2 h-4 rounded-sm bg-amber-400 inline-block"></span>
+                暗黑 II 烘焙原声与魔王语音 · 53 RECORDS
+              </h2>
+              <p class="text-xs text-amber-200/60">含 43 首原声配乐 (A-E) 与 5 大关底 Boss 嘲讽狂笑语音 (F-1 ~ F-10)</p>
+            </div>
+            <!-- Quick Search Input -->
+            <div class="w-44 shrink-0">
+              <input id="rackSearchInput" type="text" placeholder="搜索 Boss / 曲名 / ID..." oninput="onSearchInput(this.value)"
+                     class="w-full bg-black/70 border border-amber-500/35 focus:border-amber-400 rounded-lg px-2.5 py-1 text-xs text-amber-100 placeholder-stone-500 outline-none font-mono" />
+            </div>
+          </div>
+
+          <!-- 5 Act Bosses Quick Audition Strip (五幕关底魔王快捷直达栏) -->
+          <div class="bg-black/55 border border-rose-500/35 rounded-lg p-1.5 mb-2 flex items-center justify-between gap-1.5">
+            <span class="text-xs font-mono font-bold text-rose-300 uppercase px-1.5 shrink-0">关底魔王语音:</span>
+            <div class="grid grid-cols-5 gap-1 flex-1">
+              <button onclick="auditionBoss(1)" class="px-1.5 py-1 rounded bg-rose-950/70 hover:bg-rose-800/80 border border-rose-500/40 text-xs font-bold text-rose-200 truncate cursor-pointer transition" title="Act I 安达利尔: Die, maggot! / Fear me!">
+                I·安达利尔
+              </button>
+              <button onclick="auditionBoss(2)" class="px-1.5 py-1 rounded bg-amber-950/70 hover:bg-amber-800/80 border border-amber-500/40 text-xs font-bold text-amber-200 truncate cursor-pointer transition" title="Act II 督瑞尔: Looking for Baal?">
+                II·督瑞尔
+              </button>
+              <button onclick="auditionBoss(3)" class="px-1.5 py-1 rounded bg-teal-950/70 hover:bg-teal-800/80 border border-teal-500/40 text-xs font-bold text-teal-200 truncate cursor-pointer transition" title="Act III 墨菲斯托: My brothers have escaped you! / You're too late!">
+                III·墨菲斯托
+              </button>
+              <button onclick="auditionBoss(4)" class="px-1.5 py-1 rounded bg-red-950/80 hover:bg-red-800/90 border border-red-500/50 text-xs font-bold text-red-200 truncate cursor-pointer transition" title="Act IV 迪亚波罗: Not even death can save you from me!">
+                IV·迪亚波罗
+              </button>
+              <button onclick="auditionBoss(5)" class="px-1.5 py-1 rounded bg-indigo-950/80 hover:bg-indigo-800/90 border border-indigo-500/50 text-xs font-bold text-indigo-200 truncate cursor-pointer transition" title="Act V 巴尔: My brothers will not have died in vain! / 狂笑">
+                V·巴尔
+              </button>
+            </div>
+          </div>
+
+          <!-- Category / Act Filter Buttons -->
+          <div class="flex items-center gap-1.5 overflow-x-auto custom-scroll pb-1">
+            <button onclick="filterCategory('ALL')" data-cat="ALL" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-amber-500 text-stone-950 shadow shrink-0 cursor-pointer">
+              全部唱片 (53)
+            </button>
+            <button onclick="filterCategory('BOSS VOICES')" data-cat="BOSS VOICES" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-rose-950/90 text-rose-200 border border-rose-500/50 hover:border-rose-300 shrink-0 cursor-pointer">
+              关底Boss语音 (10)
+            </button>
+            <button onclick="filterCategory('OPENING & TOWN')" data-cat="OPENING & TOWN" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer">
+              序幕与城镇 (7)
+            </button>
+            <button onclick="filterCategory('ACT I')" data-cat="ACT I" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer">
+              Act I 罗格 (8)
+            </button>
+            <button onclick="filterCategory('ACT II')" data-cat="ACT II" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer">
+              Act II 沙漠 (9)
+            </button>
+            <button onclick="filterCategory('ACT III')" data-cat="ACT III" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer">
+              Act III 雨林 (7)
+            </button>
+            <button onclick="filterCategory('ACT IV & V')" data-cat="ACT IV & V" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer">
+              Act IV-V 终局 (12)
+            </button>
+            <button onclick="filterCategory('STINGERS')" data-cat="STINGERS" class="genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer">
+              任务号角 (14)
+            </button>
+          </div>
+        </div>
+
+        <!-- Scrollable 双列带封套纸质点歌卡 (Title Strips Grid) -->
+        <div id="titleStripsContainer" class="flex-1 overflow-y-auto custom-scroll py-3 pr-1 grid grid-cols-1 sm:grid-cols-2 gap-2.5 content-start">
+          <!-- Populated dynamically with all 53 baked records -->
+        </div>
+
+        <!-- Bottom Mechanical Page Flipper Bar -->
+        <div class="shrink-0 pt-2 border-t border-amber-500/20 flex items-center justify-between text-xs text-amber-200/70 font-mono">
+          <span>音源路径：`sound/music/*.webm` &amp; `sound/speech/act*/**/*.webm`</span>
+          <span id="catalogCountText">共展示 53 张 45RPM 烘焙黑胶</span>
+        </div>
+      </section>
+
+      <!-- COLUMN 3 (RIGHT 3 COLS): MECHANICAL KEYPAD SELECTOR (A-F / 1-10) & PLAY QUEUE -->
+      <section class="col-span-12 lg:col-span-3 flex flex-col gap-3 min-h-0 overflow-hidden">
+        
+        <!-- Mechanical Push-Button Selector Box -->
+        <div class="wood-cabinet brass-border rounded-xl p-3.5 shrink-0">
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <h3 class="text-sm font-black uppercase tracking-wider text-amber-200">机械选曲矩阵 · SELECTOR</h3>
+              <p class="text-xs text-amber-200/60">A-E 为 43 首原声 · F-1~F-10 为五大关底 Boss 语音</p>
+            </div>
+            <!-- Selected Code Readout -->
+            <div class="vfd-screen rounded px-3 py-1 flex items-center gap-1.5">
+              <span class="text-xs font-mono text-stone-400">CODE:</span>
+              <span id="keypadReadout" class="nixie-amber text-lg font-black tracking-widest">A-1</span>
+            </div>
+          </div>
+
+          <!-- Letter Keys Row (A - F, where F is Boss Voices) -->
+          <div class="grid grid-cols-6 gap-1.5 mb-1.5">
+            <button onclick="pressLetter('A')" id="key-letter-A" class="mech-key active-key rounded-lg py-1.5 text-xs font-black font-mono cursor-pointer">A</button>
+            <button onclick="pressLetter('B')" id="key-letter-B" class="mech-key rounded-lg py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">B</button>
+            <button onclick="pressLetter('C')" id="key-letter-C" class="mech-key rounded-lg py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">C</button>
+            <button onclick="pressLetter('D')" id="key-letter-D" class="mech-key rounded-lg py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">D</button>
+            <button onclick="pressLetter('E')" id="key-letter-E" class="mech-key rounded-lg py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">E</button>
+            <button onclick="pressLetter('F')" id="key-letter-F" class="mech-key rounded-lg py-1.5 text-xs font-black font-mono text-rose-300 border-rose-500/50 cursor-pointer" title="F 组：五幕关底 Boss 语音 (F-1 ~ F-10)">F·BOSS</button>
+          </div>
+
+          <!-- Number Keys Grid (1 - 10) -->
+          <div class="grid grid-cols-10 gap-1 mb-2.5">
+            <button onclick="pressNumber('1')" id="key-num-1" class="mech-key active-key rounded py-1.5 text-xs font-black font-mono cursor-pointer">1</button>
+            <button onclick="pressNumber('2')" id="key-num-2" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">2</button>
+            <button onclick="pressNumber('3')" id="key-num-3" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">3</button>
+            <button onclick="pressNumber('4')" id="key-num-4" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">4</button>
+            <button onclick="pressNumber('5')" id="key-num-5" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">5</button>
+            <button onclick="pressNumber('6')" id="key-num-6" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">6</button>
+            <button onclick="pressNumber('7')" id="key-num-7" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">7</button>
+            <button onclick="pressNumber('8')" id="key-num-8" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">8</button>
+            <button onclick="pressNumber('9')" id="key-num-9" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">9</button>
+            <button onclick="pressNumber('10')" id="key-num-10" class="mech-key rounded py-1.5 text-xs font-black font-mono text-amber-100 cursor-pointer">10</button>
+          </div>
+
+          <!-- Preview of Keypad Match (with Reserved Cover Thumbnail) & Action Buttons -->
+          <div class="bg-black/60 border border-amber-500/25 rounded-lg p-2 mb-2.5 flex items-center gap-2.5">
+            <div class="w-11 h-11 rounded-md overflow-hidden border border-amber-400/50 shrink-0 bg-stone-900">
+              <img id="keypadPreviewCover" src="" alt="Preview Cover" class="w-full h-full object-cover" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <div id="keypadPreviewMeta" class="text-xs font-mono text-amber-400/80 uppercase leading-none">ID #4699 · D2xMusic.mpq</div>
+              <div id="keypadPreviewTitle" class="text-xs font-bold text-amber-100 truncate mt-1">A-1 · 毁灭之王交响序曲 (LoD Intro)</div>
+              <div id="keypadPreviewArtist" class="text-xs text-stone-400 truncate">introedit.wav (01:40)</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <button onclick="playSelectedCodeNow()" class="mech-key rounded-lg py-2 px-3 text-xs font-black uppercase tracking-wider text-amber-300 border-amber-500/50 flex items-center justify-center gap-1.5 cursor-pointer">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <span>立即换碟播放</span>
+            </button>
+            <button onclick="queueSelectedCode()" class="mech-key rounded-lg py-2 px-3 text-xs font-black uppercase tracking-wider text-teal-300 border-teal-500/50 flex items-center justify-center gap-1.5 cursor-pointer">
+              <svg class="w-3.5 h-3.5 stroke-current" fill="none" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m-7-7h14"/></svg>
+              <span>投币加入队列</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Up Next Queue & Bar Table Dedications -->
+        <div class="wood-cabinet brass-border rounded-xl p-3.5 flex-1 flex flex-col min-h-0 overflow-hidden">
+          <div class="flex items-center justify-between pb-2 mb-2 border-b border-amber-500/20 shrink-0">
+            <div>
+              <h3 class="text-sm font-black uppercase tracking-wider text-amber-200 flex items-center gap-2">
+                <span class="w-2 h-3.5 rounded-sm bg-teal-400 inline-block"></span>
+                酒馆待播队列 · UP NEXT
+              </h3>
+              <p class="text-xs text-amber-200/60">当前唱片播放完毕后自动机械换碟</p>
+            </div>
+            <span id="queueBadgeCount" class="px-2 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-xs font-mono font-bold text-amber-300">
+              5 首排队
+            </span>
+          </div>
+
+          <!-- Scrollable Queue List -->
+          <div id="queueListContainer" class="flex-1 overflow-y-auto custom-scroll space-y-2 pr-1">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Toast / Mechanical Status Bar -->
+          <div id="statusToast" class="mt-2 pt-2 border-t border-stone-800 text-xs font-mono text-teal-300 truncate shrink-0">
+            STATUS: 43 首配乐 + 10 段关底 Boss 语音已就绪 · 点击任意曲目或 Boss 试听
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- RIGHT NEON BUBBLE PILLAR -->
+    <div id="rightNeonTube" class="w-4 shrink-0 neon-tube-right hidden sm:block">
+      <div class="bubble" style="animation-duration: 4.6s; animation-delay: 0.7s;"></div>
+      <div class="bubble" style="animation-duration: 3.9s; animation-delay: 1.8s;"></div>
+      <div class="bubble" style="animation-duration: 5.2s; animation-delay: 0.2s;"></div>
+      <div class="bubble" style="animation-duration: 4.1s; animation-delay: 2.9s;"></div>
+    </div>
+
+  </div>
+
+  <!-- COMPLETE 53 BAKED RECORDS (43 MUSIC TRACKS + 10 ACT BOSS VOICES) & AUDIO ENGINE -->
+  <script>
+    // Pure vector graphic illustrations for each album sleeve (zero emojis)
+    function getVectorEmblemSvg(emblem, accentColor) {
+      switch (emblem) {
+        case 'boss_andariel':
+          // Act I Boss: Maiden of Anguish — Dorsal spider spines & twin venom fangs
+          return `
+            <path d="M120 68 L90 54 L104 92 M120 68 L150 54 L136 92" fill="none" stroke="${accentColor}" stroke-width="3.5" stroke-linejoin="round"/>
+            <path d="M84 96 L62 82 L88 114 M156 96 L178 82 L152 114" fill="none" stroke="${accentColor}" stroke-width="3" stroke-linejoin="round"/>
+            <polygon points="106,96 120,82 134,96 128,136 120,118 112,136" fill="${accentColor}" fill-opacity="0.85"/>
+            <circle cx="113" cy="98" r="3" fill="#09090b"/>
+            <circle cx="127" cy="98" r="3" fill="#09090b"/>
+          `;
+        case 'boss_duriel':
+          // Act II Boss: Lord of Pain — Twin curved chitin scythe claws & scarab shell
+          return `
+            <path d="M96 134 C66 112 68 72 106 64 C88 84 92 108 110 122 Z" fill="${accentColor}"/>
+            <path d="M144 134 C174 112 172 72 134 64 C152 84 148 108 130 122 Z" fill="${accentColor}"/>
+            <polygon points="120,78 134,104 120,134 106,104" fill="none" stroke="${accentColor}" stroke-width="3"/>
+            <line x1="108" y1="104" x2="132" y2="104" stroke="${accentColor}" stroke-width="2.5"/>
+          `;
+        case 'boss_mephisto':
+          // Act III Boss: Lord of Hatred — Curved rams-horn skull & Compelling Orb lightning
+          return `
+            <path d="M104 92 C78 68 68 96 86 116" fill="none" stroke="${accentColor}" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M136 92 C162 68 172 96 154 116" fill="none" stroke="${accentColor}" stroke-width="3.5" stroke-linecap="round"/>
+            <polygon points="120,70 138,98 128,134 112,134 102,98" fill="none" stroke="${accentColor}" stroke-width="3"/>
+            <circle cx="120" cy="100" r="8" fill="${accentColor}"/>
+          `;
+        case 'boss_diablo':
+          // Act IV Boss: Lord of Terror — Iconic sweeping terror horns & forehead soulstone shard
+          return `
+            <path d="M102 88 C74 78 66 56 84 52 C78 66 88 76 108 78" fill="${accentColor}"/>
+            <path d="M138 88 C166 78 174 56 156 52 C162 66 152 76 132 78" fill="${accentColor}"/>
+            <polygon points="104,84 120,72 136,84 130,134 120,142 110,134" fill="none" stroke="${accentColor}" stroke-width="3.5"/>
+            <polygon points="120,76 126,88 120,100 114,88" fill="${accentColor}"/>
+          `;
+        case 'boss_baal':
+          // Act V Boss: Lord of Destruction — Worldstone crystal shard & 4 spider-appendage tendrils
+          return `
+            <polygon points="120,60 136,98 120,142 104,98" fill="${accentColor}" fill-opacity="0.85"/>
+            <polyline points="104,90 76,72 68,96" fill="none" stroke="${accentColor}" stroke-width="3" stroke-linejoin="round"/>
+            <polyline points="136,90 164,72 172,96" fill="none" stroke="${accentColor}" stroke-width="3" stroke-linejoin="round"/>
+            <polyline points="106,110 78,122 72,140" fill="none" stroke="${accentColor}" stroke-width="3" stroke-linejoin="round"/>
+            <polyline points="134,110 162,122 168,140" fill="none" stroke="${accentColor}" stroke-width="3" stroke-linejoin="round"/>
+          `;
+        case 'tristram':
+          return `
+            <polygon points="120,64 156,128 84,128" fill="none" stroke="${accentColor}" stroke-width="3"/>
+            <polygon points="120,140 156,76 84,76" fill="none" stroke="${accentColor}" stroke-width="3"/>
+            <circle cx="120" cy="102" r="10" fill="${accentColor}"/>
+          `;
+        case 'crown':
+          return `
+            <polygon points="82,126 92,82 120,106 148,82 158,126" fill="none" stroke="${accentColor}" stroke-width="3.5" stroke-linejoin="round"/>
+            <line x1="82" y1="134" x2="158" y2="134" stroke="${accentColor}" stroke-width="3.5"/>
+          `;
+        case 'campfire':
+          return `
+            <path d="M120 66 C138 88 146 106 120 128 C94 106 102 88 120 66 Z" fill="${accentColor}" fill-opacity="0.8"/>
+            <line x1="88" y1="136" x2="152" y2="122" stroke="${accentColor}" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="88" y1="122" x2="152" y2="136" stroke="${accentColor}" stroke-width="3.5" stroke-linecap="round"/>
+          `;
+        case 'sun':
+          return `
+            <circle cx="120" cy="104" r="22" fill="${accentColor}"/>
+            <circle cx="120" cy="104" r="34" fill="none" stroke="${accentColor}" stroke-width="3" stroke-dasharray="6 5"/>
+            <path d="M74 134 Q120 116 166 134" fill="none" stroke="${accentColor}" stroke-width="3"/>
+          `;
+        case 'pyramid':
+          return `
+            <polygon points="120,68 164,132 76,132" fill="none" stroke="${accentColor}" stroke-width="3.5"/>
+            <line x1="120" y1="68" x2="134" y2="132" stroke="${accentColor}" stroke-width="2"/>
+            <circle cx="120" cy="96" r="5" fill="${accentColor}"/>
+          `;
+        case 'jungle':
+          return `
+            <path d="M120 66 C144 82 148 118 120 138 C92 118 96 82 120 66 Z" fill="none" stroke="${accentColor}" stroke-width="3.5"/>
+            <line x1="120" y1="68" x2="120" y2="138" stroke="${accentColor}" stroke-width="2.5"/>
+            <line x1="120" y1="96" x2="138" y2="84" stroke="${accentColor}" stroke-width="2.5"/>
+            <line x1="120" y1="112" x2="102" y2="100" stroke="${accentColor}" stroke-width="2.5"/>
+          `;
+        case 'fortress':
+          return `
+            <path d="M88 134 V80 H102 V90 H114 V80 H126 V90 H138 V80 H152 V134 Z" fill="none" stroke="${accentColor}" stroke-width="3"/>
+            <rect x="111" y="108" width="18" height="26" fill="${accentColor}"/>
+          `;
+        case 'chaos':
+          return `
+            <polygon points="120,64 132,94 164,94 138,112 148,142 120,124 92,142 102,112 76,94 108,94" fill="none" stroke="${accentColor}" stroke-width="3"/>
+            <circle cx="120" cy="106" r="9" fill="${accentColor}"/>
+          `;
+        case 'mountain':
+          return `
+            <polygon points="72,134 108,76 136,118 148,96 172,134" fill="none" stroke="${accentColor}" stroke-width="3.5" stroke-linejoin="round"/>
+            <polyline points="98,92 108,76 119,93" fill="none" stroke="${accentColor}" stroke-width="2.5"/>
+          `;
+        case 'stinger':
+          return `
+            <polygon points="126,64 92,108 120,108 112,142 148,96 120,96" fill="${accentColor}"/>
+          `;
+        case 'arch':
+        default:
+          return `
+            <path d="M90 136 V98 A30 30 0 0 1 150 98 V136" fill="none" stroke="${accentColor}" stroke-width="3.5"/>
+            <path d="M102 136 V102 A18 18 0 0 1 138 102 V136" fill="none" stroke="${accentColor}" stroke-width="2"/>
+            <circle cx="120" cy="96" r="5" fill="${accentColor}"/>
+          `;
+      }
+    }
+
+    // Generate bespoke vintage SVG album cover data URI for each baked track or Boss voice
+    function createBakedCoverDataUri(track) {
+      let bg1 = '#2a0a0a', bg2 = '#b45309', accent = '#fde68a', emblem = 'arch', motif = 'SANCTUARY';
+
+      if (track.category === 'boss_voice') {
+        if (track.act === 1) {
+          bg1 = '#142607'; bg2 = '#991b1b'; accent = '#bef264'; emblem = 'boss_andariel'; motif = 'ACT I BOSS · ANDARIEL';
+        } else if (track.act === 2) {
+          bg1 = '#2e1605'; bg2 = '#b45309'; accent = '#fde047'; emblem = 'boss_duriel'; motif = 'ACT II BOSS · DURIEL';
+        } else if (track.act === 3) {
+          bg1 = '#042f2e'; bg2 = '#4338ca'; accent = '#5eead4'; emblem = 'boss_mephisto'; motif = 'ACT III BOSS · MEPHISTO';
+        } else if (track.act === 4) {
+          bg1 = '#2a0404'; bg2 = '#dc2626'; accent = '#fca5a5'; emblem = 'boss_diablo'; motif = 'ACT IV BOSS · DIABLO';
+        } else {
+          bg1 = '#0f172a'; bg2 = '#7e22ce'; accent = '#e9d5ff'; emblem = 'boss_baal'; motif = 'ACT V BOSS · BAAL';
+        }
+      } else if (track.id === 4699 || track.id === 4668) {
+        bg1 = '#450a0a'; bg2 = '#d97706'; accent = '#fef08a'; emblem = 'crown'; motif = track.id === 4699 ? 'LOD OVERTURE' : 'DIABLO II TITLE';
+      } else if (track.id === 4677) {
+        bg1 = '#172554'; bg2 = '#0284c7'; accent = '#bae6fd'; emblem = 'tristram'; motif = 'TRISTRAM 12-STR';
+      } else if (track.category === 'stinger') {
+        bg1 = '#3b0764'; bg2 = '#e11d48'; accent = '#fecdd3'; emblem = 'stinger'; motif = 'QUEST STINGER';
+      } else if (track.category === 'town') {
+        bg1 = '#422006'; bg2 = '#d97706'; accent = '#fde68a'; emblem = 'campfire'; motif = `ACT ${track.act} ENCAMPMENT`;
+      } else if (track.act === 1) {
+        bg1 = '#1c1917'; bg2 = '#991b1b'; accent = '#fca5a5'; emblem = 'arch'; motif = 'ACT I · MONASTERY';
+      } else if (track.act === 2) {
+        bg1 = '#451a03'; bg2 = '#ca8a04'; accent = '#fef08a'; emblem = track.category === 'wilderness' ? 'sun' : 'pyramid'; motif = 'ACT II · ARANOCH';
+      } else if (track.act === 3) {
+        bg1 = '#042f2e'; bg2 = '#0d9488'; accent = '#99f6e4'; emblem = 'jungle'; motif = 'ACT III · KURAST';
+      } else if (track.act === 4) {
+        bg1 = '#450a0a'; bg2 = '#dc2626'; accent = '#fecaca'; emblem = track.id === 4660 ? 'chaos' : 'fortress'; motif = 'ACT IV · PANDEMONIUM';
+      } else if (track.act === 5) {
+        bg1 = '#0f172a'; bg2 = '#4f46e5'; accent = '#c7d2fe'; emblem = 'mountain'; motif = 'ACT V · HARROGATH';
+      }
+
+      const emblemMarkup = getVectorEmblemSvg(emblem, accent);
+
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+        <defs>
+          <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${bg1}" />
+            <stop offset="100%" stop-color="${bg2}" />
+          </linearGradient>
+          <radialGradient id="sun" cx="50%" cy="44%" r="42%">
+            <stop offset="0%" stop-color="${accent}" stop-opacity="0.32" />
+            <stop offset="65%" stop-color="${bg2}" stop-opacity="0.16" />
+            <stop offset="100%" stop-color="${bg1}" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <rect width="240" height="240" fill="url(#g)" />
+        <circle cx="120" cy="104" r="76" fill="url(#sun)" />
+        <circle cx="120" cy="104" r="62" fill="none" stroke="${accent}" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="5 4" />
+        <rect x="10" y="10" width="220" height="220" rx="12" fill="none" stroke="${accent}" stroke-width="2" stroke-opacity="0.45" />
+        <rect x="18" y="18" width="58" height="24" rx="4" fill="#09090b" fill-opacity="0.78" stroke="${accent}" stroke-width="1" />
+        <text x="47" y="34" fill="${accent}" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">${track.code}</text>
+        <text x="218" y="34" fill="${accent}" fill-opacity="0.8" font-family="monospace" font-size="11" font-weight="bold" text-anchor="end">#${track.id}</text>
+        ${emblemMarkup}
+        <rect x="16" y="168" width="208" height="52" rx="6" fill="#09090b" fill-opacity="0.82" />
+        <text x="120" y="189" fill="${accent}" font-family="sans-serif" font-size="13" font-weight="900" letter-spacing="1.2" text-anchor="middle">${motif}</text>
+        <text x="120" y="208" fill="#ffffff" fill-opacity="0.82" font-family="monospace" font-size="10" text-anchor="middle">${track.sound.toUpperCase()}</text>
+      </svg>`;
+
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+
+    // All 43 baked music tracks (A-1 .. E-7) + 10 baked Act Boss voice tracks (F-1 .. F-10)
+    const BAKED_TRACKS_RAW = [
+      // ROW A (A-1 .. A-9): Opening Themes & Town Encampments + Tristram & Wilderness Classics
+      { id: 4699, code: "A-1", sound: "music_lod_introedit", fileName: "introedit.wav", archive: "D2xMusic.mpq", url: "sound/music/introedit.webm", durationSeconds: 99.99, loop: true, block1Seconds: 14.99, block2Seconds: 53.93, block3Seconds: -1, category: "opening", act: 0, titleZh: "毁灭之王交响序曲 (LoD Intro Edit)", descZh: "D2xMusic 独占序幕音轨，含 00:15 与 00:54 小号与双击战鼓" },
+      { id: 4668, code: "A-2", sound: "music_options", fileName: "common\\options.wav", archive: "d2music.mpq", url: "sound/music/common/options.webm", durationSeconds: 167.17, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "opening", act: 0, titleZh: "暗黑II 经典主菜单与选项 (Classic Title)", descZh: "原版暗黑破坏神 II 经典开场主菜单主题曲" },
+      { id: 4684, code: "A-3", sound: "music_xtown", fileName: "act5\\xtown.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/xtown.webm", durationSeconds: 291.48, loop: true, block1Seconds: 151.53, block2Seconds: -1, block3Seconds: -1, category: "opening", act: 5, titleZh: "哈洛加斯雪山要塞 (Harrogath Theme)", descZh: "第五幕野蛮人雪山主城史诗交响乐" },
+      { id: 4677, code: "A-4", sound: "music_tristram", fileName: "act1\\tristram.wav", archive: "d2music.mpq", url: "sound/music/act1/tristram.webm", durationSeconds: 460.10, loop: true, block1Seconds: 289.41, block2Seconds: -1, block3Seconds: -1, category: "wilderness", act: 1, titleZh: "第一幕 崔斯特姆 (Tristram)", descZh: "Matt Uelmen 传奇 12 弦原声吉他独奏" },
+      { id: 4673, code: "A-5", sound: "music_town_1", fileName: "act1\\town1.wav", archive: "d2music.mpq", url: "sound/music/act1/town1.webm", durationSeconds: 247.23, loop: true, block1Seconds: 136.16, block2Seconds: -1, block3Seconds: -1, category: "town", act: 1, titleZh: "第一幕 罗格营地 (Rogue Encampment)", descZh: "盲眼姐妹会营地篝火与荒原弦乐" },
+      { id: 4674, code: "A-6", sound: "music_town_2", fileName: "act2\\town2.wav", archive: "d2music.mpq", url: "sound/music/act2/town2.webm", durationSeconds: 182.92, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "town", act: 2, titleZh: "第二幕 鲁·高因海港 (Lut Gholein)", descZh: "沙漠明珠港口集市与异域海风" },
+      { id: 4675, code: "A-7", sound: "music_town_3", fileName: "act3\\town3.wav", archive: "d2music.mpq", url: "sound/music/act3/town3.webm", durationSeconds: 129.06, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "town", act: 3, titleZh: "第三幕 库拉斯特海港 (Kurast Docks)", descZh: "雨林深处孤立海港的幽暗防线" },
+      { id: 4676, code: "A-8", sound: "music_town_4", fileName: "act4\\town4.wav", archive: "d2music.mpq", url: "sound/music/act4/town4.webm", durationSeconds: 235.66, loop: true, block1Seconds: 69.39, block2Seconds: 136.05, block3Seconds: -1, category: "town", act: 4, titleZh: "第四幕 群魔堡垒 (Pandemonium Fortress)", descZh: "地狱边境泰瑞尔驻守的高耸堡垒" },
+      { id: 4679, code: "A-9", sound: "music_wilderness", fileName: "act1\\wild.wav", archive: "d2music.mpq", url: "sound/music/act1/wild.webm", durationSeconds: 479.26, loop: true, block1Seconds: 156.78, block2Seconds: 306.36, block3Seconds: -1, category: "wilderness", act: 1, titleZh: "第一幕 鲜血荒地与旷野 (Wilderness)", descZh: "踏出罗格营地的八分钟荒野长卷" },
+
+      // ROW B (B-1 .. B-9): Act I & Act II Wilderness & Dungeons
+      { id: 4657, code: "B-1", sound: "music_caves", fileName: "act1\\caves.wav", archive: "d2music.mpq", url: "sound/music/act1/caves.webm", durationSeconds: 232.63, loop: true, block1Seconds: 67.03, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 1, titleZh: "第一幕 洞穴与地穴 (Caves & Pit)", descZh: "邪恶洞窟、地下通道与阴湿地穴配乐" },
+      { id: 4658, code: "B-2", sound: "music_crypt", fileName: "act1\\crypt.wav", archive: "d2music.mpq", url: "sound/music/act1/crypt.webm", durationSeconds: 270.84, loop: true, block1Seconds: 143.03, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 1, titleZh: "第一幕 墓穴与地下墓穴 (Crypt & Catacombs)", descZh: "大陵墓与修道院地下墓穴深处" },
+      { id: 4667, code: "B-3", sound: "music_monastery", fileName: "act1\\monastery.wav", archive: "d2music.mpq", url: "sound/music/act1/monastery.webm", durationSeconds: 307.99, loop: true, block1Seconds: 189.43, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 1, titleZh: "第一幕 盲眼修道院与大教堂 (Monastery)", descZh: "修道院兵营、监牢与大教堂哥特回响" },
+      { id: 4659, code: "B-4", sound: "music_desert", fileName: "act2\\desert.wav", archive: "d2music.mpq", url: "sound/music/act2/desert.webm", durationSeconds: 394.71, loop: true, block1Seconds: 222.22, block2Seconds: -1, block3Seconds: -1, category: "wilderness", act: 2, titleZh: "第二幕 干燥高地与绿洲沙漠 (Desert)", descZh: "碎石荒野、遥远绿洲与遗失城市" },
+      { id: 4678, code: "B-5", sound: "music_valley", fileName: "act2\\valley.wav", archive: "d2music.mpq", url: "sound/music/act2/valley.webm", durationSeconds: 166.83, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "wilderness", act: 2, titleZh: "第二幕 术士峡谷 (Canyon of the Magi)", descZh: "环绕七座古墓图腾的荒古峡谷" },
+      { id: 4670, code: "B-6", sound: "music_sewer", fileName: "act2\\sewer.wav", archive: "d2music.mpq", url: "sound/music/act2/sewer.webm", durationSeconds: 239.35, loop: true, block1Seconds: 130.02, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 2, titleZh: "第二幕 鲁·高因下水道 (Lut Gholein Sewers)", descZh: "罗达曼特盘踞的城底暗河" },
+      { id: 4661, code: "B-7", sound: "music_harem", fileName: "act2\\harem.wav", archive: "d2music.mpq", url: "sound/music/act2/harem.webm", durationSeconds: 148.98, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 2, titleZh: "第二幕 皇宫监牢与后宫 (Harem & Palace)", descZh: "杰海因王宫地下被恶魔占据的监牢" },
+      { id: 4669, code: "B-8", sound: "music_sanctuary", fileName: "act2\\sanctuary.wav", archive: "d2music.mpq", url: "sound/music/act2/sanctuary.webm", durationSeconds: 117.28, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 2, titleZh: "第二幕 神秘避难所 (Arcane Sanctuary)", descZh: "赫拉森星界回廊与召唤者秘境" },
+      { id: 4665, code: "B-9", sound: "music_lair", fileName: "act2\\lair.wav", archive: "d2music.mpq", url: "sound/music/act2/lair.webm", durationSeconds: 195.54, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 2, titleZh: "第二幕 蛆虫巢穴 (Maggot Lair)", descZh: "沙虫女王挖掘的幽闭地底隧道" },
+
+      // ROW C (C-1 .. C-9): Act II Tombs + Act III & Act IV-V Dungeons
+      { id: 4672, code: "C-1", sound: "music_tombs", fileName: "act2\\tombs.wav", archive: "d2music.mpq", url: "sound/music/act2/tombs.webm", durationSeconds: 334.01, loop: true, block1Seconds: 127.66, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 2, titleZh: "第二幕 塔·拉夏古墓 (Tal Rasha's Tombs)", descZh: "七座古墓与督瑞尔封印刑室" },
+      { id: 4662, code: "C-2", sound: "music_jungle", fileName: "act3\\jungle.wav", archive: "d2music.mpq", url: "sound/music/act3/jungle.webm", durationSeconds: 461.28, loop: true, block1Seconds: 140.59, block2Seconds: 317.46, block3Seconds: -1, category: "wilderness", act: 3, titleZh: "第三幕 丛林与湿地 (Jungle & Great Marsh)", descZh: "蜘蛛森林、庞大湿地与剥皮丛林战鼓" },
+      { id: 4663, code: "C-3", sound: "music_kurast", fileName: "act3\\kurast.wav", archive: "d2music.mpq", url: "sound/music/act3/kurast.webm", durationSeconds: 297.65, loop: true, block1Seconds: 168.66, block2Seconds: -1, block3Seconds: -1, category: "wilderness", act: 3, titleZh: "第三幕 库拉斯特与崔凡克 (Kurast)", descZh: "库拉斯特废墟与萨卡兰姆最高议会" },
+      { id: 4671, code: "C-4", sound: "music_spider", fileName: "act3\\spider.wav", archive: "d2music.mpq", url: "sound/music/act3/spider.webm", durationSeconds: 249.03, loop: true, block1Seconds: 107.48, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 3, titleZh: "第三幕 蜘蛛巢穴与剥皮地窖 (Spider Cavern)", descZh: "毒液蛛网洞窟与巫毒地窖" },
+      { id: 4664, code: "C-5", sound: "music_kurast_sewer", fileName: "act3\\kurastsewer.wav", archive: "d2music.mpq", url: "sound/music/act3/kurastsewer.webm", durationSeconds: 273.57, loop: true, block1Seconds: 149.21, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 3, titleZh: "第三幕 库拉斯特下水道 (Kurast Sewers)", descZh: "寻找卡利姆之心的地下迷宫" },
+      { id: 4666, code: "C-6", sound: "music_mesa", fileName: "act4\\mesa.wav", archive: "d2music.mpq", url: "sound/music/act4/mesa.webm", durationSeconds: 325.06, loop: true, block1Seconds: 158.05, block2Seconds: -1, block3Seconds: -1, category: "wilderness", act: 4, titleZh: "第四幕 绝望平原与火焰之河 (Plains of Despair)", descZh: "地狱焦土、神圣避难所与熔岩河" },
+      { id: 4660, code: "C-7", sound: "music_diablo", fileName: "act4\\diablo.wav", archive: "d2music.mpq", url: "sound/music/act4/diablo.webm", durationSeconds: 154.99, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 4, titleZh: "第四幕 混沌避难所 (Chaos Sanctuary)", descZh: "开启五道封印决战恐惧之王迪亚波罗" },
+      { id: 4682, code: "C-8", sound: "music_xsiege", fileName: "act5\\siege.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/siege.webm", durationSeconds: 408.61, loop: true, block1Seconds: 104.04, block2Seconds: 311.68, block3Seconds: -1, category: "wilderness", act: 5, titleZh: "第五幕 血腥丘陵与亚瑞特围攻战 (Siege)", descZh: "哈洛加斯城外炮火轰鸣的攻坚战曲" },
+      { id: 4681, code: "C-9", sound: "music_xicecaves", fileName: "act5\\icecaves.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/icecaves.webm", durationSeconds: 280.88, loop: true, block1Seconds: 138.23, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 5, titleZh: "第五幕 水晶通道与冰河洞窟 (Ice Caves)", descZh: "冰冻河流营救安亚的冰封旋律" },
+
+      // ROW D (D-1 .. D-9): Act V Temple & Baal + Quest Stingers Part 1
+      { id: 4683, code: "D-1", sound: "music_xtemple", fileName: "act5\\xtemple.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/xtemple.webm", durationSeconds: 216.51, loop: true, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 5, titleZh: "第五幕 尼拉塞克神殿 (Nihlathak's Temple)", descZh: "痛苦之厅与瓦特之厅的诡谲暗影" },
+      { id: 4680, code: "D-2", sound: "music_xbaal", fileName: "act5\\baal.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/baal.webm", durationSeconds: 262.70, loop: true, block1Seconds: 131.57, block2Seconds: -1, block3Seconds: -1, category: "dungeon", act: 5, titleZh: "第五幕 世界之石要塞与毁灭王座 (Worldstone)", descZh: "亚瑞特之巅决战巴尔五波仆从" },
+      { id: 4688, code: "D-3", sound: "music_quest_den", fileName: "act1\\denofevilaction.wav", archive: "d2music.mpq", url: "sound/music/act1/denofevilaction.webm", durationSeconds: 16.04, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 1, titleZh: "任务号角: 净化邪恶洞窟 (Den of Evil)", descZh: "第一幕清理邪恶洞窟阳光重洒大地" },
+      { id: 4686, code: "D-4", sound: "music_quest_bloodraven", fileName: "act1\\bloodravenresolution.wav", archive: "d2music.mpq", url: "sound/music/act1/bloodravenresolution.webm", durationSeconds: 15.26, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 1, titleZh: "任务号角: 击败血鸦 (Blood Raven)", descZh: "修女埋骨之地解救罗格佣兵" },
+      { id: 4685, code: "D-5", sound: "music_quest_andariel", fileName: "act1\\andarielaction.wav", archive: "d2music.mpq", url: "sound/music/act1/andarielaction.webm", durationSeconds: 20.99, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 1, titleZh: "任务号角: 击败安达利尔 (Andariel)", descZh: "第一幕终局斩杀痛苦女王通关号角" },
+      { id: 4693, code: "D-6", sound: "music_quest_radament", fileName: "act2\\radamentresolution.wav", archive: "d2music.mpq", url: "sound/music/act2/radamentresolution.webm", durationSeconds: 25.40, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 2, titleZh: "任务号角: 罗达曼特的巢穴 (Radament)", descZh: "下水道击杀木乃伊为亚特玛复仇" },
+      { id: 4690, code: "D-7", sound: "music_quest_horadric", fileName: "act2\\horadricaction.wav", archive: "d2music.mpq", url: "sound/music/act2/horadricaction.webm", durationSeconds: 31.35, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 2, titleZh: "任务号角: 重铸赫拉迪克法杖 (Horadric Staff)", descZh: "合成法杖开启塔·拉夏古墓封印" },
+      { id: 4694, code: "D-8", sound: "music_quest_tainted", fileName: "act2\\taintedsunaction.wav", archive: "d2music.mpq", url: "sound/music/act2/taintedsunaction.webm", durationSeconds: 16.24, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 2, titleZh: "任务号角: 破除污秽太阳 (Tainted Sun)", descZh: "击碎利爪蝮蛇祭坛恢复鲁·高因白昼" },
+      { id: 4687, code: "D-9", sound: "music_quest_compelling", fileName: "act3\\orbaction.wav", archive: "d2music.mpq", url: "sound/music/act3/orbaction.webm", durationSeconds: 16.74, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 3, titleZh: "任务号角: 摧毁强制宝珠 (Compelling Orb)", descZh: "崔凡克粉碎宝珠破除墨菲斯托封印" },
+
+      // ROW E (E-1 .. E-7): Quest Stingers Part 2
+      { id: 4692, code: "E-1", sound: "music_quest_mephisto", fileName: "act3\\mefdeathaction.wav", archive: "d2music.mpq", url: "sound/music/act3/mefdeathaction.webm", durationSeconds: 17.19, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 3, titleZh: "任务号角: 击败墨菲斯托 (Mephisto)", descZh: "第三幕终局斩杀憎恨之王开启地狱门" },
+      { id: 4691, code: "E-2", sound: "music_quest_izual", fileName: "act4\\izualaction.wav", archive: "d2music.mpq", url: "sound/music/act4/izualaction.webm", durationSeconds: 12.93, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 4, titleZh: "任务号角: 解脱堕落天使衣卒尔 (Izual)", descZh: "第四幕释放衣卒尔灵魂获泰瑞尔赐福" },
+      { id: 4689, code: "E-3", sound: "music_quest_forge", fileName: "act4\\forgeaction.wav", archive: "d2music.mpq", url: "sound/music/act4/forgeaction.webm", durationSeconds: 16.49, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 4, titleZh: "任务号角: 地狱熔炉碎魂石 (Hellforge)", descZh: "地狱熔炉铁锤敲碎灵魂石迸发符文" },
+      { id: 4695, code: "E-4", sound: "music_quest_diablo", fileName: "act4\\diabloaction.wav", archive: "D2xMusic.mpq", url: "sound/music/act4/diabloaction.webm", durationSeconds: 30.11, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 4, titleZh: "任务号角: 击败暗黑破坏神 (Terror's End)", descZh: "第四幕终局消灭迪亚波罗史诗交响" },
+      { id: 4698, code: "E-5", sound: "music_quest_shenk", fileName: "act5\\shenkmusic.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/shenkmusic.webm", durationSeconds: 20.67, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 5, titleZh: "任务号角: 击杀督军山克 (Siege on Harrogath)", descZh: "解除哈洛加斯投石车围城之危" },
+      { id: 4697, code: "E-6", sound: "music_quest_nihlathak", fileName: "act5\\nihlathakmusic.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/nihlathakmusic.webm", durationSeconds: 22.95, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 5, titleZh: "任务号角: 哈洛加斯的背叛 (Nihlathak)", descZh: "讨伐叛徒尼拉塞克夺回古物" },
+      { id: 4696, code: "E-7", sound: "music_quest_baal", fileName: "act5\\baalmusic.wav", archive: "D2xMusic.mpq", url: "sound/music/act5/baalmusic.webm", durationSeconds: 21.03, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "stinger", act: 5, titleZh: "任务号角: 击败毁灭之王巴尔 (Eve of Destruction)", descZh: "第五幕终局斩杀巴尔粉碎世界之石" },
+
+      // ROW F (F-1 .. F-10): 5 ACT BOSSES VOICE LINES (五幕关底魔王原声语音)
+      { id: 4629, code: "F-1", sound: "monster_andariel_taunt_1", fileName: "act1\\monster\\andarieltaunt1.wav", archive: "d2speech.mpq", url: "sound/speech/act1/monster/andarieltaunt1.webm", durationSeconds: 1.92, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 1, bossName: "Act I 痛苦女王 · 安达利尔 (Andariel)", titleZh: "安达利尔语音 I：Die, maggot!", descZh: "「去死吧，蛆虫！」—— 地下墓穴第四层遭遇安达利尔开战嘲讽" },
+      { id: 4630, code: "F-2", sound: "monster_andariel_taunt_2", fileName: "act1\\monster\\andarieltaunt2.wav", archive: "d2speech.mpq", url: "sound/speech/act1/monster/andarieltaunt2.webm", durationSeconds: 2.30, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 1, bossName: "Act I 痛苦女王 · 安达利尔 (Andariel)", titleZh: "安达利尔语音 II：Fear me!", descZh: "「恐惧我吧！」—— 痛苦女王安达利尔压迫感怒喝" },
+      { id: 4641, code: "F-3", sound: "monster_duriel_taunt_1", fileName: "act2\\monster\\durieltaunt1.wav", archive: "d2speech.mpq", url: "sound/speech/act2/monster/durieltaunt1.webm", durationSeconds: 2.08, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 2, bossName: "Act II 痛苦之王 · 督瑞尔 (Duriel)", titleZh: "督瑞尔语音：Looking for Baal?", descZh: "「你在找巴尔吗？」—— 塔·拉夏古墓密室开门即贴脸的经典噩梦台词" },
+      { id: 4645, code: "F-4", sound: "monster_mephisto_taunt_1", fileName: "act3\\monster\\mephistotaunt1.wav", archive: "d2speech.mpq", url: "sound/speech/act3/monster/mephistotaunt1.webm", durationSeconds: 3.59, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 3, bossName: "Act III 憎恨之王 · 墨菲斯托 (Mephisto)", titleZh: "墨菲斯托语音 I：My brothers have escaped you!", descZh: "「我的兄弟们已经逃出你的魔掌了！」—— 憎恨囚牢第三层宣判" },
+      { id: 4646, code: "F-5", sound: "monster_mephisto_taunt_2", fileName: "act3\\monster\\mephistotaunt2.wav", archive: "d2speech.mpq", url: "sound/speech/act3/monster/mephistotaunt2.webm", durationSeconds: 5.64, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 3, bossName: "Act III 憎恨之王 · 墨菲斯托 (Mephisto)", titleZh: "墨菲斯托语音 II：You're too late! Hahaha!", descZh: "「你来得太晚了！哈哈哈！」—— 墨菲斯托经典的阴鸷狂笑嘲讽" },
+      { id: 4638, code: "F-6", sound: "monster_diablo_taunt_1", fileName: "act4\\diablo\\diablotaunt1.wav", archive: "d2speech.mpq", url: "sound/speech/act4/diablo/diablotaunt1.webm", durationSeconds: 4.53, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 4, bossName: "Act IV 恐惧之王 · 迪亚波罗 (Diablo)", titleZh: "迪亚波罗语音 I：Not even death can save you from me!", descZh: "「就连死亡也无法将你从我手中拯救！」—— 混沌避难所五印全开降临台词" },
+      { id: 4639, code: "F-7", sound: "monster_diablo_taunt_2", fileName: "act4\\diablo\\diablotaunt2.wav", archive: "d2speech.mpq", url: "sound/speech/act4/diablo/diablotaunt2.webm", durationSeconds: 5.75, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 4, bossName: "Act IV 恐惧之王 · 迪亚波罗 (Diablo)", titleZh: "迪亚波罗语音 II：Terror Roar & Death Scream", descZh: "恐惧之王迪亚波罗震撼地狱穹顶的咆哮与临终怒吼" },
+      { id: 4633, code: "F-8", sound: "monster_baal_taunt_3", fileName: "act5\\monster\\baaltaunt.wav", archive: "d2xtalk.mpq", url: "sound/speech/act5/monster/baaltaunt.webm", durationSeconds: 4.75, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 5, bossName: "Act V 毁灭之王 · 巴尔 (Baal)", titleZh: "巴尔语音 I：My brothers will not have died in vain!", descZh: "「我的兄弟们绝不会白白死去！」—— 世界之石大殿决战宣言" },
+      { id: 4631, code: "F-9", sound: "monster_baal_taunt_1", fileName: "act5\\monster\\baallaugh1.wav", archive: "d2xtalk.mpq", url: "sound/speech/act5/monster/baallaugh1.webm", durationSeconds: 7.76, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 5, bossName: "Act V 毁灭之王 · 巴尔 (Baal)", titleZh: "巴尔语音 II：毁灭王座狂笑 I (Baal Laugh 1)", descZh: "毁灭王座召唤五波暗金仆从时的标志性魔性长笑" },
+      { id: 4632, code: "F-10", sound: "monster_baal_taunt_2", fileName: "act5\\monster\\baallaugh2.wav", archive: "d2xtalk.mpq", url: "sound/speech/act5/monster/baallaugh2.webm", durationSeconds: 7.35, loop: false, block1Seconds: -1, block2Seconds: -1, block3Seconds: -1, category: "boss_voice", act: 5, bossName: "Act V 毁灭之王 · 巴尔 (Baal)", titleZh: "巴尔语音 III：毁灭王座狂笑 II (Baal Laugh 2)", descZh: "巴尔在王座高台施放衰老与分身前的邪恶狂笑" }
+    ];
+
+    const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+    function formatSec(sec) {
+      if (!Number.isFinite(sec) || sec < 0) return '00:00';
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }
+
+    const CATALOG = BAKED_TRACKS_RAW.map((item) => {
+      const [letter, num] = item.code.split('-');
+      const duration = formatSec(Math.max(1, Math.round(item.durationSeconds)));
+      const enriched = { ...item, letter, num, duration };
+      return {
+        ...enriched,
+        cover: createBakedCoverDataUri(enriched)
+      };
+    });
+
+    const audioEl = document.getElementById('jukeboxAudio');
+
+    let state = {
+      currentTrack: CATALOG[0],
+      isPlaying: false,
+      loopSingle: false,
+      credits: 8,
+      selectedLetter: 'A',
+      selectedNumber: '1',
+      activeCategory: 'ALL',
+      searchQuery: '',
+      crackleLevel: 0.15,
+      bossCycleIndex: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
+      queue: [
+        { ...CATALOG.find(c => c.code === 'F-6'), table: '混沌避难所 · 迪亚波罗语音' },
+        { ...CATALOG.find(c => c.code === 'F-3'), table: '塔拉夏古墓 · 督瑞尔语音' },
+        { ...CATALOG[3], table: '罗格篝火席 · 凯恩点播' },
+        { ...CATALOG[2], table: '哈洛加斯吧台 · 麻辣点播' },
+        { ...CATALOG.find(c => c.code === 'F-8'), table: '毁灭王座 · 巴尔语音' }
+      ]
+    };
+
+    const TABLES = ['罗格篝火席', '亚特玛酒馆吧台', '鲁高因海景座', '库拉斯特码头桌', '群魔堡垒高台', '哈洛加斯炉火座'];
+
+    const SVG_PLAY = `<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+    const SVG_PAUSE = `<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+
+    // Web Audio API Synthesizer for Authentic Vinyl Crackle (Zero external audio files needed)
+    let crackleCtx = null;
+    let crackleGain = null;
+
+    function ensureVinylCrackleEngine() {
+      if (crackleCtx) {
+        if (crackleCtx.state === 'suspended') crackleCtx.resume();
+        return;
+      }
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        crackleCtx = new AudioCtx();
+        const bufferSize = crackleCtx.sampleRate * 3;
+        const buffer = crackleCtx.createBuffer(1, bufferSize, crackleCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          const r = Math.random();
+          if (r > 0.9985) {
+            data[i] = (Math.random() * 2 - 1) * 0.65;
+          } else if (r > 0.985) {
+            data[i] = (Math.random() * 2 - 1) * 0.12;
+          } else {
+            data[i] = (Math.random() * 2 - 1) * 0.015;
+          }
+        }
+        const noise = crackleCtx.createBufferSource();
+        noise.buffer = buffer;
+        noise.loop = true;
+
+        const filter = crackleCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.value = 1900;
+        filter.Q.value = 1.2;
+
+        crackleGain = crackleCtx.createGain();
+        crackleGain.gain.value = state.isPlaying ? state.crackleLevel * 0.16 : 0;
+
+        noise.connect(filter);
+        filter.connect(crackleGain);
+        crackleGain.connect(crackleCtx.destination);
+        noise.start();
+      } catch (e) {
+        // Ignore if WebAudio blocked
+      }
+    }
+
+    function syncCrackleGain() {
+      if (!crackleGain || !crackleCtx) return;
+      const target = state.isPlaying ? state.crackleLevel * 0.16 : 0;
+      crackleGain.gain.setTargetAtTime(target, crackleCtx.currentTime, 0.05);
+    }
+
+    function setMasterVolume(val) {
+      const pct = Math.max(0, Math.min(100, Number(val)));
+      document.getElementById('volVal').textContent = pct + '%';
+      audioEl.volume = pct / 100;
+    }
+
+    function setCrackleVolume(val) {
+      const pct = Math.max(0, Math.min(100, Number(val)));
+      document.getElementById('crackleVal').textContent = pct + '%';
+      state.crackleLevel = pct / 100;
+      syncCrackleGain();
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById('statusToast');
+      el.textContent = 'STATUS: ' + msg;
+      el.classList.remove('text-teal-300');
+      el.classList.add('text-amber-300');
+      setTimeout(() => {
+        el.classList.remove('text-amber-300');
+        el.classList.add('text-teal-300');
+      }, 1800);
+    }
+
+    function matchesCategory(track, cat) {
+      if (cat === 'ALL') return true;
+      if (cat === 'BOSS VOICES') return track.category === 'boss_voice';
+      if (cat === 'OPENING & TOWN') return track.category === 'opening' || track.category === 'town';
+      if (cat === 'ACT I') return track.act === 1 && track.category !== 'stinger';
+      if (cat === 'ACT II') return track.act === 2 && track.category !== 'stinger';
+      if (cat === 'ACT III') return track.act === 3 && track.category !== 'stinger';
+      if (cat === 'ACT IV & V') return (track.act === 4 || track.act === 5) && track.category !== 'stinger';
+      if (cat === 'STINGERS') return track.category === 'stinger';
+      return true;
+    }
+
+    // Quick-audition one of the 5 Act Bosses (cycles through that Boss's voice lines if clicked repeatedly)
+    function auditionBoss(actNum) {
+      const bossTracks = CATALOG.filter(t => t.category === 'boss_voice' && t.act === actNum);
+      if (bossTracks.length === 0) return;
+      const idx = (state.bossCycleIndex[actNum] || 0) % bossTracks.length;
+      state.bossCycleIndex[actNum] = idx + 1;
+      const picked = bossTracks[idx];
+      loadAndPlayTrack(picked.code, true);
+    }
+
+    // Render Paper Title Strips in Center Rack (Each with its dedicated Album Cover Sleeve)
+    function renderTitleStrips() {
+      const container = document.getElementById('titleStripsContainer');
+      const q = state.searchQuery.trim().toLowerCase();
+
+      const filtered = CATALOG.filter(item => {
+        if (!matchesCategory(item, state.activeCategory)) return false;
+        if (!q) return true;
+        const hay = `${item.code} ${item.id} ${item.sound} ${item.fileName} ${item.titleZh} ${item.descZh} ${item.bossName || ''} act${item.act}`.toLowerCase();
+        return hay.includes(q);
+      });
+
+      document.getElementById('catalogCountText').textContent = `共展示 ${filtered.length} / ${CATALOG.length} 张烘焙黑胶`;
+
+      const currentCode = `${state.selectedLetter}-${state.selectedNumber}`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-2 h-40 flex flex-col items-center justify-center text-center border border-dashed border-amber-500/30 rounded-xl p-6">
+            <div class="text-sm font-bold text-amber-200">未找到匹配的烘焙音轨或 Boss 语音</div>
+            <div class="text-xs text-stone-400 mt-1">请尝试清空右上角搜索框或切换分类标签</div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(track => {
+        const isCurrentTrack = state.currentTrack.code === track.code;
+        const isKeypadSelected = currentCode === track.code;
+        const isBoss = track.category === 'boss_voice';
+        const badgeText = isCurrentTrack
+          ? (state.isPlaying ? '正在播放' : '当前装盘')
+          : '';
+        const typeTag = isBoss ? `BOSS VOICE · ACT ${track.act}` : (track.loop ? 'BGM' : 'STINGER');
+        return `
+          <div onclick="selectStripFromRack('${track.code}')" 
+               class="title-strip ${isBoss ? 'boss-strip' : ''} rounded-lg p-2.5 cursor-pointer flex flex-col justify-between ${isKeypadSelected ? 'selected-strip' : ''}">
+            <!-- Top Row: Code Badge, Sound ID & Duration -->
+            <div class="flex items-center justify-between border-b border-red-900/25 pb-1 mb-2">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded ${isBoss ? 'bg-rose-900 text-rose-100' : 'bg-red-800 text-amber-100'} font-mono text-xs font-black tracking-wider shadow-sm">
+                  ${track.code}
+                </span>
+                <span class="text-xs font-mono font-bold text-stone-700">#${track.id}</span>
+                ${badgeText ? `<span class="px-1.5 py-0.5 rounded bg-amber-600 text-white text-xs font-bold ${state.isPlaying ? 'animate-pulse' : ''}">${badgeText}</span>` : ''}
+              </div>
+              <span class="text-xs font-mono font-bold text-red-950/80">${track.duration}</span>
+            </div>
+
+            <!-- Middle: Reserved Album Cover Sleeve + Song/Boss Title & Description -->
+            <div class="flex items-center gap-2.5 my-0.5">
+              <div class="album-sleeve w-14 h-14 rounded-md shrink-0 border border-amber-900/50 bg-stone-900 relative"
+                   onclick="event.stopPropagation(); loadAndPlayTrack('${track.code}', true)" title="点击封面直接落针播放">
+                <img src="${track.cover}" alt="${track.titleZh}" class="w-full h-full object-cover" />
+                ${isCurrentTrack && state.isPlaying ? '<div class="absolute inset-0 bg-black/35 flex items-center justify-center"><span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span></div>' : ''}
+              </div>
+              <div class="min-w-0 flex-1 text-left">
+                <div class="text-xs font-black text-stone-900 leading-snug line-clamp-1">${track.titleZh}</div>
+                <div class="text-xs font-mono font-semibold text-red-900/90 truncate mt-0.5">${track.bossName || track.sound}</div>
+                <div class="text-xs text-stone-700 line-clamp-1 mt-0.5">${track.descZh}</div>
+              </div>
+            </div>
+
+            <!-- Bottom Row: Archive Source & Quick Actions -->
+            <div class="flex items-center justify-between pt-1.5 border-t border-red-900/20 mt-2">
+              <span class="text-xs font-mono text-stone-700">${track.archive} · ${typeTag}</span>
+              <div class="flex items-center gap-1">
+                <button onclick="event.stopPropagation(); loadAndPlayTrack('${track.code}', true)" 
+                        class="px-2 py-0.5 rounded bg-stone-900 hover:bg-stone-800 text-amber-200 text-xs font-bold transition cursor-pointer">
+                  落针播放
+                </button>
+                <button onclick="event.stopPropagation(); addTrackToQueue('${track.code}')" 
+                        class="px-2 py-0.5 rounded bg-red-800 hover:bg-red-700 text-white text-xs font-bold transition cursor-pointer">
+                  +点播
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render Up Next Queue (with Mini Cover Art)
+    function renderQueue() {
+      const container = document.getElementById('queueListContainer');
+      document.getElementById('queueBadgeCount').textContent = `${state.queue.length} 首排队`;
+
+      if (state.queue.length === 0) {
+        container.innerHTML = `
+          <div class="h-32 flex flex-col items-center justify-center text-center border border-dashed border-amber-500/20 rounded-lg p-4">
+            <div class="text-sm text-amber-200/60 font-bold">当前待播队列已空</div>
+            <div class="text-xs text-stone-500 mt-1">队列播放完毕后将按目录顺序自动续播</div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = state.queue.map((item, idx) => `
+        <div class="bg-black/55 border border-amber-500/25 hover:border-amber-400/50 rounded-lg p-2 flex items-center justify-between gap-2 transition group">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="relative w-10 h-10 rounded overflow-hidden border border-amber-400/40 shrink-0 bg-stone-900">
+              <img src="${item.cover}" alt="${item.titleZh}" class="w-full h-full object-cover" />
+              <span class="absolute bottom-0 right-0 px-1 bg-black/85 text-xs font-mono font-bold text-amber-300 leading-tight">
+                ${item.code}
+              </span>
+            </div>
+            <div class="min-w-0">
+              <div class="text-xs font-bold text-amber-100 truncate">${item.titleZh}</div>
+              <div class="text-xs text-amber-300/60 truncate">#${item.id} · ${item.table} (${item.duration})</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 shrink-0">
+            <button onclick="playFromQueue(${idx})" title="立即插播" class="px-2 py-1 rounded bg-amber-500/20 hover:bg-amber-500/40 text-amber-300 text-xs font-bold cursor-pointer">
+              插播
+            </button>
+            <button onclick="removeFromQueue(${idx})" title="移除" class="px-2 py-1 rounded bg-stone-800 hover:bg-rose-950 text-stone-400 hover:text-rose-300 text-xs font-mono cursor-pointer">
+              DEL
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderBlockJumpButtons(track) {
+      const container = document.getElementById('blockJumpContainer');
+      const btns = [];
+
+      // If this is a Boss Voice track, show quick sibling buttons for all voice lines of the same Act Boss
+      if (track.category === 'boss_voice') {
+        const siblings = CATALOG.filter(t => t.category === 'boss_voice' && t.act === track.act);
+        siblings.forEach(sib => {
+          const active = sib.code === track.code;
+          btns.push(`<button onclick="loadAndPlayTrack('${sib.code}', true)" class="px-2 py-0.5 rounded ${active ? 'bg-rose-500 text-stone-950 font-bold' : 'bg-rose-500/15 hover:bg-rose-500/35 text-rose-300'} border border-rose-400/40 text-xs font-mono cursor-pointer transition">[${sib.code}] ${sib.titleZh.split('：')[1] || sib.titleZh}</button>`);
+        });
+        container.innerHTML = btns.join('');
+        return;
+      }
+
+      if (track.block1Seconds > 0) {
+        const label = track.id === 4699
+          ? `跳转 00:15 (号角与双击战鼓)`
+          : `段落 1 (${formatSec(track.block1Seconds)})`;
+        btns.push(`<button onclick="jumpToSeconds(${track.block1Seconds})" class="px-2 py-0.5 rounded bg-amber-500/15 hover:bg-amber-500/35 border border-amber-400/40 text-xs font-mono text-amber-300 cursor-pointer transition">${label}</button>`);
+      }
+      if (track.block2Seconds > 0) {
+        const label = track.id === 4699
+          ? `跳转 00:54 (高潮重击战鼓)`
+          : `段落 2 (${formatSec(track.block2Seconds)})`;
+        btns.push(`<button onclick="jumpToSeconds(${track.block2Seconds})" class="px-2 py-0.5 rounded bg-teal-500/15 hover:bg-teal-500/35 border border-teal-400/40 text-xs font-mono text-teal-300 cursor-pointer transition">${label}</button>`);
+      }
+      container.innerHTML = btns.join('');
+    }
+
+    function jumpToSeconds(sec) {
+      if (!audioEl.src) {
+        loadAndPlayTrack(state.currentTrack.code, true, sec);
+        return;
+      }
+      audioEl.currentTime = sec;
+      if (!state.isPlaying) {
+        togglePlay();
+      } else {
+        showToast(`已跳转至 [${state.currentTrack.code}] ${formatSec(sec)} 段落节点`);
+      }
+    }
+
+    // Update Turntable (Spinning Vinyl Cover) & VFD Display
+    function updateTurntableUI() {
+      const t = state.currentTrack;
+      document.getElementById('nowCode').textContent = t.code;
+      document.getElementById('nowGenre').textContent = `#${t.id} · ${t.sound}`;
+      document.getElementById('nowTitle').textContent = t.titleZh;
+      document.getElementById('nowArtist').textContent = `${t.archive} · ${t.fileName} · ${t.descZh}`;
+      document.getElementById('labelCode').textContent = t.code;
+      document.getElementById('labelTitle').textContent = t.sound.replace(/^(music_|monster_)/, '').toUpperCase();
+
+      document.getElementById('chamberArchiveTag').textContent = t.archive.replace('.mpq', '');
+      document.getElementById('chamberSoundIdTag').textContent = `ID #${t.id}`;
+
+      // Sync Album Cover to Spinning Vinyl Center, Chamber Corner Sleeve, and VFD Screen
+      document.getElementById('vinylCoverImg').src = t.cover;
+      document.getElementById('chamberMiniCover').src = t.cover;
+      document.getElementById('nowPlayingCover').src = t.cover;
+
+      renderBlockJumpButtons(t);
+
+      const dur = Number.isFinite(audioEl.duration) && audioEl.duration > 0 ? audioEl.duration : t.durationSeconds;
+      const cur = Number.isFinite(audioEl.currentTime) ? audioEl.currentTime : 0;
+      document.getElementById('totalTime').textContent = formatSec(dur);
+      document.getElementById('currentTime').textContent = formatSec(cur);
+      const pct = dur > 0 ? Math.min(100, (cur / dur) * 100) : 0;
+      document.getElementById('progressBar').style.width = pct.toFixed(1) + '%';
+
+      const disc = document.getElementById('vinylDisc');
+      const arm = document.getElementById('tonearm');
+      const vuBars = document.querySelectorAll('.vu-bar');
+      const dot = document.getElementById('playStateDot');
+      const txt = document.getElementById('playStateText');
+      const mDot = document.getElementById('marqueeDot');
+
+      if (state.isPlaying) {
+        disc.classList.remove('paused');
+        arm.classList.remove('tonearm-parked');
+        arm.classList.add('tonearm-playing');
+        document.getElementById('playPauseIcon').innerHTML = SVG_PAUSE;
+        document.getElementById('playPauseLabel').textContent = '暂停唱机';
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+        mDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping shrink-0';
+        txt.textContent = 'ON AIR';
+        txt.className = 'text-xs font-mono text-emerald-400 uppercase';
+        document.getElementById('marqueeStatus').textContent =
+          `NOW SPINNING [${t.code}] · #${t.id} ${t.titleZh} (${t.sound})`;
+        vuBars.forEach(b => b.classList.add('vu-active'));
+      } else {
+        disc.classList.add('paused');
+        arm.classList.remove('tonearm-playing');
+        arm.classList.add('tonearm-parked');
+        document.getElementById('playPauseIcon').innerHTML = SVG_PLAY;
+        document.getElementById('playPauseLabel').textContent = '放下唱针';
+        dot.className = 'w-2 h-2 rounded-full bg-amber-400';
+        mDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0';
+        txt.textContent = 'STANDBY';
+        txt.className = 'text-xs font-mono text-amber-400 uppercase';
+        document.getElementById('marqueeStatus').textContent =
+          `STANDBY [${t.code}] · #${t.id} ${t.titleZh} — CLICK PLAY TO SPIN`;
+        vuBars.forEach(b => b.classList.remove('vu-active'));
+      }
+      syncCrackleGain();
+    }
+
+    function getMaxNumberForLetter(letter) {
+      if (letter === 'F') return 10;
+      if (letter === 'E') return 7;
+      return 9;
+    }
+
+    // Keypad Actions (A-F, 1-10)
+    function updateKeypadUI() {
+      const maxNum = getMaxNumberForLetter(state.selectedLetter);
+      if (Number(state.selectedNumber) > maxNum) {
+        state.selectedNumber = String(maxNum);
+      }
+
+      LETTERS.forEach(l => {
+        const btn = document.getElementById('key-letter-' + l);
+        if (btn) btn.classList.toggle('active-key', state.selectedLetter === l);
+      });
+      for (let n = 1; n <= 10; n++) {
+        const btn = document.getElementById('key-num-' + n);
+        if (!btn) continue;
+        const disabled = n > maxNum;
+        btn.disabled = disabled;
+        btn.style.opacity = disabled ? '0.35' : '1';
+        btn.classList.toggle('active-key', state.selectedNumber === String(n));
+      }
+
+      const code = `${state.selectedLetter}-${state.selectedNumber}`;
+      document.getElementById('keypadReadout').textContent = code;
+
+      const found = CATALOG.find(item => item.code === code);
+      if (found) {
+        document.getElementById('keypadPreviewCover').src = found.cover;
+        document.getElementById('keypadPreviewMeta').textContent = `ID #${found.id} · ${found.archive}`;
+        document.getElementById('keypadPreviewTitle').textContent = `${found.code} · ${found.titleZh}`;
+        document.getElementById('keypadPreviewArtist').textContent = `${found.fileName} (${found.duration})`;
+      }
+      renderTitleStrips();
+    }
+
+    function pressLetter(letter) {
+      state.selectedLetter = letter;
+      updateKeypadUI();
+      showToast(`已按下字母键 [${letter}]，当前组合编码 ${state.selectedLetter}-${state.selectedNumber}`);
+    }
+
+    function pressNumber(num) {
+      const maxNum = getMaxNumberForLetter(state.selectedLetter);
+      if (Number(num) > maxNum) return;
+      state.selectedNumber = String(num);
+      updateKeypadUI();
+      showToast(`已按下数字键 [${num}]，已锁定唱片 [${state.selectedLetter}-${state.selectedNumber}]`);
+    }
+
+    function selectStripFromRack(code) {
+      const [l, n] = code.split('-');
+      state.selectedLetter = l;
+      state.selectedNumber = n;
+      updateKeypadUI();
+      loadAndPlayTrack(code, true);
+    }
+
+    function loadAndPlayTrack(code, autoPlay = true, seekToSec = 0) {
+      const found = CATALOG.find(item => item.code === code);
+      if (!found) return;
+
+      const [l, n] = found.code.split('-');
+      state.selectedLetter = l;
+      state.selectedNumber = n;
+
+      // Lift tonearm briefly to simulate record change
+      const arm = document.getElementById('tonearm');
+      arm.classList.remove('tonearm-playing');
+      arm.classList.add('tonearm-parked');
+
+      state.currentTrack = found;
+      audioEl.src = found.url;
+      audioEl.loop = state.loopSingle;
+      audioEl.volume = Number(document.getElementById('volumeSlider').value) / 100;
+
+      if (seekToSec > 0) {
+        audioEl.addEventListener('loadedmetadata', function onMeta() {
+          audioEl.removeEventListener('loadedmetadata', onMeta);
+          audioEl.currentTime = seekToSec;
+        });
+      }
+
+      if (autoPlay) {
+        ensureVinylCrackleEngine();
+        audioEl.play().then(() => {
+          state.isPlaying = true;
+          updateKeypadUI();
+          updateTurntableUI();
+          showToast(`正在播放 [${found.code}] #${found.id} 《${found.titleZh}》`);
+        }).catch(err => {
+          state.isPlaying = false;
+          updateKeypadUI();
+          updateTurntableUI();
+          showToast(`已装载 [${found.code}] #${found.id}，请点击「放下唱针」开始播放`);
+        });
+      } else {
+        state.isPlaying = false;
+        updateKeypadUI();
+        updateTurntableUI();
+      }
+    }
+
+    function playSelectedCodeNow() {
+      const code = `${state.selectedLetter}-${state.selectedNumber}`;
+      loadAndPlayTrack(code, true);
+    }
+
+    function addTrackToQueue(code) {
+      const found = CATALOG.find(item => item.code === code);
+      if (!found) return;
+
+      if (state.credits <= 0) {
+        showToast('投币余额不足，请先点击右上角「INSERT 25¢」投币');
+        return;
+      }
+
+      state.credits -= 1;
+      document.getElementById('creditCount').textContent = String(state.credits).padStart(2, '0');
+      const randomTable = TABLES[Math.floor(Math.random() * TABLES.length)];
+      state.queue.push({ ...found, table: `${randomTable} · 点播` });
+      renderQueue();
+      showToast(`已扣除 1 枚硬币，[${found.code}] 《${found.titleZh}》已加入待播队列`);
+    }
+
+    function queueSelectedCode() {
+      const code = `${state.selectedLetter}-${state.selectedNumber}`;
+      addTrackToQueue(code);
+    }
+
+    function insertCoin() {
+      state.credits += 1;
+      document.getElementById('creditCount').textContent = String(state.credits).padStart(2, '0');
+      showToast(`已投入 25¢ 硬币，当前可用点歌次数：${state.credits}`);
+    }
+
+    function togglePlay() {
+      ensureVinylCrackleEngine();
+      if (!audioEl.src) {
+        loadAndPlayTrack(state.currentTrack.code, true);
+        return;
+      }
+      if (state.isPlaying) {
+        audioEl.pause();
+        state.isPlaying = false;
+        updateTurntableUI();
+        renderTitleStrips();
+        showToast('唱针已抬起，唱机暂停');
+      } else {
+        audioEl.play().then(() => {
+          state.isPlaying = true;
+          updateTurntableUI();
+          renderTitleStrips();
+          showToast(`唱针已落下，继续播放 [${state.currentTrack.code}] 《${state.currentTrack.titleZh}》`);
+        }).catch(() => {
+          showToast('浏览器音频需要点击交互授权，请再次点击播放');
+        });
+      }
+    }
+
+    function toggleLoopMode() {
+      state.loopSingle = !state.loopSingle;
+      audioEl.loop = state.loopSingle;
+      document.getElementById('loopIndicator').textContent = state.loopSingle ? 'LOOP: SINGLE' : 'LOOP: QUEUE';
+      showToast(state.loopSingle ? '已切换为「单碟循环模式」' : '已切换为「队列连播模式」');
+    }
+
+    function nextTrack() {
+      if (state.queue.length > 0) {
+        const next = state.queue.shift();
+        renderQueue();
+        loadAndPlayTrack(next.code, true);
+      } else {
+        const idx = CATALOG.findIndex(c => c.code === state.currentTrack.code);
+        const nextItem = CATALOG[(idx + 1) % CATALOG.length];
+        loadAndPlayTrack(nextItem.code, true);
+      }
+    }
+
+    function prevTrack() {
+      const idx = CATALOG.findIndex(c => c.code === state.currentTrack.code);
+      const prevItem = CATALOG[(idx - 1 + CATALOG.length) % CATALOG.length];
+      loadAndPlayTrack(prevItem.code, true);
+    }
+
+    function randomSelect() {
+      const rand = CATALOG[Math.floor(Math.random() * CATALOG.length)];
+      loadAndPlayTrack(rand.code, true);
+    }
+
+    function playFromQueue(idx) {
+      const [picked] = state.queue.splice(idx, 1);
+      renderQueue();
+      if (picked) loadAndPlayTrack(picked.code, true);
+    }
+
+    function removeFromQueue(idx) {
+      const [removed] = state.queue.splice(idx, 1);
+      renderQueue();
+      if (removed) showToast(`已从待播队列移除 [${removed.code}]`);
+    }
+
+    function filterCategory(cat) {
+      state.activeCategory = cat;
+      document.querySelectorAll('.genre-tab').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = 'genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-amber-500 text-stone-950 shadow shrink-0 cursor-pointer';
+        } else if (btn.dataset.cat === 'BOSS VOICES') {
+          btn.className = 'genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-rose-950/90 text-rose-200 border border-rose-500/50 hover:border-rose-300 shrink-0 cursor-pointer';
+        } else {
+          btn.className = 'genre-tab px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-200/80 border border-amber-500/25 hover:border-amber-400 shrink-0 cursor-pointer';
+        }
+      });
+      renderTitleStrips();
+    }
+
+    function onSearchInput(val) {
+      state.searchQuery = val || '';
+      renderTitleStrips();
+    }
+
+    function seekTrack(e) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      const dur = Number.isFinite(audioEl.duration) && audioEl.duration > 0
+        ? audioEl.duration
+        : state.currentTrack.durationSeconds;
+      if (audioEl.src) {
+        audioEl.currentTime = ratio * dur;
+        updateTurntableUI();
+      } else {
+        loadAndPlayTrack(state.currentTrack.code, true, ratio * dur);
+      }
+    }
+
+    function setNeonMood(mood) {
+      const leftTube = document.getElementById('leftNeonTube');
+      const rightTube = document.getElementById('rightNeonTube');
+      const glow = document.getElementById('platterGlow');
+      const btnWarm = document.getElementById('btnMoodWarm');
+      const btnCyber = document.getElementById('btnMoodCyber');
+
+      if (mood === 'jazz') {
+        leftTube.style.background = 'linear-gradient(90deg, #115e59 0%, #2dd4bf 45%, #f59e0b 85%, #134e4a 100%)';
+        rightTube.style.background = 'linear-gradient(90deg, #134e4a 0%, #f59e0b 25%, #2dd4bf 60%, #115e59 100%)';
+        glow.className = 'absolute inset-2 rounded-full bg-teal-500/25 blur-xl pointer-events-none transition-all duration-700';
+        btnCyber.className = 'px-2.5 py-1 rounded text-xs font-bold tracking-wider uppercase bg-teal-500/20 text-teal-300 border border-teal-400/50 transition cursor-pointer';
+        btnWarm.className = 'px-2.5 py-1 rounded text-xs font-bold tracking-wider uppercase text-stone-400 hover:text-amber-300 transition cursor-pointer';
+        showToast('已切换至「午夜蓝调」冷光霓虹灯管模式');
+      } else {
+        leftTube.style.background = '';
+        rightTube.style.background = '';
+        glow.className = 'absolute inset-2 rounded-full bg-amber-500/20 blur-xl pointer-events-none transition-all duration-700';
+        btnWarm.className = 'px-2.5 py-1 rounded text-xs font-bold tracking-wider uppercase bg-amber-500/20 text-amber-300 border border-amber-400/50 transition cursor-pointer';
+        btnCyber.className = 'px-2.5 py-1 rounded text-xs font-bold tracking-wider uppercase text-stone-400 hover:text-teal-300 transition cursor-pointer';
+        showToast('已切换至「琥珀暖光」经典1950年代灯管模式');
+      }
+    }
+
+    // Bind HTML5 Audio Events
+    audioEl.addEventListener('timeupdate', () => {
+      const dur = Number.isFinite(audioEl.duration) && audioEl.duration > 0
+        ? audioEl.duration
+        : state.currentTrack.durationSeconds;
+      const cur = audioEl.currentTime || 0;
+      document.getElementById('currentTime').textContent = formatSec(cur);
+      document.getElementById('totalTime').textContent = formatSec(dur);
+      const pct = dur > 0 ? Math.min(100, (cur / dur) * 100) : 0;
+      document.getElementById('progressBar').style.width = pct.toFixed(1) + '%';
+    });
+
+    audioEl.addEventListener('ended', () => {
+      if (!state.loopSingle) {
+        nextTrack();
+      }
+    });
+
+    audioEl.addEventListener('error', () => {
+      showToast(`音轨加载失败: ${state.currentTrack.url}`);
+    });
+
+    // Initialize Jukebox with Track A-1 (#4699 LoD Intro Edit) preloaded
+    audioEl.src = state.currentTrack.url;
+    audioEl.volume = 0.85;
+    updateKeypadUI();
+    renderQueue();
+    updateTurntableUI();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0a0806" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/src/client/theme/index.css" />
+    <title>Diablo II: Lord of Destruction · Online Client (play.html)</title>
+    <script>
+      window.__d2SkipAutoBoot = true;
+    </script>
+    <style>
+      @font-face {
+        font-family: "D2GlExocetBlizzard";
+        src: url("/ui/fonts/ExocetBlizzardMedium.otf") format("opentype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2GlFormal436BT";
+        src: url("/ui/fonts/Formal436BT.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2GlChi";
+        src: url("/ui/fonts/Chi.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2Exocet";
+        src: url("/ui/fonts/D2Exocet.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2Formal436";
+        src: url("/ui/fonts/D2Formal436.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: dark;
+        --font-display: "D2GlExocetBlizzard", "D2Exocet", "Cinzel", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", "D2GlChi", serif;
+        --font-body: "D2GlFormal436BT", "D2Formal436", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", "D2GlChi", serif;
+        --safe-top: env(safe-area-inset-top, 0px);
+        --safe-right: env(safe-area-inset-right, 0px);
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-left: env(safe-area-inset-left, 0px);
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        background: #050505;
+        color: #e8dcc8;
+        font: 13px/1.45 var(--font-body);
+        overflow: hidden;
+        overscroll-behavior: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #d2-toolbar-container {
+        flex: 0 0 auto;
+        width: 100%;
+        z-index: 50;
+      }
+
+      #d2-toolbar,
+      .d2-toolbar {
+        position: relative;
+        z-index: 1000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+        height: 32px;
+        min-height: 32px;
+        max-height: 32px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        background: linear-gradient(180deg, #211b14 0%, #120f0a 55%, #0a0806 100%);
+        border-bottom: 1px solid #634e2b;
+        box-shadow: inset 0 1px 0 rgba(255, 226, 158, 0.14), 0 2px 8px rgba(0, 0, 0, 0.85);
+        color: #e2cfa0;
+        font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "Songti SC", "PingFang SC", Georgia, serif);
+        font-size: 12px;
+        line-height: 1;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        user-select: none;
+      }
+
+      .d2-toolbar__left,
+      .d2-toolbar__group {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 6px;
+        white-space: nowrap;
+      }
+
+      .d2-toolbar__right {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 8px;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      .d2-toolbar__actions {
+        gap: 5px;
+      }
+
+      .d2-toolbar > .d2-toolbar__group + .d2-toolbar__group {
+        padding-left: 10px;
+        border-left: 1px solid rgba(199, 179, 119, 0.2);
+      }
+
+      .d2-toolbar__group--segmented {
+        gap: 0;
+      }
+
+      .d2-toolbar__group--segmented .d2-toolbar__btn:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 0 8px;
+      }
+
+      .d2-toolbar__group--segmented .d2-toolbar__btn:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -1px;
+        padding: 0 8px;
+        font-family: "JetBrains Mono", "Consolas", var(--font-body, serif);
+        font-size: 11px;
+      }
+
+      .d2-toolbar__group--segmented .d2-toolbar__btn--active {
+        position: relative;
+        z-index: 1;
+      }
+
+      .d2-toolbar__divider {
+        width: 1px;
+        height: 18px;
+        background: linear-gradient(180deg, rgba(199, 179, 119, 0.08) 0%, rgba(199, 179, 119, 0.48) 50%, rgba(199, 179, 119, 0.08) 100%);
+        flex-shrink: 0;
+      }
+
+      .d2-toolbar__status {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        height: 22px;
+        padding: 0 9px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        background: linear-gradient(180deg, #0e0b08 0%, #17130d 100%);
+        border: 1px solid #463720;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.85), 0 1px 0 rgba(255, 226, 158, 0.06);
+        color: #e4d4a8;
+        font-size: 11.5px;
+      }
+
+      .d2-toolbar__status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+        background: #6b6b6b;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .d2-toolbar__status-dot--disconnected { background: #767676; }
+      .d2-toolbar__status-dot--connecting { background: #e6a822; box-shadow: 0 0 6px #e6a822; }
+      .d2-toolbar__status-dot--bncs { background: #4495e8; box-shadow: 0 0 6px #4495e8; }
+      .d2-toolbar__status-dot--mcp { background: #36c5d6; box-shadow: 0 0 6px #36c5d6; }
+      .d2-toolbar__status-dot--d2gs { background: #2ecc71; box-shadow: 0 0 6px #2ecc71; }
+      .d2-toolbar__status-dot--error { background: #e74c3c; box-shadow: 0 0 6px #e74c3c; }
+
+      .d2-toolbar__rtt {
+        padding-left: 6px;
+        border-left: 1px solid #352a19;
+        font-family: "JetBrains Mono", "Consolas", monospace;
+        font-size: 11px;
+        font-variant-numeric: tabular-nums;
+        color: #a89974;
+      }
+
+      .d2-toolbar__label {
+        color: #b89f65;
+        font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "Songti SC", Georgia, serif);
+        font-size: 11.5px;
+        letter-spacing: 0.03em;
+      }
+
+      .d2-toolbar__select {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 22px;
+        padding: 0 22px 0 8px;
+        box-sizing: border-box;
+        background-color: #14100b;
+        background-image:
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23c7b377' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
+          linear-gradient(180deg, #261f14 0%, #130f0a 100%);
+        background-repeat: no-repeat, no-repeat;
+        background-position: right 6px center, 0 0;
+        border: 1px solid #5a482a;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 rgba(255, 230, 165, 0.1), 0 1px 2px rgba(0, 0, 0, 0.55);
+        color: #ebd9a8;
+        font-family: "JetBrains Mono", "Consolas", var(--font-body, serif);
+        font-size: 11px;
+        font-variant-numeric: tabular-nums;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .d2-toolbar__select option {
+        background: #14100b;
+        color: #ebd9a8;
+      }
+
+      .d2-toolbar__select:hover,
+      .d2-toolbar__btn:hover:not(:disabled) {
+        border-color: #d4bc7c;
+        color: #fff4ce;
+        box-shadow: inset 0 1px 0 rgba(255, 240, 190, 0.22), 0 0 6px rgba(212, 180, 106, 0.2);
+      }
+
+      .d2-toolbar__btn,
+      a.d2-toolbar__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        height: 22px;
+        padding: 0 9px;
+        box-sizing: border-box;
+        background: linear-gradient(180deg, #2e2518 0%, #17120b 100%);
+        border: 1px solid #5e4b2b;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 rgba(255, 230, 165, 0.14), 0 1px 2px rgba(0, 0, 0, 0.55);
+        color: #e6d29e;
+        font-family: var(--font-body, "D2Formal436", "Noto Serif SC", "Songti SC", "PingFang SC", Georgia, serif);
+        font-size: 11.5px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .d2-toolbar__btn--icon {
+        padding: 0 7px;
+        min-width: 26px;
+      }
+
+      .d2-toolbar__btn--primary {
+        background: linear-gradient(180deg, #5e4923 0%, #332711 100%);
+        border-color: #c7a456;
+        color: #fff5d6;
+      }
+
+      .d2-toolbar__btn:active:not(:disabled),
+      a.d2-toolbar__btn:active {
+        transform: translateY(1px);
+      }
+
+      .d2-toolbar__btn-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 12px;
+        height: 12px;
+        flex: 0 0 12px;
+        line-height: 0;
+        color: #d4b872;
+      }
+
+      .d2-toolbar__btn-icon svg {
+        width: 12px;
+        height: 12px;
+        display: block;
+      }
+
+      .d2-toolbar__btn-label {
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
+      }
+
+      .d2-toolbar__lang-badge {
+        display: inline-flex;
+        align-items: center;
+        font-family: "JetBrains Mono", "Consolas", var(--font-body, serif);
+        font-size: 10.5px;
+        font-weight: 700;
+        line-height: 1;
+        color: #efe1b6;
+      }
+
+      .d2-toolbar__btn:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+
+      .d2-toolbar__btn--active {
+        background: linear-gradient(180deg, #5e4923 0%, #332711 100%);
+        border-color: #dfbe73;
+        box-shadow: inset 0 1px 0 rgba(255, 244, 204, 0.32), 0 0 6px rgba(212, 180, 106, 0.25);
+        color: #fff6db;
+      }
+
+      .d2-toolbar__btn--warn {
+        border-color: #d4882a;
+        color: #ffb84d;
+      }
+
+      .d2-toolbar__drop-prefix {
+        margin-right: 4px;
+      }
+
+      .d2-toolbar__drop-set {
+        color: #3ad649;
+        font-family: "JetBrains Mono", "Consolas", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .d2-toolbar__drop-unique {
+        color: #e2be68;
+        font-family: "JetBrains Mono", "Consolas", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .d2-toolbar__drop-rune {
+        color: #ff9c38;
+        font-family: "JetBrains Mono", "Consolas", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .d2-toolbar__drop-sep {
+        color: #7d6d4c;
+        margin: 0 2px;
+        font-family: "JetBrains Mono", "Consolas", monospace;
+        font-size: 10px;
+      }
+
+      .d2-toolbar__diag {
+        position: absolute;
+        top: 32px;
+        left: 12px;
+        right: 12px;
+        z-index: 1001;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 10px;
+        background: rgba(38, 12, 10, 0.96);
+        border: 1px solid #a93226;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        color: #ffd6d1;
+        font-size: 12px;
+      }
+
+      .d2-toolbar__diag--visible {
+        display: flex;
+      }
+
+      .d2-toolbar-modal-overlay[hidden] {
+        display: none !important;
+      }
+
+      #play-workspace {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+        -webkit-user-drag: none;
+        position: relative;
+      }
+
+      .play-stage-wrapper,
+      #play-stage-wrapper {
+        flex: 1 1 auto;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+        -webkit-user-drag: none;
+      }
+
+      .play-stage,
+      #play-stage {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        background: #000;
+        box-shadow: 0 0 42px rgba(0, 0, 0, 0.95), 0 0 0 1px #2e251b;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+        -webkit-user-drag: none;
+        cursor: none;
+      }
+
+      .play-stage,
+      .play-stage *,
+      #play-stage,
+      #play-stage * {
+        cursor: none !important;
+      }
+
+      .bnet-shell,
+      #bnet-shell {
+        position: absolute;
+        inset: 0;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        cursor: none;
+      }
+
+      .bnet-canvas,
+      #bnet-canvas {
+        /* The 800x600 front-end stays 4:3 (pillarboxed) when the stage is sized for a 16:9 profile. */
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+        display: block;
+        image-rendering: pixelated;
+        cursor: none;
+      }
+
+      .play-view-canvas,
+      #view {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #080706;
+        z-index: 5;
+        image-rendering: pixelated;
+        cursor: none;
+      }
+
+      .d2-hud-canvas,
+      #d2-hud-canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 10;
+        pointer-events: none;
+        image-rendering: pixelated;
+        cursor: none;
+      }
+
+      /* #940 R3: dedicated animated-cursor layer above the HUD so cursor frames
+         never force a full HUD repaint; hidden whenever the in-game view is left. */
+      .d2-cursor-canvas,
+      #d2-cursor-canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 12;
+        pointer-events: none;
+        image-rendering: pixelated;
+        cursor: none;
+      }
+
+      .play-disconnect-banner,
+      #play-disconnect-banner {
+        position: absolute;
+        top: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 30;
+        background: rgba(42, 12, 12, 0.94);
+        border: 1px solid #c94a4a;
+        color: #ffd6d6;
+        padding: 6px 14px;
+        border-radius: 4px;
+        font-size: 12px;
+        letter-spacing: 0.03em;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+      }
+
+      .play-disconnect-banner[hidden],
+      #play-disconnect-banner[hidden] {
+        display: none !important;
+      }
+
+      .d2-boot-loading,
+      #d2-boot-loading {
+        position: absolute;
+        inset: 0;
+        z-index: 28;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at center, #18120c 0%, #050403 78%);
+        color: #e8dcc8;
+        padding: 24px;
+      }
+
+      .d2-boot-loading[hidden],
+      #d2-boot-loading[hidden] {
+        display: none !important;
+      }
+
+      .d2-boot-panel {
+        width: 480px;
+        max-width: 92%;
+        background: rgba(12, 9, 6, 0.94);
+        border: 1px solid #8c6f39;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.95), inset 0 0 14px rgba(140, 111, 57, 0.16);
+        padding: 22px 26px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .d2-boot-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #d8b868;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+        text-align: center;
+      }
+
+      .d2-boot-subtitle {
+        font-family: var(--font-body);
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: #b7a588;
+        text-align: center;
+      }
+
+      #d2-boot-progress-bar,
+      .d2-boot-bar-bg {
+        width: 100%;
+        height: 22px;
+        background: #070504;
+        border: 1px solid #9c7c42;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.95);
+        position: relative;
+        overflow: hidden;
+      }
+
+      #d2-boot-progress-fill,
+      .d2-boot-bar-fill {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, #56100c 0%, #9b2217 55%, #d68a28 100%);
+        box-shadow: 0 0 12px rgba(214, 138, 40, 0.45);
+        transition: width 60ms linear;
+      }
+
+      #d2-boot-progress-percent,
+      .d2-boot-pct {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: #f6ebd4;
+        text-shadow: 0 1px 3px #000, 0 0 6px #000;
+        pointer-events: none;
+      }
+
+      .d2-boot-meta {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-family: var(--font-body);
+        font-size: 12px;
+        color: #ccb996;
+        min-height: 18px;
+        overflow: hidden;
+      }
+
+      .d2-boot-file-label {
+        color: #9e8863;
+        flex: 0 0 auto;
+      }
+
+      #d2-boot-progress-file {
+        color: #f0dfb8;
+        font-family: var(--font-body);
+        font-size: 12px;
+        max-width: 290px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      #d2-boot-progress-count {
+        color: #8f7b58;
+        font-size: 11px;
+        flex: 0 0 auto;
+      }
+
+      /* Mobile Phase 1 (#1381): Collapsible Top Toolbar Pill & D2R Portrait Orientation Guard */
+      #d2-mobile-toolbar-pill {
+        position: fixed;
+        top: calc(var(--safe-top, 0px) + 6px);
+        left: calc(var(--safe-left, 0px) + 8px);
+        z-index: 65;
+        display: none;
+        align-items: center;
+        gap: 5px;
+        height: 26px;
+        padding: 0 10px;
+        background: rgba(18, 14, 10, 0.88);
+        border: 1px solid #8c6f39;
+        border-radius: 13px;
+        color: #e8c878;
+        font-family: var(--font-body);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+        cursor: pointer;
+      }
+
+      body[data-d2-mobile-toolbar="collapsed"] #d2-toolbar-container {
+        display: none !important;
+      }
+
+      body[data-d2-mobile-toolbar="collapsed"] #d2-mobile-toolbar-pill {
+        display: inline-flex;
+      }
+
+      @media (orientation: landscape) and (max-height: 540px) {
+        #d2-mobile-toolbar-pill {
+          display: inline-flex;
+        }
+      }
+
+      #d2-orientation-guard {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: calc(var(--safe-top, 0px) + 24px) calc(var(--safe-right, 0px) + 24px) calc(var(--safe-bottom, 0px) + 24px) calc(var(--safe-left, 0px) + 24px);
+        background: radial-gradient(circle at center, rgba(28, 20, 14, 0.97) 0%, rgba(5, 4, 3, 0.99) 80%);
+        color: #e8dcc8;
+        text-align: center;
+      }
+
+      #d2-orientation-guard[data-d2-guard-state="visible"] {
+        display: flex;
+      }
+
+      @media (orientation: portrait) and (max-width: 920px) and (pointer: coarse) {
+        #d2-orientation-guard:not([data-d2-guard-dismissed="true"]) {
+          display: flex;
+        }
+      }
+
+      .d2-orientation-guard__card {
+        max-width: 360px;
+        width: 100%;
+        padding: 24px 22px;
+        background: rgba(14, 11, 8, 0.96);
+        border: 1px solid #9c7e47;
+        box-shadow: 0 0 36px rgba(0, 0, 0, 0.95), inset 0 0 18px rgba(156, 126, 71, 0.16);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .d2-orientation-guard__icon {
+        width: 48px;
+        height: 48px;
+        color: #e8c878;
+      }
+
+      .d2-orientation-guard__title {
+        font-family: var(--font-display);
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: #f3e6b3;
+        margin: 0;
+      }
+
+      .d2-orientation-guard__desc {
+        font-family: var(--font-body);
+        font-size: 12px;
+        line-height: 1.5;
+        color: #ccb996;
+        margin: 0;
+      }
+
+      .d2-orientation-guard__actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 6px;
+      }
+
+      .d2-orientation-guard__btn {
+        height: 36px;
+        padding: 0 16px;
+        background: linear-gradient(180deg, #3c2e1c 0%, #1d150c 100%);
+        border: 1px solid #c7a158;
+        color: #f6ebd4;
+        font-family: var(--font-body);
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .d2-orientation-guard__btn--secondary {
+        background: rgba(20, 16, 12, 0.9);
+        border-color: #634e2b;
+        color: #b7a588;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d2-toolbar-container">
+      <header id="d2-toolbar" class="d2-toolbar">
+        <button id="d2-toolbar-plugins-btn" type="button" class="d2-toolbar__btn" disabled><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="currentColor" focusable="false" aria-hidden="true"><path d="M4 5h1.5v-.5a1.5 1.5 0 0 1 3 0V5H10a1 1 0 0 1 1 1v1.5h.5a1.5 1.5 0 0 1 0 3H11V12a1 1 0 0 1-1 1H8.5v-.4a1.5 1.5 0 0 0-3 0V13H4a1 1 0 0 1-1-1v-1.5h.4a1.5 1.5 0 0 0 0-3H3V6a1 1 0 0 1 1-1Z"/></svg></span><span class="d2-toolbar__btn-label">插件</span></button>
+        <div id="d2-toolbar-plugin-slot" class="d2-toolbar__group"></div>
+        <div id="d2-toolbar-right" class="d2-toolbar__right">
+          <div id="d2-multibox-slot" class="d2-toolbar__group d2-toolbar__multibox-slot" hidden></div>
+          <div class="d2-toolbar__group">
+            <div id="d2-toolbar-status" class="d2-toolbar__status">
+              <span id="d2-toolbar-status-dot" class="d2-toolbar__status-dot d2-toolbar__status-dot--disconnected"></span>
+              <span id="d2-toolbar-status-text">未连接</span>
+              <span id="d2-toolbar-rtt" class="d2-toolbar__rtt">-- ms</span>
+            </div>
+          </div>
+          <div class="d2-toolbar__divider" role="separator"></div>
+          <div id="d2-toolbar-actions" class="d2-toolbar__group d2-toolbar__actions">
+            <button id="d2-toolbar-lang-btn" type="button" class="d2-toolbar__btn d2-toolbar__btn--icon" data-lang="zh" title="切换语言 (中 / EN)"><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M2 8h12M8 2a9.5 9.5 0 0 1 2.6 6A9.5 9.5 0 0 1 8 14a9.5 9.5 0 0 1-2.6-6A9.5 9.5 0 0 1 8 2Z"/></svg></span><span id="d2-toolbar-lang-badge" class="d2-toolbar__lang-badge">中</span></button>
+            <button id="d2-toolbar-config-btn" type="button" class="d2-toolbar__btn d2-toolbar__btn--icon" aria-haspopup="dialog" aria-expanded="false" title="配置 (显示 / 音频 / 缓存)"><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.8v1.6M8 12.6v1.6M1.8 8h1.6M12.6 8h1.6M3.6 3.6l1.1 1.1M11.3 11.3l1.1 1.1M12.4 3.6l-1.1 1.1M4.7 11.3l-1.1 1.1"/></svg></span></button>
+            <button id="d2-toolbar-bug-btn" type="button" class="d2-toolbar__btn d2-toolbar__btn--icon" aria-haspopup="dialog" aria-expanded="false" title="汇报 Bug"><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><rect x="5" y="5" width="6" height="7.5" rx="3"/><path d="M6.2 5V3.8a1.8 1.8 0 0 1 3.6 0V5M2.5 6.5L5 7.2M13.5 6.5L11 7.2M2 9.2h3M11 9.2h3M2.5 12l2.5-.8M13.5 12L11 11.2"/></svg></span></button>
+          </div>
+        </div>
+        <div id="d2-config-modal-overlay" class="d2-toolbar-modal-overlay" data-d2-modal-overlay="config" hidden>
+          <div id="d2-config-modal" class="d2-toolbar-modal" role="dialog" aria-modal="true" aria-labelledby="d2-config-modal-title">
+            <div class="d2-toolbar-modal__header">
+              <h2 id="d2-config-modal-title" class="d2-toolbar-modal__title">游戏配置</h2>
+              <button id="d2-config-modal-close" type="button" class="d2-toolbar-modal__close">关闭 (Esc)</button>
+            </div>
+            <p id="d2-config-modal-subtitle" class="d2-toolbar-modal__subtitle">配置显示模式、分辨率、帧率、音频音量与本地资源缓存</p>
+            <div class="d2-toolbar-modal__body">
+              <div class="d2-toolbar-modal__row">
+                <span id="d2-config-fullscreen-label" class="d2-toolbar-modal__row-label">显示模式</span>
+                <button id="d2-toolbar-fullscreen-btn" type="button" class="d2-toolbar__btn" aria-pressed="false"><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" focusable="false" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg></span><span class="d2-toolbar__btn-label">全屏</span></button>
+              </div>
+              <div class="d2-toolbar-modal__row">
+                <label id="d2-config-viewport-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-toolbar-viewport-select">分辨率</label>
+                <select id="d2-toolbar-viewport-select" class="d2-toolbar__select">
+                  <option value="640x480">640×480</option>
+                  <option value="800x600" selected>800×600</option>
+                </select>
+              </div>
+              <div class="d2-toolbar-modal__row">
+                <label id="d2-config-fps-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-toolbar-worldfps-select">渲染帧率</label>
+                <select id="d2-toolbar-worldfps-select" class="d2-toolbar__select">
+                  <option value="60" selected>60 FPS</option>
+                  <option value="30">30 FPS</option>
+                </select>
+              </div>
+              <div id="d2-config-server-row" class="d2-toolbar-modal__row">
+                <label id="d2-config-server-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-toolbar-server-input">战网服务器</label>
+                <div class="d2-toolbar-modal__row-control">
+                  <input id="d2-toolbar-server-input" type="text" class="d2-toolbar-modal__input" style="width: 180px;" maxlength="120" spellcheck="false" autocomplete="off" placeholder="www.laiseek.xyz" value="www.laiseek.xyz" />
+                  <button id="d2-toolbar-server-apply-btn" type="button" class="d2-toolbar__btn">连接</button>
+                </div>
+              </div>
+              <div id="d2-toolbar-server-status" class="d2-toolbar-modal__status d2-toolbar-modal__status--error" role="alert" hidden></div>
+              <div class="d2-toolbar-modal__row">
+                <label id="d2-config-volume-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-toolbar-volume-slider">主音量</label>
+                <div class="d2-toolbar-modal__volume-controls">
+                  <button id="d2-toolbar-mute-btn" type="button" class="d2-toolbar__btn" aria-pressed="false"><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M2.5 6.2h2.6L8.5 3.5v9l-3.4-2.7H2.5v-3.6Z"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.8a6 6 0 0 1 0 8.4"/></svg></span><span class="d2-toolbar__btn-label">静音</span></button>
+                  <input id="d2-toolbar-volume-slider" type="range" min="0" max="100" step="1" value="80" class="d2-toolbar__slider" />
+                  <span id="d2-toolbar-volume-value" class="d2-toolbar__volume-value">80%</span>
+                </div>
+              </div>
+              <div id="d2-config-multibox-row" class="d2-toolbar-modal__row">
+                <span id="d2-config-multibox-label" class="d2-toolbar-modal__row-label">单 Tab 多开</span>
+                <div class="d2-toolbar-modal__row-control">
+                  <button id="d2-toolbar-multibox-btn" type="button" class="d2-toolbar__btn" aria-pressed="false">已关闭 (单实例)</button>
+                  <button id="d2-toolbar-multibox-alert-btn" type="button" class="d2-toolbar__btn d2-toolbar__btn--active" aria-pressed="true">后台受击音: 开</button>
+                </div>
+              </div>
+              <div class="d2-toolbar-modal__row">
+                <span id="d2-config-cache-label" class="d2-toolbar-modal__row-label">资源缓存</span>
+                <button id="d2-toolbar-cache-clear-btn" type="button" class="d2-toolbar__btn"><span class="d2-toolbar__btn-icon" aria-hidden="true"><svg class="d2-toolbar__icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M3 4h10M6 4V2.5h4V4M4.5 4l.6 9.5h5.8L11.5 4"/></svg></span><span class="d2-toolbar__btn-label">清除缓存</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="d2-bug-modal-overlay" class="d2-toolbar-modal-overlay" data-d2-modal-overlay="bug-report" hidden>
+          <div id="d2-bug-modal" class="d2-toolbar-modal" role="dialog" aria-modal="true" aria-labelledby="d2-bug-modal-title">
+            <div class="d2-toolbar-modal__header">
+              <h2 id="d2-bug-modal-title" class="d2-toolbar-modal__title">汇报 Bug</h2>
+              <button id="d2-bug-modal-close" type="button" class="d2-toolbar-modal__close">关闭 (Esc)</button>
+            </div>
+            <p id="d2-bug-modal-subtitle" class="d2-toolbar-modal__subtitle">请描述您遇到的问题，提交后将连同当前运行环境信息保存至服务器</p>
+            <div class="d2-toolbar-modal__body">
+              <div class="d2-toolbar-modal__field">
+                <label id="d2-bug-title-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-bug-title-input">问题标题</label>
+                <input id="d2-bug-title-input" type="text" maxlength="120" class="d2-toolbar-modal__input" placeholder="简要描述问题（必填）" />
+              </div>
+              <div class="d2-toolbar-modal__field">
+                <label id="d2-bug-category-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-bug-category-select">问题分类</label>
+                <select id="d2-bug-category-select" class="d2-toolbar__select d2-toolbar-modal__select">
+                  <option value="gameplay" selected>游戏逻辑 / 技能 / 掉落</option>
+                  <option value="render">画面渲染 / 地图 / 贴图</option>
+                  <option value="network">网络连接 / 延迟 / 掉线</option>
+                  <option value="audio">音效 / 音乐</option>
+                  <option value="ui">界面 / HUD / 插件</option>
+                  <option value="other">其他问题</option>
+                </select>
+              </div>
+              <div class="d2-toolbar-modal__field">
+                <label id="d2-bug-desc-label" class="d2-toolbar__label d2-toolbar-modal__row-label" for="d2-bug-desc-input">详细描述与复现步骤</label>
+                <textarea id="d2-bug-desc-input" rows="4" maxlength="4000" class="d2-toolbar-modal__textarea" placeholder="请填写详细复现步骤、所在场景/角色及期望行为（必填）"></textarea>
+              </div>
+              <div id="d2-bug-status-msg" class="d2-toolbar-modal__status" role="status" hidden></div>
+            </div>
+            <div class="d2-toolbar-modal__footer">
+              <button id="d2-bug-cancel-btn" type="button" class="d2-toolbar__btn">取消</button>
+              <button id="d2-bug-submit-btn" type="button" class="d2-toolbar__btn d2-toolbar__btn--primary">提交到服务器</button>
+            </div>
+          </div>
+        </div>
+        <div id="d2-toolbar-diag-banner" class="d2-toolbar__diag" hidden></div>
+      </header>
+    </div>
+    <div id="play-workspace">
+      <div id="play-stage-wrapper">
+        <div id="play-stage">
+          <div id="d2-boot-loading">
+            <div class="d2-boot-panel">
+              <div class="d2-boot-title">DIABLO II: LORD OF DESTRUCTION</div>
+              <div class="d2-boot-subtitle">正在下载游戏资源 · LOADING RESOURCES</div>
+              <div
+                id="d2-boot-progress-bar"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              >
+                <div id="d2-boot-progress-fill" style="width: 0%"></div>
+                <div id="d2-boot-progress-percent">0%</div>
+              </div>
+              <div class="d2-boot-meta">
+                <span class="d2-boot-file-label">正在下载:</span>
+                <span id="d2-boot-progress-file">正在初始化...</span>
+                <span id="d2-boot-progress-count">(0/0)</span>
+              </div>
+            </div>
+          </div>
+          <div id="bnet-shell">
+            <canvas id="bnet-canvas" width="800" height="600"></canvas>
+          </div>
+          <canvas id="view" width="800" height="600"></canvas>
+          <canvas id="d2-hud-canvas" width="800" height="600"></canvas>
+          <canvas id="d2-cursor-canvas" width="800" height="600"></canvas>
+          <div id="play-disconnect-banner" hidden></div>
+        </div>
+      </div>
+    </div>
+    <button id="d2-mobile-toolbar-pill" type="button" aria-label="展开或收起顶部工具栏" title="展开/收起顶部工具栏">
+      <span aria-hidden="true">⚙</span>
+      <span id="d2-mobile-toolbar-pill-label">工具栏</span>
+    </button>
+    <div id="d2-orientation-guard" role="dialog" aria-modal="true" aria-labelledby="d2-orientation-guard-title">
+      <div class="d2-orientation-guard__card">
+        <svg class="d2-orientation-guard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="6" width="16" height="12" rx="2" />
+          <path d="M8 3l-3 3 3 3M16 21l3-3-3-3" />
+        </svg>
+        <h2 id="d2-orientation-guard-title" class="d2-orientation-guard__title">请横屏握持设备 · LANDSCAPE MODE</h2>
+        <p class="d2-orientation-guard__desc">《暗黑破坏神 II》移动端采用 D2R 双拇指横屏紧凑视野布局，请旋转设备至横屏或点击下方按钮一键锁定横屏全屏。</p>
+        <div class="d2-orientation-guard__actions">
+          <button id="d2-orientation-lock-btn" type="button" class="d2-orientation-guard__btn">进入全屏横屏模式</button>
+          <button id="d2-orientation-dismiss-btn" type="button" class="d2-orientation-guard__btn d2-orientation-guard__btn--secondary">继续当前方向</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (() => {
+        const pillBtn = document.getElementById('d2-mobile-toolbar-pill');
+        const lockBtn = document.getElementById('d2-orientation-lock-btn');
+        const dismissBtn = document.getElementById('d2-orientation-dismiss-btn');
+        const guardEl = document.getElementById('d2-orientation-guard');
+        const syncCompactMobileToolbar = () => {
+          try {
+            const isMobileLandscape =
+              (window.matchMedia &&
+                window.matchMedia('(orientation: landscape) and (max-height: 540px)').matches) ||
+              (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || '') &&
+                window.innerWidth > window.innerHeight);
+            if (isMobileLandscape && !document.body.hasAttribute('data-d2-mobile-toolbar')) {
+              document.body.setAttribute('data-d2-mobile-toolbar', 'collapsed');
+            }
+          } catch {
+            // ignore matchMedia errors
+          }
+        };
+        syncCompactMobileToolbar();
+        window.addEventListener('resize', syncCompactMobileToolbar);
+        if (pillBtn) {
+          pillBtn.addEventListener('click', () => {
+            const cur = document.body.getAttribute('data-d2-mobile-toolbar');
+            document.body.setAttribute('data-d2-mobile-toolbar', cur === 'collapsed' ? 'expanded' : 'collapsed');
+          });
+        }
+        if (lockBtn) {
+          lockBtn.addEventListener('click', () => {
+            const req = document.documentElement.requestFullscreen;
+            if (typeof req === 'function') {
+              req.call(document.documentElement, { navigationUI: 'hide' })
+                .then(() => {
+                  if (screen.orientation && typeof screen.orientation.lock === 'function') {
+                    return screen.orientation.lock('landscape').catch(() => {});
+                  }
+                })
+                .catch(() => {});
+            }
+            if (guardEl) {
+              guardEl.setAttribute('data-d2-guard-dismissed', 'true');
+              guardEl.removeAttribute('data-d2-guard-state');
+            }
+          });
+        }
+        if (dismissBtn && guardEl) {
+          dismissBtn.addEventListener('click', () => {
+            guardEl.setAttribute('data-d2-guard-dismissed', 'true');
+            guardEl.removeAttribute('data-d2-guard-state');
+          });
+        }
+      })();
+    </script>
+    <script type="module" src="/src/server/loopback-adapter.ts"></script>
+    <script type="module">
+      import { startPlayApp } from '/src/client/main.ts'
+      import { BUILTIN_PLUGINS, PLUGIN_MENU_LAYOUT } from '/plugins/index.ts'
+      startPlayApp({ plugins: BUILTIN_PLUGINS, menuLayout: PLUGIN_MENU_LAYOUT }).catch((err) => {
+        const msg = err instanceof Error ? err.message : String(err)
+        window.__d2BootError = msg
+        console.error('[d2-boot] Fatal boot error:', err)
+        const fileEl = document.getElementById('d2-boot-progress-file')
+        if (fileEl) {
+          fileEl.textContent = `加载失败: ${msg}`
+          fileEl.style.color = '#ff6b6b'
+        }
+      })
+    </script>
+  </body>
+</html>

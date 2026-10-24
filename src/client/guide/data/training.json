@@ -1,0 +1,18 @@
+{
+  "avoid": {
+    "Moo Moo Farm": 39,
+    "Tristram": 38,
+    "Arcane Sanctuary": 74,
+    "Duriel's Lair": 73,
+    "Matron's Den": 133,
+    "Forgotten Sands": 134,
+    "Furnace of Pain": 135,
+    "Uber Tristram": 136
+  },
+  "belowGoal": 1,
+  "safety": 2,
+  "spread": 6,
+  "levelsPerSetback": 2,
+  "setbacks": 2,
+  "goldPerAct": [1500, 3000, 6000, 10000, 15000]
+}

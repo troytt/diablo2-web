@@ -1,0 +1,4 @@
+Id	Name	Type	InvWidth	InvHeight	MaxStack	Value
+hp1	Minor Healing Potion	misc	1	1	5	20
+mp1	Minor Mana Potion	misc	1	1	5	25
+key	Key	misc	1	1	12	10

@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0a0806" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="referrer" content="no-referrer" />
+  <title>暗黑破坏神 II：毁灭之王 · 庇护之地网页端 (Sanctuary Web Portal)</title>
+  <style>
+    @font-face {
+      font-family: "D2GlExocetBlizzard";
+      src: url("/ui/fonts/ExocetBlizzardMedium.otf") format("opentype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "D2GlFormal436BT";
+      src: url("/ui/fonts/Formal436BT.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "D2GlChi";
+      src: url("/ui/fonts/Chi.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "D2Exocet";
+      src: url("/ui/fonts/D2Exocet.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "D2Formal436";
+      src: url("/ui/fonts/D2Formal436.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      color-scheme: dark;
+      --d2-gold: #c7b377;
+      --d2-gold-bright: #f3e6b3;
+      --d2-gold-dim: #7c6a43;
+      --d2-parchment: #e5d8bc;
+      --font-display: "D2GlExocetBlizzard", "D2Exocet", "D2GlChi", "Noto Serif CJK SC", "Songti SC", serif;
+      --font-body: "D2GlFormal436BT", "D2Formal436", "D2GlChi", "Noto Serif CJK SC", "Songti SC", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background-color: #050404;
+      background-image:
+        radial-gradient(ellipse at 50% 0%, rgba(165, 42, 16, 0.16) 0%, rgba(0, 0, 0, 0.88) 70%),
+        url("/ui-pd2/home/stone-back.png");
+      background-repeat: no-repeat, repeat;
+      background-size: 100% 100%, 280px 280px;
+      color: var(--d2-parchment);
+      font-family: var(--font-body);
+      cursor: url("/cursor-pd2/other.png") 0 0, auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a, button {
+      cursor: url("/cursor-pd2/hand.png") 4 0, pointer;
+    }
+
+    .d2-title {
+      font-family: var(--font-display);
+      letter-spacing: 0.08em;
+      color: var(--d2-gold-bright);
+      text-shadow: 0 2px 6px #000, 0 0 18px rgba(199, 179, 119, 0.4);
+    }
+
+    .page-shell {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 20px 20px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Authentic D2 Carved Stone Panel */
+    .d2-panel {
+      position: relative;
+      background-color: #0c0a08;
+      background-image:
+        linear-gradient(180deg, rgba(16, 13, 10, 0.86) 0%, rgba(8, 6, 5, 0.94) 100%),
+        url("/ui-pd2/home/stone-back.png");
+      background-size: 100% 100%, 220px 220px;
+      border: 2px solid #4e3f28;
+      box-shadow:
+        inset 0 0 0 1px rgba(243, 230, 179, 0.14),
+        inset 0 0 28px rgba(0, 0, 0, 0.95),
+        0 12px 32px rgba(0, 0, 0, 0.95);
+    }
+
+    /* Corner Ornaments from Game UI */
+    .d2-corner {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: url("/ui-pd2/home/border-corner-top-left.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 5;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9));
+    }
+    .d2-corner.tl { top: -3px; left: -3px; }
+    .d2-corner.tr { top: -3px; right: -3px; transform: scaleX(-1); }
+    .d2-corner.bl { bottom: -3px; left: -3px; transform: scaleY(-1); }
+    .d2-corner.br { bottom: -3px; right: -3px; transform: scale(-1, -1); }
+
+    /* Horizontal Ribbon Divider from Game UI */
+    .d2-ribbon {
+      width: 100%;
+      height: 16px;
+      background-image: url("/ui-pd2/home/ribbon-horizontal.png");
+      background-repeat: repeat-x;
+      background-size: auto 16px;
+      background-position: center;
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.95));
+      opacity: 0.92;
+    }
+
+    /*
+     * Authentic Diablo II 2-Frame Stone Button (`D2Win.dll` `0x6f8efa80` + `0x6f8ef94e`):
+     * - Normal state: left frame (`background-position: 0% 0%`)
+     * - Pressed (:active) state: right frame (`background-position: 100% 0%`) + label shift (-2px, +2px)
+     * - Engraved dark-chiseled label on carved grey stone slab
+     */
+    .d2-stone-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size: 200% 100%;
+      background-position: 0% 0%;
+      border: none;
+      background-color: transparent;
+      color: #0e0b08;
+      font-family: var(--font-display);
+      font-weight: 800;
+      text-decoration: none;
+      text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.42),
+        0 -1px 0 rgba(0, 0, 0, 0.35);
+      user-select: none;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.92));
+      transition: filter 0.14s ease;
+    }
+    .d2-stone-btn:hover {
+      filter: brightness(1.1) contrast(1.04) drop-shadow(0 0 12px rgba(214, 181, 109, 0.38)) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.95));
+    }
+    .d2-stone-btn:active,
+    .music-link-card:active .d2-stone-btn {
+      background-position: 100% 0%;
+    }
+    .d2-stone-btn .stone-btn-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      pointer-events: none;
+    }
+    .d2-stone-btn:active .stone-btn-label,
+    .music-link-card:active .d2-stone-btn .stone-btn-label {
+      transform: translate(-2px, 2px);
+    }
+
+    /* Wide Stone CTA Button (/ui/frontend/btn-wide.png: 544x35 -> 272x35 per frame) */
+    .d2-play-btn {
+      width: 340px;
+      height: 44px;
+      background-image: url("/ui/frontend/btn-wide.png");
+      font-size: 20px;
+      letter-spacing: 0.14em;
+    }
+
+    /* Medium Stone Button (/ui/frontend/btn-medium.png: 256x35 -> 128x35 per frame) */
+    .music-enter-pill {
+      position: relative;
+      z-index: 2;
+      width: 148px;
+      height: 40px;
+      background-image: url("/ui/frontend/btn-medium.png");
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Small Stone Language Toggle Button (/ui/frontend/btn-popup-small.png: 192x32 -> 96x32 per frame) */
+    .d2-lang-btn {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      z-index: 6;
+      width: 108px;
+      height: 36px;
+      background-image: url("/ui/frontend/btn-popup-small.png");
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    /* 1. HERO BANNER (Play Now) */
+    .hero-banner {
+      position: relative;
+      height: 336px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("/ui-pd2/home/d2-hero-banner.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.88) contrast(1.06);
+      z-index: 0;
+    }
+
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(8, 6, 5, 0.25) 0%, rgba(5, 4, 3, 0.86) 88%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, transparent 30%, transparent 65%, rgba(6, 5, 4, 0.92) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 720px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 14px;
+      background: rgba(12, 9, 7, 0.85);
+      border: 1px solid #6b5636;
+      color: var(--d2-gold);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-main-title {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: 0.1em;
+      color: #f6e7ba;
+      text-shadow:
+        0 3px 10px #000,
+        0 0 26px rgba(220, 95, 25, 0.65),
+        0 0 6px rgba(246, 231, 186, 0.45);
+      margin-bottom: 6px;
+    }
+
+    .hero-sub-title {
+      font-size: 15px;
+      letter-spacing: 0.22em;
+      color: var(--d2-gold);
+      text-shadow: 0 2px 6px #000;
+      margin-bottom: 26px;
+    }
+
+    /* 2 & 3. MIDDLE ROW: MERGED SERVER STATUS + MUSIC BOX LINK */
+    .mid-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .status-card {
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(124, 106, 67, 0.35);
+      padding-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-sub {
+      font-size: 12px;
+      color: #9e8f74;
+    }
+
+    .gateway-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* 3-State Soulstone Status Gem (Green / Yellow / Red) */
+    .status-gem {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: relative;
+      flex-shrink: 0;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      transition: background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .status-gem.green {
+      background: radial-gradient(circle at 35% 35%, #86efac 0%, #22c55e 45%, #14532d 100%);
+      box-shadow: 0 0 14px #22c55e, 0 0 26px rgba(34, 197, 94, 0.55);
+    }
+    .status-gem.yellow {
+      background: radial-gradient(circle at 35% 35%, #fde68a 0%, #f59e0b 45%, #78350f 100%);
+      box-shadow: 0 0 14px #f59e0b, 0 0 26px rgba(245, 158, 11, 0.55);
+    }
+    .status-gem.red {
+      background: radial-gradient(circle at 35% 35%, #fca5a5 0%, #ef4444 45%, #7f1d1d 100%);
+      box-shadow: 0 0 14px #ef4444, 0 0 26px rgba(239, 68, 68, 0.6);
+    }
+
+    .gateway-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--d2-gold-bright);
+      letter-spacing: 0.04em;
+    }
+
+    .gateway-right {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .gateway-rtt {
+      display: inline-block;
+      white-space: nowrap;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      background: rgba(20, 83, 45, 0.25);
+      color: #4ade80;
+      transition: all 0.2s ease;
+    }
+    .gateway-rtt.yellow {
+      border-color: rgba(251, 191, 36, 0.45);
+      background: rgba(120, 53, 15, 0.32);
+      color: #fbbf24;
+    }
+    .gateway-rtt.red {
+      border-color: rgba(248, 113, 113, 0.45);
+      background: rgba(127, 29, 29, 0.32);
+      color: #f87171;
+    }
+
+    /* Music Box Link-Only Card (Simplified single-row card) */
+    .music-link-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 17px 24px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      min-height: 74px;
+      transition: border-color 0.16s ease, transform 0.16s ease;
+    }
+    .music-link-card:hover {
+      border-color: var(--d2-gold-bright);
+      transform: translateY(-1px);
+    }
+    .music-card-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("/ui-pd2/home/d2-musicbox-crest.jpg");
+      background-size: cover;
+      background-position: center right;
+      filter: brightness(0.55) contrast(1.08);
+      z-index: 0;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+    .music-link-card:hover .music-card-bg {
+      filter: brightness(0.72) contrast(1.08);
+      transform: scale(1.02);
+    }
+    .music-card-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8, 6, 5, 0.92) 0%, rgba(10, 8, 6, 0.78) 55%, rgba(10, 8, 6, 0.42) 100%);
+      z-index: 1;
+    }
+    .music-card-body {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .music-icon {
+      color: var(--d2-gold-bright);
+      font-size: 18px;
+      text-shadow: 0 2px 4px #000;
+    }
+    .music-title {
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    /* 4. RECENT UPDATES (from git-ignored /updates.json) */
+    .updates-panel {
+      padding: 18px 22px;
+    }
+    .updates-list {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .update-item {
+      display: grid;
+      grid-template-columns: 98px 74px 1fr;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 14px;
+      background: rgba(7, 5, 4, 0.72);
+      border-left: 2px solid #8a7042;
+      border-top: 1px solid rgba(124, 106, 67, 0.18);
+      border-right: 1px solid rgba(124, 106, 67, 0.18);
+      border-bottom: 1px solid rgba(124, 106, 67, 0.18);
+      font-size: 13.5px;
+    }
+    .update-date {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #9e8f74;
+    }
+    .update-ver {
+      display: inline-block;
+      text-align: center;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      padding: 1px 6px;
+      background: rgba(199, 179, 119, 0.12);
+      border: 1px solid rgba(199, 179, 119, 0.35);
+      color: var(--d2-gold-bright);
+    }
+    .update-text {
+      color: #e5d8bc;
+      line-height: 1.45;
+    }
+    .update-text strong {
+      color: var(--d2-gold-bright);
+      margin-right: 6px;
+    }
+
+    /* 5 & 6. BOTTOM ROW: PROJECT INTRO + CONTACT AUTHOR */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 14px;
+    }
+
+    .intro-panel, .contact-panel {
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .intro-body {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .horadric-emblem {
+      width: 68px;
+      height: 68px;
+      flex-shrink: 0;
+      background-image: url("/ui-pd2/home/horadricback.png");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid #6b5636;
+      box-shadow: inset 0 0 12px #000, 0 4px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .intro-text {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #d6c7a9;
+    }
+
+    .intro-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .intro-pill {
+      font-size: 12px;
+      padding: 4px 11px;
+      background: rgba(10, 8, 6, 0.85);
+      border: 1px solid #5a482d;
+      color: var(--d2-gold-bright);
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(7, 5, 4, 0.78);
+      border: 1px solid #473924;
+      text-decoration: none;
+      color: inherit;
+      text-align: left;
+      font-family: inherit;
+      transition: border-color 0.15s ease;
+    }
+    .contact-item:hover {
+      border-color: var(--d2-gold-bright);
+    }
+    .contact-label {
+      font-size: 12.5px;
+      color: #9e8f74;
+    }
+    .contact-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--d2-gold-bright);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .footer-bar {
+      text-align: center;
+      font-size: 12px;
+      color: #7c6e56;
+      padding-top: 4px;
+      letter-spacing: 0.06em;
+    }
+
+    /* Responsive support for 800x600 classic 4:3 and mobile viewports */
+    @media (max-width: 860px) {
+      .page-shell {
+        padding: 12px 12px 24px;
+        gap: 10px;
+      }
+      .hero-banner {
+        height: 256px;
+        padding: 16px;
+      }
+      .hero-main-title {
+        font-size: 32px;
+      }
+      .hero-sub-title {
+        font-size: 13px;
+        margin-bottom: 18px;
+      }
+      .d2-play-btn {
+        width: 288px;
+        height: 38px;
+        font-size: 17px;
+      }
+      .d2-lang-btn {
+        top: 10px;
+        right: 12px;
+        width: 96px;
+        height: 32px;
+        font-size: 12px;
+      }
+      .mid-grid,
+      .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .update-item {
+        grid-template-columns: 88px 66px 1fr;
+        font-size: 12.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+
+    <!-- 1. 立即开始游玩 / PLAY NOW (PURE HERO BANNER — NO LAUNCH PARAMETERS) -->
+    <section id="hero-play-now" class="d2-panel hero-banner">
+      <span class="d2-corner tl"></span>
+      <span class="d2-corner tr"></span>
+      <span class="d2-corner bl"></span>
+      <span class="d2-corner br"></span>
+      <div class="hero-bg"></div>
+      <div class="hero-vignette"></div>
+
+      <!-- Diablo II Small Stone Language Switcher Button -->
+      <button id="btn-lang-toggle" class="d2-stone-btn d2-lang-btn" type="button" title="Switch Language / 切换语言">
+        <span id="btn-lang-label" class="stone-btn-label">EN / 中文</span>
+      </button>
+
+      <div class="hero-content">
+        <div id="hero-badge-text" class="hero-badge">✦ SANCTUARY WEB ENGINE · DIABLO II v1.13c ✦</div>
+        <h1 id="hero-title-text" class="d2-title hero-main-title">暗黑破坏神 II：毁灭之王</h1>
+        <div id="hero-subtitle-text" class="d2-title hero-sub-title">DIABLO II : LORD OF DESTRUCTION</div>
+
+        <!-- Diablo II Wide Stone Play Button -->
+        <a id="btn-play-now" class="d2-stone-btn d2-play-btn" href="/play.html">
+          <span class="stone-btn-label">
+            <span>⚔</span>
+            <span id="btn-play-label">立即开始游玩</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <div class="d2-ribbon"></div>
+
+    <!-- 2. 服务器状态 (极简红绿灯 + 延迟卡片) + 3. 音乐盒 (极简纯链接卡片) -->
+    <section class="mid-grid">
+      <!-- 服务器状态（极简红绿灯 + 延迟卡片） -->
+      <div id="gateway-status-card" class="d2-panel status-card">
+        <span class="d2-corner tl"></span>
+        <span class="d2-corner tr"></span>
+        <span class="d2-corner bl"></span>
+        <span class="d2-corner br"></span>
+
+        <div class="gateway-left">
+          <span id="gateway-gem" class="status-gem green"></span>
+          <span id="gateway-host" class="d2-title gateway-name">服务器状态</span>
+        </div>
+        <div class="gateway-right">
+          <span id="gateway-rtt" class="gateway-rtt">-- ms</span>
+        </div>
+      </div>
+
+      <!-- 音乐盒（极简纯链接卡片 + 石质按钮） -->
+      <a id="musicbox-link-card" class="d2-panel music-link-card" href="/musicbox.html">
+        <span class="d2-corner tl"></span>
+        <span class="d2-corner tr"></span>
+        <span class="d2-corner bl"></span>
+        <span class="d2-corner br"></span>
+        <div class="music-card-bg"></div>
+        <div class="music-card-shade"></div>
+
+        <div class="music-card-body">
+          <span class="music-icon">♫</span>
+          <span id="music-card-title" class="d2-title music-title">音乐盒</span>
+        </div>
+
+        <div class="d2-stone-btn music-enter-pill">
+          <span class="stone-btn-label">
+            <span id="music-enter-label">进入音乐盒</span>
+            <span>▸</span>
+          </span>
+        </div>
+      </a>
+    </section>
+
+    <div class="d2-ribbon"></div>
+
+    <!-- 4. 最近更新 (读取服务端独立维护的 /updates.json，不入 Git) -->
+    <section id="recent-updates-panel" class="d2-panel updates-panel">
+      <span class="d2-corner tl"></span>
+      <span class="d2-corner tr"></span>
+      <span class="d2-corner bl"></span>
+      <span class="d2-corner br"></span>
+
+      <div class="card-header">
+        <div class="d2-title card-title">
+          <span>📜</span>
+          <span id="updates-title-text">最近更新</span>
+        </div>
+        <span id="updates-updated-at" class="card-sub">服务端实时同步</span>
+      </div>
+
+      <div id="updates-list" class="updates-list">
+        <div class="update-item">
+          <span class="update-date">2026-10-20</span>
+          <span class="update-ver">v1.13c</span>
+          <div class="update-text"><strong>庇护之地门户首页上线 & 网关三色状态灯整合</strong>新增复古暗黑哥特门户首页（index.html），整合网关实时延迟状态灯与酒馆音乐盒入口。</div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-10-18</span>
+          <span class="update-ver">v1.13c</span>
+          <div class="update-text"><strong>D2GS 0x00..0xAF 报文解析与 1.13c 物品比特流对齐</strong>完成完整战网房间同步、0x9C/0x9D 物品属性比特流解码、赫拉迪克方块合成与铁匠铺修理交易闭环。</div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-10-15</span>
+          <span class="update-ver">v1.13c</span>
+          <div class="update-text"><strong>136 张原版关卡全光谱审计与 SplitMix64 瓦片哈希</strong>全量加载 Blank / InvisWal / Warp 通用 DT1，修复稀疏空洞碰撞掩码，并通过 800×600 与 1280×720 宽屏双分辨率校验。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 项目简介 + 6. 联系作者 -->
+    <section class="bottom-grid">
+      <!-- 项目简介 -->
+      <div id="project-intro-panel" class="d2-panel intro-panel">
+        <span class="d2-corner tl"></span>
+        <span class="d2-corner tr"></span>
+        <span class="d2-corner bl"></span>
+        <span class="d2-corner br"></span>
+
+        <div class="card-header">
+          <div class="d2-title card-title">
+            <span>🏛</span>
+            <span id="intro-title-text">项目简介</span>
+          </div>
+          <span id="intro-sub-text" class="card-sub">100% 浏览器原生复刻</span>
+        </div>
+
+        <div class="intro-body">
+          <div class="horadric-emblem"></div>
+          <p id="intro-body-text" class="intro-text">
+            基于 TypeScript 与 WebGL2 从零构建的《暗黑破坏神 II：毁灭之王》v1.13c 网页客户端。严格对齐原版二进制底层机制、MPQ 数据表与战网协议（BNCS / MCP / D2GS），无需安装客户端即可在浏览器内体验纯正的庇护之地冒险。
+          </p>
+        </div>
+
+        <div class="intro-badges">
+          <span id="intro-pill-1" class="intro-pill">✦ 1:1 原生战网协议</span>
+          <span id="intro-pill-2" class="intro-pill">✦ 确定性 DRLG 迷宫生成</span>
+          <span id="intro-pill-3" class="intro-pill">✦ WebGL2 调色板光影渲染</span>
+        </div>
+      </div>
+
+      <!-- 联系作者 -->
+      <div id="contact-author-panel" class="d2-panel contact-panel">
+        <span class="d2-corner tl"></span>
+        <span class="d2-corner tr"></span>
+        <span class="d2-corner bl"></span>
+        <span class="d2-corner br"></span>
+
+        <div class="card-header">
+          <div class="d2-title card-title">
+            <span>✉</span>
+            <span id="contact-title-text">联系作者</span>
+          </div>
+          <span id="contact-copy-hint" class="card-sub">开源仓库与玩家社区</span>
+        </div>
+
+        <div class="contact-list">
+          <a id="contact-github" class="contact-item" href="https://github.com/troytt/diablo2-web" target="_blank" rel="noopener noreferrer">
+            <span id="contact-github-label" class="contact-label">Git 仓库地址</span>
+            <span id="contact-github-val" class="contact-val">github.com/troytt/diablo2-web</span>
+          </a>
+          <button id="contact-qq" class="contact-item" type="button" data-copy="754468203">
+            <span id="contact-qq-label" class="contact-label">玩家交流 QQ 群（点击复制）</span>
+            <span id="contact-qq-val" class="contact-val">754468203</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer-text" class="footer-bar">
+      SANCTUARY WEB PORTAL · DIABLO II: LORD OF DESTRUCTION v1.13c · NON-COMMERCIAL FAN PROJECT
+    </footer>
+
+  </main>
+
+  <script>
+    (function () {
+      var SETTINGS_STORAGE_KEY = "d2web.settings.v1";
+
+      var I18N = {
+        zh: {
+          pageTitle: "暗黑破坏神 II：毁灭之王 · 庇护之地网页端 (Sanctuary Web Portal)",
+          langToggleBtn: "ENGLISH",
+          heroTitle: "暗黑破坏神 II：毁灭之王",
+          heroSubtitle: "DIABLO II : LORD OF DESTRUCTION",
+          playNowBtn: "立即开始游玩",
+          serverStatusTitle: "服务器状态",
+          onlineText: "在线",
+          highLatencyText: "高延迟",
+          offlineText: "离线",
+          musicBoxTitle: "音乐盒",
+          enterMusicBoxBtn: "进入音乐盒",
+          updatesTitle: "最近更新",
+          updatesSub: "服务端实时同步",
+          updatesSyncedPrefix: "最近同步：",
+          introTitle: "项目简介",
+          introSub: "100% 浏览器原生复刻",
+          introBody: "基于 TypeScript 与 WebGL2 从零构建的《暗黑破坏神 II：毁灭之王》v1.13c 网页客户端。严格对齐原版二进制底层机制、MPQ 数据表与战网协议（BNCS / MCP / D2GS），无需安装客户端即可在浏览器内体验纯正的庇护之地冒险。",
+          introPill1: "✦ 1:1 原生战网协议",
+          introPill2: "✦ 确定性 DRLG 迷宫生成",
+          introPill3: "✦ WebGL2 调色板光影渲染",
+          contactTitle: "联系作者",
+          contactSub: "开源仓库与玩家社区",
+          contactGithubLabel: "Git 仓库地址",
+          contactQqLabel: "玩家交流 QQ 群（点击复制）",
+          copiedPrefix: "已复制：",
+          fallbackUpdates: [
+            {
+              date: "2026-10-24",
+              version: "v1.13c",
+              title: "合并 15 个 QoL 插件，交易大厅与多开上线",
+              summary: "整合 15 个体验优化插件与分组设置菜单，新增在线交易大厅和单标签多开；同时按 1.13c 修正穿透、抗性上限、光环加成、掉落与任务奖励，冰冻碎裂等特效也补齐。"
+            },
+            {
+              date: "2026-10-23",
+              version: "v1.13c",
+              title: "雇佣兵伤害与面板对齐 1.13c，手机可正常打字",
+              summary: "雇佣兵伤害、面板数值与复活/换手行为按 1.13c 重做，区域无缝切换、经验与耐力、通关任务演出同步修正；手机端唤出输入法不再失焦。"
+            },
+            {
+              date: "2026-10-22",
+              version: "v1.13c",
+              title: "手机端触控上线：虚拟摇杆、紧凑 HUD 与一键拾取",
+              summary: "手机与平板可用虚拟双摇杆移动并配合锥形瞄准，紧凑 HUD、6x2 技能轮盘、一键拾取与触感反馈一并到位；桌面端同时修复远程玩家移动回弹与怪物 AI 行为。"
+            },
+            {
+              date: "2026-10-21",
+              version: "v1.13c",
+              title: "首页状态灯改为浏览器端实测网关延迟",
+              summary: "三条网关（BNet / Realm / Game）的延迟与在线状态改由浏览器直接探测，首页显示更贴近真实连接体验。"
+            },
+            {
+              date: "2026-10-20",
+              version: "v1.13c",
+              title: "角色面板新增「高级角色属性」与 (?) 帮助按钮",
+              summary: "角色面板可展开高级属性（派生伤害、抗性等数值），并新增暗黑风格 (?) 说明按钮，放在关闭按钮左侧。"
+            },
+            {
+              date: "2026-10-20",
+              version: "v1.13c",
+              title: "门户首页石质按钮、按 IP 自动中英切换与语言传递",
+              summary: "首页按钮改为 D2 石质质感；按访客 IP 所在地区自动选择中文/英文，且语言选择会带到 play.html。"
+            }
+          ]
+        },
+        en: {
+          pageTitle: "Diablo II: Lord of Destruction — Sanctuary Web Portal",
+          langToggleBtn: "中文",
+          heroTitle: "DIABLO II: LORD OF DESTRUCTION",
+          heroSubtitle: "SANCTUARY CLASSIC v1.13c WEB EDITION",
+          playNowBtn: "PLAY NOW",
+          serverStatusTitle: "SERVER STATUS",
+          onlineText: "ONLINE",
+          highLatencyText: "HIGH PING",
+          offlineText: "OFFLINE",
+          musicBoxTitle: "MUSIC BOX",
+          enterMusicBoxBtn: "JUKEBOX",
+          updatesTitle: "RECENT UPDATES",
+          updatesSub: "LIVE SERVER FEED",
+          updatesSyncedPrefix: "Synced: ",
+          introTitle: "ABOUT PROJECT",
+          introSub: "100% NATIVE WEB ENGINE",
+          introBody: "A faithful browser-based recreation of Diablo II: Lord of Destruction v1.13c built from scratch with TypeScript and WebGL2. Strictly aligned with original binary mechanics, MPQ data tables, and Battle.net protocols (BNCS / MCP / D2GS) — step into Sanctuary in your browser with zero installation.",
+          introPill1: "✦ 1:1 Battle.net Protocol",
+          introPill2: "✦ Deterministic DRLG Maps",
+          introPill3: "✦ WebGL2 Palette Lighting",
+          contactTitle: "CONTACT AUTHOR",
+          contactSub: "REPOSITORY & COMMUNITY",
+          contactGithubLabel: "Git Repository",
+          contactQqLabel: "QQ Group (Click to Copy)",
+          copiedPrefix: "Copied: ",
+          fallbackUpdates: [
+            {
+              date: "2026-10-24",
+              version: "v1.13c",
+              title: "15 QoL Plugins Merged, Trade Hall and Multibox Online",
+              summary: "Fifteen quality-of-life plugins and a grouped settings menu are in, plus an online Trade Hall and single-tab multiboxing; 1.13c fixes cover missile pierce, resist caps, aura bonuses, drops, quest rewards and frozen-shatter effects."
+            },
+            {
+              date: "2026-10-23",
+              version: "v1.13c",
+              title: "Mercenary Damage and Panel Aligned With 1.13c, Mobile Keyboard Fixed",
+              summary: "Mercenary damage, panel stats and resurrect/handling now follow 1.13c, alongside fixes for seamless area transitions, experience and stamina rules, quest cinematics, and mobile virtual keyboard input."
+            },
+            {
+              date: "2026-10-22",
+              version: "v1.13c",
+              title: "Mobile Touch Controls: Twin-Stick, Compact HUD & One-Tap Loot",
+              summary: "Phones and tablets now get virtual twin-stick movement with cone targeting, a compact HUD with a 6x2 skill wheel, one-tap looting and haptic feedback; desktop also fixes remote player rubberbanding and monster AI behavior."
+            },
+            {
+              date: "2026-10-21",
+              version: "v1.13c",
+              title: "Home Gateway Gems Now Probe Latency From the Browser",
+              summary: "BNet / Realm / Game latency and online state are measured directly in the browser, so the portal reflects your real connection."
+            },
+            {
+              date: "2026-10-20",
+              version: "v1.13c",
+              title: "Advanced Character Stats Panel & Diablo-Style (?) Button",
+              summary: "The Character Sheet can expand advanced derived stats (damage, resistances, …) and gained a Diablo-styled help button left of Close."
+            },
+            {
+              date: "2026-10-20",
+              version: "v1.13c",
+              title: "D2 Stone Buttons, IP-Based i18n and Language Propagation",
+              summary: "Portal buttons now use D2 stone styling; zh/en is auto-selected by visitor IP region and carries over to play.html."
+            }
+          ]
+        }
+      };
+
+      var urlParams = new URLSearchParams(window.location.search || "");
+      var rawUrlLang = (urlParams.get("lang") || "").trim().toLowerCase();
+      var explicitUrlLang =
+        rawUrlLang === "en" || rawUrlLang === "eng" || rawUrlLang === "english"
+          ? "en"
+          : rawUrlLang === "zh" || rawUrlLang === "chi" || rawUrlLang === "zh-cn" || rawUrlLang === "cn"
+            ? "zh"
+            : null;
+      var ipQueryOverride = (urlParams.get("ip") || "").trim();
+
+      var currentLang = explicitUrlLang || "zh";
+      var manualLangSelected = explicitUrlLang !== null;
+      var lastGatewayReport = null;
+      var lastUpdatesPayload = null;
+
+      var gemEl = document.getElementById("gateway-gem");
+      var rttEl = document.getElementById("gateway-rtt");
+      var btnPlayNow = document.getElementById("btn-play-now");
+      var btnLangToggle = document.getElementById("btn-lang-toggle");
+      var musicLinkCard = document.getElementById("musicbox-link-card");
+
+      function persistGameLangPreference(lang) {
+        try {
+          if (!window.localStorage) return;
+          var existing = {};
+          var raw = window.localStorage.getItem(SETTINGS_STORAGE_KEY);
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+              existing = parsed;
+            }
+          }
+          existing.version = 1;
+          existing.lang = lang;
+          window.localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(existing));
+        } catch (_err) {
+          // Ignore storage write errors in restricted environments
+        }
+      }
+
+      function renderUpdatesList() {
+        var dict = I18N[currentLang];
+        var listEl = document.getElementById("updates-list");
+        if (!listEl) return;
+
+        var items =
+          lastUpdatesPayload && Array.isArray(lastUpdatesPayload.updates) && lastUpdatesPayload.updates.length > 0
+            ? lastUpdatesPayload.updates.slice(0, 6)
+            : dict.fallbackUpdates;
+
+        listEl.innerHTML = "";
+        items.forEach(function (item) {
+          var row = document.createElement("div");
+          row.className = "update-item";
+
+          var dateSpan = document.createElement("span");
+          dateSpan.className = "update-date";
+          dateSpan.textContent = item.date || "";
+
+          var verSpan = document.createElement("span");
+          verSpan.className = "update-ver";
+          verSpan.textContent = item.version || "v1.13c";
+
+          var textDiv = document.createElement("div");
+          textDiv.className = "update-text";
+          var strong = document.createElement("strong");
+          var titleText = currentLang === "en" ? (item.titleEn || item.title || "") : (item.title || "");
+          var summaryText = currentLang === "en" ? (item.summaryEn || item.summary || "") : (item.summary || "");
+          strong.textContent = titleText;
+          textDiv.appendChild(strong);
+          textDiv.appendChild(document.createTextNode(summaryText));
+
+          row.appendChild(dateSpan);
+          row.appendChild(verSpan);
+          row.appendChild(textDiv);
+          listEl.appendChild(row);
+        });
+
+        var upEl = document.getElementById("updates-updated-at");
+        if (upEl) {
+          if (lastUpdatesPayload && typeof lastUpdatesPayload.updatedAt === "string") {
+            upEl.textContent = dict.updatesSyncedPrefix + lastUpdatesPayload.updatedAt;
+          } else {
+            upEl.textContent = dict.updatesSub;
+          }
+        }
+      }
+
+      function applyGatewayReport(report) {
+        var dict = I18N[currentLang];
+        if (!report || !report.ok) {
+          gemEl.className = "status-gem red";
+          rttEl.className = "gateway-rtt red";
+          rttEl.textContent = dict.offlineText;
+          return;
+        }
+        var light = report.light === "green" || report.light === "yellow" ? report.light : "red";
+        gemEl.className = "status-gem " + light;
+
+        if (light === "green") {
+          var ms = typeof report.avgRttMs === "number" ? report.avgRttMs : report.maxRttMs;
+          rttEl.className = "gateway-rtt";
+          rttEl.textContent = ms !== null ? ms + " ms" : dict.onlineText;
+        } else if (light === "yellow") {
+          rttEl.className = "gateway-rtt yellow";
+          rttEl.textContent = report.maxRttMs !== null ? report.maxRttMs + " ms" : dict.highLatencyText;
+        } else {
+          rttEl.className = "gateway-rtt red";
+          rttEl.textContent = dict.offlineText;
+        }
+      }
+
+      function setText(id, val) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = val;
+      }
+
+      function applyLanguage(lang) {
+        currentLang = lang === "en" ? "en" : "zh";
+        var dict = I18N[currentLang];
+
+        document.documentElement.lang = currentLang === "en" ? "en" : "zh-CN";
+        document.title = dict.pageTitle;
+
+        setText("btn-lang-label", dict.langToggleBtn);
+        setText("hero-title-text", dict.heroTitle);
+        setText("hero-subtitle-text", dict.heroSubtitle);
+        setText("btn-play-label", dict.playNowBtn);
+        setText("gateway-host", dict.serverStatusTitle);
+        setText("music-card-title", dict.musicBoxTitle);
+        setText("music-enter-label", dict.enterMusicBoxBtn);
+        setText("updates-title-text", dict.updatesTitle);
+        setText("intro-title-text", dict.introTitle);
+        setText("intro-sub-text", dict.introSub);
+        setText("intro-body-text", dict.introBody);
+        setText("intro-pill-1", dict.introPill1);
+        setText("intro-pill-2", dict.introPill2);
+        setText("intro-pill-3", dict.introPill3);
+        setText("contact-title-text", dict.contactTitle);
+        setText("contact-copy-hint", dict.contactSub);
+        setText("contact-github-label", dict.contactGithubLabel);
+        setText("contact-qq-label", dict.contactQqLabel);
+
+        // Pass active language preference to /play.html and /musicbox.html and persist to d2web.settings.v1
+        if (btnPlayNow) {
+          btnPlayNow.setAttribute("href", "/play.html?lang=" + currentLang);
+        }
+        if (musicLinkCard) {
+          musicLinkCard.setAttribute("href", "/musicbox.html?lang=" + currentLang);
+        }
+        persistGameLangPreference(currentLang);
+
+        renderUpdatesList();
+        if (lastGatewayReport) {
+          applyGatewayReport(lastGatewayReport);
+        }
+      }
+
+      if (btnLangToggle) {
+        btnLangToggle.addEventListener("click", function () {
+          manualLangSelected = true;
+          applyLanguage(currentLang === "zh" ? "en" : "zh");
+        });
+      }
+
+      if (btnPlayNow) {
+        btnPlayNow.addEventListener("click", function () {
+          persistGameLangPreference(currentLang);
+          btnPlayNow.setAttribute("href", "/play.html?lang=" + currentLang);
+        });
+      }
+
+      // =================================================================
+      // 服务器状态灯：在浏览器端实测「本机 → 三个网关」的真实延迟。
+      //   对 wss://<本站>/d2net/{bnet,realm,game} 做一次握手计时（和游戏走的
+      //   同一条链路），三服全通且最大值 <150ms 为绿灯，偏高为黄灯，任一不通即红灯。
+      //   /api/server-status 仍保留，但只用来按访客 IP 自动选语言，不再取它的 RTT。
+      // =================================================================
+      var GATEWAY_PROBES = [
+        { id: "bncs", path: "/d2net/bnet" },
+        { id: "mcp", path: "/d2net/realm" },
+        { id: "d2gs", path: "/d2net/game" }
+      ];
+      var GATEWAY_PROBE_TIMEOUT_MS = 2500;
+      var GATEWAY_YELLOW_THRESHOLD_MS = 150;
+
+      function nowMs() {
+        return window.performance && performance.now ? performance.now() : Date.now();
+      }
+
+      function probeGatewayHandshake(path, timeoutMs) {
+        return new Promise(function (resolveProbe) {
+          if (typeof WebSocket !== "function") {
+            resolveProbe(null);
+            return;
+          }
+          var startedAt = 0;
+          var settled = false;
+          var socket = null;
+          var timer = null;
+
+          function finish(ms) {
+            if (settled) return;
+            settled = true;
+            if (timer !== null) clearTimeout(timer);
+            try {
+              if (socket) socket.close();
+            } catch (_e) {
+              // 握手失败/已关闭时 close 可能抛错，忽略
+            }
+            resolveProbe(ms);
+          }
+
+          try {
+            var proto = window.location.protocol === "https:" ? "wss:" : "ws:";
+            startedAt = nowMs();
+            socket = new WebSocket(proto + "//" + window.location.host + path);
+            socket.onopen = function () {
+              finish(Math.max(1, Math.round(nowMs() - startedAt)));
+            };
+            socket.onerror = function () { finish(null); };
+            socket.onclose = function () { finish(null); };
+            timer = setTimeout(function () { finish(null); }, timeoutMs);
+          } catch (_err) {
+            finish(null);
+          }
+        });
+      }
+
+      function buildGatewayReport(services) {
+        var online = services.filter(function (s) { return typeof s.rttMs === "number"; });
+        var maxRttMs = online.length
+          ? Math.max.apply(null, online.map(function (s) { return s.rttMs; }))
+          : null;
+        var avgRttMs = online.length
+          ? Math.round(online.reduce(function (acc, s) { return acc + s.rttMs; }, 0) / online.length)
+          : null;
+        var allOnline = services.length > 0 && online.length === services.length;
+        var light = "red";
+        if (allOnline) {
+          light = maxRttMs !== null && maxRttMs >= GATEWAY_YELLOW_THRESHOLD_MS ? "yellow" : "green";
+        }
+        return {
+          ok: true,
+          light: light,
+          allOnline: allOnline,
+          onlineCount: online.length,
+          totalCount: services.length,
+          maxRttMs: maxRttMs,
+          avgRttMs: avgRttMs,
+          services: services
+        };
+      }
+
+      var gatewayProbeInFlight = false;
+      async function probeClientGateways() {
+        if (gatewayProbeInFlight || document.hidden) return;
+        gatewayProbeInFlight = true;
+        try {
+          var services = await Promise.all(
+            GATEWAY_PROBES.map(async function (probe) {
+              var rttMs = await probeGatewayHandshake(probe.path, GATEWAY_PROBE_TIMEOUT_MS);
+              // 握手首次会带 DNS/TLS 冷启动，偶发抖动会误报黄/红；慢于阈值或失败时再试一次取更优值
+              if (rttMs === null || rttMs >= GATEWAY_YELLOW_THRESHOLD_MS) {
+                var retryMs = await probeGatewayHandshake(probe.path, GATEWAY_PROBE_TIMEOUT_MS);
+                if (retryMs !== null && (rttMs === null || retryMs < rttMs)) {
+                  rttMs = retryMs;
+                }
+              }
+              return { id: probe.id, path: probe.path, online: typeof rttMs === "number", rttMs: rttMs };
+            })
+          );
+          lastGatewayReport = buildGatewayReport(services);
+          applyGatewayReport(lastGatewayReport);
+        } finally {
+          gatewayProbeInFlight = false;
+        }
+      }
+
+      async function fetchVisitorLanguage() {
+        try {
+          var statusUrl = "/api/server-status";
+          if (ipQueryOverride) {
+            statusUrl += "?ip=" + encodeURIComponent(ipQueryOverride);
+          }
+          var res = await fetch(statusUrl, { cache: "no-store" });
+          if (!res.ok) return;
+          var data = await res.json();
+          // 只取服务端判定的访客语言；延迟与红绿灯一律由浏览器端实测决定
+          if (!manualLangSelected && (data.visitorLang === "en" || data.visitorLang === "zh")) {
+            applyLanguage(data.visitorLang);
+          }
+        } catch (_err) {
+          // 语言探测失败保持默认中文，不影响状态灯
+        }
+      }
+
+      async function fetchRecentUpdates() {
+        try {
+          var res = await fetch("/updates.json", { cache: "no-store" });
+          if (!res.ok) return;
+          var data = await res.json();
+          lastUpdatesPayload = data;
+          renderUpdatesList();
+
+          if (data && data.contact && typeof data.contact === "object") {
+            var c = data.contact;
+            if (typeof c.github === "string" && c.github.trim()) {
+              var ghA = document.getElementById("contact-github");
+              var ghVal = document.getElementById("contact-github-val");
+              if (ghA) ghA.setAttribute("href", c.github.trim());
+              if (ghVal) ghVal.textContent = c.github.trim().replace(/^https?:\/\//, "");
+            }
+            if (typeof c.qqGroup === "string" && c.qqGroup.trim()) {
+              var qqBtn = document.getElementById("contact-qq");
+              var qqVal = document.getElementById("contact-qq-val");
+              if (qqBtn) qqBtn.setAttribute("data-copy", c.qqGroup.trim());
+              if (qqVal) qqVal.textContent = c.qqGroup.trim();
+            }
+          }
+        } catch (_err) {
+          // Keep built-in fallback updates when /updates.json is absent
+        }
+      }
+
+      var copyHintEl = document.getElementById("contact-copy-hint");
+      document.querySelectorAll("button.contact-item[data-copy]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var val = btn.getAttribute("data-copy") || "";
+          if (!val) return;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(val).catch(function () {});
+          }
+          if (copyHintEl) {
+            var dict = I18N[currentLang];
+            copyHintEl.textContent = dict.copiedPrefix + val;
+            setTimeout(function () {
+              copyHintEl.textContent = I18N[currentLang].contactSub;
+            }, 2200);
+          }
+        });
+      });
+
+      applyLanguage(currentLang);
+      fetchVisitorLanguage();
+      probeClientGateways();
+      fetchRecentUpdates();
+      setInterval(function () {
+        probeClientGateways();
+      }, 30000);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) probeClientGateways();
+      });
+    })();
+  </script>
+</body>
+</html>

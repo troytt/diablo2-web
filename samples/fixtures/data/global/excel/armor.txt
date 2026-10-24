@@ -1,0 +1,4 @@
+Id	Name	Type	InvWidth	InvHeight	Defense	Value	Level	MaxStack
+buc	Buckler	armo	2	2	4	25	1	1
+cap	Cap	armo	2	2	6	40	2	1
+plt	Plate Mail	armo	2	3	30	400	12	1

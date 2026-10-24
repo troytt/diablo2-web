@@ -1,0 +1,18 @@
+{
+  "name": "Diablo II: Lord of Destruction · Sanctuary Web Client",
+  "short_name": "Diablo II",
+  "description": "Diablo II: Lord of Destruction v1.13c Web Client with D2R Widescreen & Mobile Touch Controls",
+  "start_url": "/play.html",
+  "scope": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#050505",
+  "theme_color": "#0a0806",
+  "icons": [
+    {
+      "src": "/ui/goldcoin.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
