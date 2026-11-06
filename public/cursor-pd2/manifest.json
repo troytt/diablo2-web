@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "mode": "pd2",
+  "drawSize": 40,
+  "offset": {
+    "x": 1,
+    "y": 6
+  },
+  "idleStepMs": 150,
+  "sheets": {
+    "hand": {
+      "image": "/cursor-pd2/hand.png",
+      "source": "Data/assets/textures/cursor/hand.png",
+      "width": 2432,
+      "height": 128,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 256,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 384,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 512,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 640,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 768,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 896,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1024,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1152,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1280,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1408,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1536,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1664,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1792,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1920,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 2048,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 2176,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 2304,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        }
+      ]
+    },
+    "other": {
+      "image": "/cursor-pd2/other.png",
+      "source": "Data/assets/textures/cursor/other.png",
+      "width": 1280,
+      "height": 128,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 256,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 384,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 512,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 640,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 768,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 896,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1024,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "x": 1152,
+          "y": 0,
+          "width": 128,
+          "height": 128
+        }
+      ]
+    }
+  }
+}

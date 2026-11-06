@@ -1,0 +1,15 @@
+{
+  "base": "tests/fixtures/oracle/saves/a1-paladin-l1.d2s",
+  "exp": 300000000,
+  "skills": [[103, 1]],
+  "stats": [[0, 100], [2, 30], [3, 200]],
+  "unequip": [4, 5],
+  "equip": [
+    ["ghm", 1, 7, 85],
+    ["xcl", 3, 5, 85],
+    ["7cl", 4, 7, 85],
+    ["zlb", 8, 7, 85],
+    ["tbt", 9, 7, 85],
+    ["xhg", 10, 7, 85]
+  ]
+}

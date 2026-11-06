@@ -1,0 +1,4 @@
+Id	Name	HP	Damage	CooldownTicks	Reach	AggroRadius	Speed	XP
+fallen	Fallen	12	3	24	36	220	80	8
+zombie	Zombie	30	6	32	40	170	50	15
+skeleton	Skeleton	18	4	28	38	260	70	12

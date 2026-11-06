@@ -1,0 +1,4 @@
+	Id	Name	Type	InvWidth	InvHeight	Damage	Value	Level	MaxStack
+	swd	Short Sword	weap	1	3	5	30	1	1
+	axe	Hand Axe	weap	2	3	8	60	3	1
+	gsw	Great Sword	weap	2	4	18	200	10	1

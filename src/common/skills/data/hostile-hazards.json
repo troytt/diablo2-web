@@ -1,0 +1,20 @@
+{
+  "hazards": {
+    "firewall": 2, "andyfirewall": 2, "andycolumnfire": 2, "andycolumnfirebase": 2, "andyfallingdebris1": 2, "andyfallingdebris2": 2, "andyfallingdebris3": 2,
+    "vampirefirewall": 2, "diabwall": 2, "mephistofirewall": 2, "countessfirewall": 2,
+    "blizzardcenter": 5, "blizzard1": 2, "blizzard2": 2, "blizzard3": 2, "blizzard4": 2,
+    "meteorcenter": 4, "vampiremeteorcenter": 4, "meteorfire": 2, "vampiremeteorfire": 2, "catapult meteor fire": 3, "hellmeteordown": 4,
+    "corpsepoisoncloud": 3, "poisonjavcloud": 3, "viper_poisjavcloud": 3, "viper_firecloud": 3, "plaguejavcloud": 3, "trappoisonjavcloud": 3,
+    "rancidgascloud": 3, "chokinggascloud": 3, "stranglinggascloud": 3, "primepoisoncloud": 4, "poisonexplosioncloud": 3, "catapult plague cloud": 4,
+    "firesmall": 1, "firemedium": 1.5, "immolationfire": 2, "armageddonfire": 2, "diablogeddonfire": 2, "volcano small fire": 1.5, "moltenboulderfirepath": 1.5,
+    "catapult spike on ground": 2, "sentryspikeonground": 2, "baalcorpseexplodedelay": 3
+  },
+  "blasts": {
+    "fireball": 3, "vampirefireball": 3, "impfireball": 3, "sucfireball": 3, "desertfireball": 3, "poisonball": 3, "taintedsunball": 3, "frozenorb": 3,
+    "andarielspray": 2, "andypoisonbolt": 1.5, "queenpoisoncloud": 3, "ancient death cloud": 3, "frogfire": 2, "frogpois": 2,
+    "shafire1": 2, "shafire2": 2, "shafire3": 2, "shafire4": 2, "shafire5": 2,
+    "infernoflame1": 2, "infernoflame2": 2, "infernoflame3": 2, "fetishinferno1": 2, "fetishinferno2": 2, "impinfernoflame1": 2, "impinfernoflame2": 2, "megademoninferno": 2,
+    "rancidgasepotion": 3, "chokinggaspoition": 3, "stranglinggaspotion": 3, "catapult spike in air": 2, "sentryspikeinair": 2, "diabfire": 2, "baal inferno": 2
+  },
+  "harmless": ["cursecast", "healingbolt", "orbmist", "orbmisttrail", "orbmistfade", "baalfx spirit 1", "baalfx spirit 2", "baalfx spirit 3", "baalfx spirit 4", "baalfx spirit 5", "baal spawn monsters", "cairn stones bolt", "durieldeathdebris"]
+}

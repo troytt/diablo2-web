@@ -1,0 +1,554 @@
+{
+ "case": "amazon",
+ "label": "town",
+ "save": "tests/fixtures/oracle/saves/amazon-l40-passives.d2s",
+ "fields": [
+  "sheet.level",
+  "sheet.experience",
+  "sheet.nextLevel",
+  "sheet.strength",
+  "sheet.dexterity",
+  "sheet.defense",
+  "sheet.vitality",
+  "sheet.maxStamina",
+  "sheet.stamina",
+  "sheet.maxLife",
+  "sheet.life",
+  "sheet.energy",
+  "sheet.maxMana",
+  "sheet.mana",
+  "sheet.fireRes",
+  "sheet.coldRes",
+  "sheet.lightRes",
+  "sheet.poisonRes",
+  "sheet.leftSkill",
+  "sheet.rightSkill",
+  "sheet.blockChance",
+  "sheet.leftAttackRating",
+  "sheet.rightAttackRating",
+  "skills.list",
+  "skill.0.level",
+  "skill.0.name",
+  "skill.0.damage",
+  "skill.0.attackRating",
+  "skill.1.level",
+  "skill.1.name",
+  "skill.1.damage",
+  "skill.1.attackRating",
+  "skill.2.level",
+  "skill.2.name",
+  "skill.2.damage",
+  "skill.2.attackRating",
+  "skill.3.level",
+  "skill.3.name",
+  "skill.3.damage",
+  "skill.3.attackRating",
+  "skill.8.level",
+  "skill.8.name",
+  "skill.8.damage",
+  "skill.8.attackRating",
+  "skill.9.level",
+  "skill.10.level",
+  "skill.10.name",
+  "skill.10.damage",
+  "skill.10.attackRating",
+  "skill.13.level",
+  "skill.14.level",
+  "skill.14.name",
+  "skill.14.damage",
+  "skill.14.attackRating",
+  "skill.17.level",
+  "skill.17.name",
+  "skill.17.damage",
+  "skill.17.attackRating",
+  "skill.18.level",
+  "skill.28.level",
+  "skill.28.name",
+  "skill.28.damage",
+  "skill.28.attackRating",
+  "skill.29.level",
+  "skill.32.level",
+  "skill.32.name",
+  "skill.32.damage",
+  "skill.32.attackRating",
+  "skill.217.level",
+  "skill.218.level",
+  "skill.219.level",
+  "skill.220.level",
+  "tooltip.0",
+  "tooltip.1",
+  "tooltip.2",
+  "tooltip.3",
+  "tooltip.8",
+  "tooltip.9",
+  "tooltip.10",
+  "tooltip.13",
+  "tooltip.14",
+  "tooltip.17",
+  "tooltip.18",
+  "tooltip.28",
+  "tooltip.29",
+  "tooltip.32",
+  "tooltip.217",
+  "tooltip.218",
+  "tooltip.219",
+  "tooltip.220"
+ ],
+ "original": {
+  "source": "oracle",
+  "classId": 0,
+  "sheet": {
+   "level": "40",
+   "experience": "18,000,000",
+   "nextLevel": "19,235,252",
+   "strength": "70",
+   "dexterity": "70",
+   "defense": "21",
+   "vitality": "120",
+   "maxStamina": "223",
+   "stamina": "223",
+   "maxLife": "428",
+   "life": "428",
+   "energy": "15",
+   "maxMana": "73",
+   "mana": "73",
+   "fireRes": "0",
+   "coldRes": "0",
+   "lightRes": "0",
+   "poisonRes": "0"
+  },
+  "stats": {
+   "0": 70,
+   "1": 15,
+   "2": 70,
+   "3": 120,
+   "5": 8,
+   "6": 109568,
+   "7": 109568,
+   "8": 18688,
+   "9": 18816,
+   "10": 57088,
+   "11": 57088,
+   "12": 40,
+   "13": 18000000,
+   "21": 1,
+   "22": 5,
+   "31": 4,
+   "67": 100,
+   "68": 110,
+   "69": 100,
+   "70": 60,
+   "72": 14,
+   "73": 14,
+   "159": 6,
+   "160": 14,
+   "172": 2,
+   "337": 56,
+   "338": 37,
+   "339": 45,
+   "340": 37,
+   "350": 69,
+   "351": 25
+  },
+  "leftSkill": 0,
+  "rightSkill": 0,
+  "computed": {
+   "blockChance": 17,
+   "leftAttackRating": 320,
+   "rightAttackRating": 320
+  },
+  "skillList": [
+   0,
+   1,
+   2,
+   3,
+   8,
+   9,
+   10,
+   13,
+   14,
+   17,
+   18,
+   28,
+   29,
+   32,
+   217,
+   218,
+   219,
+   220
+  ],
+  "skills": {
+   "0": {
+    "name": "ATTACK",
+    "damage": "2-10",
+    "attackRating": 320
+   },
+   "1": {
+    "name": "KICK TARGET",
+    "damage": "0-1",
+    "attackRating": null
+   },
+   "2": {
+    "name": "THROW",
+    "damage": "12-28",
+    "attackRating": 320
+   },
+   "3": {
+    "name": "UNSUMMON",
+    "damage": null,
+    "attackRating": null
+   },
+   "8": {
+    "name": "INNER SIGHT",
+    "damage": null,
+    "attackRating": null
+   },
+   "9": {
+    "name": "CRITICAL STRIKE",
+    "damage": null,
+    "attackRating": null
+   },
+   "10": {
+    "name": "JAB",
+    "damage": "1-9",
+    "attackRating": 352
+   },
+   "13": {
+    "name": "DODGE",
+    "damage": null,
+    "attackRating": null
+   },
+   "14": {
+    "name": "POWER STRIKE",
+    "damage": "3-26",
+    "attackRating": 384
+   },
+   "17": {
+    "name": "SLOW MISSILES",
+    "damage": null,
+    "attackRating": null
+   },
+   "18": {
+    "name": "AVOID",
+    "damage": null,
+    "attackRating": null
+   },
+   "28": {
+    "name": "DECOY",
+    "damage": null,
+    "attackRating": null
+   },
+   "29": {
+    "name": "EVADE",
+    "damage": null,
+    "attackRating": null
+   },
+   "32": {
+    "name": "VALKYRIE",
+    "damage": null,
+    "attackRating": null
+   },
+   "217": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "218": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "219": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   },
+   "220": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   }
+  },
+  "tooltips": {
+   "0": [
+    "Attack",
+    "normal attack"
+   ],
+   "1": [
+    "Kick",
+    "kick target"
+   ],
+   "2": [
+    "Throw",
+    "throw equipped item"
+   ],
+   "3": [
+    "Unsummon",
+    "relinquishes control",
+    "of one of your creatures"
+   ],
+   "8": [
+    "Inner Sight",
+    "illuminates nearby enemies",
+    "making them easier to hit",
+    "for you and your party",
+    "",
+    "Current Skill Level: 1",
+    "Duration: 8 seconds",
+    "Enemy Defense: -40",
+    "Radius: 13.3 yards",
+    "Mana Cost: 5",
+    "",
+    "Next Level",
+    "Duration: 12 seconds",
+    "Enemy Defense: -65",
+    "Radius: 13.3 yards",
+    "Mana Cost: 5"
+   ],
+   "9": [
+    "Critical Strike",
+    "passive - your attacks have a chance to do double damage",
+    "",
+    "Current Skill Level: 10",
+    "56 percent chance",
+    "",
+    "Next Level",
+    "58 percent chance"
+   ],
+   "10": [
+    "Jab",
+    "attacks with a series of rapid thrusts",
+    "using a javelin or spear class weapon",
+    "",
+    "Multiple Hits",
+    "",
+    "Current Skill Level: 1",
+    "Attack: +10 percent",
+    "Damage: -15 percent",
+    "Mana Cost: 2",
+    "",
+    "Next Level",
+    "Attack: +19 percent",
+    "Damage: -12 percent",
+    "Mana Cost: 2.2"
+   ],
+   "13": [
+    "Dodge",
+    "passive - you have a chance to dodge",
+    "a melee attack when attacking",
+    "or standing still",
+    "",
+    "Current Skill Level: 5",
+    "37 percent chance",
+    "",
+    "Next Level",
+    "40 percent chance"
+   ],
+   "14": [
+    "Power Strike",
+    "adds lightning damage to attacks with",
+    "javelin and spear class weapons",
+    "",
+    "Current Skill Level: 1",
+    "To Attack Rating: +20 percent",
+    "Lightning Damage: 1-16",
+    "Mana Cost: 2",
+    "",
+    "Next Level",
+    "To Attack Rating: +32 percent",
+    "Lightning Damage: 1-34",
+    "Mana Cost: 2.2",
+    "",
+    "Power Strike Receives Bonuses From:",
+    "Lightning Bolt: +10% Lightning Damage per Level",
+    "Charged Strike: +10% Lightning Damage per Level",
+    "Lightning Strike: +10% Lightning Damage per Level",
+    "Lightning Fury: +10% Lightning Damage per Level"
+   ],
+   "17": [
+    "Slow Missiles",
+    "illuminates nearby enemies and slows their ranged attacks",
+    "",
+    "Current Skill Level: 1",
+    "Duration: 12 seconds",
+    "Ranged attacks slowed to 33 percent",
+    "Radius: 13.3 yards",
+    "Mana Cost: 5",
+    "",
+    "Next Level",
+    "Duration: 18 seconds",
+    "Ranged attacks slowed to 33 percent",
+    "Radius: 13.3 yards",
+    "Mana Cost: 5"
+   ],
+   "18": [
+    "Avoid",
+    "passive - you have a chance to dodge enemy missiles",
+    "when attacking or standing still",
+    "",
+    "Current Skill Level: 5",
+    "45 percent chance",
+    "",
+    "Next Level",
+    "48 percent chance"
+   ],
+   "28": [
+    "Decoy",
+    "creates a duplicate of yourself",
+    "that draws fire from enemies",
+    "",
+    "Current Skill Level: 1",
+    "Life: +10 percent",
+    "Duration: 10 seconds",
+    "Mana Cost: 19",
+    "",
+    "Next Level",
+    "Life: +20 percent",
+    "Duration: 15 seconds",
+    "Mana Cost: 18.2"
+   ],
+   "29": [
+    "Evade",
+    "passive - you have a chance to dodge",
+    "a melee or missile attack",
+    "when walking or running",
+    "",
+    "Current Skill Level: 5",
+    "37 percent chance",
+    "",
+    "Next Level",
+    "40 percent chance"
+   ],
+   "32": [
+    "Valkyrie",
+    "summons a powerful Valkyrie ally",
+    "",
+    "Current Skill Level: 1",
+    "Life: 528",
+    "Attack: +40",
+    "Mana Cost: 25",
+    "",
+    "Next Level",
+    "Life: 616",
+    "Damage: +25 percent",
+    "Attack: +80",
+    "Defense Bonus: +10 percent",
+    "Mana Cost: 26",
+    "",
+    "Valkyrie Receives Bonuses From:",
+    "Decoy: +20% Life per Level",
+    "Penetrate: +40 Attack Rating per Level",
+    "Critical Strike",
+    "Dodge",
+    "Avoid",
+    "Evade"
+   ],
+   "217": [
+    "Scroll of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "218": [
+    "Tome of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "219": [
+    "Scroll of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "220": [
+    "Tome of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ]
+  },
+  "skillLevels": {
+   "0": [
+    1,
+    1
+   ],
+   "1": [
+    1,
+    1
+   ],
+   "2": [
+    1,
+    1
+   ],
+   "3": [
+    1,
+    1
+   ],
+   "8": [
+    1,
+    1
+   ],
+   "9": [
+    10,
+    10
+   ],
+   "10": [
+    1,
+    1
+   ],
+   "13": [
+    5,
+    5
+   ],
+   "14": [
+    1,
+    1
+   ],
+   "17": [
+    1,
+    1
+   ],
+   "18": [
+    5,
+    5
+   ],
+   "28": [
+    1,
+    1
+   ],
+   "29": [
+    5,
+    5
+   ],
+   "32": [
+    1,
+    1
+   ],
+   "217": [
+    1,
+    1
+   ],
+   "218": [
+    1,
+    1
+   ],
+   "219": [
+    1,
+    1
+   ],
+   "220": [
+    1,
+    1
+   ]
+  }
+ }
+}

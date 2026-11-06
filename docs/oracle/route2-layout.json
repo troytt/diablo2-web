@@ -1,0 +1,392 @@
+{
+  "$comment": "Route-2 pilot memory layout (1.13c). Offsets in bytes; ptr = 32-bit pointer. Evidence: kb/engine/d2game-event-wheel-and-room-units-113c.md and the kb files cited per field. Checked against oracle memdumps by tools/oracle/route2-layout-check.py.",
+  "structs": {
+    "D2UnitStrc": {
+      "size": 244,
+      "allocEvidence": "D2Common.#11153 0x6FD7F383 mov edx, 0xF4; 0x6FD7F392 mov ecx, 0x3D; rep stosd",
+      "fields": [
+        {"name": "dwUnitType", "off": 0, "type": "u32"},
+        {"name": "dwClassId", "off": 4, "type": "u32"},
+        {"name": "pMemPool", "off": 8, "type": "ptr"},
+        {"name": "dwUnitId", "off": 12, "type": "u32"},
+        {"name": "dwAnimMode", "off": 16, "type": "u32"},
+        {"name": "pUnitData", "off": 20, "type": "ptr"},
+        {"name": "nAct", "off": 24, "type": "u8"},
+        {"name": "pAct", "off": 28, "type": "ptr"},
+        {"name": "seedLo", "off": 32, "type": "u32"},
+        {"name": "seedHi", "off": 36, "type": "u32"},
+        {"name": "pPath", "off": 44, "type": "ptr"},
+        {"name": "wAnimSpeed", "off": 76, "type": "u16"},
+        {"name": "wActionFrame", "off": 78, "type": "u16"},
+        {"name": "pAnimData", "off": 80, "type": "ptr"},
+        {"name": "pStatListEx", "off": 92, "type": "ptr"},
+        {"name": "pInventory", "off": 96, "type": "ptr"},
+        {"name": "pGame", "off": 128, "type": "ptr"},
+        {"name": "pSkills", "off": 168, "type": "ptr"},
+        {"name": "pCombat", "off": 172, "type": "ptr"},
+        {"name": "dwFlags", "off": 196, "type": "u32"},
+        {"name": "dwFlags2", "off": 200, "type": "u32"},
+        {"name": "pEventFirst", "off": 220, "type": "ptr"},
+        {"name": "pRoomUpdateNext", "off": 224, "type": "ptr"},
+        {"name": "pGameHashNext", "off": 228, "type": "ptr"},
+        {"name": "pRoomUnitNext", "off": 232, "type": "ptr"}
+      ]
+    },
+    "D2StatListStrc": {
+      "size": 60,
+      "allocEvidence": "D2Common.#11013 0x6FD88112 mov edx, 0x3C",
+      "fields": [
+        {"name": "pMemPool", "off": 0, "type": "ptr"},
+        {"name": "pUnit", "off": 4, "type": "ptr"},
+        {"name": "eOwnerType", "off": 8, "type": "u32"},
+        {"name": "dwOwnerId", "off": 12, "type": "u32"},
+        {"name": "dwFlags", "off": 16, "type": "u32"},
+        {"name": "dwStateNo", "off": 20, "type": "u32"},
+        {"name": "dwExpireFrame", "off": 24, "type": "u32"},
+        {"name": "nSkillNo", "off": 28, "type": "u32"},
+        {"name": "nSkillLevel", "off": 32, "type": "u32"},
+        {"name": "pStat", "off": 36, "type": "ptr"},
+        {"name": "wStatCount", "off": 40, "type": "u16"},
+        {"name": "wStatCapacity", "off": 42, "type": "u16"},
+        {"name": "pPrevLink", "off": 44, "type": "ptr"},
+        {"name": "pNextLink", "off": 48, "type": "ptr"},
+        {"name": "pParent", "off": 52, "type": "ptr"},
+        {"name": "fpRemove", "off": 56, "type": "ptr"}
+      ]
+    },
+    "D2StatListExStrc": {
+      "size": 100,
+      "allocEvidence": "D2Common.#11166 0x6FD8AF31 mov edx, 0x64",
+      "fields": [
+        {"name": "pMemPool", "off": 0, "type": "ptr"},
+        {"name": "pUnit", "off": 4, "type": "ptr"},
+        {"name": "eOwnerType", "off": 8, "type": "u32"},
+        {"name": "dwOwnerId", "off": 12, "type": "u32"},
+        {"name": "dwFlags", "off": 16, "type": "u32"},
+        {"name": "dwStateNo", "off": 20, "type": "u32"},
+        {"name": "dwExpireFrame", "off": 24, "type": "u32"},
+        {"name": "nSkillNo", "off": 28, "type": "u32"},
+        {"name": "nSkillLevel", "off": 32, "type": "u32"},
+        {"name": "pStat", "off": 36, "type": "ptr"},
+        {"name": "wStatCount", "off": 40, "type": "u16"},
+        {"name": "wStatCapacity", "off": 42, "type": "u16"},
+        {"name": "pPrevLink", "off": 44, "type": "ptr"},
+        {"name": "pNextLink", "off": 48, "type": "ptr"},
+        {"name": "pParent", "off": 52, "type": "ptr"},
+        {"name": "fpRemove", "off": 56, "type": "ptr"},
+        {"name": "pMyLastList", "off": 60, "type": "ptr"},
+        {"name": "pMyStats", "off": 64, "type": "ptr"},
+        {"name": "pOwner", "off": 68, "type": "ptr"},
+        {"name": "pFullStat", "off": 72, "type": "ptr"},
+        {"name": "wFullStatCount", "off": 76, "type": "u16"},
+        {"name": "wFullStatCapacity", "off": 78, "type": "u16"},
+        {"name": "pModStat", "off": 80, "type": "ptr"},
+        {"name": "wModStatCount", "off": 84, "type": "u16"},
+        {"name": "wModStatCapacity", "off": 86, "type": "u16"},
+        {"name": "pStateFlags", "off": 88, "type": "ptr"},
+        {"name": "fpStatChanged", "off": 92, "type": "ptr"},
+        {"name": "pGame", "off": 96, "type": "ptr"}
+      ]
+    },
+    "D2MonsterDataStrc": {
+      "size": 96,
+      "allocEvidence": "D2Common 0x6FD7F3B4 mov edx, 0x60",
+      "fields": [
+        {"name": "pMonStatsTxt", "off": 0, "type": "ptr"},
+        {"name": "pAiGeneral", "off": 40, "type": "ptr"},
+        {"name": "pAiControl", "off": 44, "type": "ptr"},
+        {"name": "dwAlwaysChaseField", "off": 84, "type": "u32"}
+      ]
+    },
+    "D2AiGeneralStrc": {
+      "size": 64,
+      "allocEvidence": "D2Game 0x6FCD037D mov edx, 0x40",
+      "fields": [
+        {"name": "pfnThink", "off": 4, "type": "ptr"},
+        {"name": "dwFlags", "off": 8, "type": "u32"},
+        {"name": "bAfraid", "off": 20, "type": "u32"},
+        {"name": "pCommandHead", "off": 32, "type": "ptr"},
+        {"name": "pCommandTail", "off": 36, "type": "ptr"},
+        {"name": "pGroup", "off": 40, "type": "ptr"},
+        {"name": "dwLeaderId", "off": 44, "type": "u32"},
+        {"name": "dwLeaderType", "off": 48, "type": "u32"},
+        {"name": "pMinionList", "off": 52, "type": "ptr"}
+      ]
+    },
+    "D2AiCmdStrc": {
+      "size": 28,
+      "allocEvidence": "D2Game 0x6FC40F5E mov edx, 0x1C",
+      "fields": [
+        {"name": "pNext", "off": 0, "type": "ptr"},
+        {"name": "pPrev", "off": 4, "type": "ptr"},
+        {"name": "dwCmdType", "off": 8, "type": "u32"},
+        {"name": "dwParam1", "off": 12, "type": "u32"},
+        {"name": "dwParam2", "off": 16, "type": "u32"},
+        {"name": "dwParam3", "off": 20, "type": "u32"},
+        {"name": "dwParam4", "off": 24, "type": "u32"}
+      ]
+    },
+    "D2AiControlStrc": {
+      "size": 36,
+      "allocEvidence": "D2Game 0x6FCD03BA mov edx, 0x24",
+      "fields": [
+        {"name": "dwPathTypeOverride", "off": 24, "type": "u32"},
+        {"name": "dwVelocityOverride", "off": 28, "type": "u32"},
+        {"name": "bNewDistOverride", "off": 32, "type": "u8"}
+      ]
+    },
+    "D2EventStrc": {
+      "size": 48,
+      "allocEvidence": "D2Game 0x6FCAE461 lea ecx, [eax+0x30] (600-node pool chunk 0x7088)",
+      "fields": [
+        {"name": "nType", "off": 0, "type": "u8"},
+        {"name": "fFlags", "off": 2, "type": "u8"},
+        {"name": "dwFrame", "off": 4, "type": "u32"},
+        {"name": "pUnit", "off": 8, "type": "ptr"},
+        {"name": "dwUnitId", "off": 12, "type": "u32"},
+        {"name": "dwUnitType", "off": 16, "type": "u32"},
+        {"name": "dwArg14", "off": 20, "type": "u32"},
+        {"name": "dwArg18", "off": 24, "type": "u32"},
+        {"name": "pWheelNewer", "off": 28, "type": "ptr"},
+        {"name": "pWheelOlder", "off": 32, "type": "ptr"},
+        {"name": "pUnitNext", "off": 36, "type": "ptr"},
+        {"name": "pUnitPrev", "off": 40, "type": "ptr"},
+        {"name": "pfnHandler", "off": 44, "type": "ptr"}
+      ]
+    },
+    "D2TimerStrc": {
+      "size": 2592,
+      "allocEvidence": "D2Game 0x6FCAE652 mov edx, 0xA20",
+      "fields": [
+        {"name": "nCurrentSlot", "off": 0, "type": "u32"},
+        {"name": "pSlotTail", "off": 4, "type": "ptr", "count": 320, "$comment": "[partition * 64 + slot]"},
+        {"name": "pSlotHead", "off": 1284, "type": "ptr", "count": 320},
+        {"name": "pPersistentHead", "off": 2564, "type": "ptr", "count": 5},
+        {"name": "pSavedNext", "off": 2584, "type": "ptr"},
+        {"name": "pPool", "off": 2588, "type": "ptr"}
+      ]
+    },
+    "D2GameStrc": {
+      "size": 7668,
+      "allocEvidence": "D2Client 0x6FAB24D9 add eax, 0x1DF4; D2Game highest field +0x1DF0 at 0x6FC4C751 & 0x6FD0AA86",
+      "fields": [
+        {"name": "nDifficulty", "off": 109, "type": "u8"},
+        {"name": "bExpansion", "off": 112, "type": "u32"},
+        {"name": "dwInitSeed", "off": 124, "type": "u32"},
+        {"name": "dwSeedOverride", "off": 132, "type": "u32"},
+        {"name": "pClientList", "off": 136, "type": "ptr"},
+        {"name": "dwLastUnitId", "off": 144, "type": "u32", "count": 6},
+        {"name": "dwGameFrame", "off": 168, "type": "u32"},
+        {"name": "pTimer", "off": 184, "type": "ptr"},
+        {"name": "pAct", "off": 188, "type": "ptr", "count": 5},
+        {"name": "seedLo", "off": 208, "type": "u32"},
+        {"name": "seedHi", "off": 212, "type": "u32"},
+        {"name": "pUnitHash", "off": 4384, "type": "ptr", "count": 640, "$comment": "0:player +0x1120, 1:monster +0x1320, 2:object +0x1520, 4:item +0x1720, 3:missile +0x1920"},
+        {"name": "pTileList", "off": 6944, "type": "ptr"},
+        {"name": "dwMonSpawnCount", "off": 7536, "type": "u32", "count": 17, "$comment": "+0x1D70..+0x1DB3 (cleared as 18 dwords with +0x1DB4 at 0x6FC4B6C0)"},
+        {"name": "dwMonSpawnTotal", "off": 7604, "type": "u32", "$comment": "+0x1DB4 sum of dwMonSpawnCount[1..16] (excludes index 0 per 0x6FC9502A)"},
+        {"name": "dwUberStateEnd", "off": 7664, "type": "u32", "$comment": "+0x1DF0 last dword of 0x1DF4-byte D2GameStrc (0x6FC4C751)"}
+      ]
+    },
+    "D2ActiveRoomStrc": {
+      "size": 128,
+      "allocEvidence": "D2Common 0x6FD8C75A mov edx, 0x80",
+      "fields": [
+        {"name": "ppRoomsNear", "off": 0, "type": "ptr"},
+        {"name": "pCoords", "off": 8, "type": "ptr"},
+        {"name": "pRoomEx", "off": 16, "type": "ptr"},
+        {"name": "bDeathRingIdx", "off": 20, "type": "u8"},
+        {"name": "pUpdateList", "off": 28, "type": "ptr"},
+        {"name": "pCollisionGrid", "off": 32, "type": "ptr"},
+        {"name": "nRoomsNear", "off": 36, "type": "u32"},
+        {"name": "nPlayers", "off": 40, "type": "u32"},
+        {"name": "pAct", "off": 44, "type": "ptr", "aliases": ["pActUpdateFlag"], "$comment": "D2ActStrc* written at 0x6FD8C7B2 mov [ebx+0x2C], ebp"},
+        {"name": "dwFlags", "off": 52, "type": "u32"},
+        {"name": "dwDeathRing", "off": 56, "type": "u32", "count": 4},
+        {"name": "nSubtileX", "off": 76, "type": "u32"},
+        {"name": "nSubtileY", "off": 80, "type": "u32"},
+        {"name": "nSubtileWidth", "off": 84, "type": "u32"},
+        {"name": "nSubtileHeight", "off": 88, "type": "u32"},
+        {"name": "nTileX", "off": 92, "type": "u32"},
+        {"name": "nTileY", "off": 96, "type": "u32"},
+        {"name": "nTileWidth", "off": 100, "type": "u32"},
+        {"name": "nTileHeight", "off": 104, "type": "u32"},
+        {"name": "seedLo", "off": 108, "type": "u32"},
+        {"name": "seedHi", "off": 112, "type": "u32"},
+        {"name": "pUnitFirst", "off": 116, "type": "ptr"},
+        {"name": "pRoomNext", "off": 124, "type": "ptr"}
+      ]
+    },
+    "D2DynamicPathStrc": {
+      "size": 512,
+      "allocEvidence": "D2Common.#11003 0x6FD86045 mov edx, 0x200",
+      "fields": [
+        {"name": "wOffsetX", "off": 0, "type": "u16"},
+        {"name": "wPosX", "off": 2, "type": "u16"},
+        {"name": "wOffsetY", "off": 4, "type": "u16"},
+        {"name": "wPosY", "off": 6, "type": "u16"},
+        {"name": "dwClientCoordX", "off": 8, "type": "u32"},
+        {"name": "dwClientCoordY", "off": 12, "type": "u32"},
+        {"name": "wTargetX", "off": 16, "type": "u16"},
+        {"name": "wTargetY", "off": 18, "type": "u16"},
+        {"name": "wPrevTargetX", "off": 20, "type": "u16"},
+        {"name": "wPrevTargetY", "off": 22, "type": "u16"},
+        {"name": "wFinalTargetX", "off": 24, "type": "u16"},
+        {"name": "wFinalTargetY", "off": 26, "type": "u16"},
+        {"name": "pRoom", "off": 28, "type": "ptr"},
+        {"name": "pPreviousRoom", "off": 32, "type": "ptr"},
+        {"name": "dwCurrentPointIdx", "off": 36, "type": "u32"},
+        {"name": "dwPathPoints", "off": 40, "type": "u32"},
+        {"name": "pUnit", "off": 48, "type": "ptr"},
+        {"name": "dwFlags", "off": 52, "type": "u32"},
+        {"name": "dwPathType", "off": 60, "type": "u32"},
+        {"name": "dwPrevPathType", "off": 64, "type": "u32"},
+        {"name": "dwUnitSize", "off": 68, "type": "u32"},
+        {"name": "dwCollisionPattern", "off": 72, "type": "u32"},
+        {"name": "nFootprintCollisionMask", "off": 76, "type": "u32"},
+        {"name": "nMoveTestCollisionMask", "off": 80, "type": "u32"},
+        {"name": "wCollidedWithMask", "off": 84, "type": "u16"},
+        {"name": "pTargetUnit", "off": 88, "type": "ptr"},
+        {"name": "dwTargetType", "off": 92, "type": "u32"},
+        {"name": "dwTargetId", "off": 96, "type": "u32"},
+        {"name": "nDirection", "off": 100, "type": "u8"},
+        {"name": "nNewDirection", "off": 101, "type": "u8"},
+        {"name": "nDiffDirection", "off": 102, "type": "u8"},
+        {"name": "dwVelocity", "off": 124, "type": "u32"},
+        {"name": "nPreviousVelocity", "off": 128, "type": "u32"},
+        {"name": "dwMaxVelocity", "off": 132, "type": "u32"},
+        {"name": "dwAcceleration", "off": 136, "type": "u32"},
+        {"name": "nDist", "off": 144, "type": "u8"},
+        {"name": "nDistMax", "off": 145, "type": "u8"},
+        {"name": "nIDAStarInitFScore", "off": 146, "type": "u8"},
+        {"name": "nStepNum", "off": 147, "type": "u8"},
+        {"name": "nDistance", "off": 148, "type": "u8"},
+        {"name": "wPathPoints", "off": 156, "type": "u16", "count": 156},
+        {"name": "nSavedStepsCount", "off": 468, "type": "u32"},
+        {"name": "wSavedSteps", "off": 472, "type": "u16", "count": 20}
+      ]
+    },
+    "D2DamageStrc": {
+      "size": 112,
+      "allocEvidence": "D2Game 0x6FC9560A mov ecx, 0x1C; rep stosd",
+      "fields": [
+        {"name": "dwHitFlags", "off": 0, "type": "u32"},
+        {"name": "wResultFlags", "off": 4, "type": "u16"},
+        {"name": "wExtra", "off": 6, "type": "u16"},
+        {"name": "dwPhysDamage", "off": 8, "type": "u32"},
+        {"name": "dwEnhDmgPct", "off": 12, "type": "u32"},
+        {"name": "dwFireDamage", "off": 16, "type": "u32"},
+        {"name": "dwBurnDamage", "off": 20, "type": "u32"},
+        {"name": "dwBurnLen", "off": 24, "type": "u32"},
+        {"name": "dwLtngDamage", "off": 28, "type": "u32"},
+        {"name": "dwMagDamage", "off": 32, "type": "u32"},
+        {"name": "dwColdDamage", "off": 36, "type": "u32"},
+        {"name": "dwPoisDamage", "off": 40, "type": "u32"},
+        {"name": "dwPoisLen", "off": 44, "type": "u32"},
+        {"name": "dwColdLen", "off": 48, "type": "u32"},
+        {"name": "dwFrzLen", "off": 52, "type": "u32"},
+        {"name": "dwLifeLeech", "off": 56, "type": "u32"},
+        {"name": "dwManaLeech", "off": 60, "type": "u32"},
+        {"name": "dwStamLeech", "off": 64, "type": "u32"},
+        {"name": "dwStunLen", "off": 68, "type": "u32"},
+        {"name": "dwAbsorbLife", "off": 72, "type": "u32"},
+        {"name": "dwDmgTotal", "off": 76, "type": "u32"},
+        {"name": "dwPiercePct", "off": 84, "type": "u32"},
+        {"name": "dwDamageRate", "off": 88, "type": "u32"},
+        {"name": "dwHitClass", "off": 96, "type": "u32"},
+        {"name": "bHitClassActiveSet", "off": 100, "type": "u8"},
+        {"name": "eConvType", "off": 101, "type": "u8"},
+        {"name": "dwConvPct", "off": 104, "type": "u32"},
+        {"name": "nOverlays", "off": 108, "type": "u32"}
+      ]
+    },
+    "D2ActStrc": {
+      "size": 96,
+      "allocEvidence": "D2Common.#10951 0x6FD8CB40 mov edx, 0x60",
+      "fields": [
+        {"name": "pEnvironment", "off": 4, "type": "ptr"},
+        {"name": "dwTownId", "off": 8, "type": "u32"},
+        {"name": "dwMapSeed", "off": 12, "type": "u32"},
+        {"name": "pRoom1", "off": 16, "type": "ptr"},
+        {"name": "nAct", "off": 20, "type": "u8"},
+        {"name": "pDrlg", "off": 72, "type": "ptr", "aliases": ["pActMisc"], "$comment": "D2DrlgStrc* returned by D2Common.#10316 at 0x6FD8CBB9"},
+        {"name": "pfnActCallBack", "off": 80, "type": "ptr", "aliases": ["bHasCallback"], "$comment": "callback pointer written at 0x6FD8CB6A mov [ebx+0x50], ecx"},
+        {"name": "bInitialized", "off": 84, "type": "u32"},
+        {"name": "pMemPool", "off": 92, "type": "ptr"}
+      ]
+    },
+    "D2EnvironmentStrc": {
+      "size": 56,
+      "allocEvidence": "D2Common 0x6FD87BAE mov edx, 0x38",
+      "fields": [
+        {"name": "dwCycleIndex", "off": 0, "type": "u32"},
+        {"name": "nTimeOfDay", "off": 4, "type": "u32"},
+        {"name": "dwTicks", "off": 8, "type": "u32"},
+        {"name": "dwIntensity", "off": 12, "type": "u32"},
+        {"name": "dwInitTick", "off": 16, "type": "u32"},
+        {"name": "nLastLight", "off": 20, "type": "u32"},
+        {"name": "bRed", "off": 24, "type": "u8"},
+        {"name": "bGreen", "off": 25, "type": "u8"},
+        {"name": "bBlue", "off": 26, "type": "u8"},
+        {"name": "dwCyclePeriod", "off": 40, "type": "u32"},
+        {"name": "dwTimeRateIndex", "off": 44, "type": "u32"},
+        {"name": "bEclipse", "off": 48, "type": "u32"},
+        {"name": "dwPrevTicks", "off": 52, "type": "u32"}
+      ]
+    },
+    "D2RoomExStrc": {
+      "size": 236,
+      "allocEvidence": "D2Common 0x6FD94BEC mov edx, 0xEC",
+      "fields": [
+        {"name": "dwInitSeed", "off": 4, "type": "u32"},
+        {"name": "seedLo", "off": 20, "type": "u32"},
+        {"name": "seedHi", "off": 24, "type": "u32"},
+        {"name": "pStatusPrev", "off": 28, "type": "ptr", "$comment": "status list prev link at +0x1C (0x6FD90B7D)"},
+        {"name": "pTypeData", "off": 32, "type": "ptr"},
+        {"name": "dwFlags", "off": 40, "type": "u32"},
+        {"name": "pRoom1", "off": 48, "type": "ptr"},
+        {"name": "nTileXPos", "off": 52, "type": "u32"},
+        {"name": "nTileYPos", "off": 56, "type": "u32"},
+        {"name": "nTileWidth", "off": 60, "type": "u32"},
+        {"name": "nTileHeight", "off": 64, "type": "u32"},
+        {"name": "nRoomStatus", "off": 68, "type": "u8", "aliases": ["bTriggerType"], "$comment": "status byte initialized to 4 at 0x6FD94C09"},
+        {"name": "nType", "off": 72, "type": "u32"},
+        {"name": "pLevel", "off": 88, "type": "ptr"},
+        {"name": "pLogicalRoomInfo", "off": 100, "type": "ptr"},
+        {"name": "pStatusNext", "off": 232, "type": "ptr", "aliases": ["pRoomExNext"], "$comment": "status list next link at +0xE8 (0x6FD90B82)"}
+      ]
+    },
+    "D2RoomCoordListStrc": {
+      "size": 48,
+      "allocEvidence": "D2Common 0x6FDD12A0 mov edx, 0x30",
+      "fields": [
+        {"name": "nBox0PosX", "off": 0, "type": "u32"},
+        {"name": "nBox0PosY", "off": 4, "type": "u32"},
+        {"name": "nEndGameX", "off": 8, "type": "u32", "aliases": ["nBox0Width"], "$comment": "x+w at 0x6FDD11BF"},
+        {"name": "nEndGameY", "off": 12, "type": "u32", "aliases": ["nBox0Height"], "$comment": "y+h at 0x6FDD11A9"},
+        {"name": "nBox1PosX", "off": 16, "type": "u32"},
+        {"name": "nBox1PosY", "off": 20, "type": "u32"},
+        {"name": "nEndTileX", "off": 24, "type": "u32", "aliases": ["nBox1Width"], "$comment": "tileX+tileW at 0x6FDD11EF"},
+        {"name": "nEndTileY", "off": 28, "type": "u32", "aliases": ["nBox1Height"], "$comment": "tileY+tileH at 0x6FDD11D6"},
+        {"name": "bNode", "off": 32, "type": "u32"},
+        {"name": "nIndex", "off": 40, "type": "u32"},
+        {"name": "pNext", "off": 44, "type": "ptr"}
+      ]
+    },
+    "D2RoomCollisionGridStrc": {
+      "size": 36,
+      "allocEvidence": "D2Common 0x6FD9D076 lea edx, [eax+0x24] (alloc 2*(w*h+2h+0x12) at 0x6FD9D044)",
+      "fields": [
+        {"name": "nSubtileX", "off": 0, "type": "u32"},
+        {"name": "nSubtileY", "off": 4, "type": "u32"},
+        {"name": "nSubtileWidth", "off": 8, "type": "u32"},
+        {"name": "nSubtileHeight", "off": 12, "type": "u32"},
+        {"name": "nTileX", "off": 16, "type": "u32"},
+        {"name": "nTileY", "off": 20, "type": "u32"},
+        {"name": "nTileWidth", "off": 24, "type": "u32"},
+        {"name": "nTileHeight", "off": 28, "type": "u32"},
+        {"name": "pMapStart", "off": 32, "type": "ptr"}
+      ]
+    }
+  }
+}

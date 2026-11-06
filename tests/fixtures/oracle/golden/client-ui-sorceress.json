@@ -1,0 +1,677 @@
+{
+ "case": "sorceress",
+ "label": "town",
+ "save": "tests/fixtures/oracle/saves/sorceress-l40-elemental.d2s",
+ "fields": [
+  "sheet.level",
+  "sheet.experience",
+  "sheet.nextLevel",
+  "sheet.strength",
+  "sheet.dexterity",
+  "sheet.defense",
+  "sheet.vitality",
+  "sheet.maxStamina",
+  "sheet.stamina",
+  "sheet.maxLife",
+  "sheet.life",
+  "sheet.energy",
+  "sheet.maxMana",
+  "sheet.mana",
+  "sheet.fireRes",
+  "sheet.coldRes",
+  "sheet.lightRes",
+  "sheet.poisonRes",
+  "sheet.leftSkill",
+  "sheet.rightSkill",
+  "sheet.blockChance",
+  "sheet.leftAttackRating",
+  "sheet.rightAttackRating",
+  "skills.list",
+  "skill.0.level",
+  "skill.0.name",
+  "skill.0.damage",
+  "skill.0.attackRating",
+  "skill.1.level",
+  "skill.1.name",
+  "skill.1.damage",
+  "skill.1.attackRating",
+  "skill.2.level",
+  "skill.2.name",
+  "skill.2.damage",
+  "skill.2.attackRating",
+  "skill.3.level",
+  "skill.3.name",
+  "skill.3.damage",
+  "skill.3.attackRating",
+  "skill.36.level",
+  "skill.36.name",
+  "skill.36.damage",
+  "skill.36.attackRating",
+  "skill.38.level",
+  "skill.38.name",
+  "skill.38.damage",
+  "skill.38.attackRating",
+  "skill.39.level",
+  "skill.39.name",
+  "skill.39.damage",
+  "skill.39.attackRating",
+  "skill.44.level",
+  "skill.44.name",
+  "skill.44.damage",
+  "skill.44.attackRating",
+  "skill.45.level",
+  "skill.45.name",
+  "skill.45.damage",
+  "skill.45.attackRating",
+  "skill.47.level",
+  "skill.47.name",
+  "skill.47.damage",
+  "skill.47.attackRating",
+  "skill.49.level",
+  "skill.49.name",
+  "skill.49.damage",
+  "skill.49.attackRating",
+  "skill.53.level",
+  "skill.53.name",
+  "skill.53.damage",
+  "skill.53.attackRating",
+  "skill.55.level",
+  "skill.55.name",
+  "skill.55.damage",
+  "skill.55.attackRating",
+  "skill.59.level",
+  "skill.59.name",
+  "skill.59.damage",
+  "skill.59.attackRating",
+  "skill.61.level",
+  "skill.64.level",
+  "skill.64.name",
+  "skill.64.damage",
+  "skill.64.attackRating",
+  "skill.65.level",
+  "skill.217.level",
+  "skill.218.level",
+  "skill.219.level",
+  "skill.220.level",
+  "tooltip.0",
+  "tooltip.1",
+  "tooltip.2",
+  "tooltip.3",
+  "tooltip.36",
+  "tooltip.38",
+  "tooltip.39",
+  "tooltip.44",
+  "tooltip.45",
+  "tooltip.47",
+  "tooltip.49",
+  "tooltip.53",
+  "tooltip.55",
+  "tooltip.59",
+  "tooltip.61",
+  "tooltip.64",
+  "tooltip.65",
+  "tooltip.217",
+  "tooltip.218",
+  "tooltip.219",
+  "tooltip.220"
+ ],
+ "original": {
+  "source": "oracle",
+  "classId": 1,
+  "sheet": {
+   "level": "40",
+   "experience": "18,000,000",
+   "nextLevel": "19,235,252",
+   "strength": "10",
+   "dexterity": "25",
+   "defense": "6",
+   "vitality": "110",
+   "maxStamina": "213",
+   "stamina": "213",
+   "maxLife": "279",
+   "life": "279",
+   "energy": "130",
+   "maxMana": "303",
+   "mana": "303",
+   "fireRes": "0",
+   "coldRes": "0",
+   "lightRes": "0",
+   "poisonRes": "0"
+  },
+  "stats": {
+   "0": 10,
+   "1": 130,
+   "2": 25,
+   "3": 110,
+   "5": 4,
+   "6": 71424,
+   "7": 71424,
+   "8": 77568,
+   "9": 77568,
+   "10": 54528,
+   "11": 54528,
+   "12": 40,
+   "13": 18000000,
+   "23": 1,
+   "24": 5,
+   "67": 100,
+   "68": 110,
+   "69": 100,
+   "72": 20,
+   "73": 20,
+   "172": 2,
+   "329": 30,
+   "335": 20,
+   "350": 126,
+   "351": 2
+  },
+  "leftSkill": 0,
+  "rightSkill": 36,
+  "computed": {
+   "blockChance": 0,
+   "leftAttackRating": 75,
+   "rightAttackRating": 0
+  },
+  "skillList": [
+   0,
+   1,
+   2,
+   3,
+   36,
+   38,
+   39,
+   44,
+   45,
+   47,
+   49,
+   53,
+   55,
+   59,
+   61,
+   64,
+   65,
+   217,
+   218,
+   219,
+   220
+  ],
+  "skills": {
+   "0": {
+    "name": "ATTACK",
+    "damage": "1-5",
+    "attackRating": 75
+   },
+   "1": {
+    "name": "KICK TARGET",
+    "damage": "0-1",
+    "attackRating": null
+   },
+   "2": {
+    "name": "THROW",
+    "damage": null,
+    "attackRating": null
+   },
+   "3": {
+    "name": "UNSUMMON",
+    "damage": null,
+    "attackRating": null
+   },
+   "36": {
+    "name": "FIRE BOLT",
+    "damage": "15-25",
+    "attackRating": null
+   },
+   "38": {
+    "name": "CHARGED BOLT",
+    "damage": "2-4",
+    "attackRating": null
+   },
+   "39": {
+    "name": "ICE BOLT",
+    "damage": "7-11",
+    "attackRating": null
+   },
+   "44": {
+    "name": "FROST NOVA",
+    "damage": "3-6",
+    "attackRating": null
+   },
+   "45": {
+    "name": "ICE BLAST",
+    "damage": "12-18",
+    "attackRating": null
+   },
+   "47": {
+    "name": "FIRE BALL",
+    "damage": "110-135",
+    "attackRating": null
+   },
+   "49": {
+    "name": "LIGHTNING",
+    "damage": "1-75",
+    "attackRating": null
+   },
+   "53": {
+    "name": "CHAIN LIGHTNING",
+    "damage": "1-154",
+    "attackRating": null
+   },
+   "55": {
+    "name": "GLACIAL SPIKE",
+    "damage": "21-32",
+    "attackRating": null
+   },
+   "59": {
+    "name": "BLIZZARD",
+    "damage": "51-86",
+    "attackRating": null
+   },
+   "61": {
+    "name": "FIRE MASTERY",
+    "damage": null,
+    "attackRating": null
+   },
+   "64": {
+    "name": "FROZEN ORB",
+    "damage": "81-88",
+    "attackRating": null
+   },
+   "65": {
+    "name": "COLD MASTERY",
+    "damage": null,
+    "attackRating": null
+   },
+   "217": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "218": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "219": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   },
+   "220": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   }
+  },
+  "tooltips": {
+   "0": [
+    "Attack",
+    "normal attack"
+   ],
+   "1": [
+    "Kick",
+    "kick target"
+   ],
+   "2": [
+    "Throw",
+    "throw equipped item"
+   ],
+   "3": [
+    "Unsummon",
+    "relinquishes control",
+    "of one of your creatures"
+   ],
+   "36": [
+    "Fire Bolt",
+    "creates a magical flaming missile",
+    "",
+    "Mana Cost: 2.5",
+    "",
+    "Current Skill Level: 2",
+    "Fire Damage: 15-25",
+    "",
+    "Next Level",
+    "Fire Damage: 20-30",
+    "",
+    "Fire Bolt Receives Bonuses From:",
+    "Fire Ball: +16% Fire Damage per Level",
+    "Meteor: +16% Fire Damage per Level"
+   ],
+   "38": [
+    "Charged Bolt",
+    "creates multiple, randomly directed",
+    "bolts of electrical energy",
+    "",
+    "Current Skill Level: 1",
+    "Lightning Damage: 2-4",
+    "3 bolts",
+    "Mana Cost: 3",
+    "",
+    "Next Level",
+    "Lightning Damage: 2-4",
+    "4 bolts",
+    "Mana Cost: 3.5",
+    "",
+    "Charged Bolt Receives Bonuses From:",
+    "Lightning: +6% Lightning Damage per Level"
+   ],
+   "39": [
+    "Ice Bolt",
+    "creates a magical bolt of ice",
+    "that damages and slows your enemies",
+    "",
+    "Current Skill Level: 1",
+    "Cold Damage: 7-11",
+    "Cold Length: 6 seconds",
+    "Mana Cost: 3",
+    "",
+    "Next Level",
+    "Cold Damage: 9-15",
+    "Cold Length: 7.4 seconds",
+    "Mana Cost: 3",
+    "",
+    "Ice Bolt Receives Bonuses From:",
+    "Frost Nova: +15% Cold Damage per Level",
+    "Ice Blast: +15% Cold Damage per Level",
+    "Glacial Spike: +15% Cold Damage per Level",
+    "Blizzard: +15% Cold Damage per Level",
+    "Frozen Orb: +15% Cold Damage per Level"
+   ],
+   "44": [
+    "Frost Nova",
+    "creates an expanding ring of ice that damages",
+    "and slows all nearby enemies",
+    "",
+    "Current Skill Level: 1",
+    "Cold Damage: 3-6",
+    "Cold Length: 8 seconds",
+    "Mana Cost: 9",
+    "",
+    "Next Level",
+    "Cold Damage: 6-10",
+    "Cold Length: 9 seconds",
+    "Mana Cost: 10",
+    "",
+    "Frost Nova Receives Bonuses From:",
+    "Blizzard: +10% Cold Damage per Level",
+    "Frozen Orb: +10% Cold Damage per Level"
+   ],
+   "45": [
+    "Ice Blast",
+    "creates a magical sphere of ice that",
+    "damages and freezes your enemy",
+    "",
+    "Current Skill Level: 1",
+    "Cold Damage: 12-18",
+    "Freezes for 3.2 seconds",
+    "Mana Cost: 6",
+    "",
+    "Next Level",
+    "Cold Damage: 23-30",
+    "Freezes for 3.5 seconds",
+    "Mana Cost: 6.5",
+    "",
+    "Ice Blast Receives Bonuses From:",
+    "Ice Bolt: +8% Cold Damage per Level",
+    "Glacial Spike: +10% Freeze Length per Level",
+    "Blizzard: +8% Cold Damage per Level",
+    "Frozen Orb: +8% Cold Damage per Level"
+   ],
+   "47": [
+    "Fire Ball",
+    "creates an explosive sphere of fiery death",
+    "to engulf your enemies",
+    "",
+    "Radius: 1 yard",
+    "",
+    "Current Skill Level: 10",
+    "Fire Damage: 110-135",
+    "Mana Cost: 9.5",
+    "",
+    "Next Level",
+    "Fire Damage: 127-154",
+    "Mana Cost: 10",
+    "",
+    "Fire Ball Receives Bonuses From:",
+    "Fire Bolt: +14% Fire Damage per Level",
+    "Meteor: +14% Fire Damage per Level"
+   ],
+   "49": [
+    "Lightning",
+    "creates a powerful lightning bolt",
+    "to lay waste to your enemies",
+    "",
+    "Current Skill Level: 1",
+    "Lightning Damage: 1-75",
+    "Mana Cost: 8",
+    "",
+    "Next Level",
+    "Lightning Damage: 1-90",
+    "Mana Cost: 8.5",
+    "",
+    "Lightning Receives Bonuses From:",
+    "Charged Bolt: +8% Lightning Damage per Level",
+    "Nova: +8% Lightning Damage per Level",
+    "Chain Lightning: +8% Lightning Damage per Level"
+   ],
+   "53": [
+    "Chain Lightning",
+    "creates a bolt of lightning that",
+    "arcs through several targets",
+    "",
+    "Current Skill Level: 10",
+    "7 hits",
+    "Lightning Damage: 1-154",
+    "Mana Cost: 18",
+    "",
+    "Next Level",
+    "7 hits",
+    "Lightning Damage: 1-168",
+    "Mana Cost: 19",
+    "",
+    "Chain Lightning Receives Bonuses From:",
+    "Charged Bolt: +4% Lightning Damage per Level",
+    "Nova: +4% Lightning Damage per Level",
+    "Lightning: +4% Lightning Damage per Level"
+   ],
+   "55": [
+    "Glacial Spike",
+    "creates a magical ice comet",
+    "that freezes or kills nearby enemies",
+    "",
+    "Radius: 2.6 yards",
+    "",
+    "Current Skill Level: 1",
+    "Cold Damage: 21-32",
+    "Freezes for 2 seconds",
+    "Mana Cost: 10",
+    "",
+    "Next Level",
+    "Cold Damage: 31-42",
+    "Freezes for 2.1 seconds",
+    "Mana Cost: 10.5",
+    "",
+    "Glacial Spike Receives Bonuses From:",
+    "Ice Bolt: +5% Cold Damage per Level",
+    "Ice Blast: +5% Cold Damage per Level",
+    "Blizzard: +3% Freeze Length per Level",
+    "Frozen Orb: +5% Cold Damage per Level"
+   ],
+   "59": [
+    "Blizzard",
+    "summons massive shards of ice to destroy your enemies",
+    "",
+    "Current Skill Level: 1",
+    "Cold Damage: 51-86",
+    "Duration: 4 seconds",
+    "Mana Cost: 23",
+    "",
+    "Next Level",
+    "Cold Damage: 69-104",
+    "Duration: 4 seconds",
+    "Mana Cost: 24",
+    "",
+    "Blizzard Receives Bonuses From:",
+    "Ice Bolt: +5% Cold Damage per Level",
+    "Ice Blast: +5% Cold Damage per Level",
+    "Glacial Spike: +5% Cold Damage per Level"
+   ],
+   "61": [
+    "Fire Mastery",
+    "passive - increases all damage caused by your fire spells",
+    "",
+    "Current Skill Level: 1",
+    "Fire Damage: +30 percent",
+    "",
+    "Next Level",
+    "Fire Damage: +37 percent"
+   ],
+   "64": [
+    "Frozen Orb",
+    "creates a magical globe that sprays a torrent of ice bolts",
+    "to lay waste to your enemies",
+    "",
+    "Current Skill Level: 5",
+    "Cold Damage: 81-88",
+    "Cold Length: 12 seconds",
+    "Mana Cost: 27",
+    "",
+    "Next Level",
+    "Cold Damage: 91-99",
+    "Cold Length: 13 seconds",
+    "Mana Cost: 27",
+    "",
+    "Frozen Orb Receives Bonuses From:",
+    "Ice Bolt: +2% Cold Damage per Level"
+   ],
+   "65": [
+    "Cold Mastery",
+    "passive - increases the damage of your cold attacks",
+    "by piercing enemies' resistances to cold",
+    "",
+    "Current Skill Level: 1",
+    "20 percent",
+    "",
+    "Next Level",
+    "25 percent"
+   ],
+   "217": [
+    "Scroll of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "218": [
+    "Tome of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "219": [
+    "Scroll of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "220": [
+    "Tome of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ]
+  },
+  "skillLevels": {
+   "0": [
+    1,
+    1
+   ],
+   "1": [
+    1,
+    1
+   ],
+   "2": [
+    1,
+    1
+   ],
+   "3": [
+    1,
+    1
+   ],
+   "36": [
+    1,
+    2
+   ],
+   "38": [
+    1,
+    1
+   ],
+   "39": [
+    1,
+    1
+   ],
+   "44": [
+    1,
+    1
+   ],
+   "45": [
+    1,
+    1
+   ],
+   "47": [
+    10,
+    10
+   ],
+   "49": [
+    1,
+    1
+   ],
+   "53": [
+    10,
+    10
+   ],
+   "55": [
+    1,
+    1
+   ],
+   "59": [
+    1,
+    1
+   ],
+   "61": [
+    1,
+    1
+   ],
+   "64": [
+    5,
+    5
+   ],
+   "65": [
+    1,
+    1
+   ],
+   "217": [
+    1,
+    1
+   ],
+   "218": [
+    1,
+    1
+   ],
+   "219": [
+    1,
+    1
+   ],
+   "220": [
+    1,
+    1
+   ]
+  }
+ }
+}

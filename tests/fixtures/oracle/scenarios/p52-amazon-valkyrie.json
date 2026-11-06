@@ -1,0 +1,105 @@
+{
+ "name": "p52-amazon-valkyrie",
+ "description": "Amazon L40: Valkyrie summon (MonEquip roll, summon stats scaled by skill level) fighting the zombies.",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/amazon-l40-passives.d2s",
+ "difficulty": 0,
+ "frames": 1500,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "3c20000000ffffffff",
+   "note": "select Valkyrie"
+  },
+  {
+   "frame": 630,
+   "c2s": "0c2016c516",
+   "note": "summon Valkyrie"
+  },
+  {
+   "frame": 700,
+   "c2s": "031e16ae16",
+   "note": "run towards the zombies"
+  }
+ ]
+}
