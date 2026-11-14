@@ -1,0 +1,266 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC53B70",
+    "name": "QUESTS_StepQuestTimers",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "QUESTS_StepQuestTimers113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54EA0",
+    "name": "QUESTS_CheckNpcQuestInteractAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "QUESTS_CheckNpcQuestInteractAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC69DB0",
+    "name": "SPLAYER_GetClientActNo",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "SPLAYER_GetClientActNo113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC80660",
+    "name": "ACT1Q1_CheckDenOfEvilNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q1_CheckDenOfEvilNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC80750",
+    "name": "ACT1Q2_CheckBloodRavenNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q2_CheckBloodRavenNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC807D0",
+    "name": "ACT1Q0_CheckWarrivIntroNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q0_CheckWarrivIntroNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC80820",
+    "name": "ACT1Q6_CheckTravelEastNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q6_CheckTravelEastNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC80940",
+    "name": "ACT1Q5_CheckCharsiImbueNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q5_CheckCharsiImbueNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC80F20",
+    "name": "ACT1Q4_CheckCainTownNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q4_CheckCainTownNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC81750",
+    "name": "ACT1Q4_CheckSearchForCainNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q4_CheckSearchForCainNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC81B70",
+    "name": "ACT1Q3_CheckMalusNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q3_CheckMalusNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC82DF0",
+    "name": "ACT1Q2_CheckAkaraIntroNpcAlert",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "ACT1Q2_CheckAkaraIntroNpcAlert113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC94D50",
+    "name": "PLAYER_RecalcTargetUnitPath",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "PLAYER_RecalcTargetUnitPath113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC97FA0",
+    "name": "AITHINK_CanPlayerStartSkillOrCast",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AITHINK_CanPlayerStartSkillOrCast113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC982F0",
+    "name": "PLAYER_SetNeutralOrTownNeutralMode",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "PLAYER_SetNeutralOrTownNeutralMode113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98340",
+    "name": "AITHINK_CanPlayerSwitchToMode",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AITHINK_CanPlayerSwitchToMode113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98610",
+    "name": "PLAYER_StartWalkOrRunMode",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "PLAYER_StartWalkOrRunMode113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98710",
+    "name": "PLAYER_SetPathTargetCoordsAndWalk",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "PLAYER_SetPathTargetCoordsAndWalk113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC99850",
+    "name": "PLAYER_FinishModeAndResetToNeutral",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "PLAYER_FinishModeAndResetToNeutral113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC99A10",
+    "name": "PLAYER_StepAnimationModeTick",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "PLAYER_StepAnimationModeTick113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAA770",
+    "name": "D2NET_SendPacket0x06BytesToClient",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "D2NET_SendPacket0x06BytesToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC010",
+    "name": "D2NET_SendUnitMovePacket0x10BytesToClient",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "D2NET_SendUnitMovePacket0x10BytesToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCADB00",
+    "name": "D2NET_SendUnitPosSync0x15ToClient",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "D2NET_SendUnitPosSync0x15ToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBCB30",
+    "name": "AI_FollowPackLeaderOrAttack",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AI_FollowPackLeaderOrAttack113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBCCF0",
+    "name": "AI_TryOpenNearbyClosedDoor",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AI_TryOpenNearbyClosedDoor113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBCD90",
+    "name": "AI_HandleStunDoorOrLeaderFollow",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AI_HandleStunDoorOrLeaderFollow113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBCFE0",
+    "name": "AI_AcquireOrValidateCombatTarget",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AI_AcquireOrValidateCombatTarget113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD11A0",
+    "name": "AITARGET_IterateRoomActiveClients",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AITARGET_IterateRoomActiveClients113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD17B0",
+    "name": "AITARGET_ScanUnitsByModeTable",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AITARGET_ScanUnitsByModeTable113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE150",
+    "name": "SPLAYER_BroadcastUnitMovementToClient",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "SPLAYER_BroadcastUnitMovementToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFF620",
+    "name": "SUNIT_FindValidNextRoomInAct",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "SUNIT_FindValidNextRoomInAct113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD01610",
+    "name": "SUNIT_UpdateUnitPositionAndRoom",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "SUNIT_UpdateUnitPositionAndRoom113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD11A90",
+    "name": "AI_FindNearestPlayerCallback",
+    "kernFile": "src/d2kern-113c/game/town-runtime-gap-113c.ts",
+    "tsSymbol": "AI_FindNearestPlayerCallback113c",
+    "status": "ported"
+  }
+]

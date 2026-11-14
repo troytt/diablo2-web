@@ -1,0 +1,298 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC43220",
+    "name": "MONSTER_GetSuperUniqueId113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "MONSTER_GetSuperUniqueId113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55EF0",
+    "name": "QUESTS_OnMonsterKill113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "QUESTS_OnMonsterKill113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57030",
+    "name": "SUNIT_DispatchItemEventCallbacks113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SUNIT_DispatchItemEventCallbacks113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57260",
+    "name": "PLAYER_SetActiveDualWeaponStatLists113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "PLAYER_SetActiveDualWeaponStatLists113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57540",
+    "name": "PLAYER_UpdateDualWieldWeaponStatLists113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "PLAYER_UpdateDualWieldWeaponStatLists113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC69A50",
+    "name": "UNITROOM_IsClientInUnitRoom113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "UNITROOM_IsClientInUnitRoom113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC97E00",
+    "name": "MONSTER_IsNextModeEndWithin5Frames113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "MONSTER_IsNextModeEndWithin5Frames113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC090",
+    "name": "S2C_SendPacket0D_UnitStop113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "S2C_SendPacket0D_UnitStop113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC100",
+    "name": "S2C_SendPacket0E_UnitCorpseState113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "S2C_SendPacket0E_UnitCorpseState113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC890",
+    "name": "ITEMS_SyncSocketedSubItemsToClient113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "ITEMS_SyncSocketedSubItemsToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAD3D0",
+    "name": "S2C_SendPacket9C_ItemActionWorld113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "S2C_SendPacket9C_ItemActionWorld113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCADC30",
+    "name": "S2C_SendPacket0F_UnitWalkToTarget113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "S2C_SendPacket0F_UnitWalkToTarget113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCB1B70",
+    "name": "SKILLS_ConsumeProgressiveChargesOnHit113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ConsumeProgressiveChargesOnHit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCB1E30",
+    "name": "SKILLS_ApplyProgressiveChargesToDamage113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ApplyProgressiveChargesToDamage113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCB22A0",
+    "name": "SKILLS_ApplyProgressiveAttackRatingAndPhysBonuses113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ApplyProgressiveAttackRatingAndPhysBonuses113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCB8A70",
+    "name": "SUNITDMG_ApplyOpenWoundsAndCrushingBlowSideEffects113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyOpenWoundsAndCrushingBlowSideEffects113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBC000",
+    "name": "PARTY_CountLivingPartyMemberCallback113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "PARTY_CountLivingPartyMemberCallback113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBC070",
+    "name": "PARTY_ForEachPartyMemberInSameLevel113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "PARTY_ForEachPartyMemberInSameLevel113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBC1F0",
+    "name": "PARTY_CountLivingPartyMembersInSameLevel113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "PARTY_CountLivingPartyMembersInSameLevel113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBEC80",
+    "name": "SKILLS_CheckSkillManaAndCharges113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_CheckSkillManaAndCharges113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBF3B0",
+    "name": "SKILLS_SetSkillDelayTimer113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_SetSkillDelayTimer113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBF850",
+    "name": "SKILLS_ConsumeSkillManaOrCharge113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ConsumeSkillManaOrCharge113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBFC00",
+    "name": "SKILLS_ValidateSkillTargetAlignment113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ValidateSkillTargetAlignment113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBFD00",
+    "name": "SKILLS_ExecuteSkillStart113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ExecuteSkillStart113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC0830",
+    "name": "SKILLS_StartUsedSkill113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_StartUsedSkill113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC1630",
+    "name": "SKILLS_StartPlayerSkillAnimOrCast113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_StartPlayerSkillAnimOrCast113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC19A0",
+    "name": "SKILLS_ExecuteSkillDoFunc113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_ExecuteSkillDoFunc113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC2060",
+    "name": "SKILLS_DoUsedSkillAction113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SKILLS_DoUsedSkillAction113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC2C40",
+    "name": "SrvDoFunc_001_Attack113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SrvDoFunc_001_Attack113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCCF8D0",
+    "name": "MONSTER_DeleteAiAndRegenEvents113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "MONSTER_DeleteAiAndRegenEvents113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD23D0",
+    "name": "ARENA_GetPlayerArenaFlags113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "ARENA_GetPlayerArenaFlags113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD2940",
+    "name": "ARENA_ProcessKillScoreUpdate113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "ARENA_ProcessKillScoreUpdate113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE310",
+    "name": "C2S_BroadcastPlayerSkillOrAttackAction113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "C2S_BroadcastPlayerSkillOrAttackAction113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF40F0",
+    "name": "UNITROOM_SendDroppedGroundItemToClient113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "UNITROOM_SendDroppedGroundItemToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF4550",
+    "name": "UNITROOM_BroadcastGroundItemIfUpdated113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "UNITROOM_BroadcastGroundItemIfUpdated113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD00660",
+    "name": "SUNIT_CanPlayerTargetUnitWithSkill113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SUNIT_CanPlayerTargetUnitWithSkill113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD00A60",
+    "name": "SUNIT_AreUnitsHostileOrUnaligned113c",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f786-f1040-113c.ts",
+    "tsSymbol": "SUNIT_AreUnitsHostileOrUnaligned113c",
+    "status": "ported"
+  }
+]

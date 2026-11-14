@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7CCC0",
+    "name": "HIRELING_RollAndPopulateStatsEntry",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "HIRELING_RollAndPopulateStatsEntry113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E790",
+    "name": "ANIMSEQ_GetPlayerSeqWeaponClassIdx",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "ANIMSEQ_GetPlayerSeqWeaponClassIdx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E840",
+    "name": "ANIMSEQ_GetUnitSeqLookupEntry",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "ANIMSEQ_GetUnitSeqLookupEntry113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E900",
+    "name": "ANIMSEQ_GetUnitSeqFrameDataField8",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "ANIMSEQ_GetUnitSeqFrameDataField8_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E920",
+    "name": "ANIMSEQ_GetUnitSeqFrameCountFp8",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "ANIMSEQ_GetUnitSeqFrameCountFp8_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E940",
+    "name": "ANIMSEQ_GetUnitSeqRecordPtr",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "ANIMSEQ_GetUnitSeqRecordPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD825C0",
+    "name": "UNITS_GetEquippedWeaponAdder",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetEquippedWeaponAdder113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD826C0",
+    "name": "UNITS_CanUnitMeleeAttackTarget",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_CanUnitMeleeAttackTarget113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82770",
+    "name": "UNITS_GetAnimOrSeqEventAtFrame",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetAnimOrSeqEventAtFrame113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82820",
+    "name": "UNITS_InitSkillAnimSequence",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_InitSkillAnimSequence113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD941E0",
+    "name": "COMPOSIT_GetUnitWeaponClassCode",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "COMPOSIT_GetUnitWeaponClassCode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94350",
+    "name": "COMPOSIT_IsUnitUsingBowOrCrossbow",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "COMPOSIT_IsUnitUsingBowOrCrossbow113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD97120",
+    "name": "ITEMS_AddChargedSkillStatToItemOrSocket",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_AddChargedSkillStatToItemOrSocket113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD98B80",
+    "name": "ITEMS_RollAndApplySkillBonusStat",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_RollAndApplySkillBonusStat113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD99140",
+    "name": "ITEMS_ApplyElemMasteryOrPierceMinToMax",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_ApplyElemMasteryOrPierceMinToMax113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD99190",
+    "name": "ITEMS_ApplyElemMasteryOrPierceMaxOnly",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_ApplyElemMasteryOrPierceMaxOnly113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCFBD0",
+    "name": "UNITS_GetApproximateDistance",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetApproximateDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-2.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-2-vectors.ndjson)"
+  }
+]

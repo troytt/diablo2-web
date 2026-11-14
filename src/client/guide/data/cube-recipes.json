@@ -1,0 +1,4 @@
+{
+  "Horadric Staff": { "inputs": ["msf", "vip"], "makes": "hst" },
+  "Khalim's Will": { "inputs": ["qf1", "qey", "qbr", "qhr"], "makes": "qf2" }
+}

@@ -1,0 +1,15 @@
+{
+  "scenario": "a1c-bloodmoor-fallen",
+  "bootFrame": 2,
+  "lastGoldenFrame": 2000,
+  "strictHorizon": 2000,
+  "posHorizon": 2000,
+  "matchedKernelFrames": 1998,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "8d8bda946c74066879f3047dbe839d6abbb093dba7eba2c07bfb18852eb13224",
+  "snapshotSha256": "54c47205468399a7ac5afadd71c8d62a2c3d58c4481358bf24fb4e6dc951010b"
+}

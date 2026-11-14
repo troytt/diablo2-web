@@ -1,0 +1,173 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D890",
+    "name": "DRLG_InitLevelCoordsFromLevelsTxt",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_InitLevelCoordsFromLevelsTxt113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D9B0",
+    "name": "DRLG_AllocAndInitLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_AllocAndInitLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7DAF0",
+    "name": "DRLG_FreeLevelData",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_FreeLevelData113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7DD80",
+    "name": "DRLG_GetLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_GetLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7DDB0",
+    "name": "DRLG_TryDeactivateLevelRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_TryDeactivateLevelRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7DF80",
+    "name": "DRLG_UpdateLevelActiveCount",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_UpdateLevelActiveCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E1A0",
+    "name": "DRLG_CountNonPresetRoomsInLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_CountNonPresetRoomsInLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E2C0",
+    "name": "DRLG_UpdateInactiveLevels",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_UpdateInactiveLevels113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E360",
+    "name": "DRLG_InitLevelRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLG_InitLevelRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E3E0",
+    "name": "DRLG_AllocAndInitDrlg",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLG_AllocAndInitDrlg113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E5C0",
+    "name": "DRLG_FindRoomExAtCoords",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLG_FindRoomExAtCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD81680",
+    "name": "UNITS_IsMonsterShieldEquipped",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_IsMonsterShieldEquipped113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD81D20",
+    "name": "UNITS_GetBlockChance",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetBlockChance113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C7E0",
+    "name": "DUNGEON_CountNonPresetRoomsInLevel",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_CountNonPresetRoomsInLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C800",
+    "name": "DUNGEON_UpdateInactiveLevels",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_UpdateInactiveLevels113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C810",
+    "name": "DUNGEON_UpdateRoomLevelChange",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_UpdateRoomLevelChange113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CA20",
+    "name": "DUNGEON_FreeActiveRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FreeActiveRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CB30",
+    "name": "DUNGEON_AllocAct",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_AllocAct113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CC40",
+    "name": "DUNGEON_SyncActiveRoomStatusChange",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_SyncActiveRoomStatusChange113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-2.test.ts"
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D2C0",
+    "name": "DRLG_GetActNoFromLevelId",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_GetActNoFromLevelId113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (6 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE4668)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D3C0",
+    "name": "DRLG_ComputeLevelRoomsBoundingBox",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_ComputeLevelRoomsBoundingBox113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D420",
+    "name": "DRLG_MarkLevelRoomsWithWarpFlag",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_MarkLevelRoomsWithWarpFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D470",
+    "name": "DRLG_GetRectTouchDirection",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_GetRectTouchDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D5B0",
+    "name": "DRLG_FindLevelIdAtCoord",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_FindLevelIdAtCoord113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D850",
+    "name": "DRLG_GetLevelDefField94",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_GetLevelDefField94_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86FE0",
+    "name": "ENVIRONMENT_Init",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENVIRONMENT_Init113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87020",
+    "name": "ENVIRONMENT_Alloc",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENVIRONMENT_Alloc113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (6 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87170",
+    "name": "ENVIRONMENT_SetCycleIndex",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENVIRONMENT_SetCycleIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors + PE byte-identity at VA 0x6FDEB160)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87570",
+    "name": "ENVIRONMENT_ApplyCycleColors",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENVIRONMENT_ApplyCycleColors113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (9 real D2Common.dll vectors + PE byte-identity at VA 0x6FDEB160..0x6FDEB1F0)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92270",
+    "name": "DRLGOUTDOORS_MapPresetSlotIndex",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_MapPresetSlotIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE345C)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD922A0",
+    "name": "DRLGOUTDOORS_SetOutdoorCellFlag200",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_SetOutdoorCellFlag200_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD922F0",
+    "name": "DRLGOUTDOORS_ClearOutdoorCellFlag200",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_ClearOutdoorCellFlag200_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92370",
+    "name": "DRLGOUTDOORS_SpawnOutdoorRoomEx",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_SpawnOutdoorRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (8 real D2Common.dll vectors + OOB preset checks)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92460",
+    "name": "DRLGOUTDOORS_SpawnRandomOutdoorThemes",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_SpawnRandomOutdoorThemes113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9AB60",
+    "name": "COLLISION_SetMaskForBoundingBox",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_SetMaskForBoundingBox113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9ABD0",
+    "name": "COLLISION_ClearMaskForBoundingBox",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_ClearMaskForBoundingBox113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9AC40",
+    "name": "COLLISION_CheckMaskForBoundingBox",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_CheckMaskForBoundingBox113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B560",
+    "name": "COLLISION_FillTileSubtilesMask",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_FillTileSubtilesMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCB8D0",
+    "name": "DRLG_InitActWarpLists",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_InitActWarpLists113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD0EE0",
+    "name": "DRLGLOGIC_ReplaceRoomCoordListIndex",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_ReplaceRoomCoordListIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD14C0",
+    "name": "DRLGLOGIC_MarkWallTileCells",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_MarkWallTileCells113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1650",
+    "name": "DRLGLOGIC_MarkFloorTileCells",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_MarkFloorTileCells113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD17A0",
+    "name": "DRLGLOGIC_FloodFillLogicalCoordGrid",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_FloodFillLogicalCoordGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (10 real D2Common.dll vectors + PE byte-identity at VA 0x6FDDA758..0x6FDDA82B)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1A20",
+    "name": "DRLGLOGIC_AssignTileDataCoordListPointers",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_AssignTileDataCoordListPointers113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B010-world.test.ts + tests/fixtures/oracle/k1/laneC/b010-vectors.ndjson (4 real D2Common.dll vectors)"
+  }
+]

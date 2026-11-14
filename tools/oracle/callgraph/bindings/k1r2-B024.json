@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E900",
+    "name": "DATATBLS_GetObjGroupTxtRecordCount",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetObjGroupTxtRecordCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E960",
+    "name": "DATATBLS_GetShrinesTxtRecord",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetShrinesTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3AA0",
+    "name": "DATATBLS_AdjustMonsterPresetIndex",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_AdjustMonsterPresetIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA43C0",
+    "name": "DATATBLS_GetChestTreasureClass",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetChestTreasureClass113c",
+    "status": "diff-verified",
+    "diffEvidence": "6 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDAE1C0",
+    "name": "DATATBLS_GetCompCodeString",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetCompCodeString113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDAE7E0",
+    "name": "DATATBLS_GetMaxLevel",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetMaxLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "6 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDAE810",
+    "name": "DATATBLS_GetStartExpForLevel",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetStartExpForLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "6 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDAE840",
+    "name": "DATATBLS_GetExpRatio",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetExpRatio113c",
+    "status": "diff-verified",
+    "diffEvidence": "6 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB03C0",
+    "name": "DATATBLS_GetMonLvlTxtRecord",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetMonLvlTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB08D0",
+    "name": "DATATBLS_GetCurrentLevelFromExp",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetCurrentLevelFromExp113c",
+    "status": "diff-verified",
+    "diffEvidence": "6 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBE0C0",
+    "name": "DATATBLS_GetLevelMonsterLevel",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetLevelMonsterLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "8 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1480",
+    "name": "DATATBLS_GetBooksTxtRecordCountPtr",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetBooksTxtRecordCountPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1520",
+    "name": "DATATBLS_GetQualityItemsTxtRecordCountPtr",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetQualityItemsTxtRecordCountPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1660",
+    "name": "DATATBLS_GetBeltsTxtRecordCountPtr",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetBeltsTxtRecordCountPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCF550",
+    "name": "UNITS_IsPointWithinRadius",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "UNITS_IsPointWithinRadius113c",
+    "status": "diff-verified",
+    "diffEvidence": "7 real D2Common.dll differential vectors (81 total in tests/fixtures/oracle/k1/b024-vectors.ndjson) replayed in tests/oracle/k1/laneB-B024-datatbls.test.ts"
+  }
+]

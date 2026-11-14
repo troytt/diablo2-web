@@ -1,0 +1,218 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A2D0",
+    "name": "MONSTERS_GetHirelingTypeId",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MONSTERS_GetHirelingTypeId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9C60",
+    "name": "MISSILE_ScaleDamageDataBy128thsInline",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_ScaleDamageDataBy128thsInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9E70",
+    "name": "MISSILE_GetHitShiftFromId",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetHitShiftFromId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9F50",
+    "name": "MISSILE_GetTargetY",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetTargetY113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9F70",
+    "name": "MISSILE_SetTargetY",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetTargetY113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9F90",
+    "name": "MISSILE_GetTargetX",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetTargetX113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9FB0",
+    "name": "MISSILE_SetTargetX",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetTargetX113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA030",
+    "name": "MISSILE_GetActivateFrame",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetActivateFrame113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA050",
+    "name": "MISSILE_GetActivateFrameFromUnit",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetActivateFrameFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA130",
+    "name": "MISSILE_IsOwnedByUnit",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_IsOwnedByUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA1B0",
+    "name": "MISSILE_SetOwner",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetOwner113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA220",
+    "name": "MISSILE_GetClassId",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetClassId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA240",
+    "name": "MISSILE_GetElapsedFrames",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetElapsedFrames113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA270",
+    "name": "MISSILE_GetRemainingFrames",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetRemainingFrames113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA290",
+    "name": "MISSILE_GetTotalFrames",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetTotalFrames113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA2B0",
+    "name": "MISSILE_GetSkill",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA2D0",
+    "name": "MISSILE_GetLevel",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA2F0",
+    "name": "MISSILE_SetLevel",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA310",
+    "name": "MISSILE_SetStreamFlags",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetStreamFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA330",
+    "name": "MISSILE_GetStreamFlags",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_GetStreamFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA690",
+    "name": "MISSILE_SetActivateFrame",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetActivateFrame113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA6D0",
+    "name": "MISSILE_SetRemainingFrames",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetRemainingFrames113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA710",
+    "name": "MISSILE_SetTotalFrames",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetTotalFrames113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA750",
+    "name": "MISSILE_SetSkill",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_SetSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b023-vectors.ndjson replayed in tests/oracle/k1/laneA-B023-missile.test.ts"
+  }
+]

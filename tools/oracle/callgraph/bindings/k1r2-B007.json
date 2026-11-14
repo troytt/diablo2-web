@@ -1,0 +1,164 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5CEB0",
+    "name": "PATH_StepVelocity",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_StepVelocity113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (9 real-DLL Wine differential vectors: counter wrap at <=0 to 5, velocity clamp above/below target with non-zero and zero nVelocityPoint.y)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5CF40",
+    "name": "PATH_GetDirectionVector",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetDirectionVector113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (18 real-DLL Wine differential vectors across dirs 0/1/15/16/31/32/47/48/63/64/65/127/255/-1/0x80000000 + PE byte-identity check of 0x6FDDD470 table)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD68310",
+    "name": "PATH_SimplifyToLines",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SimplifyToLines113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (6 real-DLL Wine differential vectors: nPoints=0/1/2, collinear 4-point collapse, 2-turn path, and single-step tail discard)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD684C0",
+    "name": "PATH_BresenhamLine",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_BresenhamLine113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (18 real-DLL Wine differential vectors across all 4 major/minor octants, axis-aligned/diagonal/same-point, truncation limits, pDir=NULL vs valid, and 16-bit terminator write preserving pOut[count].y)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84580",
+    "name": "PATH_ComputeSquaredDistance",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeSquaredDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: zero, 3-4-5, negative coords, single-axis, large delta, 32-bit imul wraparound)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD845B0",
+    "name": "PATH_SetUnitCollisionPattern",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetUnitCollisionPattern113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (6 real-DLL Wine differential vectors: NULL pPath early exit, valid pUnit->pPath pattern writes 0/1/5/0xFFFFFFFF/0x80000000)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD845D0",
+    "name": "PATH_GetUnitCollisionPattern",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetUnitCollisionPattern113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (6 real-DLL Wine differential vectors: NULL pPath returns 0, valid pUnit->pPath returns dwCollPattern)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84690",
+    "name": "PATH_GetStepNum",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetStepNum113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: NULL pPath returns 0, movsx 8-bit sign extension on 0/1/5/127/128/255)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD846A0",
+    "name": "PATH_SetStepNum",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetStepNum113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (10 real-DLL Wine differential vectors: NULL pPath, valid range [1..25]->nStepNum=nSteps-1, out-of-bounds 0/-1/26/100/0x80000000->default 4)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD846D0",
+    "name": "PATH_ClearPrevTargetCoord",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ClearPrevTargetCoord113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (4 real-DLL Wine differential vectors: NULL pPath, non-zero/all-ones/already-zero tPrevTargetCoord cleared to 0)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84860",
+    "name": "PATH_GetMaxDistance",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetMaxDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (5 real-DLL Wine differential vectors: AL load from pPath+0x91 for 0/1/20/127/255)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84870",
+    "name": "PATH_GetDistance",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (5 real-DLL Wine differential vectors: AL load from pPath+0x90 for 0/1/14/127/255)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84880",
+    "name": "PATH_SetDistance",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: NULL pPath, nDist<=nMaxDist stores nDist, nDist>nMaxDist clamps to nMaxDist, unsigned byte comparison on 0xFF)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD848A0",
+    "name": "PATH_GetType",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetType113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: NULL pPath returns 0, valid pPath+0x54 returns dwPathType)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD848B0",
+    "name": "PATH_SetMoveTestCollisionMask",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetMoveTestCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: NULL pPath, writes 16-bit nCollMask at pPath+0x40 and returns EAX=pPath)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD848C0",
+    "name": "PATH_GetMoveTestCollisionMask",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetMoveTestCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: NULL pPath returns 0, movzx 16-bit read from pPath+0x40)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD848D0",
+    "name": "PATH_GetFootprintCollisionMask",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetFootprintCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (7 real-DLL Wine differential vectors: NULL pPath returns 0x89, valid pPath reads 32-bit mask at pPath+0x3C)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD848F0",
+    "name": "PATH_GetTargetUnit",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetTargetUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B007.test.ts + tests/fixtures/oracle/k1/laneC/b007-vectors.ndjson (6 real-DLL Wine differential vectors: NULL pPath returns 0, valid pPath reads pTargetUnit at pPath+0x28)"
+  }
+]

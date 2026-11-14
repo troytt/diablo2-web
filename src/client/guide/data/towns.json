@@ -1,0 +1,7 @@
+{
+  "Rogue Encampment": { "healer": "akara", "potions": "akara", "repair": "charsi", "mercs": "kashya" },
+  "Lut Gholein": { "healer": "fara", "potions": "lysander", "repair": "fara", "mercs": "greiz" },
+  "Kurast Docks": { "healer": "ormus", "potions": "ormus", "repair": "hratli", "mercs": "asheara" },
+  "Pandemonium Fortress": { "healer": "jamella", "potions": "jamella", "repair": "halbu", "mercs": "tyrael2" },
+  "Harrogath": { "healer": "malah", "potions": "malah", "repair": "larzuk", "mercs": "qual-kehk" }
+}

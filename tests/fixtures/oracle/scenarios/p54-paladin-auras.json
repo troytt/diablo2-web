@@ -1,0 +1,110 @@
+{
+ "name": "p54-paladin-auras",
+ "description": "Paladin L40 in the Blood Moor: character sheet with Concentration, then Fanaticism (aura damage/attack-rating modifiers in the attack blocks).",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/paladin-l40-auras.d2s",
+ "difficulty": 0,
+ "frames": 840,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "3c71000000ffffffff",
+   "note": "select Concentration (right aura)"
+  },
+  {
+   "frame": 760,
+   "c2s": "3c7a000000ffffffff",
+   "note": "select Fanaticism"
+  }
+ ],
+ "captures": [
+  [
+   700,
+   "concentration"
+  ],
+  [
+   840,
+   "fanaticism"
+  ]
+ ]
+}

@@ -1,0 +1,72 @@
+{
+  "styleWeights": {
+    "base": {
+      "strength": 0.6, "dexterity": 0.6, "vitality": 1.6, "maxhp": 0.8, "maxmana": 0.1,
+      "fireresist": 1, "lightresist": 1, "coldresist": 1, "poisonresist": 0.5,
+      "maxfireresist": 3, "maxlightresist": 3, "maxcoldresist": 3, "maxpoisonresist": 1.5,
+      "damageresist": 2.5, "normal_damage_reduction": 1.2, "magic_damage_reduction": 0.8,
+      "hpregen": 0.6, "item_maxhp_percent": 4, "item_goldbonus": 0.05, "item_magicbonus": 0.5,
+      "item_addexperience": 0.5, "item_healafterkill": 0.3, "item_manaafterkill": 0.4, "item_lightradius": 0.2,
+      "item_fastermovevelocity": 0.6, "item_fastergethitrate": 0.6, "item_fasterblockrate": 0.2, "item_fastercastrate": 0.1,
+      "armorclass": 0.05, "toblock": 0.4, "item_cannotbefrozen": 15, "item_req_percent": -0.3,
+      "item_replenish_durability": 0.5, "item_poisonlengthresist": 0.2, "item_damagetomana": 0.3,
+      "item_skillonattack": 3, "item_skillonkill": 3, "item_skillondeath": 1, "item_skillonhit": 3, "item_skillongethit": 3,
+      "item_absorbfire_percent": 2, "item_absorblight_percent": 2, "item_absorbcold_percent": 2,
+      "item_absorbfire": 1, "item_absorblight": 1, "item_absorbcold": 1, "item_attackertakesdamage": 0.05
+    },
+    "fighter": {
+      "strength": 0.9, "dexterity": 0.8, "item_maxdamage_percent": 0.8, "mindamage": 1, "maxdamage": 1,
+      "tohit": 0.02, "item_tohit_percent": 0.4, "lifedrainmindam": 3, "manadrainmindam": 1.2, "item_fasterattackrate": 1,
+      "item_openwounds": 0.6, "item_crushingblow": 1.5, "item_deadlystrike": 1.5,
+      "firemindam": 0.15, "firemaxdam": 0.15, "lightmindam": 0.1, "lightmaxdam": 0.1,
+      "coldmindam": 0.15, "coldmaxdam": 0.15, "poisonmindam": 0.03, "poisonmaxdam": 0.03,
+      "item_ignoretargetac": 10, "item_slow": 1, "item_cannotbefrozen": 25, "armorclass": 0.08
+    },
+    "caster": { "energy": 0.3, "maxmana": 0.35, "item_maxmana_percent": 1.5, "item_fastercastrate": 1.6, "item_cannotbefrozen": 10 },
+    "summoner": { "energy": 0.2, "maxmana": 0.25, "item_maxmana_percent": 1, "item_fastercastrate": 1 },
+    "melee": {},
+    "ranged": { "dexterity": 1, "item_pierce": 1, "item_replenish_quantity": 5, "item_crushingblow": 1, "item_cannotbefrozen": 20 }
+  },
+  "fighterStyles": ["melee", "ranged"],
+  "skillBonus": {
+    "caster": { "all": 35, "classAll": 30, "tab": 22, "otherTab": 4, "mainSkill": 12 },
+    "summoner": { "all": 35, "classAll": 30, "tab": 22, "otherTab": 4, "mainSkill": 12 },
+    "melee": { "all": 22, "classAll": 18, "tab": 15, "otherTab": 4, "mainSkill": 8 },
+    "ranged": { "all": 24, "classAll": 20, "tab": 16, "otherTab": 4, "mainSkill": 8 }
+  },
+  "perLevelStats": {
+    "item_armor_perlevel": "armorclass", "item_hp_perlevel": "maxhp", "item_mana_perlevel": "maxmana",
+    "item_maxdamage_perlevel": "maxdamage", "item_maxdamage_percent_perlevel": "item_maxdamage_percent",
+    "item_strength_perlevel": "strength", "item_dexterity_perlevel": "dexterity", "item_energy_perlevel": "energy",
+    "item_vitality_perlevel": "vitality", "item_tohit_perlevel": "tohit", "item_tohitpercent_perlevel": "item_tohit_percent",
+    "item_resist_cold_perlevel": "coldresist", "item_resist_fire_perlevel": "fireresist", "item_resist_ltng_perlevel": "lightresist",
+    "item_resist_pois_perlevel": "poisonresist", "item_find_gold_perlevel": "item_goldbonus", "item_find_magic_perlevel": "item_magicbonus",
+    "item_crushingblow_perlevel": "item_crushingblow", "item_openwounds_perlevel": "item_openwounds", "item_deadlystrike_perlevel": "item_deadlystrike"
+  },
+  "elementMastery": {
+    "passive_fire_mastery": "fire", "passive_ltng_mastery": "ltng", "passive_cold_mastery": "cold", "passive_pois_mastery": "pois", "passive_mag_mastery": "mag"
+  },
+  "elementPierce": {
+    "passive_fire_pierce": "fire", "passive_ltng_pierce": "ltng", "passive_cold_pierce": "cold", "passive_pois_pierce": "pois", "passive_mag_pierce": "mag"
+  },
+  "masteryWeight": 2.5,
+  "pierceWeight": 3,
+  "elementSkillParams": { "1": "fire", "2": "ltng", "3": "cold", "4": "pois" },
+  "elementSkillWeight": 12,
+  "auras": {
+    "Conviction": 60, "Fanaticism": 55, "Meditation": 40, "Concentration": 35, "Holy Freeze": 30, "Holy Shock": 25,
+    "Might": 25, "Holy Fire": 20, "Prayer": 15, "Blessed Aim": 15, "Sanctuary": 15, "Thorns": 10
+  },
+  "otherAura": 15,
+  "prizedSkills": { "Teleport": { "oskill": 60, "charges": 30 } },
+  "otherOskill": 2,
+  "otherCharges": 2,
+  "spellStats": [
+    "energy", "maxmana", "item_maxmana_percent", "item_addclassskills", "item_nonclassskill", "item_fastercastrate", "item_singleskill",
+    "item_elemskill", "item_allskills", "item_aura", "item_addskill_tab", "item_charged_skill",
+    "passive_fire_mastery", "passive_ltng_mastery", "passive_cold_mastery", "passive_pois_mastery", "passive_mag_mastery",
+    "passive_fire_pierce", "passive_ltng_pierce", "passive_cold_pierce", "passive_pois_pierce", "passive_mag_pierce"
+  ],
+  "armorDefense": { "fighter": 0.08, "other": 0.05 },
+  "weaponDamage": 1.2
+}

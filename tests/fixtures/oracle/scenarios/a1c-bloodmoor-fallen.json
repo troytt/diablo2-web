@@ -1,0 +1,535 @@
+{
+ "name": "a1c-bloodmoor-fallen",
+ "description": "Barbarian L1 runs west into Blood Moor and melees the Fallen group (MonStats 19, AI Fallen, units 12..15): kills trigger the Fallen flee reaction of the survivors.",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/a1-barbarian-l1.d2s",
+ "difficulty": 0,
+ "frames": 2000,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 640,
+   "c2s": "031616cd16",
+   "note": "run west (frozen steer)"
+  },
+  {
+   "frame": 660,
+   "c2s": "030c16cd16",
+   "note": "run west (frozen steer)"
+  },
+  {
+   "frame": 680,
+   "c2s": "030216cd16",
+   "note": "run west (frozen steer)"
+  },
+  {
+   "frame": 700,
+   "c2s": "03f815cd16",
+   "note": "run west (frozen steer)"
+  },
+  {
+   "frame": 720,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 735,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 750,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 765,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 780,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 795,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 810,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 825,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 840,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 855,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 870,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 885,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 900,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 915,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 930,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 945,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 960,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 975,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 990,
+   "c2s": "06010000000c000000",
+   "note": "attack Fallen #12"
+  },
+  {
+   "frame": 1000,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1015,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1030,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1045,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1060,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1075,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1090,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1105,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1120,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1135,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1150,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1165,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1180,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1195,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1210,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1225,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1240,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1255,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1270,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1285,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1300,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1315,
+   "c2s": "06010000000d000000",
+   "note": "attack Fallen #13"
+  },
+  {
+   "frame": 1330,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1345,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1360,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1375,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1390,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1405,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1420,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1435,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1450,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1465,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1480,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1495,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1510,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1525,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1540,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1555,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1570,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1585,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1600,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1615,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1630,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1645,
+   "c2s": "06010000000e000000",
+   "note": "attack Fallen #14"
+  },
+  {
+   "frame": 1660,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1675,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1690,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1705,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1720,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1735,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1750,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1765,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1780,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1795,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1810,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1825,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1840,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1855,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1870,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1885,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1900,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1915,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1930,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1945,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1960,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  },
+  {
+   "frame": 1975,
+   "c2s": "06010000000f000000",
+   "note": "attack Fallen #15"
+  }
+ ]
+}

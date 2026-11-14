@@ -1,0 +1,35 @@
+{
+  "scenario": "p52-item-defense",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1600,
+  "strictHorizon": 696,
+  "posHorizon": 709,
+  "matchedKernelFrames": 694,
+  "bootCheck": null,
+  "firstDivergence": {
+    "frame": 697,
+    "key": "gs",
+    "id": null,
+    "field": "gs",
+    "expected": [
+      3088963594,
+      403133626
+    ],
+    "actual": [
+      3426759788,
+      1288383143
+    ]
+  },
+  "firstPosDivergence": {
+    "frame": 710,
+    "key": "t1",
+    "id": 9,
+    "field": "mode",
+    "expected": 5,
+    "actual": 1
+  },
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "6f88c8b36ea824cfbce5d75aaa1f30b6fabb771181975923b55e4563c6b89f1e",
+  "snapshotSha256": "66dbb0d9a2894d0045c0209d78016ecefb54d24051796ada6544725b007b4325"
+}

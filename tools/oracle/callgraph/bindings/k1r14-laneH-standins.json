@@ -1,0 +1,338 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC35D10",
+    "name": "AI_InitHomeNode10",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_InitHomeNode10_113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC36610",
+    "name": "AI_CheckReturnHomeToNode10",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_CheckReturnHomeToNode10_113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC36970",
+    "name": "AI_MapAiAction1_WalkToWaypoint",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_MapAiAction1_WalkToWaypoint113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC36A30",
+    "name": "AI_TickNodes4_5_7",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_TickNodes4_5_7_113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC39A00",
+    "name": "AI_MapAiAction5_WalkAndMode9",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_MapAiAction5_WalkAndMode9_113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC39AD0",
+    "name": "AI_MapAiAction4_WalkAndMode8",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_MapAiAction4_WalkAndMode8_113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC39BA0",
+    "name": "AI_MapAiAction3_WalkToWaypoint",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_MapAiAction3_WalkToWaypoint113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC39BB0",
+    "name": "AI_MapAiAction2_WalkAndWait20",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_MapAiAction2_WalkAndWait20_113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC3BC60",
+    "name": "AI_SimpleMapAiNpc",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_SimpleMapAiNpc113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC40E00",
+    "name": "AIGENERAL_FindAiCommandByType",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AIGENERAL_FindAiCommandByType113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC417D0",
+    "name": "AIGENERAL_GetOrAllocAiCommandByType",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AIGENERAL_GetOrAllocAiCommandByType113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98550",
+    "name": "PLAYER_StartModeAtCoords",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "PLAYER_StartModeAtCoords113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD07B0",
+    "name": "UNITS_GetOctileDistanceToCoordinates",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "UNITS_GetOctileDistanceToCoordinates113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEB1F0",
+    "name": "C2S_ResolveDualWieldThrowSkill",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_ResolveDualWieldThrowSkill113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEB5B0",
+    "name": "C2S_Packet0B_Noop1Byte",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet0B_Noop1Byte113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEB690",
+    "name": "C2S_CheckCoordDeltaExceeded",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_CheckCoordDeltaExceeded113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEBF50",
+    "name": "C2S_UnpackAndValidateLocationPacket",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_UnpackAndValidateLocationPacket113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCECFE0",
+    "name": "C2S_ValidateTargetUnitDistance",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_ValidateTargetUnitDistance113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCED630",
+    "name": "C2S_UnpackAndValidateUnitPacket",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_UnpackAndValidateUnitPacket113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEDF30",
+    "name": "C2S_ExecuteSkillOnLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_ExecuteSkillOnLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE000",
+    "name": "C2S_Packet04_RunToUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet04_RunToUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE040",
+    "name": "C2S_Packet03_RunToLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet03_RunToLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE090",
+    "name": "C2S_Packet02_WalkToUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet02_WalkToUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE0D0",
+    "name": "C2S_Packet01_WalkToLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet01_WalkToLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE120",
+    "name": "C2S_RunToTargetAndSetQueuedSkill",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_RunToTargetAndSetQueuedSkill113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE520",
+    "name": "C2S_Packet0C_RightSkillOnLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet0C_RightSkillOnLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE5A0",
+    "name": "C2S_Packet05_LeftSkillOnLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet05_LeftSkillOnLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE620",
+    "name": "C2S_ExecuteSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_ExecuteSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE790",
+    "name": "C2S_Packet0F_RepeatRightSkillOnLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet0F_RepeatRightSkillOnLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE7F0",
+    "name": "C2S_Packet0E_ShiftRightSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet0E_ShiftRightSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE870",
+    "name": "C2S_Packet0D_RightSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet0D_RightSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE8F0",
+    "name": "C2S_Packet08_RepeatLeftSkillOnLocation",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet08_RepeatLeftSkillOnLocation113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE950",
+    "name": "C2S_Packet07_ShiftLeftSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet07_ShiftLeftSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEE9D0",
+    "name": "C2S_Packet06_LeftSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet06_LeftSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEEA50",
+    "name": "C2S_Packet11_RepeatShiftRightSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet11_RepeatShiftRightSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEEAB0",
+    "name": "C2S_Packet10_RepeatRightSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet10_RepeatRightSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEEB10",
+    "name": "C2S_Packet0A_RepeatShiftLeftSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet0A_RepeatShiftLeftSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEEB70",
+    "name": "C2S_Packet09_RepeatLeftSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet09_RepeatLeftSkillOnUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEF480",
+    "name": "C2S_Packet3C_SelectSkill",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet3C_SelectSkill113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF0790",
+    "name": "C2S_Packet5F_UpdatePlayerPos",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_Packet5F_UpdatePlayerPos113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD11D90",
+    "name": "AI_StepRelativeToTargetUnit",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_StepRelativeToTargetUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD130C0",
+    "name": "AI_FindNearestPlayerTarget",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "AI_FindNearestPlayerTarget113c",
+    "status": "ported"
+  }
+]

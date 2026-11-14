@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC645E0",
+    "name": "SKILLS_DeductFromStatPool",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SKILLS_DeductFromStatPool113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC66D90",
+    "name": "REGPOP_CanSpawnPresetMinionPack",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "REGPOP_CanSpawnPresetMinionPack113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC66E80",
+    "name": "REGPOP_RemapDirectionalMonsterClassId",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "REGPOP_RemapDirectionalMonsterClassId113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC68370",
+    "name": "MONSTER_HasAnyInteractingPlayer",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "MONSTER_HasAnyInteractingPlayer113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC68390",
+    "name": "MONSTER_CountInteractingPlayers",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "MONSTER_CountInteractingPlayers113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC684F0",
+    "name": "MONSTER_CheckPlayerInteractUnlocked",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "MONSTER_CheckPlayerInteractUnlocked113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC686D0",
+    "name": "MONSTER_IsPlayerInteractInTradeState",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "MONSTER_IsPlayerInteractInTradeState113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC68710",
+    "name": "MONSTER_PromotePlayerInteractToTradeState",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "MONSTER_PromotePlayerInteractToTradeState113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC68750",
+    "name": "MONSTER_SetLastInteractTarget",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "MONSTER_SetLastInteractTarget113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6A2D0",
+    "name": "CLIENTS_UpdateCharacterProgression",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "CLIENTS_UpdateCharacterProgression113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6DF60",
+    "name": "SKILLS_DivideValueByMonLvlHp",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SKILLS_DivideValueByMonLvlHp113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6DF80",
+    "name": "SKILLS_IsDimVisionOrTerrorState",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SKILLS_IsDimVisionOrTerrorState113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6DFD0",
+    "name": "SKILLS_SrvSt18_ReturnOne",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt18_ReturnOne113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6E390",
+    "name": "SKILLS_SetNecroSkeletonComponents",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SKILLS_SetNecroSkeletonComponents113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD00210",
+    "name": "SUNIT_CanTargetOwnPetWithSkill",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SUNIT_CanTargetOwnPetWithSkill113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD00A20",
+    "name": "SUNIT_GetOwnerUnit",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "SUNIT_GetOwnerUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD028A0",
+    "name": "ACT3Q0_ActiveFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q0_ActiveFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD028B0",
+    "name": "ACT3Q0_StatusFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q0_StatusFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD028C0",
+    "name": "ACT3Q6_MephistoActiveFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q6_MephistoActiveFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02900",
+    "name": "ACT3Q5_IsDuranceEntryBlocked",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q5_IsDuranceEntryBlocked113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02960",
+    "name": "ACT3Q5_IsCompellingOrbIntact",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q5_IsCompellingOrbIntact113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02AB0",
+    "name": "ACT3Q5_BlackenedTempleActiveFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q5_BlackenedTempleActiveFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02B10",
+    "name": "ACT3Q4_ClearOrmusNpcWaitFlag",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q4_ClearOrmusNpcWaitFlag113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02B40",
+    "name": "ACT3Q4_CheckOrmusNpcWaitFlag",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q4_CheckOrmusNpcWaitFlag113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02C40",
+    "name": "ACT3Q1_GetHratliTargetCoords",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q1_GetHratliTargetCoords113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02CD0",
+    "name": "ACT3Q1_GetQuestDataByte04",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q1_GetQuestDataByte04_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02DB0",
+    "name": "ACT3Q2_AddQuestDataCount1C",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q2_AddQuestDataCount1C_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD02EF0",
+    "name": "ACT3Q7_Callback11_Noop",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q7_Callback11_Noop113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03000",
+    "name": "ACT3Q1_HratliIntroActiveFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q1_HratliIntroActiveFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03030",
+    "name": "ACT3Q1_HratliIntroStatusFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q1_HratliIntroStatusFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03040",
+    "name": "ACT3Q2_DarkWandererStatusFilter",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q2_DarkWandererStatusFilter113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD030C0",
+    "name": "ACT3Q0_MarkWandererSeenCallback",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q0_MarkWandererSeenCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD037D0",
+    "name": "ACT3Q5_CompleteCouncilPartyCallback",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q5_CompleteCouncilPartyCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03A80",
+    "name": "ACT3Q5_SyncCouncilQuestFlagsCallback",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q5_SyncCouncilQuestFlagsCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03B00",
+    "name": "ACT3Q4_OnQuestUnitDeactivate",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q4_OnQuestUnitDeactivate113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03C70",
+    "name": "ACT3Q4_SyncTomePartyQuestStateCallback",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q4_SyncTomePartyQuestStateCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04900",
+    "name": "ACT3Q3_OnKhalimsWillCubed",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q3_OnKhalimsWillCubed113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD049E0",
+    "name": "ACT3Q7_Callback14_PlayerJoined",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q7_Callback14_PlayerJoined113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04A50",
+    "name": "ACT3Q7_SendQuestUpdatePacket5D",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q7_SendQuestUpdatePacket5D_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05230",
+    "name": "ACT3Q6_SetGidbinnState0ECallback",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q6_SetGidbinnState0ECallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05370",
+    "name": "ACT3Q6_SyncGidbinnState02Callback",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "ACT3Q6_SyncGidbinnState02Callback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10060",
+    "name": "PARTY_FindPlayerRelationNode",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "PARTY_FindPlayerRelationNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD100E0",
+    "name": "PARTY_GetHostileCooldownTick",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "PARTY_GetHostileCooldownTick113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD101D0",
+    "name": "PARTY_GetPlayerRelationState",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "PARTY_GetPlayerRelationState113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD102A0",
+    "name": "PARTY_TestPlayerRelationFlags",
+    "kernFile": "src/d2kern-113c/game/k2-sunit-spawn-w1-113c.ts",
+    "tsSymbol": "PARTY_TestPlayerRelationFlags113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneB-sunit-spawn-w1.test.ts"
+  }
+]

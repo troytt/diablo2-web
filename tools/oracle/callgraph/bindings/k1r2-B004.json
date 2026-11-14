@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5CE90",
+    "name": "PATH_CheckFlag08",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "PATH_CheckFlag08_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (6 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D0A0",
+    "name": "PATH_CheckStepTargetDistance",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "PATH_CheckStepTargetDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (6 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67B70",
+    "name": "DRLGOUTPLACE_StepMazeLinkNode",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGOUTPLACE_StepMazeLinkNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (6 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94540",
+    "name": "DRLGROOM_PackAdjacentRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_PackAdjacentRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD945A0",
+    "name": "DRLGROOM_SortRoomExArrayByBounds",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SortRoomExArrayByBounds113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94740",
+    "name": "DRLGROOM_CheckPointInRect",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_CheckPointInRect113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (7 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94870",
+    "name": "DRLGROOM_CompareOrthoNodes",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_CompareOrthoNodes113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (11 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94EB0",
+    "name": "DRLGROOM_CheckLevelRoomsSeparation",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_CheckLevelRoomsSeparation113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (7 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95630",
+    "name": "ITEMMODS_StubReturnOne",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "ITEMMODS_StubReturnOne113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95640",
+    "name": "ITEMMODS_ShiftStatValueIfFixedPoint",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "ITEMMODS_ShiftStatValueIfFixedPoint113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (12 real D2Common.dll vectors + PE byte-identity at VA 0x6FD95668)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB81A0",
+    "name": "DRLGROOMTILE_FindPresetRoomTile",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_FindPresetRoomTile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (8 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8340",
+    "name": "DRLGROOMTILE_LookupWarpTileEntryIndex",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_LookupWarpTileEntryIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (10 real D2Common.dll vectors + PE byte-identity at VA 0x6FDDBD68 and 0x6FDDBF28)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB85D0",
+    "name": "DRLGROOMTILE_CountPresetWallTileCells",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_CountPresetWallTileCells113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8660",
+    "name": "DRLGROOMTILE_CountAllTileTypes",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_CountAllTileTypes113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9DA0",
+    "name": "DRLGROOMTILE_MaxInt",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_MaxInt113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (6 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9DB0",
+    "name": "DRLGROOMTILE_MinInt",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_MinInt113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B004-drlg.test.ts + tests/fixtures/oracle/k1/laneC/b004-vectors.ndjson (6 real D2Common.dll vectors)"
+  }
+]

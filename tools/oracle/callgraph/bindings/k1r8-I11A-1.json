@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD70520",
+    "name": "INVENTORY_FindGridPlacementMode0",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FindGridPlacementMode0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD70560",
+    "name": "INVENTORY_FindGridPlacementMode1",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FindGridPlacementMode1_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD705A0",
+    "name": "INVENTORY_FindGridPlacementMode2",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FindGridPlacementMode2_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD705E0",
+    "name": "INVENTORY_FindGridPlacementMode3",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FindGridPlacementMode3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71710",
+    "name": "INVENTORY_EmptyInventory",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_EmptyInventory113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71790",
+    "name": "INVENTORY_SetCursorItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_SetCursorItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71B00",
+    "name": "INVENTORY_RemoveItemFromInventory",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_RemoveItemFromInventory113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD81260",
+    "name": "INVENTORY_GetItemEquipLocation",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetItemEquipLocation113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD815E0",
+    "name": "UNITS_FindFreeCoords",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_FindFreeCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD818C0",
+    "name": "UNITS_SetTargetUnitForDynamicUnitEx",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetTargetUnitForDynamicUnitEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93860",
+    "name": "COMPOSIT_GetWeaponClassCode",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "COMPOSIT_GetWeaponClassCode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD975E0",
+    "name": "ITEMS_AddOrSetStatOnStatList",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_AddOrSetStatOnStatList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD97EF0",
+    "name": "ITEMS_ApplySkillBonusStat",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_ApplySkillBonusStat113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD97FA0",
+    "name": "ITEMS_ApplyElemMasteryOrPierceStat",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_ApplyElemMasteryOrPierceStat113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9D760",
+    "name": "UNITS_TestCollisionBetweenUnitsWithDoors",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_TestCollisionBetweenUnitsWithDoors113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I11A-1.test.ts (real-DLL vectors via k1r8-laneA-it11-emitter.c -> i11a-1-vectors.ndjson)"
+  }
+]

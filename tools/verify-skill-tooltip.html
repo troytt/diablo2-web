@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>skill tooltip verify (#1569..#1588)</title>
+<style>body{margin:0;background:#111;color:#ccc;font:12px monospace} canvas{display:block}</style></head>
+<body>
+<script type="module">
+import { SkillTreePanel } from '/src/client/ui/skill-tree-panel.ts'
+import { D2FontRenderer } from '/src/client/ui/font.ts'
+const font = new D2FontRenderer()
+await font.load('/ui/fonts')
+const params = new URLSearchParams(location.search)
+const w = Number(params.get('w') || 800), h = Number(params.get('h') || 600)
+const cases = [
+  { cls: 'sor', skill: 36, pts: 5, lang: 'ENG' },
+  { cls: 'sor', skill: 47, pts: 0, lang: 'ENG' },
+  { cls: 'nec', skill: 70, pts: 3, lang: 'CHI' },
+  // Extra cases (tools/verify-skill-tooltip-browser.ts SKILL_TOOLTIP_CASES): { cls, skill, pts, lang, extra: [[id, pts]] }
+  ...JSON.parse(params.get('cases') || '[]'),
+]
+const results = []
+for (const c of cases) {
+  const cv = document.createElement('canvas'); cv.width = w; cv.height = h
+  cv.dataset.case = String(c.skill)
+  document.body.appendChild(cv)
+  const ctx = cv.getContext('2d')
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, w, h)
+  const panel = new SkillTreePanel(c.cls)
+  panel.lang = c.lang
+  panel.loadProfile(c.cls, new Map([...(c.pts ? [[c.skill, c.pts]] : []), ...(c.extra || [])]), 0)
+  const node = panel.getSkillTree().find(n => n.skillId === c.skill)
+  panel.hoveredSkill = node
+  panel.drawSkillTooltip(ctx, font)
+  const lines = panel.formatSkillTooltipLines(c.skill).map(l => ({ text: l.text, color: l.color }))
+  results.push({ skill: c.skill, lines })
+}
+window.__skillTooltipResults = results
+window.__skillTooltipReady = true
+</script></body></html>

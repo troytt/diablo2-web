@@ -1,0 +1,54 @@
+{
+  "fn": "SKILLS_GetFlags",
+  "module": "D2Common",
+  "va": "0x6FD9DE40",
+  "size": 19,
+  "conv": {
+    "stack": 1,
+    "regs": [],
+    "calleePops": 4,
+    "returns": "eax"
+  },
+  "tables": "none",
+  "fill": "rand:0x5EED",
+  "images": {
+    "skill": { "size": 64 }
+  },
+  "vectors": [
+    {
+      "label": "null-skill",
+      "stack": [0]
+    },
+    {
+      "label": "skill-flags-base",
+      "init": [
+        { "img": "skill", "off": "0x0C", "u32": "0x12345678" }
+      ],
+      "stack": ["&skill"]
+    },
+    {
+      "label": "unmapped-skill-faults",
+      "stack": ["0x00000004"]
+    }
+  ],
+  "sweeps": [
+    {
+      "base": "skill-flags-base",
+      "labelPrefix": "flags",
+      "field": { "img": "skill", "off": "0x0C", "type": "u32" },
+      "values": [
+        0,
+        1,
+        2,
+        4,
+        "0x00000080",
+        "0x00002000",
+        "0x00010000",
+        "0x7FFFFFFF",
+        "0x80000000",
+        "0xDEADBEEF",
+        "0xFFFFFFFF"
+      ]
+    }
+  ]
+}

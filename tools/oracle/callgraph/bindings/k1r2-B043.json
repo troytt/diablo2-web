@@ -1,0 +1,191 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD81B40",
+    "name": "UNITS_GetMonsterActiveWeapon",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "UNITS_GetMonsterActiveWeapon113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD882F0",
+    "name": "STATLIST_GetStatsByIdFromList",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "STATLIST_GetStatsByIdFromList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneD-ported29.test.ts (real-DLL vectors via k1r13-laneD-ported29-emitter.c -> k1r13-i14d-1.ndjson); indirect real-DLL coverage via MISSILE_RollCriticalStrike113c vectors (b043 throwing_mastery_crit_100 / non_throwing_skill_no_melee_mastery, k1r2-laneA-it8-emitter.c); no direct vectors, so ported only"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD88FF0",
+    "name": "STATLIST_GetMaxDurabilityFromUnit",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetMaxDurabilityFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD89050",
+    "name": "STATLIST_GetMaxStaminaFromUnit",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetMaxStaminaFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD890A0",
+    "name": "STATLIST_GetMaxManaFromUnit",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetMaxManaFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD890F0",
+    "name": "STATLIST_GetMaxLifeFromUnit",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetMaxLifeFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD89140",
+    "name": "STATLIST_GetStatValue",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetStatValue113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD891A0",
+    "name": "STATLIST_GetTotalStatValueLayer0",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetTotalStatValueLayer0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD89380",
+    "name": "STATLIST_GetStatBonusFromListInline",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetStatBonusFromListInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD89430",
+    "name": "STATLIST_GetUnitStatWithLayer",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetUnitStatWithLayer113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD894E0",
+    "name": "STATLIST_GetBaseStatFromListInline",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetBaseStatFromListInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8A1D0",
+    "name": "STATLIST_SetBaseStatEx",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_SetBaseStatEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8A5D0",
+    "name": "STATLIST_UnlinkUnitStatList",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_UnlinkUnitStatList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8A650",
+    "name": "STATLIST_ClearBaseStats",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_ClearBaseStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8AAB0",
+    "name": "STATLIST_UpdateUnitStateSetFlag",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_UpdateUnitStateSetFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD96D50",
+    "name": "STATLIST_RemoveItemDurabilityStatsModHandler",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_RemoveItemDurabilityStatsModHandler113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F200",
+    "name": "SKILLS_GetThrowingWeaponMasteryBonus",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "SKILLS_GetThrowingWeaponMasteryBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneD-ported29.test.ts (real-DLL vectors via k1r13-laneD-ported29-emitter.c -> k1r13-i14d-1.ndjson); indirect real-DLL coverage via MISSILE_RollCriticalStrike113c vectors (b043 throwing_mastery_crit_100 / non_throwing_skill_no_melee_mastery, k1r2-laneA-it8-emitter.c); no direct vectors, so ported only"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA4A00",
+    "name": "DATATBLS_CalculateMonsterStatsByLevel",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "DATATBLS_CalculateMonsterStatsByLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (4 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBAB20",
+    "name": "MISSILE_CalculateMasteryBonus",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "MISSILE_CalculateMasteryBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (4 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBABE0",
+    "name": "MISSILE_AddStatsToDamage",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_AddStatsToDamage113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBB180",
+    "name": "MISSILE_RollCriticalStrike",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_RollCriticalStrike113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B043-missile-statlist.test.ts (4 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b043-vectors.ndjson)"
+  }
+]

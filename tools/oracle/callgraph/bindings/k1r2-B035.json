@@ -1,0 +1,182 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD632A0",
+    "name": "DATATBLS_GetInventoryTxtRecord",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "DATATBLS_GetInventoryTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DD40",
+    "name": "INVENTORY_FreeCorpse",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FreeCorpse113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DDD0",
+    "name": "INVENTORY_AllocCorpse",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_AllocCorpse113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DF20",
+    "name": "INVENTORY_FreeAllNodes",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FreeAllNodes113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E420",
+    "name": "INVENTORY_GetItemSaveGridPageLimits",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetItemSaveGridPageLimits113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E710",
+    "name": "INVENTORY_AllocInventory",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_AllocInventory113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72000",
+    "name": "ITEMS_DecodeItemCompactBitstream",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_DecodeItemCompactBitstream113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72170",
+    "name": "ITEMS_SetItemFormat",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_SetItemFormat113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72310",
+    "name": "ITEMS_CanPlayerClassUseItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_CanPlayerClassUseItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72430",
+    "name": "ITEMS_GetWeaponClassCodeIdx",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_GetWeaponClassCodeIdx113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD724C0",
+    "name": "ITEMS_GetCellOverwrite",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_GetCellOverwrite113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72510",
+    "name": "ITEMS_SetCellOverwrite",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_SetCellOverwrite113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72760",
+    "name": "ITEMS_CheckItemFlagCompactSaveByClassId",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_CheckItemFlagCompactSaveByClassId113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72E70",
+    "name": "ITEMS_GetInvWidthFromId",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_GetInvWidthFromId113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD731E0",
+    "name": "ITEMS_GetComponentFromItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_GetComponentFromItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F270",
+    "name": "UNITS_SetStaticPathPosY",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "UNITS_SetStaticPathPosY113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F2C0",
+    "name": "UNITS_SetStaticPathPosX",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "UNITS_SetStaticPathPosX113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F8A0",
+    "name": "UNITS_GetBeltTypeFromItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "UNITS_GetBeltTypeFromItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FB60",
+    "name": "UNITS_GetInventoryRecordId",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "UNITS_GetInventoryRecordId113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93710",
+    "name": "COMPOSIT_GetItemPageLimitByBodyLoc",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "COMPOSIT_GetItemPageLimitByBodyLoc113c",
+    "status": "diff-verified",
+    "diffEvidence": "120 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b035-vectors.ndjson replayed in tests/oracle/k1/laneA-B035-inventory.test.ts"
+  }
+]

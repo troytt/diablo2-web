@@ -1,0 +1,191 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD9A670",
+    "name": "DRLGROOMTILE_InitOutdoorRoomTilesAndWallGrids",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_InitOutdoorRoomTilesAndWallGrids113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9A9B0",
+    "name": "DRLGROOMTILE_BuildOutdoorRoomTileData",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_BuildOutdoorRoomTileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB88B0",
+    "name": "DRLGROOMTILE_FreeRoomResources",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_FreeRoomResources113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8F00",
+    "name": "DRLGROOMTILE_AddWallTileData",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_AddWallTileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB91C0",
+    "name": "DRLGROOMTILE_AddLinkedWarpTileData",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_AddLinkedWarpTileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9360",
+    "name": "DRLGROOMTILE_LinkWarpTileToDoorPreset",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_LinkWarpTileToDoorPreset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9470",
+    "name": "DRLGROOMTILE_AddTileDataToRoomLink",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_AddTileDataToRoomLink113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB95D0",
+    "name": "DRLGROOMTILE_UpdateTileData",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_UpdateTileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB97C0",
+    "name": "DRLGROOMTILE_InsertOrUpdateTileAtCoord",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_InsertOrUpdateTileAtCoord113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9820",
+    "name": "DRLGROOMTILE_ProcessGridCellTile",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_ProcessGridCellTile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9B50",
+    "name": "DRLGROOMTILE_PopulateRoomTileGrid",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_PopulateRoomTileGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBB20",
+    "name": "DRLGROOM_DecrementNearRoomsStatus",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_DecrementNearRoomsStatus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBDB0",
+    "name": "DRLGROOM_FreeOrUnloadRoomIfStatus4",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_FreeOrUnloadRoomIfStatus4_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBEE0",
+    "name": "DRLGROOM_EnsureRoomStatus3",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_EnsureRoomStatus3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBFA0",
+    "name": "DRLGROOM_PropagateRoomStatusIncrement",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_PropagateRoomStatusIncrement113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC090",
+    "name": "DRLGROOM_IncrementRoomAndNeighborsStatus",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_IncrementRoomAndNeighborsStatus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC0E0",
+    "name": "DRLGROOM_BuildRoomGridsAndTiles",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_BuildRoomGridsAndTiles113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC270",
+    "name": "DRLGROOM_EnsureRoomAndGetRoom1",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_EnsureRoomAndGetRoom1_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC370",
+    "name": "DRLGROOM_InitAndLinkRoomStatus1",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_InitAndLinkRoomStatus1_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC3D0",
+    "name": "DRLGROOM_SetRoomStatus2AndInitIfNear",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetRoomStatus2AndInitIfNear_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC470",
+    "name": "DRLGROOM_SetRoomStatus2IfReady",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetRoomStatus2IfReady_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-2-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  }
+]

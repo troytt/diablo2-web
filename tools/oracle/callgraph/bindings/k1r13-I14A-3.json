@@ -1,0 +1,56 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD62720",
+    "name": "UNITFINDS_FindAllMatchingUnitsInAdjacentRooms",
+    "kernFile": "src/d2kern-113c/common/unit-finds.ts",
+    "tsSymbol": "UNITFINDS_FindAllMatchingUnitsInAdjacentRooms113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-3.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-3-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD62F80",
+    "name": "DRLGPRESET_UpdateRoomTileAnims",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGPRESET_UpdateRoomTileAnims113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-3.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-3-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD65980",
+    "name": "DRLGOUTPLACE_PlaceAct4Levels",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_PlaceAct4Levels113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-3.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-3-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD65A80",
+    "name": "DRLGOUTPLACE_PlaceAct5OutdoorLevels",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_PlaceAct5OutdoorLevels113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-3.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-3-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD66CF0",
+    "name": "DRLGOUTPLACE_LinkAct5OutdoorLevels",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct5OutdoorLevels113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-3.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-3-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD66E10",
+    "name": "DRLGOUTPLACE_PlaceActLevelsByList",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_PlaceActLevelsByList113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-3.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-3-vectors.ndjson)"
+  }
+]

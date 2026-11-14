@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC73470",
+    "name": "SAVE_SerializeUnflaggedItemToBuffer_6FC73470",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "SAVE_SerializeUnflaggedItemToBuffer_6FC73470_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC764D0",
+    "name": "ACT5Q6_InitWorldstoneChamberObject9C_6FC764D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_InitWorldstoneChamberObject9C_6FC764D0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76520",
+    "name": "ACT5Q6_InitWorldstoneChamberObject94_6FC76520",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_InitWorldstoneChamberObject94_6FC76520_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76570",
+    "name": "ACT5Q6_IsWorldstoneEntryAllowed_6FC76570",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_IsWorldstoneEntryAllowed_6FC76570_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC765B0",
+    "name": "ACT5Q5_InitSummitDoorObject_6FC765B0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_InitSummitDoorObject_6FC765B0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76600",
+    "name": "ACT5Q5_CanSpawnTownPortalOnSummit_6FC76600",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_CanSpawnTownPortalOnSummit_6FC76600_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76640",
+    "name": "ACT5Q5_IsLastAncientDefeatedReady_6FC76640",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_IsLastAncientDefeatedReady_6FC76640_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC766D0",
+    "name": "ACT5Q5_GetSummitPlayerCount_6FC766D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_GetSummitPlayerCount_6FC766D0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76740",
+    "name": "ACT5Q5_OnPlayerLeaveSummitCheck_6FC76740",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_OnPlayerLeaveSummitCheck_6FC76740_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76810",
+    "name": "ACT5Q6_ActiveFilter_6FC76810",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_ActiveFilter_6FC76810_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76840",
+    "name": "ACT5Q4_ActiveFilter_6FC76840",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q4_ActiveFilter_6FC76840_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC768C0",
+    "name": "ACT5Q4_StatusFilter_6FC768C0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q4_StatusFilter_6FC768C0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76950",
+    "name": "ACT5Q3_IsFrozenAnyaUnspawned_6FC76950",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q3_IsFrozenAnyaUnspawned_6FC76950_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76A00",
+    "name": "ACT5Q3_RecordAnyaPosition_6FC76A00",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q3_RecordAnyaPosition_6FC76A00_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76A40",
+    "name": "ACT5Q3_GetPortalTargetCoords_6FC76A40",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q3_GetPortalTargetCoords_6FC76A40_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76B80",
+    "name": "ACT5Q2_CalcRemainingSoldiersCount_6FC76B80",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_CalcRemainingSoldiersCount_6FC76B80_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76C40",
+    "name": "ACT5Q2_ActiveFilter_6FC76C40",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_ActiveFilter_6FC76C40_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76CE0",
+    "name": "ACT5_InitObjectNoop_6FC76CE0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5_InitObjectNoop_6FC76CE0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76CF0",
+    "name": "ACT5Q1_ActivateQuestIfNotIntro_6FC76CF0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q1_ActivateQuestIfNotIntro_6FC76CF0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76D80",
+    "name": "ACT5Q1_ActiveFilter_6FC76D80",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q1_ActiveFilter_6FC76D80_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76E00",
+    "name": "ACT5Q1_StatusFilter_6FC76E00",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q1_StatusFilter_6FC76E00_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76EA0",
+    "name": "ACT5Q0_StatusFilter_6FC76EA0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q0_StatusFilter_6FC76EA0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76EB0",
+    "name": "ACT5Q5_Callback15_SetState0AIfCompleted_6FC76EB0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_Callback15_SetState0AIfCompleted_6FC76EB0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC76FC0",
+    "name": "ACT5Q5_Callback11_RemovePlayerGuid_6FC76FC0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_Callback11_RemovePlayerGuid_6FC76FC0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77270",
+    "name": "ACT5Q5_Callback12_NpcScrollSetState_6FC77270",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_Callback12_NpcScrollSetState_6FC77270_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77320",
+    "name": "ACT5Q6_SyncBaalQuestStateCallback_6FC77320",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_SyncBaalQuestStateCallback_6FC77320_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC773D0",
+    "name": "ACT5Q5_InitAncientsAltarObject_6FC773D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_InitAncientsAltarObject_6FC773D0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77440",
+    "name": "ACT5Q5_CountLivingSummitPlayersCallback_6FC77440",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_CountLivingSummitPlayersCallback_6FC77440_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC774A0",
+    "name": "ACT5Q5_InitWorldstoneKeepEntranceObject_6FC774A0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_InitWorldstoneKeepEntranceObject_6FC774A0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC774F0",
+    "name": "ACT5Q5_SyncAncientStatueObjectAnimMode_6FC774F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_SyncAncientStatueObjectAnimMode_6FC774F0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77540",
+    "name": "ACT5Q6_Callback14_PlayerJoined_6FC77540",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_Callback14_PlayerJoined_6FC77540_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC775D0",
+    "name": "ACT5Q6_Callback11_RemovePlayerGuid_6FC775D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q6_Callback11_RemovePlayerGuid_6FC775D0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77750",
+    "name": "ACT5Q5_SyncRiteOfPassageQuestStateCallback_6FC77750",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q5_SyncRiteOfPassageQuestStateCallback_6FC77750_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC777F0",
+    "name": "ACT5Q4_CompletePersonalizationReward_6FC777F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q4_CompletePersonalizationReward_6FC777F0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77830",
+    "name": "ACT5Q4_CompleteNihlathakPartyCallback_6FC77830",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q4_CompleteNihlathakPartyCallback_6FC77830_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77A20",
+    "name": "ACT5Q4_Callback11_RemovePlayerGuid_6FC77A20",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q4_Callback11_RemovePlayerGuid_6FC77A20_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77C00",
+    "name": "ACT5Q4_SyncNihlathakQuestStateCallback_6FC77C00",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q4_SyncNihlathakQuestStateCallback_6FC77C00_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC77CB0",
+    "name": "ACT5Q3_EnsureAnyaTownPortalSpawned_6FC77CB0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q3_EnsureAnyaTownPortalSpawned_6FC77CB0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC780A0",
+    "name": "ACT5Q3_CompleteAnyaRescuePartyCallback_6FC780A0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q3_CompleteAnyaRescuePartyCallback_6FC780A0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC78110",
+    "name": "ACT5Q3_SyncPrisonOfIceQuestStateCallback_6FC78110",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q3_SyncPrisonOfIceQuestStateCallback_6FC78110_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC781A0",
+    "name": "ACT5Q2_Callback14_PlayerJoined_6FC781A0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_Callback14_PlayerJoined_6FC781A0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC78240",
+    "name": "ACT5Q2_Callback15_ClearState04_6FC78240",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_Callback15_ClearState04_6FC78240_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC78260",
+    "name": "ACT5Q2_FindSoldierPrisonGroupIndex_6FC78260",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_FindSoldierPrisonGroupIndex_6FC78260_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC782A0",
+    "name": "ACT5Q2_Callback11_RemovePlayerGuid_6FC782A0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_Callback11_RemovePlayerGuid_6FC782A0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC782E0",
+    "name": "ACT5Q2_CompleteSoldierRescuePartyCallback_6FC782E0",
+    "kernFile": "src/d2kern-113c/game/k2-laneM-0x6fc7-w1-113c.ts",
+    "tsSymbol": "ACT5Q2_CompleteSoldierRescuePartyCallback_6FC782E0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneM-0x6fc7-w1.test.ts"
+  }
+]

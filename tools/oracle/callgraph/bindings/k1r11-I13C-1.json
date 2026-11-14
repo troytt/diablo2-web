@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5DF30",
+    "name": "COLLISION_MoveUnitToRoomAndCoord",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_MoveUnitToRoomAndCoord113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (6 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5FD20",
+    "name": "DRLGMAZE_SpawnAndAssignCornerRoomPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_SpawnAndAssignCornerRoomPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5FE70",
+    "name": "DRLGMAZE_SpawnCrossOrPairSpecialRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_SpawnCrossOrPairSpecialRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD60010",
+    "name": "DRLGMAZE_FillAdjacentRoomsWithPreset",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_FillAdjacentRoomsWithPreset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD606B0",
+    "name": "DRLGMAZE_PlaceOrReplaceSpecialRoomPreset",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceOrReplaceSpecialRoomPreset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7DC90",
+    "name": "DRLG_CollectWarpAndSpecialRoomCenters",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_CollectWarpAndSpecialRoomCenters113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C3B0",
+    "name": "DUNGEON_RemoveClientFromRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_RemoveClientFromRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C460",
+    "name": "DUNGEON_AddClientToRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_AddClientToRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C520",
+    "name": "DUNGEON_CanFreeActiveRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_CanFreeActiveRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8DC90",
+    "name": "DRLGROOMTILE_RasterizeOutdoorRoadsToPreset",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_RasterizeOutdoorRoadsToPreset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9D010",
+    "name": "COLLISION_AllocAndBuildRoomGrid",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_AllocAndBuildRoomGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9D140",
+    "name": "COLLISION_FindFreePosition",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_FindFreePosition113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (6 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8970",
+    "name": "DRLGROOMTILE_SpawnWarpPresetUnit",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_SpawnWarpPresetUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (6 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9090",
+    "name": "DRLGROOMTILE_AllocLevelWarpPresetUnit",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_AllocLevelWarpPresetUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I13C-1.test.ts (4 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCF6A0",
+    "name": "COLLISION_FindAdjacentUnitWithCallback",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_FindAdjacentUnitWithCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneD-ported29.test.ts (real-DLL vectors via k1r13-laneD-ported29-emitter.c -> k1r13-i14d-1.ndjson); tests/oracle/k1/laneC-I13C-1.test.ts (6 real-DLL vectors in tests/fixtures/oracle/k1/i13c-1-vectors.ndjson via k1r11-laneC-it13-emitter.c; status ported per sync-gates.py:241 indirectUnknown caller callback)"
+  }
+]

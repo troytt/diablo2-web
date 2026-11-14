@@ -1,0 +1,101 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7A600",
+    "name": "ITEMS_ReadItemBitstream",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_ReadItemBitstream113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7C0C0",
+    "name": "ITEMS_ReadCompactEarItemFromBitstream",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_ReadCompactEarItemFromBitstream113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7C470",
+    "name": "ITEMS_LoadStatsFromBitstream",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_LoadStatsFromBitstream113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82670",
+    "name": "UNITS_GetAnimDataRecord",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetAnimDataRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD83110",
+    "name": "UNITS_SetUnitAnimMode",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetUnitAnimMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD835F0",
+    "name": "UNITS_UpdateAnimFrame",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_UpdateAnimFrame113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD98BD0",
+    "name": "ITEMMODS_ApplyStateSkillTripletMod",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMMODS_ApplyStateSkillTripletMod113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD99AF0",
+    "name": "ITEMMODS_ApplyItemModProperty",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMMODS_ApplyItemModProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD99F30",
+    "name": "ITEMMODS_RemoveItemModProperty",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMMODS_RemoveItemModProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBB4A0",
+    "name": "MISSILE_ApplyDamageDataToStatList",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "MISSILE_ApplyDamageDataToStatList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBBAA0",
+    "name": "MISSILE_CalculateDamageData",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_CalculateDamageData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I13A-2.test.ts (real-DLL vectors via k1r11-laneA-it13-emitter.c -> i13a-2-vectors.ndjson)"
+  }
+]

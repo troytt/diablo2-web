@@ -1,0 +1,218 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD91D00",
+    "name": "ANIMTBLS_CompareCode8",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "ANIMTBLS_CompareCode8113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DD30",
+    "name": "SKILLS_SetCharges",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetCharges113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DD70",
+    "name": "SKILLS_GetCharges",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetCharges113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DE60",
+    "name": "SKILLS_SetParam0C",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetParam0C113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DEA0",
+    "name": "SKILLS_SetParam4",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetParam4113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DEE0",
+    "name": "SKILLS_SetParam3",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetParam3113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DF20",
+    "name": "SKILLS_SetParam2",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetParam2113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DF60",
+    "name": "SKILLS_SetParam1",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetParam1113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DFA0",
+    "name": "SKILLS_GetParam4",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetParam4113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DFD0",
+    "name": "SKILLS_GetParam3",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetParam3113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E000",
+    "name": "SKILLS_GetParam2",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetParam2113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E030",
+    "name": "SKILLS_GetParam1",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetParam1113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E240",
+    "name": "SKILLS_GetItemSkillInfo",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetItemSkillInfo113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E2B0",
+    "name": "SKILLS_GetOwnerItemGuid",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetOwnerItemGuid113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E3F0",
+    "name": "SKILLS_AllocSkillList",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_AllocSkillList113c",
+    "status": "diff-verified",
+    "diffEvidence": "2 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E6D0",
+    "name": "SKILLS_EvaluateSkillManaCost",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvaluateSkillManaCost113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9EB40",
+    "name": "SKILLS_HasSkillByTxtRecord",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_HasSkillByTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9ECC0",
+    "name": "SKILLS_SetRightSkill",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetRightSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9ED60",
+    "name": "SKILLS_SetLeftSkill",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetLeftSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F000",
+    "name": "SKILLS_FreeSkillList",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_FreeSkillList113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1940",
+    "name": "DATATBLS_GetItemIdFromItemCode",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetItemIdFromItemCode113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCE290",
+    "name": "FIELD_StepFieldCoords",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "FIELD_StepFieldCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCE3D0",
+    "name": "FIELD_FreeField",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "FIELD_FreeField113c",
+    "status": "diff-verified",
+    "diffEvidence": "2 real D2Common.dll differential vectors (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCE410",
+    "name": "FIELD_AllocField",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "FIELD_AllocField113c",
+    "status": "diff-verified",
+    "diffEvidence": "1 real D2Common.dll differential vector (77 total in tests/fixtures/oracle/k1/b036-vectors.ndjson) replayed in tests/oracle/k1/laneB-B036-skills-tbls.test.ts"
+  }
+]

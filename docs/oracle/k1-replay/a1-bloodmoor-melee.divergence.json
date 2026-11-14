@@ -1,0 +1,35 @@
+{
+  "scenario": "a1-bloodmoor-melee",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1800,
+  "strictHorizon": 1071,
+  "posHorizon": 1089,
+  "matchedKernelFrames": 1069,
+  "bootCheck": null,
+  "firstDivergence": {
+    "frame": 1072,
+    "key": "gs",
+    "id": null,
+    "field": "gs",
+    "expected": [
+      1944981566,
+      1245284809
+    ],
+    "actual": [
+      2776820095,
+      811236969
+    ]
+  },
+  "firstPosDivergence": {
+    "frame": 1090,
+    "key": "t1",
+    "id": 9,
+    "field": "mode",
+    "expected": 5,
+    "actual": 1
+  },
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "85e4c36562e5f40232034b08d9ce32d976002fce064bc2dbcde366cd49724ebd",
+  "snapshotSha256": "c37385ef04e1331788a42fdd3afca5a6caf1179a95dc37678cb1840da16fa607"
+}

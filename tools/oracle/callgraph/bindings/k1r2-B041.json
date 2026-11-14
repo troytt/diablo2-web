@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E960",
+    "name": "UNITS_GetField7C",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetField7C_113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E990",
+    "name": "UNITS_SetField7C",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_SetField7C_113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EA30",
+    "name": "UNITS_SetObjectPortalFlags",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_SetObjectPortalFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EA70",
+    "name": "UNITS_GetObjectPortalFlags",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetObjectPortalFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EAF0",
+    "name": "UNITS_GetPlayerActiveWeaponFlags",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetPlayerActiveWeaponFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EB30",
+    "name": "UNITS_SetPlayerActiveWeaponFlags",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_SetPlayerActiveWeaponFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EB70",
+    "name": "UNITS_GetPlayerData",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetPlayerData113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EBB0",
+    "name": "UNITS_GetPlayerName",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetPlayerName113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EC00",
+    "name": "UNITS_SetPlayerName",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_SetPlayerName113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EC60",
+    "name": "UNITS_SetObjectShrineTxt",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_SetObjectShrineTxt113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7ECB0",
+    "name": "UNITS_GetObjectShrineTxt",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetObjectShrineTxt113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7ECF0",
+    "name": "UNITS_GetObjectTxt",
+    "kernFile": "src/d2kern-113c/common/composit.ts",
+    "tsSymbol": "UNITS_GetObjectTxt113c",
+    "status": "diff-verified",
+    "diffEvidence": "48 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b041-vectors.ndjson replayed in tests/oracle/k1/laneA-B041-composit.test.ts"
+  }
+]

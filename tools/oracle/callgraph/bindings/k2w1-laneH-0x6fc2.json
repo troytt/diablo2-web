@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC21020",
+    "name": "PLAYER_GetQuestRecordForDifficulty_6FC21020",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "PLAYER_GetQuestRecordForDifficulty_6FC21020_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21040",
+    "name": "STATLIST_SetUnitStatGoldGuarded_6FC21040",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STATLIST_SetUnitStatGoldGuarded_6FC21040_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC210A0",
+    "name": "CHARSTATS_GetRecordPtrFast_6FC210A0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "CHARSTATS_GetRecordPtrFast_6FC210A0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21160",
+    "name": "SEED_StepSeed64Fast_6FC21160",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SEED_StepSeed64Fast_6FC21160_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21370",
+    "name": "MONSTER_GetInteractDataPtr_6FC21370",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONSTER_GetInteractDataPtr_6FC21370_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21540",
+    "name": "MONSTER_GetMonStatsTxtFromUnit_6FC21540",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONSTER_GetMonStatsTxtFromUnit_6FC21540_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21620",
+    "name": "MONTYPE_TestNestedBit_6FC21620",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONTYPE_TestNestedBit_6FC21620_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21670",
+    "name": "STATLIST_AddUnitStatGoldGuarded_6FC21670",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STATLIST_AddUnitStatGoldGuarded_6FC21670_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC216F0",
+    "name": "UNIQUEITEMS_GetRecordPtrFast_6FC216F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "UNIQUEITEMS_GetRecordPtrFast_6FC216F0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21720",
+    "name": "PLAYER_GetWaypointDataForDifficulty_6FC21720",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "PLAYER_GetWaypointDataForDifficulty_6FC21720_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21740",
+    "name": "SKILLS_GetMaxSkillLevel_6FC21740",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetMaxSkillLevel_6FC21740_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21830",
+    "name": "DATATBLS_GetTableWordAE0_6FC21830",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "DATATBLS_GetTableWordAE0_6FC21830_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC218E0",
+    "name": "MONSTER_GetAiGeneralPtr_6FC218E0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONSTER_GetAiGeneralPtr_6FC218E0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21A40",
+    "name": "SKILLS_EvalLinearParam34_6FC21A40",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_EvalLinearParam34_6FC21A40_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21A90",
+    "name": "SKILLS_EvalLinearParam56_6FC21A90",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_EvalLinearParam56_6FC21A90_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21AE0",
+    "name": "OVERLAY_GetRecordPtrFast_6FC21AE0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "OVERLAY_GetRecordPtrFast_6FC21AE0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21B10",
+    "name": "SKILLS_EvalLinearParam12_6FC21B10",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_EvalLinearParam12_6FC21B10_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21B60",
+    "name": "PETTYPE_GetRecordPtrFast_6FC21B60",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "PETTYPE_GetRecordPtrFast_6FC21B60_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21B90",
+    "name": "SKILLS_GetParam1Fast_6FC21B90",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam1Fast_6FC21B90_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21BC0",
+    "name": "SKILLS_GetParam2Fast_6FC21BC0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam2Fast_6FC21BC0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21BF0",
+    "name": "SKILLS_GetParam3Fast_6FC21BF0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam3Fast_6FC21BF0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21C20",
+    "name": "SKILLS_GetParam4Fast_6FC21C20",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam4Fast_6FC21C20_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21C50",
+    "name": "SKILLS_GetParam5Fast_6FC21C50",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam5Fast_6FC21C50_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21D30",
+    "name": "MONSTATS_FollowSubClassChain_6FC21D30",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONSTATS_FollowSubClassChain_6FC21D30_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21DD0",
+    "name": "MONSTER_GetMonsterDataField2C_6FC21DD0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONSTER_GetMonsterDataField2C_6FC21DD0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21E90",
+    "name": "MONLVL_GetRecordPtrFast_6FC21E90",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONLVL_GetRecordPtrFast_6FC21E90_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21EC0",
+    "name": "SKILLS_GetParam6Fast_6FC21EC0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam6Fast_6FC21EC0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21EF0",
+    "name": "SKILLS_GetParam7Fast_6FC21EF0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_GetParam7Fast_6FC21EF0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC22130",
+    "name": "STORM_TSHashTableLookup_6FC22130",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STORM_TSHashTableLookup_6FC22130_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC22180",
+    "name": "STORM_TSListUnlinkAll_6FC22180",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STORM_TSListUnlinkAll_6FC22180_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC224B0",
+    "name": "STORM_TSListInitDefault_6FC224B0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STORM_TSListInitDefault_6FC224B0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC225F0",
+    "name": "STORM_TSArrayCalcChunkSize_6FC225F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STORM_TSArrayCalcChunkSize_6FC225F0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC22740",
+    "name": "STORM_TSListInitFromPrototype_6FC22740",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STORM_TSListInitFromPrototype_6FC22740_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC22790",
+    "name": "MONSTER_TestUnitMonTypeFlag_6FC22790",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "MONSTER_TestUnitMonTypeFlag_6FC22790_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2B470",
+    "name": "CHECKSUM_ComputeCrc32_6FC2B470",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "CHECKSUM_ComputeCrc32_6FC2B470_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2B670",
+    "name": "OBJRGN_CheckCoordSpacing40_6FC2B670",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "OBJRGN_CheckCoordSpacing40_6FC2B670_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2B700",
+    "name": "OBJRGN_CheckCoordSpacing20_6FC2B700",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "OBJRGN_CheckCoordSpacing20_6FC2B700_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2B800",
+    "name": "OBJRGN_PrependObjectCoordNode_6FC2B800",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "OBJRGN_PrependObjectCoordNode_6FC2B800_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2BE20",
+    "name": "SKILLS_ApplyBloodManaHealthCost_6FC2BE20",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_ApplyBloodManaHealthCost_6FC2BE20_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2BEE0",
+    "name": "SKILLS_SrvSt59_Submerge_6FC2BEE0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt59_Submerge_6FC2BEE0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2C000",
+    "name": "STATES_OnRemoveImpregnatedSpawn_6FC2C000",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "STATES_OnRemoveImpregnatedSpawn_6FC2C000_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2C110",
+    "name": "SKILLS_CanMonsterBeImpregnated_6FC2C110",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_CanMonsterBeImpregnated_6FC2C110_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2C170",
+    "name": "SKILLS_SrvDo147_SyncOwnerPos_6FC2C170",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo147_SyncOwnerPos_6FC2C170_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2C1F0",
+    "name": "SKILLS_FindHostileUseableCorpseInRange_6FC2C1F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_FindHostileUseableCorpseInRange_6FC2C1F0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2C310",
+    "name": "SKILLS_SrvDo128_MinionAttackCmd_6FC2C310",
+    "kernFile": "src/d2kern-113c/game/k2-laneH-0x6fc2-w1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo128_MinionAttackCmd_6FC2C310_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneH-0x6fc2-w1.test.ts"
+  }
+]

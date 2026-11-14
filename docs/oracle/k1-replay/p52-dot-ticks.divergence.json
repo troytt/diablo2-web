@@ -1,0 +1,35 @@
+{
+  "scenario": "p52-dot-ticks",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1200,
+  "strictHorizon": 773,
+  "posHorizon": 789,
+  "matchedKernelFrames": 771,
+  "bootCheck": null,
+  "firstDivergence": {
+    "frame": 774,
+    "key": "gs",
+    "id": null,
+    "field": "gs",
+    "expected": [
+      227515971,
+      1402514428
+    ],
+    "actual": [
+      2985633163,
+      94895175
+    ]
+  },
+  "firstPosDivergence": {
+    "frame": 790,
+    "key": "t1",
+    "id": 9,
+    "field": "mode",
+    "expected": 5,
+    "actual": 1
+  },
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "20352a35775808b51292dcab72f243d8b52a0ca55741b6e43c5577832ea06899",
+  "snapshotSha256": "ee2efb87d09738239c3d9bba4f7c0847b92ba1aedf6f87b2889e045135e8d4bf"
+}

@@ -1,0 +1,335 @@
+[
+  {
+    "va": "0x6FCABD00",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_SendStatByteWordDword",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_SendStatByteWordDword113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCABFC0",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_SendUnitStop",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_SendUnitStop113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCAC570",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_SendPlayerPartyRelationship",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_SendPlayerPartyRelationship113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCACA20",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_SendMonsterAssign",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_SendMonsterAssign113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCAD670",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_Send0x73MissileSync",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_Send0x73MissileSync113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCAE170",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_Send0x5BPlayerInGame",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_Send0x5BPlayerInGame113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCAF5C0",
+    "module": "D2Game",
+    "name": "D2GAME_ARENA_FindPlayerSlotByUnit",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ARENA_FindPlayerSlotByUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCB6920",
+    "module": "D2Game",
+    "name": "D2GAME_SUMMON_BroadcastPlayerPetsToClient",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_SUMMON_BroadcastPlayerPetsToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCBB3B0",
+    "module": "D2Game",
+    "name": "D2GAME_INVENTORY_DestroyUnitInventoryItems",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_INVENTORY_DestroyUnitInventoryItems113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCBBEB0",
+    "module": "D2Game",
+    "name": "D2GAME_PARTY_GetPartyIdForUnit",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PARTY_GetPartyIdForUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCBDCD0",
+    "module": "D2Game",
+    "name": "D2GAME_SUNIT_SyncUnitStateToClient",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_SUNIT_SyncUnitStateToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCBDE10",
+    "module": "D2Game",
+    "name": "D2GAME_SUNIT_SyncRoomUnitsToClient",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_SUNIT_SyncRoomUnitsToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCBF2B0",
+    "module": "D2Game",
+    "name": "D2GAME_MONSTER_ApplyMercStatsOnOwner",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_MONSTER_ApplyMercStatsOnOwner113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCCF610",
+    "module": "D2Game",
+    "name": "D2GAME_MONSTER_HasComponentChoices",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_MONSTER_HasComponentChoices113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCD2760",
+    "module": "D2Game",
+    "name": "D2GAME_PACKET_Send0x65PlayerKillCount",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PACKET_Send0x65PlayerKillCount113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCD27D0",
+    "module": "D2Game",
+    "name": "D2GAME_ARENA_ClearPlayerArenaFlags",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ARENA_ClearPlayerArenaFlags113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCD2C20",
+    "module": "D2Game",
+    "name": "D2GAME_ARENA_BroadcastKillCountsToClients",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ARENA_BroadcastKillCountsToClients113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCD2D40",
+    "module": "D2Game",
+    "name": "D2GAME_ARENA_SyncClientKillCountsOnJoin",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ARENA_SyncClientKillCountsOnJoin113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCD2D90",
+    "module": "D2Game",
+    "name": "D2GAME_ARENA_SyncArenaJoinState",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ARENA_SyncArenaJoinState113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCEB570",
+    "module": "D2Game",
+    "name": "D2GAME_PLRMODES_SendClientWhisperAdapter",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PLRMODES_SendClientWhisperAdapter113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCEB8F0",
+    "module": "D2Game",
+    "name": "D2GAME_PLRMODES_DispatchModeSyncToClient",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PLRMODES_DispatchModeSyncToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCEBDB0",
+    "module": "D2Game",
+    "name": "D2GAME_PLRMODES_BroadcastPlayerJoinNotification",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PLRMODES_BroadcastPlayerJoinNotification113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCEC2F0",
+    "module": "D2Game",
+    "name": "D2GAME_PLRMODES_SendStatToClientOrParty",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PLRMODES_SendStatToClientOrParty113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCED190",
+    "module": "D2Game",
+    "name": "D2GAME_PLRMODES_Send0x0DPlayerStop",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PLRMODES_Send0x0DPlayerStop113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCF1830",
+    "module": "D2Game",
+    "name": "D2GAME_ITEMS_CheckEquipAndAmmoRequirements",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ITEMS_CheckEquipAndAmmoRequirements113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCF1890",
+    "module": "D2Game",
+    "name": "D2GAME_ITEMS_SnapshotUnitStatsAndSkills",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ITEMS_SnapshotUnitStatsAndSkills113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCF1ED0",
+    "module": "D2Game",
+    "name": "D2GAME_ITEMS_RestoreUnitSkillsFromSnapshot",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ITEMS_RestoreUnitSkillsFromSnapshot113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCF51A0",
+    "module": "D2Game",
+    "name": "D2GAME_ITEMS_UpdateAllInventoryAndEquipmentStats",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ITEMS_UpdateAllInventoryAndEquipmentStats113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCF9470",
+    "module": "D2Game",
+    "name": "D2GAME_ITEMSTAT_OnStatChangedCallback",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_ITEMSTAT_OnStatChangedCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCFF780",
+    "module": "D2Game",
+    "name": "D2GAME_SUNIT_GetGameFromUnit",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_SUNIT_GetGameFromUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FCFFC10",
+    "module": "D2Game",
+    "name": "D2GAME_SUNIT_IterateAllLivingPlayers",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_SUNIT_IterateAllLivingPlayers113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FD10130",
+    "module": "D2Game",
+    "name": "D2GAME_PARTY_Send0x8BPartyRelationStatus",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PARTY_Send0x8BPartyRelationStatus113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FD10220",
+    "module": "D2Game",
+    "name": "D2GAME_PARTY_SetPlayerRelationState",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PARTY_SetPlayerRelationState113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FD102F0",
+    "module": "D2Game",
+    "name": "D2GAME_PARTY_EnsurePlayerRelationNode",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PARTY_EnsurePlayerRelationNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FD10480",
+    "module": "D2Game",
+    "name": "D2GAME_PARTY_SyncAllPlayerRelationsOnJoin",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_PARTY_SyncAllPlayerRelationsOnJoin113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FD135C0",
+    "module": "D2Game",
+    "name": "D2GAME_MONSTER_SendMonsterMovementSync",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_MONSTER_SendMonsterMovementSync113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  },
+  {
+    "va": "0x6FD13A40",
+    "module": "D2Game",
+    "name": "D2GAME_MONSTER_SyncMonsterUnitToClient",
+    "kernFile": "src/d2kern-113c/game/boot-init-gap-b-113c.ts",
+    "tsSymbol": "D2GAME_MONSTER_SyncMonsterUnitToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and binary-isomorphic verification in tests/oracle/k1/laneJ3-f1-f2-b.test.ts"
+  }
+]

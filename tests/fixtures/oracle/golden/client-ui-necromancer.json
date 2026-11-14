@@ -1,0 +1,579 @@
+{
+ "case": "necromancer",
+ "label": "town",
+ "save": "tests/fixtures/oracle/saves/necromancer-l40-curses-summons.d2s",
+ "fields": [
+  "sheet.level",
+  "sheet.experience",
+  "sheet.nextLevel",
+  "sheet.strength",
+  "sheet.dexterity",
+  "sheet.defense",
+  "sheet.vitality",
+  "sheet.maxStamina",
+  "sheet.stamina",
+  "sheet.maxLife",
+  "sheet.life",
+  "sheet.energy",
+  "sheet.maxMana",
+  "sheet.mana",
+  "sheet.fireRes",
+  "sheet.coldRes",
+  "sheet.lightRes",
+  "sheet.poisonRes",
+  "sheet.leftSkill",
+  "sheet.rightSkill",
+  "sheet.blockChance",
+  "sheet.leftAttackRating",
+  "sheet.rightAttackRating",
+  "skills.list",
+  "skill.0.level",
+  "skill.0.name",
+  "skill.0.damage",
+  "skill.0.attackRating",
+  "skill.1.level",
+  "skill.1.name",
+  "skill.1.damage",
+  "skill.1.attackRating",
+  "skill.2.level",
+  "skill.2.name",
+  "skill.2.damage",
+  "skill.2.attackRating",
+  "skill.3.level",
+  "skill.3.name",
+  "skill.3.damage",
+  "skill.3.attackRating",
+  "skill.66.level",
+  "skill.66.name",
+  "skill.66.damage",
+  "skill.66.attackRating",
+  "skill.69.level",
+  "skill.70.level",
+  "skill.70.name",
+  "skill.70.damage",
+  "skill.70.attackRating",
+  "skill.71.level",
+  "skill.71.name",
+  "skill.71.damage",
+  "skill.71.attackRating",
+  "skill.72.level",
+  "skill.72.name",
+  "skill.72.damage",
+  "skill.72.attackRating",
+  "skill.76.level",
+  "skill.76.name",
+  "skill.76.damage",
+  "skill.76.attackRating",
+  "skill.77.level",
+  "skill.77.name",
+  "skill.77.damage",
+  "skill.77.attackRating",
+  "skill.82.level",
+  "skill.82.name",
+  "skill.82.damage",
+  "skill.82.attackRating",
+  "skill.87.level",
+  "skill.87.name",
+  "skill.87.damage",
+  "skill.87.attackRating",
+  "skill.91.level",
+  "skill.91.name",
+  "skill.91.damage",
+  "skill.91.attackRating",
+  "skill.217.level",
+  "skill.218.level",
+  "skill.219.level",
+  "skill.220.level",
+  "tooltip.0",
+  "tooltip.1",
+  "tooltip.2",
+  "tooltip.3",
+  "tooltip.66",
+  "tooltip.69",
+  "tooltip.70",
+  "tooltip.71",
+  "tooltip.72",
+  "tooltip.76",
+  "tooltip.77",
+  "tooltip.82",
+  "tooltip.87",
+  "tooltip.91",
+  "tooltip.217",
+  "tooltip.218",
+  "tooltip.219",
+  "tooltip.220"
+ ],
+ "original": {
+  "source": "oracle",
+  "classId": 2,
+  "sheet": {
+   "level": "40",
+   "experience": "18,000,000",
+   "nextLevel": "19,235,252",
+   "strength": "15",
+   "dexterity": "25",
+   "defense": "6",
+   "vitality": "115",
+   "maxStamina": "218",
+   "stamina": "218",
+   "maxLife": "303",
+   "life": "303",
+   "energy": "120",
+   "maxMana": "293",
+   "mana": "293",
+   "fireRes": "0",
+   "coldRes": "0",
+   "lightRes": "0",
+   "poisonRes": "0"
+  },
+  "stats": {
+   "0": 15,
+   "1": 120,
+   "2": 25,
+   "3": 115,
+   "5": 6,
+   "6": 77568,
+   "7": 77696,
+   "8": 75008,
+   "9": 75008,
+   "10": 55808,
+   "11": 55808,
+   "12": 40,
+   "13": 18000000,
+   "21": 2,
+   "22": 4,
+   "67": 100,
+   "68": 100,
+   "69": 100,
+   "72": 15,
+   "73": 15,
+   "172": 2,
+   "350": 69,
+   "351": 10
+  },
+  "leftSkill": 0,
+  "rightSkill": 70,
+  "computed": {
+   "blockChance": 0,
+   "leftAttackRating": 80,
+   "rightAttackRating": 0
+  },
+  "skillList": [
+   0,
+   1,
+   2,
+   3,
+   66,
+   69,
+   70,
+   71,
+   72,
+   76,
+   77,
+   82,
+   87,
+   91,
+   217,
+   218,
+   219,
+   220
+  ],
+  "skills": {
+   "0": {
+    "name": "ATTACK",
+    "damage": "2-4",
+    "attackRating": 80
+   },
+   "1": {
+    "name": "KICK TARGET",
+    "damage": "0-1",
+    "attackRating": null
+   },
+   "2": {
+    "name": "THROW",
+    "damage": null,
+    "attackRating": null
+   },
+   "3": {
+    "name": "UNSUMMON",
+    "damage": null,
+    "attackRating": null
+   },
+   "66": {
+    "name": "AMPLIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "69": {
+    "name": "SKELETON MASTERY",
+    "damage": null,
+    "attackRating": null
+   },
+   "70": {
+    "name": "RAISE SKELETON",
+    "damage": null,
+    "attackRating": null
+   },
+   "71": {
+    "name": "DIM VISION",
+    "damage": null,
+    "attackRating": null
+   },
+   "72": {
+    "name": "WEAKEN",
+    "damage": null,
+    "attackRating": null
+   },
+   "76": {
+    "name": "IRON MAIDEN",
+    "damage": null,
+    "attackRating": null
+   },
+   "77": {
+    "name": "TERROR",
+    "damage": null,
+    "attackRating": null
+   },
+   "82": {
+    "name": "LIFE TAP",
+    "damage": null,
+    "attackRating": null
+   },
+   "87": {
+    "name": "DECREPIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "91": {
+    "name": "LOWER RESIST",
+    "damage": null,
+    "attackRating": null
+   },
+   "217": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "218": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "219": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   },
+   "220": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   }
+  },
+  "tooltips": {
+   "0": [
+    "Attack",
+    "normal attack"
+   ],
+   "1": [
+    "Kick",
+    "kick target"
+   ],
+   "2": [
+    "Throw",
+    "throw equipped item"
+   ],
+   "3": [
+    "Unsummon",
+    "relinquishes control",
+    "of one of your creatures"
+   ],
+   "66": [
+    "Amplify Damage",
+    "curses a group of enemies, increasing",
+    "the non-magic damage they receive",
+    "",
+    "Damage Taken: +100 percent",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 2 yards",
+    "Duration: 8 seconds",
+    "Mana Cost: 4",
+    "",
+    "Next Level",
+    "Radius: 2.6 yards",
+    "Duration: 11 seconds",
+    "Mana Cost: 4"
+   ],
+   "69": [
+    "Skeleton Mastery",
+    "passive - increases life and damage",
+    "of raised skeletons and revived creatures",
+    "",
+    "Current Skill Level: 10",
+    "Skeletons: Life: +80",
+    "Skeletons: Damage: +20",
+    "Magi: Life: +80",
+    "Magi: Improved Missile Damage",
+    "Monsters: Life: +50 percent",
+    "Monsters: Damage: +100 percent",
+    "",
+    "Next Level",
+    "Skeletons: Life: +88",
+    "Skeletons: Damage: +22",
+    "Magi: Life: +88",
+    "Magi: Improved Missile Damage",
+    "Monsters: Life: +55 percent",
+    "Monsters: Damage: +110 percent"
+   ],
+   "70": [
+    "Raise Skeleton",
+    "cast on the corpse of a slain monster,",
+    "this raises a skeleton warrior that",
+    "fights for you",
+    "",
+    "Damage: 61-63",
+    "",
+    "Current Skill Level: 16",
+    "Damage: +91 percent",
+    "Attack: 395",
+    "Defense: 395",
+    "Life: 237",
+    "7 skeletons total",
+    "Mana Cost: 21",
+    "",
+    "Next Level",
+    "Damage: +98 percent",
+    "Attack: 410",
+    "Defense: 410",
+    "Life: 248",
+    "7 skeletons total",
+    "Mana Cost: 22",
+    "",
+    "Raise Skeleton Receives Bonuses From:",
+    "Skeleton Mastery",
+    "Summon Resist"
+   ],
+   "71": [
+    "Dim Vision",
+    "curses a group of monsters,",
+    "reducing their vision radius",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 2.6 yards",
+    "Duration: 7 seconds",
+    "Mana Cost: 9",
+    "",
+    "Next Level",
+    "Radius: 3.3 yards",
+    "Duration: 9 seconds",
+    "Mana Cost: 9"
+   ],
+   "72": [
+    "Weaken",
+    "curses a group of enemies,",
+    "reducing the amount of damage they inflict",
+    "",
+    "Target's Damage: -33 percent",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 6 yards",
+    "Duration: 14 seconds",
+    "Mana Cost: 4",
+    "",
+    "Next Level",
+    "Radius: 6.6 yards",
+    "Duration: 16.4 seconds",
+    "Mana Cost: 4"
+   ],
+   "76": [
+    "Iron Maiden",
+    "curses a group of enemies, causing them",
+    "to damage themselves when damaging others",
+    "",
+    "Current Skill Level: 1",
+    "200 percent damage returned",
+    "Duration: 12 seconds",
+    "Radius: 4.6 yards",
+    "Mana Cost: 5",
+    "",
+    "Next Level",
+    "225 percent damage returned",
+    "Duration: 14.4 seconds",
+    "Radius: 4.6 yards",
+    "Mana Cost: 5"
+   ],
+   "77": [
+    "Terror",
+    "curses a group of monsters,",
+    "causing them to flee in terror",
+    "",
+    "Radius: 2.6 yards",
+    "",
+    "Current Skill Level: 1",
+    "Duration: 8 seconds",
+    "Mana Cost: 7",
+    "",
+    "Next Level",
+    "Duration: 9 seconds",
+    "Mana Cost: 7"
+   ],
+   "82": [
+    "Life Tap",
+    "curses a group of monsters so that",
+    "damaging them gives the attacker life",
+    "",
+    "Heals: 50 percent of attack damage",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 2.6 yards",
+    "Duration: 16 seconds",
+    "Mana Cost: 9",
+    "",
+    "Next Level",
+    "Radius: 3.3 yards",
+    "Duration: 18.4 seconds",
+    "Mana Cost: 9"
+   ],
+   "87": [
+    "Decrepify",
+    "curses a group of enemies to make them",
+    "slow, weak and take amplified damage",
+    "",
+    "Radius: 4 yards",
+    "",
+    "Current Skill Level: 1",
+    "Duration: 4 seconds",
+    "Mana Cost: 11",
+    "",
+    "Next Level",
+    "Duration: 4.6 seconds",
+    "Mana Cost: 11"
+   ],
+   "91": [
+    "Lower Resist",
+    "curses an enemy to take more damage from all magical attacks",
+    "lowers resistances of monsters",
+    "lowers maximum resistances of hostile players",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 4.6 yards",
+    "Duration: 20 seconds",
+    "Resist All: -31 percent",
+    "Mana Cost: 22",
+    "",
+    "Next Level",
+    "Radius: 5.3 yards",
+    "Duration: 22 seconds",
+    "Resist All: -37 percent",
+    "Mana Cost: 22"
+   ],
+   "217": [
+    "Scroll of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "218": [
+    "Tome of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "219": [
+    "Scroll of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "220": [
+    "Tome of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ]
+  },
+  "skillLevels": {
+   "0": [
+    1,
+    1
+   ],
+   "1": [
+    1,
+    1
+   ],
+   "2": [
+    1,
+    1
+   ],
+   "3": [
+    1,
+    1
+   ],
+   "66": [
+    1,
+    1
+   ],
+   "69": [
+    10,
+    10
+   ],
+   "70": [
+    15,
+    16
+   ],
+   "71": [
+    1,
+    1
+   ],
+   "72": [
+    1,
+    1
+   ],
+   "76": [
+    1,
+    1
+   ],
+   "77": [
+    1,
+    1
+   ],
+   "82": [
+    1,
+    1
+   ],
+   "87": [
+    1,
+    1
+   ],
+   "91": [
+    1,
+    1
+   ],
+   "217": [
+    1,
+    1
+   ],
+   "218": [
+    1,
+    1
+   ],
+   "219": [
+    1,
+    1
+   ],
+   "220": [
+    1,
+    1
+   ]
+  }
+ }
+}

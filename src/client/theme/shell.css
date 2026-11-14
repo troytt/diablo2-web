@@ -1,0 +1,168 @@
+#d2-toolbar-lang-btn {
+  display: none !important;
+}
+
+#d2-boot-loading.d2-loading {
+  overflow: hidden;
+  gap: 28px;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 108%, rgba(150, 46, 14, 0.32), transparent 70%),
+    radial-gradient(circle at 50% 42%, #16100a 0%, #060403 70%, #020101 100%);
+  animation: d2-loading-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes d2-loading-glow {
+  to { background-size: 108% 108%, 100% 100%; }
+}
+
+#d2-boot-loading.d2-loading .d2-boot-panel {
+  position: relative;
+  z-index: 1;
+  width: 380px;
+  padding: 0;
+  gap: 18px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+#d2-boot-loading.d2-loading .d2-boot-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-shadow: none;
+}
+
+#d2-boot-loading.d2-loading .d2-loading__name {
+  font-size: 44px;
+  letter-spacing: 0.14em;
+  background: linear-gradient(180deg, #f3dc9a 0%, #c99a45 48%, #7c5420 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(214, 120, 40, 0.28));
+}
+
+#d2-boot-loading.d2-loading .d2-loading__expansion {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  color: #9c8456;
+}
+
+#d2-boot-loading.d2-loading .d2-boot-subtitle,
+#d2-boot-loading.d2-loading .d2-boot-file-label,
+#d2-boot-loading.d2-loading #d2-boot-progress-count {
+  display: none;
+}
+
+#d2-boot-loading.d2-loading #d2-boot-progress-bar {
+  height: 2px;
+  overflow: visible;
+  background: rgba(156, 124, 66, 0.18);
+  border: none;
+  box-shadow: none;
+}
+
+#d2-boot-loading.d2-loading #d2-boot-progress-fill {
+  position: relative;
+  background: linear-gradient(90deg, rgba(120, 30, 12, 0.4), #c0461c 70%, #f0a040);
+  box-shadow: 0 0 10px rgba(240, 140, 50, 0.55);
+  transition: width 240ms ease-out;
+}
+
+#d2-boot-loading.d2-loading #d2-boot-progress-fill::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffd38a;
+  box-shadow: 0 0 8px 2px rgba(255, 170, 70, 0.8);
+}
+
+#d2-boot-loading.d2-loading #d2-boot-progress-percent {
+  inset: auto 0 -22px auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: #9c8456;
+  text-shadow: none;
+}
+
+#d2-boot-loading.d2-loading .d2-boot-meta {
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+#d2-boot-loading.d2-loading #d2-boot-progress-file {
+  max-width: 300px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #b9a479;
+}
+
+#d2-boot-loading.d2-loading .d2-loading__tip {
+  position: absolute;
+  z-index: 1;
+  bottom: 9%;
+  max-width: 520px;
+  margin: 0;
+  padding: 0 24px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  color: #8f7d5a;
+  animation: d2-loading-tip 5.2s ease-in-out infinite;
+}
+
+@keyframes d2-loading-tip {
+  0%, 100% { opacity: 0; }
+  12%, 88% { opacity: 1; }
+}
+
+#d2-boot-loading.d2-loading .d2-loading__embers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: d2-loading-fade-in 1.5s ease-out both;
+}
+
+@keyframes d2-loading-fade-in {
+  from { opacity: 0; }
+}
+
+#d2-boot-loading.d2-loading .d2-loading__ember {
+  position: absolute;
+  bottom: -8px;
+  left: var(--x);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffb15c;
+  box-shadow: 0 0 6px 1px rgba(255, 120, 40, 0.7);
+  opacity: 0;
+  animation: d2-loading-ember var(--life) linear var(--delay) infinite;
+}
+
+@keyframes d2-loading-ember {
+  0% { opacity: 0; transform: translate(0, 0) scale(1); }
+  10% { opacity: 0.8; }
+  70% { opacity: 0.35; }
+  100% { opacity: 0; transform: translate(var(--drift), -70vh) scale(0.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #d2-boot-loading.d2-loading,
+  #d2-boot-loading.d2-loading .d2-loading__embers,
+  #d2-boot-loading.d2-loading .d2-loading__ember,
+  #d2-boot-loading.d2-loading .d2-loading__tip {
+    animation: none;
+  }
+  #d2-boot-loading.d2-loading .d2-loading__ember {
+    display: none;
+  }
+}

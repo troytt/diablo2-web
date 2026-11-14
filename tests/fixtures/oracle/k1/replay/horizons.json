@@ -1,0 +1,27 @@
+{
+  "a1-town-walk": {
+    "bootFrame": 2,
+    "strict": 750,
+    "pos": 750
+  },
+  "a1c-bloodmoor-fallen": {
+    "bootFrame": 2,
+    "strict": 2000,
+    "pos": 2000
+  },
+  "a1-bloodmoor-melee": {
+    "bootFrame": 2,
+    "strict": 1071,
+    "pos": 1089
+  },
+  "p52-dot-ticks": {
+    "bootFrame": 2,
+    "strict": 773,
+    "pos": 789
+  },
+  "p52-item-defense": {
+    "bootFrame": 2,
+    "strict": 696,
+    "pos": 709
+  }
+}

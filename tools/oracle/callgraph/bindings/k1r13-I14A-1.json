@@ -1,0 +1,92 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5A8E0",
+    "name": "DRLGPRESET_FreeDrlgMapList",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_FreeDrlgMapList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5B320",
+    "name": "DRLGPRESET_SpawnPresetUnits",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_SpawnPresetUnits113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5B560",
+    "name": "DRLGPRESET_ParseDS1File",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_ParseDS1File113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5BBC0",
+    "name": "DRLGPRESET_AllocLevelPresetInfo",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_AllocLevelPresetInfo113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5BE50",
+    "name": "DRLGPRESET_AcquireCachedPresetFile",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_AcquireCachedPresetFile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5BF70",
+    "name": "DRLGPRESET_LoadPresetRoomMap",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_LoadPresetRoomMap113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5C060",
+    "name": "DRLGPRESET_ProcessPresetMap",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_ProcessPresetMap113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5C690",
+    "name": "DRLGPRESET_BuildPresetRoomsFromMap",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_BuildPresetRoomsFromMap113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5C940",
+    "name": "DRLGROOMTILE_BuildPresetRoomTiles",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_BuildPresetRoomTiles113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5CD10",
+    "name": "DRLGPRESET_InitLevelPresetRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_InitLevelPresetRooms113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-1.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-1-vectors.ndjson)"
+  }
+]

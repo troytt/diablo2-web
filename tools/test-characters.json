@@ -1,0 +1,170 @@
+{
+  "TestFireSorc": {
+    "class": "Sorceress",
+    "level": 75,
+    "attributes": { "strength": 156, "dexterity": 50, "vitality": 320, "energy": 50 },
+    "gold": 250000,
+    "stashGold": 1500000,
+    "skills": {
+      "Fire Bolt": 20, "Warmth": 1, "Inferno": 1, "Blaze": 1, "Fire Ball": 20, "Fire Wall": 1, "Enchant": 1,
+      "Meteor": 20, "Fire Mastery": 20, "Hydra": 1, "Ice Bolt": 1, "Frozen Armor": 1, "Charged Bolt": 1,
+      "Telekinesis": 1, "Static Field": 1, "Teleport": 1
+    },
+    "leftSkill": "Fire Ball",
+    "rightSkill": "Teleport",
+    "quests": { "Den of Evil": "completed", "Sisters' Burial Grounds": "completed", "Tools of the Trade": "reward pending" },
+    "equipped": {
+      "Head": { "unique": "Harlequin Crest" },
+      "Neck": { "unique": "The Mahim-Oak Curio" },
+      "Torso": { "unique": "Skin of the Vipermagi" },
+      "Right Arm": { "unique": "Eschuta's temper" },
+      "Left Arm": { "unique": "Lidless Wall" },
+      "Right Ring": { "unique": "The Stone of Jordan" },
+      "Left Ring": { "unique": "Nagelring" },
+      "Belt": { "unique": "Arachnid Mesh" },
+      "Feet": { "unique": "Wartraveler" },
+      "Gloves": { "unique": "Magefist" }
+    },
+    "belt": [
+      { "item": "Greater Healing Potion" }, { "item": "Greater Healing Potion" }, { "item": "Greater Mana Potion" }, { "item": "Full Rejuv Potion" },
+      { "item": "Greater Healing Potion" }, { "item": "Greater Healing Potion" }, { "item": "Greater Mana Potion" }, { "item": "Full Rejuv Potion" }
+    ],
+    "inventory": [
+      { "item": "Town Portal Book", "quantity": 20 },
+      { "item": "Identify Book", "quantity": 20 },
+      { "unique": "Annihilus" },
+      { "unique": "Gheed's Fortune" },
+      { "item": "Ber Rune" },
+      { "item": "Ist Rune" },
+      { "item": "Tal Rune" },
+      { "item": "Perfect Diamond" },
+      { "item": "Chipped Ruby" },
+      { "unique": "The Oculus", "identified": false },
+      { "set": "Tal Rasha's Horadric Crest" },
+      { "item": "Grand Crown" },
+      { "item": "Short Sword" },
+      { "item": "Quilted Armor" },
+      { "item": "Javelin" },
+      { "item": "Sash(L)" }
+    ],
+    "stash": [
+      { "item": "Shael Rune" },
+      { "unique": "Harlequin Crest" }
+    ]
+  },
+  "TestHammerdin": {
+    "class": "Paladin",
+    "level": 82,
+    "attributes": { "strength": 135, "dexterity": 75, "vitality": 350, "energy": 40 },
+    "gold": 600000,
+    "stashGold": 2000000,
+    "skills": {
+      "Might": 1, "Prayer": 1, "Holy Fire": 1, "Thorns": 1, "Defiance": 1, "Blessed Aim": 20, "Concentration": 20,
+      "Vigor": 20, "Smite": 1, "Charge": 1, "Holy Shield": 1, "Blessed Hammer": 20, "Sacrifice": 1, "Zeal": 1
+    },
+    "leftSkill": "Blessed Hammer",
+    "rightSkill": "Concentration",
+    "quests": { "Den of Evil": "completed", "Tools of the Trade": "reward pending" },
+    "equipped": {
+      "Head": { "unique": "Harlequin Crest" },
+      "Neck": { "unique": "Highlord's Wrath" },
+      "Torso": { "unique": "Shaftstop" },
+      "Right Arm": { "unique": "Hand of Blessed Light" },
+      "Left Arm": { "unique": "Herald of Zakarum" },
+      "Right Ring": { "unique": "The Stone of Jordan" },
+      "Left Ring": { "unique": "Bul Katho's Wedding Band" },
+      "Belt": { "unique": "Verdugo's Hearty Cord" },
+      "Feet": { "unique": "Gorerider" },
+      "Gloves": { "unique": "Bloodfist" }
+    },
+    "belt": [
+      { "item": "Greater Healing Potion" }, { "item": "Greater Healing Potion" }, { "item": "Greater Mana Potion" }, { "item": "Full Rejuv Potion" }
+    ],
+    "inventory": [
+      { "item": "Town Portal Book", "quantity": 20 },
+      { "item": "Identify Book", "quantity": 20 },
+      { "unique": "Annihilus" },
+      { "item": "Vex Rune" },
+      { "item": "Lum Rune" },
+      { "item": "Perfect Amethyst" },
+      { "unique": "Windforce" },
+      { "set": "Immortal King's Stone Crusher" },
+      { "item": "Sacred Targe", "sockets": 4 },
+      { "item": "Wand" },
+      { "item": "Studded Leather" },
+      { "item": "Light Belt" }
+    ],
+    "stash": []
+  },
+  "TestBowazon": {
+    "class": "Amazon",
+    "level": 70,
+    "attributes": { "strength": 95, "dexterity": 220, "vitality": 260, "energy": 25 },
+    "gold": 120000,
+    "stashGold": 500000,
+    "skills": {
+      "Magic Arrow": 1, "Fire Arrow": 1, "Inner Sight": 1, "Critical Strike": 20, "Multiple Shot": 20, "Cold Arrow": 1,
+      "Dodge": 1, "Slow Missiles": 1, "Avoid": 1, "Guided Arrow": 20, "Penetrate": 10, "Evade": 1, "Strafe": 20, "Pierce": 10,
+      "Decoy": 1, "Valkyrie": 1
+    },
+    "leftSkill": "Strafe",
+    "rightSkill": "Guided Arrow",
+    "quests": { "Den of Evil": "completed", "Tools of the Trade": "reward pending" },
+    "equipped": {
+      "Head": { "unique": "Nightwing's Veil" },
+      "Neck": { "unique": "The Cat's Eye" },
+      "Torso": { "unique": "Skullder's Ire" },
+      "Right Arm": { "unique": "Lycander's Aim" },
+      "Right Ring": { "unique": "Raven Frost" },
+      "Left Ring": { "unique": "Nagelring" },
+      "Belt": { "unique": "Nosferatu's Coil" },
+      "Feet": { "unique": "Wartraveler" },
+      "Gloves": { "unique": "Lavagout" }
+    },
+    "belt": [
+      { "item": "Greater Healing Potion" }, { "item": "Greater Healing Potion" }, { "item": "Greater Mana Potion" }, { "item": "Full Rejuv Potion" }
+    ],
+    "inventory": [
+      { "item": "Town Portal Book", "quantity": 20 },
+      { "item": "Arrows", "quantity": 350 },
+      { "unique": "Windforce" },
+      { "unique": "Eschuta's temper" },
+      { "item": "Ohm Rune" },
+      { "item": "Perfect Topaz" },
+      { "item": "Hydra Bow" },
+      { "item": "Scepter" },
+      { "item": "Bone Wand" },
+      { "item": "Leather Armor" }
+    ],
+    "stash": []
+  },
+  "TestFreshBarb": {
+    "class": "Barbarian",
+    "level": 12,
+    "attributes": { "strength": 60, "dexterity": 30, "vitality": 60, "energy": 10 },
+    "gold": 9000,
+    "stashGold": 0,
+    "skills": { "Bash": 5, "Howl": 1, "Leap": 1, "Double Swing": 4, "Sword Mastery": 1 },
+    "leftSkill": "Bash",
+    "rightSkill": "Howl",
+    "quests": { "Den of Evil": "completed", "Tools of the Trade": "reward pending" },
+    "equipped": {
+      "Right Arm": { "item": "Broad Sword" },
+      "Torso": { "item": "Ring Mail" }
+    },
+    "belt": [{ "item": "Lesser Healing Potion" }, { "item": "Lesser Healing Potion" }],
+    "inventory": [
+      { "item": "Town Portal Scroll" },
+      { "item": "Belt(M)" },
+      { "item": "Hard Leather Armor" },
+      { "item": "Long Sword" },
+      { "item": "Large Shield" },
+      { "item": "Short Bow" },
+      { "item": "Bracers(M)" },
+      { "item": "Skull Cap" },
+      { "item": "Chipped Saphire" },
+      { "item": "El Rune" }
+    ],
+    "stash": []
+  }
+}

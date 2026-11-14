@@ -1,0 +1,87 @@
+{
+  "fn": "ITEMS_CheckNotBrokenOrUnequipping",
+  "module": "D2Common",
+  "va": "0x6FD73EF0",
+  "size": 67,
+  "conv": {
+    "stack": 1,
+    "regs": [],
+    "calleePops": 4,
+    "returns": "eax"
+  },
+  "tables": "none",
+  "fill": "rand:0x73EF",
+  "images": {
+    "unit": { "size": 244 },
+    "itemData": { "size": 128 }
+  },
+  "vectors": [
+    {
+      "label": "null-item",
+      "stack": [0]
+    },
+    {
+      "label": "unmapped-item-faults",
+      "stack": ["0x00000004"]
+    },
+    {
+      "label": "non-item-player",
+      "init": [
+        { "img": "unit", "off": "0x00", "u32": 0 },
+        { "img": "unit", "off": "0x14", "u32": "&itemData" },
+        { "img": "itemData", "off": "0x18", "u32": "0x00004100" }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "item-null-itemdata",
+      "init": [
+        { "img": "unit", "off": "0x00", "u32": 4 },
+        { "img": "unit", "off": "0x14", "u32": 0 }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "item-unmapped-itemdata-faults",
+      "init": [
+        { "img": "unit", "off": "0x00", "u32": 4 },
+        { "img": "unit", "off": "0x14", "u32": "0x00000004" }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "item-flags-base",
+      "init": [
+        { "img": "unit", "off": "0x00", "u32": 4 },
+        { "img": "unit", "off": "0x14", "u32": "&itemData" },
+        { "img": "itemData", "off": "0x18", "u32": 0 }
+      ],
+      "stack": ["&unit"]
+    }
+  ],
+  "sweeps": [
+    {
+      "base": "non-item-player",
+      "labelPrefix": "unit-type",
+      "field": { "img": "unit", "off": "0x00", "type": "i32" },
+      "values": [0, 1, 2, 3, 5, 6, -1]
+    },
+    {
+      "base": "item-flags-base",
+      "labelPrefix": "item-flags",
+      "field": { "img": "itemData", "off": "0x18", "type": "u32" },
+      "values": [
+        0,
+        1,
+        "0x000000FF",
+        "0x00000100",
+        "0x00000200",
+        "0x00003EFF",
+        "0x00004000",
+        "0x00004100",
+        "0xFFFFBEFF",
+        "0xFFFFFFFF"
+      ]
+    }
+  ]
+}

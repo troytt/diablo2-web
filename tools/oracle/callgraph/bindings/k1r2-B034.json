@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD59610",
+    "name": "DRLGPRESET_ReadFileData",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_ReadFileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD59700",
+    "name": "DRLGPRESET_GetFileSize",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_GetFileSize113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD59D90",
+    "name": "DRLGPRESET_FreeSaveHeaderBlock",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_FreeSaveHeaderBlock113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD59DE0",
+    "name": "DRLGPRESET_CloneSaveHeaderBlock",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_CloneSaveHeaderBlock113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD59FA0",
+    "name": "DRLGPRESET_FreeDrlgFile",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_FreeDrlgFile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5A440",
+    "name": "DRLGPRESET_FreePresetRoomGrids",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGPRESET_FreePresetRoomGrids113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5AA80",
+    "name": "DRLGPRESET_BuildRoomTombCoords",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_BuildRoomTombCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5BC60",
+    "name": "DRLGPRESET_AllocDrlgMap",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_AllocDrlgMap113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86760",
+    "name": "SEED_GenerateLoopSeed",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "SEED_GenerateLoopSeed113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86840",
+    "name": "DRLGGRID_AllocGridWindowRowOffsets",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_AllocGridWindowRowOffsets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86950",
+    "name": "DRLGGRID_AllocAndInitGridCells",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_AllocAndInitGridCells113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD0F70",
+    "name": "DRLGLOGIC_FreeRoomLogicalInfo",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGLOGIC_FreeRoomLogicalInfo113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B034-preset-grid.test.ts (4 real-DLL vectors; 48 total in tests/fixtures/oracle/k1/b034-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  }
+]

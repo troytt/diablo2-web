@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FDBC230",
+    "name": "DATATBLS_UnusedStub10469",
+    "kernFile": "src/d2kern-113c/tables/lvl-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_UnusedStub10469_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBC990",
+    "name": "DATATBLS_GetLvlTypesTxtRecord",
+    "kernFile": "src/d2kern-113c/tables/lvl-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetLvlTypesTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBCB20",
+    "name": "DATATBLS_GetLevelDefRecord",
+    "kernFile": "src/d2kern-113c/tables/lvl-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetLevelDefRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBCCC0",
+    "name": "DATATBLS_GetLevelsTxtRecord",
+    "kernFile": "src/d2kern-113c/tables/lvl-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetLevelsTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1280",
+    "name": "DATATBLS_GetGambleDataTables",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetGambleDataTables113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC17E0",
+    "name": "DATATBLS_GetRareAffixDataTables",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetRareAffixDataTables113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1870",
+    "name": "DATATBLS_GetMagicAffixDataTables",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetMagicAffixDataTables113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC1A40",
+    "name": "DATATBLS_GetItemDataTables",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetItemDataTables113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAC50",
+    "name": "PATH_AStar_PropagateNewFScoreToChildren",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "PATH_AStar_PropagateNewFScoreToChildren113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAED0",
+    "name": "PATH_AStar_FindPointInVisitedCache",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "PATH_AStar_FindPointInVisitedCache113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAF20",
+    "name": "PATH_AStar_GetNodeFromPendingCache",
+    "kernFile": "src/d2kern-113c/tables/item-tbls-113c.ts",
+    "tsSymbol": "PATH_AStar_GetNodeFromPendingCache113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBB70",
+    "name": "DRLGROOM_SetStatusLink",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_SetStatusLink113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBC60",
+    "name": "DRLGROOM_SetStatusLink3",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_SetStatusLink3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBCD0",
+    "name": "DRLGROOM_SetStatusLink1",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_SetStatusLink1_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBD40",
+    "name": "DRLGROOM_SetStatusLink0",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_SetStatusLink0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCC4A0",
+    "name": "DATATBLS_CalcMissileSubLoopFrames",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_CalcMissileSubLoopFrames113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b006-vectors.json replayed in tests/oracle/k1/laneB-B006-tables.test.ts"
+  }
+]

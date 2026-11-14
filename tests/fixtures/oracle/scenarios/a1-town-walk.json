@@ -1,0 +1,15 @@
+{
+  "name": "a1-town-walk",
+  "description": "Level 1 Barbarian, Act 1 Rogue Encampment, seed 12345: idle, run east 10 subtiles, walk back, run south, run north-east, run home. 30 seconds.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/a1-barbarian-l1.d2s",
+  "difficulty": 0,
+  "frames": 750,
+  "inputs": [
+    { "frame": 50, "c2s": "031f161e17", "note": "RunToLocation (5663,5918)" },
+    { "frame": 150, "c2s": "0115161e17", "note": "WalkToLocation (5653,5918)" },
+    { "frame": 260, "c2s": "0315163417", "note": "RunToLocation (5653,5940)" },
+    { "frame": 400, "c2s": "0320161017", "note": "RunToLocation (5664,5904)" },
+    { "frame": 550, "c2s": "0315161e17", "note": "RunToLocation (5653,5918)" }
+  ]
+}

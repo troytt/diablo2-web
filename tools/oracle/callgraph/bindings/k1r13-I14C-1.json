@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD953D0",
+    "name": "DRLGWARP_LinkWarpRoomExByDir",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGWARP_LinkWarpRoomExByDir113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95550",
+    "name": "DRLGROOM_LinkRoomAndWarps",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_LinkRoomAndWarps113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95990",
+    "name": "ITEMMODS_ApplyPropertyById",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplyPropertyById113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95AA0",
+    "name": "ITEMMODS_ApplyItemProperty",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplyItemProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95F90",
+    "name": "ITEMMODS_ApplySetItemBonusProps",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplySetItemBonusProps113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD960B0",
+    "name": "ITEMS_ApplyItemQualityMods",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_ApplyItemQualityMods113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD96770",
+    "name": "ITEMS_ApplyRunewordProps",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_ApplyRunewordProps113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD97730",
+    "name": "ITEMS_ApplySinglePropAndEthereal",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_ApplySinglePropAndEthereal113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA1870",
+    "name": "SKILLS_FindMeleeTargetPosition",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_FindMeleeTargetPosition113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA2660",
+    "name": "SKILLS_AddSkillToUnit",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_AddSkillToUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA28B0",
+    "name": "SKILLS_RemoveOrDecrementSkillFromUnit",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_RemoveOrDecrementSkillFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA29E0",
+    "name": "SKILLS_InitCharStartSkills",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_InitCharStartSkills113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA2AE0",
+    "name": "SKILLS_RefreshPassiveAuraSkills",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_RefreshPassiveAuraSkills113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA2BC0",
+    "name": "SKILLS_SetSkillLevelOnUnit",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetSkillLevelOnUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4C70",
+    "name": "MONSTERS_GetCompCode",
+    "kernFile": "src/d2kern-113c/common/monsters.ts",
+    "tsSymbol": "MONSTERS_GetCompCode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-1.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-1-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  }
+]

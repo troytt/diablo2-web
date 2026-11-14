@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD767F0",
+    "name": "ITEMS_CalcWeaponAttackSpeed",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CalcWeaponAttackSpeed113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93C30",
+    "name": "UNITS_GetAnimDataStringOrPath",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "UNITS_GetAnimDataStringOrPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD98340",
+    "name": "ITEMMODS_ApplyChargedSkillProperty",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplyChargedSkillProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD98630",
+    "name": "ITEMMODS_ApplyMaxDamagePercentProperty",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplyMaxDamagePercentProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD987C0",
+    "name": "ITEMMODS_ApplyMinDamagePercentProperty",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplyMinDamagePercentProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD997E0",
+    "name": "ITEMMODS_ApplyEnhancedDamageProperty",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMMODS_ApplyEnhancedDamageProperty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E7A0",
+    "name": "SKILLS_EvalSkillSynergyOrMasteryCalc",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalSkillSynergyOrMasteryCalc113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E900",
+    "name": "SKILLS_GetSkillPeriodicDelayOrLength",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillPeriodicDelayOrLength113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9EA50",
+    "name": "SKILLS_GetSkillToHitBonus",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillToHitBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0360",
+    "name": "SKILLS_GetSkillElemMaxDamage",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillElemMaxDamage113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0460",
+    "name": "SKILLS_GetSkillElemMinDamage",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillElemMinDamage113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0CE0",
+    "name": "SKILLS_CalcUnitVelocityDivided",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CalcUnitVelocityDivided113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA1070",
+    "name": "SKILLS_GetSkillCalcFieldById",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillCalcFieldById113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA1AB0",
+    "name": "SKILLS_EvalCalcSkillFieldPair",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalCalcSkillFieldPair113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA1AF0",
+    "name": "SKILLS_EvalCalcUnitSkillFieldByCtx",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalCalcUnitSkillFieldByCtx113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA1B60",
+    "name": "SKILLS_SkillCalcVarCallback",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SkillCalcVarCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i12b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r9-laneB-it12-emitter.c) replayed in tests/oracle/k1/laneB-I12B-1.test.ts"
+  }
+]

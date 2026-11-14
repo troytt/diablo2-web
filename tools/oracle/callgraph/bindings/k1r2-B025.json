@@ -1,0 +1,164 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD84990",
+    "name": "PATH_SetCurrentRoomInvalid",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetCurrentRoomInvalid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD849D0",
+    "name": "PATH_SetTargetPos",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetTargetPos113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84A00",
+    "name": "PATH_ClearNextRoom",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ClearNextRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84A10",
+    "name": "PATH_GetNextRoom",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetNextRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84A40",
+    "name": "PATH_GetLastPointY",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetLastPointY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84A60",
+    "name": "PATH_GetLastPointX",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetLastPointX113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84A80",
+    "name": "PATH_GetPrevTargetY",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetPrevTargetY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84A90",
+    "name": "PATH_GetPrevTargetX",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetPrevTargetX113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84AA0",
+    "name": "PATH_GetFirstPointY",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetFirstPointY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84AB0",
+    "name": "PATH_GetFirstPointX",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetFirstPointX113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84BE0",
+    "name": "PATH_ForceDirection",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ForceDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84C00",
+    "name": "PATH_GetNewDirection",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetNewDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84C10",
+    "name": "PATH_GetDirection",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84C30",
+    "name": "PATH_GetPathPoints",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetPathPoints113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84C60",
+    "name": "PATH_GetNumberOfPathPoints",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetNumberOfPathPoints113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84CB0",
+    "name": "PATH_ClearPathPointsAndFlag0x20",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ClearPathPointsAndFlag0x20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84CE0",
+    "name": "PATH_SetAcceleration",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetAcceleration113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84D10",
+    "name": "PATH_SetMaxVelocity",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetMaxVelocity113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B025-path.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  }
+]

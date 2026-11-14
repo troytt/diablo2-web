@@ -1,0 +1,830 @@
+[
+  {
+    "va": "0x6FC2E5D0",
+    "module": "D2Game",
+    "name": "ITEMS_GetDropItemLevel",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_GetDropItemLevel113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2E930",
+    "module": "D2Game",
+    "name": "ITEMS_DropGoldPileAtUnit",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_DropGoldPileAtUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2EA10",
+    "module": "D2Game",
+    "name": "ITEMS_GetQualityBonusDivisor",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_GetQualityBonusDivisor113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2EA70",
+    "module": "D2Game",
+    "name": "ITEMS_GetQualityMinValue",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_GetQualityMinValue113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2EBB0",
+    "module": "D2Game",
+    "name": "ITEMS_EvalTreasureClassFactor",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_EvalTreasureClassFactor113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2EC90",
+    "module": "D2Game",
+    "name": "ITEMS_RollQualityThreshold",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_RollQualityThreshold113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2EE90",
+    "module": "D2Game",
+    "name": "ITEMS_ApplySocketAndEtherealBonuses",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_ApplySocketAndEtherealBonuses113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2F260",
+    "module": "D2Game",
+    "name": "ITEMS_InitScrollOrTomeStats",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_InitScrollOrTomeStats113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2FB70",
+    "module": "D2Game",
+    "name": "ITEMS_ExpireGroundItemsInAct",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_ExpireGroundItemsInAct113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC2FC40",
+    "module": "D2Game",
+    "name": "ITEMS_RollItemQuality",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_RollItemQuality113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC30160",
+    "module": "D2Game",
+    "name": "ITEMS_RollEarOrClassItem",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_RollEarOrClassItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC30550",
+    "module": "D2Game",
+    "name": "ITEMS_PickUniqueItem",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_PickUniqueItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC307B0",
+    "module": "D2Game",
+    "name": "ITEMS_CheckSetItemEligibility",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_CheckSetItemEligibility113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC30A20",
+    "module": "D2Game",
+    "name": "ITEMS_GenerateMagicOrRareAffixes",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_GenerateMagicOrRareAffixes113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC31070",
+    "module": "D2Game",
+    "name": "ITEMS_InitCreatedItemStats",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_InitCreatedItemStats113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC31490",
+    "module": "D2Game",
+    "name": "ITEMS_FinalizeCreatedItem",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_FinalizeCreatedItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC31880",
+    "module": "D2Game",
+    "name": "ITEMS_CreateItem",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_CreateItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC32380",
+    "module": "D2Game",
+    "name": "ITEMS_ChooseTreasureClassItem",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_ChooseTreasureClassItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC32D60",
+    "module": "D2Game",
+    "name": "ITEMS_DropMonsterTreasure",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_DropMonsterTreasure113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC32EE0",
+    "module": "D2Game",
+    "name": "ITEMS_ApplyItemDurabilityLoss",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_ApplyItemDurabilityLoss113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC33DE0",
+    "module": "D2Game",
+    "name": "ITEMS_SpawnDroppedItemAtCoords",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "ITEMS_SpawnDroppedItemAtCoords113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC3EB20",
+    "module": "D2Game",
+    "name": "AIGENERAL_ExpireMinionListsInAct",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "AIGENERAL_ExpireMinionListsInAct113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC51000",
+    "module": "D2Game",
+    "name": "OBJECTS_FindFreeDropCoordsAndSpawnItem",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "OBJECTS_FindFreeDropCoordsAndSpawnItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC95350",
+    "module": "D2Game",
+    "name": "MONSTER_SetDeathPathAndAnim",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "MONSTER_SetDeathPathAndAnim113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC95680",
+    "module": "D2Game",
+    "name": "MONSTER_DropTreasureOnDeath",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "MONSTER_DropTreasureOnDeath113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC95900",
+    "module": "D2Game",
+    "name": "MONSTER_DropDeathItems",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "MONSTER_DropDeathItems113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC971D0",
+    "module": "D2Game",
+    "name": "MONSTER_CheckSandLeaperMidAir",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "MONSTER_CheckSandLeaperMidAir113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC977F0",
+    "module": "D2Game",
+    "name": "MONSTER_ExecuteEventsWrapper",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "MONSTER_ExecuteEventsWrapper113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC978A0",
+    "module": "D2Game",
+    "name": "PLAYER_EndAttackOrBlockAnim",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_EndAttackOrBlockAnim113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC97B20",
+    "module": "D2Game",
+    "name": "PLAYER_AdvanceSkillModeFrame",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_AdvanceSkillModeFrame113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC981C0",
+    "module": "D2Game",
+    "name": "PLAYER_StartBlockMode",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_StartBlockMode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC98430",
+    "module": "D2Game",
+    "name": "PLAYER_StartModeAttack",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_StartModeAttack113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC98760",
+    "module": "D2Game",
+    "name": "PLAYER_ScheduleAttackActionFrameEvents",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_ScheduleAttackActionFrameEvents113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC98A90",
+    "module": "D2Game",
+    "name": "PLAYER_StartModeCast",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_StartModeCast113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC98DD0",
+    "module": "D2Game",
+    "name": "PLAYER_StartModeSkill",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_StartModeSkill113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC99100",
+    "module": "D2Game",
+    "name": "PLAYER_ScheduleSkillActionFrameEvents",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_ScheduleSkillActionFrameEvents113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC99170",
+    "module": "D2Game",
+    "name": "PLAYER_StartModeDispatch",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "PLAYER_StartModeDispatch113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FC9AC50",
+    "module": "D2Game",
+    "name": "MONSTER_BroadcastEventSoundToClients",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "MONSTER_BroadcastEventSoundToClients113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCBD160",
+    "module": "D2Game",
+    "name": "AI_DispatchTargetByAiFlag",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "AI_DispatchTargetByAiFlag113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCD1820",
+    "module": "D2Game",
+    "name": "AI_FindTargetScanRoomCallback",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "AI_FindTargetScanRoomCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCD1C90",
+    "module": "D2Game",
+    "name": "AI_FindNearestPlayerOrAlly",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "AI_FindNearestPlayerOrAlly113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCEB950",
+    "module": "D2Game",
+    "name": "SUNITDMG_TriggerBlockEvents",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerBlockEvents113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCEBBB0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyArmorDurabilityAndGetHit",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyArmorDurabilityAndGetHit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA540",
+    "module": "D2Game",
+    "name": "SUNITDMG_GetColdEffectLengthBonus",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_GetColdEffectLengthBonus113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA660",
+    "module": "D2Game",
+    "name": "SUNITDMG_SelectDeathOverlayFlag",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_SelectDeathOverlayFlag113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA6D0",
+    "module": "D2Game",
+    "name": "SUNITDMG_RemoveCombatNode",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_RemoveCombatNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA7B0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ExecuteSingleHit",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ExecuteSingleHit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA890",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyAttackerThornsToSelf",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyAttackerThornsToSelf113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA8C0",
+    "module": "D2Game",
+    "name": "SUNITDMG_AddDemonDamageBonus",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_AddDemonDamageBonus113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA930",
+    "module": "D2Game",
+    "name": "SUNITDMG_ConsumeStaminaCost",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ConsumeStaminaCost113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA970",
+    "module": "D2Game",
+    "name": "SUNITDMG_ConsumeManaCost",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ConsumeManaCost113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFA9E0",
+    "module": "D2Game",
+    "name": "SUNITDMG_CheckMonTypeFlag",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_CheckMonTypeFlag113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFAA40",
+    "module": "D2Game",
+    "name": "SUNITDMG_GetAttackerDamageData",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_GetAttackerDamageData113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFAA90",
+    "module": "D2Game",
+    "name": "SUNITDMG_FindCombatDamageData",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_FindCombatDamageData113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFAB90",
+    "module": "D2Game",
+    "name": "SUNITDMG_PrependCombatNode",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_PrependCombatNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFAC10",
+    "module": "D2Game",
+    "name": "SUNITDMG_GetPvpOrPetDamageMultiplier",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_GetPvpOrPetDamageMultiplier113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFAD00",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyElementalAbsorb",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyElementalAbsorb113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFAD70",
+    "module": "D2Game",
+    "name": "SUNITDMG_AddMonsterTypeDamageBonus",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_AddMonsterTypeDamageBonus113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB030",
+    "module": "D2Game",
+    "name": "SUNITDMG_RollDodgeAvoidEvadeBlock",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_RollDodgeAvoidEvadeBlock113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB1F0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyArmorPenetrationAndFlatBonus",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyArmorPenetrationAndFlatBonus113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB3C0",
+    "module": "D2Game",
+    "name": "SUNITDMG_GetEffectiveResistance",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_GetEffectiveResistance113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB570",
+    "module": "D2Game",
+    "name": "SUNITDMG_AddLeechedLifeToUnit",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_AddLeechedLifeToUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB5E0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ResolveAttackerPlayer",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ResolveAttackerPlayer113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB6B0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ClampManaBurnByMonsterSkill",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ClampManaBurnByMonsterSkill113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB790",
+    "module": "D2Game",
+    "name": "SUNITDMG_RollPassiveWeaponBlockOrShieldBlock",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_RollPassiveWeaponBlockOrShieldBlock113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFB910",
+    "module": "D2Game",
+    "name": "SUNITDMG_TriggerGetHitStateAndMode",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerGetHitStateAndMode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFBA40",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyLifeManaSteal",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyLifeManaSteal113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFBD00",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplySingleChannelResistance",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplySingleChannelResistance113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFBED0",
+    "module": "D2Game",
+    "name": "SUNITDMG_RollDamageValue",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_RollDamageValue113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFC030",
+    "module": "D2Game",
+    "name": "SUNITDMG_GetTotalSkillDamageBonus",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_GetTotalSkillDamageBonus113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFC0B0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyResistancesAndAbsorb",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyResistancesAndAbsorb113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFC530",
+    "module": "D2Game",
+    "name": "SUNITDMG_ComputeWeaponBaseDamage",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ComputeWeaponBaseDamage113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFC780",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyColdChilledEffect",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyColdChilledEffect113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFC940",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyFreezeEffect",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyFreezeEffect113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFCAB0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyPoisonEffect",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyPoisonEffect113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFCC20",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyStunEffect",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyStunEffect113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFCD80",
+    "module": "D2Game",
+    "name": "SUNITDMG_RollElementalStatDamage",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_RollElementalStatDamage113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFCE70",
+    "module": "D2Game",
+    "name": "SUNITDMG_TriggerAttackerBlindOrFlee",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerAttackerBlindOrFlee113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFCF20",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplySideEffectsAndKill",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplySideEffectsAndKill113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFD450",
+    "module": "D2Game",
+    "name": "SUNITDMG_FillDamageValues",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_FillDamageValues113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFDAC0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyColdOrFreezeState",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyColdOrFreezeState113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFDDE0",
+    "module": "D2Game",
+    "name": "SUNITDMG_AllocCombat",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_AllocCombat113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFE0C0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyDamage",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyDamage113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFE5A0",
+    "module": "D2Game",
+    "name": "SUNITDMG_CalcMonsterExperience",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_CalcMonsterExperience113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFE6D0",
+    "module": "D2Game",
+    "name": "SUNITDMG_AddPlayerExperienceAndCheckLevelUp",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_AddPlayerExperienceAndCheckLevelUp113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFE8F0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ComputeExperienceGain",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ComputeExperienceGain113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFEA00",
+    "module": "D2Game",
+    "name": "SUNITDMG_TriggerPostCombatEvents",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerPostCombatEvents113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFEBA0",
+    "module": "D2Game",
+    "name": "SUNITDMG_ApplyWeaponAndArmorDurabilityLoss",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyWeaponAndArmorDurabilityLoss113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFED30",
+    "module": "D2Game",
+    "name": "SUNITDMG_ExecuteEvents",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_ExecuteEvents113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFEEE0",
+    "module": "D2Game",
+    "name": "SUNITDMG_DistributeExperience",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_DistributeExperience113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FCFFA60",
+    "module": "D2Game",
+    "name": "SUNITDMG_GetPlayerClientClassId",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "SUNITDMG_GetPlayerClientClassId113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  },
+  {
+    "va": "0x6FD13220",
+    "module": "D2Game",
+    "name": "AI_GeneralFindTargetOrThrottle",
+    "kernFile": "src/d2kern-113c/game/combat-a1c-113c.ts",
+    "tsSymbol": "AI_GeneralFindTargetOrThrottle113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneE2-combat.test.ts"
+  }
+]

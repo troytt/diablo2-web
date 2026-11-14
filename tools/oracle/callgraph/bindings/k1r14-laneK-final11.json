@@ -1,0 +1,90 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC409B0",
+    "name": "ROOM_DeactivateAnyUnitInRoom",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "ROOM_DeactivateAnyUnitInRoom113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53260",
+    "name": "OBJECTS_SpawnDensityWithSecondaryTorch",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "OBJECTS_SpawnDensityWithSecondaryTorch113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6AD10",
+    "name": "CLIENTS_GetPlayerUnit",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "CLIENTS_GetPlayerUnit113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6B400",
+    "name": "CLIENTS_UpdatePlayerRoom",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "CLIENTS_UpdatePlayerRoom113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC94C60",
+    "name": "MONSTER_StartModeWalk",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "MONSTER_StartModeWalk113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC94CE0",
+    "name": "MONSTER_ApplyModeVelocityOverride",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "MONSTER_ApplyModeVelocityOverride113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC99B90",
+    "name": "PLAYER_StepModeWalkOrRun",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "PLAYER_StepModeWalkOrRun113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBD780",
+    "name": "SUNIT_SendRemovePortalsInAdjacentRooms",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "SUNIT_SendRemovePortalsInAdjacentRooms113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBD850",
+    "name": "GAME_ClearAllActRoomUpdateLists",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "GAME_ClearAllActRoomUpdateLists113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBDEC0",
+    "name": "SUNIT_SyncAdjacentRoomUnitsToClient",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "SUNIT_SyncAdjacentRoomUnitsToClient113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD020A0",
+    "name": "SUNIT_FreeUnit",
+    "kernFile": "src/d2kern-113c/game/replay-final11-113c.ts",
+    "tsSymbol": "SUNIT_FreeUnit113c",
+    "status": "ported"
+  }
+]

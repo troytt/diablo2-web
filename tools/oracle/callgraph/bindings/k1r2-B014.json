@@ -1,0 +1,164 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DC70",
+    "name": "INVENTORY_GetCorpseUnitId",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetCorpseUnitId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DC90",
+    "name": "INVENTORY_GetNextCorpse",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetNextCorpse113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DCB0",
+    "name": "INVENTORY_GetCorpseCount",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetCorpseCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DD20",
+    "name": "INVENTORY_GetFirstCorpse",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetFirstCorpse113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DE50",
+    "name": "INVENTORY_GetLeftItemGuid",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetLeftItemGuid113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DE70",
+    "name": "INVENTORY_SetLeftItemGuid",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_SetLeftItemGuid113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DE90",
+    "name": "INVENTORY_GetItemCount",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetItemCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DEB0",
+    "name": "INVENTORY_GetNodeItemGuid",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetNodeItemGuid113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DEC0",
+    "name": "INVENTORY_GetNextNode",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetNextNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DEE0",
+    "name": "INVENTORY_CheckNodeExists",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_CheckNodeExists113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DF70",
+    "name": "INVENTORY_GetFirstNode",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetFirstNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DF90",
+    "name": "INVENTORY_NoOpRet8A",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_NoOpRet8A113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DFB0",
+    "name": "INVENTORY_GetCursorItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetCursorItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DFD0",
+    "name": "INVENTORY_NoOpRet8B",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_NoOpRet8B113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6DFF0",
+    "name": "INVENTORY_NoOpRet20",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_NoOpRet20113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E010",
+    "name": "INVENTORY_ScoreGridRectPlacement",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_ScoreGridRectPlacement113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E190",
+    "name": "INVENTORY_GetFirstItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetFirstItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E310",
+    "name": "INVENTORY_FillGridRect",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_FillGridRect113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b014-vectors.json replayed in tests/oracle/k1/laneA-B014-inventory.test.ts"
+  }
+]

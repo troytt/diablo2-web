@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC331E0",
+    "name": "ITEMS_HasAffixGroupOnItem",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "ITEMS_HasAffixGroupOnItem113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC33230",
+    "name": "ITEMS_ScaleStatByPercentWithMin",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "ITEMS_ScaleStatByPercentWithMin113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC332A0",
+    "name": "ITEMS_FindSuperiorQualityRecordIndex",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "ITEMS_FindSuperiorQualityRecordIndex113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC35520",
+    "name": "AI_InitMonsterClearAiParam3",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_InitMonsterClearAiParam3_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC35530",
+    "name": "AI_InitMonsterResetAiStateNeg1",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_InitMonsterResetAiStateNeg1_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC35540",
+    "name": "AI_InitBaalMinionSpawnState",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_InitBaalMinionSpawnState113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC35570",
+    "name": "AI_CheckAnyMinionDeadCallback",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_CheckAnyMinionDeadCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC355C0",
+    "name": "AI_InitShadowMasterSkillSlot",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_InitShadowMasterSkillSlot113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC356C0",
+    "name": "AI_InitMonsterSkillDelayFrame",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_InitMonsterSkillDelayFrame113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC35730",
+    "name": "AI_SelectBaalThroneSpawnClassId",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AI_SelectBaalThroneSpawnClassId113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC40C60",
+    "name": "AIGENERAL_GetField3C",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AIGENERAL_GetField3C_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC40DE0",
+    "name": "AIGENERAL_GetQuestDataPtr38",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "AIGENERAL_GetQuestDataPtr38_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC41840",
+    "name": "MONUMOD_ApplyToMinionCallback",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_ApplyToMinionCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC41860",
+    "name": "MONUMOD_CountUnitUMods",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_CountUnitUMods113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC41880",
+    "name": "MONUMOD_DispatchOnKillEvent5",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_DispatchOnKillEvent5_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC41F60",
+    "name": "MONUMOD_GetMinionClassIdForBoss",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_GetMinionClassIdForBoss113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC41FB0",
+    "name": "MONUMOD_GetConstantValue",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_GetConstantValue113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC42920",
+    "name": "MONUMOD_AppendUModToMonster",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_AppendUModToMonster113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC42A10",
+    "name": "MONUMOD_SetSuperUniqueId",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_SetSuperUniqueId113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC42AF0",
+    "name": "MONUMOD_GetUModListPtr",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_GetUModListPtr113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC43020",
+    "name": "MONUMOD_RollBossOrMinionNameSeed",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_RollBossOrMinionNameSeed113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC43060",
+    "name": "MONUMOD_CopyMinionEligibleUMods",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_CopyMinionEligibleUMods113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC43260",
+    "name": "MONUMOD_MarkBossAndIncrementUniqueCount",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONUMOD_MarkBossAndIncrementUniqueCount113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC469B0",
+    "name": "MONSTER_Event7_MonUModEvent2",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "MONSTER_Event7_MonUModEvent2_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4A0C0",
+    "name": "CLIENTS_CaptureFirstInGameClientCallback",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "CLIENTS_CaptureFirstInGameClientCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4A210",
+    "name": "GAME_SetGlobalSeed",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "GAME_SetGlobalSeed113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E4F0",
+    "name": "OBJECTS_SetUnitField7CDword4",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "OBJECTS_SetUnitField7CDword4_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E5C0",
+    "name": "OBJECTS_LevelHookAlwaysTrue",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "OBJECTS_LevelHookAlwaysTrue113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E720",
+    "name": "OBJECTS_InitFn05_NoOp",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn05_NoOp113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E760",
+    "name": "OBJECTS_InitFn16_DoubleActToSubType",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn16_DoubleActToSubType113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E8B0",
+    "name": "OBJECTS_SubstituteObjectClassIdFromParm0",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "OBJECTS_SubstituteObjectClassIdFromParm0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E9F0",
+    "name": "OBJECTS_InitFn27_RollSubType3",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn27_RollSubType3_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC537D0",
+    "name": "QUESTS_HasPlayerGuidInQuest",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_HasPlayerGuidInQuest113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53800",
+    "name": "QUESTS_GuidListContains",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_GuidListContains113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53880",
+    "name": "QUESTS_GuidListAdd",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_GuidListAdd113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53EB0",
+    "name": "QUESTS_AddNpcDialogTextNodes",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_AddNpcDialogTextNodes113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC540C0",
+    "name": "QUESTS_RemovePlayerGuidIfQuestState1AndNot0",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_RemovePlayerGuidIfQuestState1AndNot0_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54AA0",
+    "name": "QUESTS_SendQuestStateAlert5D",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_SendQuestStateAlert5D_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54B20",
+    "name": "QUESTS_SendQuestItemState2_5D",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_SendQuestItemState2_5D_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54B80",
+    "name": "QUESTS_SendNpcMessagePacket27",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_SendNpcMessagePacket27_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54C00",
+    "name": "QUESTS_SendPlayerQuestLogPacket28",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "QUESTS_SendPlayerQuestLogPacket28_113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC570E0",
+    "name": "SUNIT_FindItemEventNode",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "SUNIT_FindItemEventNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57680",
+    "name": "PLAYER_IsBusyWithCursorOrNpcInteract",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "PLAYER_IsBusyWithCursorOrNpcInteract113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57890",
+    "name": "PLAYER_SetClientSkillHotkeySlot",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "PLAYER_SetClientSkillHotkeySlot113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57940",
+    "name": "PLAYER_CheckHostilePlayerCallback",
+    "kernFile": "src/d2kern-113c/game/k2-items-tc-w1-113c.ts",
+    "tsSymbol": "PLAYER_CheckHostilePlayerCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneA-items-tc-w1.test.ts"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD71F70",
+    "name": "ITEMS_CheckQualityTradable",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CheckQualityTradable113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71F90",
+    "name": "ITEMS_PackColorIndex",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_PackColorIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71FF0",
+    "name": "ITEMS_ReturnZero",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_ReturnZero113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72590",
+    "name": "ITEMS_GetAutoAffixData",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetAutoAffixData113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72F80",
+    "name": "ITEMS_GetItemTypeNormal",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetItemTypeNormal113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72FC0",
+    "name": "ITEMS_AccumulateItemLevelReq",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_AccumulateItemLevelReq113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD735D0",
+    "name": "ITEMS_GetItemTypeShoots",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetItemTypeShoots113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73650",
+    "name": "ITEMS_SetVarGfxIndex",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetVarGfxIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73690",
+    "name": "ITEMS_SetEarLevel",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetEarLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD736B0",
+    "name": "ITEMS_GetEarLevel",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetEarLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD736D0",
+    "name": "ITEMS_SetEarName",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetEarName113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73700",
+    "name": "ITEMS_GetEarName",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetEarName113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73720",
+    "name": "ITEMS_SetNodePage",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetNodePage113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73740",
+    "name": "ITEMS_GetNodePage",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetNodePage113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73760",
+    "name": "ITEMS_SetCmdFlagsByte",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetCmdFlagsByte113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD737C0",
+    "name": "ITEMS_GetInvPage",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetInvPage113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD737E0",
+    "name": "ITEMS_SetItemLevel",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetItemLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73810",
+    "name": "ITEMS_GetItemLevel",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetItemLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73870",
+    "name": "ITEMS_SetItemFlag",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetItemFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD738B0",
+    "name": "ITEMS_CheckItemFlag",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CheckItemFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD738E0",
+    "name": "ITEMS_GetCommandFlags",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetCommandFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b015-vectors.ndjson replayed in tests/oracle/k1/laneB-B015-items.test.ts"
+  }
+]

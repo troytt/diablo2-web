@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD80730",
+    "name": "COLLISION_RayTraceBetweenSizedPoints",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_RayTraceBetweenSizedPoints113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (15 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B510",
+    "name": "COLLISION_GetMaskAt",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_GetMaskAt113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (8 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c; pulled from B056)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B840",
+    "name": "COLLISION_SetMaskWithSizeXY",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_SetMaskWithSizeXY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (12 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B8F0",
+    "name": "COLLISION_SetMask3x3",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_SetMask3x3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (5 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9BAB0",
+    "name": "COLLISION_ResetMaskWithSizeXY",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_ResetMaskWithSizeXY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (11 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9BB30",
+    "name": "COLLISION_ResetMask3x3",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_ResetMask3x3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (5 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9BFC0",
+    "name": "COLLISION_SetMaskWithPattern",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_SetMaskWithPattern113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (8 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9C080",
+    "name": "COLLISION_CheckMaskWithSizeXY",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_CheckMaskWithSizeXY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (9 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9C140",
+    "name": "COLLISION_CheckCrossPatternCollision",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_CheckCrossPatternCollision113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (39 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9C530",
+    "name": "COLLISION_GetMask3x3",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_GetMask3x3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (7 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9C5C0",
+    "name": "COLLISION_GetCrossPatternMask",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_GetCrossPatternMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (27 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9CB90",
+    "name": "COLLISION_FindFreeCoordsNear",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_FindFreeCoordsNear113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B066-collision.test.ts (9 real-DLL vectors; 155 total in tests/fixtures/oracle/k1/b066-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  }
+]

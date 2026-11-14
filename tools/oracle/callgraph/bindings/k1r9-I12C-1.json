@@ -1,0 +1,191 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5BD60",
+    "name": "DRLGPRESET_BuildFortressAndMapAIPaths",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_BuildFortressAndMapAIPaths113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D420",
+    "name": "PATH_MoveOrTestSubtileStepCollision",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_MoveOrTestSubtileStepCollision113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (6 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D820",
+    "name": "PATH_RecomputeDynamicPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RecomputeDynamicPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (6 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5DAB0",
+    "name": "PATH_CopyPositionFromUnit",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_CopyPositionFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5DB40",
+    "name": "PATH_SnapToSubtileCenter",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SnapToSubtileCenter113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (3 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5EB80",
+    "name": "DRLGMAZE_LinkTouchingMazeRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_LinkTouchingMazeRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5EEC0",
+    "name": "DRLGMAZE_PositionAdjacentRoomAndCheckSeparation",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PositionAdjacentRoomAndCheckSeparation113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (11 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD621D0",
+    "name": "DUNGEON_IsSquareTouchingRoomBounds",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_IsSquareTouchingRoomBounds113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (8 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD62250",
+    "name": "DUNGEON_IsSquareOutsideRoomInterior",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_IsSquareOutsideRoomInterior113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (6 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD69AD0",
+    "name": "DUNGEON_FindRoomExWithValidExitWarp",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FindRoomExWithValidExitWarp113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6B280",
+    "name": "MONSTER_GetMissileIdForAnimMode",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "MONSTER_GetMissileIdForAnimMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (8 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85640",
+    "name": "PATH_SetCollisionMask",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (3 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85BA0",
+    "name": "PATH_GetOrCheckLastCollisionMask",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetOrCheckLastCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (3 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85CD0",
+    "name": "PATH_RemoveUnitCollisionIfHasPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RemoveUnitCollisionIfHasPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (2 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85CF0",
+    "name": "PATH_RefreshUnitCollisionPattern",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RefreshUnitCollisionPattern113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (3 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C6D0",
+    "name": "DUNGEON_GetRoomCoordListIndexAtSubtile",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetRoomCoordListIndexAtSubtile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92C00",
+    "name": "DRLGOUTDOORS_ComputeVertexLevelLinkVisBit",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_ComputeVertexLevelLinkVisBit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (8 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92CE0",
+    "name": "DRLGOUTDOORS_PlaceRandomOutdoorPresetRoom",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_PlaceRandomOutdoorPresetRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94F90",
+    "name": "DRLGROOM_FreeRoomEx",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_FreeRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1AD0",
+    "name": "DRLGLOGIC_LinkAdjacentRoomsCoordLists",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_LinkAdjacentRoomsCoordLists113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (3 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4110",
+    "name": "DRLGTILESUB_ApplySubThemesToRoom",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_ApplySubThemesToRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-1.test.ts (4 real-DLL vectors; 102 total in tests/fixtures/oracle/k1/i12c-1-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  }
+]

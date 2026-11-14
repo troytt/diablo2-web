@@ -1,0 +1,249 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC39C20",
+    "name": "AI_WarrivGreet",
+    "kernFile": "src/d2kern-113c/game/replay-kernel-113c.ts",
+    "tsSymbol": "AI_WarrivGreet113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC3BBC0",
+    "name": "AI_FollowDs1NpcPath",
+    "kernFile": "src/d2kern-113c/game/replay-kernel-113c.ts",
+    "tsSymbol": "AI_FollowDs1NpcPath113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC3DB40",
+    "name": "AI_TownNpc",
+    "kernFile": "src/d2kern-113c/game/replay-kernel-113c.ts",
+    "tsSymbol": "AI_TownNpc113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC400E0",
+    "name": "ROOM_RefreshUnitsAndLoadSaved",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_RefreshUnitsAndLoadSaved113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC40760",
+    "name": "ROOM_DeactivateUnitInRoom",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_DeactivateUnitInRoom113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4CBE0",
+    "name": "GAME_UpdateActRooms",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "GAME_UpdateActRooms113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4CF30",
+    "name": "GAME_DeactivateUnusedRoomsTick",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "GAME_DeactivateUnusedRoomsTick113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E7D0",
+    "name": "OBJECTS_AllocInteractStrc",
+    "kernFile": "src/d2kern-113c/game/objects-populate-113c.ts",
+    "tsSymbol": "OBJECTS_AllocInteractStrc113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-objects-populate.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4EAD0",
+    "name": "OBJECTS_CheckLevelObjectHook",
+    "kernFile": "src/d2kern-113c/game/objects-populate-113c.ts",
+    "tsSymbol": "OBJECTS_CheckLevelObjectHook113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-objects-populate.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4EEA0",
+    "name": "OBJECTS_CanPopulateRoom",
+    "kernFile": "src/d2kern-113c/game/objects-populate-113c.ts",
+    "tsSymbol": "OBJECTS_CanPopulateRoom113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-objects-populate.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4F0D0",
+    "name": "OBJECTS_PopulateRoom",
+    "kernFile": "src/d2kern-113c/game/objects-populate-113c.ts",
+    "tsSymbol": "OBJECTS_PopulateRoom113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-objects-populate.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4F300",
+    "name": "OBJECTS_InitObjectUnit",
+    "kernFile": "src/d2kern-113c/game/objects-populate-113c.ts",
+    "tsSymbol": "OBJECTS_InitObjectUnit113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-objects-populate.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC51E20",
+    "name": "OBJECTS_SpawnRandomObjectInRoom",
+    "kernFile": "src/d2kern-113c/game/objects-populate-113c.ts",
+    "tsSymbol": "OBJECTS_SpawnRandomObjectInRoom113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-objects-populate.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55E50",
+    "name": "OBJECTS_InitPresetQuestObject",
+    "kernFile": "src/d2kern-113c/game/room-presets-113c.ts",
+    "tsSymbol": "OBJECTS_InitPresetQuestObject113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-room-presets.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC67660",
+    "name": "REGPOP_SpawnAmbientPack",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "REGPOP_SpawnAmbientPack113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC67820",
+    "name": "REGPOP_RollAmbientSpawn",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "REGPOP_RollAmbientSpawn113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC67950",
+    "name": "ROOM_TickSeedAndAmbientSpawn",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_TickSeedAndAmbientSpawn113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC67CF0",
+    "name": "ROOM_SpawnMonsterPreset",
+    "kernFile": "src/d2kern-113c/game/room-presets-113c.ts",
+    "tsSymbol": "ROOM_SpawnMonsterPreset113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-room-presets.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6B1D0",
+    "name": "CLIENTS_SetPlayerCurrentRoom",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "CLIENTS_SetPlayerCurrentRoom113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBCB00",
+    "name": "AI_RogueTown",
+    "kernFile": "src/d2kern-113c/game/replay-kernel-113c.ts",
+    "tsSymbol": "AI_RogueTown113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBD8E0",
+    "name": "ROOM_SleepRoomMonsters",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_SleepRoomMonsters113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBD950",
+    "name": "ROOM_WakeRoomMonsters",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_WakeRoomMonsters113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBD980",
+    "name": "ROOM_DeactivateRoomForClient",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_DeactivateRoomForClient113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBDC10",
+    "name": "ROOM_ActivateRoomForClient",
+    "kernFile": "src/d2kern-113c/game/act-rooms-113c.ts",
+    "tsSymbol": "ROOM_ActivateRoomForClient113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-act-rooms.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEC550",
+    "name": "C2S_Dispatch",
+    "kernFile": "src/d2kern-113c/game/replay-kernel-113c.ts",
+    "tsSymbol": "C2S_Dispatch113c",
+    "status": "ported"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD012D0",
+    "name": "SUNIT_CreatePresetUnit",
+    "kernFile": "src/d2kern-113c/game/room-presets-113c.ts",
+    "tsSymbol": "SUNIT_CreatePresetUnit113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-room-presets.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD013B0",
+    "name": "ROOM_SpawnPresetUnit",
+    "kernFile": "src/d2kern-113c/game/room-presets-113c.ts",
+    "tsSymbol": "ROOM_SpawnPresetUnit113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-room-presets.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD01430",
+    "name": "ROOM_SpawnPresetUnits",
+    "kernFile": "src/d2kern-113c/game/room-presets-113c.ts",
+    "tsSymbol": "ROOM_SpawnPresetUnits113c",
+    "status": "ported",
+    "diffEvidence": "tests/oracle/k1/laneE-room-presets.test.ts (control-flow vectors from the D2Game.dll disassembly)"
+  }
+]

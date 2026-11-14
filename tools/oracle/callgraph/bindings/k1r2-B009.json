@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD90E10",
+    "name": "DRLGOUTROOM_LinkLevelsByOffsetCoords",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_LinkLevelsByOffsetCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD90F00",
+    "name": "DRLGOUTROOM_LinkLevelsByLevelDef",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_LinkLevelsByLevelDef113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD90FC0",
+    "name": "DRLGOUTROOM_LinkLevelsByLevelCoords",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_LinkLevelsByLevelCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9D8A0",
+    "name": "DUNGEON_GameTileToSubtileCoords",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "DUNGEON_GameTileToSubtileCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3050",
+    "name": "DATATBLS_GetHirelingTxtRecordFromActAndDifficulty",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetHirelingTxtRecordFromActAndDifficulty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA30F0",
+    "name": "DATATBLS_GetHirelingTxtRecordFromVendorAndDifficulty",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetHirelingTxtRecordFromVendorAndDifficulty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3190",
+    "name": "DATATBLS_GetHirelingTxtRecordFromClassId",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetHirelingTxtRecordFromClassId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3220",
+    "name": "DATATBLS_GetHirelingTxtRecordFromNameId",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetHirelingTxtRecordFromNameId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA32C0",
+    "name": "DATATBLS_GetHirelingTxtRecordFromIdAndLevel",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetHirelingTxtRecordFromIdAndLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3360",
+    "name": "DATATBLS_GetSuperUniquesTxtRecordCount",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetSuperUniquesTxtRecordCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3370",
+    "name": "DATATBLS_GetSuperUniquesTxtRecord",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetSuperUniquesTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3420",
+    "name": "DATATBLS_GetTreasureClassExRecordFromIdAndLevel",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetTreasureClassExRecordFromIdAndLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA3850",
+    "name": "DATATBLS_GetMonsterChainInfo",
+    "kernFile": "src/d2kern-113c/tables/monster-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetMonsterChainInfo113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCE8C0",
+    "name": "DRLGOUTWILD_MarkCliffBorderVertices",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTWILD_MarkCliffBorderVertices113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCE9F0",
+    "name": "DRLGOUTWILD_TestSpawnRiver",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTWILD_TestSpawnRiver113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCEA40",
+    "name": "DRLGOUTWILD_GetBridgeCoords",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTWILD_GetBridgeCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b009-vectors.json replayed in tests/oracle/k1/laneB-B009-tables.test.ts"
+  }
+]

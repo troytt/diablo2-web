@@ -1,0 +1,101 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5AF20",
+    "name": "DRLGPRESET_SpawnHoradricOrifice",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGPRESET_SpawnHoradricOrifice113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5AFD0",
+    "name": "DRLGPRESET_SpawnMapAIPathPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGPRESET_SpawnMapAIPathPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5B290",
+    "name": "DRLGPRESET_SpawnFortressWall2Presets",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGPRESET_SpawnFortressWall2Presets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94480",
+    "name": "DRLGROOM_AllocPresetUnit",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_AllocPresetUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94950",
+    "name": "DRLGROOM_AddOrthRoomData",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_AddOrthRoomData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94BD0",
+    "name": "DRLGROOM_AllocRoomEx",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_AllocRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94CE0",
+    "name": "DRLGWARP_GetWarpDstAdjustData",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGWARP_GetWarpDstAdjustData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD958C0",
+    "name": "DRLG_GetAutomapCoordSlotPtr",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLG_GetAutomapCoordSlotPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD963F0",
+    "name": "DRLGROOM_RollItemCoordinate",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_RollItemCoordinate113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD964D0",
+    "name": "DRLGROOM_RollItemCoordinateAlt",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_RollItemCoordinateAlt113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8400",
+    "name": "DRLGROOM_LoadDt1Files",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_LoadDt1Files113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B037-drlg-room.test.ts (4 real-DLL vectors; 44 total in tests/fixtures/oracle/k1/b037-vectors.ndjson via k1r2-laneC-it6-emitter.c)"
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EDA0",
+    "name": "UNITS_IsDoor",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_IsDoor113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EEC0",
+    "name": "UNITS_GetShiftedFrameMetrics",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetShiftedFrameMetrics113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7EF30",
+    "name": "UNITS_HasAnimFinished",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_HasAnimFinished113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F0C0",
+    "name": "UNITS_SetSeqFrameFromLowByte",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetSeqFrameFromLowByte113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F3E0",
+    "name": "UNITS_FreeStaticPath",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_FreeStaticPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F410",
+    "name": "UNITS_AllocStaticPath",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_AllocStaticPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F460",
+    "name": "UNITS_GetInteractItemGuid",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetInteractItemGuid113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F4B0",
+    "name": "UNITS_SetInteractItem",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetInteractItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F5C0",
+    "name": "UNITS_GetPlayerSubtargetLeft",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetPlayerSubtargetLeft113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F630",
+    "name": "UNITS_GetPlayerSubtargetRight",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetPlayerSubtargetRight113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F6A0",
+    "name": "UNITS_PopPlayerSubtargetRight",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_PopPlayerSubtargetRight113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F720",
+    "name": "UNITS_PopPlayerSubtargetLeft",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_PopPlayerSubtargetLeft113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F7A0",
+    "name": "UNITS_GetPlayerTargetRight",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetPlayerTargetRight113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F800",
+    "name": "UNITS_GetPlayerTargetLeft",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetPlayerTargetLeft113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F9B0",
+    "name": "UNITS_SetOwner",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetOwner113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FC50",
+    "name": "UNITS_SetPathRoomRefreshFlag",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetPathRoomRefreshFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FCC0",
+    "name": "UNITS_GetPathRoomRefreshFlag",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetPathRoomRefreshFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FE10",
+    "name": "UNITS_GetRoom",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FE70",
+    "name": "UNITS_ClearRoom",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_ClearRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FF30",
+    "name": "UNITS_GetCollisionMask",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80C70",
+    "name": "UNITS_CanSwitchToModeDuringAnim",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_CanSwitchToModeDuringAnim113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80E80",
+    "name": "UNITS_SetTargetUnitForDynamicUnit",
+    "kernFile": "src/d2kern-113c/common/waypoint.ts",
+    "tsSymbol": "UNITS_SetTargetUnitForDynamicUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD81EA0",
+    "name": "UNITS_GetPlayerBaseToHit",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetPlayerBaseToHit113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD842D0",
+    "name": "UNITS_GetGfxStateFlagsPtr",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetGfxStateFlagsPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E980",
+    "name": "DATATBLS_GetObjectsTxtRecord",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "DATATBLS_GetObjectsTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB7C20",
+    "name": "WAYPOINT_ActivateWaypoint",
+    "kernFile": "src/d2kern-113c/common/waypoint.ts",
+    "tsSymbol": "WAYPOINT_ActivateWaypoint113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB7C90",
+    "name": "WAYPOINT_GetWaypointState",
+    "kernFile": "src/d2kern-113c/common/waypoint.ts",
+    "tsSymbol": "WAYPOINT_GetWaypointState113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB7D00",
+    "name": "WAYPOINT_CopyAndValidateWaypointData",
+    "kernFile": "src/d2kern-113c/common/waypoint.ts",
+    "tsSymbol": "WAYPOINT_CopyAndValidateWaypointData113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA350",
+    "name": "MISSILE_FreeMissileData",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_FreeMissileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBA390",
+    "name": "MISSILE_AllocMissileData",
+    "kernFile": "src/d2kern-113c/common/missile.ts",
+    "tsSymbol": "MISSILE_AllocMissileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "148 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b038-vectors.ndjson replayed in tests/oracle/k1/laneA-B038-unit.test.ts"
+  }
+]

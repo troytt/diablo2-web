@@ -1,0 +1,112 @@
+{
+  "fn": "STATLIST_FindSubListByStateAndFlags",
+  "module": "D2Common",
+  "va": "0x6FD87F80",
+  "size": 71,
+  "conv": {
+    "stack": 0,
+    "regs": ["ecx", "edx"],
+    "calleePops": 0,
+    "returns": "eax"
+  },
+  "tables": "none",
+  "fill": "rand:0x87F8",
+  "images": {
+    "listEx": { "size": 100 },
+    "lastA": { "size": 60 },
+    "lastB": { "size": 60 },
+    "statsA": { "size": 60 },
+    "statsB": { "size": 60 }
+  },
+  "vectors": [
+    {
+      "label": "null-listex",
+      "regs": { "ecx": 0, "edx": 10 }
+    },
+    {
+      "label": "zero-state",
+      "init": [
+        { "img": "listEx", "off": "0x10", "u32": "0x80000000" },
+        { "img": "listEx", "off": "0x3C", "u32": "&lastA" },
+        { "img": "lastA", "off": "0x14", "u32": 0 },
+        { "img": "lastA", "off": "0x2C", "u32": 0 }
+      ],
+      "regs": { "ecx": "&listEx", "edx": 0 }
+    },
+    {
+      "label": "non-extended-flag",
+      "init": [
+        { "img": "listEx", "off": "0x10", "u32": "0x7FFFFFFF" },
+        { "img": "listEx", "off": "0x3C", "u32": "&lastA" },
+        { "img": "listEx", "off": "0x40", "u32": "&statsA" },
+        { "img": "lastA", "off": "0x14", "u32": 10 },
+        { "img": "lastA", "off": "0x2C", "u32": 0 },
+        { "img": "statsA", "off": "0x14", "u32": 10 },
+        { "img": "statsA", "off": "0x2C", "u32": 0 }
+      ],
+      "regs": { "ecx": "&listEx", "edx": 10 }
+    },
+    {
+      "label": "chain-lookup-base",
+      "init": [
+        { "img": "listEx", "off": "0x10", "u32": "0x80000040" },
+        { "img": "listEx", "off": "0x3C", "u32": "&lastA" },
+        { "img": "listEx", "off": "0x40", "u32": "&statsA" },
+        { "img": "lastA", "off": "0x14", "u32": 10 },
+        { "img": "lastA", "off": "0x2C", "u32": "&lastB" },
+        { "img": "lastB", "off": "0x14", "u32": 20 },
+        { "img": "lastB", "off": "0x2C", "u32": 0 },
+        { "img": "statsA", "off": "0x14", "u32": 30 },
+        { "img": "statsA", "off": "0x2C", "u32": "&statsB" },
+        { "img": "statsB", "off": "0x14", "u32": 40 },
+        { "img": "statsB", "off": "0x2C", "u32": 0 }
+      ],
+      "regs": { "ecx": "&listEx", "edx": 10 }
+    },
+    {
+      "label": "prefer-myLastList-over-myStats",
+      "init": [
+        { "img": "listEx", "off": "0x10", "u32": "0x80000000" },
+        { "img": "listEx", "off": "0x3C", "u32": "&lastA" },
+        { "img": "listEx", "off": "0x40", "u32": "&statsA" },
+        { "img": "lastA", "off": "0x14", "u32": 55 },
+        { "img": "lastA", "off": "0x2C", "u32": 0 },
+        { "img": "statsA", "off": "0x14", "u32": 55 },
+        { "img": "statsA", "off": "0x2C", "u32": 0 }
+      ],
+      "regs": { "ecx": "&listEx", "edx": 55 }
+    },
+    {
+      "label": "null-myLastList-hits-myStats",
+      "init": [
+        { "img": "listEx", "off": "0x10", "u32": "0x80000000" },
+        { "img": "listEx", "off": "0x3C", "u32": 0 },
+        { "img": "listEx", "off": "0x40", "u32": "&statsA" },
+        { "img": "statsA", "off": "0x14", "u32": 106 },
+        { "img": "statsA", "off": "0x2C", "u32": 0 }
+      ],
+      "regs": { "ecx": "&listEx", "edx": 106 }
+    },
+    {
+      "label": "both-chains-null",
+      "init": [
+        { "img": "listEx", "off": "0x10", "u32": "0x80000000" },
+        { "img": "listEx", "off": "0x3C", "u32": 0 },
+        { "img": "listEx", "off": "0x40", "u32": 0 }
+      ],
+      "regs": { "ecx": "&listEx", "edx": 100 }
+    },
+    {
+      "label": "unmapped-listex-faults",
+      "regs": { "ecx": "0x00000004", "edx": 10 }
+    }
+  ],
+  "sweeps": [
+    {
+      "base": "chain-lookup-base",
+      "labelPrefix": "state-sweep",
+      "reg": "edx",
+      "values": [0, 1, 10, 20, 25, 30, 40, 99, 100, -1]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD72F20",
+    "name": "ITEMS_GetQuiverType",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "ITEMS_GetQuiverType113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72F50",
+    "name": "ITEMS_GetMissileType",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetMissileType113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73330",
+    "name": "ITEMS_GetWeaponClassCode",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "ITEMS_GetWeaponClassCode113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD745C0",
+    "name": "ITEMS_CheckIfSocketFiller",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CheckIfSocketFiller113c",
+    "status": "diff-verified",
+    "diffEvidence": "3 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD81B90",
+    "name": "ITEMS_GetActiveWeaponForAttack",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetActiveWeaponForAttack113c",
+    "status": "diff-verified",
+    "diffEvidence": "11 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD83F40",
+    "name": "STATES_CheckUnitAnyActiveStateMask",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "STATES_CheckUnitAnyActiveStateMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9EBF0",
+    "name": "SKILLS_GetWeaponFromArmSlot",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetWeaponFromArmSlot113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F870",
+    "name": "SKILLS_ApplyElementalMasteryBonus",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_ApplyElementalMasteryBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "8 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F930",
+    "name": "SKILLS_GetBasePhysDamageMinOrMax",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetBasePhysDamageMinOrMax113c",
+    "status": "diff-verified",
+    "diffEvidence": "7 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0870",
+    "name": "SKILLS_CheckItemChargedSkillHasCharges",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CheckItemChargedSkillHasCharges113c",
+    "status": "diff-verified",
+    "diffEvidence": "7 real D2Common.dll differential vectors (55 total in tests/fixtures/oracle/k1/b039-vectors.ndjson) replayed in tests/oracle/k1/laneB-B039-items-skills.test.ts"
+  }
+]

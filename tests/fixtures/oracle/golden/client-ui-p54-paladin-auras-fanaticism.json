@@ -1,0 +1,566 @@
+{
+ "case": "p54-paladin-auras",
+ "label": "fanaticism",
+ "save": "tests/fixtures/oracle/saves/paladin-l40-auras.d2s",
+ "fields": [
+  "sheet.level",
+  "sheet.experience",
+  "sheet.nextLevel",
+  "sheet.strength",
+  "sheet.dexterity",
+  "sheet.defense",
+  "sheet.vitality",
+  "sheet.maxStamina",
+  "sheet.stamina",
+  "sheet.maxLife",
+  "sheet.life",
+  "sheet.energy",
+  "sheet.maxMana",
+  "sheet.mana",
+  "sheet.fireRes",
+  "sheet.coldRes",
+  "sheet.lightRes",
+  "sheet.poisonRes",
+  "sheet.leftSkill",
+  "sheet.rightSkill",
+  "sheet.blockChance",
+  "sheet.leftAttackRating",
+  "sheet.rightAttackRating",
+  "skills.list",
+  "skill.0.level",
+  "skill.0.name",
+  "skill.0.damage",
+  "skill.0.attackRating",
+  "skill.1.level",
+  "skill.1.name",
+  "skill.1.damage",
+  "skill.1.attackRating",
+  "skill.2.level",
+  "skill.2.name",
+  "skill.2.damage",
+  "skill.2.attackRating",
+  "skill.3.level",
+  "skill.3.name",
+  "skill.3.damage",
+  "skill.3.attackRating",
+  "skill.96.level",
+  "skill.96.name",
+  "skill.96.damage",
+  "skill.96.attackRating",
+  "skill.97.level",
+  "skill.97.name",
+  "skill.97.damage",
+  "skill.97.attackRating",
+  "skill.98.level",
+  "skill.98.name",
+  "skill.98.damage",
+  "skill.98.attackRating",
+  "skill.99.level",
+  "skill.99.name",
+  "skill.99.damage",
+  "skill.99.attackRating",
+  "skill.100.level",
+  "skill.100.name",
+  "skill.100.damage",
+  "skill.100.attackRating",
+  "skill.102.level",
+  "skill.102.name",
+  "skill.102.damage",
+  "skill.102.attackRating",
+  "skill.106.level",
+  "skill.106.name",
+  "skill.106.damage",
+  "skill.106.attackRating",
+  "skill.108.level",
+  "skill.108.name",
+  "skill.108.damage",
+  "skill.108.attackRating",
+  "skill.113.level",
+  "skill.113.name",
+  "skill.113.damage",
+  "skill.113.attackRating",
+  "skill.122.level",
+  "skill.122.name",
+  "skill.122.damage",
+  "skill.122.attackRating",
+  "skill.217.level",
+  "skill.218.level",
+  "skill.219.level",
+  "skill.220.level",
+  "tooltip.0",
+  "tooltip.1",
+  "tooltip.2",
+  "tooltip.3",
+  "tooltip.96",
+  "tooltip.97",
+  "tooltip.98",
+  "tooltip.99",
+  "tooltip.100",
+  "tooltip.102",
+  "tooltip.106",
+  "tooltip.108",
+  "tooltip.113",
+  "tooltip.122",
+  "tooltip.217",
+  "tooltip.218",
+  "tooltip.219",
+  "tooltip.220"
+ ],
+ "original": {
+  "source": "oracle",
+  "classId": 3,
+  "sheet": {
+   "level": "40",
+   "experience": "18,000,000",
+   "nextLevel": "19,235,252",
+   "strength": "75",
+   "dexterity": "65",
+   "defense": "20",
+   "vitality": "125",
+   "maxStamina": "228",
+   "stamina": "228",
+   "maxLife": "433",
+   "life": "433",
+   "energy": "15",
+   "maxMana": "73",
+   "mana": "73",
+   "fireRes": "0",
+   "coldRes": "0",
+   "lightRes": "0",
+   "poisonRes": "0"
+  },
+  "stats": {
+   "0": 75,
+   "1": 15,
+   "2": 65,
+   "3": 125,
+   "5": 12,
+   "6": 110848,
+   "7": 110848,
+   "8": 18688,
+   "9": 18816,
+   "10": 58368,
+   "11": 58368,
+   "12": 40,
+   "13": 18000000,
+   "21": 2,
+   "22": 7,
+   "25": 118,
+   "31": 4,
+   "67": 100,
+   "68": 125,
+   "69": 125,
+   "72": 36,
+   "73": 36,
+   "119": 65,
+   "172": 2,
+   "350": 330,
+   "351": 7
+  },
+  "leftSkill": 0,
+  "rightSkill": 122,
+  "computed": {
+   "blockChance": 18,
+   "leftAttackRating": 511,
+   "rightAttackRating": 0
+  },
+  "skillList": [
+   0,
+   1,
+   2,
+   3,
+   96,
+   97,
+   98,
+   99,
+   100,
+   102,
+   106,
+   108,
+   113,
+   122,
+   217,
+   218,
+   219,
+   220
+  ],
+  "skills": {
+   "0": {
+    "name": "ATTACK",
+    "damage": "5-20",
+    "attackRating": 511
+   },
+   "1": {
+    "name": "KICK TARGET",
+    "damage": "0-1",
+    "attackRating": null
+   },
+   "2": {
+    "name": "THROW",
+    "damage": null,
+    "attackRating": null
+   },
+   "3": {
+    "name": "UNSUMMON",
+    "damage": null,
+    "attackRating": null
+   },
+   "96": {
+    "name": "SACRIFICE",
+    "damage": "9-34",
+    "attackRating": 573
+   },
+   "97": {
+    "name": "SMITE",
+    "damage": "3-9",
+    "attackRating": null
+   },
+   "98": {
+    "name": "MIGHT",
+    "damage": null,
+    "attackRating": null
+   },
+   "99": {
+    "name": "PRAYER",
+    "damage": null,
+    "attackRating": null
+   },
+   "100": {
+    "name": "RESIST FIRE",
+    "damage": null,
+    "attackRating": null
+   },
+   "102": {
+    "name": "HOLY FIRE",
+    "damage": "1-3",
+    "attackRating": null
+   },
+   "106": {
+    "name": "ZEAL",
+    "damage": "6-21",
+    "attackRating": 666
+   },
+   "108": {
+    "name": "BLESSED AIM",
+    "damage": null,
+    "attackRating": null
+   },
+   "113": {
+    "name": "CONCENTRATION",
+    "damage": null,
+    "attackRating": null
+   },
+   "122": {
+    "name": "FANATICISM",
+    "damage": null,
+    "attackRating": null
+   },
+   "217": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "218": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "219": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   },
+   "220": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   }
+  },
+  "tooltips": {
+   "0": [
+    "Attack",
+    "normal attack"
+   ],
+   "1": [
+    "Kick",
+    "kick target"
+   ],
+   "2": [
+    "Throw",
+    "throw equipped item"
+   ],
+   "3": [
+    "Unsummon",
+    "relinquishes control",
+    "of one of your creatures"
+   ],
+   "96": [
+    "Sacrifice",
+    "increased accuracy and damage",
+    "at the cost of life",
+    "",
+    "8 percent damage to Self",
+    "",
+    "Current Skill Level: 1",
+    "To Attack Rating: +20 percent",
+    "Damage: +205 percent",
+    "",
+    "Next Level",
+    "To Attack Rating: +27 percent",
+    "Damage: +220 percent",
+    "",
+    "Sacrifice Receives Bonuses From:",
+    "Redemption: +15% Damage per Level",
+    "Fanaticism: +5% Damage per Level"
+   ],
+   "97": [
+    "Smite",
+    "temporarily stun your enemy",
+    "by bashing it with your shield",
+    "",
+    "Current Skill Level: 1",
+    "Damage: +15 percent",
+    "Stun Length: 0.6 seconds",
+    "Mana Cost: 2",
+    "",
+    "Next Level",
+    "Damage: +30 percent",
+    "Stun Length: 0.8 seconds",
+    "Mana Cost: 2"
+   ],
+   "98": [
+    "Might",
+    "when active, aura increases the damage",
+    "done by you and your party",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 10.6 yards",
+    "Damage: +40 percent",
+    "",
+    "Next Level",
+    "Radius: 12 yards",
+    "Damage: +50 percent"
+   ],
+   "99": [
+    "Prayer",
+    "when active, aura slowly regenerates",
+    "the life of you and your party",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 10.6 yards",
+    "Heals: +2",
+    "Mana Cost: 1",
+    "",
+    "Next Level",
+    "Radius: 12 yards",
+    "Heals: +3",
+    "Mana Cost: 1.1"
+   ],
+   "100": [
+    "Resist Fire",
+    "when active, aura decreases fire damage",
+    "done to you and your party",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 10.6 yards",
+    "Resist Fire: +52 percent",
+    "",
+    "Next Level",
+    "Radius: 12 yards",
+    "Resist Fire: +66 percent"
+   ],
+   "102": [
+    "Holy Fire",
+    "when active, aura damages nearby enemies",
+    "with heavenly flames",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 4 yards",
+    "Fire Damage: 7-21 to your attack",
+    "Fire Damage: 1.1-3.5",
+    "",
+    "Next Level",
+    "Radius: 4.6 yards",
+    "Fire Damage: 10-24 to your attack",
+    "Fire Damage: 1.7-4.1",
+    "",
+    "Holy Fire Receives Bonuses From:",
+    "Resist Fire: +18% Fire Damage per Level",
+    "Salvation: +6% Fire Damage per Level"
+   ],
+   "106": [
+    "Zeal",
+    "allows you to attack multiple adjacent enemies",
+    "with a single attack",
+    "",
+    "Current Skill Level: 5",
+    "Attack Bonus: +50 percent",
+    "Damage: +18 percent",
+    "5 hits",
+    "Mana Cost: 2",
+    "",
+    "Next Level",
+    "Attack Bonus: +60 percent",
+    "Damage: +24 percent",
+    "5 hits",
+    "Mana Cost: 2",
+    "",
+    "Zeal Receives Bonuses From:",
+    "Sacrifice: +12% Damage per Level"
+   ],
+   "108": [
+    "Blessed Aim",
+    "when active, aura increases the attack rating",
+    "for you and your party",
+    "",
+    "Current Skill Level: 1",
+    "Radius: 10.6 yards",
+    "Attack: +75 percent",
+    "",
+    "Next Level",
+    "Radius: 12 yards",
+    "Attack: +90 percent"
+   ],
+   "113": [
+    "Concentration",
+    "when active, aura increases the damage and decreases the chance",
+    "that the attack will be interrupted for you and your party ",
+    "",
+    "Current Skill Level: 10",
+    "Radius: 22.6 yards",
+    "Chance uninterruptable 20 percent",
+    "Damage: +195 percent",
+    "",
+    "Next Level",
+    "Radius: 24 yards",
+    "Chance uninterruptable 20 percent",
+    "Damage: +210 percent"
+   ],
+   "122": [
+    "Fanaticism",
+    "when active, aura increases damage, attack speed,",
+    "and attack rating for you and your party",
+    "",
+    "Current Skill Level: 5",
+    "Radius: 10 yards",
+    "Party Damage: +59 percent",
+    "Your Damage: +118 percent",
+    "Attack Speed: +25 percent",
+    "Attack: +60 percent",
+    "",
+    "Next Level",
+    "Radius: 10.6 yards",
+    "Party Damage: +67 percent",
+    "Your Damage: +135 percent",
+    "Attack Speed: +26 percent",
+    "Attack: +65 percent"
+   ],
+   "217": [
+    "Scroll of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "218": [
+    "Tome of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "219": [
+    "Scroll of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "220": [
+    "Tome of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ]
+  },
+  "skillLevels": {
+   "0": [
+    1,
+    1
+   ],
+   "1": [
+    1,
+    1
+   ],
+   "2": [
+    1,
+    1
+   ],
+   "3": [
+    1,
+    1
+   ],
+   "96": [
+    1,
+    1
+   ],
+   "97": [
+    1,
+    1
+   ],
+   "98": [
+    1,
+    1
+   ],
+   "99": [
+    1,
+    1
+   ],
+   "100": [
+    1,
+    1
+   ],
+   "102": [
+    1,
+    1
+   ],
+   "106": [
+    5,
+    5
+   ],
+   "108": [
+    1,
+    1
+   ],
+   "113": [
+    10,
+    10
+   ],
+   "122": [
+    5,
+    5
+   ],
+   "217": [
+    1,
+    1
+   ],
+   "218": [
+    1,
+    1
+   ],
+   "219": [
+    1,
+    1
+   ],
+   "220": [
+    1,
+    1
+   ]
+  }
+ }
+}

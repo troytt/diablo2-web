@@ -1,0 +1,461 @@
+[
+  {
+    "va": "0x6FC3EF50",
+    "module": "D2Game",
+    "name": "MONSTER_PackPresetSaveData",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "MONSTER_PackPresetSaveData113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC3F600",
+    "module": "D2Game",
+    "name": "MONSTER_SaveInactiveMonsterNode",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "MONSTER_SaveInactiveMonsterNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC404E0",
+    "module": "D2Game",
+    "name": "UNIT_SaveInactiveUnitNode",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "UNIT_SaveInactiveUnitNode113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC40B60",
+    "module": "D2Game",
+    "name": "MONSTER_FreeAiCmdCircularList",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "MONSTER_FreeAiCmdCircularList113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC40C00",
+    "module": "D2Game",
+    "name": "MONSTER_FreeAiGeneral",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "MONSTER_FreeAiGeneral113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC4E790",
+    "module": "D2Game",
+    "name": "OBJECT_FreeObjectRegionData",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "OBJECT_FreeObjectRegionData113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC4EE60",
+    "module": "D2Game",
+    "name": "OBJECT_DestroyObjectUnit",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "OBJECT_DestroyObjectUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC53830",
+    "module": "D2Game",
+    "name": "QUESTS_GuidListRemove",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "QUESTS_GuidListRemove113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC53CE0",
+    "module": "D2Game",
+    "name": "QUESTS_TriggerCallback",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "QUESTS_TriggerCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC54860",
+    "module": "D2Game",
+    "name": "QUESTS_NotifyLevelChange",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "QUESTS_NotifyLevelChange113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC57220",
+    "module": "D2Game",
+    "name": "QUESTS_FreeUnitQuestChain",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "QUESTS_FreeUnitQuestChain113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC57810",
+    "module": "D2Game",
+    "name": "QUESTS_CountLivingUnitsInRoomCallback",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "QUESTS_CountLivingUnitsInRoomCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC683B0",
+    "module": "D2Game",
+    "name": "MONSTER_FreeInteractData",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "MONSTER_FreeInteractData113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC7A9B0",
+    "module": "D2Game",
+    "name": "ACT4Q1_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT4Q1_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC7AB60",
+    "module": "D2Game",
+    "name": "ACT4Q2_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT4Q2_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC7AD50",
+    "module": "D2Game",
+    "name": "ACT4Q3_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT4Q3_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC7B1E0",
+    "module": "D2Game",
+    "name": "ACT4Q1_Callback03_AltLevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT4Q1_Callback03_AltLevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC7B380",
+    "module": "D2Game",
+    "name": "ACT4Q2_Callback03_AltLevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT4Q2_Callback03_AltLevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC7F3F0",
+    "module": "D2Game",
+    "name": "ACT4Q2_Hellforge_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT4Q2_Hellforge_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC83DD0",
+    "module": "D2Game",
+    "name": "ACT1Q1_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT1Q1_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC842D0",
+    "module": "D2Game",
+    "name": "ACT1Q2_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT1Q2_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC84D30",
+    "module": "D2Game",
+    "name": "ACT1Q4_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT1Q4_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC84ED0",
+    "module": "D2Game",
+    "name": "ACT1Q5_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT1Q5_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC85040",
+    "module": "D2Game",
+    "name": "ACT1Q6_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT1Q6_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FC884B0",
+    "module": "D2Game",
+    "name": "ACT1Q3_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT1Q3_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCAF410",
+    "module": "D2Game",
+    "name": "ARENA_CountPlayersInLevelCallback",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ARENA_CountPlayersInLevelCallback113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCB0320",
+    "module": "D2Game",
+    "name": "NPCS_UpdateMercenaryOrVendorSlots",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "NPCS_UpdateMercenaryOrVendorSlots113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCB0C60",
+    "module": "D2Game",
+    "name": "NPCS_OnPlayerLevelChange",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "NPCS_OnPlayerLevelChange113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCB7D10",
+    "module": "D2Game",
+    "name": "PLRINTRO_CleanInvalidMonsterMinions",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "PLRINTRO_CleanInvalidMonsterMinions113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCB8250",
+    "module": "D2Game",
+    "name": "PLRINTRO_SendAllPlayerPetsToClient",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "PLRINTRO_SendAllPlayerPetsToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCBC620",
+    "module": "D2Game",
+    "name": "PARTY_SendPartyPetsToClient",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "PARTY_SendPartyPetsToClient113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCCFB90",
+    "module": "D2Game",
+    "name": "MONSTER_DestroyMonsterUnit",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "MONSTER_DestroyMonsterUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCDA1E0",
+    "module": "D2Game",
+    "name": "ACT3Q1_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q1_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCDA3A0",
+    "module": "D2Game",
+    "name": "ACT3Q2_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q2_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCDA550",
+    "module": "D2Game",
+    "name": "ACT3Q3_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q3_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCE2E20",
+    "module": "D2Game",
+    "name": "ACT2Q1_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT2Q1_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCE3EC0",
+    "module": "D2Game",
+    "name": "ACT2Q2_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT2Q2_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCE6450",
+    "module": "D2Game",
+    "name": "ACT2Q3_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT2Q3_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCE6E00",
+    "module": "D2Game",
+    "name": "ACT2Q4_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT2Q4_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCE73A0",
+    "module": "D2Game",
+    "name": "ACT2Q5_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT2Q5_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCE9190",
+    "module": "D2Game",
+    "name": "ACT2Q6_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT2Q6_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FCFF6C0",
+    "module": "D2Game",
+    "name": "SUNIT_GetUnitField78",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "SUNIT_GetUnitField78_113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD00C80",
+    "module": "D2Game",
+    "name": "SUNIT_DeactivateAndRemoveUnit",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "SUNIT_DeactivateAndRemoveUnit113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD01110",
+    "module": "D2Game",
+    "name": "SUNIT_ClearUnitInventoryItems",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "SUNIT_ClearUnitInventoryItems113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD03E00",
+    "module": "D2Game",
+    "name": "ACT3Q0_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q0_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD071D0",
+    "module": "D2Game",
+    "name": "ACT3Q4_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q4_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD07560",
+    "module": "D2Game",
+    "name": "ACT3Q5_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q5_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD07880",
+    "module": "D2Game",
+    "name": "ACT3Q6_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q6_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD07A10",
+    "module": "D2Game",
+    "name": "ACT3Q7_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q7_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD07BE0",
+    "module": "D2Game",
+    "name": "ACT3Q8_Callback03_LevelChanged",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "ACT3Q8_Callback03_LevelChanged113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  },
+  {
+    "va": "0x6FD0FC60",
+    "module": "D2Game",
+    "name": "SUNIT_UnlinkFromRoomUpdateList",
+    "kernFile": "src/d2kern-113c/game/a1c-post150-f150-f276-113c.ts",
+    "tsSymbol": "SUNIT_UnlinkFromRoomUpdateList113c",
+    "status": "ported",
+    "diffEvidence": "Unit and golden seed/trace verification in tests/oracle/k1/laneI1-f150-f276.test.ts"
+  }
+]

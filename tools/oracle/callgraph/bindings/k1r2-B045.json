@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D540",
+    "name": "PATH_ResetDynamicPathRoomAndCoordsInline",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "PATH_ResetDynamicPathRoomAndCoordsInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A3D0",
+    "name": "UNITS_GetSpawnedMonsterOrSkillSummonInfo",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetSpawnedMonsterOrSkillSummonInfo113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E5B0",
+    "name": "INVENTORY_GetBeltItem",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetBeltItem113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E600",
+    "name": "INVENTORY_GetItemGridXIfInInventory",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetItemGridXIfInInventory113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E630",
+    "name": "INVENTORY_GetItemBodyLocFromX",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetItemBodyLocFromX113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6F720",
+    "name": "INVENTORY_RemoveItemFromGrid",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_RemoveItemFromGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6FF40",
+    "name": "INVENTORY_GetEquippedShield",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetEquippedShield113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD70270",
+    "name": "INVENTORY_GetSecondaryWeapon",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetSecondaryWeapon113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD72CD0",
+    "name": "ITEMS_AreStackablesCompatible",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "ITEMS_AreStackablesCompatible113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD731A0",
+    "name": "INVENTORY_GetItemDimensionsCallback",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_GetItemDimensionsCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80DC0",
+    "name": "UNITS_SetUnitUpdateFlags",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetUnitUpdateFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD823E0",
+    "name": "UNITS_GetDiminishingStatBonusInline",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetDiminishingStatBonusInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84080",
+    "name": "UNITS_TransferStateMaskToRemoved",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_TransferStateMaskToRemoved113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84150",
+    "name": "STATES_UpdateGfxStateFlagsByMask",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "STATES_UpdateGfxStateFlagsByMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB6900",
+    "name": "UNITROOM_SortUnitListByY",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITROOM_SortUnitListByY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (2 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4D30",
+    "name": "UNITS_AreUnitsAligned",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_AreUnitsAligned113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B045-inventory-unit.test.ts (3 real-DLL vectors via k1r2-laneA-it8-emitter.c -> b045-vectors.ndjson)"
+  }
+]
