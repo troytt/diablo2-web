@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-sorceress-elemental",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1800,
+  "strictHorizon": 1800,
+  "posHorizon": 1800,
+  "matchedKernelFrames": 1798,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "efd9d548f79c950f6671f4d95a9912a97f966fad53ab58fc3465da7737f1da82",
+  "snapshotSha256": "b62c41888d8595debd4241123fef29ef4c83411dc3bd9fa4aeedaaa6827eae5d"
+}

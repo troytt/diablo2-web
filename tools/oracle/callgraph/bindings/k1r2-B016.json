@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD84D30",
+    "name": "PATH_GetVelocity",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetVelocity113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (6 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84D40",
+    "name": "PATH_SetVelocity",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetVelocity113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84E70",
+    "name": "PATH_UpdateOutOfRoomFlag",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_UpdateOutOfRoomFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (8 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD84F50",
+    "name": "PATH_SetNewDistance",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetNewDistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (8 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85040",
+    "name": "PATH_SetTargetUnit",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetTargetUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85080",
+    "name": "PATH_SetNumberOfPathPoints",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetNumberOfPathPoints113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (8 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD850B0",
+    "name": "PATH_SetDirection",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (11 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE41C8)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85100",
+    "name": "PATH_GetMonsterMoveTestMask",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetMonsterMoveTestMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E110",
+    "name": "PATH_NormalizePrecisionVector",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_NormalizePrecisionVector113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (7 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E190",
+    "name": "PATH_QuantizeDirectionIndex25",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_QuantizeDirectionIndex25_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (14 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E2B0",
+    "name": "PATH_OctileDistanceWithTable",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_OctileDistanceWithTable113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (8 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE3F20)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC0650",
+    "name": "PATH_IdaStar_FlushNodeToDynamicPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_IdaStar_FlushNodeToDynamicPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC07E0",
+    "name": "PATH_IdaStar_AdvanceNeighborIndex",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_IdaStar_AdvanceNeighborIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (5 real D2Common.dll vectors + PE byte-identity at VA 0x6FDDB960)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAB50",
+    "name": "PATH_AStar_FlushNodeToDynamicPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_FlushNodeToDynamicPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAE20",
+    "name": "PATH_AStar_PushToOpenAndHash",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_PushToOpenAndHash113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (4 real D2Common.dll vectors + PE byte-identity at VA 0x6FDDB458 and 0x6FDDB658)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAF70",
+    "name": "PATH_AStar_EvaluateHeuristic",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_EvaluateHeuristic113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCB220",
+    "name": "PATH_AStar_PopBestOpenToClosed",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_PopBestOpenToClosed113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B016-path.test.ts + tests/fixtures/oracle/k1/laneC/b016-vectors.ndjson (4 real D2Common.dll vectors)"
+  }
+]

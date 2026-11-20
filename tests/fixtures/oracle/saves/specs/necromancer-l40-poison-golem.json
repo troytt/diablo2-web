@@ -1,0 +1,6 @@
+{
+  "base": "tests/fixtures/oracle/saves/a1-necromancer-l1.d2s",
+  "exp": 18000000,
+  "skills": [[67, 1], [74, 1], [73, 1], [83, 1], [92, 10], [75, 5], [79, 1]],
+  "stats": [[3, 100], [1, 95]]
+}

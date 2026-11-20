@@ -1,0 +1,11 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD88850",
+    "name": "STATLIST_EnumerateCopyListStats",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "STATLIST_EnumerateCopyListStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneD-ported29.test.ts (real-DLL vectors via k1r13-laneD-ported29-emitter.c -> k1r13-i14d-1.ndjson); tests/oracle/k1/laneC-B044-preset.test.ts (6 real-DLL vectors in tests/fixtures/oracle/k1/b044-vectors.ndjson via k1r2-laneC-it7-emitter.c; status ported per sync-gates.py:241 indirectUnknown caller callback)"
+  }
+]

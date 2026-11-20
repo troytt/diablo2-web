@@ -1,0 +1,259 @@
+{
+  "name": "k6-town-npc-gamble-waypoint",
+  "description": "Rogue Encampment town & NPC multi-subsystem scenario: exercises chat/emote/questlog (0x15, 0x3F, 0x40), stat/skill/swap (0x3A, 0x3B, 0x3C, 0x60), Stash deposit/withdraw/store (0x13, 0x4F, 0x19, 0x18), Horadric Cube open/insert/transmute (0x20, 0x2A, 0x4F), Waypoint (0x13, 0x49), Charsi Trade/Sell/RepairAll (0x2F, 0x38, 0x33, 0x35, 0x30), Gheed Gamble generation (0x38 action=2), and Kashya Mercenary Hire list (0x38 action=3).",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6/saves/k6-town-npc-gamble-waypoint.d2s",
+  "difficulty": 0,
+  "frames": 275,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetGold": [
+    2,
+    250000
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 4,
+      "c2s": "15010068656c6c6f000000",
+      "note": "0x15 normal chat"
+    },
+    {
+      "frame": 6,
+      "c2s": "3f1a00",
+      "note": "0x3F voice emote"
+    },
+    {
+      "frame": 7,
+      "c2s": "40",
+      "note": "0x40 quest log status request"
+    },
+    {
+      "frame": 8,
+      "c2s": "3a0304",
+      "note": "0x3A +5 Vitality"
+    },
+    {
+      "frame": 9,
+      "c2s": "3b6200",
+      "note": "0x3B learn Might (98)"
+    },
+    {
+      "frame": 10,
+      "c2s": "3c62000000ffffffff",
+      "note": "0x3C select Might"
+    },
+    {
+      "frame": 11,
+      "c2s": "60",
+      "note": "0x60 weapon swap"
+    },
+    {
+      "frame": 12,
+      "c2s": "60",
+      "note": "0x60 weapon swap restore"
+    },
+    {
+      "frame": 14,
+      "c2s": "030f161f17",
+      "note": "step to Stash (#17)"
+    },
+    {
+      "frame": 24,
+      "c2s": "130200000011000000",
+      "note": "0x13 Interact Stash (#17)"
+    },
+    {
+      "frame": 27,
+      "c2s": "4f14000000983a",
+      "note": "0x4F DepositGold 15,000"
+    },
+    {
+      "frame": 29,
+      "c2s": "4f13000000b80b",
+      "note": "0x4F WithdrawGold 3,000"
+    },
+    {
+      "frame": 31,
+      "c2s": "190a000000",
+      "note": "0x19 pick tsc (#10) to cursor"
+    },
+    {
+      "frame": 33,
+      "c2s": "180a000000000000000000000004000000",
+      "note": "0x18 place tsc (#10) into Stash buffer (4)"
+    },
+    {
+      "frame": 35,
+      "c2s": "4f120000000000",
+      "note": "0x4F CloseStash (0x12)"
+    },
+    {
+      "frame": 38,
+      "c2s": "20090000000f1600001f170000",
+      "note": "0x20 open Horadric Cube (#9)"
+    },
+    {
+      "frame": 40,
+      "c2s": "190b000000",
+      "note": "0x19 pick isc (#11) to cursor"
+    },
+    {
+      "frame": 42,
+      "c2s": "2a0b00000009000000",
+      "note": "0x2A put cursor item (#11) into Cube (#9)"
+    },
+    {
+      "frame": 44,
+      "c2s": "4f180000000000",
+      "note": "0x4F Transmute Cube (0x18)"
+    },
+    {
+      "frame": 46,
+      "c2s": "4f170000000000",
+      "note": "0x4F CloseCube (0x17)"
+    },
+    {
+      "frame": 48,
+      "c2s": "200c0000000f1600001f170000",
+      "note": "0x20 drink Rejuvenation Potion (#12)"
+    },
+    {
+      "frame": 50,
+      "c2s": "0312160e17",
+      "note": "run north around tent"
+    },
+    {
+      "frame": 66,
+      "c2s": "0304160317",
+      "note": "approach Waypoint (#15)"
+    },
+    {
+      "frame": 84,
+      "c2s": "13020000000f000000",
+      "note": "0x13 Interact Waypoint (#15)"
+    },
+    {
+      "frame": 88,
+      "c2s": "490f00000000000000",
+      "note": "0x49 close Waypoint menu"
+    },
+    {
+      "frame": 92,
+      "c2s": "03f2151317",
+      "note": "run to Charsi (#6)"
+    },
+    {
+      "frame": 114,
+      "c2s": "130100000006000000",
+      "note": "0x13 Interact Charsi (#6)"
+    },
+    {
+      "frame": 118,
+      "c2s": "2f0100000006000000",
+      "note": "0x2F NpcInit Charsi (#6)"
+    },
+    {
+      "frame": 121,
+      "c2s": "38010000000600000000000000",
+      "note": "0x38 Open Charsi Trade shop"
+    },
+    {
+      "frame": 125,
+      "c2s": "3306000000060000000000000032000000",
+      "note": "0x33 Sell isc (#6) to Charsi"
+    },
+    {
+      "frame": 128,
+      "c2s": "3506000000000000000000000000000080",
+      "note": "0x35 RepairAll at Charsi"
+    },
+    {
+      "frame": 131,
+      "c2s": "300100000006000000",
+      "note": "0x30 NpcCancel Charsi"
+    },
+    {
+      "frame": 135,
+      "c2s": "03f2153217",
+      "note": "run south toward Gheed"
+    },
+    {
+      "frame": 158,
+      "c2s": "03f4154817",
+      "note": "step next to Gheed (#9)"
+    },
+    {
+      "frame": 184,
+      "c2s": "130100000009000000",
+      "note": "0x13 Interact Gheed (#9)"
+    },
+    {
+      "frame": 188,
+      "c2s": "2f0100000009000000",
+      "note": "0x2F NpcInit Gheed (#9)"
+    },
+    {
+      "frame": 192,
+      "c2s": "38020000000900000000000000",
+      "note": "0x38 Open Gheed Gamble window (action=2)"
+    },
+    {
+      "frame": 198,
+      "c2s": "300100000009000000",
+      "note": "0x30 NpcCancel Gheed"
+    },
+    {
+      "frame": 202,
+      "c2s": "0310163417",
+      "note": "run east toward Kashya"
+    },
+    {
+      "frame": 224,
+      "c2s": "032a162a17",
+      "note": "approach Kashya (#3)"
+    },
+    {
+      "frame": 248,
+      "c2s": "130100000003000000",
+      "note": "0x13 Interact Kashya (#3)"
+    },
+    {
+      "frame": 252,
+      "c2s": "2f0100000003000000",
+      "note": "0x2F NpcInit Kashya (#3)"
+    },
+    {
+      "frame": 256,
+      "c2s": "38030000000300000000000000",
+      "note": "0x38 Open Kashya Hire list (action=3)"
+    },
+    {
+      "frame": 262,
+      "c2s": "300100000003000000",
+      "note": "0x30 NpcCancel Kashya"
+    }
+  ]
+}

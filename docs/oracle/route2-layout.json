@@ -1,0 +1,5293 @@
+{
+  "$comment": "Route-2 pilot memory layout (1.13c). Offsets in bytes; ptr = 32-bit pointer. Evidence: kb/engine/d2game-event-wheel-and-room-units-113c.md and the kb files cited per field. Checked against oracle memdumps by tools/oracle/route2-layout-check.py.",
+  "structs": {
+    "D2UnitStrc": {
+      "size": 244,
+      "allocEvidence": "D2Common.#11153 0x6FD7F383 mov edx, 0xF4; 0x6FD7F392 mov ecx, 0x3D; rep stosd",
+      "fields": [
+        {
+          "name": "dwUnitType",
+          "off": 0,
+          "type": "u32"
+        },
+        {
+          "name": "dwClassId",
+          "off": 4,
+          "type": "u32"
+        },
+        {
+          "name": "pMemPool",
+          "off": 8,
+          "type": "ptr"
+        },
+        {
+          "name": "dwUnitId",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwAnimMode",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "pUnitData",
+          "off": 20,
+          "type": "ptr"
+        },
+        {
+          "name": "nAct",
+          "off": 24,
+          "type": "u8"
+        },
+        {
+          "name": "pAct",
+          "off": 28,
+          "type": "ptr"
+        },
+        {
+          "name": "seedLo",
+          "off": 32,
+          "type": "u32"
+        },
+        {
+          "name": "seedHi",
+          "off": 36,
+          "type": "u32"
+        },
+        {
+          "name": "pPath",
+          "off": 44,
+          "type": "ptr"
+        },
+        {
+          "name": "pAnimSeq",
+          "off": 48,
+          "type": "ptr",
+          "$comment": "0x6FD7F1C6 mov ecx, [eax+0x30]"
+        },
+        {
+          "name": "dwSeqFramePrecise",
+          "off": 56,
+          "type": "u32",
+          "$comment": "0x6FD7F0E7 mov ecx, [eax+0x38]"
+        },
+        {
+          "name": "dwSeqMode",
+          "off": 64,
+          "type": "u32",
+          "$comment": "0x6FD7F1CD mov eax, [eax+0x40]"
+        },
+        {
+          "name": "dwFramePrecise",
+          "off": 68,
+          "type": "u32",
+          "$comment": "0x6FD7EE84 mov edx, [eax+0x44]"
+        },
+        {
+          "name": "dwFrameCountPrecise",
+          "off": 72,
+          "type": "u32",
+          "$comment": "0x6FD7EEAE mov eax, [eax+0x48]"
+        },
+        {
+          "name": "wAnimSpeed",
+          "off": 76,
+          "type": "u16"
+        },
+        {
+          "name": "wActionFrame",
+          "off": 78,
+          "type": "u16"
+        },
+        {
+          "name": "pAnimData",
+          "off": 80,
+          "type": "ptr"
+        },
+        {
+          "name": "pStatListEx",
+          "off": 92,
+          "type": "ptr"
+        },
+        {
+          "name": "pInventory",
+          "off": 96,
+          "type": "ptr"
+        },
+        {
+          "name": "dwField7C",
+          "off": 124,
+          "type": "u32",
+          "$comment": "0x6FD7E983 mov eax, [ecx+0x7c]"
+        },
+        {
+          "name": "pGame",
+          "off": 128,
+          "type": "ptr"
+        },
+        {
+          "name": "dwSourceUnitType",
+          "off": 148,
+          "type": "u32",
+          "$comment": "0x6FD7FB9F mov eax, [eax+0x94]"
+        },
+        {
+          "name": "dwSourceUnitId",
+          "off": 152,
+          "type": "u32",
+          "$comment": "0x6FD7FBCA mov eax, [eax+0x98]"
+        },
+        {
+          "name": "dwOwnerType",
+          "off": 156,
+          "type": "u32",
+          "$comment": "0x6FD7F9E3 mov [eax+0x9c], edx"
+        },
+        {
+          "name": "dwOwnerId",
+          "off": 160,
+          "type": "u32",
+          "$comment": "0x6FD7F9EC mov [eax+0xa0], ecx"
+        },
+        {
+          "name": "pSkills",
+          "off": 168,
+          "type": "ptr"
+        },
+        {
+          "name": "pCombat",
+          "off": 172,
+          "type": "ptr"
+        },
+        {
+          "name": "dwFlags",
+          "off": 196,
+          "type": "u32"
+        },
+        {
+          "name": "dwFlags2",
+          "off": 200,
+          "type": "u32"
+        },
+        {
+          "name": "pEventFirst",
+          "off": 220,
+          "type": "ptr"
+        },
+        {
+          "name": "pRoomUpdateNext",
+          "off": 224,
+          "type": "ptr"
+        },
+        {
+          "name": "pGameHashNext",
+          "off": 228,
+          "type": "ptr"
+        },
+        {
+          "name": "pRoomUnitNext",
+          "off": 232,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2StatListStrc": {
+      "size": 60,
+      "allocEvidence": "D2Common.#11013 0x6FD88112 mov edx, 0x3C",
+      "fields": [
+        {
+          "name": "pMemPool",
+          "off": 0,
+          "type": "ptr"
+        },
+        {
+          "name": "pUnit",
+          "off": 4,
+          "type": "ptr"
+        },
+        {
+          "name": "eOwnerType",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwOwnerId",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwFlags",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "dwStateNo",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "dwExpireFrame",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "nSkillNo",
+          "off": 28,
+          "type": "u32"
+        },
+        {
+          "name": "nSkillLevel",
+          "off": 32,
+          "type": "u32"
+        },
+        {
+          "name": "pStat",
+          "off": 36,
+          "type": "ptr"
+        },
+        {
+          "name": "wStatCount",
+          "off": 40,
+          "type": "u16"
+        },
+        {
+          "name": "wStatCapacity",
+          "off": 42,
+          "type": "u16"
+        },
+        {
+          "name": "pPrevLink",
+          "off": 44,
+          "type": "ptr"
+        },
+        {
+          "name": "pNextLink",
+          "off": 48,
+          "type": "ptr"
+        },
+        {
+          "name": "pParent",
+          "off": 52,
+          "type": "ptr"
+        },
+        {
+          "name": "fpRemove",
+          "off": 56,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2StatListExStrc": {
+      "size": 100,
+      "allocEvidence": "D2Common.#11166 0x6FD8AF31 mov edx, 0x64",
+      "fields": [
+        {
+          "name": "pMemPool",
+          "off": 0,
+          "type": "ptr"
+        },
+        {
+          "name": "pUnit",
+          "off": 4,
+          "type": "ptr"
+        },
+        {
+          "name": "eOwnerType",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwOwnerId",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwFlags",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "dwStateNo",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "dwExpireFrame",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "nSkillNo",
+          "off": 28,
+          "type": "u32"
+        },
+        {
+          "name": "nSkillLevel",
+          "off": 32,
+          "type": "u32"
+        },
+        {
+          "name": "pStat",
+          "off": 36,
+          "type": "ptr"
+        },
+        {
+          "name": "wStatCount",
+          "off": 40,
+          "type": "u16"
+        },
+        {
+          "name": "wStatCapacity",
+          "off": 42,
+          "type": "u16"
+        },
+        {
+          "name": "pPrevLink",
+          "off": 44,
+          "type": "ptr"
+        },
+        {
+          "name": "pNextLink",
+          "off": 48,
+          "type": "ptr"
+        },
+        {
+          "name": "pParent",
+          "off": 52,
+          "type": "ptr"
+        },
+        {
+          "name": "fpRemove",
+          "off": 56,
+          "type": "ptr"
+        },
+        {
+          "name": "pMyLastList",
+          "off": 60,
+          "type": "ptr"
+        },
+        {
+          "name": "pMyStats",
+          "off": 64,
+          "type": "ptr"
+        },
+        {
+          "name": "pOwner",
+          "off": 68,
+          "type": "ptr"
+        },
+        {
+          "name": "pFullStat",
+          "off": 72,
+          "type": "ptr"
+        },
+        {
+          "name": "wFullStatCount",
+          "off": 76,
+          "type": "u16"
+        },
+        {
+          "name": "wFullStatCapacity",
+          "off": 78,
+          "type": "u16"
+        },
+        {
+          "name": "pModStat",
+          "off": 80,
+          "type": "ptr"
+        },
+        {
+          "name": "wModStatCount",
+          "off": 84,
+          "type": "u16"
+        },
+        {
+          "name": "wModStatCapacity",
+          "off": 86,
+          "type": "u16"
+        },
+        {
+          "name": "pStateFlags",
+          "off": 88,
+          "type": "ptr"
+        },
+        {
+          "name": "fpStatChanged",
+          "off": 92,
+          "type": "ptr"
+        },
+        {
+          "name": "pGame",
+          "off": 96,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2MonsterDataStrc": {
+      "size": 96,
+      "allocEvidence": "D2Common 0x6FD7F3B4 mov edx, 0x60",
+      "fields": [
+        {
+          "name": "pMonStatsTxt",
+          "off": 0,
+          "type": "ptr"
+        },
+        {
+          "name": "pAiGeneral",
+          "off": 40,
+          "type": "ptr"
+        },
+        {
+          "name": "pAiControl",
+          "off": 44,
+          "type": "ptr"
+        },
+        {
+          "name": "dwAlwaysChaseField",
+          "off": 84,
+          "type": "u32"
+        }
+      ]
+    },
+    "D2AiGeneralStrc": {
+      "size": 64,
+      "allocEvidence": "D2Game 0x6FCD037D mov edx, 0x40",
+      "fields": [
+        {
+          "name": "pfnThink",
+          "off": 4,
+          "type": "ptr"
+        },
+        {
+          "name": "dwFlags",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "bAfraid",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "pCommandHead",
+          "off": 32,
+          "type": "ptr"
+        },
+        {
+          "name": "pCommandTail",
+          "off": 36,
+          "type": "ptr"
+        },
+        {
+          "name": "pGroup",
+          "off": 40,
+          "type": "ptr"
+        },
+        {
+          "name": "dwLeaderId",
+          "off": 44,
+          "type": "u32"
+        },
+        {
+          "name": "dwLeaderType",
+          "off": 48,
+          "type": "u32"
+        },
+        {
+          "name": "pMinionList",
+          "off": 52,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2AiCmdStrc": {
+      "size": 28,
+      "allocEvidence": "D2Game 0x6FC40F5E mov edx, 0x1C",
+      "fields": [
+        {
+          "name": "pNext",
+          "off": 0,
+          "type": "ptr"
+        },
+        {
+          "name": "pPrev",
+          "off": 4,
+          "type": "ptr"
+        },
+        {
+          "name": "dwCmdType",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwParam1",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwParam2",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "dwParam3",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "dwParam4",
+          "off": 24,
+          "type": "u32"
+        }
+      ]
+    },
+    "D2AiControlStrc": {
+      "size": 36,
+      "allocEvidence": "D2Game 0x6FCD03BA mov edx, 0x24",
+      "fields": [
+        {
+          "name": "dwPathTypeOverride",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "dwVelocityOverride",
+          "off": 28,
+          "type": "u32"
+        },
+        {
+          "name": "bNewDistOverride",
+          "off": 32,
+          "type": "u8"
+        }
+      ]
+    },
+    "D2EventStrc": {
+      "size": 48,
+      "allocEvidence": "D2Game 0x6FCAE461 lea ecx, [eax+0x30] (600-node pool chunk 0x7088)",
+      "fields": [
+        {
+          "name": "nType",
+          "off": 0,
+          "type": "u8"
+        },
+        {
+          "name": "fFlags",
+          "off": 2,
+          "type": "u8"
+        },
+        {
+          "name": "dwFrame",
+          "off": 4,
+          "type": "u32"
+        },
+        {
+          "name": "pUnit",
+          "off": 8,
+          "type": "ptr"
+        },
+        {
+          "name": "dwUnitId",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwUnitType",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "dwArg14",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "dwArg18",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "pWheelNewer",
+          "off": 28,
+          "type": "ptr"
+        },
+        {
+          "name": "pWheelOlder",
+          "off": 32,
+          "type": "ptr"
+        },
+        {
+          "name": "pUnitNext",
+          "off": 36,
+          "type": "ptr"
+        },
+        {
+          "name": "pUnitPrev",
+          "off": 40,
+          "type": "ptr"
+        },
+        {
+          "name": "pfnHandler",
+          "off": 44,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2TimerStrc": {
+      "size": 2592,
+      "allocEvidence": "D2Game 0x6FCAE652 mov edx, 0xA20",
+      "fields": [
+        {
+          "name": "nCurrentSlot",
+          "off": 0,
+          "type": "u32"
+        },
+        {
+          "name": "pSlotTail",
+          "off": 4,
+          "type": "ptr",
+          "count": 320,
+          "$comment": "[partition * 64 + slot]"
+        },
+        {
+          "name": "pSlotHead",
+          "off": 1284,
+          "type": "ptr",
+          "count": 320
+        },
+        {
+          "name": "pPersistentHead",
+          "off": 2564,
+          "type": "ptr",
+          "count": 5
+        },
+        {
+          "name": "pSavedNext",
+          "off": 2584,
+          "type": "ptr"
+        },
+        {
+          "name": "pPool",
+          "off": 2588,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2GameStrc": {
+      "size": 7668,
+      "allocEvidence": "D2Client 0x6FAB24D9 add eax, 0x1DF4; D2Game highest field +0x1DF0 at 0x6FC4C751 & 0x6FD0AA86",
+      "fields": [
+        {
+          "name": "nDifficulty",
+          "off": 109,
+          "type": "u8"
+        },
+        {
+          "name": "bExpansion",
+          "off": 112,
+          "type": "u32"
+        },
+        {
+          "name": "dwInitSeed",
+          "off": 124,
+          "type": "u32"
+        },
+        {
+          "name": "dwSeedOverride",
+          "off": 132,
+          "type": "u32"
+        },
+        {
+          "name": "pClientList",
+          "off": 136,
+          "type": "ptr"
+        },
+        {
+          "name": "dwLastUnitId",
+          "off": 144,
+          "type": "u32",
+          "count": 6
+        },
+        {
+          "name": "dwGameFrame",
+          "off": 168,
+          "type": "u32"
+        },
+        {
+          "name": "pTimer",
+          "off": 184,
+          "type": "ptr"
+        },
+        {
+          "name": "pAct",
+          "off": 188,
+          "type": "ptr",
+          "count": 5
+        },
+        {
+          "name": "seedLo",
+          "off": 208,
+          "type": "u32"
+        },
+        {
+          "name": "seedHi",
+          "off": 212,
+          "type": "u32"
+        },
+        {
+          "name": "pUnitHash",
+          "off": 4384,
+          "type": "ptr",
+          "count": 640,
+          "$comment": "0:player +0x1120, 1:monster +0x1320, 2:object +0x1520, 4:item +0x1720, 3:missile +0x1920"
+        },
+        {
+          "name": "pTileList",
+          "off": 6944,
+          "type": "ptr"
+        },
+        {
+          "name": "dwMonSpawnCount",
+          "off": 7536,
+          "type": "u32",
+          "count": 17,
+          "$comment": "+0x1D70..+0x1DB3 (cleared as 18 dwords with +0x1DB4 at 0x6FC4B6C0)"
+        },
+        {
+          "name": "dwMonSpawnTotal",
+          "off": 7604,
+          "type": "u32",
+          "$comment": "+0x1DB4 sum of dwMonSpawnCount[1..16] (excludes index 0 per 0x6FC9502A)"
+        },
+        {
+          "name": "dwUberStateEnd",
+          "off": 7664,
+          "type": "u32",
+          "$comment": "+0x1DF0 last dword of 0x1DF4-byte D2GameStrc (0x6FC4C751)"
+        }
+      ]
+    },
+    "D2ActiveRoomStrc": {
+      "size": 128,
+      "allocEvidence": "D2Common 0x6FD8C75A mov edx, 0x80",
+      "fields": [
+        {
+          "name": "ppRoomsNear",
+          "off": 0,
+          "type": "ptr"
+        },
+        {
+          "name": "pCoords",
+          "off": 8,
+          "type": "ptr",
+          "aliases": [
+            "pRoomTiles"
+          ],
+          "$comment": "pRoomTiles = &tileGrid+0x14 (0x6FD7E23A add ecx, 0x14 -> 0x6FD8C79F mov [ebx+0x8], edx); read by 0x6FD8BB58 mov ecx, [eax+0x8]"
+        },
+        {
+          "name": "nIdleCounter",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD8B385 mov eax, [eax+0xc]"
+        },
+        {
+          "name": "pRoomEx",
+          "off": 16,
+          "type": "ptr"
+        },
+        {
+          "name": "bDeathRingIdx",
+          "off": 20,
+          "type": "u8"
+        },
+        {
+          "name": "pPortalNodes",
+          "off": 24,
+          "type": "ptr",
+          "$comment": "0x6FD8B497 mov eax, [eax+0x18]"
+        },
+        {
+          "name": "pUpdateList",
+          "off": 28,
+          "type": "ptr"
+        },
+        {
+          "name": "pCollisionGrid",
+          "off": 32,
+          "type": "ptr"
+        },
+        {
+          "name": "nRoomsNear",
+          "off": 36,
+          "type": "u32"
+        },
+        {
+          "name": "nPlayers",
+          "off": 40,
+          "type": "u32"
+        },
+        {
+          "name": "pAct",
+          "off": 44,
+          "type": "ptr",
+          "aliases": [
+            "pActUpdateFlag"
+          ],
+          "$comment": "D2ActStrc* written at 0x6FD8C7B2 mov [ebx+0x2C], ebp"
+        },
+        {
+          "name": "dwFlags",
+          "off": 52,
+          "type": "u32"
+        },
+        {
+          "name": "dwDeathRing",
+          "off": 56,
+          "type": "u32",
+          "count": 4
+        },
+        {
+          "name": "pClientList",
+          "off": 72,
+          "type": "ptr",
+          "$comment": "0x6FD8B3A9 mov ecx, [ecx+0x48]"
+        },
+        {
+          "name": "nSubtileX",
+          "off": 76,
+          "type": "u32"
+        },
+        {
+          "name": "nSubtileY",
+          "off": 80,
+          "type": "u32"
+        },
+        {
+          "name": "nSubtileWidth",
+          "off": 84,
+          "type": "u32"
+        },
+        {
+          "name": "nSubtileHeight",
+          "off": 88,
+          "type": "u32"
+        },
+        {
+          "name": "nTileX",
+          "off": 92,
+          "type": "u32"
+        },
+        {
+          "name": "nTileY",
+          "off": 96,
+          "type": "u32"
+        },
+        {
+          "name": "nTileWidth",
+          "off": 100,
+          "type": "u32"
+        },
+        {
+          "name": "nTileHeight",
+          "off": 104,
+          "type": "u32"
+        },
+        {
+          "name": "seedLo",
+          "off": 108,
+          "type": "u32"
+        },
+        {
+          "name": "seedHi",
+          "off": 112,
+          "type": "u32"
+        },
+        {
+          "name": "pUnitFirst",
+          "off": 116,
+          "type": "ptr"
+        },
+        {
+          "name": "nNumClients",
+          "off": 120,
+          "type": "u32",
+          "$comment": "0x6FD8B377 mov ecx, [eax+0x78]"
+        },
+        {
+          "name": "pRoomNext",
+          "off": 124,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2DynamicPathStrc": {
+      "size": 512,
+      "allocEvidence": "D2Common.#11003 0x6FD86045 mov edx, 0x200",
+      "fields": [
+        {
+          "name": "wOffsetX",
+          "off": 0,
+          "type": "u16"
+        },
+        {
+          "name": "wPosX",
+          "off": 2,
+          "type": "u16"
+        },
+        {
+          "name": "wOffsetY",
+          "off": 4,
+          "type": "u16"
+        },
+        {
+          "name": "wPosY",
+          "off": 6,
+          "type": "u16"
+        },
+        {
+          "name": "dwClientCoordX",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwClientCoordY",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "wTargetX",
+          "off": 16,
+          "type": "u16"
+        },
+        {
+          "name": "wTargetY",
+          "off": 18,
+          "type": "u16"
+        },
+        {
+          "name": "wPrevTargetX",
+          "off": 20,
+          "type": "u16"
+        },
+        {
+          "name": "wPrevTargetY",
+          "off": 22,
+          "type": "u16"
+        },
+        {
+          "name": "wFinalTargetX",
+          "off": 24,
+          "type": "u16"
+        },
+        {
+          "name": "wFinalTargetY",
+          "off": 26,
+          "type": "u16"
+        },
+        {
+          "name": "pRoom",
+          "off": 28,
+          "type": "ptr"
+        },
+        {
+          "name": "pPreviousRoom",
+          "off": 32,
+          "type": "ptr"
+        },
+        {
+          "name": "dwCurrentPointIdx",
+          "off": 36,
+          "type": "u32"
+        },
+        {
+          "name": "dwPathPoints",
+          "off": 40,
+          "type": "u32"
+        },
+        {
+          "name": "pUnit",
+          "off": 48,
+          "type": "ptr"
+        },
+        {
+          "name": "dwFlags",
+          "off": 52,
+          "type": "u32"
+        },
+        {
+          "name": "dwVelocityChangeCounter",
+          "off": 56,
+          "type": "u32",
+          "$comment": "+0x38: 0x6FD84D51 mov dword [eax+0x38], 0xf"
+        },
+        {
+          "name": "dwPathType",
+          "off": 60,
+          "type": "u32"
+        },
+        {
+          "name": "dwPrevPathType",
+          "off": 64,
+          "type": "u32"
+        },
+        {
+          "name": "dwUnitSize",
+          "off": 68,
+          "type": "u32"
+        },
+        {
+          "name": "dwCollisionPattern",
+          "off": 72,
+          "type": "u32"
+        },
+        {
+          "name": "nFootprintCollisionMask",
+          "off": 76,
+          "type": "u32"
+        },
+        {
+          "name": "nMoveTestCollisionMask",
+          "off": 80,
+          "type": "u32"
+        },
+        {
+          "name": "wCollidedWithMask",
+          "off": 84,
+          "type": "u16"
+        },
+        {
+          "name": "pTargetUnit",
+          "off": 88,
+          "type": "ptr"
+        },
+        {
+          "name": "dwTargetType",
+          "off": 92,
+          "type": "u32"
+        },
+        {
+          "name": "dwTargetId",
+          "off": 96,
+          "type": "u32"
+        },
+        {
+          "name": "nDirection",
+          "off": 100,
+          "type": "u8"
+        },
+        {
+          "name": "nNewDirection",
+          "off": 101,
+          "type": "u8"
+        },
+        {
+          "name": "nDiffDirection",
+          "off": 102,
+          "type": "u8"
+        },
+        {
+          "name": "nStepAttr",
+          "off": 104,
+          "type": "u8",
+          "$comment": "+0x68: 0x6FD8E0C0 movzx eax, byte [esi+0x68]"
+        },
+        {
+          "name": "tDirectionVectorX",
+          "off": 106,
+          "type": "u32",
+          "$comment": "unaligned int32 +0x6A: 0x6FD5CF11 mov edx, [eax+0x6a]"
+        },
+        {
+          "name": "tDirectionVectorY",
+          "off": 110,
+          "type": "u32",
+          "$comment": "unaligned int32 +0x6E: 0x6FD5CF23 mov edx, [eax+0x6e]"
+        },
+        {
+          "name": "tVelocityVectorX",
+          "off": 114,
+          "type": "u32",
+          "$comment": "unaligned int32 +0x72: 0x6FD5CF20 mov [eax+0x72], edx"
+        },
+        {
+          "name": "tVelocityVectorY",
+          "off": 118,
+          "type": "u32",
+          "$comment": "unaligned int32 +0x76: 0x6FD5CF2C mov [eax+0x76], edx"
+        },
+        {
+          "name": "dwVelocity",
+          "off": 124,
+          "type": "u32"
+        },
+        {
+          "name": "nPreviousVelocity",
+          "off": 128,
+          "type": "u32"
+        },
+        {
+          "name": "dwMaxVelocity",
+          "off": 132,
+          "type": "u32"
+        },
+        {
+          "name": "dwAcceleration",
+          "off": 136,
+          "type": "u32"
+        },
+        {
+          "name": "nAccelStepCounter",
+          "off": 140,
+          "type": "u32",
+          "$comment": "+0x8C: 0x6FD5CEC6 mov edx, [eax+0x8c]; 0x6FD5CED0 / 0x6FD5CF04 writes"
+        },
+        {
+          "name": "nDist",
+          "off": 144,
+          "type": "u8"
+        },
+        {
+          "name": "nDistMax",
+          "off": 145,
+          "type": "u8"
+        },
+        {
+          "name": "nIDAStarInitFScore",
+          "off": 146,
+          "type": "u8"
+        },
+        {
+          "name": "nStepNum",
+          "off": 147,
+          "type": "u8"
+        },
+        {
+          "name": "nDistance",
+          "off": 148,
+          "type": "u8"
+        },
+        {
+          "name": "nPathTypeDirOffset",
+          "off": 152,
+          "type": "u32",
+          "aliases": [
+            "pfnPathfind"
+          ],
+          "$comment": "int32 +0x98: 0x6FD84FE3 mov ecx, [edx*4+0x6fde4138]; 0x6FD84FEA mov [eax+0x98], ecx"
+        },
+        {
+          "name": "wPathPoints",
+          "off": 156,
+          "type": "u16",
+          "count": 156
+        },
+        {
+          "name": "nSavedStepsCount",
+          "off": 468,
+          "type": "u32"
+        },
+        {
+          "name": "wSavedSteps",
+          "off": 472,
+          "type": "u16",
+          "count": 20
+        }
+      ]
+    },
+    "D2DamageStrc": {
+      "size": 112,
+      "allocEvidence": "D2Game 0x6FC9560A mov ecx, 0x1C; rep stosd",
+      "fields": [
+        {
+          "name": "dwHitFlags",
+          "off": 0,
+          "type": "u32"
+        },
+        {
+          "name": "wResultFlags",
+          "off": 4,
+          "type": "u16"
+        },
+        {
+          "name": "wExtra",
+          "off": 6,
+          "type": "u16"
+        },
+        {
+          "name": "dwPhysDamage",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwEnhDmgPct",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwFireDamage",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "dwBurnDamage",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "dwBurnLen",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "dwLtngDamage",
+          "off": 28,
+          "type": "u32"
+        },
+        {
+          "name": "dwMagDamage",
+          "off": 32,
+          "type": "u32"
+        },
+        {
+          "name": "dwColdDamage",
+          "off": 36,
+          "type": "u32"
+        },
+        {
+          "name": "dwPoisDamage",
+          "off": 40,
+          "type": "u32"
+        },
+        {
+          "name": "dwPoisLen",
+          "off": 44,
+          "type": "u32"
+        },
+        {
+          "name": "dwColdLen",
+          "off": 48,
+          "type": "u32"
+        },
+        {
+          "name": "dwFrzLen",
+          "off": 52,
+          "type": "u32"
+        },
+        {
+          "name": "dwLifeLeech",
+          "off": 56,
+          "type": "u32"
+        },
+        {
+          "name": "dwManaLeech",
+          "off": 60,
+          "type": "u32"
+        },
+        {
+          "name": "dwStamLeech",
+          "off": 64,
+          "type": "u32"
+        },
+        {
+          "name": "dwStunLen",
+          "off": 68,
+          "type": "u32"
+        },
+        {
+          "name": "dwAbsorbLife",
+          "off": 72,
+          "type": "u32"
+        },
+        {
+          "name": "dwDmgTotal",
+          "off": 76,
+          "type": "u32"
+        },
+        {
+          "name": "dwPiercePct",
+          "off": 84,
+          "type": "u32"
+        },
+        {
+          "name": "dwDamageRate",
+          "off": 88,
+          "type": "u32"
+        },
+        {
+          "name": "dwHitClass",
+          "off": 96,
+          "type": "u32"
+        },
+        {
+          "name": "bHitClassActiveSet",
+          "off": 100,
+          "type": "u8"
+        },
+        {
+          "name": "eConvType",
+          "off": 101,
+          "type": "u8"
+        },
+        {
+          "name": "dwConvPct",
+          "off": 104,
+          "type": "u32"
+        },
+        {
+          "name": "nOverlays",
+          "off": 108,
+          "type": "u32"
+        }
+      ]
+    },
+    "D2ActStrc": {
+      "size": 96,
+      "allocEvidence": "D2Common.#10951 0x6FD8CB40 mov edx, 0x60",
+      "fields": [
+        {
+          "name": "pEnvironment",
+          "off": 4,
+          "type": "ptr"
+        },
+        {
+          "name": "dwTownId",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwMapSeed",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "pRoom1",
+          "off": 16,
+          "type": "ptr"
+        },
+        {
+          "name": "nAct",
+          "off": 20,
+          "type": "u8"
+        },
+        {
+          "name": "pDrlg",
+          "off": 72,
+          "type": "ptr",
+          "aliases": [
+            "pActMisc"
+          ],
+          "$comment": "D2DrlgStrc* returned by D2Common.#10316 at 0x6FD8CBB9"
+        },
+        {
+          "name": "pfnActCallBack",
+          "off": 80,
+          "type": "ptr",
+          "aliases": [
+            "bHasCallback"
+          ],
+          "$comment": "callback pointer written at 0x6FD8CB6A mov [ebx+0x50], ecx"
+        },
+        {
+          "name": "bInitialized",
+          "off": 84,
+          "type": "u32"
+        },
+        {
+          "name": "pMemPool",
+          "off": 92,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2EnvironmentStrc": {
+      "size": 56,
+      "allocEvidence": "D2Common 0x6FD87BAE mov edx, 0x38",
+      "fields": [
+        {
+          "name": "dwCycleIndex",
+          "off": 0,
+          "type": "u32"
+        },
+        {
+          "name": "nTimeOfDay",
+          "off": 4,
+          "type": "u32"
+        },
+        {
+          "name": "dwTicks",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "dwIntensity",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "dwInitTick",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "nLastLight",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "bRed",
+          "off": 24,
+          "type": "u8"
+        },
+        {
+          "name": "bGreen",
+          "off": 25,
+          "type": "u8"
+        },
+        {
+          "name": "bBlue",
+          "off": 26,
+          "type": "u8"
+        },
+        {
+          "name": "dwCyclePeriod",
+          "off": 40,
+          "type": "u32"
+        },
+        {
+          "name": "dwTimeRateIndex",
+          "off": 44,
+          "type": "u32"
+        },
+        {
+          "name": "bEclipse",
+          "off": 48,
+          "type": "u32"
+        },
+        {
+          "name": "dwPrevTicks",
+          "off": 52,
+          "type": "u32"
+        }
+      ]
+    },
+    "D2RoomExStrc": {
+      "size": 236,
+      "allocEvidence": "D2Common 0x6FD94BEC mov edx, 0xEC",
+      "fields": [
+        {
+          "name": "pDrlgOrth",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "+0x00: 0x6FD94953 mov eax, [esi]"
+        },
+        {
+          "name": "dwInitSeed",
+          "off": 4,
+          "type": "u32"
+        },
+        {
+          "name": "ppRoomsNear",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FDCBB31 mov eax, [ebp+0x8]"
+        },
+        {
+          "name": "wStatusCount",
+          "off": 12,
+          "type": "u16",
+          "count": 4,
+          "$comment": "0x6FDCBB3E dec word [esi+eax*2+0xc]"
+        },
+        {
+          "name": "seedLo",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "seedHi",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "pStatusPrev",
+          "off": 28,
+          "type": "ptr",
+          "$comment": "status list prev link at +0x1C (0x6FD90B7D)"
+        },
+        {
+          "name": "pTypeData",
+          "off": 32,
+          "type": "ptr"
+        },
+        {
+          "name": "pRoomNext",
+          "off": 36,
+          "type": "ptr",
+          "$comment": "+0x24 level room chain: 0x6FD94F02 mov edx, [edx+0x24]"
+        },
+        {
+          "name": "dwFlags",
+          "off": 40,
+          "type": "u32"
+        },
+        {
+          "name": "nRoomsNear",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FDCBB24 mov eax, [ebp+0x2c]"
+        },
+        {
+          "name": "pRoom1",
+          "off": 48,
+          "type": "ptr"
+        },
+        {
+          "name": "nTileXPos",
+          "off": 52,
+          "type": "u32"
+        },
+        {
+          "name": "nTileYPos",
+          "off": 56,
+          "type": "u32"
+        },
+        {
+          "name": "nTileWidth",
+          "off": 60,
+          "type": "u32"
+        },
+        {
+          "name": "nTileHeight",
+          "off": 64,
+          "type": "u32"
+        },
+        {
+          "name": "nRoomStatus",
+          "off": 68,
+          "type": "u8",
+          "aliases": [
+            "bTriggerType"
+          ],
+          "$comment": "status byte initialized to 4 at 0x6FD94C09"
+        },
+        {
+          "name": "nType",
+          "off": 72,
+          "type": "u32"
+        },
+        {
+          "name": "dwDT1Mask",
+          "off": 80,
+          "type": "u32",
+          "$comment": "+0x50: 0x6FDB8440 mov ebx, [esi+0x50]"
+        },
+        {
+          "name": "pTileGrid",
+          "off": 84,
+          "type": "ptr",
+          "$comment": "+0x54: 0x6FDB81A0 mov eax, [esi+0x54]"
+        },
+        {
+          "name": "pLevel",
+          "off": 88,
+          "type": "ptr"
+        },
+        {
+          "name": "pPresetUnits",
+          "off": 92,
+          "type": "ptr",
+          "$comment": "+0x5C: 0x6FD5A416 mov edx, [ebx+0x5c]"
+        },
+        {
+          "name": "pLogicalRoomInfo",
+          "off": 100,
+          "type": "ptr"
+        },
+        {
+          "name": "pStatusNext",
+          "off": 232,
+          "type": "ptr",
+          "aliases": [
+            "pRoomExNext"
+          ],
+          "$comment": "status list next link at +0xE8 (0x6FD90B82)"
+        }
+      ]
+    },
+    "D2RoomCoordListStrc": {
+      "size": 48,
+      "allocEvidence": "D2Common 0x6FDD12A0 mov edx, 0x30",
+      "fields": [
+        {
+          "name": "nBox0PosX",
+          "off": 0,
+          "type": "u32"
+        },
+        {
+          "name": "nBox0PosY",
+          "off": 4,
+          "type": "u32"
+        },
+        {
+          "name": "nEndGameX",
+          "off": 8,
+          "type": "u32",
+          "aliases": [
+            "nBox0Width"
+          ],
+          "$comment": "x+w at 0x6FDD11BF"
+        },
+        {
+          "name": "nEndGameY",
+          "off": 12,
+          "type": "u32",
+          "aliases": [
+            "nBox0Height"
+          ],
+          "$comment": "y+h at 0x6FDD11A9"
+        },
+        {
+          "name": "nBox1PosX",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "nBox1PosY",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "nEndTileX",
+          "off": 24,
+          "type": "u32",
+          "aliases": [
+            "nBox1Width"
+          ],
+          "$comment": "tileX+tileW at 0x6FDD11EF"
+        },
+        {
+          "name": "nEndTileY",
+          "off": 28,
+          "type": "u32",
+          "aliases": [
+            "nBox1Height"
+          ],
+          "$comment": "tileY+tileH at 0x6FDD11D6"
+        },
+        {
+          "name": "bNode",
+          "off": 32,
+          "type": "u32"
+        },
+        {
+          "name": "nIndex",
+          "off": 40,
+          "type": "u32"
+        },
+        {
+          "name": "pNext",
+          "off": 44,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2RoomCollisionGridStrc": {
+      "size": 36,
+      "allocEvidence": "D2Common 0x6FD9D076 lea edx, [eax+0x24] (alloc 2*(w*h+2h+0x12) at 0x6FD9D044)",
+      "fields": [
+        {
+          "name": "nSubtileX",
+          "off": 0,
+          "type": "u32"
+        },
+        {
+          "name": "nSubtileY",
+          "off": 4,
+          "type": "u32"
+        },
+        {
+          "name": "nSubtileWidth",
+          "off": 8,
+          "type": "u32"
+        },
+        {
+          "name": "nSubtileHeight",
+          "off": 12,
+          "type": "u32"
+        },
+        {
+          "name": "nTileX",
+          "off": 16,
+          "type": "u32"
+        },
+        {
+          "name": "nTileY",
+          "off": 20,
+          "type": "u32"
+        },
+        {
+          "name": "nTileWidth",
+          "off": 24,
+          "type": "u32"
+        },
+        {
+          "name": "nTileHeight",
+          "off": 28,
+          "type": "u32"
+        },
+        {
+          "name": "pMapStart",
+          "off": 32,
+          "type": "ptr"
+        }
+      ]
+    },
+    "D2InventoryStrc": {
+      "size": 64,
+      "allocEvidence": "D2Common 0x6FD6E731 mov edx, 0x40 (Fog alloc in INVENTORY_Create); 0x6FD6E748 mov ecx, 0x10; rep stosd",
+      "fields": [
+        {
+          "name": "dwSignature",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD6E751 mov dword [edx], 0x01020304"
+        },
+        {
+          "name": "pMemPool",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD6E52D mov ecx, [esi+0x4]"
+        },
+        {
+          "name": "pOwner",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD6FE24 mov eax, [ebx+0x8]"
+        },
+        {
+          "name": "pFirstItem",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD6F6D0 mov [esi+0xC], ecx"
+        },
+        {
+          "name": "pLastItem",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD6F6A9 mov eax, [esi+0x10]"
+        },
+        {
+          "name": "pGrids",
+          "off": 20,
+          "type": "ptr",
+          "$comment": "0x6FD6E1BE mov ecx, [ebx+0x14]"
+        },
+        {
+          "name": "nGridCount",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FD6E1B4 cmp [ebx+0x18], esi"
+        },
+        {
+          "name": "dwWeaponGuid",
+          "off": 28,
+          "type": "u32",
+          "aliases": [
+            "dwWeaponId"
+          ],
+          "$comment": "0x6FD6FCB7 cmp [ebx+0x1c], eax"
+        },
+        {
+          "name": "pCursorItem",
+          "off": 32,
+          "type": "ptr",
+          "$comment": "0x6FD6DFC5 mov eax, [eax+0x20]"
+        },
+        {
+          "name": "dwLeftItemGuid",
+          "off": 36,
+          "type": "u32",
+          "$comment": "0x6FD6DE66 mov eax, [eax+0x24]"
+        },
+        {
+          "name": "dwItemCount",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD6DEA5 mov eax, [eax+0x28]"
+        },
+        {
+          "name": "pFirstNode",
+          "off": 44,
+          "type": "ptr",
+          "$comment": "0x6FD6DF85 mov eax, [eax+0x2c]"
+        },
+        {
+          "name": "pLastNode",
+          "off": 48,
+          "type": "ptr",
+          "$comment": "0x6FD6DF65 mov dword [edi+0x30], 0"
+        },
+        {
+          "name": "pFirstCorpse",
+          "off": 52,
+          "type": "ptr",
+          "$comment": "0x6FD6DD35 mov eax, [eax+0x34]"
+        },
+        {
+          "name": "pLastCorpse",
+          "off": 56,
+          "type": "ptr",
+          "$comment": "0x6FD6DD09 mov dword [edi+0x38], 0"
+        },
+        {
+          "name": "nCorpseCount",
+          "off": 60,
+          "type": "u32",
+          "$comment": "0x6FD6DCC5 mov eax, [eax+0x3c]"
+        }
+      ]
+    },
+    "D2InventoryGridStrc": {
+      "size": 16,
+      "allocEvidence": "D2Common 0x6FD6E266 shl ebp, 4; 0x6FD6E26E lea edx, [ebp+0x10] ((gridIdx+1)*0x10 realloc size in INVENTORY_GetOrInitGrid)",
+      "fields": [
+        {
+          "name": "pFirstItem",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD6F678 mov [esi], ecx"
+        },
+        {
+          "name": "pLastItem",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD6F651 mov eax, [esi+0x4]"
+        },
+        {
+          "name": "nGridWidth",
+          "off": 8,
+          "type": "u8",
+          "$comment": "0x6FD6E37C movzx eax, byte [edi+0x8]"
+        },
+        {
+          "name": "nGridHeight",
+          "off": 9,
+          "type": "u8",
+          "$comment": "0x6FD6E11E movzx edi, byte [ebx+0x9]"
+        },
+        {
+          "name": "ppItems",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD6E38A mov ecx, [edi+0xC]"
+        }
+      ]
+    },
+    "D2CorpseStrc": {
+      "size": 16,
+      "allocEvidence": "D2Common 0x6FD6DDF4 mov edx, 0x10 (Fog alloc in INVENTORY_AllocCorpse)",
+      "fields": [
+        {
+          "name": "bCountAsCorpse",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD6DC4B mov eax, [eax]"
+        },
+        {
+          "name": "dwUnitId",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD6DC7B mov eax, [eax+0x4]"
+        },
+        {
+          "name": "eClass",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD6DC5B mov eax, [eax+0x8]"
+        },
+        {
+          "name": "pNextCorpse",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD6DC9B mov eax, [eax+0xc]"
+        }
+      ]
+    },
+    "D2InventoryNodeStrc": {
+      "size": 8,
+      "allocEvidence": "D2Common 0x6FD6E53B mov edx, 0x8 (Fog alloc in INVENTORY_AddItemNode)",
+      "fields": [
+        {
+          "name": "dwItemId",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD6DEBB mov eax, [eax]"
+        },
+        {
+          "name": "pNext",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD6DECB mov eax, [eax+0x4]"
+        }
+      ]
+    },
+    "D2ItemDataStrc": {
+      "size": 116,
+      "allocEvidence": "D2Common 0x6FD73C8E mov edx, 0x74 (Fog alloc stored to pUnit->pUnitData at 0x6FD73CD0); 0x6FD73CBE mov ecx, 0x1D; rep stosd",
+      "fields": [
+        {
+          "name": "dwQuality",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD73B38 mov [eax], ecx"
+        },
+        {
+          "name": "dwSeedLo",
+          "off": 4,
+          "type": "u32",
+          "aliases": [
+            "dwSeed"
+          ],
+          "$comment": "0x6FD73BF4 mov dword [eax+0x4], 1; 0x6FD96937 add ecx, 0x4"
+        },
+        {
+          "name": "dwSeedHi",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD73BFB mov dword [eax+0x8], 0x29a"
+        },
+        {
+          "name": "dwInitSeed",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD73CC9 mov dword [edx+0xc], 0xffffffff"
+        },
+        {
+          "name": "dwOwnerGuid",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FD73BD4 mov eax, [eax+0x10]"
+        },
+        {
+          "name": "dwItemFlags",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD73895 mov [eax+0x14], edx"
+        },
+        {
+          "name": "dwCommandFlags",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FD738F4 mov eax, [eax+0x18]"
+        },
+        {
+          "name": "dwActionStamp",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FD725BB mov edx, [eax+0x1c]"
+        },
+        {
+          "name": "dwFileIndex",
+          "off": 32,
+          "type": "u32",
+          "$comment": "0x6FD725C4 mov edx, [eax+0x20]"
+        },
+        {
+          "name": "dwItemCell",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD72635 mov [eax+0x28], ecx"
+        },
+        {
+          "name": "dwItemLevel",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FD73802 mov [eax+0x2c], ecx"
+        },
+        {
+          "name": "wItemFormat",
+          "off": 48,
+          "type": "u16",
+          "$comment": "0x6FD72201 mov ax, word [eax+0x30]"
+        },
+        {
+          "name": "wRarePrefix",
+          "off": 50,
+          "type": "u16",
+          "$comment": "0x6FD739D9 mov [eax+0x32], cx"
+        },
+        {
+          "name": "wRareSuffix",
+          "off": 52,
+          "type": "u16",
+          "$comment": "0x6FD73989 mov [eax+0x34], cx"
+        },
+        {
+          "name": "wAutoAffix",
+          "off": 54,
+          "type": "u16",
+          "$comment": "0x6FD73A89 mov [eax+0x36], cx"
+        },
+        {
+          "name": "wMagicPrefix",
+          "off": 56,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FD73ADD mov [eax+ecx*2+0x38], dx"
+        },
+        {
+          "name": "wMagicSuffix",
+          "off": 62,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FD73A2D mov [eax+ecx*2+0x3e], dx"
+        },
+        {
+          "name": "nBodyLoc",
+          "off": 68,
+          "type": "u8",
+          "$comment": "0x6FD73C64 mov al, [eax+0x44]"
+        },
+        {
+          "name": "nInvPage",
+          "off": 69,
+          "type": "u8",
+          "$comment": "0x6FD737B8 mov [eax+0x45], cl"
+        },
+        {
+          "name": "bCmdFlags",
+          "off": 70,
+          "type": "u8",
+          "$comment": "0x6FD73778 mov [eax+0x46], cl"
+        },
+        {
+          "name": "bNodePage",
+          "off": 71,
+          "type": "u8",
+          "$comment": "0x6FD73738 mov [eax+0x47], cl"
+        },
+        {
+          "name": "bEarLevel",
+          "off": 72,
+          "type": "u8",
+          "$comment": "0x6FD736A8 mov [eax+0x48], cl"
+        },
+        {
+          "name": "bVarGfxIndex",
+          "off": 73,
+          "type": "u8",
+          "$comment": "0x6FD73668 mov [eax+0x49], cl"
+        },
+        {
+          "name": "szPlayerName",
+          "off": 74,
+          "type": "u8",
+          "count": 16,
+          "$comment": "0x6FD73714 add eax, 0x4a"
+        },
+        {
+          "name": "pExtraOwnerInventory",
+          "off": 92,
+          "type": "ptr",
+          "aliases": [
+            "pNodePos"
+          ],
+          "$comment": "embedded item-extra block: 0x6FD6E89F add eax, 0x5C; 0x6FD6E8A5 mov edi, [eax]"
+        }
+      ]
+    },
+    "D2PlayerDataStrc": {
+      "size": 364,
+      "allocEvidence": "D2Common 0x6FD809B8 mov edx, 0x16C (Fog alloc stored to pUnit->pUnitData at 0x6FD809C4); 0x6FD809C9 mov ecx, 0x5B; rep stosd",
+      "fields": [
+        {
+          "name": "dwActiveWeaponFlags",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FD7EB26 mov eax, [eax+0x2c]"
+        },
+        {
+          "name": "dwLeftTargetVal",
+          "off": 112,
+          "type": "u32",
+          "$comment": "0x6FD7F84B mov edx, [eax+0x70]"
+        },
+        {
+          "name": "dwRightTargetVal",
+          "off": 116,
+          "type": "u32",
+          "$comment": "0x6FD7F7EB mov edx, [eax+0x74]"
+        },
+        {
+          "name": "dwLeftTargetGuid",
+          "off": 120,
+          "type": "u32",
+          "$comment": "0x6FD7F854 mov edx, [eax+0x78]"
+        },
+        {
+          "name": "dwRightTargetGuid",
+          "off": 124,
+          "type": "u32",
+          "$comment": "0x6FD7F7F4 mov edx, [eax+0x7c]"
+        },
+        {
+          "name": "dwLeftSubtargetType",
+          "off": 128,
+          "type": "u32",
+          "$comment": "0x6FD7F60B mov edx, [eax+0x80]"
+        },
+        {
+          "name": "dwRightSubtargetType",
+          "off": 132,
+          "type": "u32",
+          "$comment": "0x6FD7F67B mov edx, [eax+0x84]"
+        },
+        {
+          "name": "dwLeftSubtargetGuid",
+          "off": 136,
+          "type": "u32",
+          "$comment": "0x6FD7F617 mov edx, [eax+0x88]"
+        },
+        {
+          "name": "dwRightSubtargetGuid",
+          "off": 140,
+          "type": "u32",
+          "$comment": "0x6FD7F687 mov edx, [eax+0x8c]"
+        },
+        {
+          "name": "dwInteractItemGuid",
+          "off": 144,
+          "type": "u32",
+          "$comment": "0x6FD7F4A1 mov eax, [eax+0x90]"
+        },
+        {
+          "name": "dwInteractType",
+          "off": 148,
+          "type": "u32",
+          "$comment": "0x6FD7F711 mov [eax+0x94], edx"
+        },
+        {
+          "name": "dwField150",
+          "off": 336,
+          "type": "u32",
+          "$comment": "0x6FD51010 mov dword [ecx+0x150], 1 (also 0x6FDCF683)"
+        },
+        {
+          "name": "dwField154",
+          "off": 340,
+          "type": "u32",
+          "$comment": "0x6FD51021 mov [edx+0x154], ecx"
+        },
+        {
+          "name": "dwField158",
+          "off": 344,
+          "type": "u32",
+          "$comment": "0x6FD5102E mov [edx+0x158], ecx"
+        },
+        {
+          "name": "dwField15C",
+          "off": 348,
+          "type": "u32",
+          "$comment": "0x6FD5103B mov [edx+0x15C], eax"
+        }
+      ]
+    },
+    "D2MonStatsTxt": {
+      "size": 424,
+      "allocEvidence": "D2Common 0x6FD512B8 imul eax, eax, 0x1A8 (record stride in the MonStats lookup 0x6FD512A0)",
+      "fields": [
+        {
+          "name": "wBaseId",
+          "off": 2,
+          "type": "u16",
+          "$comment": "0x6FD51891 movsx eax, word [eax+0x2]; 0x6FD6A7F6 movsx eax, word [ecx+0x2]"
+        },
+        {
+          "name": "wNextInClass",
+          "off": 4,
+          "type": "u16",
+          "$comment": "0x6FD51966 movsx eax, word [ecx+0x4]; 0x6FD6A87E movsx edx, word [esi+0x4]"
+        },
+        {
+          "name": "nBitField1",
+          "off": 12,
+          "type": "u8",
+          "aliases": [
+            "dwMonStatsFlags"
+          ],
+          "$comment": "0x6FD8513F mov al, [eax+0xc]; 0x6FD518CF movzx edx, byte [edx+eax+0xc]"
+        },
+        {
+          "name": "nBitField2",
+          "off": 13,
+          "type": "u8",
+          "aliases": [
+            "nMonStatsFlags"
+          ],
+          "$comment": "0x6FD85131 mov dl, [eax+0xd]; 0x6FD6A69A movzx eax, byte [eax+0xd]"
+        },
+        {
+          "name": "nBitField3",
+          "off": 14,
+          "type": "u8",
+          "$comment": "0x6FD81246 mov dl, [esi+0xe]"
+        },
+        {
+          "name": "wMonStatsEx",
+          "off": 24,
+          "type": "u16",
+          "$comment": "0x6FD513CE movsx eax, word [edx+eax+0x18]"
+        },
+        {
+          "name": "wVelocity",
+          "off": 50,
+          "type": "u16",
+          "$comment": "0x6FD80D7B movsx eax, word [eax+0x32]"
+        },
+        {
+          "name": "wSeqVelocity",
+          "off": 54,
+          "type": "u16",
+          "$comment": "0x6FD7FB46 movsx eax, word [eax+0x36]"
+        },
+        {
+          "name": "wRun",
+          "off": 56,
+          "type": "u16",
+          "$comment": "0x6FD7FB4B movsx eax, word [eax+0x38]"
+        },
+        {
+          "name": "nSubClassCount",
+          "off": 74,
+          "type": "u8",
+          "$comment": "0x6FDA3877 movzx edx, byte [edx+esi+0x4a]"
+        },
+        {
+          "name": "nSubClassIndex",
+          "off": 75,
+          "type": "u8",
+          "$comment": "0x6FDA3894 movzx edx, byte [edx+esi+0x4b]"
+        },
+        {
+          "name": "bAlign",
+          "off": 76,
+          "type": "u8",
+          "$comment": "0x6FD8B025 mov cl, [eax+0x4c]"
+        },
+        {
+          "name": "wLevel",
+          "off": 170,
+          "type": "u16",
+          "$comment": "0x6FD6A8D7 movsx ebp, word [ecx+0xaa]"
+        },
+        {
+          "name": "wSkill",
+          "off": 368,
+          "type": "u16",
+          "count": 8,
+          "$comment": "0x6FD9EC82 lea edx, [eax+0x170]"
+        },
+        {
+          "name": "wSkMode",
+          "off": 392,
+          "type": "u16",
+          "count": 8,
+          "$comment": "0x6FD9ECA5 movsx eax, word [eax+ecx*2+0x188]"
+        }
+      ]
+    },
+    "D2MonStats2Txt": {
+      "size": 308,
+      "allocEvidence": "D2Common 0x6FD513E5 imul eax, eax, 0x134 (record stride in the MonStats2 lookup 0x6FD513B0)",
+      "fields": [
+        {
+          "name": "dwFlags",
+          "off": 4,
+          "type": "u32",
+          "$comment": "bit array: 0x6FD514BB movzx edx, byte [edx+eax+0x4]"
+        },
+        {
+          "name": "nSizeX",
+          "off": 8,
+          "type": "u8",
+          "$comment": "0x6FD80FAA movsx eax, byte [eax+0x8]"
+        },
+        {
+          "name": "nSizeY",
+          "off": 9,
+          "type": "u8",
+          "$comment": "0x6FD80F29 movsx eax, byte [eax+0x9]"
+        },
+        {
+          "name": "dwModeFlags",
+          "off": 240,
+          "type": "u32",
+          "$comment": "bit array: 0x6FD5144B movzx edx, byte [edx+eax+0xF0]"
+        },
+        {
+          "name": "nComponentCounts",
+          "off": 21,
+          "type": "u8",
+          "count": 16,
+          "$comment": "0x6FDD4CA5 movzx ecx, byte [eax+esi+0x15]"
+        },
+        {
+          "name": "nComponentVariants",
+          "off": 38,
+          "type": "u8",
+          "count": 192,
+          "$comment": "0x6FDD4CC1 movzx ecx, byte [eax+ebx+0x26]"
+        }
+      ]
+    },
+    "D2SkillsTxt": {
+      "size": 572,
+      "allocEvidence": "D2Common 0x6FD51268 imul eax, eax, 0x23C (record stride in the Skills lookup 0x6FD51250); skills.bin is 4 + 357 * 0x23C bytes",
+      "fields": [
+        {
+          "name": "wSkillId",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FD9E1DD movsx eax, word [eax]"
+        },
+        {
+          "name": "nFlags2",
+          "off": 6,
+          "type": "u8",
+          "$comment": "0x6FD80C5E movzx eax, byte [eax+0x6]"
+        },
+        {
+          "name": "bFlags4",
+          "off": 8,
+          "type": "u8",
+          "$comment": "0x6FDA0959 mov dl, [eax+0x8]"
+        },
+        {
+          "name": "nCharClass",
+          "off": 12,
+          "type": "u8",
+          "$comment": "0x6FD9E8E8 mov al, [eax+0xc]"
+        },
+        {
+          "name": "nAnim",
+          "off": 18,
+          "type": "u8",
+          "$comment": "0x6FD80BB9 cmp byte [eax+0x12], 0xa"
+        },
+        {
+          "name": "nSeqNum",
+          "off": 19,
+          "type": "u8",
+          "$comment": "0x6FD9EC64 movzx eax, byte [eax+0x13]"
+        },
+        {
+          "name": "wITypeA",
+          "off": 24,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FDA0636 mov ax, [esi+0x18]"
+        },
+        {
+          "name": "wITypeB",
+          "off": 30,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FDA064C cmp word [esi+0x1e], 0"
+        },
+        {
+          "name": "wETypeA",
+          "off": 36,
+          "type": "u16",
+          "count": 2,
+          "$comment": "0x6FDA0625 cmp [esi+edi*4+0x24], bp"
+        },
+        {
+          "name": "wSrvDoFunc",
+          "off": 46,
+          "type": "u16",
+          "$comment": "0x6FDA0BEB cmp word [ebx+0x2e], 0x74"
+        },
+        {
+          "name": "wPassiveState",
+          "off": 148,
+          "type": "u16",
+          "$comment": "0x6FD9F108 mov ax, [eax+0x94]"
+        },
+        {
+          "name": "wSummon",
+          "off": 188,
+          "type": "u16",
+          "$comment": "0x6FD6A4AC mov ax, word [esi+0xbc]"
+        },
+        {
+          "name": "nSummode",
+          "off": 191,
+          "type": "u8",
+          "$comment": "0x6FD6A4EF movsx eax, byte [esi+0xbf]"
+        },
+        {
+          "name": "wMaxLvl",
+          "off": 300,
+          "type": "u16",
+          "$comment": "0x6FD514EE movsx eax, word [ecx+eax+0x12C]; skills.bin int16 +0x12C equals Skills.txt maxlvl in 357/357 rows"
+        },
+        {
+          "name": "dwParam1",
+          "off": 328,
+          "type": "u32",
+          "$comment": "0x6FD51577 mov eax, [eax+0x148]; equals Skills.txt Param1 in 357/357 rows"
+        },
+        {
+          "name": "dwParam2",
+          "off": 332,
+          "type": "u32",
+          "$comment": "0x6FD515A7 mov eax, [eax+0x14C]; equals Skills.txt Param2 in 357/357 rows"
+        },
+        {
+          "name": "dwParam3",
+          "off": 336,
+          "type": "u32",
+          "$comment": "0x6FD515D7 mov eax, [eax+0x150]; equals Skills.txt Param3 in 357/357 rows"
+        },
+        {
+          "name": "dwParam4",
+          "off": 340,
+          "type": "u32",
+          "$comment": "0x6FD51607 mov eax, [eax+0x154]"
+        },
+        {
+          "name": "dwParam5",
+          "off": 344,
+          "type": "u32",
+          "$comment": "0x6FD51637 mov eax, [eax+0x158]"
+        },
+        {
+          "name": "dwParam6",
+          "off": 348,
+          "type": "u32",
+          "$comment": "0x6FD51667 mov eax, [eax+0x15c]"
+        },
+        {
+          "name": "dwParam7",
+          "off": 352,
+          "type": "u32",
+          "$comment": "0x6FD5176B add eax, [ecx+0x160]"
+        },
+        {
+          "name": "dwParam8",
+          "off": 356,
+          "type": "u32",
+          "$comment": "0x6FD51764 imul eax, [ecx+0x164]"
+        },
+        {
+          "name": "wReqLevel",
+          "off": 372,
+          "type": "u16",
+          "$comment": "0x6FD9EB30 movsx eax, word [eax+0x174]"
+        },
+        {
+          "name": "wStartMana",
+          "off": 388,
+          "type": "u16",
+          "$comment": "0x6FD9FDE4 mov si, [edx+0x184]"
+        },
+        {
+          "name": "nManaShift",
+          "off": 392,
+          "type": "u8",
+          "$comment": "0x6FD9EA43 mov cl, [ecx+0x188]"
+        },
+        {
+          "name": "wMana",
+          "off": 394,
+          "type": "u16",
+          "$comment": "0x6FD9EA3C movsx edx, word [ecx+0x18a]"
+        },
+        {
+          "name": "wLvlMana",
+          "off": 396,
+          "type": "u16",
+          "$comment": "0x6FD9EA2D movsx eax, word [ecx+0x18c]"
+        },
+        {
+          "name": "wSkillDesc",
+          "off": 404,
+          "type": "u16",
+          "$comment": "0x6FD51524 movsx eax, word [eax+0x194]"
+        },
+        {
+          "name": "nEType",
+          "off": 476,
+          "type": "u8",
+          "$comment": "0x6FD9FD89 mov al, [edx+0x1dc]"
+        },
+        {
+          "name": "nRestrict",
+          "off": 552,
+          "type": "u8",
+          "$comment": "0x6FD9F5A3 movzx eax, byte [esi+0x228]"
+        },
+        {
+          "name": "wState",
+          "off": 554,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FD9F5C9 add esi, 0x22a"
+        }
+      ]
+    },
+    "D2MissilesTxt": {
+      "size": 420,
+      "allocEvidence": "D2Common 0x6FD51168 imul eax, eax, 0x1A4 (record stride in the Missiles lookup 0x6FD51150)",
+      "fields": [
+        {
+          "name": "dwMissileFlags",
+          "off": 4,
+          "type": "u8",
+          "$comment": "0x6FDBA174 mov al, [eax+0x4]"
+        },
+        {
+          "name": "nActivate",
+          "off": 148,
+          "type": "u8",
+          "$comment": "0x6FDBA084 movzx eax, byte [eax+0x94]"
+        },
+        {
+          "name": "nSubLoop",
+          "off": 154,
+          "type": "u8",
+          "$comment": "0x6FDCC4CE movzx ecx, byte [ecx+0x9a]"
+        },
+        {
+          "name": "nSubStart",
+          "off": 155,
+          "type": "u8",
+          "$comment": "0x6FDCC4C2 movzx eax, byte [ecx+0x9b]"
+        },
+        {
+          "name": "nHitShift",
+          "off": 228,
+          "type": "u8",
+          "$comment": "0x6FDB9E9D mov al, [eax+0xe4]"
+        },
+        {
+          "name": "dwELen",
+          "off": 284,
+          "type": "u32",
+          "$comment": "0x6FDB9DF5 mov eax, [eax+0x11c]"
+        },
+        {
+          "name": "dwELevLen1",
+          "off": 288,
+          "type": "u32",
+          "$comment": "0x6FDB9E16 mov edx, [eax+0x120]"
+        },
+        {
+          "name": "dwELevLen2",
+          "off": 292,
+          "type": "u32",
+          "$comment": "0x6FDB9E03 mov edx, [eax+0x124]"
+        },
+        {
+          "name": "dwELevLen3",
+          "off": 296,
+          "type": "u32",
+          "$comment": "0x6FDB9E0C imul ecx, [eax+0x128]"
+        },
+        {
+          "name": "nSize",
+          "off": 394,
+          "type": "u8",
+          "$comment": "0x6FD80FD3 movzx eax, byte [eax+0x18a]"
+        }
+      ]
+    },
+    "D2CharStatsTxt": {
+      "size": 196,
+      "allocEvidence": "D2Common 0x6FD512E8 imul eax, eax, 0xC4 (record stride in the CharStats lookup 0x6FD512D0)",
+      "fields": [
+        {
+          "name": "nToHitFactor",
+          "off": 60,
+          "type": "u32",
+          "$comment": "0x6FD81F7F mov eax, [eax+0x3c]"
+        },
+        {
+          "name": "nWalkSpeed",
+          "off": 64,
+          "type": "u8",
+          "$comment": "0x6FD80DAF mov ch, [eax+0x40]"
+        },
+        {
+          "name": "nRunSpeed",
+          "off": 65,
+          "type": "u8",
+          "$comment": "0x6FD82EB4 movzx eax, byte [ebx+0x41]"
+        },
+        {
+          "name": "wStartSkill",
+          "off": 174,
+          "type": "u16",
+          "count": 10,
+          "$comment": "0x6FDA2A48 add esi, 0xae"
+        }
+      ]
+    },
+    "D2ItemTypesTxt": {
+      "size": 228,
+      "allocEvidence": "D2Common 0x6FD51318 imul eax, eax, 0xE4 (record stride in the ItemTypes lookup 0x6FD51300); itemtypes.bin is 4 + 103 * 0xE4 bytes",
+      "fields": [
+        {
+          "name": "nBody",
+          "off": 9,
+          "type": "u8",
+          "$comment": "0x6FD74413 movzx eax, byte [eax+0x9]"
+        },
+        {
+          "name": "nBodyLoc1",
+          "off": 10,
+          "type": "u8",
+          "$comment": "0x6FD73178 mov dl, [eax+0xa]"
+        },
+        {
+          "name": "nBodyLoc2",
+          "off": 11,
+          "type": "u8",
+          "$comment": "0x6FD73181 mov dl, [eax+0xb]"
+        },
+        {
+          "name": "wQuiver",
+          "off": 12,
+          "type": "u16",
+          "$comment": "0x6FD74EE7 movsx eax, word [eax+0xc]"
+        },
+        {
+          "name": "wShoots",
+          "off": 14,
+          "type": "u16",
+          "$comment": "0x6FD735FD movsx eax, word [eax+0xe]"
+        },
+        {
+          "name": "nNormal",
+          "off": 16,
+          "type": "u8",
+          "$comment": "0x6FD72FAD movzx eax, byte [eax+0x10]"
+        },
+        {
+          "name": "nReload",
+          "off": 17,
+          "type": "u8",
+          "$comment": "0x6FD73577 movzx eax, byte [eax+0x11]"
+        },
+        {
+          "name": "nReEquip",
+          "off": 18,
+          "type": "u8",
+          "$comment": "0x6FD73527 movzx eax, byte [eax+0x12]"
+        },
+        {
+          "name": "nAutoStack",
+          "off": 19,
+          "type": "u8",
+          "$comment": "0x6FD74E47 movzx eax, byte [eax+0x13]"
+        },
+        {
+          "name": "nMagic",
+          "off": 20,
+          "type": "u8",
+          "$comment": "0x6FD733E7 movzx eax, byte [eax+0x14]"
+        },
+        {
+          "name": "nRare",
+          "off": 21,
+          "type": "u8",
+          "$comment": "0x6FD73437 movzx eax, byte [eax+0x15]"
+        },
+        {
+          "name": "nNormalAllowed",
+          "off": 22,
+          "type": "u8",
+          "$comment": "0x6FD73397 movzx eax, byte [eax+0x16]"
+        },
+        {
+          "name": "nBeltable",
+          "off": 25,
+          "type": "u8",
+          "$comment": "0x6FD74BD7 movzx eax, byte [eax+0x19]"
+        },
+        {
+          "name": "nMaxSock1",
+          "off": 26,
+          "type": "u8",
+          "$comment": "0x6FD74668 movzx eax, byte [edi+0x1a]"
+        },
+        {
+          "name": "nMaxSock25",
+          "off": 27,
+          "type": "u8",
+          "$comment": "0x6FD74673 movzx eax, byte [edi+0x1b]"
+        },
+        {
+          "name": "nMaxSock40",
+          "off": 28,
+          "type": "u8",
+          "$comment": "0x6FD74679 movzx eax, byte [edi+0x1c]"
+        },
+        {
+          "name": "nStaffMods",
+          "off": 31,
+          "type": "u8",
+          "$comment": "0x6FD746D7 movzx eax, byte [eax+0x1f]"
+        },
+        {
+          "name": "nRarity",
+          "off": 33,
+          "type": "u8",
+          "aliases": [
+            "nClass"
+          ],
+          "$comment": "0x6FD74396 cmp byte [eax+0x21], 7"
+        },
+        {
+          "name": "nStorePage",
+          "off": 34,
+          "type": "u8",
+          "$comment": "0x6FD734D7 mov al, [eax+0x22]"
+        },
+        {
+          "name": "nVarInvGfx",
+          "off": 35,
+          "type": "u8",
+          "$comment": "0x6FD73487 mov al, [eax+0x23]"
+        }
+      ]
+    },
+    "D2DrlgLevelStrc": {
+      "size": 560,
+      "allocEvidence": "D2Common 0x6FD7D9CA mov edx, 0x230",
+      "fields": [
+        {
+          "name": "nDrlgType",
+          "off": 0,
+          "type": "u32",
+          "$comment": "+0x00: 0x6FD63FD0 cmp dword [ecx], 3"
+        },
+        {
+          "name": "dwFlags",
+          "off": 4,
+          "type": "u32",
+          "$comment": "+0x04: 0x6FD94C53 test byte [ebx+0x4], 0x10"
+        },
+        {
+          "name": "nRooms",
+          "off": 8,
+          "type": "u32",
+          "$comment": "+0x08: 0x6FD7D420 mov eax, [edx+0x8]"
+        },
+        {
+          "name": "pFirstRoomEx",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "+0x10: 0x6FD94EB0 mov edx, [eax+0x10]"
+        },
+        {
+          "name": "pOutdoors",
+          "off": 20,
+          "type": "ptr",
+          "$comment": "+0x14: 0x6FD92270 mov eax, [ecx+0x14]"
+        },
+        {
+          "name": "nPosX",
+          "off": 28,
+          "type": "u32",
+          "$comment": "+0x1C: 0x6FD7D700 mov esi, [ebp+0x1c]"
+        },
+        {
+          "name": "nPosY",
+          "off": 32,
+          "type": "u32",
+          "$comment": "+0x20: 0x6FD7D70D mov esi, [ebp+0x20]"
+        },
+        {
+          "name": "nWidth",
+          "off": 36,
+          "type": "u32",
+          "$comment": "+0x24: 0x6FD7D6BA mov esi, [ebp+0x24]"
+        },
+        {
+          "name": "nHeight",
+          "off": 40,
+          "type": "u32",
+          "$comment": "+0x28: 0x6FD7D6D5 mov edi, [ebp+0x28]"
+        },
+        {
+          "name": "pWarp",
+          "off": 144,
+          "type": "ptr",
+          "$comment": "+0x90: 0x6FD94CE0 mov eax, [eax+0x90]"
+        },
+        {
+          "name": "pNextLevel",
+          "off": 428,
+          "type": "ptr",
+          "$comment": "+0x1AC: 0x6FD7D5E0 mov eax, [eax+0x1ac]"
+        },
+        {
+          "name": "pCurrentMap",
+          "off": 432,
+          "type": "ptr",
+          "$comment": "+0x1B0: 0x6FD5BD49 mov edx, [eax+0x1b0]"
+        },
+        {
+          "name": "pDrlg",
+          "off": 436,
+          "type": "ptr",
+          "$comment": "+0x1B4: 0x6FDCBBB1 mov ecx, [ecx+0x1b4]"
+        },
+        {
+          "name": "nJungleInterlink",
+          "off": 440,
+          "type": "u32",
+          "$comment": "+0x1B8: 0x6FDD54EE mov edx, [ebp+0x1b8]"
+        },
+        {
+          "name": "pJungleDefs",
+          "off": 444,
+          "type": "ptr",
+          "$comment": "+0x1BC: 0x6FDD54FC mov ecx, [ebp+0x1bc]"
+        },
+        {
+          "name": "nLevelType",
+          "off": 448,
+          "type": "u32",
+          "$comment": "+0x1C0: 0x6FD5E700 mov eax, [ecx+0x1c0]"
+        },
+        {
+          "name": "sSeed",
+          "off": 452,
+          "type": "u32",
+          "count": 2,
+          "$comment": "+0x1C4: 0x6FD92466 mov eax, [esi+0x1c4]"
+        },
+        {
+          "name": "nLevelId",
+          "off": 464,
+          "type": "u32",
+          "$comment": "+0x1D0: written 0x6FD7D9E9 mov [esi+0x1d0], ebx; read 0x6FD8C011 / 0x6FD8C3A1 / 0x6FD5BBE7"
+        },
+        {
+          "name": "pTileSubtypes",
+          "off": 480,
+          "type": "ptr",
+          "$comment": "+0x1E0: 0x6FD8B1CD add eax, 0x1e0"
+        },
+        {
+          "name": "pRoomWarpFlags",
+          "off": 556,
+          "type": "ptr",
+          "$comment": "+0x22C: 0x6FD7D427 mov eax, [edx+0x22c]"
+        }
+      ]
+    },
+    "D2DrlgMapStrc": {
+      "size": 88,
+      "allocEvidence": "D2Common 0x6FD5BC83 mov edx, 0x58; 0x6FD5BC93 mov ecx, 0x16; rep stosd",
+      "fields": [
+        {
+          "name": "nLevelPrest",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD5BCC3 mov [esi], ebp"
+        },
+        {
+          "name": "nPickedFile",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD5BD04 mov [esi+0x4], edx"
+        },
+        {
+          "name": "pLvlPrestTxt",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD5BCC0 mov [esi+0x8], eax"
+        },
+        {
+          "name": "pFile",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD5A461 mov ecx, [eax+0xc]"
+        },
+        {
+          "name": "nPosX",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FD59CB9 mov ebx, [esi+0x10]"
+        },
+        {
+          "name": "nPosY",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD59CC2 mov ebp, [esi+0x14]"
+        },
+        {
+          "name": "nWidth",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FD5AF20 mov eax, [esi+0x18]"
+        },
+        {
+          "name": "nHeight",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FD5AF34 mov eax, [esi+0x1c]"
+        },
+        {
+          "name": "pPresetUnit",
+          "off": 56,
+          "type": "ptr",
+          "$comment": "0x6FD5A3A0 mov eax, [ebp+0x38]"
+        },
+        {
+          "name": "bInited",
+          "off": 60,
+          "type": "u32",
+          "$comment": "0x6FD5BD42 mov dword [esi+0x3c], 1"
+        },
+        {
+          "name": "nPops",
+          "off": 64,
+          "type": "u32",
+          "$comment": "0x6FD59C6C mov [esi+0x40], eax"
+        },
+        {
+          "name": "pPopsIndex",
+          "off": 68,
+          "type": "ptr",
+          "$comment": "int32[nPops]: 0x6FD59CDC mov eax, [esi+0x44]"
+        },
+        {
+          "name": "pPopsLocation",
+          "off": 80,
+          "type": "ptr",
+          "$comment": "D2DrlgCoordStrc[nPops]: 0x6FD59C84 mov eax, [esi+0x50]"
+        },
+        {
+          "name": "pNext",
+          "off": 84,
+          "type": "ptr",
+          "$comment": "0x6FD5BD4F mov [esi+0x54], edx"
+        }
+      ]
+    },
+    "D2DrlgCoordStrc": {
+      "size": 16,
+      "allocEvidence": "D2Common 0x6FD59CF9 add ecx, 0x10 (array stride of pDrlgMap->pPopsLocation)",
+      "fields": [
+        {
+          "name": "nPosX",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD59CC0 mov [eax], ebx"
+        },
+        {
+          "name": "nPosY",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD59CCB mov [eax+0x4], ebp"
+        },
+        {
+          "name": "nWidth",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD59CD5 mov [eax+0x8], edx"
+        },
+        {
+          "name": "nHeight",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD59CD9 mov [eax+0xc], ecx"
+        }
+      ]
+    },
+    "D2LvlPrestTxt": {
+      "size": 432,
+      "allocEvidence": "D2Common 0x6FDBC983 imul eax, eax, 0x1B0 (record stride of sgptDataTables->pLvlPrestTxt; also 0x6FDBC975 add ecx, 0x1b0)",
+      "fields": [
+        {
+          "name": "dwLevelId",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FDBC969 lea ecx, [edi+0x4]; 0x6FDBC970 cmp [ecx], esi"
+        },
+        {
+          "name": "nSizeX",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD5BD19 mov ecx, [eax+0x28]"
+        },
+        {
+          "name": "nSizeY",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FD5BD20 mov edi, [eax+0x2c]"
+        },
+        {
+          "name": "dwFiles",
+          "off": 64,
+          "type": "u32",
+          "$comment": "0x6FD5BCC5 mov ecx, [eax+0x40]"
+        }
+      ]
+    },
+    "D2SkillListStrc": {
+      "size": 24,
+      "allocEvidence": "D2Common 0x6FD9E401 mov edx, 0x18 (Fog alloc in SKILLS_AllocSkillList)",
+      "fields": [
+        {
+          "name": "pMemPool",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD9E411 mov [edx], ecx"
+        },
+        {
+          "name": "pFirstSkill",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD9E3DB mov eax, [eax+0x4]"
+        },
+        {
+          "name": "pLeftSkill",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD9E18B mov eax, [eax+0x8]"
+        },
+        {
+          "name": "pRightSkill",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD9E419 mov [edx+0xc], ecx"
+        },
+        {
+          "name": "pUsedSkill",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD9E41C mov [edx+0x10], ecx"
+        },
+        {
+          "name": "dwFlags",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD9E41F mov [edx+0x14], ecx"
+        }
+      ]
+    },
+    "D2SkillStrc": {
+      "size": 64,
+      "allocEvidence": "D2Common 0x6FD9EF58 mov edx, 0x40 (Fog alloc in SKILLS_AddSkill); 0x6FD9EF66 mov ecx, 0x10; rep stosd",
+      "fields": [
+        {
+          "name": "pSkillsTxt",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD9E1DB mov eax, [eax]"
+        },
+        {
+          "name": "pNextSkill",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD9E3BB mov eax, [eax+0x4]"
+        },
+        {
+          "name": "nSlotIndex",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD9E1B5 mov [ecx+0x8], eax"
+        },
+        {
+          "name": "dwParam0C",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD9DE8B mov [eax+0xc], ecx"
+        },
+        {
+          "name": "dwParam1",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FD9E057 mov eax, [eax+0x18]"
+        },
+        {
+          "name": "dwParam2",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FD9E027 mov eax, [eax+0x1c]"
+        },
+        {
+          "name": "dwParam3",
+          "off": 32,
+          "type": "u32",
+          "$comment": "0x6FD9DFF7 mov eax, [eax+0x20]"
+        },
+        {
+          "name": "dwParam4",
+          "off": 36,
+          "type": "u32",
+          "$comment": "0x6FD9DFC7 mov eax, [eax+0x24]"
+        },
+        {
+          "name": "nSkillLevel",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD9E4B6 mov edi, [ecx+0x28]"
+        },
+        {
+          "name": "nSkillPoints",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FD9FCFA mov ecx, [ebx+0x2c]"
+        },
+        {
+          "name": "nQuantity",
+          "off": 48,
+          "type": "u32",
+          "$comment": "0x6FD9DD97 mov eax, [eax+0x30]"
+        },
+        {
+          "name": "nOwnerItemGuid",
+          "off": 52,
+          "type": "u32",
+          "$comment": "0x6FD9E4AC cmp [ecx+0x34], edx"
+        },
+        {
+          "name": "nCharges",
+          "off": 56,
+          "type": "u32",
+          "$comment": "0x6FD9E2A2 mov ecx, [ecx+0x38]"
+        },
+        {
+          "name": "dwFlags",
+          "off": 60,
+          "type": "u32",
+          "$comment": "0x6FD9E4A1 mov edi, [ecx+0x3c]"
+        }
+      ]
+    },
+    "D2LvlTypesTxt": {
+      "size": 432,
+      "allocEvidence": "D2Common 0x6FDBC9AC imul eax, eax, 0x1B0 (record stride in DATATBLS_GetLvlTypesTxtRecord)",
+      "fields": []
+    },
+    "D2LevelDefBin": {
+      "size": 156,
+      "allocEvidence": "D2Common 0x6FDBCB3A imul eax, eax, 0x9C (record stride in DATATBLS_GetLevelDefRecord)",
+      "fields": [
+        {
+          "name": "dwSizeX0",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD5D9CC mov ecx, [ecx+eax*4+0xc]"
+        },
+        {
+          "name": "dwSizeX1",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FD5D9CC mov ecx, [ecx+eax*4+0xc] (diff=1)"
+        },
+        {
+          "name": "dwSizeX2",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD5D9CC mov ecx, [ecx+eax*4+0xc] (diff=2)"
+        },
+        {
+          "name": "dwSizeY0",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FDD54EA mov edi, [eax+ecx*4+0x18]"
+        },
+        {
+          "name": "dwSizeY1",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FDD54EA mov edi, [eax+ecx*4+0x18] (diff=1)"
+        },
+        {
+          "name": "dwSizeY2",
+          "off": 32,
+          "type": "u32",
+          "$comment": "0x6FDD54EA mov edi, [eax+ecx*4+0x18] (diff=2)"
+        },
+        {
+          "name": "dwOffsetX",
+          "off": 36,
+          "type": "u32",
+          "$comment": "0x6FD90F98 mov esi, [eax+0x24]"
+        },
+        {
+          "name": "dwOffsetY",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD90FA8 mov eax, [eax+0x28]"
+        },
+        {
+          "name": "dwLayer",
+          "off": 140,
+          "type": "u32",
+          "$comment": "0x6FDBCB6F lea ecx, [ebp+0x8c]"
+        }
+      ]
+    },
+    "D2LevelsTxt": {
+      "size": 544,
+      "allocEvidence": "D2Common 0x6FDBCCDC imul eax, eax, 0x220 (record stride in DATATBLS_GetLevelsTxtRecord)",
+      "fields": [
+        {
+          "name": "nAct",
+          "off": 5,
+          "type": "u8",
+          "$comment": "0x6FDBCCB2 mov al, [ecx+eax+0x5]"
+        },
+        {
+          "name": "nTeleport",
+          "off": 6,
+          "type": "u8",
+          "$comment": "0x6FDBCC52 mov al, [ecx+eax+0x6]"
+        },
+        {
+          "name": "nRain",
+          "off": 7,
+          "type": "u8",
+          "$comment": "0x6FDBCC82 mov al, [ecx+eax+0x7]"
+        },
+        {
+          "name": "wMonLv1",
+          "off": 16,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FDBE11A movsx eax, word [eax+edx*2+0x10]"
+        },
+        {
+          "name": "wMonLvEx1",
+          "off": 22,
+          "type": "u16",
+          "count": 3,
+          "$comment": "0x6FDBE10E movsx eax, word [eax+ecx*2+0x16]"
+        },
+        {
+          "name": "nNumMon",
+          "off": 51,
+          "type": "u8",
+          "$comment": "0x6FD6A7B9 mov al, byte [ebp+0x33]"
+        },
+        {
+          "name": "wMon",
+          "off": 54,
+          "type": "u16",
+          "count": 10,
+          "$comment": "0x6FD6A840 add ebx, 0x36; 0x6FD6A843 movsx edx, word [ebx]"
+        },
+        {
+          "name": "nWaypoint",
+          "off": 228,
+          "type": "u8",
+          "$comment": "0x6FDB7E82 movzx ax, byte [eax+0xe4]"
+        }
+      ]
+    },
+    "D2DrlgOrthStrc": {
+      "size": 24,
+      "allocEvidence": "D2Common 0x6FD94986 mov edx, 0x18",
+      "fields": [
+        {
+          "name": "pRoomEx",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD94960 cmp [eax], edi"
+        },
+        {
+          "name": "nDirection",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD94870 mov eax, [ecx+0x4]"
+        },
+        {
+          "name": "bInit",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD949B8 mov dword [eax+0xc], 1"
+        },
+        {
+          "name": "pBox",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD94889 mov eax, [edx+0x10]"
+        },
+        {
+          "name": "pNext",
+          "off": 20,
+          "type": "ptr",
+          "$comment": "0x6FD94964 mov eax, [eax+0x14]"
+        }
+      ]
+    },
+    "D2DrlgTileGridStrc": {
+      "size": 44,
+      "allocEvidence": "D2Common 0x6FDB8143 mov edx, 0x2C; 0x6FDB8152 mov ecx, 0xB; rep stosd",
+      "fields": [
+        {
+          "name": "pMapLinks",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FDB81E5 mov edi, [eax]"
+        },
+        {
+          "name": "nFloorCount",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FDB9177 mov edx, [ecx+0xc]"
+        },
+        {
+          "name": "nRoofs",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FDB7FF7 mov ecx, [esi+0x10]"
+        },
+        {
+          "name": "pWalls",
+          "off": 20,
+          "type": "ptr",
+          "$comment": "0x6FDD1A2E add eax, 0x14"
+        },
+        {
+          "name": "nWallCapacity",
+          "off": 24,
+          "type": "u32",
+          "aliases": [
+            "nWalls"
+          ],
+          "$comment": "0x6FDB8B72 mov edx, [esi+0x18]"
+        },
+        {
+          "name": "pFloors",
+          "off": 28,
+          "type": "ptr",
+          "$comment": "0x6FDB917D mov edx, [ecx+0x1c]"
+        },
+        {
+          "name": "nFloorCapacity",
+          "off": 32,
+          "type": "u32",
+          "aliases": [
+            "nFloors"
+          ],
+          "$comment": "0x6FDB8054 mov eax, [esi+0x20]"
+        },
+        {
+          "name": "pRoofs",
+          "off": 36,
+          "type": "ptr",
+          "$comment": "0x6FDB7FD7 mov edx, [esi+0x24]"
+        },
+        {
+          "name": "nRoofCapacity",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FDB82CA cmp [esi+0x28], eax"
+        }
+      ]
+    },
+    "D2DrlgTileLinkStrc": {
+      "size": 12,
+      "allocEvidence": "D2Common 0x6FDB996C mov edx, 0x0C",
+      "fields": [
+        {
+          "name": "bFloor",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FDB9976 mov dword [eax], 1"
+        },
+        {
+          "name": "pTileData",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FDB81F6 mov eax, [edi+0x4]"
+        },
+        {
+          "name": "pNext",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FDB8269 mov edi, [edi+0x8]"
+        }
+      ]
+    },
+    "D2DrlgTileDataStrc": {
+      "size": 48,
+      "allocEvidence": "D2Common 0x6FDB9340 add esi, 0x30",
+      "fields": [
+        {
+          "name": "nPosX",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FDB8210 mov ecx, [eax+0x8]"
+        },
+        {
+          "name": "nPosY",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FDB821D mov ebp, [eax+0xc]"
+        },
+        {
+          "name": "pRoomCoordList",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FDD1A95 mov [eax+0x10], ecx"
+        },
+        {
+          "name": "dwFlags",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FDB8240 mov ecx, [eax+0x14]"
+        },
+        {
+          "name": "nTileType",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FDB822B mov ecx, [eax+0x1c]"
+        },
+        {
+          "name": "pNext",
+          "off": 32,
+          "type": "ptr",
+          "$comment": "0x6FDB825E mov eax, [eax+0x20]"
+        }
+      ]
+    },
+    "D2IdaStarNodeStrc": {
+      "size": 28,
+      "allocEvidence": "D2Common 0x6FDC0773 imul eax, eax, 0x1C",
+      "fields": [
+        {
+          "name": "wFScore",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FDC0AF5 mov [esi], dx"
+        },
+        {
+          "name": "wHScore",
+          "off": 2,
+          "type": "u16",
+          "$comment": "0x6FDC0AFE mov [esi+0x2], ax"
+        },
+        {
+          "name": "wGScore",
+          "off": 4,
+          "type": "u16",
+          "$comment": "0x6FDC0AED mov [esi+0x4], cx"
+        },
+        {
+          "name": "nVisitCount",
+          "off": 6,
+          "type": "u16",
+          "$comment": "0x6FDC084A cmp word [esi+0x6], bx; 0x6FDC085A inc word [esi+0x6]"
+        },
+        {
+          "name": "wPosX",
+          "off": 8,
+          "type": "u16",
+          "$comment": "0x6FDC0696 movzx edx, word [ecx+0x8]"
+        },
+        {
+          "name": "wPosY",
+          "off": 10,
+          "type": "u16",
+          "$comment": "0x6FDC06A0 movzx esi, word [ecx+0xa]"
+        },
+        {
+          "name": "pBestDirection",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FDC0809 mov ecx, [esi+0xc]"
+        },
+        {
+          "name": "nNextNeighborIndex",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FDC080E mov ecx, [esi+0x10]"
+        },
+        {
+          "name": "pParent",
+          "off": 20,
+          "type": "ptr",
+          "$comment": "0x6FDC0685 mov edx, [ecx+0x14]"
+        },
+        {
+          "name": "pChild",
+          "off": 24,
+          "type": "ptr",
+          "$comment": "0x6FDC0A93 mov ebx, [esi+0x18]"
+        }
+      ]
+    },
+    "D2AStarNodeStrc": {
+      "size": 56,
+      "allocEvidence": "D2Common 0x6FDCAC22 imul edx, edx, 0x38",
+      "fields": [
+        {
+          "name": "wPosX",
+          "off": 0,
+          "type": "u16",
+          "aliases": [
+            "wX"
+          ],
+          "$comment": "0x6FDCAB95 movzx edx, word [ecx]"
+        },
+        {
+          "name": "wPosY",
+          "off": 2,
+          "type": "u16",
+          "aliases": [
+            "wY"
+          ],
+          "$comment": "0x6FDCAB9E movzx esi, word [ecx+0x2]"
+        },
+        {
+          "name": "wFScore",
+          "off": 4,
+          "type": "u16",
+          "aliases": [
+            "nFScore"
+          ],
+          "$comment": "0x6FDCAE54 movsx eax, word [esi+0x4]"
+        },
+        {
+          "name": "wHScore",
+          "off": 6,
+          "type": "u16",
+          "aliases": [
+            "nHeuristicDistanceToTarget"
+          ],
+          "$comment": "0x6FDCACC4 mov di, [edx+0x6]"
+        },
+        {
+          "name": "wGScore",
+          "off": 8,
+          "type": "u16",
+          "aliases": [
+            "nBestDistanceFromStart"
+          ],
+          "$comment": "0x6FDCACB7 mov si, [ecx+0x8]"
+        },
+        {
+          "name": "pParent",
+          "off": 12,
+          "type": "ptr",
+          "aliases": [
+            "pBestParent"
+          ],
+          "$comment": "0x6FDCAB85 mov edx, [ecx+0xc]"
+        },
+        {
+          "name": "pChildren",
+          "off": 16,
+          "type": "ptr",
+          "count": 8,
+          "aliases": [
+            "pChild0"
+          ],
+          "$comment": "0x6FDCB088 mov ecx, [ebx+0x10]"
+        },
+        {
+          "name": "pHashNext",
+          "off": 48,
+          "type": "ptr",
+          "aliases": [
+            "pNextCachePoint"
+          ],
+          "$comment": "0x6FDCAE4E mov [esi+0x30], edx"
+        },
+        {
+          "name": "pBestNext",
+          "off": 52,
+          "type": "ptr",
+          "aliases": [
+            "pNextSortedByFScore"
+          ],
+          "$comment": "0x6FDCAE6A mov ecx, [ecx+0x34]"
+        }
+      ]
+    },
+    "D2HoverTextStrc": {
+      "size": 272,
+      "allocEvidence": "D2Common 0x6FD682BE mov edx, 0x110 (Fog alloc in CHAT_AllocHoverMsg)",
+      "fields": [
+        {
+          "name": "dwDisplayTime",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD68254 mov eax, [eax]"
+        },
+        {
+          "name": "dwExpireTime",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD68244 mov eax, [eax+0x4]"
+        },
+        {
+          "name": "nLangId",
+          "off": 8,
+          "type": "u8",
+          "$comment": "0x6FD681F4 mov al, [eax+0x8]"
+        },
+        {
+          "name": "bUsed",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD68214 mov eax, [eax+0xc]"
+        },
+        {
+          "name": "szMsg",
+          "off": 16,
+          "type": "u8",
+          "count": 256,
+          "$comment": "0x6FD68228 add eax, 0x10"
+        }
+      ]
+    },
+    "D2DrlgWarpStrc": {
+      "size": 72,
+      "allocEvidence": "D2Common 0x6FD7D786 mov edx, 0x48 (Fog alloc in DRLGWARP_AllocWarp)",
+      "fields": [
+        {
+          "name": "nLevel",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD7D790 mov [eax], ebx"
+        },
+        {
+          "name": "nVis",
+          "off": 4,
+          "type": "u32",
+          "count": 8,
+          "$comment": "0x6FD7D216 lea edx, [eax+0x4]; 0x6FD7D29F mov [eax+esi*4+0x4], ebx"
+        },
+        {
+          "name": "nWarp",
+          "off": 36,
+          "type": "u32",
+          "count": 8,
+          "$comment": "0x6FD7D23D lea edx, [eax+0x24]; 0x6FD7D2A3 mov [eax+esi*4+0x24], ecx"
+        },
+        {
+          "name": "pNext",
+          "off": 68,
+          "type": "ptr",
+          "$comment": "0x6FD7D7FE mov [eax+0x44], ecx"
+        }
+      ]
+    },
+    "D2AnimSeqTxt": {
+      "size": 6,
+      "allocEvidence": "D2Common 0x6FD7E77B add edx, 0x6 (record stride in ANIMSEQ_EvaluateSequenceFrame)",
+      "fields": [
+        {
+          "name": "wSequence",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FDA53BE movsx eax, word [edx]"
+        },
+        {
+          "name": "nMode",
+          "off": 2,
+          "type": "u8",
+          "$comment": "0x6FD7E71A movzx ecx, byte [edx+0x2]"
+        },
+        {
+          "name": "nFrame",
+          "off": 3,
+          "type": "u8",
+          "$comment": "0x6FD7E720 movzx ecx, byte [edx+0x3]"
+        },
+        {
+          "name": "nDir",
+          "off": 4,
+          "type": "u8",
+          "$comment": "0x6FD7E72A movzx ecx, byte [edx+0x4]"
+        },
+        {
+          "name": "nEvent",
+          "off": 5,
+          "type": "u8",
+          "$comment": "0x6FD7E73C movzx edx, byte [edx+0x5]"
+        }
+      ]
+    },
+    "D2ObjectDataStrc": {
+      "size": 56,
+      "allocEvidence": "D2Game 0x6FC4FC4D mov edx, 0x38 (Fog alloc in SUNIT_AllocUnitData)",
+      "fields": [
+        {
+          "name": "pObjectTxt",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD7ED3C mov ecx, [eax]"
+        },
+        {
+          "name": "nPortalFlags",
+          "off": 5,
+          "type": "u8",
+          "$comment": "0x6FD7EAA6 mov al, [eax+0x5]"
+        },
+        {
+          "name": "pShrineTxt",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD7ECC7 mov eax, [eax+0x8]"
+        }
+      ]
+    },
+    "D2ObjectsTxt": {
+      "size": 448,
+      "allocEvidence": "D2Common 0x6FD8E9BC imul eax, eax, 0x1C0 (record stride in DATATBLS_GetObjectsTxtRecord)",
+      "fields": [
+        {
+          "name": "dwSizeX",
+          "off": 208,
+          "type": "u32",
+          "$comment": "0x6FD80FB6 mov eax, [ecx+0xd0]"
+        },
+        {
+          "name": "dwSizeY",
+          "off": 212,
+          "type": "u32",
+          "$comment": "0x6FD80F35 mov eax, [ecx+0xd4]"
+        },
+        {
+          "name": "dwFrameCnt",
+          "off": 216,
+          "type": "u32",
+          "count": 8,
+          "$comment": "0x6FD7EE95 mov edx, [ecx+edx*4+0xd8]"
+        },
+        {
+          "name": "nOperateFn",
+          "off": 314,
+          "type": "u8",
+          "aliases": [
+            "bIsDoor"
+          ],
+          "$comment": "0x6FD8519B movzx edi, byte [esi+0x13a]; 0x6FD7EDD8 mov al, [ecx+0x13a]"
+        },
+        {
+          "name": "bBlocksVis",
+          "off": 315,
+          "type": "u8",
+          "$comment": "0x6FD7FF8D mov cl, [eax+0x13b]"
+        },
+        {
+          "name": "nDoor",
+          "off": 316,
+          "type": "u8",
+          "$comment": "0x6FD851C9 cmp byte [esi+0x13c], 0x1"
+        },
+        {
+          "name": "nSubClass",
+          "off": 359,
+          "type": "u8",
+          "$comment": "0x6FD7ED3E mov dl, [ecx+0x167]"
+        },
+        {
+          "name": "bBlocksLight",
+          "off": 438,
+          "type": "u8",
+          "$comment": "0x6FD7FF9D mov al, [eax+0x1b6]"
+        }
+      ]
+    },
+    "D2DrlgVertexStrc": {
+      "size": 20,
+      "allocEvidence": "D2Common 0x6FD8D99C mov edx, 0x14 (Fog alloc in DRLGVER_AllocVertex)",
+      "fields": [
+        {
+          "name": "nPosX",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD8D4A0 mov eax, [edx]"
+        },
+        {
+          "name": "nPosY",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD8D4A8 mov eax, [edx+0x4]"
+        },
+        {
+          "name": "nDirection",
+          "off": 8,
+          "type": "u8",
+          "$comment": "0x6FD8D4B1 movzx edx, byte [edx+0x8]"
+        },
+        {
+          "name": "dwFlags",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD8D9B2 mov [edx+0xc], ecx"
+        },
+        {
+          "name": "pNext",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD8D9B5 mov [edx+0x10], ecx"
+        }
+      ]
+    },
+    "D2DrlgStrc": {
+      "size": 1164,
+      "allocEvidence": "D2Common 0x6FD7E3F7 mov edx, 0x48C; 0x6FD7E40D mov ecx, 0x123; rep stosd",
+      "fields": [
+        {
+          "name": "dwFlags",
+          "off": 140,
+          "type": "u32",
+          "$comment": "0x6FD7E43D mov [esi+0x8c], edx"
+        },
+        {
+          "name": "nBossTombLevel",
+          "off": 148,
+          "type": "u32",
+          "$comment": "0x6FD8B08F mov eax, [eax+0x94]"
+        },
+        {
+          "name": "pWarpList0Prev",
+          "off": 188,
+          "type": "ptr",
+          "$comment": "0x6FDCB8D6 mov [eax+0xbc], ecx"
+        },
+        {
+          "name": "nWarpAct0",
+          "off": 228,
+          "type": "u8",
+          "$comment": "0x6FDCB90C mov byte [eax+0xe4], 0"
+        },
+        {
+          "name": "pWarpList0Next",
+          "off": 392,
+          "type": "ptr",
+          "$comment": "0x6FDCB8DC mov [eax+0x188], ecx"
+        },
+        {
+          "name": "nDifficulty",
+          "off": 1104,
+          "type": "u8",
+          "$comment": "0x6FD5E411 movzx edx, byte [ecx+0x450]"
+        },
+        {
+          "name": "pfnAutomapInit",
+          "off": 1108,
+          "type": "ptr",
+          "$comment": "0x6FD5CD84 mov edx, [eax+0x454]"
+        },
+        {
+          "name": "pMemPool",
+          "off": 1144,
+          "type": "ptr",
+          "$comment": "0x6FD7E422 mov [esi+0x478], eax"
+        },
+        {
+          "name": "pLevel",
+          "off": 1148,
+          "type": "ptr",
+          "$comment": "0x6FD7D5B0 mov eax, [eax+0x47c]"
+        },
+        {
+          "name": "nAct",
+          "off": 1152,
+          "type": "u8",
+          "$comment": "0x6FD60CAE cmp byte [ecx+0x480], 4"
+        },
+        {
+          "name": "pfnErrorCallback",
+          "off": 1160,
+          "type": "ptr",
+          "$comment": "0x6FD5CE4F mov ebp, [edx+0x488]"
+        },
+        {
+          "name": "bRoomStatusFlag",
+          "off": 1116,
+          "type": "u8",
+          "$comment": "0x6FDCC3AA mov [edi+0x45c], cl"
+        }
+      ]
+    },
+    "D2DrlgLevelLinkDataStrc": {
+      "size": 500,
+      "allocEvidence": "D2Common 0x6FD62895 sub esp, 0x1F4 (stack frame of DRLG_CreateLevelConnections)",
+      "fields": [
+        {
+          "name": "seedLo",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD90E25 mov eax, [ecx]"
+        },
+        {
+          "name": "seedHi",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD90E27 mov edi, [ecx+0x4]"
+        },
+        {
+          "name": "nPosX",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD90EDD mov [eax+ecx+0x8], esi"
+        },
+        {
+          "name": "nPosY",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD90EEF mov [eax+ecx+0xc], edx"
+        },
+        {
+          "name": "nWidth",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FD90EC1 mov dword [eax+ecx+0x10], 0"
+        },
+        {
+          "name": "nHeight",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD90EC9 mov dword [eax+ecx+0x14], 0"
+        },
+        {
+          "name": "pLink",
+          "off": 248,
+          "type": "ptr",
+          "$comment": "0x6FD90E81 mov edx, [ecx+0xf8]"
+        },
+        {
+          "name": "nRand0",
+          "off": 252,
+          "type": "u32",
+          "count": 15,
+          "$comment": "0x6FD90E53 mov [ecx+eax*4+0xfc], edx"
+        },
+        {
+          "name": "nRand1",
+          "off": 312,
+          "type": "u32",
+          "count": 15,
+          "$comment": "0x6FD90E18 mov eax, [ecx+esi*4+0x138]"
+        },
+        {
+          "name": "nRand2",
+          "off": 372,
+          "type": "u32",
+          "count": 15,
+          "$comment": "0x6FD64AD2 mov eax, [ecx+ebp*4+0x174]"
+        },
+        {
+          "name": "nRand3",
+          "off": 432,
+          "type": "u32",
+          "count": 15,
+          "$comment": "0x6FD64FFA mov [ecx+edx*4+0x1b0], eax"
+        },
+        {
+          "name": "nIteration",
+          "off": 492,
+          "type": "u32",
+          "$comment": "0x6FD90E12 mov esi, [ecx+0x1ec]"
+        },
+        {
+          "name": "nCurrentLevel",
+          "off": 496,
+          "type": "u32",
+          "$comment": "0x6FD90F68 mov eax, [ecx+0x1f0]"
+        }
+      ]
+    },
+    "D2DrlgOutdoorInfoStrc": {
+      "size": 616,
+      "allocEvidence": "D2Common 0x6FD7DA8E mov edx, 0x268 (Fog alloc for pLevel->pOutdoors)",
+      "fields": [
+        {
+          "name": "dwFlags",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FDCE9C0 or dword [edi], 2"
+        },
+        {
+          "name": "pGrid0Cells",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FDCEA5A mov edx, [ecx+0x4]"
+        },
+        {
+          "name": "pGrid0RowOffsets",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FDCEA53 mov ebp, [ecx+0x8]"
+        },
+        {
+          "name": "pGrid2Cells",
+          "off": 44,
+          "type": "ptr",
+          "$comment": "0x6FDCEA06 mov ebp, [eax+0x2c]"
+        },
+        {
+          "name": "pGrid2RowOffsets",
+          "off": 48,
+          "type": "ptr",
+          "$comment": "0x6FDCEA00 mov edi, [eax+0x30]"
+        },
+        {
+          "name": "nWidth",
+          "off": 84,
+          "type": "u32",
+          "$comment": "0x6FD67C98 mov edx, [ecx+0x54]"
+        },
+        {
+          "name": "nHeight",
+          "off": 88,
+          "type": "u32",
+          "$comment": "0x6FD67CA0 mov edi, [ecx+0x58]"
+        },
+        {
+          "name": "nGridWidth",
+          "off": 92,
+          "type": "u32",
+          "$comment": "0x6FDCEA46 mov esi, [ecx+0x5c]"
+        },
+        {
+          "name": "nGridHeight",
+          "off": 96,
+          "type": "u32",
+          "$comment": "0x6FDCE9F5 mov esi, [eax+0x60]"
+        },
+        {
+          "name": "pVertex",
+          "off": 100,
+          "type": "ptr",
+          "$comment": "0x6FDCE8CA mov eax, [edi+0x64]"
+        },
+        {
+          "name": "dwOutdoorFlags",
+          "off": 104,
+          "type": "u32",
+          "$comment": "0x6FD67EB0/0x6FD8DD40/0x6FD93580 [pOutdoors+0x68]"
+        },
+        {
+          "name": "aOutdoorRooms",
+          "off": 128,
+          "type": "u8",
+          "count": 480,
+          "$comment": "0x6FD67EB0/0x6FD8D5A0/0x6FD8DD40 24x20B array at [pOutdoors+0x80]"
+        },
+        {
+          "name": "nOutdoorRooms",
+          "off": 608,
+          "type": "u32",
+          "$comment": "0x6FD8D5A0/0x6FD8DD40/0x6FD8E000 [pOutdoors+0x260]"
+        },
+        {
+          "name": "pOutdoorLevelLinks",
+          "off": 612,
+          "type": "ptr",
+          "$comment": "0x6FD8D5A0/0x6FD93580 [pOutdoors+0x264]"
+        }
+      ]
+    },
+    "D2HirelingTxt": {
+      "size": 280,
+      "allocEvidence": "D2Common 0x6FDA30AB imul eax, eax, 0x118 (record stride in Hireling lookups)",
+      "fields": [
+        {
+          "name": "wVersion",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FDA30C9 cmp [eax], cx"
+        },
+        {
+          "name": "dwSubTypeId",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FDA3320 mov edx, [ecx+0x4]"
+        },
+        {
+          "name": "dwClass",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FDA31E2 cmp [eax+0x8], ebx"
+        },
+        {
+          "name": "dwAct",
+          "off": 12,
+          "type": "u32",
+          "aliases": [
+            "nAct"
+          ],
+          "$comment": "0x6FD7CA00 mov eax, [eax+0xc]"
+        },
+        {
+          "name": "dwDifficulty",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FDA30B1 lea edx, [eax+ebx+0x10]"
+        },
+        {
+          "name": "dwHirelingLevel",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FDA3090 mov esi, [edi+0x1c]"
+        },
+        {
+          "name": "wNameFirst",
+          "off": 276,
+          "type": "u16",
+          "$comment": "0x6FDA978C mov [edi+ecx+0x114], ax"
+        },
+        {
+          "name": "wNameLast",
+          "off": 278,
+          "type": "u16",
+          "$comment": "0x6FDA3271 lea eax, [eax+ebx+0x116]"
+        }
+      ]
+    },
+    "D2SuperUniquesTxt": {
+      "size": 52,
+      "allocEvidence": "D2Common 0x6FDA3387 imul eax, eax, 0x34 (record stride in DATATBLS_GetSuperUniquesTxtRecord)",
+      "fields": []
+    },
+    "D2TreasureClassExStrc": {
+      "size": 44,
+      "allocEvidence": "D2Common 0x6FDA343D imul eax, eax, 0x2C (record stride in DATATBLS_GetTreasureClassExRecordFromIdAndLevel)",
+      "fields": [
+        {
+          "name": "wGroup",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FDA344B mov dx, [eax]"
+        },
+        {
+          "name": "wLevel",
+          "off": 2,
+          "type": "u16",
+          "$comment": "0x6FDA3460 movsx edx, word [ecx+0x2]"
+        }
+      ]
+    },
+    "D2StaticPathStrc": {
+      "size": 20,
+      "allocEvidence": "D2Common 0x6FD8D99C mov edx, 0x14 (Fog alloc in PATH_AllocStaticPath)",
+      "fields": [
+        {
+          "name": "nPosX",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FDCF60A mov esi, [edx+0xc]"
+        },
+        {
+          "name": "nPosY",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FDCF636 mov edx, [edx+0x10]"
+        }
+      ]
+    },
+    "D2DrlgGridStrc": {
+      "size": 20,
+      "allocEvidence": "D2Common 0x6FD5A4BC add esi, 0x14 (grid array stride in DRLGPRESET_FreePresetRoomData)",
+      "fields": [
+        {
+          "name": "pCells",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD8680D mov [ecx], edx"
+        },
+        {
+          "name": "pRowOffsets",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD86813 mov [ecx+0x4], edx"
+        },
+        {
+          "name": "nWidth",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD867F3 mov [ecx+0x8], edx"
+        },
+        {
+          "name": "nHeight",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD867F9 mov [ecx+0xc], edx"
+        },
+        {
+          "name": "bInitialized",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FD86832 mov dword [ecx+0x10], 1"
+        }
+      ]
+    },
+    "D2PresetUnitStrc": {
+      "size": 32,
+      "allocEvidence": "D2Common 0x6FD5A54C mov edx, 0x20",
+      "fields": [
+        {
+          "name": "nUnitType",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD5A597 mov dword [eax], 0"
+        },
+        {
+          "name": "nIndex",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD5A579 mov [eax+0x4], ecx"
+        },
+        {
+          "name": "nXpos",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD5A3C0 mov ecx, [eax+0x8]"
+        },
+        {
+          "name": "pNext",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD5A431 mov eax, [eax+0xc]"
+        },
+        {
+          "name": "pSaveChain",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD59FE3 mov esi, [ebx+0x10]"
+        },
+        {
+          "name": "nMode",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD5A590 mov dword [eax+0x14], 2"
+        },
+        {
+          "name": "nYpos",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FD5A3C9 mov edx, [eax+0x18]"
+        },
+        {
+          "name": "dwFlags",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FD5A583 mov ecx, [eax+0x1c]"
+        }
+      ]
+    },
+    "D2RoomLogicalInfoStrc": {
+      "size": 52,
+      "allocEvidence": "D2Common 0x6FDD1CD5 mov edx, 0x34; 0x6FDD1CE7 mov ecx, 0xD; rep stosd",
+      "fields": [
+        {
+          "name": "dwFlags",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FDD1D02 mov edx, [ebx]"
+        },
+        {
+          "name": "pGrid0Cells",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FDD0FB2 mov [edi+0x8], ebp"
+        },
+        {
+          "name": "pGrid0RowOffsets",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FDD0F99 mov edx, [edi+0xc]"
+        },
+        {
+          "name": "pIndexCells",
+          "off": 28,
+          "type": "ptr",
+          "$comment": "0x6FDD1A8F mov edx, [esi+0x1c]"
+        },
+        {
+          "name": "pIndexRowOffsets",
+          "off": 32,
+          "type": "ptr",
+          "$comment": "0x6FDD1A85 mov edi, [esi+0x20]"
+        },
+        {
+          "name": "pCoordList",
+          "off": 48,
+          "type": "ptr",
+          "$comment": "0x6FDD197B mov eax, [ecx+0x30]"
+        }
+      ]
+    },
+    "D2StatesTxt": {
+      "size": 60,
+      "allocEvidence": "D2Common 0x6FD51788 imul eax, eax, 0x3C (record stride in DATATBLS_GetStatesTxtRecordInline)",
+      "fields": [
+        {
+          "name": "nStateFlags2",
+          "off": 18,
+          "type": "u8",
+          "$comment": "0x6FD87FDF mov cl, [ecx+0x12]"
+        },
+        {
+          "name": "nGfxType",
+          "off": 45,
+          "type": "u8",
+          "$comment": "0x6FDA02A3 movzx ecx, byte [eax+0x2d]"
+        },
+        {
+          "name": "wGfxClass",
+          "off": 46,
+          "type": "u16",
+          "$comment": "0x6FDA02DD movsx eax, word [eax+0x2e]"
+        }
+      ]
+    },
+    "D2ItemStatCostTxt": {
+      "size": 324,
+      "allocEvidence": "D2Common 0x6FD517B8 imul eax, eax, 0x144 (record stride in DATATBLS_GetItemStatCostTxtRecordInline)",
+      "fields": [
+        {
+          "name": "dwFlags",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD88D0A movzx eax, byte [eax+0x4]"
+        },
+        {
+          "name": "bValShift",
+          "off": 24,
+          "type": "u8",
+          "$comment": "0x6FD79E8F mov cl, [esi+0x18]"
+        },
+        {
+          "name": "nSaveBits",
+          "off": 25,
+          "type": "u8",
+          "count": 2,
+          "$comment": "0x6FD79D9F movzx edi, byte [esi+eax+0x19]"
+        },
+        {
+          "name": "dwSaveAdd",
+          "off": 28,
+          "type": "u32",
+          "count": 2,
+          "$comment": "0x6FD79D95 mov ebx, [esi+eax*4+0x1c]"
+        },
+        {
+          "name": "dwSaveParamBits",
+          "off": 36,
+          "type": "u32",
+          "count": 2,
+          "$comment": "0x6FD79D90 mov edx, [esi+eax*4+0x24]"
+        },
+        {
+          "name": "dwMinAccr",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FD88B4D mov edx, [ecx+0x2c]"
+        },
+        {
+          "name": "bKeepZero",
+          "off": 80,
+          "type": "u8",
+          "$comment": "0x6FD8897D mov dl, [ecx+0x50]"
+        },
+        {
+          "name": "bIsBaseOfOtherStat",
+          "off": 81,
+          "type": "u8",
+          "$comment": "0x6FD89CFD mov dl, [esi+0x51]"
+        },
+        {
+          "name": "bHasOpApplyingToThis",
+          "off": 82,
+          "type": "u8",
+          "$comment": "0x6FD89580 mov cl, [esi+0x52]"
+        },
+        {
+          "name": "bHasDynamicOp",
+          "off": 83,
+          "type": "u8",
+          "$comment": "0x6FD88997 mov cl, [eax+0x53]"
+        },
+        {
+          "name": "bOp",
+          "off": 84,
+          "type": "u8",
+          "$comment": "0x6FD89DA2 mov al, [ebx+0x54]"
+        },
+        {
+          "name": "wOpStat1",
+          "off": 88,
+          "type": "u16",
+          "$comment": "0x6FD89D40 add esi, 0x58"
+        },
+        {
+          "name": "wOpStat2",
+          "off": 90,
+          "type": "u16",
+          "$comment": "0x6FD89D40 add esi, 0x58 (index 1)"
+        },
+        {
+          "name": "wOpStat3",
+          "off": 92,
+          "type": "u16",
+          "$comment": "0x6FD89D40 add esi, 0x58 (index 2)"
+        }
+      ]
+    },
+    "D2SetsTxt": {
+      "size": 296,
+      "allocEvidence": "D2Common 0x6FD517E8 imul eax, eax, 0x128 (record stride in DATATBLS_GetSetsTxtRecordInline)",
+      "fields": [
+        {
+          "name": "nItems",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD96063 cmp [edi+0xc], ecx"
+        },
+        {
+          "name": "pCode",
+          "off": 16,
+          "type": "u32",
+          "count": 32,
+          "$comment": "0x6FD9602E add edi, 0x10 (8 props * 0x10 bytes)"
+        },
+        {
+          "name": "fCode",
+          "off": 144,
+          "type": "u32",
+          "count": 32,
+          "$comment": "0x6FD9606B add edi, 0x90 (8 props * 0x10 bytes)"
+        }
+      ]
+    },
+    "D2SetItemsTxt": {
+      "size": 440,
+      "allocEvidence": "D2Common 0x6FD51818 imul eax, eax, 0x1B8 (record stride in DATATBLS_GetSetItemsTxtRecordInline)",
+      "fields": [
+        {
+          "name": "wLvlReq",
+          "off": 50,
+          "type": "u16",
+          "$comment": "0x6FD764D8 movsx eax, word [eax+0x32]"
+        },
+        {
+          "name": "wSetId",
+          "off": 44,
+          "type": "u16",
+          "$comment": "0x6FD95FDC movsx eax, word [eax+0x2c]"
+        },
+        {
+          "name": "nAddFunc",
+          "off": 135,
+          "type": "u8",
+          "$comment": "0x6FD961F7 mov cl, [ecx+0x87]"
+        },
+        {
+          "name": "baseProps",
+          "off": 136,
+          "type": "u32",
+          "count": 36,
+          "$comment": "0x6FD96182 add edi, 0x88 (9 props * 0x10 bytes)"
+        },
+        {
+          "name": "addProps",
+          "off": 280,
+          "type": "u32",
+          "count": 20,
+          "$comment": "0x6FD961E7 add edi, 0x118 (5 props * 0x10 bytes)"
+        }
+      ]
+    },
+    "D2UniqueItemsTxt": {
+      "size": 332,
+      "allocEvidence": "D2Common 0x6FD51848 imul eax, eax, 0x14C (record stride in DATATBLS_GetUniqueItemsTxtRecordInline)",
+      "fields": [
+        {
+          "name": "wLvlReq",
+          "off": 54,
+          "type": "u16",
+          "$comment": "0x6FD7649F movsx eax, word [esi+0x36]"
+        },
+        {
+          "name": "props",
+          "off": 140,
+          "type": "u32",
+          "count": 48,
+          "$comment": "0x6FD9612B lea edi, [eax+0x8c] (12 props * 0x10 bytes)"
+        }
+      ]
+    },
+    "D2MissileDataStrc": {
+      "size": 52,
+      "allocEvidence": "D2Common 0x6FDBA3B2 mov edx, 0x34 (Fog alloc in MISSILE_AllocMissileData)",
+      "fields": [
+        {
+          "name": "nAdditionalFrames",
+          "off": 4,
+          "type": "u16",
+          "$comment": "0x6FDBA0F4 movsx eax, word [eax+0x4]"
+        },
+        {
+          "name": "nLatestFrame",
+          "off": 6,
+          "type": "u16",
+          "$comment": "0x6FDBA0B4 movsx eax, word [eax+0x6]"
+        },
+        {
+          "name": "nActivateFrame",
+          "off": 8,
+          "type": "u16",
+          "$comment": "0x6FDBA044 movsx eax, word [eax+0x8]"
+        },
+        {
+          "name": "nSkill",
+          "off": 10,
+          "type": "u16",
+          "$comment": "0x6FDBA2C4 movsx eax, word [eax+0xa]"
+        },
+        {
+          "name": "nLevel",
+          "off": 12,
+          "type": "u16",
+          "$comment": "0x6FDBA2E4 movsx eax, word [eax+0xc]"
+        },
+        {
+          "name": "nTotalFrames",
+          "off": 14,
+          "type": "u16",
+          "$comment": "0x6FDBA2A4 movsx eax, word [eax+0xe]"
+        },
+        {
+          "name": "nRemainingFrames",
+          "off": 16,
+          "type": "u16",
+          "$comment": "0x6FDBA284 movsx eax, word [eax+0x10]"
+        },
+        {
+          "name": "dwStreamFlags",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FDBA344 mov eax, [eax+0x14]"
+        },
+        {
+          "name": "nOwnerType",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FDBA18B cmp [eax+0x18], ecx"
+        },
+        {
+          "name": "dwOwnerId",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FDBA193 cmp [eax+0x1c], ecx"
+        },
+        {
+          "name": "nTargetX",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FDB9FA4 mov eax, [eax+0x28]"
+        },
+        {
+          "name": "nTargetY",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FDB9F64 mov eax, [eax+0x2c]"
+        }
+      ]
+    },
+    "D2MissileDamageDataStrc": {
+      "size": 124,
+      "allocEvidence": "D2Common 0x6FDBBAAB mov ecx, 0x1F; rep stosd (124 bytes in MISSILE_CalculateDamageData)",
+      "fields": [
+        {
+          "name": "nFireMinDamage",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FDB9C6C mov eax, [ecx+0xc]"
+        },
+        {
+          "name": "nFireMaxDamage",
+          "off": 16,
+          "type": "u32",
+          "$comment": "0x6FDB9C7E mov eax, [ecx+0x10]"
+        },
+        {
+          "name": "nLtngMinDamage",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FDB9C90 mov eax, [ecx+0x18]"
+        },
+        {
+          "name": "nLtngMaxDamage",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FDB9CA2 mov eax, [ecx+0x1c]"
+        },
+        {
+          "name": "nMagMinDamage",
+          "off": 32,
+          "type": "u32",
+          "$comment": "0x6FDB9CB4 mov eax, [ecx+0x20]"
+        },
+        {
+          "name": "nMagMaxDamage",
+          "off": 36,
+          "type": "u32",
+          "$comment": "0x6FDB9CC6 mov eax, [ecx+0x24]"
+        },
+        {
+          "name": "nColdMinDamage",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FDB9CD8 mov eax, [ecx+0x28]"
+        },
+        {
+          "name": "nColdMaxDamage",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FDB9CEA mov eax, [ecx+0x2c]"
+        },
+        {
+          "name": "nColdLength",
+          "off": 48,
+          "type": "u32",
+          "$comment": "0x6FDB9CFC mov eax, [ecx+0x30]"
+        },
+        {
+          "name": "nPoisMinDamage",
+          "off": 52,
+          "type": "u32",
+          "$comment": "0x6FDB9D0E mov eax, [ecx+0x34]"
+        },
+        {
+          "name": "nPoisMaxDamage",
+          "off": 56,
+          "type": "u32",
+          "$comment": "0x6FDB9D20 mov eax, [ecx+0x38]"
+        },
+        {
+          "name": "nPoisCount",
+          "off": 64,
+          "type": "u32",
+          "$comment": "0x6FDB9D32 mov eax, [ecx+0x40]"
+        },
+        {
+          "name": "nLifeDrainMinDamage",
+          "off": 68,
+          "type": "u32",
+          "$comment": "0x6FDB9D44 mov eax, [ecx+0x44]"
+        },
+        {
+          "name": "nManaDrainMinDamage",
+          "off": 76,
+          "type": "u32",
+          "$comment": "0x6FDB9D56 mov eax, [ecx+0x4c]"
+        },
+        {
+          "name": "nBurningMin",
+          "off": 96,
+          "type": "u32",
+          "$comment": "0x6FDB9D68 mov eax, [ecx+0x60]"
+        },
+        {
+          "name": "nBurningMax",
+          "off": 100,
+          "type": "u32",
+          "$comment": "0x6FDB9D7A mov eax, [ecx+0x64]"
+        },
+        {
+          "name": "nBurnLength",
+          "off": 104,
+          "type": "u32",
+          "$comment": "0x6FDB9D8C mov eax, [ecx+0x68]"
+        }
+      ]
+    },
+    "D2ItemsTxt": {
+      "size": 424,
+      "allocEvidence": "D2Common 0x6FDC19DA imul eax, eax, 0x1A8 (record stride in DATATBLS_GetItemsTxtRecord)",
+      "fields": [
+        {
+          "name": "nLevelReq",
+          "off": 101,
+          "type": "u8",
+          "$comment": "0x6FD72FE3 movzx ecx, byte [ecx+0x65]"
+        },
+        {
+          "name": "nClass",
+          "off": 103,
+          "type": "u8",
+          "$comment": "0x6FD72FC7 mov dl, [ecx+0x67]"
+        },
+        {
+          "name": "nClassLevelReq",
+          "off": 104,
+          "type": "u8",
+          "$comment": "0x6FD72FDD movzx ecx, byte [ecx+0x68]"
+        },
+        {
+          "name": "dwCode",
+          "off": 128,
+          "type": "u32",
+          "$comment": "0x6FD732D7 mov eax, [eax+0x80]"
+        },
+        {
+          "name": "dwAlternateGfx",
+          "off": 132,
+          "type": "u32",
+          "$comment": "0x6FD7302C mov ecx, [eax+0x84]"
+        },
+        {
+          "name": "dwUberCode",
+          "off": 136,
+          "type": "u32",
+          "$comment": "0x6FD74D6A cmp [esi+0x88], eax"
+        },
+        {
+          "name": "dwUltraCode",
+          "off": 140,
+          "type": "u32",
+          "$comment": "0x6FD74D72 cmp [esi+0x8c], eax"
+        },
+        {
+          "name": "dw2HandedWClass",
+          "off": 196,
+          "type": "u32",
+          "$comment": "0x6FD73327 mov eax, [eax+0xc4]"
+        },
+        {
+          "name": "nMinAc",
+          "off": 208,
+          "type": "u32",
+          "$comment": "0x6FD79FD5 mov edi, [ebx+0xd0]"
+        },
+        {
+          "name": "dwBitField1",
+          "off": 220,
+          "type": "u32",
+          "$comment": "0x6FD72806 mov eax, [eax+0xdc]"
+        },
+        {
+          "name": "dwCost",
+          "off": 224,
+          "type": "u32",
+          "$comment": "0x6FD74ACA mov eax, [eax+0xe0]"
+        },
+        {
+          "name": "dwGambleCost",
+          "off": 228,
+          "type": "u32",
+          "$comment": "0x6FD72B16 mov eax, [eax+0xe4]"
+        },
+        {
+          "name": "dwSpeed",
+          "off": 232,
+          "type": "u32",
+          "$comment": "0x6FD72BB6 mov eax, [eax+0xe8]"
+        },
+        {
+          "name": "dwBitField2",
+          "off": 236,
+          "type": "u32",
+          "$comment": "0x6FD72B66 mov eax, [eax+0xec]"
+        },
+        {
+          "name": "nLevel",
+          "off": 253,
+          "type": "u8",
+          "$comment": "0x6FD73097 mov al, [eax+0xfd]"
+        },
+        {
+          "name": "nMinDam",
+          "off": 254,
+          "type": "u8",
+          "$comment": "0x6FD7A0BA mov al, [ebx+0xfe]"
+        },
+        {
+          "name": "nMaxDam",
+          "off": 255,
+          "type": "u8",
+          "$comment": "0x6FD7A015 mov al, [ebx+0xff]"
+        },
+        {
+          "name": "nMinMisDam",
+          "off": 256,
+          "type": "u8",
+          "$comment": "0x6FD7A11F mov al, [ebx+0x100]"
+        },
+        {
+          "name": "nMaxMisDam",
+          "off": 257,
+          "type": "u8",
+          "$comment": "0x6FD7A07E mov al, [ebx+0x101]"
+        },
+        {
+          "name": "n2HandMinDam",
+          "off": 258,
+          "type": "u8",
+          "$comment": "0x6FD7A0E0 mov al, [ebx+0x102]"
+        },
+        {
+          "name": "n2HandMaxDam",
+          "off": 259,
+          "type": "u8",
+          "$comment": "0x6FD7A03B mov al, [ebx+0x103]"
+        },
+        {
+          "name": "wReqStr",
+          "off": 266,
+          "type": "u16",
+          "$comment": "0x6FD76E30 movzx ecx, word [eax+0x10a]"
+        },
+        {
+          "name": "wReqDex",
+          "off": 268,
+          "type": "u16",
+          "$comment": "0x6FD76E37 movzx edx, word [eax+0x10c]"
+        },
+        {
+          "name": "nInvWidth",
+          "off": 271,
+          "type": "u8",
+          "$comment": "0x6FD7A406 mov bl, [eax+0x10f]"
+        },
+        {
+          "name": "nInvHeight",
+          "off": 272,
+          "type": "u8",
+          "$comment": "0x6FD7A40C mov al, [eax+0x110]"
+        },
+        {
+          "name": "nUseable",
+          "off": 285,
+          "type": "u8",
+          "$comment": "0x6FD72CB9 movzx eax, byte [eax+0x11d]"
+        },
+        {
+          "name": "wType1",
+          "off": 286,
+          "type": "u16",
+          "$comment": "0x6FD730E6 movsx eax, word [eax+0x11e]"
+        },
+        {
+          "name": "wType2",
+          "off": 288,
+          "type": "u16",
+          "$comment": "0x6FD744B7 mov ax, word [eax+0x120]"
+        },
+        {
+          "name": "nUnique",
+          "off": 297,
+          "type": "u8",
+          "$comment": "0x6FD72C67 movzx eax, byte [eax+0x129]"
+        },
+        {
+          "name": "nComponent",
+          "off": 298,
+          "type": "u8",
+          "$comment": "0x6FD72C07 movzx eax, byte [eax+0x12a]"
+        },
+        {
+          "name": "bStackable",
+          "off": 305,
+          "type": "u8",
+          "$comment": "0x6FD74B68 mov cl, [eax+0x131]"
+        },
+        {
+          "name": "nTwoHanded",
+          "off": 306,
+          "type": "u8",
+          "$comment": "0x6FD72E59 movzx eax, byte [eax+0x132]"
+        },
+        {
+          "name": "nSubType",
+          "off": 311,
+          "type": "u8",
+          "$comment": "0x6FD72964 movzx eax, byte [eax+0x137]"
+        },
+        {
+          "name": "bBelt",
+          "off": 312,
+          "type": "u8",
+          "$comment": "0x6FD72914 mov al, [eax+0x138]"
+        },
+        {
+          "name": "bQuest",
+          "off": 316,
+          "type": "u8",
+          "$comment": "0x6FD723C7 mov al, [eax+0x13c]"
+        },
+        {
+          "name": "nGemApplyType",
+          "off": 318,
+          "type": "u8",
+          "$comment": "0x6FD728C6 movzx eax, byte [eax+0x13e]"
+        },
+        {
+          "name": "nItemLevelReq",
+          "off": 319,
+          "type": "u8",
+          "$comment": "0x6FD7652D movzx eax, byte [eax+0x13f]"
+        },
+        {
+          "name": "nDropSound",
+          "off": 323,
+          "type": "u8",
+          "$comment": "0x6FD722FE movzx eax, byte [eax+0x143]"
+        }
+      ]
+    },
+    "D2DrlgPresetRoomStrc": {
+      "size": 248,
+      "allocEvidence": "D2Common 0x6FD94C81 mov edx, 0xF8 (Fog alloc for pRoomEx->pTypeData when nType == 2)",
+      "fields": [
+        {
+          "name": "nLevelPrest",
+          "off": 0,
+          "type": "u32",
+          "$comment": "0x6FD5E446 cmp [ecx], esi"
+        },
+        {
+          "name": "nOrientation",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD5E463 mov [ecx+0x4], edx"
+        },
+        {
+          "name": "pMap",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD5A456 mov eax, [esi+0x8]"
+        },
+        {
+          "name": "dwFlags",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD5E43A mov edx, [ecx+0xc]"
+        },
+        {
+          "name": "pWall0Cells",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD5AAD6 mov eax, [esi+0x10]"
+        },
+        {
+          "name": "pWall0RowOffsets",
+          "off": 20,
+          "type": "ptr",
+          "$comment": "0x6FD5AAD0 mov eax, [esi+0x14]"
+        },
+        {
+          "name": "pCellGridCells",
+          "off": 216,
+          "type": "ptr",
+          "$comment": "0x6FD5A528 mov [eax+0xd8], edi"
+        },
+        {
+          "name": "pCellGridRowOffsets",
+          "off": 220,
+          "type": "ptr",
+          "$comment": "0x6FD5A507 mov edx, [esi+0xdc]"
+        },
+        {
+          "name": "pMazeGrid",
+          "off": 236,
+          "type": "ptr",
+          "$comment": "0x6FD5AE61 mov [ecx+0xec], edi"
+        },
+        {
+          "name": "pTombCoords",
+          "off": 240,
+          "type": "ptr",
+          "$comment": "0x6FD5AA89 mov eax, [esi+0xf0]"
+        },
+        {
+          "name": "nTombCoords",
+          "off": 244,
+          "type": "u32",
+          "$comment": "0x6FD5AB39 mov [esi+0xf4], edi"
+        }
+      ]
+    },
+    "D2UnitFindDataStrc": {
+      "size": 44,
+      "allocEvidence": "D2Game 0x6FCBE58D mov edx, 0x2C (Fog alloc for D2UnitFindDataStrc)",
+      "fields": [
+        {
+          "name": "pMemPool",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD62010 mov ecx, [esi]"
+        },
+        {
+          "name": "pUnitsArray",
+          "off": 4,
+          "type": "ptr",
+          "$comment": "0x6FD62009 mov edx, [esi+0x4]"
+        },
+        {
+          "name": "pRoom",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD620B9 mov [esi+0x8], eax"
+        },
+        {
+          "name": "pfnCallback",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD620DC mov [esi+0xc], ecx; 0x6FD6281D call [ebx+0xc]"
+        },
+        {
+          "name": "pFilterUnit",
+          "off": 16,
+          "type": "ptr",
+          "$comment": "0x6FD620DF mov [esi+0x10], edx; 0x6FD62818 mov edx, [ebx+0x10]"
+        },
+        {
+          "name": "dwFlags",
+          "off": 20,
+          "type": "u32",
+          "$comment": "0x6FD620B2 mov [esi+0x14], eax"
+        },
+        {
+          "name": "nIndex",
+          "off": 24,
+          "type": "u32",
+          "$comment": "0x6FD620AF mov [esi+0x18], eax"
+        },
+        {
+          "name": "nMaxCount",
+          "off": 28,
+          "type": "u32",
+          "$comment": "0x6FD62119 mov edi, [esi+0x1c]"
+        },
+        {
+          "name": "nX",
+          "off": 32,
+          "type": "u32",
+          "$comment": "0x6FD620C0 mov [esi+0x20], ecx; 0x6FD6276A mov edx, [ebx+0x20]"
+        },
+        {
+          "name": "nY",
+          "off": 36,
+          "type": "u32",
+          "$comment": "0x6FD620C7 mov [esi+0x24], edx; 0x6FD62767 mov eax, [ebx+0x24]"
+        },
+        {
+          "name": "dwSize",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD620D9 mov [esi+0x28], eax"
+        }
+      ]
+    },
+    "D2TextHeaderStrc": {
+      "size": 12,
+      "allocEvidence": "D2Common 0x6FD8D28E mov edx, 0x0C (Fog alloc in TEXT_AllocTextList)",
+      "fields": [
+        {
+          "name": "pMemPool",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD8D215 mov ecx, [esi]"
+        },
+        {
+          "name": "wCount",
+          "off": 4,
+          "type": "u16",
+          "$comment": "0x6FD8D240 inc word [esi+0x4]"
+        },
+        {
+          "name": "pFirstNode",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD8D218 mov edi, [esi+0x8]"
+        }
+      ]
+    },
+    "D2TextNodeStrc": {
+      "size": 12,
+      "allocEvidence": "D2Common 0x6FD8D224 mov edx, 0x0C (Fog alloc in TEXT_AddNodeToTextList)",
+      "fields": [
+        {
+          "name": "wStringId",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FD8D23A mov [eax], cx"
+        },
+        {
+          "name": "nMenuIndex",
+          "off": 4,
+          "type": "u32",
+          "$comment": "0x6FD8D23D mov [eax+0x4], edx"
+        },
+        {
+          "name": "pNext",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD8D237 mov [eax+0x8], edi"
+        }
+      ]
+    },
+    "D2ShrinesTxt": {
+      "size": 52,
+      "allocEvidence": "D2Common 0x6FD8E972 imul eax, eax, 0x34 (record stride in DATATBLS_GetShrinesTxtRecord)",
+      "fields": []
+    },
+    "D2MonLvlTxt": {
+      "size": 88,
+      "allocEvidence": "D2Common 0x6FD8B3E0 / 0x6FDB03E0 imul eax, eax, 0x58 (record stride in DATATBLS_GetMonLvlTxtRecord)",
+      "fields": []
+    },
+    "D2CubemainTxt": {
+      "size": 328,
+      "allocEvidence": "D2Common 0x6FD6B8CC imul eax, eax, 0x148 (record stride in DATATBLS_GetCubemainTxtRecord)",
+      "fields": []
+    },
+    "D2AnimDataRecordStrc": {
+      "size": 160,
+      "allocEvidence": "D2Common 0x6FD91E2D add edi, 0xA0 (AnimData.d2 record stride in ANIMDATA_FindRecordByCode 0x6FD91DD0); +0x00 char szCode[8] compared by 0x6FD91D00",
+      "fields": [
+        {
+          "name": "dwFramesPerDirection",
+          "off": 8,
+          "type": "u32",
+          "$comment": "0x6FD91EFE mov ecx, [eax+0x8]"
+        },
+        {
+          "name": "dwAnimSpeed",
+          "off": 12,
+          "type": "u32",
+          "$comment": "0x6FD91F07 mov ecx, [eax+0xc]"
+        },
+        {
+          "name": "bFrameEvents",
+          "off": 16,
+          "type": "u8",
+          "count": 144,
+          "$comment": "0x6FD91F28 mov bl, [ecx+eax+0x10]; index bounded by cmp ecx, 0x90 at 0x6FD91F20"
+        }
+      ]
+    },
+    "D2AnimDataTableStrc": {
+      "size": 1188,
+      "allocEvidence": "D2Common 0x6FD91E64 mov edx, 0x4A4 (FOG alloc in ANIMDATA_Load 0x6FD91E50, pointer stored to 0x6FDF0B4C at 0x6FDB623F); +0x404 embedded default D2AnimDataRecordStrc",
+      "fields": [
+        {
+          "name": "pAnimDataFile",
+          "off": 0,
+          "type": "ptr",
+          "$comment": "0x6FD91EA8 mov [esi], eax"
+        },
+        {
+          "name": "pHashBuckets",
+          "off": 4,
+          "type": "ptr",
+          "count": 256,
+          "$comment": "0x6FD91E12 mov eax, [esi+eax*4+0x4]"
+        },
+        {
+          "name": "dwDefaultFramesPerDirection",
+          "off": 1036,
+          "type": "u32",
+          "$comment": "0x6FD91EC7 mov dword [esi+0x40c], 0x800; read at 0x6FD91F49"
+        },
+        {
+          "name": "dwDefaultAnimSpeed",
+          "off": 1040,
+          "type": "u32",
+          "$comment": "0x6FD91ED1 mov dword [esi+0x410], 0x100; read at 0x6FD91F55"
+        }
+      ]
+    },
+    "D2PathInfoStrc": {
+      "size": 52,
+      "allocEvidence": "D2Common 0x6FD86230 sub esp, 0x34 (stack frame of PATH_Recalculate 0x6FD86230 passed at [esp+0x10]..[esp+0x44] to 0x6FD85470 / 0x6FD856E0)",
+      "fields": [
+        {
+          "name": "startX",
+          "off": 0,
+          "type": "u16",
+          "$comment": "0x6FD85706 mov ax, word [esi]"
+        },
+        {
+          "name": "startY",
+          "off": 2,
+          "type": "u16",
+          "$comment": "0x6FD856FE mov cx, word [esi+0x2]"
+        },
+        {
+          "name": "targetX",
+          "off": 4,
+          "type": "u16",
+          "$comment": "0x6FD85702 mov dx, word [esi+0x4]"
+        },
+        {
+          "name": "targetY",
+          "off": 6,
+          "type": "u16",
+          "$comment": "0x6FD85711 movzx ebp, word [esi+0x6]"
+        },
+        {
+          "name": "pStartRoom",
+          "off": 8,
+          "type": "ptr",
+          "$comment": "0x6FD85735 mov eax, [esi+0x8]"
+        },
+        {
+          "name": "pTargetRoom",
+          "off": 12,
+          "type": "ptr",
+          "$comment": "0x6FD856F7 mov eax, [esi+0xc]"
+        },
+        {
+          "name": "nTargetTypeStatus",
+          "off": 20,
+          "type": "u8",
+          "$comment": "0x6FDC0B89 movzx ecx, byte [eax+0x14]"
+        },
+        {
+          "name": "dwCollisionPattern",
+          "off": 40,
+          "type": "u32",
+          "$comment": "0x6FD686D1 mov ebx, [eax+0x28]"
+        },
+        {
+          "name": "nMoveTestCollisionMask",
+          "off": 44,
+          "type": "u32",
+          "$comment": "0x6FD686D5 mov ebp, [eax+0x2c]"
+        },
+        {
+          "name": "pDynamicPath",
+          "off": 48,
+          "type": "ptr",
+          "$comment": "0x6FD85471 mov esi, [edi+0x30]"
+        }
+      ]
+    },
+    "D2RunesTxt": {
+      "size": 288,
+      "allocEvidence": "D2Common 0x6FD76D12 add ebp, 0x120 (record stride in ITEMS_FindMatchingRunesTxtRecord)",
+      "fields": [
+        {
+          "name": "props",
+          "off": 176,
+          "type": "u32",
+          "count": 28,
+          "$comment": "0x6FD967E8 lea edi, [eax+0xb0] (7 props * 0x10 bytes)"
+        }
+      ]
+    }
+  }
+}

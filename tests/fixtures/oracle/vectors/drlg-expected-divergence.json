@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "closures": {
+    "layout": {
+      "entryVas": [
+        "0x6FD8CB30",
+        "0x6FD7D9B0",
+        "0x6FD7E360"
+      ],
+      "totalFunctions": 305,
+      "portedFunctions": 305,
+      "unportedFunctions": 0,
+      "unportedBytes": 0,
+      "unportedVas": []
+    },
+    "collision": {
+      "entryVas": [
+        "0x6FD8CB30",
+        "0x6FD7D9B0",
+        "0x6FD7E360",
+        "0x6FDCC270"
+      ],
+      "totalFunctions": 306,
+      "portedFunctions": 306,
+      "unportedFunctions": 0,
+      "unportedBytes": 0,
+      "unportedVas": []
+    }
+  },
+  "items": {}
+}

@@ -1,0 +1,235 @@
+{
+ "name": "p52-amazon-defense",
+ "description": "Amazon L40 (Dodge/Avoid/Evade, Critical Strike): stands next to the zombies to be attacked, then attacks zombie #10 (block/dodge/avoid and critical-strike rolls).",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/amazon-l40-passives.d2s",
+ "difficulty": 0,
+ "frames": 1800,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "031e16a816",
+   "note": "run next to the zombies"
+  },
+  {
+   "frame": 1200,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1220,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1240,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1260,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1280,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1300,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1320,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1340,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1360,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1380,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1400,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1420,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1440,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1460,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1480,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1500,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1520,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1540,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1560,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1580,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1600,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1620,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1640,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1660,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1680,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1700,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1720,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1740,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+Id	Name	Description	MonsterId	KillCount	RewardXP	RewardGold
+den	4	5	*	3	60	120

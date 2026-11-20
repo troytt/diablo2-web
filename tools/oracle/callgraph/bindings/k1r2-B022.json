@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD63F30",
+    "name": "DRLGOUTPLACE_InitRoomExCoordByDir",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_InitRoomExCoordByDir113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (6 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64900",
+    "name": "DRLGOUTPLACE_CheckAct2LinkOverlap",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_CheckAct2LinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64A00",
+    "name": "DRLGOUTPLACE_CheckAct1LinkOverlap",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_CheckAct1LinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (6 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64B00",
+    "name": "DRLGOUTPLACE_LinkAct4Step",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct4Step113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (6 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64D00",
+    "name": "DRLGOUTPLACE_LinkAct3KurastCauseway",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct3KurastCauseway113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (10 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64E30",
+    "name": "DRLGOUTPLACE_LinkAct3SpiderForest",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct3SpiderForest113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (9 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64F90",
+    "name": "DRLGOUTPLACE_LinkAct1Rotating",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct1Rotating113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (11 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD65250",
+    "name": "DRLGOUTPLACE_LinkAct1FixedSize",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct1FixedSize113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (11 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD65480",
+    "name": "DRLGOUTPLACE_LinkAct3Jungle",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkAct3Jungle113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (10 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD65680",
+    "name": "DRLGOUTPLACE_LinkQuadrant4",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkQuadrant4_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (10 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD657D0",
+    "name": "DRLGOUTPLACE_LinkFromLevelDef",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_LinkFromLevelDef113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD65840",
+    "name": "DRLGOUTPLACE_MarkBorderGridCells",
+    "kernFile": "src/d2kern-113c/common/drlg/out-place.ts",
+    "tsSymbol": "DRLGOUTPLACE_MarkBorderGridCells113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B022-out-place.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  }
+]

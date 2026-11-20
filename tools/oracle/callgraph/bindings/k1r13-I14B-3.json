@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CD00",
+    "name": "DUNGEON_FindWarpPortalUnitInTargetLevel",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FindWarpPortalUnitInTargetLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CDA0",
+    "name": "DUNGEON_FindRoomBySubtileCoords",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FindRoomBySubtileCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CDF0",
+    "name": "DUNGEON_FindFreeSpawnPositionInLevel",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FindFreeSpawnPositionInLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8CEE0",
+    "name": "DUNGEON_FindLevelSpawnRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FindLevelSpawnRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8D5A0",
+    "name": "DRLGVER_CollectOutdoorRoomLinks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLGVER_CollectOutdoorRoomLinks113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8DB20",
+    "name": "DRLGVER_ApplyMazeBorderTiles",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLGVER_ApplyMazeBorderTiles113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8DD40",
+    "name": "DRLGOUTWILD_ResolveOutdoorRoomBridgeTargets",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGOUTWILD_ResolveOutdoorRoomBridgeTargets113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E000",
+    "name": "DRLGOUTWILD_BuildOutdoorPathsAndEnv",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGOUTWILD_BuildOutdoorPathsAndEnv113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91AD0",
+    "name": "DRLGOUTANIM_BuildAct5PresetContext",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTANIM_BuildAct5PresetContext113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91CA0",
+    "name": "DRLGOUTANIM_BuildAct5Outdoors",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTANIM_BuildAct5Outdoors113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD926A0",
+    "name": "DRLGOUTDOORS_PlaceRandomOutdoorShrineOrSpecial",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_PlaceRandomOutdoorShrineOrSpecial113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92EB0",
+    "name": "DRLGOUTDOORS_PlaceClosestOutdoorPresetToRect",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_PlaceClosestOutdoorPresetToRect113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93100",
+    "name": "DRLGOUTDOORS_BuildOutdoorSubstContext",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_BuildOutdoorSubstContext113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93190",
+    "name": "DRLGOUTDOORS_BuildOutdoorRoomExList",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_BuildOutdoorRoomExList113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93350",
+    "name": "DRLGOUTDOORS_PlaceRandomOutdoorPresetNearSeed",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_PlaceRandomOutdoorPresetNearSeed113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD93580",
+    "name": "DRLGOUTDOORS_InitOutdoorLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_InitOutdoorLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD952C0",
+    "name": "DRLGROOM_LinkAdjacentWarpRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_LinkAdjacentWarpRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-3-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-3.test.ts"
+  }
+]

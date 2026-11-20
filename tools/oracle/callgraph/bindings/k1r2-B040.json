@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D4E0",
+    "name": "DRLG_LoadActTownTileLibrary",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_LoadActTownTileLibrary113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D730",
+    "name": "DRLG_GetOrAllocObjectPresetRecord",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_GetOrAllocObjectPresetRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7E0C0",
+    "name": "DRLG_InitActTownFloorTileData",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DRLG_InitActTownFloorTileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD871C0",
+    "name": "ENV_UpdateLightColor",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENV_UpdateLightColor113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD873B0",
+    "name": "ENV_GetCycleState",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENV_GetCycleState113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD876F0",
+    "name": "ENV_UpdateIntensityAndSunAngle",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENV_UpdateIntensityAndSunAngle113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (8 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92070",
+    "name": "DRLGOUTDOORS_ScaleAndCompactVertices",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_ScaleAndCompactVertices113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9AA90",
+    "name": "COLLISION_SplitClipRectByRoomBounds",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_SplitClipRectByRoomBounds113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (7 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B5F0",
+    "name": "COLLISION_CopyTileSubtileFlagsToCollGrid",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_CopyTileSubtileFlagsToCollGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B6B0",
+    "name": "COLLISION_ClearTileSubtileFlagsFromCollGrid",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_ClearTileSubtileFlagsFromCollGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9B780",
+    "name": "COLLISION_OrTileSubtileFlagsToCollGrid",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_OrTileSubtileFlagsToCollGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBC520",
+    "name": "DATATBLS_FindWallTileCacheEntry",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "DATATBLS_FindWallTileCacheEntry113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCE390",
+    "name": "COLLISION_InitBoundingBox",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_InitBoundingBox113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD10A0",
+    "name": "DRLGLOGIC_GetRoomCoordListAtSubtile",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_GetRoomCoordListAtSubtile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1100",
+    "name": "DRLGLOGIC_AllocSingleRoomCoordList",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_AllocSingleRoomCoordList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1950",
+    "name": "DRLGLOGIC_GetRoomCoordListFromWorldSubtile",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_GetRoomCoordListFromWorldSubtile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD19C0",
+    "name": "DRLGLOGIC_GetRoomCoordListIndexAtSubtile",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_GetRoomCoordListIndexAtSubtile113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B040-drlg-collision-env.test.ts (4 real-DLL vectors; 75 total in tests/fixtures/oracle/k1/b040-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  }
+]

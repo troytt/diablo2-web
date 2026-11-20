@@ -1,0 +1,135 @@
+{
+  "name": "k6-bloodmoor-consumables-auras-combat",
+  "description": "Full-horizon multi-subsystem Act 1 consumables + Warriv town AI + Paladin aura Blood Moor combat & item-drop scenario: consumes Potion of Life ('xyz '), Book of Skill ('ass '), and Scroll of Resistance ('tr2 ') via 0x20, runs out North Gate into Blood Moor, activates Concentration (113) and Fanaticism (122) via 0x3C, and kills zombies (#10, #9) via 0x06 with t4 ground drops and S2C packets.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6/saves/k6-bloodmoor-consumables-auras-combat.d2s",
+  "difficulty": 0,
+  "frames": 380,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 6,
+      "c2s": "2009000000151600001e170000",
+      "note": "0x20 UseItem Potion of Life ('xyz ' #9 -> +20 MaxHP)"
+    },
+    {
+      "frame": 10,
+      "c2s": "200a000000151600001e170000",
+      "note": "0x20 UseItem Book of Skill ('ass ' #10 -> +1 skill)"
+    },
+    {
+      "frame": 14,
+      "c2s": "200b000000151600001e170000",
+      "note": "0x20 UseItem Scroll of Resistance ('tr2 ' #11 -> +10 resists)"
+    },
+    {
+      "frame": 20,
+      "c2s": "030d161217",
+      "note": "route to north gate 1"
+    },
+    {
+      "frame": 44,
+      "c2s": "0314160617",
+      "note": "route to north gate 2"
+    },
+    {
+      "frame": 68,
+      "c2s": "032016fa16",
+      "note": "route to north gate 3"
+    },
+    {
+      "frame": 92,
+      "c2s": "032116f716",
+      "note": "route through north gate 4"
+    },
+    {
+      "frame": 116,
+      "c2s": "032216e416",
+      "note": "route north into Blood Moor 5"
+    },
+    {
+      "frame": 142,
+      "c2s": "032216d316",
+      "note": "route north into Blood Moor 6"
+    },
+    {
+      "frame": 168,
+      "c2s": "032116c316",
+      "note": "route north into Blood Moor 7"
+    },
+    {
+      "frame": 194,
+      "c2s": "032016b916",
+      "note": "route north into Blood Moor 8"
+    },
+    {
+      "frame": 220,
+      "c2s": "031e16aa16",
+      "note": "arrive at Blood Moor zombie pack"
+    },
+    {
+      "frame": 244,
+      "c2s": "3c71000000ffffffff",
+      "note": "0x3C activate Concentration aura (113)"
+    },
+    {
+      "frame": 252,
+      "c2s": "06010000000a000000",
+      "note": "0x06 melee attack zombie #10"
+    },
+    {
+      "frame": 272,
+      "c2s": "06010000000a000000",
+      "note": "0x06 melee attack zombie #10"
+    },
+    {
+      "frame": 292,
+      "c2s": "06010000000a000000",
+      "note": "0x06 melee attack zombie #10"
+    },
+    {
+      "frame": 312,
+      "c2s": "3c7a000000ffffffff",
+      "note": "0x3C switch to Fanaticism aura (122)"
+    },
+    {
+      "frame": 318,
+      "c2s": "060100000009000000",
+      "note": "0x06 melee attack zombie #9"
+    },
+    {
+      "frame": 338,
+      "c2s": "060100000009000000",
+      "note": "0x06 melee attack zombie #9"
+    },
+    {
+      "frame": 358,
+      "c2s": "060100000009000000",
+      "note": "0x06 melee attack zombie #9"
+    }
+  ]
+}

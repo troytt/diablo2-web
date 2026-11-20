@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "closures": {
+    "path": {
+      "entryVas": [
+        "0x6FD86030",
+        "0x6FD86230",
+        "0x6FD84F80",
+        "0x6FD849D0"
+      ],
+      "totalFunctions": 104,
+      "portedFunctions": 104,
+      "unportedFunctions": 0,
+      "unportedBytes": 0,
+      "unportedVas": []
+    }
+  },
+  "items": {}
+}

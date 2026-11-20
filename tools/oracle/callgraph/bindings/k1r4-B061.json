@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D180",
+    "name": "PATH_ComputeDirection",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (11 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D240",
+    "name": "PATH_ComputeVelocityToNextPoint",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeVelocityToNextPoint113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (12 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D760",
+    "name": "PATH_RecacheRoom",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RecacheRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (9 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7F910",
+    "name": "UNITS_GetDirectionToCoords",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "UNITS_GetDirectionToCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (10 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD844F0",
+    "name": "UNITS_TransferStateMaskDCToRemoved",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "UNITS_TransferStateMaskDCToRemoved113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (6 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD852F0",
+    "name": "PATH_FaceTowardsCoords",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_FaceTowardsCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (8 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85360",
+    "name": "PATH_GetCollisionPatternForSize",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_GetCollisionPatternForSize113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (15 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85470",
+    "name": "PATH_ResolveTargetUnitPosition",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ResolveTargetUnitPosition113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (12 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD856E0",
+    "name": "PATH_IsMonsterDestinationAllowed",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_IsMonsterDestinationAllowed113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (10 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB6AA0",
+    "name": "PATH_ComputePathChargedBolt",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputePathChargedBolt113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (7 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC0840",
+    "name": "PATH_IdaStar_AdvanceToNextCandidate",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_IdaStar_AdvanceToNextCandidate113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (7 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCAFB0",
+    "name": "PATH_AStar_ProcessNeighbor",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_ProcessNeighbor113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B061-path.test.ts (11 real-DLL vectors; 118 total in tests/fixtures/oracle/k1/b061-vectors.ndjson via k1r4-laneC-it9-emitter.c)"
+  }
+]

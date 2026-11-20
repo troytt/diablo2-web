@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FD11C30",
+    "name": "AI_WalkToLeashDistanceFromUnit_6FD11C30",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_WalkToLeashDistanceFromUnit_6FD11C30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD11C30 (339B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD12040",
+    "name": "AI_ScheduleAiThinkTimerIfSooner_6FD12040",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_ScheduleAiThinkTimerIfSooner_6FD12040_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD12040 (115B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD12420",
+    "name": "AI_CastSkillWithModeRandomScatter_6FD12420",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_CastSkillWithModeRandomScatter_6FD12420_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD12420 (281B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD126B0",
+    "name": "AI_CircleStrafeTarget_6FD126B0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_CircleStrafeTarget_6FD126B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD126B0 (150B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD12750",
+    "name": "AI_RunWanderAroundUnit_6FD12750",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_RunWanderAroundUnit_6FD12750_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD12750 (274B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD12870",
+    "name": "AI_WalkWanderAroundUnitOrSelf_6FD12870",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_WalkWanderAroundUnitOrSelf_6FD12870_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b10.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD129B0",
+    "name": "AI_WalkWanderAroundSelf_6FD129B0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_WalkWanderAroundSelf_6FD129B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b10.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 summon/curse replays (p52-amazon-valkyrie F1500/1500, p52-necromancer-poison-golem F1800/1800, p52-necromancer-curses F2000/2000) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD12C10",
+    "name": "AI_RunFleeFromUnit_6FD12C10",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_RunFleeFromUnit_6FD12C10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD12C10 (367B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD13150",
+    "name": "AI_FindTargetOrUnstickOverlap_6FD13150",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "AI_FindTargetOrUnstickOverlap_6FD13150_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD13150 (197B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD13410",
+    "name": "NET_SendPacket57MonsterUniqueEnchants_6FD13410",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "NET_SendPacket57MonsterUniqueEnchants_6FD13410_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD13410 (173B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD134C0",
+    "name": "NET_SendMonsterSkillCastPacket4COr4D_6FD134C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "NET_SendMonsterSkillCastPacket4COr4D_6FD134C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b10.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-paladin-merc-aura F1700/1700) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD14260",
+    "name": "OBJECTS_RollScaledByte19C_6FD14260",
+    "kernFile": "src/d2kern-113c/game/k2-w5b10-113c.ts",
+    "tsSymbol": "OBJECTS_RollScaledByte19C_6FD14260_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD14260 (111B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  }
+]

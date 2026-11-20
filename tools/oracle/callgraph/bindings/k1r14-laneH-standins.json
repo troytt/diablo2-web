@@ -1,0 +1,20 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FCD07B0",
+    "name": "UNITS_GetOctileDistanceToCoordinates",
+    "kernFile": "src/d2kern-113c/game/town-npc-ai-113c.ts",
+    "tsSymbol": "UNITS_GetOctileDistanceToCoordinates113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEB690",
+    "name": "C2S_CheckCoordDeltaExceeded",
+    "kernFile": "src/d2kern-113c/game/c2s-packet-113c.ts",
+    "tsSymbol": "C2S_CheckCoordDeltaExceeded113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence); Runtime-executed in dllExecuted\u2229tsExecuted across K1/K2 5-scenario replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  }
+]

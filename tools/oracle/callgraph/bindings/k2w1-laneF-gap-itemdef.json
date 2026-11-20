@@ -1,0 +1,254 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC210D0",
+    "name": "DATATBLS_GetItemStatCostRecordFast",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "DATATBLS_GetItemStatCostRecordFast113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC62EC0",
+    "name": "SKILLS_CallbackStaticField",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SKILLS_CallbackStaticField113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC630D0",
+    "name": "SrvDoFunc_020_StaticField",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SrvDoFunc_020_StaticField113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6E230",
+    "name": "CURSES_ScaleImmuneMonsterResistPenalty",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "CURSES_ScaleImmuneMonsterResistPenalty113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; Diff-verified 1:1 in dll∩ts across full-horizon strict zero-divergence K3 summon/curse replays (p52-amazon-valkyrie F1500/1500, p52-necromancer-poison-golem F1800/1800, p52-necromancer-curses F2000/2000) in tests/oracle/k3/replay-k3-p52-suite.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC94C30",
+    "name": "MONSTER_StartModeRun",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "MONSTER_StartModeRun113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; runtime-executed in dllExecuted∩tsExecuted (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC97820",
+    "name": "PLAYER_Event0C_ExpireTimedStats",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "PLAYER_Event0C_ExpireTimedStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC9A4C0",
+    "name": "UNIT_QueueSkillCastNotify99",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "UNIT_QueueSkillCastNotify99_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAD210",
+    "name": "NET_SendUnitTargetedSkillAction",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "NET_SendUnitTargetedSkillAction113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBA1A0",
+    "name": "AURAS_ApplyRadialStatBuffCallback",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "AURAS_ApplyRadialStatBuffCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBA8D0",
+    "name": "SrvDoFunc_065_AuraRadialStatBuff",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SrvDoFunc_065_AuraRadialStatBuff113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBE290",
+    "name": "ITEMS_RegisterItemEventCallback",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_RegisterItemEventCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBE610",
+    "name": "AURA_CheckCircleIntersectsRoom",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "AURA_CheckCircleIntersectsRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBEFE0",
+    "name": "SUNITDMG_AddElementalDamageToStruct",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SUNITDMG_AddElementalDamageToStruct113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC00B0",
+    "name": "STATES_CreateOrUpdateAuraStatList",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "STATES_CreateOrUpdateAuraStatList113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC0370",
+    "name": "AURA_CheckUnitMatchesFilterFlags",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "AURA_CheckUnitMatchesFilterFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC0C70",
+    "name": "AURA_ForEachUnitInRadius",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "AURA_ForEachUnitInRadius113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; Wave 19 1:1 PE32 indirect-call audit (caller_callback; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC1D10",
+    "name": "SKILLS_ActivateAuraSkillOnUnit",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SKILLS_ActivateAuraSkillOnUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC1E80",
+    "name": "SKILLS_Event08_AuraPulseTick",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SKILLS_Event08_AuraPulseTick113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCCF710",
+    "name": "MONSTER_SetLastHitModeField54",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "MONSTER_SetLastHitModeField54_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll ∩ ts replay-executed with 0 strict divergence across (p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF1AA0",
+    "name": "ITEMS_GetScrollOrTomeSkillId",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_GetScrollOrTomeSkillId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF43E0",
+    "name": "ITEMS_UpdateScrollOrTomeSkillCharges",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_UpdateScrollOrTomeSkillCharges113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF4630",
+    "name": "ITEMS_OnUnequipScrollOrTome",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_OnUnequipScrollOrTome113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF4670",
+    "name": "ITEMS_OnEquipScrollOrTome",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_OnEquipScrollOrTome113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF46B0",
+    "name": "ITEMS_DeactivateEquippedItemStats",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_DeactivateEquippedItemStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCF47C0",
+    "name": "ITEMS_ActivateEquippedItemStats",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "ITEMS_ActivateEquippedItemStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD00570",
+    "name": "SUNIT_AreUnitsInSamePartyOrAligned",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SUNIT_AreUnitsInSamePartyOrAligned113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K3 golden replay diff-verified (dll∩ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD114F0",
+    "name": "SKILLS_CastTriggeredSkillCore",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SKILLS_CastTriggeredSkillCore113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD117E0",
+    "name": "SKILLS_TriggerSkillOnTarget",
+    "kernFile": "src/d2kern-113c/game/k2-gap-itemdef-113c.ts",
+    "tsSymbol": "SKILLS_TriggerSkillOnTarget113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneF-gap-itemdef.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  }
+]

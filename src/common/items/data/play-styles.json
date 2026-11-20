@@ -1,0 +1,9 @@
+{
+  "defaultStyle": { "ama": "ranged", "sor": "caster", "nec": "summoner", "pal": "melee", "bar": "melee", "dru": "caster", "ass": "melee" },
+  "rangedTabs": ["Bow and Crossbow Skills", "Javelin and Spear Skills"],
+  "javelinTab": "Javelin and Spear Skills",
+  "summonTabPrefix": "Summon",
+  "elementNames": { "fire": "fire", "cold": "cold", "ltng": "lightning", "pois": "poison", "mag": "magic" },
+  "mainElementShare": 0.25,
+  "mercWeaponTypes": ["pole", "spea"]
+}

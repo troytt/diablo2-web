@@ -1,0 +1,398 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC222D0",
+    "name": "STORM_TSHashTableGrowAndRehash_6FC222D0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "STORM_TSHashTableGrowAndRehash_6FC222D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2C400",
+    "name": "SKILLS_SrvDo001_JumpOrLeapMissile_6FC2C400",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo001_JumpOrLeapMissile_6FC2C400_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2CA20",
+    "name": "SKILLS_SrvDo004_NihlathakCorpseExplosion_6FC2CA20",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo004_NihlathakCorpseExplosion_6FC2CA20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2D370",
+    "name": "SKILLS_SrvDo005_PerpendicularLineMissiles_6FC2D370",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo005_PerpendicularLineMissiles_6FC2D370_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2D5D0",
+    "name": "SKILLS_SpawnChargedBoltFanMissiles_6FC2D5D0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SpawnChargedBoltFanMissiles_6FC2D5D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2D680",
+    "name": "SKILLS_SrvDo006_SpawnChargedSkillMissile_6FC2D680",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo006_SpawnChargedSkillMissile_6FC2D680_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2D850",
+    "name": "SKILLS_MorphMonsterAndApplyState142_6FC2D850",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_MorphMonsterAndApplyState142_6FC2D850_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2DD50",
+    "name": "SKILLS_SrvDo009_CorpseConsumeAuraBuff_6FC2DD50",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo009_CorpseConsumeAuraBuff_6FC2DD50_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC38730",
+    "name": "AI_Thinker_PutridDefiler_6FC38730",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "AI_Thinker_PutridDefiler_6FC38730_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC38A90",
+    "name": "AI_Thinker_MeleeRangedApproachStall_6FC38A90",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "AI_Thinker_MeleeRangedApproachStall_6FC38A90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC3BDF0",
+    "name": "AI_HandleSpecialQuestNpcCmd3_6FC3BDF0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "AI_HandleSpecialQuestNpcCmd3_6FC3BDF0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; Wave 20 1:1 PE32 indirect-call audit (static_table; tools/oracle/callgraph/indirect-audit-batchB.json) verified in tests/oracle/k2/k2-disasm-verified-wave20-indB.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC473C0",
+    "name": "SKILLS_SrvDo017_FeralRageOrMaulHit_6FC473C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo017_FeralRageOrMaulHit_6FC473C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47600",
+    "name": "SKILLS_SrvDo018_FindPotion_6FC47600",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo018_FindPotion_6FC47600_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47820",
+    "name": "SKILLS_ExecuteRadiusMeleeHitAndClearStun_6FC47820",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_ExecuteRadiusMeleeHitAndClearStun_6FC47820_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47A10",
+    "name": "SKILLS_ExecuteTargetedMeleeSkillHit_6FC47A10",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_ExecuteTargetedMeleeSkillHit_6FC47A10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47F30",
+    "name": "SKILLS_SrvSt03_WhirlwindStart_6FC47F30",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt03_WhirlwindStart_6FC47F30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC48600",
+    "name": "SKILLS_SrvSt06_ChargeStart_6FC48600",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt06_ChargeStart_6FC48600_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC489A0",
+    "name": "SKILLS_SrvDo021_MeleeHitWithTimedAuraState_6FC489A0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo021_MeleeHitWithTimedAuraState_6FC489A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4AC60",
+    "name": "CLIENTS_SendHandshakeAndSetInitState1_6FC4AC60",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "CLIENTS_SendHandshakeAndSetInitState1_6FC4AC60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4C060",
+    "name": "CLIENTS_CollectAndFlushNearbyPlayerPositions_6FC4C060",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "CLIENTS_CollectAndFlushNearbyPlayerPositions_6FC4C060_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57C90",
+    "name": "PLAYER_SendInventoryItemsSyncPackets_6FC57C90",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "PLAYER_SendInventoryItemsSyncPackets_6FC57C90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-amazon-valkyrie F1500/1500) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC583A0",
+    "name": "PLAYER_ApplyDeathGoldAndExpPenalties_6FC583A0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "PLAYER_ApplyDeathGoldAndExpPenalties_6FC583A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC588C0",
+    "name": "PLAYER_CanManipulateItemDuringInteractOrTrade_6FC588C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "PLAYER_CanManipulateItemDuringInteractOrTrade_6FC588C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59910",
+    "name": "MISSILES_RedeemCorpseWithSkill124_6FC59910",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_RedeemCorpseWithSkill124_6FC59910_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5B070",
+    "name": "MISSILES_RetargetGuidedProjectileInRadius_6FC5B070",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_RetargetGuidedProjectileInRadius_6FC5B070_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C3B0",
+    "name": "MISSILES_SrvHit_SpawnBurstSubMissiles_6FC5C3B0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_SrvHit_SpawnBurstSubMissiles_6FC5C3B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C5B0",
+    "name": "MISSILES_SrvHit_SpawnScaledBurstSubMissiles_6FC5C5B0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_SrvHit_SpawnScaledBurstSubMissiles_6FC5C5B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5D020",
+    "name": "MISSILES_SrvHit_ChainBounceProjectile_6FC5D020",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_SrvHit_ChainBounceProjectile_6FC5D020_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-sorceress-elemental F1800/1800) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5E740",
+    "name": "MISSILES_SrvHit_AttractMonsterToTargetGuid_6FC5E740",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_SrvHit_AttractMonsterToTargetGuid_6FC5E740_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5EAE0",
+    "name": "MISSILES_SrvHit_TauntMonsterIfLevelCheck_6FC5EAE0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "MISSILES_SrvHit_TauntMonsterIfLevelCheck_6FC5EAE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC62AD0",
+    "name": "SKILLS_CanCastAtNonTownTargetCoords_6FC62AD0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_CanCastAtNonTownTargetCoords_6FC62AD0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC62B40",
+    "name": "SKILLS_ApplyDirectSkillElemDamageAndIcon_6FC62B40",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_ApplyDirectSkillElemDamageAndIcon_6FC62B40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC63B60",
+    "name": "SKILLS_SrvDo031_ChargedBoltProjectiles_6FC63B60",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo031_ChargedBoltProjectiles_6FC63B60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC64A60",
+    "name": "STATES_OnTransformStateRemoved_6FC64A60",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "STATES_OnTransformStateRemoved_6FC64A60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC64ED0",
+    "name": "SKILLS_SrvDo035_MeleeSkillHitWithWeaponFill_6FC64ED0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo035_MeleeSkillHitWithWeaponFill_6FC64ED0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC65000",
+    "name": "SKILLS_SrvDo036_MeleeHitWithPhysScaleAndLeech_6FC65000",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo036_MeleeHitWithPhysScaleAndLeech_6FC65000_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC651B0",
+    "name": "SKILLS_ApplySkillDamageWithElemDuration_6FC651B0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_ApplySkillDamageWithElemDuration_6FC651B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6C4F0",
+    "name": "SKILLS_SrvSt30_MultiHitMeleeStart_6FC6C4F0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt30_MultiHitMeleeStart_6FC6C4F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6C600",
+    "name": "SKILLS_SrvSt31_CappedMultiHitMeleeStart_6FC6C600",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt31_CappedMultiHitMeleeStart_6FC6C600_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6C720",
+    "name": "SKILLS_SrvDo054_MeleeHitZeroBonus_6FC6C720",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo054_MeleeHitZeroBonus_6FC6C720_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6C840",
+    "name": "SKILLS_SrvSt32_EnsureWeaponOrQuiverOrStartCast_6FC6C840",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt32_EnsureWeaponOrQuiverOrStartCast_6FC6C840_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-paladin-merc-aura F1700/1700) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6CB00",
+    "name": "SKILLS_SrvDo055_MeleeHitWithMonsterElemStatsAndEvents_6FC6CB00",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo055_MeleeHitWithMonsterElemStatsAndEvents_6FC6CB00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6D270",
+    "name": "SKILLS_SrvDo058_SpawnWeaponClassProjectileWithDmgPct_6FC6D270",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo058_SpawnWeaponClassProjectileWithDmgPct_6FC6D270_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6F7D0",
+    "name": "SKILLS_SrvDo064_NonTownMeleeHitWithElemConversion_6FC6F7D0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo064_NonTownMeleeHitWithElemConversion_6FC6F7D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave5.test.ts"
+  }
+]

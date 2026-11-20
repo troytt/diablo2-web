@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>useitem verify</title>
+<style>body{margin:0;background:#111;color:#ccc;font:12px monospace} canvas{display:block;margin:2px;float:left} .l{float:left;width:404px}</style></head>
+<body>
+<script type="module">
+import { WorldPanelsHud } from '/src/client/ui/world-panels.ts'
+import { D2FontRenderer } from '/src/client/ui/font.ts'
+const loadImg = (src) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error('load ' + src)); i.src = src })
+const font = new D2FontRenderer()
+await font.load('/ui/fonts')
+const [upgrade, horadric, btn, atlas] = await Promise.all(['/ui/upgrade.png', '/ui/horadricback.png', '/ui/buysellbtn.png', '/ui/items-atlas.png'].map(loadImg))
+const results = []
+const lang = new URLSearchParams(location.search).get('lang') ?? 'ENG'
+for (const panel of ['imbue', 'add_sockets', 'personalize', 'orifice']) {
+  const wrap = document.createElement('div'); wrap.className = 'l'
+  const cv = document.createElement('canvas'); cv.width = 400; cv.height = 300
+  wrap.appendChild(cv); document.body.appendChild(wrap)
+  const ctx = cv.getContext('2d')
+  ctx.fillStyle = '#2a2418'; ctx.fillRect(0, 0, 400, 300)
+  const wp = new WorldPanelsHud()
+  wp.lang = lang
+  wp.activePanel = panel
+  const code = panel === 'orifice' ? 'hst' : 'ssd'
+  wp.questRewardItem = { id: '912', code, name: code, quality: 'normal', invWidth: 1, invHeight: code === 'hst' ? 4 : 3, invFile: code === 'hst' ? 'invhst' : 'invssd', identified: true, sockets: 0, stats: [], statsEn: [] }
+  wp.handleMouseMove(panel === 'orifice' ? 190 : 138, 240)
+  wp.renderActiveLeftPanel(ctx, panel, font, { upgradeBgImg: upgrade, horadricBgImg: horadric, buySellBtnImg: btn, itemsAtlasImg: atlas }, 800, 600)
+  const px = (x, y) => Array.from(ctx.getImageData(x, y, 1, 1).data)
+  results.push({ panel, inset: px(110, 100), outside: px(300, 150), btn0: px(138, 240), btn1: px(193, 240) })
+}
+window.__useitemResults = results
+window.__useitemReady = true
+</script></body></html>

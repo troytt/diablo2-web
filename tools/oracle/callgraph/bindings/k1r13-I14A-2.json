@@ -1,0 +1,182 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5F110",
+    "name": "DRLGMAZE_ReplaceMazeRoomWithPresetRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_ReplaceMazeRoomWithPresetRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5F220",
+    "name": "DRLGMAZE_BuildSpiderCavernRing",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_BuildSpiderCavernRing113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD602F0",
+    "name": "DRLGMAZE_BuildSquarePerimeterRooms",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_BuildSquarePerimeterRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD60BE0",
+    "name": "DRLGMAZE_PlaceAct5IceCavesPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct5IceCavesPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD60CA0",
+    "name": "DRLGMAZE_FinalizeAct5HellBarrow",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_FinalizeAct5HellBarrow113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD60EB0",
+    "name": "DRLGMAZE_FinalizeAct1JailConnect",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_FinalizeAct1JailConnect113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61170",
+    "name": "DRLGMAZE_PlaceAct5GlacialPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct5GlacialPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD611E0",
+    "name": "DRLGMAZE_PlaceAct5BaalKeepPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct5BaalKeepPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61280",
+    "name": "DRLGMAZE_PlaceAct3DurancePresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct3DurancePresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61320",
+    "name": "DRLGMAZE_PlaceAct3SewersPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct3SewersPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61380",
+    "name": "DRLGMAZE_PlaceAct3FlayerDungeonPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct3FlayerDungeonPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD613E0",
+    "name": "DRLGMAZE_PlaceAct2PalaceCellarPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct2PalaceCellarPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61430",
+    "name": "DRLGMAZE_PlaceAct2MaggotLairPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct2MaggotLairPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD614C0",
+    "name": "DRLGMAZE_PlaceAct2TombPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct2TombPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD616B0",
+    "name": "DRLGMAZE_PlaceAct2SewersPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct2SewersPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61940",
+    "name": "DRLGMAZE_PlaceAct1CatacombsPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct1CatacombsPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD619B0",
+    "name": "DRLGMAZE_PlaceAct1JailPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct1JailPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61A70",
+    "name": "DRLGMAZE_PlaceAct1CryptsPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct1CryptsPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61B30",
+    "name": "DRLGMAZE_PlaceAct1CavesPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_PlaceAct1CavesPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD61BF0",
+    "name": "DRLGMAZE_GenerateMazeLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_GenerateMazeLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I14A-2.test.ts (real-DLL vectors via k1r13-laneA-it14-emitter.c -> i14a-2-vectors.ndjson)"
+  }
+]

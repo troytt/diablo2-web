@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC533D0",
+    "name": "OBJECTS_InitFn05_InitPortalDestLevel_6FC533D0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn05_InitPortalDestLevel_6FC533D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54020",
+    "name": "QUESTS_CheckLevelTransitionBlocked_6FC54020",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_CheckLevelTransitionBlocked_6FC54020_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54130",
+    "name": "QUESTS_FindFreeSubtileInRoomRings_6FC54130",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_FindFreeSubtileInRoomRings_6FC54130_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC548A0",
+    "name": "QUESTS_AllocAndInitGameQuests_6FC548A0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_AllocAndInitGameQuests_6FC548A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; Wave 19 1:1 PE32 indirect-call audit (static_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC554F0",
+    "name": "QUESTS_SendPlayerQuestAlert5D_6FC554F0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_SendPlayerQuestAlert5D_6FC554F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; Wave 19 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55640",
+    "name": "QUESTS_SendQuestLogPackets50And52_6FC55640",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_SendQuestLogPackets50And52_6FC55640_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; Wave 19 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55890",
+    "name": "QUESTS_AttachUnitToQuest_6FC55890",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_AttachUnitToQuest_6FC55890_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FC55890) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55910",
+    "name": "QUESTS_TriggerNpcInteractAndSendPacket27_6FC55910",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_TriggerNpcInteractAndSendPacket27_6FC55910_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55B60",
+    "name": "QUESTS_SendNpcIntroPacket91_6FC55B60",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_SendNpcIntroPacket91_6FC55B60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC55C20",
+    "name": "QUESTS_ApplyActNpcIntroFlags_6FC55C20",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "QUESTS_ApplyActNpcIntroFlags_6FC55C20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59080",
+    "name": "MISSILES_ApplyColdLengthToDamage_6FC59080",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_ApplyColdLengthToDamage_6FC59080_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC597C0",
+    "name": "MISSILES_InitGuidedOrLinearPath_6FC597C0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_InitGuidedOrLinearPath_6FC597C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59CE0",
+    "name": "MISSILES_ConvertPhysToElemDamageByCalc_6FC59CE0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_ConvertPhysToElemDamageByCalc_6FC59CE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59DA0",
+    "name": "MISSILES_SrvDmg05_DispatchSkillSrvDo_6FC59DA0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg05_DispatchSkillSrvDo_6FC59DA0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59E30",
+    "name": "MISSILES_SrvDmg14_HolyBoltHeal_6FC59E30",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg14_HolyBoltHeal_6FC59E30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59FD0",
+    "name": "MISSILES_SrvDmg15_HolyBoltHealOrUndeadFilter_6FC59FD0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg15_HolyBoltHealOrUndeadFilter_6FC59FD0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5A280",
+    "name": "MISSILES_PopulateDamageByEType_6FC5A280",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_PopulateDamageByEType_6FC5A280_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-sorceress-elemental F1800/1800) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5ABD0",
+    "name": "MISSILES_SrvDmg09_ApplySkillAuraState_6FC5ABD0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg09_ApplySkillAuraState_6FC5ABD0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5AD70",
+    "name": "MISSILES_TargetFilter_PlayersAndAlignedMonsters_6FC5AD70",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_TargetFilter_PlayersAndAlignedMonsters_6FC5AD70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5ADD0",
+    "name": "MISSILES_TargetFilter_MonstersOnly_6FC5ADD0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_TargetFilter_MonstersOnly_6FC5ADD0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5BED0",
+    "name": "MISSILES_SrvDmg01_SpawnRandomOffsetSubMissile_6FC5BED0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg01_SpawnRandomOffsetSubMissile_6FC5BED0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C030",
+    "name": "MISSILES_SrvDmg02_PlagueJavelin8WaySubMissiles_6FC5C030",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg02_PlagueJavelin8WaySubMissiles_6FC5C030_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C160",
+    "name": "MISSILES_SrvDmg03_SpawnSubMissiles123_6FC5C160",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg03_SpawnSubMissiles123_6FC5C160_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C260",
+    "name": "MISSILES_SrvDmg04_SpawnSubMissileAlongPath_6FC5C260",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg04_SpawnSubMissileAlongPath_6FC5C260_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C700",
+    "name": "MISSILES_SrvDmg12_Nova64RingSubMissiles_6FC5C700",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg12_Nova64RingSubMissiles_6FC5C700_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C850",
+    "name": "MISSILES_SrvDmg12B_Nova64RingOnExpire_6FC5C850",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg12B_Nova64RingOnExpire_6FC5C850_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-sorceress-elemental F1800/1800) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5C990",
+    "name": "MISSILES_SrvDmg13_PoisonExplosionCloud_6FC5C990",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg13_PoisonExplosionCloud_6FC5C990_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5CB00",
+    "name": "MISSILES_SpawnRadial8SubMissiles_6FC5CB00",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SpawnRadial8SubMissiles_6FC5CB00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5CC30",
+    "name": "MISSILES_AuraCallback_SpawnSubMissileOnTarget_6FC5CC30",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_AuraCallback_SpawnSubMissileOnTarget_6FC5CC30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5CD00",
+    "name": "MISSILES_AuraCallback_SpawnSubMissileStrictCount_6FC5CD00",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_AuraCallback_SpawnSubMissileStrictCount_6FC5CD00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5CDD0",
+    "name": "MISSILES_SrvDmg10_SpawnSubMissileAtSelfPos_6FC5CDD0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg10_SpawnSubMissileAtSelfPos_6FC5CDD0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5CEC0",
+    "name": "MISSILES_SpawnRing18SubMissiles_6FC5CEC0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SpawnRing18SubMissiles_6FC5CEC0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5D1E0",
+    "name": "MISSILES_SpawnRandomWalkableSubMissileOnInterval_6FC5D1E0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SpawnRandomWalkableSubMissileOnInterval_6FC5D1E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5D320",
+    "name": "MISSILES_SpawnTrailingSubMissileIfMoved_6FC5D320",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SpawnTrailingSubMissileIfMoved_6FC5D320_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5D450",
+    "name": "MISSILES_SpawnCircularAreaSubMissiles_6FC5D450",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SpawnCircularAreaSubMissiles_6FC5D450_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5D680",
+    "name": "MISSILES_SpawnRing16WithOptionalInnerRingSubMissiles_6FC5D680",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SpawnRing16WithOptionalInnerRingSubMissiles_6FC5D680_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5E8A0",
+    "name": "MISSILES_SrvDmg29_ApplySkillStateAndAuraStatsCalc1_6FC5E8A0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg29_ApplySkillStateAndAuraStatsCalc1_6FC5E8A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5EC10",
+    "name": "MISSILES_SrvDmg30_ApplySkillStateAndAuraStatsCalc4_6FC5EC10",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg30_ApplySkillStateAndAuraStatsCalc4_6FC5EC10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5F120",
+    "name": "MISSILES_SrvDmg35_SpawnSubMissilesAndCollide_6FC5F120",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg35_SpawnSubMissilesAndCollide_6FC5F120_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5F220",
+    "name": "MISSILES_SrvDmg36_SpawnSubMissilesAndCollideRet3_6FC5F220",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDmg36_SpawnSubMissilesAndCollideRet3_6FC5F220_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5F890",
+    "name": "MISSILES_SrvDo12_RandomWalkStepProjectile_6FC5F890",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDo12_RandomWalkStepProjectile_6FC5F890_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5F9F0",
+    "name": "MISSILES_SrvDo13_SpawnOppositeSubMissilesAlongStep_6FC5F9F0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDo13_SpawnOppositeSubMissilesAlongStep_6FC5F9F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5FB40",
+    "name": "MISSILES_SrvDo15_FollowOwnerAndSpawnRandomSubMissile_6FC5FB40",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDo15_FollowOwnerAndSpawnRandomSubMissile_6FC5FB40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5FD30",
+    "name": "MISSILES_SrvDo16_RedemptionManaHealOnFrame_6FC5FD30",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDo16_RedemptionManaHealOnFrame_6FC5FD30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5FED0",
+    "name": "MISSILES_SrvDo17_RedemptionLifeHealOnFrame_6FC5FED0",
+    "kernFile": "src/d2kern-113c/game/k2-w3b3-113c.ts",
+    "tsSymbol": "MISSILES_SrvDo17_RedemptionLifeHealOnFrame_6FC5FED0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w3b3.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  }
+]

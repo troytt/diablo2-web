@@ -1,0 +1,15 @@
+{
+  "scenario": "a1-bloodmoor-melee",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1800,
+  "strictHorizon": 1800,
+  "posHorizon": 1800,
+  "matchedKernelFrames": 1798,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "aeacbda7b3c56c8bd9b0d66eeb87dc507a0be24b5a81b81d68548a5206dd641d",
+  "snapshotSha256": "c37385ef04e1331788a42fdd3afca5a6caf1179a95dc37678cb1840da16fa607"
+}

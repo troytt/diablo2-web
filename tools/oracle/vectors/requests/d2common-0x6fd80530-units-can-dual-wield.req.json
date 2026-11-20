@@ -1,0 +1,105 @@
+{
+  "fn": "UNITS_CanDualWield",
+  "module": "D2Common",
+  "va": "0x6FD80530",
+  "size": 87,
+  "conv": {
+    "stack": 1,
+    "regs": [],
+    "calleePops": 4,
+    "returns": "eax"
+  },
+  "tables": "synthetic",
+  "fill": "rand:0x8053",
+  "images": {
+    "unit": { "size": 244 },
+    "dataTables": { "size": 2704 }
+  },
+  "globals": [
+    { "va": "0x6FDE9E1C", "len": 4, "u32": "&dataTables" }
+  ],
+  "vectors": [
+    {
+      "label": "null-unit",
+      "stack": [0]
+    },
+    {
+      "label": "unmapped-unit-faults",
+      "stack": ["0x00000004"]
+    },
+    {
+      "label": "player-base",
+      "init": [
+        { "img": "dataTables", "off": "0xA80", "i32": 734 },
+        { "img": "unit", "off": "0x00", "u32": 0 },
+        { "img": "unit", "off": "0x04", "i32": 4 }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "mon-in-bounds-base",
+      "init": [
+        { "img": "dataTables", "off": "0xA80", "i32": 500 },
+        { "img": "unit", "off": "0x00", "u32": 1 },
+        { "img": "unit", "off": "0x04", "i32": 417 }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "mon-truncated-table-417-rejected",
+      "init": [
+        { "img": "dataTables", "off": "0xA80", "i32": 417 },
+        { "img": "unit", "off": "0x00", "u32": 1 },
+        { "img": "unit", "off": "0x04", "i32": 417 }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "mon-truncated-table-418-rejected",
+      "init": [
+        { "img": "dataTables", "off": "0xA80", "i32": 418 },
+        { "img": "unit", "off": "0x00", "u32": 1 },
+        { "img": "unit", "off": "0x04", "i32": 418 }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "mon-exact-bound-418-accepted",
+      "init": [
+        { "img": "dataTables", "off": "0xA80", "i32": 419 },
+        { "img": "unit", "off": "0x00", "u32": 1 },
+        { "img": "unit", "off": "0x04", "i32": 418 }
+      ],
+      "stack": ["&unit"]
+    },
+    {
+      "label": "other-unit-type",
+      "init": [
+        { "img": "dataTables", "off": "0xA80", "i32": 734 },
+        { "img": "unit", "off": "0x00", "u32": 2 },
+        { "img": "unit", "off": "0x04", "i32": 4 }
+      ],
+      "stack": ["&unit"]
+    }
+  ],
+  "sweeps": [
+    {
+      "base": "player-base",
+      "labelPrefix": "player-class",
+      "field": { "img": "unit", "off": "0x04", "type": "i32" },
+      "values": [-1, 0, 1, 2, 3, 4, 5, 6, 7, 417]
+    },
+    {
+      "base": "mon-in-bounds-base",
+      "labelPrefix": "mon-class",
+      "field": { "img": "unit", "off": "0x04", "type": "i32" },
+      "values": [-10, -1, 0, 4, 6, 416, 417, 418, 419, 499, 500, 600]
+    },
+    {
+      "base": "other-unit-type",
+      "labelPrefix": "non-char-type",
+      "field": { "img": "unit", "off": "0x00", "type": "i32" },
+      "values": [2, 3, 4, 5, 6, -1]
+    }
+  ]
+}

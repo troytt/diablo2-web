@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5E430",
+    "name": "DRLG_ReplacePresetRoom",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_ReplacePresetRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5E700",
+    "name": "DRLG_RandomizePresetRooms",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_RandomizePresetRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD63FD0",
+    "name": "DRLG_ApplyOutdoorVertexFlags",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_ApplyOutdoorVertexFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD644C0",
+    "name": "DRLG_LinkOutdoorLevels",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_LinkOutdoorLevels113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD645A0",
+    "name": "DRLG_GetLevelBorderStyle",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_GetLevelBorderStyle113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64630",
+    "name": "DRLG_CheckAct1LinkOverlap",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_CheckAct1LinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD646C0",
+    "name": "DRLG_CheckAct1WildLinkOverlap",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_CheckAct1WildLinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64750",
+    "name": "DRLG_CheckAct2LinkOverlap",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_CheckAct2LinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD647E0",
+    "name": "DRLG_CheckAct4LinkOverlap",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_CheckAct4LinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD64870",
+    "name": "DRLG_CheckMonasteryLinkOverlap",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DRLG_CheckMonasteryLinkOverlap113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A270",
+    "name": "DATATBLS_GetDirectionOffset",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetDirectionOffset113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A2B0",
+    "name": "DATATBLS_NormalizeDirection",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_NormalizeDirection113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A3C0",
+    "name": "DATATBLS_UnusedStub10182",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_UnusedStub10182_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A520",
+    "name": "MONSTERS_IsDead",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "MONSTERS_IsDead113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A550",
+    "name": "MONSTERS_CheckMonStatsFlagBit6",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "MONSTERS_CheckMonStatsFlagBit6_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A5B0",
+    "name": "MONSTERS_IsDemonOrUndead",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "MONSTERS_IsDemonOrUndead113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b018-vectors.ndjson replayed in tests/oracle/k1/laneB-B018-datatbls.test.ts"
+  }
+]

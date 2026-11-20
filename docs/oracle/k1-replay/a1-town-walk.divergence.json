@@ -1,0 +1,15 @@
+{
+  "scenario": "a1-town-walk",
+  "bootFrame": 2,
+  "lastGoldenFrame": 750,
+  "strictHorizon": 750,
+  "posHorizon": 750,
+  "matchedKernelFrames": 748,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "8980c9909cf0d5ce16e33de6d13175b36b98cf2d897f72fe4c18670471ce10d5",
+  "snapshotSha256": "05b02aa8da7a82d1b6dbc5963254b91af8ceb0048b2be82fce7b3e0fbbc56c4b"
+}

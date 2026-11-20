@@ -1,0 +1,605 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC3EB20",
+    "name": "AIGENERAL_ExpireMinionListsInAct",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "AIGENERAL_ExpireMinionListsInAct113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC95350",
+    "name": "MONSTER_SetDeathPathAndAnim",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "MONSTER_SetDeathPathAndAnim113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC971D0",
+    "name": "MONSTER_CheckSandLeaperMidAir",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "MONSTER_CheckSandLeaperMidAir113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC977F0",
+    "name": "MONSTER_ExecuteEventsWrapper",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "MONSTER_ExecuteEventsWrapper113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; runtime-executed in dllExecuted\u2229tsExecuted (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC978A0",
+    "name": "PLAYER_SnapshotHandSkillsToStruct",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_SnapshotHandSkillsToStruct113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC97B20",
+    "name": "PLAYER_AdvanceSkillModeFrame",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_AdvanceSkillModeFrame113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC981C0",
+    "name": "PLAYER_StartBlockMode",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_StartBlockMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98760",
+    "name": "PLAYER_ScheduleAttackActionFrameEvents",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_ScheduleAttackActionFrameEvents113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98A90",
+    "name": "PLAYER_StartModeCast",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_StartModeCast113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98DD0",
+    "name": "PLAYER_StartModeSkill",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_StartModeSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC99100",
+    "name": "PLAYER_ScheduleSkillActionFrameEvents",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_ScheduleSkillActionFrameEvents113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC99170",
+    "name": "PLAYER_StartModeDispatch",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "PLAYER_StartModeDispatch113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC9AC50",
+    "name": "MONSTER_BroadcastEventSoundToClients",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "MONSTER_BroadcastEventSoundToClients113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; runtime-executed in dllExecuted\u2229tsExecuted (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBD160",
+    "name": "AI_DispatchTargetByAiFlag",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "AI_DispatchTargetByAiFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1-town-walk, a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD1820",
+    "name": "AI_FindTargetScanRoomCallback",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "AI_FindTargetScanRoomCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD1C90",
+    "name": "AI_FindNearestPlayerOrAlly",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "AI_FindNearestPlayerOrAlly113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEB950",
+    "name": "SUNITDMG_TriggerBlockEvents",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerBlockEvents113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCEBBB0",
+    "name": "SUNITDMG_ApplyArmorDurabilityAndGetHit",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyArmorDurabilityAndGetHit113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA540",
+    "name": "SUNITDMG_GetWeaponBlockChance_6FCFA540",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_GetWeaponBlockChance_6FCFA540_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA660",
+    "name": "SUNITDMG_SelectDeathOverlayFlag",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_SelectDeathOverlayFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA6D0",
+    "name": "SUNITDMG_RemoveCombatNode",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_RemoveCombatNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA7B0",
+    "name": "SUNITDMG_ExecuteSingleHit",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyCannotBeFrozenAndShrineImmunities_6FCFA7B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA890",
+    "name": "SUNITDMG_ApplyAttackerThornsToSelf",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyAttackerThornsToSelf113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA8C0",
+    "name": "SUNITDMG_AddDemonDamageBonus",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_AddDemonDamageBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA930",
+    "name": "SUNITDMG_ConsumeStaminaCost",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ConsumeStaminaCost113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA970",
+    "name": "SUNITDMG_ConsumeManaCost",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ConsumeManaCost113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFA9E0",
+    "name": "SUNITDMG_CheckMonTypeFlag",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_CheckMonTypeFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFAA40",
+    "name": "SUNITDMG_ApplyLevelDiffExpRatio_6FCFAA40",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyLevelDiffExpRatio_6FCFAA40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFAA90",
+    "name": "SUNITDMG_FindCombatDamageData",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_FindCombatDamageData113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFAB90",
+    "name": "SUNITDMG_PrependCombatNode",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_PrependCombatNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFAC10",
+    "name": "SUNITDMG_GetPvpOrPetDamageMultiplier",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_GetPvpOrPetDamageMultiplier113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFAD00",
+    "name": "SUNITDMG_ApplyElementalAbsorb",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyElementalAbsorb113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFAD70",
+    "name": "SUNITDMG_AddMonsterTypeDamageBonus",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_AddMonsterTypeDamageBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB030",
+    "name": "SUNITDMG_RollDodgeAvoidEvadeBlock",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_RollDodgeAvoidEvadeBlock113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB1F0",
+    "name": "SUNITDMG_ApplyArmorPenetrationAndFlatBonus",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyArmorPenetrationAndFlatBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB3C0",
+    "name": "SUNITDMG_GetEffectiveResistance",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_GetEffectiveResistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB570",
+    "name": "SUNITDMG_AddLeechedLifeToUnit",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_AddLeechedLifeToUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB5E0",
+    "name": "SUNITDMG_ResolveAttackerPlayer",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ResolveAttackerPlayer113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB6B0",
+    "name": "SUNITDMG_ClampManaBurnByMonsterSkill",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ClampManaBurnByMonsterSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB790",
+    "name": "SUNITDMG_RollPassiveWeaponBlockOrShieldBlock",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_RollPassiveWeaponBlockOrShieldBlock113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFB910",
+    "name": "SUNITDMG_TriggerGetHitStateAndMode",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerGetHitStateAndMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFBA40",
+    "name": "SUNITDMG_ApplyLifeManaSteal",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyLifeManaSteal113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFBD00",
+    "name": "SUNITDMG_ApplySingleChannelResistance",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplySingleChannelResistance113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFBED0",
+    "name": "SUNITDMG_RollDamageValue",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_RollDamageValue113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFC030",
+    "name": "SUNITDMG_GetTotalSkillDamageBonus",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_GetTotalSkillDamageBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFC0B0",
+    "name": "SUNITDMG_ApplyResistancesAndAbsorb",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyResistancesAndAbsorb113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFC530",
+    "name": "SUNITDMG_ComputeWeaponBaseDamage",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ComputeWeaponBaseDamage113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFC780",
+    "name": "SUNITDMG_ApplyColdChilledEffect",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyColdChilledEffect113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFC940",
+    "name": "SUNITDMG_ApplyBurnEffect_6FCFC940",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyBurnEffect_6FCFC940_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFCAB0",
+    "name": "SUNITDMG_ApplyPoisonEffect",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyPoisonEffect113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFCC20",
+    "name": "SUNITDMG_ApplyStunEffect",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyStunEffect113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFCD80",
+    "name": "SUNITDMG_RollElementalStatDamage",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_RollElementalStatDamage113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFCE70",
+    "name": "SUNITDMG_TriggerAttackerBlindOrFlee",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerAttackerBlindOrFlee113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFCF20",
+    "name": "SUNITDMG_ApplySideEffectsAndKill",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplySideEffectsAndKill113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFD450",
+    "name": "SUNITDMG_FillDamageValues",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_FillDamageValues113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFDAC0",
+    "name": "SUNITDMG_ApplyFreezeEffect",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyFreezeEffect113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFDDE0",
+    "name": "SUNITDMG_AllocCombat",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_AllocCombat113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFE0C0",
+    "name": "SUNITDMG_ApplyDamage",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyDamage113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFE5A0",
+    "name": "SUNITDMG_CalcMonsterExperience",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_RollMeleeToHitAndBlock_6FCFE5A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFE6D0",
+    "name": "SUNITDMG_AddPlayerExperienceAndCheckLevelUp",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_AddPlayerExperienceAndCheckLevelUp113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFE8F0",
+    "name": "SUNITDMG_ComputeExperienceGain",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ComputeExperienceGain113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCFE8F0 (261B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed 1:1 party XP collection/distribution (0x6FCBC070 + 0x6FCFAED0 + 0x59/256 bonus + float32 level split) wired from 0x6FCFEA00."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFEA00",
+    "name": "SUNITDMG_TriggerPostCombatEvents",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_TriggerPostCombatEvents113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFEBA0",
+    "name": "SUNITDMG_ApplyWeaponAndArmorDurabilityLoss",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ApplyWeaponAndArmorDurabilityLoss113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFED30",
+    "name": "SUNITDMG_ExecuteEvents",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_ExecuteEvents113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFEEE0",
+    "name": "SUNITDMG_DistributeExperience",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_DistributeExperience113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCFFA60",
+    "name": "SUNITDMG_GetPlayerClientClassId",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "SUNITDMG_GetPlayerClientClassId113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; 1:1 SparseMemory113c port in src/d2kern-113c/game/k2-real-s2c-combat-113c.ts verified against D2Game.dll disassembly and K2 t4+s2c replay; Wave 17 audit: fixed 0x6FCFFA60 to call D2GAME_PARTY_GetPartyIdForUnit (0x6FCBBEB0) and return 0xFFFF when unpartied/invalid; verified in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD13220",
+    "name": "AI_GeneralFindTargetOrThrottle",
+    "kernFile": "src/d2kern-113c/game/k2-real-s2c-combat-113c.ts",
+    "tsSymbol": "AI_GeneralFindTargetOrThrottle113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  }
+]

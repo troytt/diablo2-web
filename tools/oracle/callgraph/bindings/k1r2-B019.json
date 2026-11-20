@@ -1,0 +1,92 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD67C80",
+    "name": "DRLGOUTPLACE_CanStepMazeLinkNode",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLGOUTPLACE_CanStepMazeLinkNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (10 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD681E0",
+    "name": "CHAT_SetUsed",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "CHAT_SetUsed113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD681F0",
+    "name": "CHAT_GetUsed",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "CHAT_GetUsed113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (4 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A610",
+    "name": "MONSTER_CheckMonTypeFlag0x20",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "MONSTER_CheckMonTypeFlag0x20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (6 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A720",
+    "name": "MONSTER_GetMonStatsInteractBit",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "MONSTER_GetMonStatsInteractBit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (6 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A770",
+    "name": "DRLG_ResolveMonsterSubClassIdForRoom",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLG_ResolveMonsterSubClassIdForRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (11 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A990",
+    "name": "MONSTER_IsSarcophagusBaseAndZeroArg",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "MONSTER_IsSarcophagusBaseAndZeroArg113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (7 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6B880",
+    "name": "DATATBLS_GetCubemainTxtRecordCount",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DATATBLS_GetCubemainTxtRecordCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8D810",
+    "name": "DRLGGRID_Get3x3Neighborhood",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLGGRID_Get3x3Neighborhood113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (3 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8E230",
+    "name": "PATH_QuantizeDeltaIndex25",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "PATH_QuantizeDeltaIndex25_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B019-drlg-ver.test.ts (16 real-DLL vectors via k1r2-laneC-it4-emitter.c)"
+  }
+]

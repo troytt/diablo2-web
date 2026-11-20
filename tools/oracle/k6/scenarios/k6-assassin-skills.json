@@ -1,0 +1,436 @@
+{
+  "name": "k6-assassin-skills",
+  "description": "Assassin L72 dual-claw multi-tree scenario: allocates stats (0x3A) and all 30 Assassin skills (251..280 via 0x3B), summons Shadow Master, activates Burst of Speed/Venom/Blade Shield/Cloak of Shadows, casts Mind Blast/Fire Blast/Shock Web/Blade Sentinel, lays Wake of Fire/Lightning Sentry/Death Sentry traps, and charges Tiger Strike + Phoenix Strike into Dragon Claw finisher.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6/saves/k6-assassin-skills.d2s",
+  "difficulty": 0,
+  "frames": 390,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    350000000
+  ],
+  "oracleSetGold": [
+    2,
+    500000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "ktr",
+      5,
+      6,
+      40
+    ],
+    [
+      2,
+      "rin",
+      6,
+      6,
+      40
+    ],
+    [
+      2,
+      "amu",
+      2,
+      7,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 3,
+      "c2s": "3a0031",
+      "note": "+50 Strength"
+    },
+    {
+      "frame": 4,
+      "c2s": "3a0145",
+      "note": "+70 Energy"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a0231",
+      "note": "+50 Dexterity"
+    },
+    {
+      "frame": 6,
+      "c2s": "3a0345",
+      "note": "+70 Vitality"
+    },
+    {
+      "frame": 7,
+      "c2s": "3bfb00",
+      "note": "learn Assassin skill 251"
+    },
+    {
+      "frame": 8,
+      "c2s": "3bfc00",
+      "note": "learn Assassin skill 252"
+    },
+    {
+      "frame": 9,
+      "c2s": "3bfd00",
+      "note": "learn Assassin skill 253"
+    },
+    {
+      "frame": 10,
+      "c2s": "3bfe00",
+      "note": "learn Assassin skill 254"
+    },
+    {
+      "frame": 11,
+      "c2s": "3bff00",
+      "note": "learn Assassin skill 255"
+    },
+    {
+      "frame": 12,
+      "c2s": "3b0001",
+      "note": "learn Assassin skill 256"
+    },
+    {
+      "frame": 13,
+      "c2s": "3b0101",
+      "note": "learn Assassin skill 257"
+    },
+    {
+      "frame": 14,
+      "c2s": "3b0201",
+      "note": "learn Assassin skill 258"
+    },
+    {
+      "frame": 15,
+      "c2s": "3b0301",
+      "note": "learn Assassin skill 259"
+    },
+    {
+      "frame": 16,
+      "c2s": "3b0401",
+      "note": "learn Assassin skill 260"
+    },
+    {
+      "frame": 17,
+      "c2s": "3b0501",
+      "note": "learn Assassin skill 261"
+    },
+    {
+      "frame": 18,
+      "c2s": "3b0601",
+      "note": "learn Assassin skill 262"
+    },
+    {
+      "frame": 19,
+      "c2s": "3b0701",
+      "note": "learn Assassin skill 263"
+    },
+    {
+      "frame": 20,
+      "c2s": "3b0801",
+      "note": "learn Assassin skill 264"
+    },
+    {
+      "frame": 21,
+      "c2s": "3b0901",
+      "note": "learn Assassin skill 265"
+    },
+    {
+      "frame": 22,
+      "c2s": "3b0a01",
+      "note": "learn Assassin skill 266"
+    },
+    {
+      "frame": 23,
+      "c2s": "3b0b01",
+      "note": "learn Assassin skill 267"
+    },
+    {
+      "frame": 24,
+      "c2s": "3b0c01",
+      "note": "learn Assassin skill 268"
+    },
+    {
+      "frame": 25,
+      "c2s": "3b0d01",
+      "note": "learn Assassin skill 269"
+    },
+    {
+      "frame": 26,
+      "c2s": "3b0e01",
+      "note": "learn Assassin skill 270"
+    },
+    {
+      "frame": 27,
+      "c2s": "3b0f01",
+      "note": "learn Assassin skill 271"
+    },
+    {
+      "frame": 28,
+      "c2s": "3b1001",
+      "note": "learn Assassin skill 272"
+    },
+    {
+      "frame": 29,
+      "c2s": "3b1101",
+      "note": "learn Assassin skill 273"
+    },
+    {
+      "frame": 30,
+      "c2s": "3b1201",
+      "note": "learn Assassin skill 274"
+    },
+    {
+      "frame": 31,
+      "c2s": "3b1301",
+      "note": "learn Assassin skill 275"
+    },
+    {
+      "frame": 32,
+      "c2s": "3b1401",
+      "note": "learn Assassin skill 276"
+    },
+    {
+      "frame": 33,
+      "c2s": "3b1501",
+      "note": "learn Assassin skill 277"
+    },
+    {
+      "frame": 34,
+      "c2s": "3b1601",
+      "note": "learn Assassin skill 278"
+    },
+    {
+      "frame": 35,
+      "c2s": "3b1701",
+      "note": "learn Assassin skill 279"
+    },
+    {
+      "frame": 36,
+      "c2s": "3b1801",
+      "note": "learn Assassin skill 280"
+    },
+    {
+      "frame": 37,
+      "c2s": "3c02010000ffffffff",
+      "note": "select Burst of Speed"
+    },
+    {
+      "frame": 38,
+      "c2s": "0c15161e17",
+      "note": "cast Burst of Speed in town"
+    },
+    {
+      "frame": 50,
+      "c2s": "3c17010000ffffffff",
+      "note": "select Shadow Master"
+    },
+    {
+      "frame": 51,
+      "c2s": "0c12161b17",
+      "note": "summon Shadow Master"
+    },
+    {
+      "frame": 60,
+      "c2s": "030d161217",
+      "note": "run to (5645,5906)"
+    },
+    {
+      "frame": 80,
+      "c2s": "0314160617",
+      "note": "run to (5652,5894)"
+    },
+    {
+      "frame": 100,
+      "c2s": "032016fa16",
+      "note": "run to (5664,5882)"
+    },
+    {
+      "frame": 120,
+      "c2s": "032116f716",
+      "note": "run to (5665,5879)"
+    },
+    {
+      "frame": 142,
+      "c2s": "032216e416",
+      "note": "run to (5666,5860)"
+    },
+    {
+      "frame": 164,
+      "c2s": "032216d316",
+      "note": "run to (5666,5843)"
+    },
+    {
+      "frame": 186,
+      "c2s": "032116c316",
+      "note": "run to (5665,5827)"
+    },
+    {
+      "frame": 206,
+      "c2s": "032016b916",
+      "note": "run to (5664,5817)"
+    },
+    {
+      "frame": 224,
+      "c2s": "031e16aa16",
+      "note": "run to (5662,5802)"
+    },
+    {
+      "frame": 228,
+      "c2s": "3c16010000ffffffff",
+      "note": "select Venom"
+    },
+    {
+      "frame": 229,
+      "c2s": "0c1e16aa16",
+      "note": "cast Venom"
+    },
+    {
+      "frame": 240,
+      "c2s": "3c15010000ffffffff",
+      "note": "select Blade Shield"
+    },
+    {
+      "frame": 241,
+      "c2s": "0c1e16aa16",
+      "note": "cast Blade Shield"
+    },
+    {
+      "frame": 252,
+      "c2s": "3c08010000ffffffff",
+      "note": "select Cloak of Shadows"
+    },
+    {
+      "frame": 253,
+      "c2s": "0c1d16a316",
+      "note": "cast Cloak of Shadows"
+    },
+    {
+      "frame": 265,
+      "c2s": "3c11010000ffffffff",
+      "note": "select Mind Blast"
+    },
+    {
+      "frame": 266,
+      "c2s": "0c1d16a316",
+      "note": "cast Mind Blast on zombies"
+    },
+    {
+      "frame": 278,
+      "c2s": "3cfb000000ffffffff",
+      "note": "select Fire Blast"
+    },
+    {
+      "frame": 279,
+      "c2s": "0c1d16a316",
+      "note": "throw Fire Blast"
+    },
+    {
+      "frame": 290,
+      "c2s": "3c00010000ffffffff",
+      "note": "select Shock Web"
+    },
+    {
+      "frame": 291,
+      "c2s": "0c1d16a316",
+      "note": "throw Shock Web"
+    },
+    {
+      "frame": 302,
+      "c2s": "3c01010000ffffffff",
+      "note": "select Blade Sentinel"
+    },
+    {
+      "frame": 303,
+      "c2s": "0c1d16a316",
+      "note": "throw Blade Sentinel"
+    },
+    {
+      "frame": 314,
+      "c2s": "3c06010000ffffffff",
+      "note": "select Wake of Fire"
+    },
+    {
+      "frame": 315,
+      "c2s": "0c1e16a616",
+      "note": "lay Wake of Fire trap"
+    },
+    {
+      "frame": 326,
+      "c2s": "3c0f010000ffffffff",
+      "note": "select Lightning Sentry"
+    },
+    {
+      "frame": 327,
+      "c2s": "0c1c16a616",
+      "note": "lay Lightning Sentry trap"
+    },
+    {
+      "frame": 338,
+      "c2s": "3c14010000ffffffff",
+      "note": "select Death Sentry"
+    },
+    {
+      "frame": 339,
+      "c2s": "0c2016a616",
+      "note": "lay Death Sentry trap"
+    },
+    {
+      "frame": 350,
+      "c2s": "031e16a416",
+      "note": "step adjacent to zombie #10"
+    },
+    {
+      "frame": 358,
+      "c2s": "3cfe000080ffffffff",
+      "note": "select Tiger Strike (left)"
+    },
+    {
+      "frame": 359,
+      "c2s": "06010000000a000000",
+      "note": "charge Tiger Strike on #10"
+    },
+    {
+      "frame": 370,
+      "c2s": "3c18010080ffffffff",
+      "note": "select Phoenix Strike (left)"
+    },
+    {
+      "frame": 371,
+      "c2s": "06010000000a000000",
+      "note": "charge Phoenix Strike on #10"
+    },
+    {
+      "frame": 381,
+      "c2s": "3c04010000ffffffff",
+      "note": "select Dragon Claw finisher (right)"
+    },
+    {
+      "frame": 382,
+      "c2s": "0d010000000a000000",
+      "note": "release charges with Dragon Claw on #10"
+    }
+  ]
+}

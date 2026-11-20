@@ -1,0 +1,265 @@
+{
+ "name": "p52-sorceress-elemental",
+ "description": "Sorceress L40: Fire Ball, Chain Lightning, Frozen Orb, Glacial Spike (missiles, synergies, resistances, cold length/freeze).",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/sorceress-l40-elemental.d2s",
+ "difficulty": 0,
+ "frames": 1800,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "3c2f000000ffffffff",
+   "note": "select Fire Ball"
+  },
+  {
+   "frame": 630,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 660,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 690,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 720,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 750,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 780,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 810,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 840,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 870,
+   "c2s": "0d0100000009000000",
+   "note": "Fire Ball zombie #9"
+  },
+  {
+   "frame": 900,
+   "c2s": "3c35000000ffffffff",
+   "note": "select Chain Lightning"
+  },
+  {
+   "frame": 910,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 940,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 970,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 1000,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 1030,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 1060,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 1090,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 1120,
+   "c2s": "0d010000000a000000",
+   "note": "Chain Lightning zombie #10"
+  },
+  {
+   "frame": 1150,
+   "c2s": "3c40000000ffffffff",
+   "note": "select Frozen Orb"
+  },
+  {
+   "frame": 1160,
+   "c2s": "0c12169e16",
+   "note": "Frozen Orb at the zombies"
+  },
+  {
+   "frame": 1200,
+   "c2s": "0c12169e16",
+   "note": "Frozen Orb at the zombies"
+  },
+  {
+   "frame": 1240,
+   "c2s": "0c12169e16",
+   "note": "Frozen Orb at the zombies"
+  },
+  {
+   "frame": 1280,
+   "c2s": "0c12169e16",
+   "note": "Frozen Orb at the zombies"
+  },
+  {
+   "frame": 1320,
+   "c2s": "0c12169e16",
+   "note": "Frozen Orb at the zombies"
+  },
+  {
+   "frame": 1360,
+   "c2s": "0c12169e16",
+   "note": "Frozen Orb at the zombies"
+  },
+  {
+   "frame": 1400,
+   "c2s": "3c37000000ffffffff",
+   "note": "select Glacial Spike"
+  },
+  {
+   "frame": 1410,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1440,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1470,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1500,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1530,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1560,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1590,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  },
+  {
+   "frame": 1620,
+   "c2s": "0d010000000b000000",
+   "note": "Glacial Spike zombie #11"
+  }
+ ]
+}

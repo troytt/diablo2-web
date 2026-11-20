@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-paladin-merc-aura",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1700,
+  "strictHorizon": 1700,
+  "posHorizon": 1700,
+  "matchedKernelFrames": 1698,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "c12bbcbb21c89ec37e72b0b153f37db35a432f4d61391cde4e6635537e059e92",
+  "snapshotSha256": "71e7118af1fe355e1bc90c3ea43e9e213ef78ef1e74b055d921fdddf7522412b"
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD91DD0",
+    "name": "ANIMDATA_FindRecordByCode",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "ANIMDATA_FindRecordByCode113c",
+    "status": "diff-verified",
+    "diffEvidence": "12 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91EF0",
+    "name": "ANIMDATA_GetAnimDataInfo",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "ANIMDATA_GetAnimDataInfo113c",
+    "status": "diff-verified",
+    "diffEvidence": "13 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E5E0",
+    "name": "SKILLS_EvalParam56DimReturns",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalParam56DimReturns113c",
+    "status": "diff-verified",
+    "diffEvidence": "12 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E630",
+    "name": "SKILLS_EvalParam34DimReturns",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalParam34DimReturns113c",
+    "status": "diff-verified",
+    "diffEvidence": "12 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E680",
+    "name": "SKILLS_EvalParam12DimReturns",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalParam12DimReturns113c",
+    "status": "diff-verified",
+    "diffEvidence": "12 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F070",
+    "name": "SKILLS_GetHighestLevelSkillFromUnitAndIdFastcall",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetHighestLevelSkillFromUnitAndIdFastcall113c",
+    "status": "diff-verified",
+    "diffEvidence": "5 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9FF80",
+    "name": "SKILLS_IsSelectableCorpse10501",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_IsSelectableCorpse10501_113c",
+    "status": "diff-verified",
+    "diffEvidence": "13 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9FFD0",
+    "name": "SKILLS_IsSelectableCorpse11157",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_IsSelectableCorpse11157_113c",
+    "status": "diff-verified",
+    "diffEvidence": "13 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0090",
+    "name": "SKILLS_IsSelectableCorpse10678",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_IsSelectableCorpse10678_113c",
+    "status": "diff-verified",
+    "diffEvidence": "13 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA00E0",
+    "name": "SKILLS_IsSelectableCorpseWithFlag12",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_IsSelectableCorpseWithFlag12_113c",
+    "status": "diff-verified",
+    "diffEvidence": "13 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0150",
+    "name": "SKILLS_IsSelectableCorpseWithVelocity",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_IsSelectableCorpseWithVelocity113c",
+    "status": "diff-verified",
+    "diffEvidence": "30 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBC20",
+    "name": "DRLGROOM_RefreshStatusFromCountsEax",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_RefreshStatusFromCountsEax113c",
+    "status": "diff-verified",
+    "diffEvidence": "10 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBE10",
+    "name": "DRLGROOM_RefreshStatusFromCountsA",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_RefreshStatusFromCountsA113c",
+    "status": "diff-verified",
+    "diffEvidence": "10 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBE50",
+    "name": "DRLGROOM_RefreshStatusFromCountsB",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_RefreshStatusFromCountsB113c",
+    "status": "diff-verified",
+    "diffEvidence": "10 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBE90",
+    "name": "DRLGROOM_RefreshStatusFromCounts",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_RefreshStatusFromCounts113c",
+    "status": "diff-verified",
+    "diffEvidence": "10 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBED0",
+    "name": "DRLGROOM_SetStatusLink0Fastcall",
+    "kernFile": "src/d2kern-113c/tables/missile-tbls-113c.ts",
+    "tsSymbol": "DRLGROOM_SetStatusLink0Fastcall113c",
+    "status": "diff-verified",
+    "diffEvidence": "4 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCF670",
+    "name": "PLAYER_SetPlayerData150ParamsExport",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "PLAYER_SetPlayerData150ParamsExport113c",
+    "status": "diff-verified",
+    "diffEvidence": "6 real D2Common.dll differential vectors (198 total in tests/fixtures/oracle/k1/i9b-b-vectors.ndjson, emitted by tools/oracle/vectors/k1r3-laneB-it9-emitter.c) replayed in tests/oracle/k1/laneB-I9B-B-tables-skills.test.ts"
+  }
+]

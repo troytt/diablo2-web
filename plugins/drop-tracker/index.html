@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diablo II: Lord of Destruction · 掉落统计 (Drop Tracker)</title>
+    <style>
+      @font-face {
+        font-family: "D2Exocet";
+        src: url("/ui/fonts/D2Exocet.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2Formal436";
+        src: url("/ui/fonts/D2Formal436.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: dark;
+        --font-display: "D2Exocet", "Cinzel", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", serif;
+        --font-body: "D2Formal436", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", serif;
+        --d2-bg: #080706;
+        --d2-panel: #12100d;
+        --d2-panel-alt: #181510;
+        --d2-border: #3d3322;
+        --d2-gold: #c7b377;
+        --d2-gold-bright: #e8d28c;
+        --d2-set-green: #00c400;
+        --d2-rune-orange: #ff9b2f;
+        --d2-text: #d9d0be;
+        --d2-muted: #938873;
+        --d2-danger: #c94a4a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: var(--d2-bg);
+        color: var(--d2-text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      #d2-drops-app,
+      .d2-drops-shell {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .d2-drops__sidebar {
+        width: 300px;
+        min-width: 260px;
+        max-width: 340px;
+        height: 100vh;
+        overflow-y: auto;
+        background: var(--d2-panel);
+        border-right: 1px solid var(--d2-border);
+        padding: 16px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .d2-drops__main {
+        flex: 1 1 auto;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 20px 24px 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .d2-drops__sidebar-header {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--d2-border);
+      }
+      .d2-drops__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 16px;
+        color: var(--d2-gold);
+        letter-spacing: 0.04em;
+      }
+      .d2-drops__subtitle {
+        font-size: 12px;
+        color: var(--d2-muted);
+      }
+      .d2-drops__sidebar-section-title {
+        font-size: 12px;
+        color: var(--d2-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-top: 4px;
+      }
+      .d2-drops__nav-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--d2-panel-alt);
+        color: var(--d2-text);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-family: var(--font-body);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .d2-drops__nav-btn:hover {
+        border-color: var(--d2-gold);
+      }
+      .d2-drops__nav-btn--active {
+        border-color: var(--d2-gold-bright);
+        background: #251e13;
+        box-shadow: inset 0 0 0 1px rgba(199, 179, 119, 0.35);
+      }
+      .d2-drops__nav-count {
+        font-variant-numeric: tabular-nums;
+        color: var(--d2-gold);
+        font-size: 12px;
+      }
+      .d2-drops__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .d2-drops__btn {
+        background: var(--d2-panel-alt);
+        color: var(--d2-gold);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 7px 11px;
+        font-family: var(--font-body);
+        font-size: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .d2-drops__btn:hover {
+        border-color: var(--d2-gold);
+        color: var(--d2-gold-bright);
+      }
+      .d2-drops__btn--danger {
+        color: #ff9c9c;
+        border-color: rgba(201, 74, 74, 0.5);
+      }
+      .d2-drops__summary-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(130px, 1fr));
+        gap: 12px;
+      }
+      .d2-drops__card {
+        background: var(--d2-panel);
+        border: 1px solid var(--d2-border);
+        border-radius: 6px;
+        padding: 12px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .d2-drops__card--total {
+        border-color: var(--d2-gold);
+      }
+      .d2-drops__card-label {
+        font-size: 12px;
+        color: var(--d2-muted);
+      }
+      .d2-drops__card-val {
+        font-family: var(--font-display);
+        font-size: 24px;
+        color: var(--d2-gold-bright);
+        font-variant-numeric: tabular-nums;
+      }
+      .d2-drops__card-sub {
+        font-size: 11px;
+        color: var(--d2-muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .d2-drops__text--set {
+        color: var(--d2-set-green);
+      }
+      .d2-drops__text--unique {
+        color: var(--d2-gold-bright);
+      }
+      .d2-drops__text--rune {
+        color: var(--d2-rune-orange);
+      }
+      .d2-drops__controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: var(--d2-panel);
+        border: 1px solid var(--d2-border);
+        border-radius: 6px;
+        padding: 10px 14px;
+      }
+      .d2-drops__search-input {
+        background: var(--d2-bg);
+        color: var(--d2-text);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 6px 10px;
+        min-width: 320px;
+        flex: 1 1 280px;
+        max-width: 560px;
+        font-family: var(--font-body);
+        font-size: 13px;
+      }
+      .d2-drops__section {
+        background: var(--d2-panel);
+        border: 1px solid var(--d2-border);
+        border-radius: 6px;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .d2-drops__section-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .d2-drops__section-title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 16px;
+        color: var(--d2-gold);
+      }
+      .d2-drops__section-badge {
+        background: var(--d2-panel-alt);
+        border: 1px solid var(--d2-border);
+        color: var(--d2-gold);
+        border-radius: 12px;
+        padding: 2px 10px;
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+      /* Set Collection Grid */
+      .d2-drops__sets-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 14px;
+      }
+      .d2-drops__set-card {
+        background: var(--d2-panel-alt);
+        border: 1px solid #2b2418;
+        border-radius: 6px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .d2-drops__set-card--partial {
+        border-color: rgba(0, 196, 0, 0.4);
+      }
+      .d2-drops__set-card--completed {
+        border-color: var(--d2-set-green);
+        box-shadow: inset 0 0 12px rgba(0, 196, 0, 0.14);
+      }
+      .d2-drops__set-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #282116;
+      }
+      .d2-drops__set-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 4px;
+      }
+      .d2-drops__set-progress {
+        font-size: 11px;
+        color: var(--d2-set-green);
+        background: #101b10;
+        border: 1px solid rgba(0, 196, 0, 0.35);
+        border-radius: 10px;
+        padding: 1px 8px;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+      .d2-drops__set-pieces {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+        gap: 8px;
+      }
+      /* Unique Base Type Groups & Tier Bands */
+      .d2-drops__unique-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .d2-drops__type-group {
+        background: var(--d2-panel-alt);
+        border: 1px solid #2f2619;
+        border-radius: 6px;
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .d2-drops__type-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #2b2317;
+      }
+      .d2-drops__type-title {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        font-size: 14px;
+      }
+      .d2-drops__tier-band {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .d2-drops__tier-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .d2-drops__tier-badge {
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 3px;
+        font-size: 11px;
+        font-weight: 700;
+        border: 1px solid var(--d2-border);
+        background: #14110c;
+        color: var(--d2-text);
+      }
+      .d2-drops__tier-badge--normal {
+        color: #c9c2b2;
+        border-color: #4a4131;
+      }
+      .d2-drops__tier-badge--exceptional {
+        color: #7eb4ff;
+        border-color: rgba(126, 180, 255, 0.45);
+      }
+      .d2-drops__tier-badge--elite {
+        color: var(--d2-gold-bright);
+        border-color: rgba(232, 210, 140, 0.65);
+      }
+      .d2-drops__items-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+        gap: 8px;
+      }
+      /* Runes Grid */
+      .d2-drops__runes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+        gap: 8px;
+      }
+      .d2-drops__rune-num {
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--d2-rune-orange);
+      }
+      /* Item Sprite Tile (Light-Up / Unlit states) */
+      .d2-drops__item-tile {
+        background: #0d0b08;
+        border: 1px solid #262016;
+        border-radius: 5px;
+        padding: 7px 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.12s ease;
+      }
+      .d2-drops__item-tile--unlit {
+        background: #0a0907;
+        border-color: #211c13;
+      }
+      .d2-drops__item-tile--unlit .d2-drops__item-sprite {
+        filter: grayscale(1) brightness(0.36) contrast(0.92);
+        opacity: 0.38;
+      }
+      .d2-drops__item-tile--unlit .d2-drops__item-name {
+        color: #6f6656;
+      }
+      .d2-drops__item-tile--unlit .d2-drops__item-name-en,
+      .d2-drops__item-tile--unlit .d2-drops__item-meta {
+        color: #544d40;
+      }
+      .d2-drops__item-tile--lit.d2-drops__item-tile--set {
+        background: linear-gradient(180deg, #101b10 0%, #0b110b 100%);
+        border-color: var(--d2-set-green);
+        box-shadow: 0 0 10px rgba(0, 196, 0, 0.22), inset 0 0 8px rgba(0, 196, 0, 0.14);
+      }
+      .d2-drops__item-tile--lit.d2-drops__item-tile--set .d2-drops__item-sprite {
+        filter: drop-shadow(0 0 5px rgba(0, 196, 0, 0.48));
+      }
+      .d2-drops__item-tile--lit.d2-drops__item-tile--unique {
+        background: linear-gradient(180deg, #1f190f 0%, #110e09 100%);
+        border-color: var(--d2-gold-bright);
+        box-shadow: 0 0 10px rgba(232, 210, 140, 0.25), inset 0 0 8px rgba(232, 210, 140, 0.14);
+      }
+      .d2-drops__item-tile--lit.d2-drops__item-tile--unique .d2-drops__item-sprite {
+        filter: drop-shadow(0 0 5px rgba(232, 210, 140, 0.48));
+      }
+      .d2-drops__item-tile--lit.d2-drops__item-tile--rune {
+        background: linear-gradient(180deg, #211509 0%, #120c07 100%);
+        border-color: var(--d2-rune-orange);
+        box-shadow: 0 0 10px rgba(255, 155, 47, 0.26), inset 0 0 8px rgba(255, 155, 47, 0.15);
+      }
+      .d2-drops__item-tile--lit.d2-drops__item-tile--rune .d2-drops__item-sprite {
+        filter: drop-shadow(0 0 5px rgba(255, 155, 47, 0.5));
+      }
+      .d2-drops__tile-top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        font-size: 10px;
+      }
+      .d2-drops__tile-code {
+        color: var(--d2-muted);
+        font-family: monospace;
+        font-size: 10px;
+      }
+      .d2-drops__tier-pill {
+        padding: 0 4px;
+        border-radius: 2px;
+        font-size: 10px;
+        font-weight: 600;
+        border: 1px solid #3c3222;
+      }
+      .d2-drops__tier-pill--normal {
+        color: #b7b0a0;
+      }
+      .d2-drops__tier-pill--exceptional {
+        color: #7eb4ff;
+        border-color: rgba(126, 180, 255, 0.4);
+      }
+      .d2-drops__tier-pill--elite {
+        color: var(--d2-gold-bright);
+        border-color: rgba(232, 210, 140, 0.5);
+      }
+      .d2-drops__item-count {
+        font-size: 10px;
+        font-variant-numeric: tabular-nums;
+        padding: 0 4px;
+        border-radius: 3px;
+      }
+      .d2-drops__item-count--lit {
+        background: #282012;
+        color: var(--d2-gold-bright);
+        font-weight: 700;
+      }
+      .d2-drops__item-count--unlit {
+        color: #544d40;
+      }
+      .d2-drops__sprite-box {
+        width: 100%;
+        min-height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle, rgba(28, 23, 15, 0.65) 0%, rgba(8, 7, 6, 0.9) 100%);
+        border: 1px solid #1d1810;
+        border-radius: 4px;
+        padding: 4px;
+        overflow: hidden;
+      }
+      .d2-drops__item-tile--rune .d2-drops__sprite-box {
+        min-height: 48px;
+      }
+      .d2-drops__item-sprite {
+        image-rendering: pixelated;
+        flex-shrink: 0;
+      }
+      .d2-drops__item-name {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        word-break: break-word;
+      }
+      .d2-drops__item-name-en {
+        font-size: 10px;
+        color: var(--d2-muted);
+        line-height: 1.2;
+        word-break: break-word;
+      }
+      .d2-drops__item-meta {
+        font-size: 10px;
+        color: #7c725f;
+        line-height: 1.2;
+      }
+      .d2-drops__table-wrap {
+        width: 100%;
+        overflow-x: auto;
+      }
+      .d2-drops__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+      .d2-drops__table th,
+      .d2-drops__table td {
+        padding: 7px 10px;
+        border-bottom: 1px solid #241e15;
+        text-align: left;
+      }
+      .d2-drops__table th {
+        color: var(--d2-gold);
+        font-weight: 600;
+        background: #17130d;
+      }
+      .d2-drops__table .d2-drops__num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      .d2-drops__num--total {
+        color: var(--d2-gold-bright);
+        font-weight: 700;
+      }
+      .d2-drops__entity-name {
+        font-weight: 600;
+      }
+      .d2-drops__entity-subtitle {
+        margin-left: 8px;
+        font-size: 11px;
+        color: var(--d2-muted);
+      }
+      .d2-drops__badge {
+        display: inline-block;
+        padding: 1px 6px;
+        border-radius: 3px;
+        font-size: 11px;
+        font-weight: 700;
+        border: 1px solid var(--d2-border);
+        background: #1d1912;
+      }
+      .d2-drops__badge--set {
+        color: var(--d2-set-green);
+        border-color: rgba(0, 196, 0, 0.45);
+      }
+      .d2-drops__badge--unique {
+        color: var(--d2-gold-bright);
+        border-color: rgba(232, 210, 140, 0.45);
+      }
+      .d2-drops__badge--rune {
+        color: var(--d2-rune-orange);
+        border-color: rgba(255, 155, 47, 0.45);
+      }
+      .d2-drops__table-empty {
+        text-align: center;
+        color: var(--d2-muted);
+        padding: 18px 8px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d2-drops-app"></div>
+    <script type="module" src="/plugins/drop-tracker/standalone.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-necromancer-curses",
+  "bootFrame": 2,
+  "lastGoldenFrame": 2000,
+  "strictHorizon": 2000,
+  "posHorizon": 2000,
+  "matchedKernelFrames": 1998,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "94e6860b08b2546f3fb68f03beb54d289da7a1c0acda1d611e7da7551ced7b24",
+  "snapshotSha256": "4a6c992f7d31ea272c3d75b064192a94d05b1bafc1d1afabfd80777ad610e3dd"
+}

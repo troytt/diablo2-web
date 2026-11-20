@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-necromancer-poison-golem",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1800,
+  "strictHorizon": 1800,
+  "posHorizon": 1800,
+  "matchedKernelFrames": 1798,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "1b2af91a11215851be9f7c364b8974422f07d34ad1c38e68482f55547585ec56",
+  "snapshotSha256": "105ac71370143a464cb6a63c44362d21d476623d930c7d31f08db785e9105329"
+}

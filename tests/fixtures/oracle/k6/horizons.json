@@ -1,0 +1,41 @@
+{
+  "k6-bloodmoor-consumables-auras-combat": {
+    "bootFrame": 2,
+    "strict": 380,
+    "pos": 380
+  },
+  "k6-act3-consumables-quest": {
+    "bootFrame": 2,
+    "strict": 41,
+    "pos": 140
+  },
+  "k6-druid-skills": {
+    "bootFrame": 2,
+    "strict": 2,
+    "pos": 37,
+    "strictHorizon": 10
+  },
+  "k6-assassin-skills": {
+    "bootFrame": 2,
+    "strict": 2,
+    "pos": 58,
+    "strictHorizon": 10
+  },
+  "k6-items-potions-belt-combat": {
+    "bootFrame": 2,
+    "strict": 3,
+    "pos": 7,
+    "strictHorizon": 5
+  },
+  "k6-town-npc-gamble-waypoint": {
+    "bootFrame": 2,
+    "strict": 3,
+    "pos": 10
+  },
+  "k6-nightmare-bloodmoor-combat": {
+    "bootFrame": 2,
+    "strict": 3,
+    "pos": 104,
+    "strictHorizon": 10
+  }
+}

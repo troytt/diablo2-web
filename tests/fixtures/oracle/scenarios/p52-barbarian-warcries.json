@@ -1,0 +1,255 @@
+{
+ "name": "p52-barbarian-warcries",
+ "description": "Barbarian L40: Battle Orders, Battle Command, Shout on self (state/stat buffs, durations), then War Cry stuns and melee on zombie #10.",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/barbarian-l40-warcries.d2s",
+ "difficulty": 0,
+ "frames": 1600,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "3c95000000ffffffff",
+   "note": "select Battle Orders (right)"
+  },
+  {
+   "frame": 630,
+   "c2s": "0c2016cd16",
+   "note": "cast BO on self"
+  },
+  {
+   "frame": 700,
+   "c2s": "3c9b000000ffffffff",
+   "note": "select Battle Command"
+  },
+  {
+   "frame": 710,
+   "c2s": "0c2016cd16",
+   "note": "cast BC"
+  },
+  {
+   "frame": 780,
+   "c2s": "3c8a000000ffffffff",
+   "note": "select Shout"
+  },
+  {
+   "frame": 790,
+   "c2s": "0c2016cd16",
+   "note": "cast Shout"
+  },
+  {
+   "frame": 850,
+   "c2s": "031e16a816",
+   "note": "run to the zombies"
+  },
+  {
+   "frame": 900,
+   "c2s": "3c9a000000ffffffff",
+   "note": "select War Cry"
+  },
+  {
+   "frame": 910,
+   "c2s": "0c1e16a816",
+   "note": "cast War Cry"
+  },
+  {
+   "frame": 950,
+   "c2s": "0c1e16a816",
+   "note": "cast War Cry"
+  },
+  {
+   "frame": 990,
+   "c2s": "0c1e16a816",
+   "note": "cast War Cry"
+  },
+  {
+   "frame": 1030,
+   "c2s": "0c1e16a816",
+   "note": "cast War Cry"
+  },
+  {
+   "frame": 1070,
+   "c2s": "0c1e16a816",
+   "note": "cast War Cry"
+  },
+  {
+   "frame": 1100,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1120,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1140,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1160,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1180,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1200,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1220,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1240,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1260,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1280,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1300,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1320,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1340,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1360,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1380,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1400,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1420,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1440,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1460,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  },
+  {
+   "frame": 1480,
+   "c2s": "06010000000a000000",
+   "note": "attack zombie #10"
+  }
+ ]
+}

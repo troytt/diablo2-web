@@ -1,0 +1,353 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC21250",
+    "name": "MISSILES_GetTxtRecordFast113c_6FC21250",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILES_GetTxtRecordFast113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21480",
+    "name": "SEED_RollRangeWithMinFast113c_6FC21480",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "SEED_RollRangeWithMinFast113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC21CD0",
+    "name": "BITSTREAM_WriteVarUint113c_6FC21CD0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "BITSTREAM_WriteVarUint113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2F2F0",
+    "name": "ITEMS_GetUnitAndLeaderMagicFind113c_6FC2F2F0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "ITEMS_GetUnitAndLeaderMagicFind113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2F700",
+    "name": "ITEMS_RollInitialDurabilityStat113c_6FC2F700",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "ITEMS_RollInitialDurabilityStat113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC57110",
+    "name": "ITEMEVENT_RemoveByTypeAndState113c_6FC57110",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "ITEMEVENT_RemoveByTypeAndState113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC58E60",
+    "name": "MISSILE_ClearStateGfxRemoveProc113c_6FC58E60",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_ClearStateGfxRemoveProc113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC58FB0",
+    "name": "MISSILE_MatchTargetCollideKillMode113c_6FC58FB0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_MatchTargetCollideKillMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC59B40",
+    "name": "MISSILE_RollMasteryStatRange113c_6FC59B40",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_RollMasteryStatRange113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5A4E0",
+    "name": "MISSILE_BuildDamageStrcFromStats113c_6FC5A4E0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_BuildDamageStrcFromStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5AA20",
+    "name": "MISSILE_CanCollideWithUnit113c_6FC5AA20",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_CanCollideWithUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5AD30",
+    "name": "MISSILE_CollideFilterPlayerOrMonster113c_6FC5AD30",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_CollideFilterPlayerOrMonster113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5AE10",
+    "name": "MISSILE_ApplyDamageStrcToTarget113c_6FC5AE10",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_ApplyDamageStrcToTarget113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5AFF0",
+    "name": "MISSILE_ApplyDamageAndArmorShred113c_6FC5AFF0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_ApplyDamageAndArmorShred113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5E3F0",
+    "name": "MISSILE_DispatchFrameTick113c_6FC5E3F0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_DispatchFrameTick113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; Wave 19 1:1 PE32 indirect-call audit (static_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5E590",
+    "name": "MISSILE_ApplyNextHitDelayState113c_6FC5E590",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_ApplyNextHitDelayState113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5EDE0",
+    "name": "MISSILE_ProcessTargetCollisionHit113c_6FC5EDE0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_ProcessTargetCollisionHit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; Wave 19 1:1 PE32 indirect-call audit (static_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5F320",
+    "name": "MISSILE_SrvDo01_LinearProjectile113c_6FC5F320",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo01_LinearProjectile113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5F540",
+    "name": "MISSILE_SrvDo01_FastcallThunk113c_6FC5F540",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo01_FastcallThunk113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC63AA0",
+    "name": "SKILLS_SrvDo_NovaRing113c_6FC63AA0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo_NovaRing113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC8F620",
+    "name": "MISSILE_InitOwnerDamageStats113c_6FC8F620",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_InitOwnerDamageStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC8F660",
+    "name": "MISSILE_RollInitialPierceCount113c_6FC8F660",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_RollInitialPierceCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC8F880",
+    "name": "MISSILE_DestroyDataAndEvents113c_6FC8F880",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_DestroyDataAndEvents113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC8F8A0",
+    "name": "MISSILE_InitDataAndPersistentEvent113c_6FC8F8A0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_InitDataAndPersistentEvent113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC8F930",
+    "name": "MISSILE_CreateServerProjectile113c_6FC8F930",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_CreateServerProjectile113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; Wave 19 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC94870",
+    "name": "MONSTER_Event12_ExpireTimedStats113c_6FC94870",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MONSTER_Event12_ExpireTimedStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC95210",
+    "name": "MONSTER_StartGetHitMode113c_6FC95210",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MONSTER_StartGetHitMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; runtime-executed in dllExecuted\u2229tsExecuted (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC96740",
+    "name": "MONSTER_Event03_RegenAndPoisonTick113c_6FC96740",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MONSTER_Event03_RegenAndPoisonTick113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC98840",
+    "name": "PLAYER_StartCastSkillAtCoords113c_6FC98840",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "PLAYER_StartCastSkillAtCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC9A260",
+    "name": "MONSTER_QueuePacket0xAB_LifeNotify113c_6FC9A260",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MONSTER_QueuePacket0xAB_LifeNotify113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across (a1-bloodmoor-melee, p52-dot-ticks) against real D2Game.dll 1.13c golden traces"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB010",
+    "name": "NET_SendPacket0x3E_ItemStatBitStream113c_6FCAB010",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "NET_SendPacket0x3E_ItemStatBitStream113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB710",
+    "name": "NET_SendPacket0x23_AssignSkill113c_6FCAB710",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "NET_SendPacket0x23_AssignSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCABA50",
+    "name": "NET_SendPacket0xAB_UnitHeal113c_6FCABA50",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "NET_SendPacket0xAB_UnitHeal113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K1/K2 5-scenario zero-divergence Wine replay (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCB0F30",
+    "name": "STATES_ClearCurseStatesOnUnit113c_6FCB0F30",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "STATES_ClearCurseStatesOnUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCB1340",
+    "name": "SKILLS_ResolveChargedSrvMissileId113c_6FCB1340",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "SKILLS_ResolveChargedSrvMissileId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCBF7A0",
+    "name": "STATES_OnTimedStateRemoved113c_6FCBF7A0",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "STATES_OnTimedStateRemoved113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC2100",
+    "name": "SKILLS_AssignHandSkillAndSyncAura113c_6FCC2100",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "SKILLS_AssignHandSkillAndSyncAura113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCC2800",
+    "name": "MISSILE_SpawnNova64Directions113c_6FCC2800",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MISSILE_SpawnNova64Directions113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD13360",
+    "name": "MONSTER_SendPacket0x0C_LifeSync113c_6FD13360",
+    "kernFile": "src/d2kern-113c/game/k2-gap-melee-dot-113c.ts",
+    "tsSymbol": "MONSTER_SendPacket0x0C_LifeSync113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts; tests/oracle/k2/replay-k2-coverage.test.ts: dll \u2229 ts replay-executed with 0 strict divergence across K1/K2 scenarios against real D2Game.dll 1.13c golden traces; Unit verification in tests/oracle/k2/laneE-gap-melee-dot.test.ts"
+  }
+]

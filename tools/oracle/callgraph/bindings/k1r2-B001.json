@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD51330",
+    "name": "DUNGEON_GetRoomAtPosition",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetRoomAtPosition113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (17 real-DLL Wine differential vectors: NULL room, self room hit/miss, pRoomNearList scan with NULL entries, negative coords, signed overflow)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD59C60",
+    "name": "DRLGPRESET_FinalizePopsLocations",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_FinalizePopsLocations113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (4 real-DLL Wine differential vectors: zero/negative count, positive/zero/negative pops indices with sdiv32(idx,4)-1 vs legacy >>2 divergence, min/max subtile bounds)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD59DD0",
+    "name": "DRLGPRESET_MovePointerAndClear",
+    "kernFile": "src/d2kern-113c/common/drlg/preset.ts",
+    "tsSymbol": "DRLGPRESET_MovePointerAndClear113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (5 real-DLL Wine differential vectors: pointer transfer + zeroing for normal, zero, max, sign-bit, and aliased addresses)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D320",
+    "name": "DRLG_IsTownLevel",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_IsTownLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (21 real-DLL Wine differential vectors across town levels 1/40/75/103/109, Matron's Den 133, boundaries 0/130/131/132/134, and PE byte-identity check of 0x6FD7D348 table)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B6B0",
+    "name": "DUNGEON_IncreaseRoomPlayerCount",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_IncreaseRoomPlayerCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (6 real-DLL Wine differential vectors: NULL room, 0->1, 7->8, 0x7F->0x80 sign extension, 0xFE->0xFF->0x00 8-bit wrap)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B710",
+    "name": "DUNGEON_FindRoomBySubtileCoordinates",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FindRoomBySubtileCoordinates113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (11 real-DLL Wine differential vectors: empty chain, multi-room chain hit/miss, inclusive max boundary, negative coordinates, signed 32-bit overflow)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BB50",
+    "name": "DUNGEON_GetFloorTilesFromRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetFloorTilesFromRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (5 real-DLL Wine differential vectors: NULL room, NULL tileset, valid tileset count+pointer, zero floor count, 0xFFFFFFFF count)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BC10",
+    "name": "DUNGEON_ToggleHasPortalFlag",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_ToggleHasPortalFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (7 real-DLL Wine differential vectors: NULL act, bHasPortal=0 sets bit, bHasPortal!=0 clears bit for 1/-1/0x80000000)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BC40",
+    "name": "DUNGEON_GetPortalLevelBit",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetPortalLevelBit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (10 real-DLL Wine differential vectors: levels 39/131/132/133/134/135 -> bits 1/2/4/8/16/32 and default 0 on 0/38/130/136/-1)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BDA0",
+    "name": "DUNGEON_CheckLOSDraw",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_CheckLOSDraw113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (8 real-DLL Wine differential vectors: NULL room, NULL pRoomEx, NULL pLevel, NULL pMisc, pMisc.bLosDraw=0/1/-1/0x80000000)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C000",
+    "name": "DUNGEON_GetLevelIdFromRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetLevelIdFromRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (9 real-DLL Wine differential vectors: NULL room, NULL pRoomEx, NULL pLevel, level IDs 0/1/109/135/0xFFFFFFFF/-5)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDBC950",
+    "name": "DATATBLS_GetLvlPrestTxtRecordFromLevelId",
+    "kernFile": "src/d2kern-113c/tables/lvl-tbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetLvlPrestTxtRecordFromLevelId113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B001.test.ts + tests/fixtures/oracle/k1/laneC/b001-vectors.ndjson (7 real-DLL Wine differential vectors: ESI custom-register linear scan over sgptDataTables LvlPrest table for first/middle/last/duplicate/missing/negative levelId and zero count)"
+  }
+]

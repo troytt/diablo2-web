@@ -1,0 +1,80 @@
+{
+  "name": "k6-act3-consumables-quest",
+  "description": "Act 3 Kurast Docks quest & permanent-stat consumables scenario: exchanges Jade Figurine for Golden Bird at Meshif (0x13/0x2F/0x31 0x0211/0x30), then consumes Potion of Life ('xyz ' +20 MaxHP), Book of Skill ('ass ' +1 skill point), and Scroll of Resistance ('tr2 ' +10 all resists) via C2S 0x20.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6/saves/k6-act3-consumables-quest.d2s",
+  "difficulty": 0,
+  "frames": 140,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 10,
+      "c2s": "03f9132e14",
+      "note": "step to Meshif (#3) on Kurast Docks pier"
+    },
+    {
+      "frame": 34,
+      "c2s": "130100000003000000",
+      "note": "0x13 Interact Meshif (#3)"
+    },
+    {
+      "frame": 38,
+      "c2s": "2f0100000003000000",
+      "note": "0x2F NpcInit Meshif (#3)"
+    },
+    {
+      "frame": 42,
+      "c2s": "310300000011020000",
+      "note": "0x31 A3Q1 Meshif Jade Figurine -> Golden Bird ('g34 ')"
+    },
+    {
+      "frame": 46,
+      "c2s": "300100000003000000",
+      "note": "0x30 NpcCancel Meshif (#3)"
+    },
+    {
+      "frame": 56,
+      "c2s": "200a000000f91300002e140000",
+      "note": "0x20 UseItem Potion of Life ('xyz ' #10 -> +20 MaxHP)"
+    },
+    {
+      "frame": 66,
+      "c2s": "200b000000f91300002e140000",
+      "note": "0x20 UseItem Book of Skill ('ass ' #11 -> +1 skill)"
+    },
+    {
+      "frame": 76,
+      "c2s": "200c000000f91300002e140000",
+      "note": "0x20 UseItem Scroll of Resistance ('tr2 ' #12 -> +10 resists)"
+    },
+    {
+      "frame": 90,
+      "c2s": "0305143414",
+      "note": "walk east along Kurast Docks pier"
+    }
+  ]
+}

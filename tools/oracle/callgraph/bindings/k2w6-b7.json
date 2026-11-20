@@ -1,0 +1,101 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FCEDBB0",
+    "name": "PACKET_ProcessChatOrWhisperMessage_6FCEDBB0",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PACKET_ProcessChatOrWhisperMessage_6FCEDBB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCEDBB0 (895B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10820",
+    "name": "PARTY_SendLeftPartyEvent5AToMemberCallback_6FD10820",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_SendLeftPartyEvent5AToMemberCallback_6FD10820_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10820 (72B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10870",
+    "name": "PARTY_InvitePlayerToParty_6FD10870",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_InvitePlayerToParty_6FD10870_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10870 (136B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10900",
+    "name": "PARTY_CancelPartyInvitation_6FD10900",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_CancelPartyInvitation_6FD10900_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10900 (218B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10B90",
+    "name": "PARTY_SyncJoinedPartyRelationsCallback_6FD10B90",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_SyncJoinedPartyRelationsCallback_6FD10B90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10B90 (205B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10C60",
+    "name": "PARTY_UpdateRelationFlagAndSyncRoster_6FD10C60",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_UpdateRelationFlagAndSyncRoster_6FD10C60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10C60 (81B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10E80",
+    "name": "PARTY_UpdateSquelchFlag04AndSyncRoster_6FD10E80",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_UpdateSquelchFlag04AndSyncRoster_6FD10E80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10E80 (84B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10EE0",
+    "name": "PARTY_UpdateMuteFlag02AndSyncRoster_6FD10EE0",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_UpdateMuteFlag02AndSyncRoster_6FD10EE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10EE0 (84B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD141C0",
+    "name": "PARTY_EnableHostilityFlag08_6FD141C0",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_EnableHostilityFlag08_6FD141C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD141C0 (67B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD14210",
+    "name": "PARTY_ClearHostilityFlag08_6FD14210",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "PARTY_ClearHostilityFlag08_6FD14210_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD14210 (72B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD142D0",
+    "name": "OBJECTS_ApplyTrapDamageToTarget_6FD142D0",
+    "kernFile": "src/d2kern-113c/game/k2-w6b7-113c.ts",
+    "tsSymbol": "OBJECTS_ApplyTrapDamageToTarget_6FD142D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD142D0 (468B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  }
+]

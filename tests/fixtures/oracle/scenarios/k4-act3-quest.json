@@ -1,0 +1,60 @@
+{
+  "name": "k4-act3-quest",
+  "description": "Act 3 Quest 1 (The Golden Bird, word 20 = 0x0004 QFLAG_QSTARTED + Jade Figurine 'j34 ' item #9): Paladin L40 runs from Kurast Docks spawn (5118, 5168) to Meshif (unit #3, hcIdx 264) and completes 0x13/0x2F/0x31 (wScrollId 0x0211) / 0x30, exchanging 'j34 ' for Golden Bird 'g34 ' via QUESTS_CreateItem (advancing game seed gs).",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/k4-act3-quest.d2s",
+  "difficulty": 0,
+  "frames": 130,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 10,
+      "c2s": "03f9132e14",
+      "note": "step to Meshif (#3) on Kurast Docks pier"
+    },
+    {
+      "frame": 34,
+      "c2s": "130100000003000000",
+      "note": "C2S 0x13 Interact Meshif (#3)"
+    },
+    {
+      "frame": 38,
+      "c2s": "2f0100000003000000",
+      "note": "C2S 0x2F NpcInit Meshif (#3)"
+    },
+    {
+      "frame": 42,
+      "c2s": "310300000011020000",
+      "note": "C2S 0x31 A3Q1 Meshif Jade Figurine trade scroll (0x0211 -> mints 'g34 ')"
+    },
+    {
+      "frame": 46,
+      "c2s": "300100000003000000",
+      "note": "C2S 0x30 NpcCancel Meshif (#3)"
+    }
+  ]
+}

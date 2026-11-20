@@ -1,0 +1,371 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6fc4d140",
+    "name": "CLIENTS_SendNextSaveChunkPacketB3_6FC4D140",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "CLIENTS_SendNextSaveChunkPacketB3_6FC4D140_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4d500",
+    "name": "CLIENTS_FlushPositionsSaveAndPacketQueue_6FC4D500",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "CLIENTS_FlushPositionsSaveAndPacketQueue_6FC4D500_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4d790",
+    "name": "CLIENTS_DrainAllPendingSaveChunks_6FC4D790",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "CLIENTS_DrainAllPendingSaveChunks_6FC4D790_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4dc70",
+    "name": "CLIENTS_DisconnectAndSaveClientById_6FC4DC70",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "CLIENTS_DisconnectAndSaveClientById_6FC4DC70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4de30",
+    "name": "CLIENTS_SaveAndDrainAllSinglePlayerClients_6FC4DE30",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "CLIENTS_SaveAndDrainAllSinglePlayerClients_6FC4DE30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4e160",
+    "name": "CLIENTS_DisconnectFlag20OrFallbackClient_6FC4E160",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "CLIENTS_DisconnectFlag20OrFallbackClient_6FC4E160_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc58930",
+    "name": "PLAYER_CloseActiveInteractAndSendPacket62_6FC58930",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "PLAYER_CloseActiveInteractAndSendPacket62_6FC58930_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc58ab0",
+    "name": "PLAYER_ClearActiveInteractOnDeath_6FC58AB0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "PLAYER_ClearActiveInteractOnDeath_6FC58AB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc7fd00",
+    "name": "ACT5Q6_OnTyraelPortalEnteredTriggerEndgame_6FC7FD00",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT5Q6_OnTyraelPortalEnteredTriggerEndgame_6FC7FD00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc7fe30",
+    "name": "ACT5Q6_OnBaalKilledCompleteQuestAndSpawnPortal_6FC7FE30",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT5Q6_OnBaalKilledCompleteQuestAndSpawnPortal_6FC7FE30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc80080",
+    "name": "ACT5Q6_InitQuestTableRecord_6FC80080",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT5Q6_InitQuestTableRecord_6FC80080_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc8e680",
+    "name": "OBJ_HandleShrineOrOrificeItemAction_6FC8E680",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "OBJ_HandleShrineOrOrificeItemAction_6FC8E680_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc8f520",
+    "name": "OBJ_DeactivateShrineOrStashObject_6FC8F520",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "OBJ_DeactivateShrineOrStashObject_6FC8F520_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc94200",
+    "name": "PLRTRADE_HandleClientTradeButton_6FC94200",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "PLRTRADE_HandleClientTradeButton_6FC94200_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc99730",
+    "name": "PLAYER_HandleDeathCorpseAndSave_6FC99730",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "PLAYER_HandleDeathCorpseAndSave_6FC99730_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc99e40",
+    "name": "PLAYER_ProcessPlayerDeathAndPenalties_6FC99E40",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "PLAYER_ProcessPlayerDeathAndPenalties_6FC99E40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcc1580",
+    "name": "SKILLS_ClearPlayerCursorIdentifyOrUseState_6FCC1580",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "SKILLS_ClearPlayerCursorIdentifyOrUseState_6FCC1580_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdb8d0",
+    "name": "ACT4Q2_OnHellforgeObjectOperate_6FCDB8D0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q2_OnHellforgeObjectOperate_6FCDB8D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdbce0",
+    "name": "ACT4Q3_TriggerEndgameOrSendPacket50_6FCDBCE0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_TriggerEndgameOrSendPacket50_6FCDBCE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdbdc0",
+    "name": "ACT4Q3_TimerCallback_CheckDiabloSpawnAndEndgame_6FCDBDC0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_TimerCallback_CheckDiabloSpawnAndEndgame_6FCDBDC0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdbf30",
+    "name": "ACT4Q3_OnDiabloSealOperate_6FCDBF30",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_OnDiabloSealOperate_6FCDBF30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc050",
+    "name": "ACT4Q3_SpawnSealBossMarkerAndActivateSeal_6FCDC050",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_SpawnSealBossMarkerAndActivateSeal_6FCDC050_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc220",
+    "name": "ACT4Q3_OnSealObjectActivatedTriggerCheck_6FCDC220",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_OnSealObjectActivatedTriggerCheck_6FCDC220_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc2c0",
+    "name": "ACT4Q3_OnSealBossOrDiabloKilled_6FCDC2C0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_OnSealBossOrDiabloKilled_6FCDC2C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc4a0",
+    "name": "ACT4Q3_OnSeal5Operate_6FCDC4A0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_OnSeal5Operate_6FCDC4A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc510",
+    "name": "ACT4Q3_OnSeal3Operate_6FCDC510",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_OnSeal3Operate_6FCDC510_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc580",
+    "name": "ACT4Q3_OnSeal1Operate_6FCDC580",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_OnSeal1Operate_6FCDC580_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdc5f0",
+    "name": "ACT4Q3_InitQuestTableRecord_6FCDC5F0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT4Q3_InitQuestTableRecord_6FCDC5F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdf810",
+    "name": "NPCS_OpenNpcShopOrGambleSession_6FCDF810",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "NPCS_OpenNpcShopOrGambleSession_6FCDF810_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fce7ed0",
+    "name": "ACT2Q2_InitQuestTableRecord_6FCE7ED0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT2Q2_InitQuestTableRecord_6FCE7ED0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fce9f60",
+    "name": "ACT2Q6_InitQuestTableRecord_6FCE9F60",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT2Q6_InitQuestTableRecord_6FCE9F60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcef400",
+    "name": "C2S_HandlePacket27_IdentifyOrUseCursorItem_6FCEF400",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "C2S_HandlePacket27_IdentifyOrUseCursorItem_6FCEF400_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcefb30",
+    "name": "C2S_HandlePacket38_NpcMenuRequest_6FCEFB30",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "C2S_HandlePacket38_NpcMenuRequest_6FCEFB30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcf0e90",
+    "name": "C2S_HandlePacket1C_ShrineOrOrificeItemAction_6FCF0E90",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "C2S_HandlePacket1C_ShrineOrOrificeItemAction_6FCF0E90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcf1470",
+    "name": "C2S_HandlePacket4F_TradeButton_6FCF1470",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "C2S_HandlePacket4F_TradeButton_6FCF1470_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcf14b0",
+    "name": "C2S_HandlePacket41_ResurrectPlayer_6FCF14B0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "C2S_HandlePacket41_ResurrectPlayer_6FCF14B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd09200",
+    "name": "ACT3Q5_InitQuestTableRecord_6FD09200",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT3Q5_InitQuestTableRecord_6FD09200_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd092d0",
+    "name": "ACT3Q1_InitQuestTableRecord_6FD092D0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT3Q1_InitQuestTableRecord_6FD092D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd093c0",
+    "name": "ACT3Q4_InitQuestTableRecord_6FD093C0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT3Q4_InitQuestTableRecord_6FD093C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd094c0",
+    "name": "ACT3Q4_OnLamEsensTomeStandOperate_6FD094C0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT3Q4_OnLamEsensTomeStandOperate_6FD094C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd09dc0",
+    "name": "ACT3Q2_InitQuestTableRecord_6FD09DC0",
+    "kernFile": "src/d2kern-113c/game/k2-w16b1-113c.ts",
+    "tsSymbol": "ACT3Q2_InitQuestTableRecord_6FD09DC0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w16b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  }
+]

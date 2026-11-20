@@ -1,0 +1,83 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD68C40",
+    "name": "PATH_WallFollow_ComputePath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_WallFollow_ComputePath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86230",
+    "name": "PATH_Compute",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_Compute113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (15 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB77C0",
+    "name": "PATH_ComputeStraightLineWalk",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeStraightLineWalk113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB77F0",
+    "name": "PATH_ComputeLeapOrKnockback",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeLeapOrKnockback113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB7850",
+    "name": "PATH_BuildTurnCornersWithFallbackOffset",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_BuildTurnCornersWithFallbackOffset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB78B0",
+    "name": "PATH_ComputeGuidedStepPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeGuidedStepPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB7AD0",
+    "name": "PATH_ComputeMonsterSeekPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeMonsterSeekPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB7B70",
+    "name": "PATH_ComputeChargedBoltOrGuidedPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeChargedBoltOrGuidedPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC0E40",
+    "name": "PATH_IdaStar_ComputePathWithRooms",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_IdaStar_ComputePathWithRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I11C-2.test.ts (6 real-DLL vectors; 63 total in tests/fixtures/oracle/k1/i11c-2-vectors.ndjson via k1r8-laneC-it11-emitter.c)"
+  }
+]

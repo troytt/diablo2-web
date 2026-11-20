@@ -1,0 +1,227 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6fc441b0",
+    "name": "MONSTER_AssignTeleportSkill_6FC441B0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "MONSTER_AssignTeleportSkill_6FC441B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC441B0 (147B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc44cd0",
+    "name": "MONSTER_AssignAuraEnchantedSkill_6FC44CD0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "MONSTER_AssignAuraEnchantedSkill_6FC44CD0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC44CD0 (413B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc47190",
+    "name": "STATES_OnSkillStateRemovedRefreshAnim_6FC47190",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "STATES_OnSkillStateRemovedRefreshAnim_6FC47190_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC47190 (175B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc49240",
+    "name": "SKILLS_ApplyTimedSkillAuraToTarget_6FC49240",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "SKILLS_ApplyTimedSkillAuraToTarget_6FC49240_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-barbarian-warcries F1600/1600) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4c830",
+    "name": "PLAYERSAVE_SaveAllClientCharactersInGame_6FC4C830",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PLAYERSAVE_SaveAllClientCharactersInGame_6FC4C830_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; Wave 22 1:1 PE32 indirect-call audit (caller_callback; tools/oracle/callgraph/indirect-audit-batchD.json) verified in tests/oracle/k2/k2-disasm-verified-wave22-indD.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc4c910",
+    "name": "PLAYERSAVE_SaveClientAndAllOtherPlayers_6FC4C910",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PLAYERSAVE_SaveClientAndAllOtherPlayers_6FC4C910_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; Wave 22 1:1 PE32 indirect-call audit (caller_callback; tools/oracle/callgraph/indirect-audit-batchD.json) verified in tests/oracle/k2/k2-disasm-verified-wave22-indD.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc56140",
+    "name": "QUESTS_OnBossMonsterSpawnedCheckAct3GoldenBird_6FC56140",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "QUESTS_OnBossMonsterSpawnedCheckAct3GoldenBird_6FC56140_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC56140 (155B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed gdwBitMasks+0x18 fallback bitmask from 0x08 to 0x40 (1<<6)."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc622b0",
+    "name": "STATES_OnBuffStateRemovedRefreshAnim_6FC622B0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "STATES_OnBuffStateRemovedRefreshAnim_6FC622B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC622B0 (175B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc631c0",
+    "name": "SKILLS_SrvDo_Telekinesis_6FC631C0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo_Telekinesis_6FC631C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC631C0 (625B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc6f970",
+    "name": "SKILLS_ApplySummonStatsPassivesAndEquip_6FC6F970",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "SKILLS_ApplySummonStatsPassivesAndEquip_6FC6F970_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 summon/curse replays (p52-amazon-valkyrie F1500/1500, p52-necromancer-poison-golem F1800/1800, p52-necromancer-curses F2000/2000) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc7d5c0",
+    "name": "ACT5Q4_InitQuestData_6FC7D5C0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "ACT5Q4_InitQuestData_6FC7D5C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc7eed0",
+    "name": "ACT5Q5_Callback02_OnAncientKilled_6FC7EED0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "ACT5Q5_Callback02_OnAncientKilled_6FC7EED0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; Wave 22 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchD.json) verified in tests/oracle/k2/k2-disasm-verified-wave22-indD.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc88060",
+    "name": "ACT1Q6_InitQuestData_6FC88060",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "ACT1Q6_InitQuestData_6FC88060_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc8a930",
+    "name": "SHRINES_OnShrineStateRemoved_6FC8A930",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "SHRINES_OnShrineStateRemoved_6FC8A930_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC8A930 (45B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fc8f510",
+    "name": "QUESTS_ObjectEvent07_FastcallThunk_6FC8F510",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "QUESTS_ObjectEvent07_FastcallThunk_6FC8F510_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC8F510 (7B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcb7120",
+    "name": "PETS_AllocAndInitPlayerPetTable_6FCB7120",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PETS_AllocAndInitPlayerPetTable_6FCB7120_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCB7120 (195B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcb7730",
+    "name": "PETS_CleanupAllPlayerPetsOnActChangeOrSave_6FCB7730",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PETS_CleanupAllPlayerPetsOnActChangeOrSave_6FCB7730_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCB7730 (165B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcb7a20",
+    "name": "PETS_InsertPetIntoPlayerPetSlot_6FCB7A20",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PETS_InsertPetIntoPlayerPetSlot_6FCB7A20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 summon/curse replays (p52-amazon-valkyrie F1500/1500, p52-necromancer-poison-golem F1800/1800, p52-necromancer-curses F2000/2000) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcbfae0",
+    "name": "SKILLS_SpendSkillPointsAndIncrementSkill_6FCBFAE0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "SKILLS_SpendSkillPointsAndIncrementSkill_6FCBFAE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCBFAE0 (276B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcdde60",
+    "name": "NPCS_RepairPlayerItemOrAllItems_6FCDDE60",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "NPCS_RepairPlayerItemOrAllItems_6FCDDE60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCDDE60 (1066B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed 4 bugs: 0x6FC2E150 pItem arg, throwable flag order/polarity, 8 swapped 0x6FCAAC90 (nGold, pClient) calls, and swapped 0x6FCDD9B0 (pPlayer, pItem) args."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fce0b90",
+    "name": "NPCS_ResurrectOrReplacePlayerMerc_6FCE0B90",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "NPCS_ResurrectOrReplacePlayerMerc_6FCE0B90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCE0B90 (533B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed swapped 0x6FC68950 args to (m, pPlayerUnit, pGame)."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fce7480",
+    "name": "ACT2Q3_InitQuestData_6FCE7480",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "ACT2Q3_InitQuestData_6FCE7480_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w10b1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fcf0bc0",
+    "name": "PACKETS_SrvMercItemAction_6FCF0BC0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PACKETS_SrvMercItemAction_6FCF0BC0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FCF0BC0 (359B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed swapped 0x6FCEECE0 args to (m, wBodyLoc, pMercUnit, pGame, pPlayerUnit)."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd019c0",
+    "name": "DUNGEON_TeleportUnitToRoomAndCoords_6FD019C0",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "DUNGEON_TeleportUnitToRoomAndCoords_6FD019C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD019C0 (565B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed room tile coordinate offsets +0x10/+0x14 (was +0x0C/+0x10) passed to 0x6FCABF50."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd11130",
+    "name": "PARTY_SetOrClearPlayerHostility_6FD11130",
+    "kernFile": "src/d2kern-113c/game/k2-w10b1-113c.ts",
+    "tsSymbol": "PARTY_SetOrClearPlayerHostility_6FD11130_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD11130 (396B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed swapped 0x6FD10FF0 args to (m, pTargetPlayer, pSourcePlayer, pGame)."
+  }
+]

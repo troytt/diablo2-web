@@ -1,0 +1,65 @@
+{
+  "name": "k4-act2-quest",
+  "description": "Act 2 Quest 1 (Radament's Lair, word 9 = 0x2021 with QFLAG_CUSTOM5 armed + Book of Skill 'ass ' item #9): Paladin L40 runs from Lut Gholein spawn (5153, 5203) to Jerhyn (unit #1, hcIdx 201), executes 0x13/0x2F/0x31 (wScrollId 0x00FD) / 0x30 dialog, and consumes Book of Skill via C2S 0x20 (+1 STAT_NEWSKILLS, stat 5: 12 -> 13).",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/k4-act2-quest.d2s",
+  "difficulty": 0,
+  "frames": 140,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 10,
+      "c2s": "031c144b14",
+      "note": "run to Jerhyn (#1) at palace entrance"
+    },
+    {
+      "frame": 40,
+      "c2s": "130100000001000000",
+      "note": "C2S 0x13 Interact Jerhyn (#1)"
+    },
+    {
+      "frame": 44,
+      "c2s": "2f0100000001000000",
+      "note": "C2S 0x2F NpcInit Jerhyn (#1)"
+    },
+    {
+      "frame": 48,
+      "c2s": "3101000000fd000000",
+      "note": "C2S 0x31 Act 2 Jerhyn quest greeting scroll (0x00FD)"
+    },
+    {
+      "frame": 52,
+      "c2s": "300100000001000000",
+      "note": "C2S 0x30 NpcCancel Jerhyn (#1)"
+    },
+    {
+      "frame": 64,
+      "c2s": "20090000001c1400004b140000",
+      "note": "C2S 0x20 UseItem Book of Skill ('ass ' #9 -> +1 skill)"
+    }
+  ]
+}

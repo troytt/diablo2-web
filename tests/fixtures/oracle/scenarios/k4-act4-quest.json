@@ -1,0 +1,60 @@
+{
+  "name": "k4-act4-quest",
+  "description": "Act 4 Quest 1 (The Fallen Angel, word 25 = 0x0002 QFLAG_REWARDPENDING): Paladin L40 runs from Pandemonium Fortress spawn (5048, 5043) to Tyrael (unit #3, hcIdx 367), completes 0x13/0x2F/0x31 (wScrollId 0x02A4) / 0x30 turn-in, and receives +2 STAT_NEWSKILLS (stat 5: 12 -> 14).",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/k4-act4-quest.d2s",
+  "difficulty": 0,
+  "frames": 140,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 10,
+      "c2s": "03a013a013",
+      "note": "run north-west to Tyrael (#3)"
+    },
+    {
+      "frame": 64,
+      "c2s": "130100000003000000",
+      "note": "C2S 0x13 Interact Tyrael (#3)"
+    },
+    {
+      "frame": 68,
+      "c2s": "2f0100000003000000",
+      "note": "C2S 0x2F NpcInit Tyrael (#3)"
+    },
+    {
+      "frame": 72,
+      "c2s": "3103000000a4020000",
+      "note": "C2S 0x31 A4Q1 Izual turn-in scroll (0x02A4 -> +2 skills)"
+    },
+    {
+      "frame": 76,
+      "c2s": "300100000003000000",
+      "note": "C2S 0x30 NpcCancel Tyrael (#3)"
+    }
+  ]
+}

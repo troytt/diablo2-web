@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD51000",
+    "name": "PLAYER_SetPlayerData150Params",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "PLAYER_SetPlayerData150Params113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51100",
+    "name": "SEED_RollRandomNumberInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "SEED_RollRandomNumberInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51150",
+    "name": "DATATBLS_GetMissilesTxtRecordInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetMissilesTxtRecordInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51180",
+    "name": "SEED_RollLimitedRandomNumberInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "SEED_RollLimitedRandomNumberInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51250",
+    "name": "DATATBLS_GetSkillsTxtRecordInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetSkillsTxtRecordInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51280",
+    "name": "DATATBLS_ValidateMonStatsIdInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_ValidateMonStatsIdInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD512A0",
+    "name": "DATATBLS_GetMonStatsTxtRecordInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetMonStatsTxtRecordInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD512D0",
+    "name": "DATATBLS_GetCharStatsTxtRecordInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetCharStatsTxtRecordInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51300",
+    "name": "DATATBLS_GetItemTypesTxtRecordInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetItemTypesTxtRecordInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD513B0",
+    "name": "DATATBLS_GetMonStats2TxtRecordFromMonStatsIdInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetMonStats2TxtRecordFromMonStatsIdInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51400",
+    "name": "DATATBLS_CheckMonStats2ModeFlagInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_CheckMonStats2ModeFlagInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51470",
+    "name": "DATATBLS_CheckMonStats2FlagInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_CheckMonStats2FlagInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD514D0",
+    "name": "DATATBLS_GetSkillsTxtMaxLvlInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetSkillsTxtMaxLvlInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51500",
+    "name": "DATATBLS_GetSkillDescTxtRecordFromSkillIdInline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetSkillDescTxtRecordFromSkillIdInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51550",
+    "name": "DATATBLS_GetSkillsTxtParam1Inline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetSkillsTxtParam1Inline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD51580",
+    "name": "DATATBLS_GetSkillsTxtParam2Inline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetSkillsTxtParam2Inline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD515B0",
+    "name": "DATATBLS_GetSkillsTxtParam3Inline",
+    "kernFile": "src/d2kern-113c/common/inline-helpers.ts",
+    "tsSymbol": "DATATBLS_GetSkillsTxtParam3Inline113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/laneA/b002-vectors.json replayed in tests/oracle/k1/laneA-B002-inline-helpers.test.ts"
+  }
+]

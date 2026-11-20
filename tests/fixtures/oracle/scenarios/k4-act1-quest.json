@@ -1,0 +1,80 @@
+{
+  "name": "k4-act1-quest",
+  "description": "Act 1 Quest 1 (Den of Evil, word 1 = 0x0002 QFLAG_REWARDPENDING): Paladin L40 runs from Rogue Encampment spawn (5653, 5918) to Akara (unit #5, hcIdx 148), completes 0x13/0x2F/0x31 (wScrollId 0x004C) / 0x30 turn-in, and receives +1 STAT_NEWSKILLS (stat 5: 12 -> 13).",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/k4-act1-quest.d2s",
+  "difficulty": 0,
+  "frames": 160,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 10,
+      "c2s": "0324161e17",
+      "note": "run east past Rogue campfire"
+    },
+    {
+      "frame": 25,
+      "c2s": "0334161e17",
+      "note": "continue east toward Akara tent"
+    },
+    {
+      "frame": 40,
+      "c2s": "033e161817",
+      "note": "angle north-east around tent post"
+    },
+    {
+      "frame": 55,
+      "c2s": "034a161417",
+      "note": "approach Akara clearing"
+    },
+    {
+      "frame": 70,
+      "c2s": "034f160a17",
+      "note": "step within melee range of Akara (#5)"
+    },
+    {
+      "frame": 100,
+      "c2s": "130100000005000000",
+      "note": "C2S 0x13 Interact Akara (#5)"
+    },
+    {
+      "frame": 106,
+      "c2s": "2f0100000005000000",
+      "note": "C2S 0x2F NpcInit Akara (#5)"
+    },
+    {
+      "frame": 110,
+      "c2s": "31050000004c000000",
+      "note": "C2S 0x31 A1Q1 Den of Evil reward scroll (0x004C -> +1 skill)"
+    },
+    {
+      "frame": 114,
+      "c2s": "300100000005000000",
+      "note": "C2S 0x30 NpcCancel Akara (#5)"
+    }
+  ]
+}
