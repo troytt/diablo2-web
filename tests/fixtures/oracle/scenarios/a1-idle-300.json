@@ -1,0 +1,8 @@
+{
+  "name": "a1-idle-300",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/a1-barbarian-l1.d2s",
+  "difficulty": 0,
+  "frames": 300,
+  "inputs": []
+}

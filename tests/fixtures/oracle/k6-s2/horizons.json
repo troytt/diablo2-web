@@ -1,0 +1,42 @@
+{
+  "k6s2-amazon-skills": {
+    "bootFrame": 2,
+    "strict": 715,
+    "pos": 715
+  },
+  "k6s2-sorceress-skills": {
+    "bootFrame": 2,
+    "strict": 680,
+    "pos": 680
+  },
+  "k6s2-necromancer-skills": {
+    "bootFrame": 2,
+    "strict": 775,
+    "pos": 775
+  },
+  "k6s2-paladin-skills": {
+    "bootFrame": 2,
+    "strict": 775,
+    "pos": 775
+  },
+  "k6s2-barbarian-skills": {
+    "bootFrame": 2,
+    "strict": 665,
+    "pos": 665
+  },
+  "k6s2-act2-sewers-cube-merc": {
+    "bootFrame": 2,
+    "strict": 1290,
+    "pos": 1290
+  },
+  "k6s2-act4-hell-chaos-shrines": {
+    "bootFrame": 2,
+    "strict": 1225,
+    "pos": 1225
+  },
+  "k6s2-act5-harrogath-shenk-anya": {
+    "bootFrame": 2,
+    "strict": 860,
+    "pos": 860
+  }
+}

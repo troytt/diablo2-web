@@ -1,0 +1,2906 @@
+{
+  "schema": "d2kern-113c-k6-preboot-exemptions-v1",
+  "bootFrame": 2,
+  "policy": "Every exempted VA in this file is proven by real 1.13c DLL INT3 coverage (d2host-113c.exe + d2oracle.dll cover 3 <lastGoldenFrame>) to execute ONLY during pre-boot frames F1..F2 (game initialization, .d2s save load, and oracle setup helpers such as oracleEquip/oracleSetExp/oracleSetGold/oracleSetQuest before snap-f002.ndjson.gz is captured) and NEVER during stepped frames F3..lastGoldenFrame. Zero F3+ runtime gaps are permitted in any scenario.",
+  "scenarios": {
+    "k6-bloodmoor-consumables-auras-combat": {
+      "suite": "k6",
+      "frames": 380,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD87E70",
+        "D2Common:0x6FD8B6B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD8C680",
+        "D2Common:0x6FDD1950"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF51A0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6-act3-consumables-quest": {
+      "suite": "k6",
+      "frames": 140,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51100",
+        "D2Common:0x6FD51770",
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD59DD0",
+        "D2Common:0x6FD6A3C0",
+        "D2Common:0x6FD6A520",
+        "D2Common:0x6FD6B1D0",
+        "D2Common:0x6FD6DE50",
+        "D2Common:0x6FD6E670",
+        "D2Common:0x6FD6E8C0",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD7E1A0",
+        "D2Common:0x6FD80420",
+        "D2Common:0x6FD80460",
+        "D2Common:0x6FD83CA0",
+        "D2Common:0x6FD842D0",
+        "D2Common:0x6FD84450",
+        "D2Common:0x6FD84510",
+        "D2Common:0x6FD85100",
+        "D2Common:0x6FD85360",
+        "D2Common:0x6FD85CF0",
+        "D2Common:0x6FD86030",
+        "D2Common:0x6FD87E70",
+        "D2Common:0x6FD87EC0",
+        "D2Common:0x6FD88060",
+        "D2Common:0x6FD88220",
+        "D2Common:0x6FD882F0",
+        "D2Common:0x6FD883C0",
+        "D2Common:0x6FD88550",
+        "D2Common:0x6FD88730",
+        "D2Common:0x6FD8B6B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD8C680",
+        "D2Common:0x6FD8C7E0",
+        "D2Common:0x6FD9CE00",
+        "D2Common:0x6FD9E1D0",
+        "D2Common:0x6FD9E2B0",
+        "D2Common:0x6FD9E3F0",
+        "D2Common:0x6FDA3850",
+        "D2Common:0x6FDB03C0",
+        "D2Common:0x6FDD1950",
+        "D2Common:0x6FDD4C30"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21320",
+        "D2Game:0x6FC21390",
+        "D2Game:0x6FC213B0",
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC218A0",
+        "D2Game:0x6FC219F0",
+        "D2Game:0x6FC21C80",
+        "D2Game:0x6FC41420",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC4E750",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC8A0D0",
+        "D2Game:0x6FC970A0",
+        "D2Game:0x6FC9A5E0",
+        "D2Game:0x6FC9A940",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCACA20",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCB2ED0",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBBEB0",
+        "D2Game:0x6FCBD230",
+        "D2Game:0x6FCCF610",
+        "D2Game:0x6FCCF730",
+        "D2Game:0x6FCCF840",
+        "D2Game:0x6FCCF920",
+        "D2Game:0x6FCCFAB0",
+        "D2Game:0x6FCCFDB0",
+        "D2Game:0x6FCD0320",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEA530",
+        "D2Game:0x6FCEA5B0",
+        "D2Game:0x6FCEA5F0",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF51A0",
+        "D2Game:0x6FCFF9A0",
+        "D2Game:0x6FD001A0",
+        "D2Game:0x6FD00460",
+        "D2Game:0x6FD086A0",
+        "D2Game:0x6FD0E260",
+        "D2Game:0x6FD0E480",
+        "D2Game:0x6FD0E7B0",
+        "D2Game:0x6FD0EF10",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480",
+        "D2Game:0x6FD13D20"
+      ]
+    },
+    "k6-druid-skills": {
+      "suite": "k6",
+      "frames": 390,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD6F980",
+        "D2Common:0x6FD70DB0",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD71790",
+        "D2Common:0x6FD72170",
+        "D2Common:0x6FD721C0",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD72C20",
+        "D2Common:0x6FD72E20",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD73360",
+        "D2Common:0x6FD733B0",
+        "D2Common:0x6FD73400",
+        "D2Common:0x6FD73450",
+        "D2Common:0x6FD737E0",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD73970",
+        "D2Common:0x6FD73990",
+        "D2Common:0x6FD739C0",
+        "D2Common:0x6FD739E0",
+        "D2Common:0x6FD73A10",
+        "D2Common:0x6FD73A70",
+        "D2Common:0x6FD73AC0",
+        "D2Common:0x6FD73B20",
+        "D2Common:0x6FD73B70",
+        "D2Common:0x6FD73BC0",
+        "D2Common:0x6FD73BE0",
+        "D2Common:0x6FD73C10",
+        "D2Common:0x6FD73C70",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD746A0",
+        "D2Common:0x6FD74C30",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD74EB0",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76D40",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD86730",
+        "D2Common:0x6FD88FF0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95990",
+        "D2Common:0x6FD95A40",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96A40",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97020",
+        "D2Common:0x6FD975E0",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FD98470",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98630",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD98AE0",
+        "D2Common:0x6FD99340",
+        "D2Common:0x6FDAE810",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940",
+        "D2Common:0x6FDC1A40"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21480",
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E860",
+        "D2Game:0x6FC2EA10",
+        "D2Game:0x6FC2EA70",
+        "D2Game:0x6FC2EBB0",
+        "D2Game:0x6FC2EE90",
+        "D2Game:0x6FC2F700",
+        "D2Game:0x6FC30160",
+        "D2Game:0x6FC303C0",
+        "D2Game:0x6FC30A20",
+        "D2Game:0x6FC31070",
+        "D2Game:0x6FC31490",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC33DE0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC4E750",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC8A0D0",
+        "D2Game:0x6FC9AC50",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FD000C0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6-assassin-skills": {
+      "suite": "k6",
+      "frames": 390,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51830",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73650",
+        "D2Common:0x6FD73990",
+        "D2Common:0x6FD739E0",
+        "D2Common:0x6FD73A40",
+        "D2Common:0x6FD73AF0",
+        "D2Common:0x6FD74210",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76930",
+        "D2Common:0x6FD76D40",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD8A5D0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98630",
+        "D2Common:0x6FD99260",
+        "D2Common:0x6FD992D0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1820",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21480",
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E250",
+        "D2Game:0x6FC2E800",
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC4E750",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC57190",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC8A0D0",
+        "D2Game:0x6FC9AC50",
+        "D2Game:0x6FCAAE60",
+        "D2Game:0x6FCAAEC0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBB630",
+        "D2Game:0x6FCBBB10",
+        "D2Game:0x6FCBE290",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6-items-potions-belt-combat": {
+      "suite": "k6",
+      "frames": 340,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD70DB0",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD86730",
+        "D2Common:0x6FD8B6B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD8C680",
+        "D2Common:0x6FD95990",
+        "D2Common:0x6FD95A40",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97020",
+        "D2Common:0x6FD975E0",
+        "D2Common:0x6FD982B0",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD98AE0",
+        "D2Common:0x6FD99340",
+        "D2Common:0x6FDAE810",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940",
+        "D2Common:0x6FDD1950"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21480",
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E860",
+        "D2Game:0x6FC2F700",
+        "D2Game:0x6FC303C0",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6-town-npc-gamble-waypoint": {
+      "suite": "k6",
+      "frames": 275,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD517A0",
+        "D2Common:0x6FD7E1A0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD8C7E0"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF9470",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6-nightmare-bloodmoor-combat": {
+      "suite": "k6",
+      "frames": 360,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD73940",
+        "D2Common:0x6FD73B40",
+        "D2Common:0x6FD73C50",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD74E60",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD87E70",
+        "D2Common:0x6FD8A5D0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8B6B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD8C680",
+        "D2Common:0x6FDAE810",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDD1950"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FCAAE60",
+        "D2Game:0x6FCAAEC0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBBB10",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF51A0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-amazon-skills": {
+      "suite": "k6-s2",
+      "frames": 715,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD6F980",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD73330",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC57190",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC9AC50",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBE290",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-sorceress-skills": {
+      "suite": "k6-s2",
+      "frames": 680,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD51830",
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD6DEB0",
+        "D2Common:0x6FD6DEC0",
+        "D2Common:0x6FD6DEE0",
+        "D2Common:0x6FD6E190",
+        "D2Common:0x6FD6E310",
+        "D2Common:0x6FD6E360",
+        "D2Common:0x6FD6E400",
+        "D2Common:0x6FD6E4F0",
+        "D2Common:0x6FD6E8C0",
+        "D2Common:0x6FD6E8F0",
+        "D2Common:0x6FD6F630",
+        "D2Common:0x6FD6F690",
+        "D2Common:0x6FD70320",
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD71640",
+        "D2Common:0x6FD71790",
+        "D2Common:0x6FD717F0",
+        "D2Common:0x6FD718A0",
+        "D2Common:0x6FD71DA0",
+        "D2Common:0x6FD72510",
+        "D2Common:0x6FD725F0",
+        "D2Common:0x6FD72640",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD73650",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD73870",
+        "D2Common:0x6FD738B0",
+        "D2Common:0x6FD73940",
+        "D2Common:0x6FD73990",
+        "D2Common:0x6FD739E0",
+        "D2Common:0x6FD73A40",
+        "D2Common:0x6FD73AF0",
+        "D2Common:0x6FD73C30",
+        "D2Common:0x6FD73C50",
+        "D2Common:0x6FD73DD0",
+        "D2Common:0x6FD74210",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD74F90",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76D40",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD77180",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD7F270",
+        "D2Common:0x6FD7F2C0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD86730",
+        "D2Common:0x6FD87E70",
+        "D2Common:0x6FD88FF0",
+        "D2Common:0x6FD8A5D0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95990",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96830",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97020",
+        "D2Common:0x6FD975E0",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD98AE0",
+        "D2Common:0x6FD99260",
+        "D2Common:0x6FD992D0",
+        "D2Common:0x6FDA0610",
+        "D2Common:0x6FDA28B0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1820",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21480",
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E250",
+        "D2Game:0x6FC2E800",
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC2F700",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC4E750",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC8A0D0",
+        "D2Game:0x6FCAAE60",
+        "D2Game:0x6FCAAEC0",
+        "D2Game:0x6FCAB0F0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBB340",
+        "D2Game:0x6FCBB630",
+        "D2Game:0x6FCBBB10",
+        "D2Game:0x6FCBF600",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF28D0",
+        "D2Game:0x6FCF29F0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FCF4670",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF51A0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-necromancer-skills": {
+      "suite": "k6-s2",
+      "frames": 775,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD6F980",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD72E20",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD73990",
+        "D2Common:0x6FD739E0",
+        "D2Common:0x6FD73A40",
+        "D2Common:0x6FD73AF0",
+        "D2Common:0x6FD73DD0",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD74BF0",
+        "D2Common:0x6FD74C30",
+        "D2Common:0x6FD74EB0",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD8A5D0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95990",
+        "D2Common:0x6FD95A40",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97020",
+        "D2Common:0x6FD975E0",
+        "D2Common:0x6FD98470",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD98AE0",
+        "D2Common:0x6FD991C0",
+        "D2Common:0x6FD99260",
+        "D2Common:0x6FD992D0",
+        "D2Common:0x6FD99340",
+        "D2Common:0x6FDA28B0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1820",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E860",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC4E750",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC8A0D0",
+        "D2Game:0x6FC9AC50",
+        "D2Game:0x6FCAAE60",
+        "D2Game:0x6FCAAEC0",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBB630",
+        "D2Game:0x6FCBBB10",
+        "D2Game:0x6FCBF600",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-paladin-skills": {
+      "suite": "k6-s2",
+      "frames": 775,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD51830",
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD6DEB0",
+        "D2Common:0x6FD6DEC0",
+        "D2Common:0x6FD6DEE0",
+        "D2Common:0x6FD6E310",
+        "D2Common:0x6FD6E360",
+        "D2Common:0x6FD6E4F0",
+        "D2Common:0x6FD6F630",
+        "D2Common:0x6FD6F690",
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD71640",
+        "D2Common:0x6FD71790",
+        "D2Common:0x6FD717F0",
+        "D2Common:0x6FD718A0",
+        "D2Common:0x6FD71DA0",
+        "D2Common:0x6FD71FE0",
+        "D2Common:0x6FD72170",
+        "D2Common:0x6FD721C0",
+        "D2Common:0x6FD722B0",
+        "D2Common:0x6FD72510",
+        "D2Common:0x6FD725F0",
+        "D2Common:0x6FD72640",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD72920",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD72C20",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD73290",
+        "D2Common:0x6FD73360",
+        "D2Common:0x6FD733B0",
+        "D2Common:0x6FD73400",
+        "D2Common:0x6FD73450",
+        "D2Common:0x6FD73650",
+        "D2Common:0x6FD737A0",
+        "D2Common:0x6FD737E0",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD73870",
+        "D2Common:0x6FD738B0",
+        "D2Common:0x6FD738E0",
+        "D2Common:0x6FD73900",
+        "D2Common:0x6FD73940",
+        "D2Common:0x6FD73970",
+        "D2Common:0x6FD73990",
+        "D2Common:0x6FD739C0",
+        "D2Common:0x6FD739E0",
+        "D2Common:0x6FD73A10",
+        "D2Common:0x6FD73A40",
+        "D2Common:0x6FD73A70",
+        "D2Common:0x6FD73AC0",
+        "D2Common:0x6FD73AF0",
+        "D2Common:0x6FD73B20",
+        "D2Common:0x6FD73B40",
+        "D2Common:0x6FD73B70",
+        "D2Common:0x6FD73BC0",
+        "D2Common:0x6FD73BE0",
+        "D2Common:0x6FD73C10",
+        "D2Common:0x6FD73C30",
+        "D2Common:0x6FD73C50",
+        "D2Common:0x6FD73C70",
+        "D2Common:0x6FD73DD0",
+        "D2Common:0x6FD74210",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD746A0",
+        "D2Common:0x6FD746F0",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD74E60",
+        "D2Common:0x6FD74F90",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD77180",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD78D70",
+        "D2Common:0x6FD79D00",
+        "D2Common:0x6FD7F270",
+        "D2Common:0x6FD7F2C0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD81260",
+        "D2Common:0x6FD86730",
+        "D2Common:0x6FD87E70",
+        "D2Common:0x6FD8A5D0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8B6B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD8C680",
+        "D2Common:0x6FD95990",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96A40",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97020",
+        "D2Common:0x6FD975E0",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FD98470",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD98AE0",
+        "D2Common:0x6FD99260",
+        "D2Common:0x6FD992D0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1820",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940",
+        "D2Common:0x6FDC1A40",
+        "D2Common:0x6FDD1950"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21480",
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E250",
+        "D2Game:0x6FC2E800",
+        "D2Game:0x6FC2EA10",
+        "D2Game:0x6FC2EA70",
+        "D2Game:0x6FC2EBB0",
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2EE90",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC2F700",
+        "D2Game:0x6FC30160",
+        "D2Game:0x6FC30A20",
+        "D2Game:0x6FC31070",
+        "D2Game:0x6FC31490",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC33DE0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC57190",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC9AC50",
+        "D2Game:0x6FCAAE60",
+        "D2Game:0x6FCAAEC0",
+        "D2Game:0x6FCAB0F0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAC890",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBB340",
+        "D2Game:0x6FCBB630",
+        "D2Game:0x6FCBBB10",
+        "D2Game:0x6FCBE290",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF28D0",
+        "D2Game:0x6FCF29F0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FCF4670",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF51A0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD000C0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-barbarian-skills": {
+      "suite": "k6-s2",
+      "frames": 665,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD518A0",
+        "D2Common:0x6FD6F980",
+        "D2Common:0x6FD70DB0",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD71790",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD72AD0",
+        "D2Common:0x6FD72B70",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD73A40",
+        "D2Common:0x6FD73AF0",
+        "D2Common:0x6FD74210",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD747C0",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD74EB0",
+        "D2Common:0x6FD760F0",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD86730",
+        "D2Common:0x6FD8B6B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95990",
+        "D2Common:0x6FD95A40",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96A40",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97020",
+        "D2Common:0x6FD975E0",
+        "D2Common:0x6FD98340",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98630",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD98AE0",
+        "D2Common:0x6FD99340",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21850",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E860",
+        "D2Game:0x6FC2F700",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC57190",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FC9AC50",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBE290",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD0F650",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-act2-sewers-cube-merc": {
+      "suite": "k6-s2",
+      "frames": 1290,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC565B0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCE7C20",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-act4-hell-chaos-shrines": {
+      "suite": "k6-s2",
+      "frames": 1225,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC2E250",
+        "D2Game:0x6FC2E800",
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC57190",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBE290",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF28D0",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s2-act5-harrogath-shenk-anya": {
+      "suite": "k6-s2",
+      "frames": 860,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD96A40",
+        "D2Common:0x6FD98470",
+        "D2Common:0x6FDAE810",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC40DE0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC7A5C0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-druid-full-30-skills": {
+      "suite": "k6-s3",
+      "frames": 1475,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51180",
+        "D2Common:0x6FD6F980",
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD70DB0",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD71790",
+        "D2Common:0x6FD728D0",
+        "D2Common:0x6FD72BC0",
+        "D2Common:0x6FD73050",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD73650",
+        "D2Common:0x6FD73810",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD74610",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD74EB0",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76930",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD86730",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95A40",
+        "D2Common:0x6FD95AA0",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD95E50",
+        "D2Common:0x6FD960B0",
+        "D2Common:0x6FD965B0",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD97420",
+        "D2Common:0x6FD985D0",
+        "D2Common:0x6FD98630",
+        "D2Common:0x6FD987C0",
+        "D2Common:0x6FD989D0",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD991C0",
+        "D2Common:0x6FD99260",
+        "D2Common:0x6FD992D0",
+        "D2Common:0x6FD99340",
+        "D2Common:0x6FD9EB00",
+        "D2Common:0x6FDA0610",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1870",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC21480",
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E250",
+        "D2Game:0x6FC2E800",
+        "D2Game:0x6FC2E860",
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC2F700",
+        "D2Game:0x6FC331E0",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC344D0",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF28D0",
+        "D2Game:0x6FCF29F0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FCF4670",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF51A0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-assassin-full-30-skills": {
+      "suite": "k6-s3",
+      "frames": 1480,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD51830",
+        "D2Common:0x6FD725F0",
+        "D2Common:0x6FD72640",
+        "D2Common:0x6FD73650",
+        "D2Common:0x6FD73990",
+        "D2Common:0x6FD739E0",
+        "D2Common:0x6FD74210",
+        "D2Common:0x6FD74280",
+        "D2Common:0x6FD76190",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD76930",
+        "D2Common:0x6FD76DB0",
+        "D2Common:0x6FD787D0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FD95D30",
+        "D2Common:0x6FD96A40",
+        "D2Common:0x6FD96E50",
+        "D2Common:0x6FD989D0",
+        "D2Common:0x6FD98A40",
+        "D2Common:0x6FD991C0",
+        "D2Common:0x6FD99260",
+        "D2Common:0x6FD992D0",
+        "D2Common:0x6FD99340",
+        "D2Common:0x6FDC17E0",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC2BD10",
+        "D2Game:0x6FC2E250",
+        "D2Game:0x6FC2E800",
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC34210",
+        "D2Game:0x6FC35240",
+        "D2Game:0x6FC354F0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC570E0",
+        "D2Game:0x6FC57190",
+        "D2Game:0x6FC66F70",
+        "D2Game:0x6FC67CF0",
+        "D2Game:0x6FC86320",
+        "D2Game:0x6FCAAE60",
+        "D2Game:0x6FCAAEC0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF5C0",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBB630",
+        "D2Game:0x6FCBBB10",
+        "D2Game:0x6FCBE290",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF1830",
+        "D2Game:0x6FCF1890",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF1ED0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FCFF1A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-act1-bosses-cowlevel-imbue": {
+      "suite": "k6-s3",
+      "frames": 1611,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD71DA0",
+        "D2Common:0x6FD73C50",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8BE90"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBF600",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-act2-bosses-staff-duriel": {
+      "suite": "k6-s3",
+      "frames": 3028,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD71DA0",
+        "D2Common:0x6FD73650",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F4B0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FDA0610"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC565B0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCE7C20",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-act3-council-mephisto-quests": {
+      "suite": "k6-s3",
+      "frames": 2001,
+      "d2CommonPrebootOnlyVas": [],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FD086A0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-act4-izual-hellforge-diablo": {
+      "suite": "k6-s3",
+      "frames": 4217,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD512D0",
+        "D2Common:0x6FD6DEB0",
+        "D2Common:0x6FD6DEC0",
+        "D2Common:0x6FD6DEE0",
+        "D2Common:0x6FD6E310",
+        "D2Common:0x6FD6E360",
+        "D2Common:0x6FD6E4F0",
+        "D2Common:0x6FD6F630",
+        "D2Common:0x6FD6F690",
+        "D2Common:0x6FD70320",
+        "D2Common:0x6FD70620",
+        "D2Common:0x6FD70DB0",
+        "D2Common:0x6FD711D0",
+        "D2Common:0x6FD71790",
+        "D2Common:0x6FD717F0",
+        "D2Common:0x6FD718A0",
+        "D2Common:0x6FD71DA0",
+        "D2Common:0x6FD73130",
+        "D2Common:0x6FD73870",
+        "D2Common:0x6FD738B0",
+        "D2Common:0x6FD73C30",
+        "D2Common:0x6FD73C50",
+        "D2Common:0x6FD74C80",
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD7F270",
+        "D2Common:0x6FD7F2C0",
+        "D2Common:0x6FD884B0",
+        "D2Common:0x6FD8AC90",
+        "D2Common:0x6FDA0610",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC2EDC0",
+        "D2Game:0x6FC2F370",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC55890",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCBB340",
+        "D2Game:0x6FCBB630",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FCF1A50",
+        "D2Game:0x6FCF1AA0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FCF28D0",
+        "D2Game:0x6FCF43E0",
+        "D2Game:0x6FCF4670",
+        "D2Game:0x6FCF47C0",
+        "D2Game:0x6FCF60D0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-act5-shenk-anya-ancients-baal": {
+      "suite": "k6-s3",
+      "frames": 6547,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD766E0",
+        "D2Common:0x6FD8BE90",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC40DE0",
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC7A5C0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    },
+    "k6s3-crafting-runewords-c2s-monai": {
+      "suite": "k6-s3",
+      "frames": 1834,
+      "d2CommonPrebootOnlyVas": [
+        "D2Common:0x6FD512D0",
+        "D2Common:0x6FDAE810",
+        "D2Common:0x6FDB08D0",
+        "D2Common:0x6FDC1940"
+      ],
+      "d2GamePrebootOnlyVas": [
+        "D2Game:0x6FC49820",
+        "D2Game:0x6FC4C120",
+        "D2Game:0x6FC54130",
+        "D2Game:0x6FC860D0",
+        "D2Game:0x6FCAB400",
+        "D2Game:0x6FCABD00",
+        "D2Game:0x6FCAC570",
+        "D2Game:0x6FCAD120",
+        "D2Game:0x6FCAE170",
+        "D2Game:0x6FCAF720",
+        "D2Game:0x6FCB6920",
+        "D2Game:0x6FCD2760",
+        "D2Game:0x6FCD2C20",
+        "D2Game:0x6FCD2D40",
+        "D2Game:0x6FCEB570",
+        "D2Game:0x6FCEBDB0",
+        "D2Game:0x6FCEC2F0",
+        "D2Game:0x6FCF24B0",
+        "D2Game:0x6FD0B070",
+        "D2Game:0x6FD0B090",
+        "D2Game:0x6FD10130",
+        "D2Game:0x6FD101D0",
+        "D2Game:0x6FD10220",
+        "D2Game:0x6FD102F0",
+        "D2Game:0x6FD10480"
+      ]
+    }
+  },
+  "vaMetadata": {
+    "D2Common:0x6FD51100": {
+      "symbol": "SEED_RollRandomNumberInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD51180": {
+      "symbol": "SEED_RollLimitedRandomNumberInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD512D0": {
+      "symbol": "DATATBLS_GetCharStatsTxtRecordInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD51770": {
+      "symbol": "DATATBLS_GetStatesTxtRecordInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD517A0": {
+      "symbol": "DATATBLS_GetItemStatCostTxtRecordInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD51830": {
+      "symbol": "DATATBLS_GetUniqueItemsTxtRecordInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD518A0": {
+      "symbol": "DATATBLS_CheckMonStatsFlagInline113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD59DD0": {
+      "symbol": "DRLGPRESET_MovePointerAndClear113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6A3C0": {
+      "symbol": "DATATBLS_UnusedStub10182_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6A520": {
+      "symbol": "MONSTERS_IsDead113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6B1D0": {
+      "symbol": "MONSTERS_ApplyClassicConversionStats113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6DE50": {
+      "symbol": "INVENTORY_GetLeftItemGuid113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6DEB0": {
+      "symbol": "INVENTORY_GetNodeItemGuid113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6DEC0": {
+      "symbol": "INVENTORY_GetNextNode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6DEE0": {
+      "symbol": "INVENTORY_CheckNodeExists113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E190": {
+      "symbol": "INVENTORY_GetFirstItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E310": {
+      "symbol": "INVENTORY_FillGridRect113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E360": {
+      "symbol": "INVENTORY_IsGridRectEmpty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E400": {
+      "symbol": "INVENTORY_UnitIsItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E4F0": {
+      "symbol": "INVENTORY_AppendItemGuidNode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E670": {
+      "symbol": "INVENTORY_GetItemFromBodyLocMemPort113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E8C0": {
+      "symbol": "INVENTORY_GetItemNodePositionOther113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6E8F0": {
+      "symbol": "INVENTORY_GetNextItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6F630": {
+      "symbol": "INVENTORY_LinkItemToGridList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6F690": {
+      "symbol": "INVENTORY_LinkItemToInventoryList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD6F980": {
+      "symbol": "INVENTORY_CanDualWieldItems113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD70320": {
+      "symbol": "INVENTORY_GetCompositWeaponMemPort113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD70620": {
+      "symbol": "INVENTORY_UpdateWeaponGuidOnInsert113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD70DB0": {
+      "symbol": "INVENTORY_CanAutoEquipToBodyLoc113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD711D0": {
+      "symbol": "INVENTORY_CanAutoEquipItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD71640": {
+      "symbol": "INVENTORY_RemoveItemInternal113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD71790": {
+      "symbol": "INVENTORY_SetCursorItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD717F0": {
+      "symbol": "INVENTORY_PlaceItemInSocket113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD718A0": {
+      "symbol": "INVENTORY_PlaceItemInGridPage113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD71DA0": {
+      "symbol": "INVENTORY_PlaceItemInBodyLoc113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD71FE0": {
+      "symbol": "ITEMS_TestFlagMask113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72170": {
+      "symbol": "ITEMS_SetItemFormat113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD721C0": {
+      "symbol": "ITEMS_GetItemFormat113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD722B0": {
+      "symbol": "ITEMS_GetItemDropSound113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72510": {
+      "symbol": "ITEMS_SetCellOverwrite113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD725F0": {
+      "symbol": "ITEMS_SetItemCell113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72640": {
+      "symbol": "ITEMS_GetItemCell113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD728D0": {
+      "symbol": "ITEMS_GetBeltTypeIndex113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72920": {
+      "symbol": "ITEMS_GetSubTypeByte113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72AD0": {
+      "symbol": "ITEMS_GetGambleCost113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72B70": {
+      "symbol": "ITEMS_GetBaseSpeed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72BC0": {
+      "symbol": "ITEMS_GetComponentByte113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72C20": {
+      "symbol": "ITEMS_CheckIfUnique113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD72E20": {
+      "symbol": "ITEMS_GetTwoHandedFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73050": {
+      "symbol": "ITEMS_GetBaseLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73130": {
+      "symbol": "ITEMS_GetAllowedBodyLocations113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73290": {
+      "symbol": "ITEMS_GetBaseCode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73330": {
+      "symbol": "ITEMS_GetWeaponClassCode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73360": {
+      "symbol": "ITEMS_IsNormalQualityAllowed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD733B0": {
+      "symbol": "ITEMS_IsMagicQualityAllowed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73400": {
+      "symbol": "ITEMS_IsRareQualityAllowed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73450": {
+      "symbol": "ITEMS_GetVarInvGfxCount113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73650": {
+      "symbol": "ITEMS_SetVarGfxIndex113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD737A0": {
+      "symbol": "ITEMS_SetInvPage113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD737E0": {
+      "symbol": "ITEMS_SetItemLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73810": {
+      "symbol": "ITEMS_GetItemLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73870": {
+      "symbol": "ITEMS_SetItemFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD738B0": {
+      "symbol": "ITEMS_CheckItemFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD738E0": {
+      "symbol": "ITEMS_GetCommandFlags113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73900": {
+      "symbol": "ITEMS_SetOrClearCommandFlags113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73940": {
+      "symbol": "ITEMS_CheckCommandFlags113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73970": {
+      "symbol": "ITEMS_SetRareSuffix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73990": {
+      "symbol": "ITEMS_GetRareSuffix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD739C0": {
+      "symbol": "ITEMS_SetRarePrefix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD739E0": {
+      "symbol": "ITEMS_GetRarePrefix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73A10": {
+      "symbol": "ITEMS_SetMagicSuffix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73A40": {
+      "symbol": "ITEMS_GetMagicSuffix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73A70": {
+      "symbol": "ITEMS_SetAutoAffix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73AC0": {
+      "symbol": "ITEMS_SetMagicPrefix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73AF0": {
+      "symbol": "ITEMS_GetMagicPrefix113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73B20": {
+      "symbol": "ITEMS_SetItemQuality113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73B40": {
+      "symbol": "ITEMS_GetItemQuality113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73B70": {
+      "symbol": "ITEMS_SetOwnerGuid113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73BC0": {
+      "symbol": "ITEMS_GetOwnerGuid113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73BE0": {
+      "symbol": "ITEMS_InitItemSeed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73C10": {
+      "symbol": "ITEMS_GetItemSeed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73C30": {
+      "symbol": "ITEMS_SetBodyLocation113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73C50": {
+      "symbol": "ITEMS_GetBodyLocation113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73C70": {
+      "symbol": "ITEMS_AllocItemData113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD73DD0": {
+      "symbol": "ITEMS_WriteBitsClamped113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74210": {
+      "symbol": "ITEMS_IsHighQualityItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74280": {
+      "symbol": "ITEMS_GetClassOfClassSpecificItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74610": {
+      "symbol": "ITEMS_GetMaxSocketsFromItemType113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD746A0": {
+      "symbol": "ITEMS_GetStaffModsClass113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD746F0": {
+      "symbol": "ITEMS_GetSubTypeFromItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD747C0": {
+      "symbol": "ITEMS_GetGambleCostFromItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74BF0": {
+      "symbol": "ITEMS_GetInvWidthFromItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74C30": {
+      "symbol": "ITEMS_CheckIfThrowItemMemPort113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74C80": {
+      "symbol": "ITEMS_CheckBodyLocation113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74E60": {
+      "symbol": "ITEMS_GetItemTypeShootsFromItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74EB0": {
+      "symbol": "ITEMS_GetItemTypeQuiverFromItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD74F90": {
+      "symbol": "ITEMS_CountSocketedItemsInGemSocketable113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD760F0": {
+      "symbol": "ITEMS_GetTotalMaxStack113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD76190": {
+      "symbol": "ITEMS_EvaluateRequiredLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD766E0": {
+      "symbol": "ITEMS_SumStatAcrossSocketedItems113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD76930": {
+      "symbol": "ITEMS_AreStackableWeaponsCompatible113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD76D40": {
+      "symbol": "ITEMS_CanItemLoseDurability113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD76DB0": {
+      "symbol": "ITEMS_CheckRequirements113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD77180": {
+      "symbol": "ITEMS_SerializeItemBitstream113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD787D0": {
+      "symbol": "ITEMS_CanUseCharmInInventory113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD78D70": {
+      "symbol": "ITEMS_WriteItemStreamAndSockets113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD79D00": {
+      "symbol": "ITEMS_SerializeItemToBuffer113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD7E1A0": {
+      "symbol": "DRLG_CountNonPresetRoomsInLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD7F270": {
+      "symbol": "UNITS_SetStaticPathPosY113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD7F2C0": {
+      "symbol": "UNITS_SetStaticPathPosX113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD7F4B0": {
+      "symbol": "UNITS_SetInteractItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD80420": {
+      "symbol": "UNITS_GetRightSkill113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD80460": {
+      "symbol": "UNITS_GetLeftSkill113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD81260": {
+      "symbol": "INVENTORY_GetItemEquipLocation113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD83CA0": {
+      "symbol": "UNITS_GetStateFlagsPtr113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD842D0": {
+      "symbol": "UNITS_GetGfxStateFlagsPtr113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD84450": {
+      "symbol": "STATES_ClearGfxStateFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD84510": {
+      "symbol": "STATES_ToggleGfxStateFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD85100": {
+      "symbol": "PATH_GetMonsterMoveTestMask113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD85360": {
+      "symbol": "PATH_GetCollisionPatternForSize113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD85CF0": {
+      "symbol": "PATH_RefreshUnitCollisionPattern113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD86030": {
+      "symbol": "PATH_AllocDynamicPath113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD86730": {
+      "symbol": "SEED_GetLowSeed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD87E70": {
+      "symbol": "STATLIST_GetOwnerAndDynamicFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD87EC0": {
+      "symbol": "STATLIST_GetStatListFromUnitStateAndFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD88060": {
+      "symbol": "STATLIST_SetState113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD88220": {
+      "symbol": "STATLIST_FindStatFirstIndexOrLowerBound113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD882F0": {
+      "symbol": "STATLIST_GetStatsByIdFromList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD883C0": {
+      "symbol": "STATLIST_CopyBaseStatsToBuffer113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD884B0": {
+      "symbol": "STATLIST_GetStatListFromUnitStateOrFlag113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD88550": {
+      "symbol": "STATLIST_RecordModStat113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD88730": {
+      "symbol": "STATES_ToggleState113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD88FF0": {
+      "symbol": "STATLIST_GetMaxDurabilityFromUnit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD8A5D0": {
+      "symbol": "STATLIST_UnlinkUnitStatList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD8AC90": {
+      "symbol": "STATLIST_SetWeaponStatListActive113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD8B6B0": {
+      "symbol": "DUNGEON_IncreaseRoomPlayerCount113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD8BE90": {
+      "symbol": "DUNGEON_AreAllAdjacentRoomsActive113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD8C680": {
+      "symbol": "DUNGEON_GetRoomCoordListFromSubtile113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD8C7E0": {
+      "symbol": "DUNGEON_CountNonPresetRoomsInLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD95990": {
+      "symbol": "ITEMMODS_ApplyPropertyById113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD95A40": {
+      "symbol": "ITEMS_GetItemsTxtRecordFromUnitOrAlt113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD95AA0": {
+      "symbol": "ITEMMODS_ApplyItemProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD95D30": {
+      "symbol": "ITEMS_CheckAffixAssignableToItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD95E50": {
+      "symbol": "ITEMS_EvalItemPropertyList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD960B0": {
+      "symbol": "ITEMS_ApplyItemQualityMods113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD965B0": {
+      "symbol": "ITEMS_RollItemOrUnitSeedRange113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD96830": {
+      "symbol": "ITEMS_CraftModRollSockets113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD96A40": {
+      "symbol": "ITEMS_ApplyEtherealBonusStats113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD96E50": {
+      "symbol": "ITEMS_ResetBaseDamageOrACStatFromTxt113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD97020": {
+      "symbol": "ITEMMODS_GetOrCreateStatList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD97420": {
+      "symbol": "ITEMMODS_ApplyCastSkillPropStat113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD975E0": {
+      "symbol": "ITEMS_AddOrSetStatOnStatList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD982B0": {
+      "symbol": "ITEMMODS_ApplyPropertySingleSkill113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD98340": {
+      "symbol": "ITEMMODS_ApplyChargedSkillProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD98470": {
+      "symbol": "ITEMMODS_ApplyPropertyClassSkillTab113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD985D0": {
+      "symbol": "ITEMMODS_ApplyPropertySimpleLayer0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD98630": {
+      "symbol": "ITEMMODS_ApplyMaxDamagePercentProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD987C0": {
+      "symbol": "ITEMMODS_ApplyMinDamagePercentProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD989D0": {
+      "symbol": "ITEMMODS_ApplyPropertyCondResetAndRoll113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD98A40": {
+      "symbol": "ITEMMODS_ApplyPropertyResetAndSeedRoll113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD98AE0": {
+      "symbol": "ITEMMODS_ApplyPropertyCondResetAndSeedRoll113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD991C0": {
+      "symbol": "ITEMMODS_ApplyStatRolledProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD99260": {
+      "symbol": "ITEMMODS_ApplyStatMaxProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD992D0": {
+      "symbol": "ITEMMODS_ApplyStatMinProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD99340": {
+      "symbol": "ITEMMODS_ApplyEnhancedDamagePercentProperty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD9CE00": {
+      "symbol": "COLLISION_CheckMaskWithPattern1_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD9E1D0": {
+      "symbol": "SKILLS_GetSkillIdFromSkill113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD9E2B0": {
+      "symbol": "SKILLS_GetOwnerItemGuid113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD9E3F0": {
+      "symbol": "SKILLS_AllocSkillList113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FD9EB00": {
+      "symbol": "SKILLS_GetReqLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDA0610": {
+      "symbol": "SKILLS_CheckWeaponPairMatchesSkill113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDA28B0": {
+      "symbol": "SKILLS_RemoveOrDecrementSkillFromUnit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDA3850": {
+      "symbol": "DATATBLS_GetMonsterChainInfo113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDAE810": {
+      "symbol": "DATATBLS_GetStartExpForLevel113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDB03C0": {
+      "symbol": "DATATBLS_GetMonLvlTxtRecord113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDB08D0": {
+      "symbol": "DATATBLS_GetCurrentLevelFromExp113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDC17E0": {
+      "symbol": "DATATBLS_GetRareAffixDataTables113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDC1820": {
+      "symbol": "DATATBLS_GetMagicAffixTxtRecord113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDC1870": {
+      "symbol": "DATATBLS_GetMagicAffixDataTables113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDC1940": {
+      "symbol": "DATATBLS_GetItemIdFromItemCode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDC1A40": {
+      "symbol": "DATATBLS_GetItemDataTables113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDD1950": {
+      "symbol": "DRLGLOGIC_GetRoomCoordListFromWorldSubtile113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Common:0x6FDD4C30": {
+      "symbol": "UNITS_GetMonStats2ComponentChoice113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC21320": {
+      "symbol": "MONSTATS2_GetRecordPtr113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC21390": {
+      "symbol": "MONSTER_SetSpawnRoomCoordNode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC213B0": {
+      "symbol": "MONSTATS2_CheckFlagBit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC21480": {
+      "symbol": "SEED_RollRangeWithMinFast113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC21850": {
+      "symbol": "MONSTATS_ValidateClassId113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC218A0": {
+      "symbol": "MONSTER_GetBaseIdFromUnit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC219F0": {
+      "symbol": "MONPROP_GetRecordPtrFromClassId113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC21C80": {
+      "symbol": "MONSEQ_GetRecordPtrFromClassId113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2BD10": {
+      "symbol": "OBJECT_CheckRespawnOrPortalInRoom113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2E250": {
+      "symbol": "ITEMS_TestUniqueSpawnedBit_6FC2E250_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2E800": {
+      "symbol": "ITEMS_CheckUniqueItemAlreadySpawned_6FC2E800_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2E860": {
+      "symbol": "ITEMS_InitBaseWeaponDamageStats_6FC2E860_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2EA10": {
+      "symbol": "ITEMS_ScheduleReplenishQuantityEvent_6FC2EA10_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2EA70": {
+      "symbol": "ITEMS_ScheduleReplenishDurabilityEvent_6FC2EA70_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2EBB0": {
+      "symbol": "ITEMS_RollAndApplyEthereal_6FC2EBB0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2EDC0": {
+      "symbol": "ITEMS_MarkUniqueItemSpawned_6FC2EDC0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2EE90": {
+      "symbol": "ITEMS_RollItemQualityOnCreatedItem_6FC2EE90_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2F370": {
+      "symbol": "ITEMS_SelectAndApplyUniqueItemMods_6FC2F370_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC2F700": {
+      "symbol": "ITEMS_RollInitialDurabilityStat113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC30160": {
+      "symbol": "ITEMS_InitItemUnit_6FC30160_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC303C0": {
+      "symbol": "ITEMS_TryRollAndApplyMagicAffixes_6FC303C0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC30A20": {
+      "symbol": "ITEMS_GenerateMagicOrRareAffixes_6FC30A20_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC31070": {
+      "symbol": "ITEMS_InitCreatedItemStats_6FC31070_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC31490": {
+      "symbol": "D2GAME_CreateItemEx_6FC31490_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC331E0": {
+      "symbol": "ITEMS_HasAffixGroupOnItem113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC33DE0": {
+      "symbol": "ITEMS_RollStaffModsOnItem_6FC33DE0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC34210": {
+      "symbol": "ITEMS_RollRarePrefixId_6FC34210_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC344D0": {
+      "symbol": "ITEMS_RollMagicAffixId_6FC344D0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC35240": {
+      "symbol": "ITEMS_RollAndApplyRareItemAffixes_6FC35240_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC354F0": {
+      "symbol": "ITEMS_RollRareAffixesByFormat_6FC354F0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC40DE0": {
+      "symbol": "AIGENERAL_GetQuestDataPtr38_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC41420": {
+      "symbol": "AIGENERAL_FlushAllAiCommands113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC49820": {
+      "symbol": "CLIENTS_ForEachInGameClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC4C120": {
+      "symbol": "GAME_SyncNewClientWithExistingPlayers113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC4E750": {
+      "symbol": "OBJECT_SetAnimMode2Wrapper113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC54130": {
+      "symbol": "QUESTS_FindFreeSubtileInRoomRings_6FC54130_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC55890": {
+      "symbol": "QUESTS_AttachUnitToQuest_6FC55890_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC565B0": {
+      "symbol": "QUESTS_TriggerAct2Q0SpawnJerhyn_6FC565B0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC570E0": {
+      "symbol": "SUNIT_FindItemEventNode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC57190": {
+      "symbol": "UNITEVENT_RegisterTimerOrItemEventNode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC66F70": {
+      "symbol": "MONSTER_SpawnPresetOrEvilUrn113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC67CF0": {
+      "symbol": "ROOM_SpawnMonsterPreset113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC7A5C0": {
+      "symbol": "ACT5Q1_InitPresetQuestObject21F_6FC7A5C0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC860D0": {
+      "symbol": "ACT1Q4_SpawnGriswoldInTristram_6FC860D0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC86320": {
+      "symbol": "QUEST_Act1TownPortalUpdateState113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC8A0D0": {
+      "symbol": "OBJECT_SendUpdatePacketsToClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC970A0": {
+      "symbol": "MONSTER_GetHirelingLevelBonusFactor113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC9A5E0": {
+      "symbol": "UNIT_SendGfxStatesBitstreamToClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC9A940": {
+      "symbol": "UNIT_SendAllStatesBitstreamToClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FC9AC50": {
+      "symbol": "MONSTER_BroadcastEventSoundToClients113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAAE60": {
+      "symbol": "NET_SendPacket48_UnitRequestStatus_6FCAAE60_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAAEC0": {
+      "symbol": "NET_SendPacket47_UnitRelator1_6FCAAEC0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAB0F0": {
+      "symbol": "NET_SendPacket9D_ItemActionOwned_6FCAB0F0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAB400": {
+      "symbol": "NET_SendFixed40BytePacketToClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCABD00": {
+      "symbol": "D2GAME_PACKET_SendStatByteWordDword113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAC570": {
+      "symbol": "D2GAME_PACKET_SendPlayerPartyRelationship113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAC890": {
+      "symbol": "ITEMS_SyncSocketedSubItemsToClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCACA20": {
+      "symbol": "D2GAME_PACKET_SendMonsterAssign113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAD120": {
+      "symbol": "NET_SendPacket75_PartyUnitRosterUpdate_6FCAD120_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAE170": {
+      "symbol": "D2GAME_PACKET_Send0x5BPlayerInGame113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAF5C0": {
+      "symbol": "D2GAME_ARENA_FindPlayerSlotByUnit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCAF720": {
+      "symbol": "NPCS_RecordEvent4ForActiveNpcSlots_6FCAF720_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCB2ED0": {
+      "symbol": "MONSTER_EquipMonEquipItems113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCB6920": {
+      "symbol": "D2GAME_SUMMON_BroadcastPlayerPetsToClient113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBB340": {
+      "symbol": "ITEMS_ClearAllDupeAndCommandFlags_6FCBB340_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBB630": {
+      "symbol": "ITEMS_DispatchCommandFlagPacketsToClient_6FCBB630_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBBB10": {
+      "symbol": "ITEMS_BroadcastUnitInventoryCommandFlags_6FCBBB10_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBBEB0": {
+      "symbol": "D2GAME_PARTY_GetPartyIdForUnit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBD230": {
+      "symbol": "AI_InitMonsterAiThinkFn113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBE290": {
+      "symbol": "ITEMS_RegisterItemEventCallback113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCBF600": {
+      "symbol": "PETS_RecalcAndClampPlayerPetTypeForSkill_6FCBF600_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCCF610": {
+      "symbol": "D2GAME_MONSTER_HasComponentChoices113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCCF730": {
+      "symbol": "MONSTER_ChooseOutfit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCCF840": {
+      "symbol": "MONSTER_GetDifficultyAndPlayerBonus113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCCF920": {
+      "symbol": "MONSTER_ScheduleInitialAiEvent113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCCFAB0": {
+      "symbol": "MONSTER_InitPlacedMonsterPathAndMode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCCFDB0": {
+      "symbol": "MONSTER_InitStats113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCD0320": {
+      "symbol": "MONSTER_InitMonsterUnit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCD2760": {
+      "symbol": "D2GAME_PACKET_Send0x65PlayerKillCount113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCD2C20": {
+      "symbol": "D2GAME_ARENA_BroadcastKillCountsToClients113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCD2D40": {
+      "symbol": "D2GAME_ARENA_SyncClientKillCountsOnJoin113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCE7C20": {
+      "symbol": "ACT2Q0_SpawnJerhynAtPalaceEntrance_6FCE7C20_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCEA530": {
+      "symbol": "MONREG_UpdateActiveCountOnMode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCEA5B0": {
+      "symbol": "MONREG_IncrementSpawnCount113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCEA5F0": {
+      "symbol": "MONREG_GetOrCreateActOutfit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCEB570": {
+      "symbol": "D2GAME_PLRMODES_SendClientWhisperAdapter113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCEBDB0": {
+      "symbol": "D2GAME_PLRMODES_BroadcastPlayerJoinNotification113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCEC2F0": {
+      "symbol": "D2GAME_PLRMODES_SendStatToClientOrParty113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF1830": {
+      "symbol": "D2GAME_ITEMS_CheckEquipAndAmmoRequirements113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF1890": {
+      "symbol": "D2GAME_ITEMS_SnapshotUnitStatsAndSkills113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF1A50": {
+      "symbol": "ITEMS_GetPrimaryAndSecondaryWeapon_6FCF1A50_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF1AA0": {
+      "symbol": "ITEMS_GetScrollOrTomeSkillId113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF1ED0": {
+      "symbol": "D2GAME_ITEMS_RestoreUnitSkillsFromSnapshot113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF24B0": {
+      "symbol": "ITEMS_RefreshAllInventoryItemStatListsAndSkills_6FCF24B0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF28D0": {
+      "symbol": "ITEMS_ValidateAndFallbackPlayerHandSkills_6FCF28D0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF29F0": {
+      "symbol": "ITEMS_ClearInventoryCmdFlag4AndSync3F113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF43E0": {
+      "symbol": "ITEMS_UpdateScrollOrTomeSkillCharges113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF4670": {
+      "symbol": "ITEMS_OnEquipScrollOrTome113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF47C0": {
+      "symbol": "ITEMS_ActivateEquippedItemStats113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF51A0": {
+      "symbol": "D2GAME_ITEMS_UpdateAllInventoryAndEquipmentStats113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF60D0": {
+      "symbol": "ITEMS_EquipCursorItemToBodyLoc_6FCF60D0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCF9470": {
+      "symbol": "D2GAME_ITEMSTAT_OnStatChangedCallback113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCFF1A0": {
+      "symbol": "MONREG_GenerateOutfitVariants113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FCFF9A0": {
+      "symbol": "SUNIT_IsUnitInActiveClientRoom113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD000C0": {
+      "symbol": "SUNIT_InitExtraItemSeed113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD001A0": {
+      "symbol": "MONSTER_UpdateMonsterRoomAllyCount113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD00460": {
+      "symbol": "SUNIT_SetMonsterAlignmentState113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD086A0": {
+      "symbol": "ACT3Q2_InitGidbinnBossDefaultPreset_6FD086A0_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0B070": {
+      "symbol": "PARTY_SendRosterUpdateCallback_6FD0B070_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0B090": {
+      "symbol": "PLAYER_LevelUp_6FD0B090_113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0E260": {
+      "symbol": "MONSTER_InitSpecialClassEvents113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0E480": {
+      "symbol": "MONSTER_SpawnPartyMinions113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0E7B0": {
+      "symbol": "MONSTER_PostSpawnQuestAndSpecialInit113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0EF10": {
+      "symbol": "MONSTER_Create113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD0F650": {
+      "symbol": "MONSTER_SpawnAtCoords113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD10130": {
+      "symbol": "D2GAME_PARTY_Send0x8BPartyRelationStatus113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD101D0": {
+      "symbol": "PARTY_GetPlayerRelationState113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD10220": {
+      "symbol": "D2GAME_PARTY_SetPlayerRelationState113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD102F0": {
+      "symbol": "D2GAME_PARTY_EnsurePlayerRelationNode113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD10480": {
+      "symbol": "D2GAME_PARTY_SyncAllPlayerRelationsOnJoin113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    },
+    "D2Game:0x6FD13D20": {
+      "symbol": "MONSTER_CheckSpawnTileFree113c",
+      "reason": "preboot-f1-f2-only: executed during F1..F2 game/save/oracle setup before F2 snapshot; absent from real-DLL F3..end INT3 trace"
+    }
+  }
+}

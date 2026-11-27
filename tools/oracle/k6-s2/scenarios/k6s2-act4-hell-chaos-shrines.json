@@ -1,0 +1,445 @@
+{
+  "name": "k6s2-act4-hell-chaos-shrines",
+  "description": "Hell difficulty (difficulty=2) Act 4 Pandemonium Fortress -> River of Flame scenario: Level 86 Paladin interacts with Tyrael, Deckard Cain (0x34), Halbu (Trade/Repair), and Jamella (0x32 Hell Gamble Amulet + 0x27 IdentifyItem), warps via Waypoint (0x49) to Hell River of Flame (area 107), activates Hell Shrines (#50, #47), speaks with Hadriel, battles Hell Sand Maggots/Grotesques/Maw Fiends, experiences Hell death + corpse drop, and resurrects back in Pandemonium Fortress via C2S 0x41.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6-s2/saves/k6s2-act4-hell-chaos-shrines.d2s",
+  "difficulty": 2,
+  "frames": 1225,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    1150000000
+  ],
+  "oracleSetGold": [
+    2,
+    500000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "cap",
+      1,
+      6,
+      80
+    ],
+    [
+      2,
+      "qui",
+      3,
+      6,
+      80
+    ],
+    [
+      2,
+      "lbl",
+      8,
+      6,
+      80
+    ],
+    [
+      2,
+      "rin",
+      6,
+      6,
+      80
+    ],
+    [
+      2,
+      "amu",
+      2,
+      7,
+      80
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 3,
+      "c2s": "3a003b",
+      "note": "+60 Strength"
+    },
+    {
+      "frame": 4,
+      "c2s": "3a0227",
+      "note": "+40 Dexterity"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a0363",
+      "note": "+100 Vitality"
+    },
+    {
+      "frame": 6,
+      "c2s": "3a011d",
+      "note": "+30 Energy (230/230 L86 stat pts)"
+    },
+    {
+      "frame": 7,
+      "c2s": "40",
+      "note": "0x40 Hell quest log"
+    },
+    {
+      "frame": 8,
+      "c2s": "3b6500",
+      "note": "learn Holy Bolt"
+    },
+    {
+      "frame": 9,
+      "c2s": "3b7000",
+      "note": "learn Blessed Hammer"
+    },
+    {
+      "frame": 10,
+      "c2s": "3b6100",
+      "note": "learn Smite"
+    },
+    {
+      "frame": 11,
+      "c2s": "3b6b00",
+      "note": "learn Charge"
+    },
+    {
+      "frame": 12,
+      "c2s": "3b7500",
+      "note": "learn Holy Shield"
+    },
+    {
+      "frame": 14,
+      "c2s": "3c75000000ffffffff",
+      "note": "select Holy Shield"
+    },
+    {
+      "frame": 15,
+      "c2s": "0cb813b313",
+      "note": "cast Holy Shield in Hell"
+    },
+    {
+      "frame": 24,
+      "c2s": "03aa13a613",
+      "note": "BFS to Tyrael 1"
+    },
+    {
+      "frame": 48,
+      "c2s": "03a0139c13",
+      "note": "BFS to Tyrael 2"
+    },
+    {
+      "frame": 74,
+      "c2s": "130100000003000000",
+      "note": "0x13 Interact Tyrael (#3)"
+    },
+    {
+      "frame": 86,
+      "c2s": "2f0100000003000000",
+      "note": "0x2F NpcInit Tyrael"
+    },
+    {
+      "frame": 90,
+      "c2s": "300100000003000000",
+      "note": "0x30 NpcCancel Tyrael"
+    },
+    {
+      "frame": 96,
+      "c2s": "130100000004000000",
+      "note": "0x13 Interact Deckard Cain (#4)"
+    },
+    {
+      "frame": 108,
+      "c2s": "2f0100000004000000",
+      "note": "0x2F NpcInit Cain"
+    },
+    {
+      "frame": 112,
+      "c2s": "3404000000",
+      "note": "0x34 CainIdentifyItems"
+    },
+    {
+      "frame": 116,
+      "c2s": "300100000004000000",
+      "note": "0x30 NpcCancel Cain"
+    },
+    {
+      "frame": 122,
+      "c2s": "03b813b313",
+      "note": "return to center clearing"
+    },
+    {
+      "frame": 152,
+      "c2s": "03c613aa13",
+      "note": "BFS east to Halbu 1"
+    },
+    {
+      "frame": 176,
+      "c2s": "03d413ab13",
+      "note": "BFS east to Halbu 2"
+    },
+    {
+      "frame": 200,
+      "c2s": "03d713a313",
+      "note": "arrive at Halbu (#2)"
+    },
+    {
+      "frame": 226,
+      "c2s": "130100000002000000",
+      "note": "0x13 Interact Halbu (#2)"
+    },
+    {
+      "frame": 238,
+      "c2s": "2f0100000002000000",
+      "note": "0x2F NpcInit Halbu"
+    },
+    {
+      "frame": 242,
+      "c2s": "38010000000200000000000000",
+      "note": "0x38 Open Halbu Trade"
+    },
+    {
+      "frame": 248,
+      "c2s": "3502000000000000000000000000000080",
+      "note": "0x35 RepairAll at Halbu"
+    },
+    {
+      "frame": 252,
+      "c2s": "300100000002000000",
+      "note": "0x30 NpcCancel Halbu"
+    },
+    {
+      "frame": 258,
+      "c2s": "03d413b713",
+      "note": "BFS south to Jamella 1"
+    },
+    {
+      "frame": 284,
+      "c2s": "03e113c213",
+      "note": "arrive within 3 tiles of Jamella (#1 at 5092, 5059)"
+    },
+    {
+      "frame": 314,
+      "c2s": "130100000001000000",
+      "note": "0x13 Interact Jamella (#1)"
+    },
+    {
+      "frame": 330,
+      "c2s": "2f0100000001000000",
+      "note": "0x2F NpcInit Jamella"
+    },
+    {
+      "frame": 336,
+      "c2s": "38020000000100000000000000",
+      "note": "0x38 Open Jamella Hell Gamble"
+    },
+    {
+      "frame": 340,
+      "c2s": "32010000005f0000000200000000000000",
+      "note": "0x32 Gamble Amulet (#95 -> #108) from Jamella in Hell!"
+    },
+    {
+      "frame": 346,
+      "c2s": "300100000001000000",
+      "note": "0x30 NpcCancel Jamella"
+    },
+    {
+      "frame": 350,
+      "c2s": "2006000000e1130000c2130000",
+      "note": "0x20 Use Scroll of Identify (#6) for Hell gambled Amulet"
+    },
+    {
+      "frame": 352,
+      "c2s": "276c00000006000000",
+      "note": "0x27 Identify Hell gambled Amulet (#108) with Scroll (#6)!"
+    },
+    {
+      "frame": 358,
+      "c2s": "03d413b713",
+      "note": "retrace north-west from Jamella"
+    },
+    {
+      "frame": 384,
+      "c2s": "03c613aa13",
+      "note": "back west past center"
+    },
+    {
+      "frame": 410,
+      "c2s": "03b813b313",
+      "note": "center clearing"
+    },
+    {
+      "frame": 436,
+      "c2s": "03ac13a513",
+      "note": "BFS to WP #18 1"
+    },
+    {
+      "frame": 460,
+      "c2s": "03b0139f13",
+      "note": "arrive at Pandemonium WP #18"
+    },
+    {
+      "frame": 486,
+      "c2s": "130200000012000000",
+      "note": "0x13 Interact Pandemonium WP #18"
+    },
+    {
+      "frame": 502,
+      "c2s": "49120000006b000000",
+      "note": "0x49 Waypoint -> Hell River of Flame (107)"
+    },
+    {
+      "frame": 514,
+      "c2s": "3c71000000ffffffff",
+      "note": "activate Concentration aura in Hell"
+    },
+    {
+      "frame": 518,
+      "c2s": "036e1e1c17",
+      "note": "step west toward Hell Shrine #50"
+    },
+    {
+      "frame": 544,
+      "c2s": "03621e1b17",
+      "note": "arrive right next to Hell Shrine #50 (7776, 5915)"
+    },
+    {
+      "frame": 570,
+      "c2s": "130200000032000000",
+      "note": "0x13 Activate Hell Shrine #50!"
+    },
+    {
+      "frame": 582,
+      "c2s": "036a1e0a17",
+      "note": "BFS north to Hadriel 1"
+    },
+    {
+      "frame": 608,
+      "c2s": "03721efc16",
+      "note": "BFS north to Hadriel 2"
+    },
+    {
+      "frame": 634,
+      "c2s": "03761ef116",
+      "note": "arrive right next to Hadriel (#5 at 7800, 5870)"
+    },
+    {
+      "frame": 662,
+      "c2s": "130100000005000000",
+      "note": "0x13 Interact Hadriel (#5)"
+    },
+    {
+      "frame": 674,
+      "c2s": "2f0100000005000000",
+      "note": "0x2F NpcInit Hadriel"
+    },
+    {
+      "frame": 680,
+      "c2s": "300100000005000000",
+      "note": "0x30 NpcCancel Hadriel"
+    },
+    {
+      "frame": 686,
+      "c2s": "03701e0017",
+      "note": "retrace south 1"
+    },
+    {
+      "frame": 712,
+      "c2s": "03701e1017",
+      "note": "retrace south 2"
+    },
+    {
+      "frame": 738,
+      "c2s": "037b1e1e17",
+      "note": "pass RoF WP"
+    },
+    {
+      "frame": 764,
+      "c2s": "036e1e2c17",
+      "note": "route south to Hell Shrine #47 1"
+    },
+    {
+      "frame": 790,
+      "c2s": "03741e3a17",
+      "note": "route south to Hell Shrine #47 2"
+    },
+    {
+      "frame": 816,
+      "c2s": "037a1e4117",
+      "note": "step next to Hell Shrine #47 (7805, 5955)"
+    },
+    {
+      "frame": 840,
+      "c2s": "13020000002f000000",
+      "note": "0x13 Activate Hell Shrine #47!"
+    },
+    {
+      "frame": 854,
+      "c2s": "03781e5617",
+      "note": "advance south toward Hell monsters"
+    },
+    {
+      "frame": 880,
+      "c2s": "037e1e6317",
+      "note": "engage Hell Grotesque pack"
+    },
+    {
+      "frame": 904,
+      "c2s": "3c70000080ffffffff",
+      "note": "select Blessed Hammer (112)"
+    },
+    {
+      "frame": 906,
+      "c2s": "057a1e6517",
+      "note": "cast Blessed Hammer on Hell Grotesques"
+    },
+    {
+      "frame": 924,
+      "c2s": "057a1e6517",
+      "note": "Blessed Hammer 2"
+    },
+    {
+      "frame": 942,
+      "c2s": "3c7a000000ffffffff",
+      "note": "switch aura to Fanaticism (122)"
+    },
+    {
+      "frame": 946,
+      "c2s": "3c6a000080ffffffff",
+      "note": "select Zeal"
+    },
+    {
+      "frame": 948,
+      "c2s": "057a1e6517",
+      "note": "Zeal Hell Grotesques 1"
+    },
+    {
+      "frame": 968,
+      "c2s": "057a1e6517",
+      "note": "Zeal Hell Grotesques 2"
+    },
+    {
+      "frame": 1210,
+      "c2s": "41",
+      "note": "0x41 Resurrect in Pandemonium Fortress after Hell death (mode=17)!"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FCD3770",
+    "name": "SKILLS_SrvDo127_HealTargetByMasteryCalc_6FCD3770",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo127_HealTargetByMasteryCalc_6FCD3770_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD3890",
+    "name": "SKILLS_SrvSt58_ComputeApproachPathToTarget_6FCD3890",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt58_ComputeApproachPathToTarget_6FCD3890_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD3930",
+    "name": "SKILLS_SrvSt59_SaveTargetPosToSkillParams_6FCD3930",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt59_SaveTargetPosToSkillParams_6FCD3930_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD42D0",
+    "name": "SKILLS_SrvDo129_SpawnSummonTowardsTarget_6FCD42D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo129_SpawnSummonTowardsTarget_6FCD42D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD4870",
+    "name": "SKILLS_FireDirectionalMissile143ForSkill173_6FCD4870",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_FireDirectionalMissile143ForSkill173_6FCD4870_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD4D30",
+    "name": "SKILLS_SrvDo132_SpawnNovaWithCalcSubLoopFrames_6FCD4D30",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo132_SpawnNovaWithCalcSubLoopFrames_6FCD4D30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD5110",
+    "name": "SKILLS_SrvDo134_FireProjectileTowardsTargetOrPath_6FCD5110",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo134_FireProjectileTowardsTargetOrPath_6FCD5110_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD52A0",
+    "name": "SKILLS_SrvDo135_SpawnPerimeterRingProjectiles_6FCD52A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo135_SpawnPerimeterRingProjectiles_6FCD52A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD5450",
+    "name": "SKILLS_SrvDo136_FireSteppedAxisProjectile_6FCD5450",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo136_FireSteppedAxisProjectile_6FCD5450_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD5D40",
+    "name": "SKILLS_SrvDo138_ConsumeCorpseAndHealCaster_6FCD5D40",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo138_ConsumeCorpseAndHealCaster_6FCD5D40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD5E50",
+    "name": "SKILLS_SrvDo139_EmergeSubmergedSummon_6FCD5E50",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo139_EmergeSubmergedSummon_6FCD5E50_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD5FB0",
+    "name": "SKILLS_SrvSt61_PrepareSubmergedSummonParams_6FCD5FB0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt61_PrepareSubmergedSummonParams_6FCD5FB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD65E0",
+    "name": "SKILLS_SrvDo141_SpawnPartyMinionsAndDistributeExp_6FCD65E0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo141_SpawnPartyMinionsAndDistributeExp_6FCD65E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD6720",
+    "name": "SKILLS_ScheduleUnitTimerEventType1_6FCD6720",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "SKILLS_ScheduleUnitTimerEventType1_6FCD6720_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD7380",
+    "name": "AIBAAL_ChooseActionWeighted_6FCD7380",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "AIBAAL_ChooseActionWeighted_6FCD7380_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD75D0",
+    "name": "AIBAAL_ChooseMidRangeActionWeighted_6FCD75D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "AIBAAL_ChooseMidRangeActionWeighted_6FCD75D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD7750",
+    "name": "AIBAAL_ChooseCloseRangeActionWeighted_6FCD7750",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "AIBAAL_ChooseCloseRangeActionWeighted_6FCD7750_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD78A0",
+    "name": "AIBAAL_ReinitAiThinkAndRestoreCmd10_6FCD78A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "AIBAAL_ReinitAiThinkAndRestoreCmd10_6FCD78A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8970",
+    "name": "ACT4Q1_HasNpcQuestIndicator_6FCD8970",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_HasNpcQuestIndicator_6FCD8970_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8A70",
+    "name": "ACT4Q1_EnsureStartedOrInvokeLinkedQuestCallback_6FCD8A70",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_EnsureStartedOrInvokeLinkedQuestCallback_6FCD8A70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b8.test.ts; Wave 19 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchA.json) verified in tests/oracle/k2/k2-disasm-verified-wave19-indA.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8AE0",
+    "name": "ACT4Q1_HasActiveQuestNpcIndicator_6FCD8AE0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_HasActiveQuestNpcIndicator_6FCD8AE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8B90",
+    "name": "ACT4Q2_HasHadrielQuestIndicator_6FCD8B90",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_HasHadrielQuestIndicator_6FCD8B90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8C00",
+    "name": "ACT4Q2_InitHadrielNpcDialog_6FCD8C00",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_InitHadrielNpcDialog_6FCD8C00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FCD8C00) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8CE0",
+    "name": "ACT4Q2_InitHellforgeNpcDialog_6FCD8CE0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_InitHellforgeNpcDialog_6FCD8CE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FCD8CE0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8E80",
+    "name": "ACT4Q2_SyncPlayerQuest1BState_6FCD8E80",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_SyncPlayerQuest1BState_6FCD8E80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD8F20",
+    "name": "ACT4Q3_SyncQuestDataFromPlayerFlags_6FCD8F20",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_SyncQuestDataFromPlayerFlags_6FCD8F20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FCD8F20) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9070",
+    "name": "ACT4Q3_InitNpcDialog_6FCD9070",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_InitNpcDialog_6FCD9070_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FCD9070) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9290",
+    "name": "ACT4Q3_SyncPlayerQuest1AState_6FCD9290",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_SyncPlayerQuest1AState_6FCD9290_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9320",
+    "name": "ACT4Q1_SyncQuestDataFromPlayerFlags_6FCD9320",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_SyncQuestDataFromPlayerFlags_6FCD9320_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD93B0",
+    "name": "ACT4Q1_CheckPlayerNearIzualAndMarkQuestBits_6FCD93B0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_CheckPlayerNearIzualAndMarkQuestBits_6FCD93B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD94F0",
+    "name": "ACT4Q1_MarkQuestFailedIfPlayerInAct4_6FCD94F0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_MarkQuestFailedIfPlayerInAct4_6FCD94F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9560",
+    "name": "ACT4Q1_InitNpcDialog_6FCD9560",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_InitNpcDialog_6FCD9560_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD96A0",
+    "name": "ACT4Q1_SyncPlayerQuest19State_6FCD96A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_SyncPlayerQuest19State_6FCD96A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9730",
+    "name": "ACT4Q0_InitTyraelIntroDialog_6FCD9730",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q0_InitTyraelIntroDialog_6FCD9730_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FCD9730) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9830",
+    "name": "ACT4Q2_SyncQuestDataFromPlayerInventoryAndFlags_6FCD9830",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_SyncQuestDataFromPlayerInventoryAndFlags_6FCD9830_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FCD9830) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9970",
+    "name": "ACT4Q2_SendQuestAlertIfEligible_6FCD9970",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_SendQuestAlertIfEligible_6FCD9970_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD99D0",
+    "name": "ACT4Q3_SendQuestAlertIfEligible_6FCD99D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_SendQuestAlertIfEligible_6FCD99D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9A30",
+    "name": "ACT4Q3_CompleteQuestForPlayer_6FCD9A30",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_CompleteQuestForPlayer_6FCD9A30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9B00",
+    "name": "ACT4Q3_NotifyDiabloKilledAndPlaySpeech_6FCD9B00",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_NotifyDiabloKilledAndPlaySpeech_6FCD9B00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9C00",
+    "name": "ACT4Q1_IsRoomClearOfQuestPlayers_6FCD9C00",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_IsRoomClearOfQuestPlayers_6FCD9C00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCD9D20",
+    "name": "ACT4Q1_SendQuestAlertIfEligible_6FCD9D20",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q1_SendQuestAlertIfEligible_6FCD9D20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCDA810",
+    "name": "ACT4Q2_DropHellforgeHammerAtUnit_6FCDA810",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_DropHellforgeHammerAtUnit_6FCDA810_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCDA850",
+    "name": "ACT4Q3_SpawnDiabloInSanctuary_6FCDA850",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_SpawnDiabloInSanctuary_6FCDA850_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCDAFF0",
+    "name": "ACT4Q3_SpawnLastPortalObject_6FCDAFF0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q3_SpawnLastPortalObject_6FCDAFF0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCDB6A0",
+    "name": "ACT4Q2_ProcessHellforgeSmashRewardWave_6FCDB6A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b8-113c.ts",
+    "tsSymbol": "ACT4Q2_ProcessHellforgeSmashRewardWave_6FCDB6A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k2/k2-disasm-verified-wave13.test.ts"
+  }
+]

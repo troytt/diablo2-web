@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5AE10",
+    "name": "DRLGPRESET_InitPresetRoomEx",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGPRESET_InitPresetRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (6 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5DA40",
+    "name": "PATH_SetPrecisionPosAndRecacheRoom",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_SetPrecisionPosAndRecacheRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85530",
+    "name": "PATH_ComputeDirectSinglePointPath",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeDirectSinglePointPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92A20",
+    "name": "DRLGOUTDOORS_GetLevelLinkVisBit",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTDOORS_GetLevelLinkVisBit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (7 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD944F0",
+    "name": "DRLGROOM_FlagIfAdjacentToTown",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_FlagIfAdjacentToTown113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (7 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94B20",
+    "name": "DRLGROOM_InsertOrthSorted",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_InsertOrthSorted113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (7 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94BA0",
+    "name": "DRLGROOM_LinkRoomsBidirectional",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_LinkRoomsBidirectional113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (6 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9BCF0",
+    "name": "COLLISION_ResetMaskWithPattern",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_ResetMaskWithPattern113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9BE10",
+    "name": "COLLISION_ResetMaskWithPatternSimple",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_ResetMaskWithPatternSimple113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9BE90",
+    "name": "COLLISION_SetUnitCollisionMaskWithPattern",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_SetUnitCollisionMaskWithPattern113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9CE00",
+    "name": "COLLISION_CheckMaskWithPattern1",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_CheckMaskWithPattern1_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9CE90",
+    "name": "COLLISION_CheckMaskWithPattern2",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_CheckMaskWithPattern2_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9CF40",
+    "name": "COLLISION_GetMaskWithPattern2",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_GetMaskWithPattern2_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (8 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9170",
+    "name": "DRLGROOMTILE_InitFloorTileData",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_InitFloorTileData113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (7 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD3630",
+    "name": "DRLGROOM_CopyPresetUnitsInTileBox",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_CopyPresetUnitsInTileBox113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-1.test.ts (6 real-DLL vectors; 110 total in tests/fixtures/oracle/k1/i10c-1-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  }
+]

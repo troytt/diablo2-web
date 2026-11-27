@@ -1,0 +1,218 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC2E5D0",
+    "name": "ITEMS_GetDropItemLevel_6FC2E5D0",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_GetDropItemLevel_6FC2E5D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2E930",
+    "name": "ITEMS_FindFreeGroundDropCoords_6FC2E930",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_FindFreeGroundDropCoords_6FC2E930_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2EA10",
+    "name": "ITEMS_ScheduleReplenishQuantityEvent_6FC2EA10",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_ScheduleReplenishQuantityEvent_6FC2EA10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2EA70",
+    "name": "ITEMS_ScheduleReplenishDurabilityEvent_6FC2EA70",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_ScheduleReplenishDurabilityEvent_6FC2EA70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2EBB0",
+    "name": "ITEMS_RollAndApplyEthereal_6FC2EBB0",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_RollAndApplyEthereal_6FC2EBB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2EC90",
+    "name": "ITEMS_RollAndApplySockets_6FC2EC90",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_RollAndApplySockets_6FC2EC90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2EE90",
+    "name": "ITEMS_RollItemQualityOnCreatedItem_6FC2EE90",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_RollItemQualityOnCreatedItem_6FC2EE90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2F260",
+    "name": "ITEMS_ApplyGoldFindBonus_6FC2F260",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_ApplyGoldFindBonus_6FC2F260_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2FB70",
+    "name": "ITEMS_ExpireGroundItemsInAct_6FC2FB70",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_ExpireGroundItemsInAct_6FC2FB70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c binary port verified in tests/oracle/k2/real-itemdrop-pipeline.test.ts; runtime-executed in dllExecuted\u2229tsExecuted (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC2FC40",
+    "name": "ITEMS_RollItemQuality_6FC2FC40",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_RollItemQuality_6FC2FC40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC30160",
+    "name": "ITEMS_InitItemUnit_6FC30160",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_InitItemUnit_6FC30160_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c binary port verified in tests/oracle/k2/real-itemdrop-pipeline.test.ts; runtime-executed in dllExecuted\u2229tsExecuted (tests/oracle/k2/replay-k2-coverage.test.ts)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC30550",
+    "name": "ITEMS_FinalizeNormalExpansionItem_6FC30550",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_FinalizeNormalExpansionItem_6FC30550_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC307B0",
+    "name": "ITEMS_DispatchNormalItemModsByFormat_6FC307B0",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_DispatchNormalItemModsByFormat_6FC307B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC30A20",
+    "name": "ITEMS_GenerateMagicOrRareAffixes_6FC30A20",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_GenerateMagicOrRareAffixes_6FC30A20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC31070",
+    "name": "ITEMS_InitCreatedItemStats_6FC31070",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_InitCreatedItemStats_6FC31070_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC31490",
+    "name": "D2GAME_CreateItemEx_6FC31490",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "D2GAME_CreateItemEx_6FC31490_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC31880",
+    "name": "ITEMS_CreateDroppedItemAtUnit_6FC31880",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_CreateDroppedItemAtUnit_6FC31880_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC32380",
+    "name": "ITEMS_ChooseTreasureClassAndDrop_6FC32380",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_ChooseTreasureClassAndDrop_6FC32380_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC32D60",
+    "name": "ITEMS_DropMonsterTreasure_6FC32D60",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_DropMonsterTreasure_6FC32D60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC32EE0",
+    "name": "ITEMS_ApplyItemDurabilityLoss_6FC32EE0",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_ApplyItemDurabilityLoss_6FC32EE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 SparseMemory113c binary port verified in tests/oracle/k2/real-itemdrop-pipeline.test.ts and tests/oracle/k2/replay-k2-coverage.test.ts (awaiting 0x6FC99100 re-binding for transitive diff-verified)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC33DE0",
+    "name": "ITEMS_RollStaffModsOnItem_6FC33DE0",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "ITEMS_RollStaffModsOnItem_6FC33DE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC51000",
+    "name": "OBJECTS_FindFreeDropCoordsAndSpawnItem_6FC51000",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "OBJECTS_FindFreeDropCoordsAndSpawnItem_6FC51000_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FC51000 (2027B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Fixed unconditional lastSpawnedObj resets at seed/extra object spawn sites (0x6FC5140E, 0x6FC5165C)."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC95680",
+    "name": "MONSTER_DropTreasureOnDeath_6FC95680",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "MONSTER_DropTreasureOnDeath_6FC95680_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC95900",
+    "name": "MONSTER_DropDeathItems_6FC95900",
+    "kernFile": "src/d2kern-113c/game/k2-real-itemdrop-113c.ts",
+    "tsSymbol": "MONSTER_DropDeathItems_6FC95900_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wine 1.13c longitudinal t4+gs differential replay zero-divergence in tests/oracle/k2/replay-k2-coverage.test.ts and tests/oracle/k2/real-itemdrop-pipeline.test.ts (a1c-bloodmoor-fallen, a1-bloodmoor-melee, p52-dot-ticks, p52-item-defense)"
+  }
+]

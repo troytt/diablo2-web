@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD87660",
+    "name": "ENV_StepCycle",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENV_StepCycle113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (5 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87BA0",
+    "name": "ENV_AllocDrlgEnvironment",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENV_AllocDrlgEnvironment113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87C20",
+    "name": "ENV_ResetDefaultEnvironment",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg.ts",
+    "tsSymbol": "ENV_ResetDefaultEnvironment113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87CA0",
+    "name": "ENV_InitEclipseEnvironment",
+    "kernFile": "src/d2kern-113c/common/env.ts",
+    "tsSymbol": "ENV_InitEclipseEnvironment113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BDD0",
+    "name": "DUNGEON_SortRoomClientArray",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_SortRoomClientArray113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C200",
+    "name": "DUNGEON_AllocAndBuildRoomNeighborList",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_AllocAndBuildRoomNeighborList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C870",
+    "name": "DUNGEON_FreeRoomAndDetachUnits",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FreeRoomAndDetachUnits113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94A30",
+    "name": "DRLGROOM_AppendAndSortAdjacentRoom",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_AppendAndSortAdjacentRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD94DF0",
+    "name": "DRLGROOM_BuildRoomExNearList",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_BuildRoomExNearList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95240",
+    "name": "DRLGROOM_AllocRoomTileWindowNode",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_AllocRoomTileWindowNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9CA90",
+    "name": "COLLISION_StampRoomTileGridToCollGrid",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_StampRoomTileGridToCollGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (5 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8510",
+    "name": "DRLGROOMTILE_FreeRoomTileGridAndAnimList",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_FreeRoomTileGridAndAnimList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB8800",
+    "name": "DRLGROOMTILE_UpdateWindowTileCacheEntry",
+    "kernFile": "src/d2kern-113c/common/drlg/room-tile.ts",
+    "tsSymbol": "DRLGROOMTILE_UpdateWindowTileCacheEntry113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCBA00",
+    "name": "DUNGEON_ShouldDeactivateRoomEx",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_ShouldDeactivateRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (6 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1200",
+    "name": "DRLGLOGIC_BuildRoomCoordListRegions",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_BuildRoomCoordListRegions113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B047-drlg-dungeon-env.test.ts (4 real-DLL vectors; 68 total in tests/fixtures/oracle/k1/b047-vectors.ndjson via k1r2-laneC-it7-emitter.c)"
+  }
+]

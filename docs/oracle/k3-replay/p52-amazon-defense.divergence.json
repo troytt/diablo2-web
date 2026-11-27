@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-amazon-defense",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1800,
+  "strictHorizon": 1800,
+  "posHorizon": 1800,
+  "matchedKernelFrames": 1798,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "53bc82effecbc59aae7684606b33683cd7a37ae0b7902897eff9af044b1c2532",
+  "snapshotSha256": "ceef3e26ea4964bb0d7838f388d6ff9529ef24d411f948196d48ba056b0c1a2a"
+}

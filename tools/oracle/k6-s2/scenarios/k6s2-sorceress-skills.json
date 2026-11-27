@@ -1,0 +1,593 @@
+{
+  "name": "k6s2-sorceress-skills",
+  "description": "Level 45 Sorceress all-3-tree scenario: learns all 30 Sorceress skills (36..65), casts Frozen/Shiver/Chilling Armor, Energy Shield, Enchant, Thunder Storm, Blaze (with active running trail), Fire Bolt/Ball, Inferno, Fire Wall, Meteor, Hydra, Ice Bolt/Blast, Frost Nova, Glacial Spike, Blizzard, Frozen Orb, Charged Bolt, Static Field, Telekinesis, Nova, Lightning, Chain Lightning, and Teleport.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6-s2/saves/k6s2-sorceress-skills.d2s",
+  "difficulty": 0,
+  "frames": 680,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    31000000
+  ],
+  "oracleSetGold": [
+    2,
+    250000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "cap",
+      1,
+      6,
+      40
+    ],
+    [
+      2,
+      "lbl",
+      8,
+      6,
+      40
+    ],
+    [
+      2,
+      "rin",
+      6,
+      6,
+      40
+    ],
+    [
+      2,
+      "amu",
+      2,
+      7,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 4,
+      "c2s": "3a001d",
+      "note": "+30 Strength"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a0163",
+      "note": "+120 Energy"
+    },
+    {
+      "frame": 6,
+      "c2s": "3a0213",
+      "note": "+20 Dexterity"
+    },
+    {
+      "frame": 7,
+      "c2s": "3a0331",
+      "note": "+50 Vitality"
+    },
+    {
+      "frame": 8,
+      "c2s": "3b2400",
+      "note": "learn Sorceress skill 36"
+    },
+    {
+      "frame": 9,
+      "c2s": "3b2500",
+      "note": "learn Sorceress skill 37"
+    },
+    {
+      "frame": 10,
+      "c2s": "3b2600",
+      "note": "learn Sorceress skill 38"
+    },
+    {
+      "frame": 11,
+      "c2s": "3b2700",
+      "note": "learn Sorceress skill 39"
+    },
+    {
+      "frame": 12,
+      "c2s": "3b2800",
+      "note": "learn Sorceress skill 40"
+    },
+    {
+      "frame": 13,
+      "c2s": "3b2900",
+      "note": "learn Sorceress skill 41"
+    },
+    {
+      "frame": 14,
+      "c2s": "3b2a00",
+      "note": "learn Sorceress skill 42"
+    },
+    {
+      "frame": 15,
+      "c2s": "3b2b00",
+      "note": "learn Sorceress skill 43"
+    },
+    {
+      "frame": 16,
+      "c2s": "3b2c00",
+      "note": "learn Sorceress skill 44"
+    },
+    {
+      "frame": 17,
+      "c2s": "3b2d00",
+      "note": "learn Sorceress skill 45"
+    },
+    {
+      "frame": 18,
+      "c2s": "3b2e00",
+      "note": "learn Sorceress skill 46"
+    },
+    {
+      "frame": 19,
+      "c2s": "3b2f00",
+      "note": "learn Sorceress skill 47"
+    },
+    {
+      "frame": 20,
+      "c2s": "3b3000",
+      "note": "learn Sorceress skill 48"
+    },
+    {
+      "frame": 21,
+      "c2s": "3b3100",
+      "note": "learn Sorceress skill 49"
+    },
+    {
+      "frame": 22,
+      "c2s": "3b3200",
+      "note": "learn Sorceress skill 50"
+    },
+    {
+      "frame": 23,
+      "c2s": "3b3300",
+      "note": "learn Sorceress skill 51"
+    },
+    {
+      "frame": 24,
+      "c2s": "3b3400",
+      "note": "learn Sorceress skill 52"
+    },
+    {
+      "frame": 25,
+      "c2s": "3b3500",
+      "note": "learn Sorceress skill 53"
+    },
+    {
+      "frame": 26,
+      "c2s": "3b3600",
+      "note": "learn Sorceress skill 54"
+    },
+    {
+      "frame": 27,
+      "c2s": "3b3700",
+      "note": "learn Sorceress skill 55"
+    },
+    {
+      "frame": 28,
+      "c2s": "3b3800",
+      "note": "learn Sorceress skill 56"
+    },
+    {
+      "frame": 29,
+      "c2s": "3b3900",
+      "note": "learn Sorceress skill 57"
+    },
+    {
+      "frame": 30,
+      "c2s": "3b3a00",
+      "note": "learn Sorceress skill 58"
+    },
+    {
+      "frame": 31,
+      "c2s": "3b3b00",
+      "note": "learn Sorceress skill 59"
+    },
+    {
+      "frame": 32,
+      "c2s": "3b3c00",
+      "note": "learn Sorceress skill 60"
+    },
+    {
+      "frame": 33,
+      "c2s": "3b3d00",
+      "note": "learn Sorceress skill 61"
+    },
+    {
+      "frame": 34,
+      "c2s": "3b3e00",
+      "note": "learn Sorceress skill 62"
+    },
+    {
+      "frame": 35,
+      "c2s": "3b3f00",
+      "note": "learn Sorceress skill 63"
+    },
+    {
+      "frame": 36,
+      "c2s": "3b4000",
+      "note": "learn Sorceress skill 64"
+    },
+    {
+      "frame": 37,
+      "c2s": "3b4100",
+      "note": "learn Sorceress skill 65"
+    },
+    {
+      "frame": 38,
+      "c2s": "3b2500",
+      "note": "pump Warmth"
+    },
+    {
+      "frame": 39,
+      "c2s": "3b2500",
+      "note": "pump Warmth"
+    },
+    {
+      "frame": 40,
+      "c2s": "3b2500",
+      "note": "pump Warmth"
+    },
+    {
+      "frame": 41,
+      "c2s": "3b2500",
+      "note": "pump Warmth"
+    },
+    {
+      "frame": 42,
+      "c2s": "3b2500",
+      "note": "pump Warmth"
+    },
+    {
+      "frame": 43,
+      "c2s": "3c28000000ffffffff",
+      "note": "select Frozen Armor (40)"
+    },
+    {
+      "frame": 44,
+      "c2s": "0c15161e17",
+      "note": "cast Frozen Armor in town"
+    },
+    {
+      "frame": 55,
+      "c2s": "3c3a000000ffffffff",
+      "note": "select Energy Shield (58)"
+    },
+    {
+      "frame": 56,
+      "c2s": "0c15161e17",
+      "note": "cast Energy Shield in town"
+    },
+    {
+      "frame": 67,
+      "c2s": "3c34000000ffffffff",
+      "note": "select Enchant (52)"
+    },
+    {
+      "frame": 68,
+      "c2s": "0c15161e17",
+      "note": "cast Enchant on self in town"
+    },
+    {
+      "frame": 76,
+      "c2s": "030d161217",
+      "note": "run to (5645,5906)"
+    },
+    {
+      "frame": 100,
+      "c2s": "0314160617",
+      "note": "run to (5652,5894)"
+    },
+    {
+      "frame": 124,
+      "c2s": "032016fa16",
+      "note": "run to (5664,5882)"
+    },
+    {
+      "frame": 148,
+      "c2s": "032116f716",
+      "note": "run to (5665,5879)"
+    },
+    {
+      "frame": 172,
+      "c2s": "032216e416",
+      "note": "run to (5666,5860)"
+    },
+    {
+      "frame": 198,
+      "c2s": "032216d316",
+      "note": "run to (5666,5843)"
+    },
+    {
+      "frame": 224,
+      "c2s": "032116c316",
+      "note": "run to (5665,5827)"
+    },
+    {
+      "frame": 250,
+      "c2s": "032016b916",
+      "note": "run to (5664,5817)"
+    },
+    {
+      "frame": 276,
+      "c2s": "031e16aa16",
+      "note": "run to (5662,5802)"
+    },
+    {
+      "frame": 304,
+      "c2s": "3c39000000ffffffff",
+      "note": "select Thunder Storm (57)"
+    },
+    {
+      "frame": 305,
+      "c2s": "0c1e16aa16",
+      "note": "cast Thunder Storm"
+    },
+    {
+      "frame": 317,
+      "c2s": "3c32000000ffffffff",
+      "note": "select Shiver Armor (50)"
+    },
+    {
+      "frame": 318,
+      "c2s": "0c1e16aa16",
+      "note": "cast Shiver Armor"
+    },
+    {
+      "frame": 330,
+      "c2s": "3c2e000000ffffffff",
+      "note": "select Blaze (46)"
+    },
+    {
+      "frame": 331,
+      "c2s": "0c1e16aa16",
+      "note": "cast Blaze"
+    },
+    {
+      "frame": 340,
+      "c2s": "031816a216",
+      "note": "run with Blaze active to spawn fire trail near zombies"
+    },
+    {
+      "frame": 362,
+      "c2s": "02010000000a000000",
+      "note": "0x02 WalkToUnit zombie #10 (triggers Energy Shield + Shiver Armor)"
+    },
+    {
+      "frame": 380,
+      "c2s": "3c38000000ffffffff",
+      "note": "select Meteor (56, delay 30f)"
+    },
+    {
+      "frame": 381,
+      "c2s": "0c1d16a316",
+      "note": "cast Meteor"
+    },
+    {
+      "frame": 393,
+      "c2s": "3c26000000ffffffff",
+      "note": "select Charged Bolt (38)"
+    },
+    {
+      "frame": 394,
+      "c2s": "0c1d16a316",
+      "note": "cast Charged Bolt"
+    },
+    {
+      "frame": 406,
+      "c2s": "3c2a000000ffffffff",
+      "note": "select Static Field (42)"
+    },
+    {
+      "frame": 407,
+      "c2s": "0c1d16a316",
+      "note": "cast Static Field"
+    },
+    {
+      "frame": 418,
+      "c2s": "3c3b000000ffffffff",
+      "note": "select Blizzard (59, delay 45f)"
+    },
+    {
+      "frame": 419,
+      "c2s": "0c1d16a316",
+      "note": "cast Blizzard"
+    },
+    {
+      "frame": 431,
+      "c2s": "3c2b000000ffffffff",
+      "note": "select Telekinesis (43)"
+    },
+    {
+      "frame": 432,
+      "c2s": "0d010000000a000000",
+      "note": "cast Telekinesis on zombie #10"
+    },
+    {
+      "frame": 444,
+      "c2s": "3c30000000ffffffff",
+      "note": "select Nova (48)"
+    },
+    {
+      "frame": 445,
+      "c2s": "0c1e16a616",
+      "note": "cast Nova"
+    },
+    {
+      "frame": 457,
+      "c2s": "3c2c000000ffffffff",
+      "note": "select Frost Nova (44)"
+    },
+    {
+      "frame": 458,
+      "c2s": "0c1e16a616",
+      "note": "cast Frost Nova"
+    },
+    {
+      "frame": 470,
+      "c2s": "3c3e000000ffffffff",
+      "note": "select Hydra (62, delay 40f)"
+    },
+    {
+      "frame": 471,
+      "c2s": "0c1a16a416",
+      "note": "summon Hydra"
+    },
+    {
+      "frame": 483,
+      "c2s": "3c31000000ffffffff",
+      "note": "select Lightning (49)"
+    },
+    {
+      "frame": 484,
+      "c2s": "0c0a169916",
+      "note": "cast Lightning"
+    },
+    {
+      "frame": 496,
+      "c2s": "3c35000000ffffffff",
+      "note": "select Chain Lightning (53)"
+    },
+    {
+      "frame": 497,
+      "c2s": "0c0a169916",
+      "note": "cast Chain Lightning"
+    },
+    {
+      "frame": 509,
+      "c2s": "3c24000080ffffffff",
+      "note": "select Fire Bolt (36)"
+    },
+    {
+      "frame": 510,
+      "c2s": "050a169916",
+      "note": "cast Fire Bolt"
+    },
+    {
+      "frame": 520,
+      "c2s": "3c40000000ffffffff",
+      "note": "select Frozen Orb (64, delay 25f)"
+    },
+    {
+      "frame": 521,
+      "c2s": "0c0a169916",
+      "note": "cast Frozen Orb"
+    },
+    {
+      "frame": 533,
+      "c2s": "3c2f000000ffffffff",
+      "note": "select Fire Ball (47)"
+    },
+    {
+      "frame": 534,
+      "c2s": "0c0a169916",
+      "note": "cast Fire Ball"
+    },
+    {
+      "frame": 546,
+      "c2s": "3c27000080ffffffff",
+      "note": "select Ice Bolt (39)"
+    },
+    {
+      "frame": 547,
+      "c2s": "050a169916",
+      "note": "cast Ice Bolt"
+    },
+    {
+      "frame": 556,
+      "c2s": "3c33000000ffffffff",
+      "note": "select Fire Wall (51, delay 35f)"
+    },
+    {
+      "frame": 557,
+      "c2s": "0c0a169916",
+      "note": "cast Fire Wall"
+    },
+    {
+      "frame": 569,
+      "c2s": "3c2d000000ffffffff",
+      "note": "select Ice Blast (45)"
+    },
+    {
+      "frame": 570,
+      "c2s": "0c0a169916",
+      "note": "cast Ice Blast"
+    },
+    {
+      "frame": 582,
+      "c2s": "3c37000000ffffffff",
+      "note": "select Glacial Spike (55)"
+    },
+    {
+      "frame": 583,
+      "c2s": "0c0a169916",
+      "note": "cast Glacial Spike"
+    },
+    {
+      "frame": 595,
+      "c2s": "3c29000000ffffffff",
+      "note": "select Inferno (41)"
+    },
+    {
+      "frame": 596,
+      "c2s": "0c0a169916",
+      "note": "cast Inferno"
+    },
+    {
+      "frame": 610,
+      "c2s": "3c3c000000ffffffff",
+      "note": "select Chilling Armor (60)"
+    },
+    {
+      "frame": 611,
+      "c2s": "0c1816a216",
+      "note": "cast Chilling Armor"
+    },
+    {
+      "frame": 623,
+      "c2s": "3c36000000ffffffff",
+      "note": "select Teleport (54)"
+    },
+    {
+      "frame": 624,
+      "c2s": "0c48168216",
+      "note": "Teleport to Fallen camp"
+    },
+    {
+      "frame": 640,
+      "c2s": "3c3e000000ffffffff",
+      "note": "select Hydra at Fallen camp"
+    },
+    {
+      "frame": 641,
+      "c2s": "0c4a168016",
+      "note": "summon Hydra at Fallen camp"
+    }
+  ]
+}

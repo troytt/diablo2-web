@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-sorceress-fire-dot",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1800,
+  "strictHorizon": 1800,
+  "posHorizon": 1800,
+  "matchedKernelFrames": 1798,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "2aea1b8ec7b7786f9d953b10c169723e76b75344cbe68cf823e2cf86ffdcfeb7",
+  "snapshotSha256": "aed7b57697fcf7cb1e61e7b97b622bfb43926f7dafa213ee5f790a6bbdb5c663"
+}

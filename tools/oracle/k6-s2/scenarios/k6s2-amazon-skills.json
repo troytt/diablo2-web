@@ -1,0 +1,603 @@
+{
+  "name": "k6s2-amazon-skills",
+  "description": "Level 45 Amazon multi-tree scenario (Rare Short Bow+Arrows + Javelin+Buckler on swap): learns all 30 Amazon skills (6..35), casts Inner Sight/Slow Missiles/Decoy/Valkyrie, all 10 Bow skills (Magic/Fire/Cold/Multiple/Exploding/Ice/Guided/Strafe/Immolation/Freezing Arrow), and all 10 Javelin/Spear skills (Poison/Plague/Lightning Bolt/Fury/Jab/Power/Impale/Charged/Fend/Lightning Strike) across Blood Moor zombies and Fallen camp.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6-s2/saves/k6s2-amazon-skills.d2s",
+  "difficulty": 0,
+  "frames": 715,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    31000000
+  ],
+  "oracleSetGold": [
+    2,
+    250000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "sbw",
+      11,
+      6,
+      40
+    ],
+    [
+      2,
+      "aqv",
+      12,
+      2,
+      40
+    ],
+    [
+      2,
+      "cap",
+      1,
+      6,
+      40
+    ],
+    [
+      2,
+      "lbl",
+      8,
+      6,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 4,
+      "c2s": "3a0031",
+      "note": "+50 Strength"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a0159",
+      "note": "+90 Energy"
+    },
+    {
+      "frame": 6,
+      "c2s": "3a0227",
+      "note": "+40 Dexterity"
+    },
+    {
+      "frame": 7,
+      "c2s": "3a0327",
+      "note": "+40 Vitality"
+    },
+    {
+      "frame": 8,
+      "c2s": "3b0600",
+      "note": "learn Amazon skill 6"
+    },
+    {
+      "frame": 9,
+      "c2s": "3b0700",
+      "note": "learn Amazon skill 7"
+    },
+    {
+      "frame": 10,
+      "c2s": "3b0800",
+      "note": "learn Amazon skill 8"
+    },
+    {
+      "frame": 11,
+      "c2s": "3b0900",
+      "note": "learn Amazon skill 9"
+    },
+    {
+      "frame": 12,
+      "c2s": "3b0a00",
+      "note": "learn Amazon skill 10"
+    },
+    {
+      "frame": 13,
+      "c2s": "3b0b00",
+      "note": "learn Amazon skill 11"
+    },
+    {
+      "frame": 14,
+      "c2s": "3b0c00",
+      "note": "learn Amazon skill 12"
+    },
+    {
+      "frame": 15,
+      "c2s": "3b0d00",
+      "note": "learn Amazon skill 13"
+    },
+    {
+      "frame": 16,
+      "c2s": "3b0e00",
+      "note": "learn Amazon skill 14"
+    },
+    {
+      "frame": 17,
+      "c2s": "3b0f00",
+      "note": "learn Amazon skill 15"
+    },
+    {
+      "frame": 18,
+      "c2s": "3b1000",
+      "note": "learn Amazon skill 16"
+    },
+    {
+      "frame": 19,
+      "c2s": "3b1100",
+      "note": "learn Amazon skill 17"
+    },
+    {
+      "frame": 20,
+      "c2s": "3b1200",
+      "note": "learn Amazon skill 18"
+    },
+    {
+      "frame": 21,
+      "c2s": "3b1300",
+      "note": "learn Amazon skill 19"
+    },
+    {
+      "frame": 22,
+      "c2s": "3b1400",
+      "note": "learn Amazon skill 20"
+    },
+    {
+      "frame": 23,
+      "c2s": "3b1500",
+      "note": "learn Amazon skill 21"
+    },
+    {
+      "frame": 24,
+      "c2s": "3b1600",
+      "note": "learn Amazon skill 22"
+    },
+    {
+      "frame": 25,
+      "c2s": "3b1700",
+      "note": "learn Amazon skill 23"
+    },
+    {
+      "frame": 26,
+      "c2s": "3b1800",
+      "note": "learn Amazon skill 24"
+    },
+    {
+      "frame": 27,
+      "c2s": "3b1900",
+      "note": "learn Amazon skill 25"
+    },
+    {
+      "frame": 28,
+      "c2s": "3b1a00",
+      "note": "learn Amazon skill 26"
+    },
+    {
+      "frame": 29,
+      "c2s": "3b1b00",
+      "note": "learn Amazon skill 27"
+    },
+    {
+      "frame": 30,
+      "c2s": "3b1c00",
+      "note": "learn Amazon skill 28"
+    },
+    {
+      "frame": 31,
+      "c2s": "3b1d00",
+      "note": "learn Amazon skill 29"
+    },
+    {
+      "frame": 32,
+      "c2s": "3b1e00",
+      "note": "learn Amazon skill 30"
+    },
+    {
+      "frame": 33,
+      "c2s": "3b1f00",
+      "note": "learn Amazon skill 31"
+    },
+    {
+      "frame": 34,
+      "c2s": "3b2000",
+      "note": "learn Amazon skill 32"
+    },
+    {
+      "frame": 35,
+      "c2s": "3b2100",
+      "note": "learn Amazon skill 33"
+    },
+    {
+      "frame": 36,
+      "c2s": "3b2200",
+      "note": "learn Amazon skill 34"
+    },
+    {
+      "frame": 37,
+      "c2s": "3b2300",
+      "note": "learn Amazon skill 35"
+    },
+    {
+      "frame": 38,
+      "c2s": "3b2100",
+      "note": "boost skill 33"
+    },
+    {
+      "frame": 39,
+      "c2s": "3b2100",
+      "note": "boost skill 33"
+    },
+    {
+      "frame": 40,
+      "c2s": "3b2100",
+      "note": "boost skill 33"
+    },
+    {
+      "frame": 41,
+      "c2s": "3b2100",
+      "note": "boost skill 33"
+    },
+    {
+      "frame": 42,
+      "c2s": "3b1a00",
+      "note": "boost skill 26"
+    },
+    {
+      "frame": 43,
+      "c2s": "3b1a00",
+      "note": "boost skill 26"
+    },
+    {
+      "frame": 44,
+      "c2s": "3b0c00",
+      "note": "boost skill 12"
+    },
+    {
+      "frame": 45,
+      "c2s": "3b0c00",
+      "note": "boost skill 12"
+    },
+    {
+      "frame": 46,
+      "c2s": "0b",
+      "note": "0x0B noop"
+    },
+    {
+      "frame": 47,
+      "c2s": "5f15161e17",
+      "note": "0x5F position sync"
+    },
+    {
+      "frame": 48,
+      "c2s": "60",
+      "note": "0x60 swap to Rare Short Bow + Arrows"
+    },
+    {
+      "frame": 50,
+      "c2s": "030d161217",
+      "note": "run to (5645,5906)"
+    },
+    {
+      "frame": 74,
+      "c2s": "0314160617",
+      "note": "run to (5652,5894)"
+    },
+    {
+      "frame": 98,
+      "c2s": "032016fa16",
+      "note": "run to (5664,5882)"
+    },
+    {
+      "frame": 122,
+      "c2s": "032116f716",
+      "note": "run to (5665,5879)"
+    },
+    {
+      "frame": 146,
+      "c2s": "032216e416",
+      "note": "run to (5666,5860)"
+    },
+    {
+      "frame": 172,
+      "c2s": "032216d316",
+      "note": "run to (5666,5843)"
+    },
+    {
+      "frame": 198,
+      "c2s": "032116c316",
+      "note": "run to (5665,5827)"
+    },
+    {
+      "frame": 224,
+      "c2s": "032016b916",
+      "note": "run to (5664,5817)"
+    },
+    {
+      "frame": 250,
+      "c2s": "031e16aa16",
+      "note": "run to (5662,5802)"
+    },
+    {
+      "frame": 276,
+      "c2s": "3c08000000ffffffff",
+      "note": "select Inner Sight (8)"
+    },
+    {
+      "frame": 277,
+      "c2s": "0c1d16a316",
+      "note": "cast Inner Sight"
+    },
+    {
+      "frame": 289,
+      "c2s": "3c11000000ffffffff",
+      "note": "select Slow Missiles (17)"
+    },
+    {
+      "frame": 290,
+      "c2s": "0c1d16a316",
+      "note": "cast Slow Missiles"
+    },
+    {
+      "frame": 302,
+      "c2s": "3c1c000000ffffffff",
+      "note": "select Decoy (28)"
+    },
+    {
+      "frame": 303,
+      "c2s": "0c1e16a616",
+      "note": "cast Decoy"
+    },
+    {
+      "frame": 315,
+      "c2s": "3c06000080ffffffff",
+      "note": "select Magic Arrow (6)"
+    },
+    {
+      "frame": 316,
+      "c2s": "051d16a316",
+      "note": "0x05 LeftLoc Magic Arrow"
+    },
+    {
+      "frame": 328,
+      "c2s": "3c07000080ffffffff",
+      "note": "select Fire Arrow (7)"
+    },
+    {
+      "frame": 329,
+      "c2s": "081d16a316",
+      "note": "0x08 RepeatLeftLoc Fire Arrow"
+    },
+    {
+      "frame": 341,
+      "c2s": "3c0b000000ffffffff",
+      "note": "select Cold Arrow (11)"
+    },
+    {
+      "frame": 342,
+      "c2s": "0c1d16a316",
+      "note": "0x0C Cold Arrow"
+    },
+    {
+      "frame": 354,
+      "c2s": "3c0c000000ffffffff",
+      "note": "select Multiple Shot (12)"
+    },
+    {
+      "frame": 355,
+      "c2s": "0f1d16a316",
+      "note": "0x0F RepeatRightLoc Multiple Shot"
+    },
+    {
+      "frame": 367,
+      "c2s": "3c10000000ffffffff",
+      "note": "select Exploding Arrow (16)"
+    },
+    {
+      "frame": 368,
+      "c2s": "0e010000000a000000",
+      "note": "0x0E ShiftRight Exploding Arrow"
+    },
+    {
+      "frame": 380,
+      "c2s": "3c15000000ffffffff",
+      "note": "select Ice Arrow (21)"
+    },
+    {
+      "frame": 381,
+      "c2s": "100100000009000000",
+      "note": "0x10 RepeatRight Ice Arrow"
+    },
+    {
+      "frame": 393,
+      "c2s": "3c16000000ffffffff",
+      "note": "select Guided Arrow (22)"
+    },
+    {
+      "frame": 394,
+      "c2s": "11010000000b000000",
+      "note": "0x11 RepeatShiftRight Guided Arrow at #11"
+    },
+    {
+      "frame": 408,
+      "c2s": "3c1a000000ffffffff",
+      "note": "select Strafe (26)"
+    },
+    {
+      "frame": 409,
+      "c2s": "0c0d169a16",
+      "note": "Strafe volley toward zombie #11"
+    },
+    {
+      "frame": 430,
+      "c2s": "3c1b000000ffffffff",
+      "note": "select Immolation Arrow (27, delay 25f)"
+    },
+    {
+      "frame": 431,
+      "c2s": "0c0d169a16",
+      "note": "Immolation Arrow"
+    },
+    {
+      "frame": 459,
+      "c2s": "3c1f000000ffffffff",
+      "note": "select Freezing Arrow (31)"
+    },
+    {
+      "frame": 460,
+      "c2s": "0c0d169a16",
+      "note": "Freezing Arrow"
+    },
+    {
+      "frame": 472,
+      "c2s": "60",
+      "note": "0x60 swap back to Javelin + Buckler"
+    },
+    {
+      "frame": 476,
+      "c2s": "0324169416",
+      "note": "run north-east toward Fallen camp"
+    },
+    {
+      "frame": 498,
+      "c2s": "0335168816",
+      "note": "approach Fallen camp"
+    },
+    {
+      "frame": 520,
+      "c2s": "0346168016",
+      "note": "enter Fallen camp"
+    },
+    {
+      "frame": 542,
+      "c2s": "3c0f000000ffffffff",
+      "note": "select Poison Javelin (15, delay 15f)"
+    },
+    {
+      "frame": 543,
+      "c2s": "0c4e167f16",
+      "note": "throw Poison Javelin"
+    },
+    {
+      "frame": 560,
+      "c2s": "3c14000000ffffffff",
+      "note": "select Lightning Bolt (20)"
+    },
+    {
+      "frame": 561,
+      "c2s": "0c4e167f16",
+      "note": "throw Lightning Bolt"
+    },
+    {
+      "frame": 573,
+      "c2s": "3c23000000ffffffff",
+      "note": "select Lightning Fury (35)"
+    },
+    {
+      "frame": 574,
+      "c2s": "0c4e167f16",
+      "note": "throw Lightning Fury"
+    },
+    {
+      "frame": 586,
+      "c2s": "3c19000000ffffffff",
+      "note": "select Plague Javelin (25, delay 100f)"
+    },
+    {
+      "frame": 587,
+      "c2s": "0c4e167f16",
+      "note": "throw Plague Javelin (8-way cloud)"
+    },
+    {
+      "frame": 600,
+      "c2s": "3c0a000080ffffffff",
+      "note": "select Jab (10)"
+    },
+    {
+      "frame": 601,
+      "c2s": "054b167f16",
+      "note": "Jab"
+    },
+    {
+      "frame": 615,
+      "c2s": "3c0e000080ffffffff",
+      "note": "select Power Strike (14)"
+    },
+    {
+      "frame": 616,
+      "c2s": "054b167f16",
+      "note": "Power Strike"
+    },
+    {
+      "frame": 630,
+      "c2s": "3c13000080ffffffff",
+      "note": "select Impale (19)"
+    },
+    {
+      "frame": 631,
+      "c2s": "054b167f16",
+      "note": "Impale"
+    },
+    {
+      "frame": 648,
+      "c2s": "3c18000080ffffffff",
+      "note": "select Charged Strike (24)"
+    },
+    {
+      "frame": 649,
+      "c2s": "054b167f16",
+      "note": "Charged Strike"
+    },
+    {
+      "frame": 664,
+      "c2s": "3c1e000080ffffffff",
+      "note": "select Fend (30)"
+    },
+    {
+      "frame": 665,
+      "c2s": "054b167f16",
+      "note": "Fend"
+    },
+    {
+      "frame": 680,
+      "c2s": "3c22000080ffffffff",
+      "note": "select Lightning Strike (34)"
+    },
+    {
+      "frame": 681,
+      "c2s": "054b167f16",
+      "note": "Lightning Strike"
+    },
+    {
+      "frame": 694,
+      "c2s": "3c20000000ffffffff",
+      "note": "select Valkyrie (32)"
+    },
+    {
+      "frame": 695,
+      "c2s": "0c46168016",
+      "note": "summon Valkyrie in Blood Moor"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC561E0",
+    "name": "QUESTS_SpawnQuestMonsterWithRetryRings_6FC561E0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "QUESTS_SpawnQuestMonsterWithRetryRings_6FC561E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC576B0",
+    "name": "PLAYER_FreePlayerDataQuestAndList98_6FC576B0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "PLAYER_FreePlayerDataQuestAndList98_6FC576B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC576F0",
+    "name": "PLAYER_AllocPlayerDataQuestBitBuffers_6FC576F0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "PLAYER_AllocPlayerDataQuestBitBuffers_6FC576F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FC576F0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5A790",
+    "name": "MISSILES_ApplyDemonUndeadElemBonus_6FC5A790",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILES_ApplyDemonUndeadElemBonus_6FC5A790_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5A850",
+    "name": "MISSILES_ConvertPhysToElemByCalc90_6FC5A850",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILES_ConvertPhysToElemByCalc90_6FC5A850_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5A920",
+    "name": "MISSILE_SrvDmg_HealOwnerFromElemDamage_6FC5A920",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDmg_HealOwnerFromElemDamage_6FC5A920_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5D800",
+    "name": "MISSILE_SrvDmg_SpawnRing16SubMissiles_6FC5D800",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDmg_SpawnRing16SubMissiles_6FC5D800_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5DA60",
+    "name": "MISSILE_SrvDmg_SpawnRadial8SubMissiles_6FC5DA60",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDmg_SpawnRadial8SubMissiles_6FC5DA60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5DB30",
+    "name": "MISSILE_SrvDmg_ApplyTargetDmgAndAuraSubMissiles_6FC5DB30",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDmg_ApplyTargetDmgAndAuraSubMissiles_6FC5DB30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5DD60",
+    "name": "MISSILE_SrvDmg_SpawnAuraSubMissilesStrictCount_6FC5DD60",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDmg_SpawnAuraSubMissilesStrictCount_6FC5DD60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC5E330",
+    "name": "MISSILE_SrvDmg_SpawnRing16WithOuterStepAndVel_6FC5E330",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDmg_SpawnRing16WithOuterStepAndVel_6FC5E330_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC604D0",
+    "name": "MISSILE_SrvDo_LinearWithSkillCalcSubMissileMask45_6FC604D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo_LinearWithSkillCalcSubMissileMask45_6FC604D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC613D0",
+    "name": "MISSILE_SrvDo_LinearWithSkillCalcSubMissileMask05_6FC613D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo_LinearWithSkillCalcSubMissileMask05_6FC613D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC61670",
+    "name": "MISSILE_SrvDo_LinearWithParamScaledSubMissileMask05_6FC61670",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo_LinearWithParamScaledSubMissileMask05_6FC61670_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC61B80",
+    "name": "MISSILE_SrvDo_LinearWithTrailingCalc80SubMissile_6FC61B80",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo_LinearWithTrailingCalc80SubMissile_6FC61B80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC61C30",
+    "name": "MISSILE_SrvDo_StoppedRandomSlotSubMissile_6FC61C30",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo_StoppedRandomSlotSubMissile_6FC61C30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC61DE0",
+    "name": "MISSILE_SrvDo_GuidedWithPathFlag08SubMissile_6FC61DE0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MISSILE_SrvDo_GuidedWithPathFlag08SubMissile_6FC61DE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC663A0",
+    "name": "SKILLS_ApplySecondaryAuraAndSpawnChargedMissile_6FC663A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "SKILLS_ApplySecondaryAuraAndSpawnChargedMissile_6FC663A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC68950",
+    "name": "MONSTER_SendMercStatPackets9EForPlayer_6FC68950",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "MONSTER_SendMercStatPackets9EForPlayer_6FC68950_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6A190",
+    "name": "CLIENTS_AppendSaveDataChunk_6FC6A190",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "CLIENTS_AppendSaveDataChunk_6FC6A190_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6AD80",
+    "name": "CLIENTS_CollectAndRecordNearbyPlayerPositions_6FC6AD80",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "CLIENTS_CollectAndRecordNearbyPlayerPositions_6FC6AD80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC6C2A0",
+    "name": "SKILLS_SrvDo_ApplyRadiusAuraStatList_6FC6C2A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo_ApplyRadiusAuraStatList_6FC6C2A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b2.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC70190",
+    "name": "SKILLS_SrvDo_CorpseRing16SubMissiles_6FC70190",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "SKILLS_SrvDo_CorpseRing16SubMissiles_6FC70190_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC73B40",
+    "name": "PLAYERSAVE_WriteInventoryOrCachedSaveBuffer_6FC73B40",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "PLAYERSAVE_WriteInventoryOrCachedSaveBuffer_6FC73B40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC78D40",
+    "name": "ACT5Q6_SendAlert24IfQuest28Active_6FC78D40",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q6_SendAlert24IfQuest28Active_6FC78D40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC78F90",
+    "name": "ACT5Q5_SendAlert23IfQuest27Active_6FC78F90",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q5_SendAlert23IfQuest27Active_6FC78F90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC790C0",
+    "name": "ACT5Q4_SendAlert22IfQuest26Active_6FC790C0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q4_SendAlert22IfQuest26Active_6FC790C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC791D0",
+    "name": "ACT5Q3_SendAlert21IfQuest25Active_6FC791D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q3_SendAlert21IfQuest25Active_6FC791D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC793F0",
+    "name": "ACT5Q2_SendAlert20IfQuest24Active_6FC793F0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q2_SendAlert20IfQuest24Active_6FC793F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC79620",
+    "name": "ACT5Q1_SendAlert1FIfQuest23Active_6FC79620",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q1_SendAlert1FIfQuest23Active_6FC79620_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC799D0",
+    "name": "ACT5Q6_CallbackSendPacket50Quest24_6FC799D0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q6_CallbackSendPacket50Quest24_6FC799D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC799E0",
+    "name": "ACT5Q6_CheckLevel84AndCompleteQuest28_6FC799E0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q6_CheckLevel84AndCompleteQuest28_6FC799E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7A7C0",
+    "name": "ACT5Q0_InitQuest2ADescriptor_6FC7A7C0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q0_InitQuest2ADescriptor_6FC7A7C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b2.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7B0B0",
+    "name": "ACT5Q3_ApplyScrollOfResistanceAcrossDifficulties_6FC7B0B0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q3_ApplyScrollOfResistanceAcrossDifficulties_6FC7B0B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b2.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7C1F0",
+    "name": "ACT5Q2_SpawnMonster209NearUnitOffsetMinus5_6FC7C1F0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q2_SpawnMonster209NearUnitOffsetMinus5_6FC7C1F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7C3A0",
+    "name": "ACT5Q1_SpawnShenkAndAttachQuestData_6FC7C3A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q1_SpawnShenkAndAttachQuestData_6FC7C3A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7D760",
+    "name": "ACT5Q6_SpawnDestructionsEndPortalObject_6FC7D760",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q6_SpawnDestructionsEndPortalObject_6FC7D760_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7DEF0",
+    "name": "ACT5Q3_FindQuest21AndThawFrozenAnya_6FC7DEF0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q3_FindQuest21AndThawFrozenAnya_6FC7DEF0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7E0E0",
+    "name": "ACT5Q5_ResetAncientsToStatuesAndAltar_6FC7E0E0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q5_ResetAncientsToStatuesAndAltar_6FC7E0E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC7EC30",
+    "name": "ACT5Q3_CleanupFrozenAnyaAndTownNpcState_6FC7EC30",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT5Q3_CleanupFrozenAnyaAndTownNpcState_6FC7EC30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC82700",
+    "name": "ACT1Q6_SendAlert06IfQuest06Active_6FC82700",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT1Q6_SendAlert06IfQuest06Active_6FC82700_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC82870",
+    "name": "ACT1Q5_SendAlert05IfQuest05Active_6FC82870",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT1Q5_SendAlert05IfQuest05Active_6FC82870_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC82A80",
+    "name": "ACT1Q4_SendAlert04IfQuest04Active_6FC82A80",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT1Q4_SendAlert04IfQuest04Active_6FC82A80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC82AE0",
+    "name": "ACT1Q3_SendAlert03IfQuest03Active_6FC82AE0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT1Q3_SendAlert03IfQuest03Active_6FC82AE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC82C00",
+    "name": "ACT1Q2_SendAlert02IfQuest02Active_6FC82C00",
+    "kernFile": "src/d2kern-113c/game/k2-w4b2-113c.ts",
+    "tsSymbol": "ACT1Q2_SendAlert02IfQuest02Active_6FC82C00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c differential/regression verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave4.test.ts and tests/oracle/k2/w4b2.test.ts"
+  }
+]

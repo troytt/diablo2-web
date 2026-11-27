@@ -1,0 +1,13 @@
+{
+  "unique": { "label": "Unique", "color": "gold" },
+  "set": { "label": "Set item", "color": "green" },
+  "rune": { "label": "Rune", "color": "orange" },
+  "rare": { "label": "Rare", "color": "yellow" },
+  "magic": { "label": "Magic item", "color": "blue" },
+  "charm": { "label": "Charm", "color": "blue" },
+  "jewel": { "label": "Jewel", "color": "blue" },
+  "gem": { "label": "Gem", "color": "white" },
+  "base": { "label": "Runeword base", "color": "white" },
+  "normal": { "label": "Item", "color": "white" },
+  "quest": { "label": "Quest item", "color": "orange" }
+}

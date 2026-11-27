@@ -1,0 +1,182 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD62000",
+    "name": "UNITFINDS_FreeUnitFindData",
+    "kernFile": "src/d2kern-113c/common/unit-finds.ts",
+    "tsSymbol": "UNITFINDS_FreeUnitFindData113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD62030",
+    "name": "UNITFINDS_InitUnitFindData",
+    "kernFile": "src/d2kern-113c/common/unit-finds.ts",
+    "tsSymbol": "UNITFINDS_InitUnitFindData113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD620F0",
+    "name": "UNITFINDS_GrowUnitsArray",
+    "kernFile": "src/d2kern-113c/common/unit-finds.ts",
+    "tsSymbol": "UNITFINDS_GrowUnitsArray113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD622B0",
+    "name": "UNITFINDS_FindUnitInAdjacentRooms",
+    "kernFile": "src/d2kern-113c/common/unit-finds.ts",
+    "tsSymbol": "UNITFINDS_FindUnitInAdjacentRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD62AF0",
+    "name": "LOGGING_WriteFormattedEntry",
+    "kernFile": "src/d2kern-113c/common/logging.ts",
+    "tsSymbol": "LOGGING_WriteFormattedEntry113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD68260",
+    "name": "CHAT_FreeHoverMsg",
+    "kernFile": "src/d2kern-113c/common/text.ts",
+    "tsSymbol": "CHAT_FreeHoverMsg113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD68280",
+    "name": "CHAT_AllocHoverMsg",
+    "kernFile": "src/d2kern-113c/common/text.ts",
+    "tsSymbol": "CHAT_AllocHoverMsg113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD725F0",
+    "name": "ITEMS_SetItemCell",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMS_SetItemCell113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82E10",
+    "name": "UNITS_ApplyRunWalkStatListInline",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "UNITS_ApplyRunWalkStatListInline113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87E20",
+    "name": "STATLIST_FreeModStats",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_FreeModStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8A9F0",
+    "name": "STATLIST_FreeStatListImpl",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_FreeStatListImpl113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B0A0",
+    "name": "STATLIST_GetUnitType",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetUnitType113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B1A0",
+    "name": "DUNGEON_GetRoomTileSubtypesPtr",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "DUNGEON_GetRoomTileSubtypesPtr113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B1E0",
+    "name": "DUNGEON_GetActLevelId",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "DUNGEON_GetActLevelId113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8D060",
+    "name": "TEXT_BuildMessageList",
+    "kernFile": "src/d2kern-113c/common/text.ts",
+    "tsSymbol": "TEXT_BuildMessageList113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8D210",
+    "name": "TEXT_AddNodeToTextList",
+    "kernFile": "src/d2kern-113c/common/text.ts",
+    "tsSymbol": "TEXT_AddNodeToTextList113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8D280",
+    "name": "TEXT_AllocTextList",
+    "kernFile": "src/d2kern-113c/common/text.ts",
+    "tsSymbol": "TEXT_AllocTextList113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8D450",
+    "name": "TEXT_FreeTextList",
+    "kernFile": "src/d2kern-113c/common/text.ts",
+    "tsSymbol": "TEXT_FreeTextList113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95780",
+    "name": "STATLIST_UnpackSkillStatParam",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_UnpackSkillStatParam113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD96920",
+    "name": "STATLIST_RollRandomItemGraphicStat",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_RollRandomItemGraphicStat113c",
+    "status": "diff-verified",
+    "diffEvidence": "65 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b029-vectors.ndjson replayed in tests/oracle/k1/laneA-B029-hostimport.test.ts"
+  }
+]

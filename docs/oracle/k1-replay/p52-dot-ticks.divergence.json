@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-dot-ticks",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1200,
+  "strictHorizon": 1200,
+  "posHorizon": 1200,
+  "matchedKernelFrames": 1198,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "e2214538b9aadc06a9c64c0667b1adc5ac5375dcd7c5368bf7e77be1f7e0cc12",
+  "snapshotSha256": "ee2efb87d09738239c3d9bba4f7c0847b92ba1aedf6f87b2889e045135e8d4bf"
+}

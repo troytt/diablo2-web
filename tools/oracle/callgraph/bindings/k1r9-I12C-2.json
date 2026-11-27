@@ -1,0 +1,101 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D580",
+    "name": "PATH_RaymarchSubtileSteps",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RaymarchSubtileSteps113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (5 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5D8E0",
+    "name": "PATH_AdvancePrecisionStep",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AdvancePrecisionStep113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (6 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5DB70",
+    "name": "PATH_CheckTargetMovedAndRecompute",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_CheckTargetMovedAndRecompute113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (8 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5E230",
+    "name": "PATH_Step",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_Step113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (6 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD5F000",
+    "name": "DRLGMAZE_SpawnAndLinkAdjacentRoomEx",
+    "kernFile": "src/d2kern-113c/common/drlg/maze.ts",
+    "tsSymbol": "DRLGMAZE_SpawnAndLinkAdjacentRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (3 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD605C0",
+    "name": "DRLGMAZE_SpawnAdjacentSpecialPresetRoom",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGMAZE_SpawnAdjacentSpecialPresetRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (4 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD676F0",
+    "name": "DRLGOUTPLACE_ApplyOutdoorVerticesToGrids",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGOUTPLACE_ApplyOutdoorVerticesToGrids113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (3 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD865A0",
+    "name": "PATH_MarkUnitDeadCollision",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_MarkUnitDeadCollision113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (3 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD1CA0",
+    "name": "DRLGLOGIC_AllocAndBuildRoomCoordList",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-logic.ts",
+    "tsSymbol": "DRLGLOGIC_AllocAndBuildRoomCoordList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (3 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD59F0",
+    "name": "DRLGOUTJUNG_SpawnSpiderForestSpecialPreset",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnSpiderForestSpecialPreset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (5 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD5A80",
+    "name": "DRLGOUTJUNG_PlaceShuffledPresetList",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_PlaceShuffledPresetList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I12C-2.test.ts (4 real-DLL vectors; 50 total in tests/fixtures/oracle/k1/i12c-2-vectors.ndjson via k1r9-laneC-it12-emitter.c)"
+  }
+]

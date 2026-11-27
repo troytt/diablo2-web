@@ -1,0 +1,450 @@
+{
+  "batch": "wave21-indC",
+  "module": "D2Game",
+  "imageBase": "0x6FC20000",
+  "count": 14,
+  "categoryCounts": {
+    "static_table": 1,
+    "vtable_or_struct_table": 12,
+    "caller_callback": 1
+  },
+  "entries": [
+    {
+      "va": "0x6FC56890",
+      "name": "QUESTS_OnBossActChangeOrBossKill_6FC56890",
+      "tsSymbol": "QUESTS_OnBossActChangeOrBossKill_6FC56890_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 764,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FC83DD0"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FC56B74",
+          "mnemonic": "call",
+          "operands": "dword ptr [edi + 0xac]",
+          "opcodeHex": "ff97ac000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FC83DD0"
+          ],
+          "proof": "Walks pGame+0x10F4 quest list via +0xF4 for [edi]==6 (0x6FC56AF6: cmp dword ptr [edi], 6). Quest init table 0x6FD2DBF0[6] (0x6FD2DC80) registers nQuestNo=6 with ACT1Q6_InitQuestData_6FC88060, which initializes [esi+0xAC] = 0x6FC83DD0 at 0x6FC88087 (ACT1Q1_Callback03_LevelChanged113c). No other instruction in D2Game.dll overwrites +0xAC for nQuestNo=6."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FC56B74 dispatches D2QuestDataStrc::pfCallback[3] (+0xAC) on nQuestNo==6, initialized exclusively to 0x6FC83DD0 at 0x6FC88087 by ACT1Q6_InitQuestData_6FC88060."
+    },
+    {
+      "va": "0x6FC6B7F0",
+      "name": "CLIENTS_RemoveClientFromGameAndFree_6FC6B7F0",
+      "tsSymbol": "CLIENTS_RemoveClientFromGameAndFree_6FC6B7F0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+      "size": 1228,
+      "category": "caller_callback",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [],
+      "indirectSites": [
+        {
+          "iva": "0x6FC6BB75",
+          "mnemonic": "call",
+          "operands": "eax",
+          "opcodeHex": "ffd0",
+          "category": "caller_callback",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [],
+          "proof": "pPlayer!=0 path loads eax = [[0x6FD31C3C] + 0x04] (0x6FC6BB1B..0x6FC6BB25). Global 0x6FD31C3C (gpServerCallbackFunctions) is populated exclusively by exported D2Game.#10048 at 0x6FC4A330 (0x6FC4A33A: mov [0x6fd31c3c], eax) with an external host-supplied D2GameEventCallbackTable pointer; slot +0x04 is host pfnLeaveGame outside D2Game.dll."
+        },
+        {
+          "iva": "0x6FC6BCB5",
+          "mnemonic": "call",
+          "operands": "eax",
+          "opcodeHex": "ffd0",
+          "category": "caller_callback",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [],
+          "proof": "pPlayer==0 path loads eax = [[0x6FD31C3C] + 0x04] (0x6FC6BC6B..0x6FC6BC75). Same host-supplied D2GameEventCallbackTable::pfnLeaveGame registered via D2Game.#10048 (0x6FC4A330); no internal D2Game.dll target VA exists."
+        }
+      ],
+      "proof": "Both indirect call sites (0x6FC6BB75, 0x6FC6BCB5) invoke external host callback [[0x6FD31C3C]+0x04] registered via exported D2Game.#10048 (0x6FC4A330)."
+    },
+    {
+      "va": "0x6FC7C9E0",
+      "name": "ACT5Q2_OnQualKehkScrollCallback_6FC7C9E0",
+      "tsSymbol": "ACT5Q2_OnQualKehkScrollCallback_6FC7C9E0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+      "size": 591,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FC76BD0"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FC7CAF4",
+          "mnemonic": "call",
+          "operands": "dword ptr [esi + 0xf0]",
+          "opcodeHex": "ff96f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FC76BD0"
+          ],
+          "proof": "0x6FC7C9E0 is registered solely as [esi+0xCC] in ACT5Q2_InitQuestData_6FC7CC70 at 0x6FC7CCBF (quest table 0x6FD2DEF0, nQuestNo=0x20). ACT5Q2_InitQuestData_6FC7CC70 initializes [esi+0xF0] = 0x6FC76BD0 at 0x6FC7CD24 (ACT5Q5_SeqFilter_6FC76BD0). No other D2Game instruction modifies +0xF0 on this quest."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FC7CAF4 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FC76BD0 at 0x6FC7CD24."
+    },
+    {
+      "va": "0x6FC86CE0",
+      "name": "ACT1Q3_OnScrollMessageCainSearch_6FC86CE0",
+      "tsSymbol": "ACT1Q3_OnScrollMessageCainSearch_6FC86CE0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+      "size": 795,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FC846D0"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FC86F45",
+          "mnemonic": "call",
+          "operands": "dword ptr [ebp + 0xf0]",
+          "opcodeHex": "ff95f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FC846D0"
+          ],
+          "proof": "0x6FC86CE0 is registered solely as [esi+0xCC] in ACT1Q4_InitQuestData_6FC887D0 at 0x6FC88862 (quest table 0x6FD2DC50, nQuestNo=4). ACT1Q4_InitQuestData_6FC887D0 initializes [esi+0xF0] = 0x6FC846D0 at 0x6FC8888A (ACT1Q4_ActivateOrChainQuest_6FC846D0)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FC86F45 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FC846D0 at 0x6FC8888A."
+    },
+    {
+      "va": "0x6FC87000",
+      "name": "ACT1Q5_OnScrollMessageCharsiMalus_6FC87000",
+      "tsSymbol": "ACT1Q5_OnScrollMessageCharsiMalus_6FC87000_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+      "size": 515,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FC84AA0",
+        "0x6FC85410"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FC8714B",
+          "mnemonic": "call",
+          "operands": "dword ptr [ebp + 0xf0]",
+          "opcodeHex": "ff95f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FC84AA0"
+          ],
+          "proof": "0x6FC87000 is registered solely as [esi+0xCC] in ACT1Q5_InitQuestData_6FC87210 at 0x6FC87273 (quest table 0x6FD2DC38, nQuestNo=3). ACT1Q5_InitQuestData_6FC87210 initializes [esi+0xF0] = 0x6FC84AA0 at 0x6FC87291 (ACT1Q3_ActivateOrChainQuest_6FC84AA0)."
+        },
+        {
+          "iva": "0x6FC871A7",
+          "mnemonic": "call",
+          "operands": "dword ptr [esi + 0xf0]",
+          "opcodeHex": "ff96f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FC85410"
+          ],
+          "proof": "At 0x6FC87164..0x6FC8716F, esi = QUESTS_GetQuestData_6FC53F30([ebp+4], [ebp+0x10]). ACT1Q5_InitQuestData_6FC87210 initializes [esi+0x10] = 6 at 0x6FC872E5. Quest nQuestNo=6 (quest table 0x6FD2DC80) is initialized by ACT1Q6_InitQuestData_6FC88060, which sets [esi+0xF0] = 0x6FC85410 at 0x6FC880B9 (ACT1Q1_SequenceFilter_6FC85410)."
+        }
+      ],
+      "proof": "Two indirect calls dispatch self pfSeqFilter (+0xF0 -> 0x6FC84AA0) at 0x6FC8714B and chained quest nQuestNo=6 pfSeqFilter (+0xF0 -> 0x6FC85410) at 0x6FC871A7."
+    },
+    {
+      "va": "0x6FC88920",
+      "name": "ACT1Q2_OnScrollMessageBloodRaven_6FC88920",
+      "tsSymbol": "ACT1Q2_OnScrollMessageBloodRaven_6FC88920_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+      "size": 390,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FC84E10"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FC88A33",
+          "mnemonic": "call",
+          "operands": "dword ptr [edi + 0xf0]",
+          "opcodeHex": "ff97f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FC84E10"
+          ],
+          "proof": "0x6FC88920 is registered solely as [esi+0xCC] in ACT1Q2_InitQuestData_6FC89130 at 0x6FC8916B (quest table 0x6FD2DC20, nQuestNo=2). ACT1Q2_InitQuestData_6FC89130 initializes [esi+0xF0] = 0x6FC84E10 at 0x6FC89193 (ACT1Q2_ActivateOrChainQuest_6FC84E10)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FC88A33 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FC84E10 at 0x6FC89193."
+    },
+    {
+      "va": "0x6FC89970",
+      "name": "OBJ_DispatchObjectTrapOrMonsterSpawn_6FC89970",
+      "tsSymbol": "OBJ_DispatchObjectTrapOrMonsterSpawn_6FC89970_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+      "size": 266,
+      "category": "static_table",
+      "tableBase": "0x6FD27B8C",
+      "tableEnd": "0x6FD27BB4",
+      "targetVas": [
+        "0x6FC8A4E0",
+        "0x6FC8B860",
+        "0x6FC8B870",
+        "0x6FC8B880",
+        "0x6FC8B890",
+        "0x6FC8BF00"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FC89A6F",
+          "mnemonic": "call",
+          "operands": "dword ptr [edi*4 + 0x6fd27b8c]",
+          "opcodeHex": "ff14bd8c7bd26f",
+          "category": "static_table",
+          "tableBase": "0x6FD27B8C",
+          "tableEnd": "0x6FD27BB4",
+          "targetVas": [
+            "0x6FC8A4E0",
+            "0x6FC8B860",
+            "0x6FC8B870",
+            "0x6FC8B880",
+            "0x6FC8B890",
+            "0x6FC8BF00"
+          ],
+          "proof": "Bounded by [0x6FD27BB4]=10 (0x6FC89989..0x6FC89997: edi = bShrineId & 0x7F; cmp edi, [0x6fd27bb4]; jge ret). Static .data table 0x6FD27B8C..0x6FD27BB4 has 10 uint32 slots: [0]=0, [1]=0x6FC8B890, [2]=0x6FC8B880, [3]=0x6FC8B870, [4]=0x6FC8B860, [5]=0x6FC8BF00, [6]=0x6FC8B880, [7]=0x6FC8BF00, [8]=0x6FC8A4E0, [9]=0x6FC8A4E0. The 3 level-override tail jumps at 0x6FC899CD, 0x6FC89A00, 0x6FC89A34 (jmp dword ptr [0x6fd27b94]) target slot [2]=0x6FC8B880 in the same table."
+        }
+      ],
+      "proof": "Static 10-entry object trap/spawn dispatch table at 0x6FD27B8C..0x6FD27BB4 (count [0x6FD27BB4]=10) resolving to 6 distinct D2Game monster/object spawn handlers."
+    },
+    {
+      "va": "0x6FCDAA50",
+      "name": "ACT3Q3_OnScrollMessageOrmusGidbinn_6FCDAA50",
+      "tsSymbol": "ACT3Q3_OnScrollMessageOrmusGidbinn_6FCDAA50_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+      "size": 409,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FCDA270"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FCDAB93",
+          "mnemonic": "call",
+          "operands": "dword ptr [esi + 0xf0]",
+          "opcodeHex": "ff96f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FCDA270"
+          ],
+          "proof": "0x6FCDAA50 is registered solely as [esi+0xCC] in ACT4Q2_InitQuestData_6FCDAD40 at 0x6FCDADC8 (quest table 0x6FD2DE90, nQuestNo=0x18). ACT4Q2_InitQuestData_6FCDAD40 initializes [esi+0xF0] = 0x6FCDA270 at 0x6FCDAD8B (ACT4Q1_SeqCallback_6FCDA270)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FCDAB93 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FCDA270 at 0x6FCDAD8B."
+    },
+    {
+      "va": "0x6FCE8050",
+      "name": "ACT2Q6_OnNpcSpeechComplete_6FCE8050",
+      "tsSymbol": "ACT2Q6_OnNpcSpeechComplete_6FCE8050_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 1317,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FCE21E0"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FCE8348",
+          "mnemonic": "call",
+          "operands": "dword ptr [ebx + 0xf0]",
+          "opcodeHex": "ff93f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FCE21E0"
+          ],
+          "proof": "In Jerhyn 0x1AE branch (0x6FCE82EC..0x6FCE8348), walks pQuest->pGame+0x10F4 via +0xF4 for [eax]==0x0A (nQuestNo=10). Quest init table 0x6FD2DCF8 registers nQuestNo=0x0A with ACT2Q3_InitQuestData_6FCE7480, which initializes [esi+0xF0] = 0x6FCE21E0 at 0x6FCE7519 (ACT2Q3_SeqFilter_6FCE21E0). Intra-function switch jump at 0x6FCE8290 (0x6FCE8578..0x6FCE859C, 9 cases) is already resolved as a local switch jump table."
+        }
+      ],
+      "proof": "Single unresolved indirect call at 0x6FCE8348 dispatches pfSeqFilter (+0xF0) on quest nQuestNo==0x0A, initialized exclusively to 0x6FCE21E0 at 0x6FCE7519."
+    },
+    {
+      "va": "0x6FD089A0",
+      "name": "ACT3Q5_OnNpcSpeechComplete_6FD089A0",
+      "tsSymbol": "ACT3Q5_OnNpcSpeechComplete_6FD089A0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 441,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FD02A40"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FD08B14",
+          "mnemonic": "call",
+          "operands": "dword ptr [ebx + 0xf0]",
+          "opcodeHex": "ff93f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FD02A40"
+          ],
+          "proof": "0x6FD089A0 is registered solely as [esi+0xCC] in ACT3Q5_InitQuestTableRecord_6FD09200 at 0x6FD09245 (quest table 0x6FD2DE00, nQuestNo=0x13). ACT3Q5_InitQuestTableRecord_6FD09200 initializes [esi+0xF0] = 0x6FD02A40 at 0x6FD0926D (QUESTS_ChainStatusFilterNotState7_6FD02A40)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FD08B14 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FD02A40 at 0x6FD0926D."
+    },
+    {
+      "va": "0x6FD08B60",
+      "name": "ACT3Q1_OnNpcSpeechComplete_6FD08B60",
+      "tsSymbol": "ACT3Q1_OnNpcSpeechComplete_6FD08B60_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 840,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FD02B70"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FD08E10",
+          "mnemonic": "call",
+          "operands": "dword ptr [ebx + 0xf0]",
+          "opcodeHex": "ff93f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FD02B70"
+          ],
+          "proof": "0x6FD08B60 is registered solely as [esi+0xCC] in ACT3Q1_InitQuestTableRecord_6FD092D0 at 0x6FD09348 (quest table 0x6FD2DDE8, nQuestNo=0x12). ACT3Q1_InitQuestTableRecord_6FD092D0 initializes [esi+0xF0] = 0x6FD02B70 at 0x6FD0932D (QUESTS_ChainStatusFilterOrQuest17_6FD02B70)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FD08E10 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FD02B70 at 0x6FD0932D."
+    },
+    {
+      "va": "0x6FD08FE0",
+      "name": "ACT3Q4_OnNpcSpeechComplete_6FD08FE0",
+      "tsSymbol": "ACT3Q4_OnNpcSpeechComplete_6FD08FE0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 540,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FD02F00"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FD091EE",
+          "mnemonic": "call",
+          "operands": "dword ptr [edi + 0xf0]",
+          "opcodeHex": "ff97f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FD02F00"
+          ],
+          "proof": "0x6FD08FE0 is registered as [esi+0xCC] only for nQuestNo=0x0F (ACT3Q4_InitQuestTableRecord_6FD093C0 at 0x6FD09458 and ACT3Q4_OnLamEsensTomeStandOperate_6FD094C0 at 0x6FD095B8 after locating [esi]==0x0F). Quest init table 0x6FD2DDA0 initializes nQuestNo=0x0F via ACT3Q4_InitQuestTableRecord_6FD093C0, setting [esi+0xF0] = 0x6FD02F00 at 0x6FD09415 (QUESTS_ChainStatusFilterNotState5_6FD02F00)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FD091EE dispatches D2QuestDataStrc::pfSeqFilter (+0xF0) on nQuestNo==0x0F, initialized exclusively to 0x6FD02F00 at 0x6FD09415."
+    },
+    {
+      "va": "0x6FD09600",
+      "name": "ACT3Q2_OnNpcSpeechComplete_6FD09600",
+      "tsSymbol": "ACT3Q2_OnNpcSpeechComplete_6FD09600_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 736,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FD02D40"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FD09766",
+          "mnemonic": "call",
+          "operands": "dword ptr [esi + 0xf0]",
+          "opcodeHex": "ff96f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FD02D40"
+          ],
+          "proof": "0x6FD09600 is registered solely as [esi+0xCC] in ACT3Q2_InitQuestTableRecord_6FD09DC0 at 0x6FD09E32 (quest table 0x6FD2DDD0, nQuestNo=0x11). ACT3Q2_InitQuestTableRecord_6FD09DC0 initializes [esi+0xF0] = 0x6FD02D40 at 0x6FD09E17 (QUESTS_ChainStatusFilterPromoteState1A_6FD02D40)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FD09766 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0), initialized exclusively to 0x6FD02D40 at 0x6FD09E17."
+    },
+    {
+      "va": "0x6FD0A140",
+      "name": "ACT3Q5_OnCompellingOrbOperate_6FD0A140",
+      "tsSymbol": "ACT3Q5_OnCompellingOrbOperate_6FD0A140_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w15b1-113c.ts",
+      "size": 577,
+      "category": "vtable_or_struct_table",
+      "tableBase": null,
+      "tableEnd": null,
+      "targetVas": [
+        "0x6FD02A40"
+      ],
+      "indirectSites": [
+        {
+          "iva": "0x6FD0A344",
+          "mnemonic": "call",
+          "operands": "dword ptr [ebp + 0xf0]",
+          "opcodeHex": "ff95f0000000",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "targetVas": [
+            "0x6FD02A40"
+          ],
+          "proof": "Walks pGame+0x10F4 via +0xF4 for [eax]==0x13 (0x6FD0A190: cmp dword ptr [eax], 0x13). Quest init table 0x6FD2DE00 registers nQuestNo=0x13 with ACT3Q5_InitQuestTableRecord_6FD09200, which initializes [esi+0xF0] = 0x6FD02A40 at 0x6FD0926D (QUESTS_ChainStatusFilterNotState7_6FD02A40)."
+        }
+      ],
+      "proof": "Single indirect call at 0x6FD0A344 dispatches D2QuestDataStrc::pfSeqFilter (+0xF0) on nQuestNo==0x13, initialized exclusively to 0x6FD02A40 at 0x6FD0926D."
+    }
+  ]
+}

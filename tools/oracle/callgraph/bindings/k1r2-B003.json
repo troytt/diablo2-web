@@ -1,0 +1,128 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD72820",
+    "name": "ITEMS_CheckItemTypeIdEquivalent",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "ITEMS_CheckItemTypeIdEquivalent113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87DB0",
+    "name": "STATES_CheckStateMaskOnUnitFast",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "STATES_CheckStateMaskOnUnitFast113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DC30",
+    "name": "SKILLS_CalcDiminishingReturns",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CalcDiminishingReturns113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9DDB0",
+    "name": "SKILLS_Calc5BandLinear",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_Calc5BandLinear113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E180",
+    "name": "SKILLS_GetLeftSkillFromSkillList",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetLeftSkillFromSkillList113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E1A0",
+    "name": "SKILLS_SetSkillSlotIndex",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_SetSkillSlotIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E1C0",
+    "name": "SKILLS_GetSkillsTxtFromSkill",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillsTxtFromSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E1D0",
+    "name": "SKILLS_GetSkillIdFromSkill",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillIdFromSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E3B0",
+    "name": "SKILLS_GetNextSkill",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetNextSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E3D0",
+    "name": "SKILLS_GetFirstSkillFromSkillList",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetFirstSkillFromSkillList113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E460",
+    "name": "SKILLS_GetSkillSlotIndex",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillSlotIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E480",
+    "name": "SKILLS_GetHighestLevelSkillFromUnitAndId",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetHighestLevelSkillFromUnitAndId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E520",
+    "name": "SKILLS_GetClassSkillCount",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetClassSkillCount113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E550",
+    "name": "SKILLS_GetClassSkillId",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetClassSkillId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b003-vectors.json replayed in tests/oracle/k1/laneB-B003-skills.test.ts"
+  }
+]

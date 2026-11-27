@@ -1,0 +1,8 @@
+# Main menu -> Single Player -> first (only) character -> OK.
+# Coordinates are D2 client coordinates in the 800x600 window.
+wait 10000
+move 400 321
+wait 500
+click 400 321
+wait 3500
+click 690 555

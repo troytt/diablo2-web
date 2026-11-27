@@ -1,0 +1,92 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7CF40",
+    "name": "QUESTRECORD_CopyRecordToBuffer",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "QUESTRECORD_CopyRecordToBuffer113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7CFC0",
+    "name": "QUESTRECORD_AllocRecord",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "QUESTRECORD_AllocRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D020",
+    "name": "QUESTRECORD_ClearQuestStateBits2To11",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "QUESTRECORD_ClearQuestStateBits2To11_113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D070",
+    "name": "QUESTRECORD_ClearQuestState",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "QUESTRECORD_ClearQuestState113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D0B0",
+    "name": "QUESTRECORD_SetQuestState",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "QUESTRECORD_SetQuestState113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7FED0",
+    "name": "UNITS_InitStaticPathCoords",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "UNITS_InitStaticPathCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80420",
+    "name": "UNITS_GetRightSkill",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "UNITS_GetRightSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80460",
+    "name": "UNITS_GetLeftSkill",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "UNITS_GetLeftSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80880",
+    "name": "UNITS_FreePlayerData",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "UNITS_FreePlayerData113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80970",
+    "name": "UNITS_InitPlayerData",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "UNITS_InitPlayerData113c",
+    "status": "diff-verified",
+    "diffEvidence": "46 real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b032-vectors.ndjson replayed in tests/oracle/k1/laneA-B032-quest-record.test.ts"
+  }
+]

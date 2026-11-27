@@ -1,0 +1,11 @@
+{
+  "name": "a1-run-100",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/a1-barbarian-l1.d2s",
+  "difficulty": 0,
+  "frames": 100,
+  "inputs": [
+    { "frame": 10, "c2s": "031c162a17" },
+    { "frame": 60, "c2s": "0115161e17" }
+  ]
+}

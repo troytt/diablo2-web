@@ -1,0 +1,74 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FD07640",
+    "name": "ACT3Q1_OnQuestItemPickedUp_6FD07640",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "ACT3Q1_OnQuestItemPickedUp_6FD07640_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD07640 (300B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD07770",
+    "name": "ACT3Q2_OnGidbinnPickedUp_6FD07770",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "ACT3Q2_OnGidbinnPickedUp_6FD07770_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD07770 (264B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD07940",
+    "name": "ACT3Q3_OnNpcSpeechComplete_6FD07940",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "ACT3Q3_OnNpcSpeechComplete_6FD07940_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD07940) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD07DB0",
+    "name": "ACT3Q5_OnCouncilMemberKilled_6FD07DB0",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "ACT3Q5_OnCouncilMemberKilled_6FD07DB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD07DB0 (593B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD08010",
+    "name": "ACT3Q1_OnBossKilledDropJadeFigurine_6FD08010",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "ACT3Q1_OnBossKilledDropJadeFigurine_6FD08010_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD08010 (291B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD09A10",
+    "name": "ACT3Q7_OnMephistoKilled_6FD09A10",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "ACT3Q7_OnMephistoKilled_6FD09A10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD09A10 (620B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Replaced private duplicate callback with canonical ACT3Q7_PropagateMephistoCompletionToPartyCallback_6FD06850_113c."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10D50",
+    "name": "PARTY_AcceptInviteAndSyncParty_6FD10D50",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "PARTY_AcceptInviteAndSyncParty_6FD10D50_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10D50 (297B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts."
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD10FF0",
+    "name": "PARTY_DeclareHostilityBetweenPlayers_6FD10FF0",
+    "kernFile": "src/d2kern-113c/game/k2-w8b4-113c.ts",
+    "tsSymbol": "PARTY_DeclareHostilityBetweenPlayers_6FD10FF0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 17 1:1 PE32 disassembly verification against D2Game.dll@0x6FD10FF0 (250B) in tests/oracle/k2/k2-disasm-verified-wave17.test.ts. Replaced private duplicate callback with canonical PARTY_DeclareHostility_6FD10CD0_113c."
+  }
+]

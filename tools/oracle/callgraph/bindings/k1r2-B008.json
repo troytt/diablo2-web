@@ -1,0 +1,128 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD73970",
+    "name": "ITEMS_SetRareSuffix",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetRareSuffix113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD739C0",
+    "name": "ITEMS_SetRarePrefix",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetRarePrefix113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73A10",
+    "name": "ITEMS_SetMagicSuffix",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetMagicSuffix113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD73AC0",
+    "name": "ITEMS_SetMagicPrefix",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SetMagicPrefix113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD83AB0",
+    "name": "STATES_CheckStateMaskExpOnUnit",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATES_CheckStateMaskExpOnUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87D30",
+    "name": "STATLIST_GetSkillLevel",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetSkillLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87D40",
+    "name": "STATLIST_SetSkillLevel",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_SetSkillLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87D50",
+    "name": "STATLIST_GetSkillId",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetSkillId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87D60",
+    "name": "STATLIST_SetSkillId",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_SetSkillId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87D70",
+    "name": "STATLIST_SetStatRemoveProc",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_SetStatRemoveProc113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87DE0",
+    "name": "STATLIST_CheckUnitStatListFlag100",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_CheckUnitStatListFlag100113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87E70",
+    "name": "STATLIST_GetOwnerAndDynamicFlag",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetOwnerAndDynamicFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87EC0",
+    "name": "STATLIST_GetStatListFromUnitStateAndFlag",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetStatListFromUnitStateAndFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD87F40",
+    "name": "STATLIST_GetStatListFromFlag",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetStatListFromFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b008-vectors.json replayed in tests/oracle/k1/laneA-B008-statlist.test.ts"
+  }
+]

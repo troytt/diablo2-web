@@ -1,0 +1,29 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6fc3e900",
+    "name": "ITEMS_EvaluateMonsterDropTableEntry_6FC3E900",
+    "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+    "tsSymbol": "ITEMS_EvaluateMonsterDropTableEntry_6FC3E900_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w14b1.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 summon/curse replays (p52-amazon-valkyrie F1500/1500, p52-necromancer-poison-golem F1800/1800, p52-necromancer-curses F2000/2000) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fccc8e0",
+    "name": "AI_MercOrShadowWarriorThink_6FCCC8E0",
+    "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+    "tsSymbol": "AI_MercOrShadowWarriorThink_6FCCC8E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w14b1.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6fd09c80",
+    "name": "ACT3Q2_OperateGidbinnAltar_6FD09C80",
+    "kernFile": "src/d2kern-113c/game/k2-w14b1-113c.ts",
+    "tsSymbol": "ACT3Q2_OperateGidbinnAltar_6FD09C80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w14b1.test.ts"
+  }
+]

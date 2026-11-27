@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-amazon-valkyrie",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1500,
+  "strictHorizon": 1500,
+  "posHorizon": 1500,
+  "matchedKernelFrames": 1498,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "85d55018e01eb4898bf51bb61778a093ecb29e905604f84afda2c8d0137a71c9",
+  "snapshotSha256": "bf35615693a5030adaa54db144020ee10cc8e4e207aed3839ce9376747d101c3"
+}

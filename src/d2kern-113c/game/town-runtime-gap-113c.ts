@@ -1,0 +1,2266 @@
+import { D2CommonAssertError } from '../common/inline-helpers.ts';
+import { UNITS_GetPlayerData113c } from '../common/composit.ts';
+import { DRLG_GetActNoFromLevelId113c } from '../common/drlg/drlg.ts';
+import {
+  DUNGEON_CheckLOSDraw113c,
+  DUNGEON_GetAdjacentRoomsListFromRoom113c,
+  DUNGEON_GetLevelIdFromRoom113c,
+  DUNGEON_GetRoomExFromRoom113c,
+} from '../common/dungeon.ts';
+import {
+  INVENTORY_GetCursorItem113c,
+  INVENTORY_GetFirstItem113c,
+  INVENTORY_GetNextItem113c,
+  INVENTORY_UnitIsItem113c,
+} from '../common/inventory.ts';
+import {
+  DRLGWARP_TestRoomTileBit113c,
+  ITEMS_GetBaseCode113c,
+  ITEMS_GetInvPage113c,
+} from '../common/items.ts';
+import {
+  DATATBLS_GetItemsTxtRecordMemPort113c,
+  DUNGEON_CheckRoomIsTownMemPort113c,
+  STATLIST_GetStatListFromUnitAndStateMemPort113c,
+} from '../common/k0-d2common-memports.ts';
+import {
+  PATH_ClearNextRoom113c,
+  PATH_Compute113c,
+  PATH_GetFirstPointX113c,
+  PATH_GetFirstPointY113c,
+  PATH_GetLastPointX113c,
+  PATH_GetLastPointY113c,
+  PATH_GetMaxDistance113c,
+  PATH_GetNextRoom113c,
+  PATH_GetNumberOfPathPoints113c,
+  PATH_GetOrCheckLastCollisionMask113c,
+  PATH_GetPosX113c,
+  PATH_GetPosY113c,
+  PATH_GetTargetTypeAndPosition113c,
+  PATH_GetTargetUnit113c,
+  PATH_GetType113c,
+  PATH_ResetToDefaultType113c,
+  PATH_SetCurrentRoomInvalid113c,
+  PATH_SetDistance113c,
+  PATH_SetNewDistance113c,
+  PATH_SetTargetPos113c,
+  PATH_SetType113c,
+} from '../common/path.ts';
+import {
+  SKILLS_GetSkillIdFromSkill113c,
+  SKILLS_GetSkillsTxtFromSkill113c,
+  SKILLS_GetUsedSkill113c,
+} from '../common/skills.ts';
+import {
+  STATES_CheckState113c,
+  STATES_CheckStateMask33OnUnit113c,
+  STATLIST_GetStatValue113c,
+  STATLIST_GetUnitBaseStat113c,
+  STATLIST_GetUnitStat113c,
+} from '../common/statlist.ts';
+import {
+  DATATBLS_GetObjectsTxtRecord113c,
+  UNITROOM_RefreshUnit113c,
+  UNITS_GetPathRoomRefreshFlag113c,
+  UNITS_GetRoom113c,
+  UNITS_HasCollisionBetweenUnits113c,
+  UNITS_IsDoor113c,
+  UNITS_IsUnitInObjRectRange113c,
+  UNIT_GetAlignment113c,
+} from '../common/unit.ts';
+import type { Memory113c } from '../mem/sparse-memory.ts';
+import { MONSTERS_IsDead113c } from '../tables/datatbls-113c.ts';
+import { DATATBLS_GetLevelsTxtRecord113c } from '../tables/lvl-tbls-113c.ts';
+import { MONSTER_IsNextModeEndWithin5Frames113c } from './a1c-post150-f786-f1040-113c.ts';
+import {
+  AIGENERAL_GetPackLeaderUnit113c,
+  AI_CalcApproxUnitDistSubtiles113c,
+  AI_CheckApproachTauntSound113c,
+  AI_LookupDispatchTableRow113c,
+  AI_TryMonsterTeleportEscape113c,
+  SUNITDMG_FreeAttackerCombatList113c,
+} from './ai-fallen-113c.ts';
+import { SEED_RollLimitedRandomNumber113c } from './combat-a1c-113c.ts';
+import { PLAYER_StartModeAtCoords113c } from './c2s-packet-113c.ts';
+import {
+  AI_FleeFrom113c,
+  AI_GeneralFindTargetOrThrottle113c,
+  AI_IdleWander113c,
+  AI_Stall113c,
+  AI_DispatchTargetByAiFlag113c,
+  MONSTER_StartMode113c,
+  PLAYER_ScheduleSkillActionFrameEvents113c,
+  PLAYER_StartModeCast113c,
+} from './k2-real-s2c-combat-113c.ts';
+import { QUESTS_GuidListContains113c } from './k2-items-tc-w1-113c.ts';
+import { PLAYER_HandleDeathCorpseAndSave_6FC99730_113c } from './k2-w16b1-113c.ts';
+import { OBJ_TryOperateObjectIfInRange_6FC8A720_113c } from './k2-w4b3-113c.ts';
+import { PLAYER_CanInterruptCurrentSkillOrEvent113c } from './k2-combat-core-w1-113c.ts';
+import {
+  MONAI_CheckLineOfWalkFreeCoordsBetweenUnits_6FCD0E90_113c,
+  MONAI_ForEachPackMemberWithFilter_6FCD1320_113c,
+  MONAI_ForEachUnitInAdjacentRooms_6FCD0720_113c,
+  MONAI_ForEachUnitInNonTownAdjacentRoomsWithPlayer_6FCD0CE0_113c,
+} from './k2-w4b7-113c.ts';
+import { AI_WalkWanderAroundUnitOrSelf_6FD12870_113c } from './k2-w5b10-113c.ts';
+import { SUNIT_GetServerUnit113c } from './game-strc.ts';
+import {
+  getRegisteredAiTargetModeCallback113c,
+  MONSTER_ClearModeEvents113c,
+  MONSTER_RegisterContinuousModeEvent113c,
+  registerAiTargetModeCallback113c,
+  registerMonsterAiPipeline113c,
+  SKILLS_SetUsedSkill113c,
+  SUNIT_IsDeadOrDying113c,
+  UNITS_ChangeAnimMode113c,
+  type AiTargetModeCallback113c,
+} from './monster-events.ts';
+import {
+  D2GAME_IAT_GDW_BITMASKS_VA_113C,
+  D2GAME_IAT_SGPT_DATATABLES_VA_113C,
+  MONSTATS2_CheckModeBit113c,
+  MONSTATS_CheckFlagBit113c,
+  SEED_RollLimitedFast113c,
+  SKILLS_GetRecordPtrFast113c,
+  SUNIT_InitUnitAnimData113c,
+  SUNIT_ValidatePathTargetUnit113c,
+  UNIT_CalcSqDistSubtiles113c,
+  UNIT_GetPosX113c,
+  UNIT_GetPosY113c,
+} from './regpop-spawn-113c.ts';
+import { AI_RogueTownMem113c } from './town-npc-ai-113c.ts';
+import { EVENT_GetNextEventFrame113c } from './timer-wheel.ts';
+import { NET_QueuePacketPtrToClient113c } from '../net/packet-sink.ts';
+import { hitD2GameVa113c } from '../va-trace-113c.ts';
+
+
+function i32(m: Memory113c, p: number): number {
+  return m.u32(p >>> 0) | 0;
+}
+
+function zeroMem(m: Memory113c, p: number, len: number): void {
+  m.fill(p >>> 0, len, 0);
+}
+
+function freeMem(_m: Memory113c, _p: number): void {
+  // Arena bump allocator on Memory113c
+}
+
+let townRuntimeGapStackPtr = 0x7e140000;
+
+function withTownRuntimeGapStack<T>(size: number, fn: (sp: number) => T): T {
+  const sp = townRuntimeGapStackPtr >>> 0;
+  townRuntimeGapStackPtr = (sp + ((size + 15) & ~15)) >>> 0;
+  try {
+    return fn(sp);
+  } finally {
+    townRuntimeGapStackPtr = sp;
+  }
+}
+
+registerMonsterAiPipeline113c({
+  handleStunDoorOrLeaderFollow: (m, pUnit, pGame, pAiTickArgs) =>
+    AI_HandleStunDoorOrLeaderFollow113c(m, pUnit, pGame, pAiTickArgs),
+  dispatchTargetByAiFlag: (m, pUnit, pAiTickArgs, pGame) =>
+    (AI_DispatchTargetByAiFlag113c(m, pAiTickArgs, pUnit, pGame) as number) | 0,
+  acquireOrValidateCombatTarget: (m, pAiTickArgs, pUnit, pGame) =>
+    AI_AcquireOrValidateCombatTarget113c(m, pAiTickArgs, pUnit, pGame),
+  runRogueTownAi: (m, pGame, pUnit, pAiTickArgs) =>
+    AI_RogueTownMem113c(m, pGame, pUnit, pAiTickArgs),
+});
+
+function checkQuestBitStateHelper(m: Memory113c, pBitBuffer: number, nQuestId: number, nSubBit: number): number {
+  return DRLGWARP_TestRoomTileBit113c(m, pBitBuffer >>> 0, nQuestId | 0, nSubBit | 0);
+}
+
+function appendClientNetPacketNode(m: Memory113c, pClient: number, pPayload: number, nSize: number): void {
+  NET_QueuePacketPtrToClient113c(m, pClient >>> 0, pPayload >>> 0, nSize | 0);
+}
+
+function stepSeedLcg(m: Memory113c, pSeed: number): number {
+  const lo = BigInt(m.u32(pSeed));
+  const hi = BigInt(m.u32(pSeed + 4));
+  const prod = lo * 0x6ac690c5n + hi;
+  const newLo = Number(prod & 0xffffffffn) >>> 0;
+  const newHi = Number((prod >> 32n) & 0xffffffffn) >>> 0;
+  m.setU32(pSeed, newLo);
+  m.setU32(pSeed + 4, newHi);
+  return newLo;
+}
+
+function checkUnitGuidInList0x80(m: Memory113c, pList: number, dwUnitId: number): number {
+  return QUESTS_GuidListContains113c(m, pList, dwUnitId);
+}
+
+const NPC_QUEST_CLASS_TO_INDEX: ReadonlyArray<readonly [number, number]> = [
+  [-1, 0],
+  [147, 1],
+  [148, 2],
+  [150, 3],
+  [155, 4],
+  [154, 5],
+  [265, 6],
+  [175, 7],
+  [176, 8],
+  [177, 9],
+  [178, 10],
+  [202, 11],
+  [200, 12],
+  [210, 13],
+  [201, 14],
+  [198, 15],
+  [199, 16],
+  [244, 17],
+  [245, 18],
+  [246, 19],
+  [251, 20],
+  [252, 21],
+  [253, 22],
+  [254, 23],
+  [255, 24],
+  [256, 25],
+  [257, 26],
+  [264, 27],
+  [297, 28],
+  [511, 29],
+  [512, 30],
+  [513, 31],
+  [514, 32],
+  [515, 33],
+  [520, 34],
+];
+
+function checkPlayerNpcIntroBit(m: Memory113c, pPlayer: number, pGame: number, nNpcClassId: number): number {
+  const pPlayerData = UNITS_GetPlayerData113c(m, pPlayer);
+  const diff = m.u8(pGame + 0x6d);
+  const pNpcIntroWrapper = m.u32(pPlayerData + diff * 4 + 0x60);
+  let bitIdx = 0;
+  for (let i = 0; i < NPC_QUEST_CLASS_TO_INDEX.length; i++) {
+    if (NPC_QUEST_CLASS_TO_INDEX[i]![0] === nNpcClassId) {
+      bitIdx = NPC_QUEST_CLASS_TO_INDEX[i]![1];
+      break;
+    }
+  }
+  const pInner = m.u32(pNpcIntroWrapper);
+  const pBitBuf = m.u32(pInner);
+  if (pBitBuf === 0 || bitIdx >= 64) {
+    return 0;
+  }
+  const byteVal = m.u8((pBitBuf + (bitIdx >> 3)) >>> 0);
+  const gdwBitMasks = m.u32(D2GAME_IAT_GDW_BITMASKS_VA_113C);
+  const mask = gdwBitMasks !== 0 ? m.u32((gdwBitMasks + ((bitIdx & 7) << 2)) >>> 0) : (1 << (bitIdx & 7)) >>> 0;
+  return (byteVal & mask) !== 0 ? 1 : 0;
+}
+
+function findPlayerQuestItemByCode(m: Memory113c, pUnit: number, pGame: number, dwCode: number): number {
+  const pInventory = m.u32(pUnit + 0x60);
+  if (pInventory === 0) {
+    return 0;
+  }
+  const pCursor = INVENTORY_GetCursorItem113c(m, pInventory);
+  if (pCursor !== 0 && ITEMS_GetBaseCode113c(m, pCursor) === (dwCode >>> 0)) {
+    const pTxt = DATATBLS_GetItemsTxtRecordMemPort113c(m, i32(m, pCursor + 4));
+    if (pTxt === 0 || m.u8(pTxt + 0x12a) === 0 || m.u8(pGame + 0x6d) <= STATLIST_GetUnitStat113c(m, pCursor, 0x164, 0)) {
+      return pCursor;
+    }
+  }
+  let pItem = INVENTORY_GetFirstItem113c(m, pInventory);
+  while (pItem !== 0) {
+    const pChecked = INVENTORY_UnitIsItem113c(m, pItem);
+    if (
+      ITEMS_GetBaseCode113c(m, pChecked) === (dwCode >>> 0) &&
+      (ITEMS_GetInvPage113c(m, pChecked) & 0xff) !== 1
+    ) {
+      const classId = pChecked === 0 ? -1 : i32(m, pChecked + 4);
+      const pTxt = DATATBLS_GetItemsTxtRecordMemPort113c(m, classId);
+      if (
+        pTxt === 0 ||
+        m.u8(pTxt + 0x12a) === 0 ||
+        m.u8(pTxt + 0x12b) === 0 ||
+        m.u8(pGame + 0x6d) <= STATLIST_GetUnitStat113c(m, pChecked, 0x164, 0)
+      ) {
+        return pChecked;
+      }
+    }
+    pItem = INVENTORY_GetNextItem113c(m, pItem);
+  }
+  return 0;
+}
+
+const OBSTACLE_HALF_SIZE_TABLE = new Uint8Array([
+  2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+]);
+
+function checkObstacleClearanceBetweenUnits(m: Memory113c, pTarget: number, pOrigin: number): number {
+  if (pOrigin === 0 || pTarget === 0) {
+    return 0;
+  }
+  const dist = AI_CalcApproxUnitDistSubtiles113c(m, pOrigin, pTarget);
+  const halfSize = dist >= 25 ? 3 : OBSTACLE_HALF_SIZE_TABLE[dist]!;
+  const x1 = UNIT_GetPosX113c(m, pTarget);
+  const y1 = UNIT_GetPosY113c(m, pTarget);
+  const x2 = UNIT_GetPosX113c(m, pOrigin);
+  const y2 = UNIT_GetPosY113c(m, pOrigin);
+  const pRoom = UNITS_GetRoom113c(m, pOrigin);
+  if (pRoom === 0) {
+    return 0;
+  }
+  return UNITS_HasCollisionBetweenUnits113c(m, pOrigin, pTarget, halfSize) === 0 ? 1 : 0;
+}
+
+function checkSequenceSkillInterruptable(m: Memory113c, pUnit: number, pGame: number): number {
+  const pSkill = SKILLS_GetUsedSkill113c(m, pUnit);
+  if (pSkill !== 0) {
+    const pSkillsTxt = SKILLS_GetSkillsTxtFromSkill113c(m, pSkill);
+    if (pSkillsTxt !== 0 && m.u8(pSkillsTxt + 0x16) > 0) {
+      return 1;
+    }
+  }
+  return MONSTER_IsNextModeEndWithin5Frames113c(m, pUnit, pGame);
+}
+
+function startUnitModeAtCoordsInternal(
+  m: Memory113c,
+  pGame: number,
+  pUnit: number,
+  pSkill: number,
+  nMode: number,
+  nX: number,
+  nY: number,
+  bForce: number,
+): number {
+  if (bForce === 0 && AITHINK_CanPlayerSwitchToMode113c(m, pUnit, pGame, nMode) === 0) {
+    return 0;
+  }
+  if (pUnit !== 0 && m.u32(pUnit) <= 1) {
+    SKILLS_SetUsedSkill113c(m, pUnit, pSkill);
+    MONSTER_ClearModeEvents113c(m, pGame, pUnit);
+  }
+  const unitType = pUnit !== 0 ? m.u32(pUnit) : 6;
+  if (unitType === 0) {
+    UNITS_ChangeAnimMode113c(m, pUnit, nMode);
+    return 1;
+  }
+  if (unitType === 1) {
+    return MONSTER_StartMode113c(m, pGame, pUnit, nMode, 0, nX, nY);
+  }
+  if (unitType === 2 || unitType === 3 || unitType === 5) {
+    UNITS_ChangeAnimMode113c(m, pUnit, nMode);
+    return 1;
+  }
+  if (unitType === 4) {
+    const pPath = m.u32(pUnit + 0x2c);
+    if (pPath !== 0) {
+      PATH_SetTargetPos113c(m, pPath, nX, nY);
+    }
+    UNITS_ChangeAnimMode113c(m, pUnit, nMode);
+    MONSTER_RegisterContinuousModeEvent113c(m, pGame, pUnit);
+    return 1;
+  }
+  return 0;
+}
+
+const MODE_DISPATCH_POST_TABLE: ReadonlyArray<readonly [number, number]> = [
+  [8, 8],
+  [7, 7],
+  [1, 0],
+  [23, 24],
+  [6, 6],
+  [7, 7],
+  [1, 0],
+  [21, 22],
+];
+
+// @va D2Game:0x6FCBCB30
+export function AI_FollowPackLeaderOrAttack113c(
+  m: Memory113c,
+  pAiTickArgsPtr: number,
+  pUnit: number,
+  pGame: number,
+): number {
+  hitD2GameVa113c(0x6FCBCB30);
+  const pAiControl = m.u32(pAiTickArgsPtr) >>> 0;
+  if (pAiControl === 0) {
+    return 0;
+  }
+  const leaderGuid = i32(m, pAiControl + 0xc);
+  if (leaderGuid === -1) {
+    return 0;
+  }
+  const classId = pUnit === 0 ? -1 : i32(m, pUnit + 4);
+  if (MONSTATS2_CheckModeBit113c(m, classId, 2) === 0) {
+    m.setU32(pAiControl + 0xc, 0xffffffff);
+    return 0;
+  }
+  const pLeader = SUNIT_GetServerUnit113c(m, pGame, i32(m, pAiControl + 0x10), leaderGuid);
+  if (pLeader === 0 || SUNIT_IsDeadOrDying113c(m, pLeader) !== 0) {
+    m.setU32(pAiControl + 0xc, 0xffffffff);
+    return 0;
+  }
+  const dist = AI_CalcApproxUnitDistSubtiles113c(m, pUnit, pLeader);
+  if (dist <= 1 && m.u32(pAiControl + 0x10) === 0) {
+    if (AI_FleeFrom113c(m, pGame, pUnit, pLeader, 0x13, 1) !== 0) {
+      return 1;
+    }
+  } else {
+    if (dist <= 20) {
+      return 0;
+    }
+    let pAiGeneral = 0;
+    if (pUnit !== 0 && m.u32(pUnit) === 1) {
+      const pMonsterData = m.u32(pUnit + 0x14);
+      if (pMonsterData !== 0) {
+        pAiGeneral = m.u32(pMonsterData + 0x2c);
+      }
+    }
+    if (pAiGeneral !== 0) {
+      m.setU32(pAiGeneral + 0x18, 7);
+      m.setU8(pAiGeneral + 0x20, 0x28);
+    }
+  }
+  AI_WalkWanderAroundUnitOrSelf_6FD12870_113c(m, pLeader, 0x13, pGame, pUnit);
+  return 1;
+}
+
+// @va D2Game:0x6FCBCCF0
+export function AI_TryOpenNearbyClosedDoor113c(
+  m: Memory113c,
+  pAiTickArgs: number,
+  pUnit: number,
+  pGame: number,
+): number {
+  hitD2GameVa113c(0x6FCBCCF0);
+  const pMonStats = m.u32((pAiTickArgs + 0x1c) >>> 0) >>> 0;
+  if (pMonStats === 0) {
+    return 0;
+  }
+  const flagsByte = m.u8(pMonStats + 0xc);
+  const gdwBitMasks = m.u32(D2GAME_IAT_GDW_BITMASKS_VA_113C);
+  const mask3 = gdwBitMasks !== 0 ? m.u8(gdwBitMasks + 0xc) : 8;
+  if ((flagsByte & mask3) === 0) {
+    return 0;
+  }
+  const pPath = m.u32(pUnit + 0x2c);
+  if ((PATH_GetOrCheckLastCollisionMask113c(m, pPath) & 0x800) === 0) {
+    return 0;
+  }
+  const pDoor = withTownRuntimeGapStack(8, (ctx) => {
+    m.setU32(ctx, 0);
+    m.setU32(ctx + 4, 9);
+    AITARGET_ScanUnitsByModeTable113c(m, 8, ctx, pGame, pUnit, 0);
+    return m.u32(ctx);
+  });
+  if (pDoor === 0) {
+    return 0;
+  }
+  const pObjTxt = DATATBLS_GetObjectsTxtRecord113c(m, i32(m, pDoor + 4));
+  if (pObjTxt === 0 || m.u8(pObjTxt + 0x16d) === 0) {
+    return 0;
+  }
+  const doorGuid = i32(m, pDoor + 0xc);
+  OBJ_TryOperateObjectIfInRange_6FC8A720_113c(m, 2, pUnit, pGame, doorGuid);
+  AI_Stall113c(m, pGame, pUnit, 5);
+  return 1;
+}
+
+// @va D2Game:0x6FCBCD90
+export function AI_HandleStunDoorOrLeaderFollow113c(
+  m: Memory113c,
+  pUnit: number,
+  pGame: number,
+  pAiTickArgs: number,
+): number {
+  hitD2GameVa113c(0x6FCBCD90);
+  if (STATES_CheckState113c(m, pUnit, 0x15) !== 0) {
+    AI_Stall113c(m, pGame, pUnit, 3);
+    return 1;
+  }
+  if (AI_TryOpenNearbyClosedDoor113c(m, pAiTickArgs, pUnit, pGame) !== 0) {
+    return 1;
+  }
+  if (pAiTickArgs !== 0 && m.u32(pAiTickArgs >>> 0) !== 0) {
+    if (AI_FollowPackLeaderOrAttack113c(m, pAiTickArgs, pUnit, pGame) !== 0) {
+      return 1;
+    }
+    const tickPtr = pAiTickArgs >>> 0;
+    if (
+      tickPtr >= 0x6fc1dc80 &&
+      tickPtr < 0x6fc1e080 &&
+      pUnit !== 0 &&
+      pGame !== 0 &&
+      (m.u32(pUnit) | 0) === 1 &&
+      STATES_CheckState113c(m, pUnit, 1) === 0
+    ) {
+      const pAiGen = m.u32(tickPtr) >>> 0;
+      const pMonStats = m.u32((tickPtr + 0x1c) >>> 0) >>> 0;
+      const pMonData = m.u32((pUnit + 0x14) >>> 0) >>> 0;
+      const cls = m.u32((pUnit + 0x04) >>> 0) | 0;
+      const pfnThink = pAiGen !== 0 ? (m.u32((pAiGen + 0x04) >>> 0) >>> 0) : 0;
+      if (
+        pAiGen !== 0 &&
+        pMonStats !== 0 &&
+        pMonData !== 0 &&
+        m.u32(pMonData) !== 0 &&
+        m.u32((pMonData + 0x38) >>> 0) === 0 &&
+        m.u32((pGame + 0x1118) >>> 0) === 0 &&
+        pfnThink !== 0x6fc3dd40 &&
+        pfnThink !== 0x6fc3db40 &&
+        pfnThink !== 0x6fc3bc60 &&
+        pfnThink !== 0x6fcbcb00 &&
+        pfnThink !== 0x6fc39880 &&
+        pfnThink !== 0x6fcca4d0 &&
+        pfnThink !== 0x6fc3e900 &&
+        pfnThink !== 0x6fcc9e80 &&
+        pfnThink !== 0x6fccb580 &&
+        cls !== 147 &&
+        cls !== 148 &&
+        cls !== 149 &&
+        cls !== 150 &&
+        cls !== 152 &&
+        cls !== 154 &&
+        cls !== 155 &&
+        cls !== 179 &&
+        cls !== 271 &&
+        cls !== 338 &&
+        cls !== 359 &&
+        cls !== 560 &&
+        cls !== 561 &&
+        UNIT_GetAlignment113c(m, pUnit) === 0
+      ) {
+        const pRow = AI_LookupDispatchTableRow113c(m, pUnit, m.u32(pAiGen) | 0) >>> 0;
+        if (pRow !== 0 && (m.u32(pRow) >>> 0) === 1) {
+          const wFlags = m.u16((pAiGen + 0x08) >>> 0);
+          let losCheck = 0;
+          const pRoom0 = UNITS_GetRoom113c(m, pUnit) >>> 0;
+          if (pRoom0 !== 0) {
+            if ((wFlags & 0x40) !== 0) {
+              losCheck = 1;
+            } else if (DUNGEON_CheckLOSDraw113c(m, pRoom0) === 0 && ((wFlags >>> 3) & 1) === 0) {
+              const pAiCache = m.u32((pMonData + 0x50) >>> 0) >>> 0;
+              losCheck = pAiCache !== 0 && m.u32((pAiCache + 0x24) >>> 0) !== 0 ? 0 : 1;
+            }
+          }
+          if (losCheck === 1) {
+            const diff = m.u8((pGame + 0x6d) >>> 0);
+            const rawAiDist = m.u8((pMonStats + diff + 0x52) >>> 0);
+            const maxDist = rawAiDist !== 0 ? rawAiDist : 0x23;
+            const monAct = m.u8((pUnit + 0x18) >>> 0);
+            let hasNearRawPlayer = false;
+            let hasVisibleTarget = false;
+            for (let slot = 0; slot < 8 && !hasVisibleTarget; slot++) {
+              let node = m.u32((pGame + 0x10f8 + (slot << 2)) >>> 0) >>> 0;
+              if (node === 0) continue;
+              const headUnit = m.u32(node) >>> 0;
+              if (headUnit === 0 || (m.u32(headUnit) | 0) !== 0) continue;
+              if (m.u8((headUnit + 0x18) >>> 0) !== monAct) continue;
+              const uRoom = UNITS_GetRoom113c(m, headUnit) >>> 0;
+              if (uRoom === 0 || DUNGEON_CheckRoomIsTownMemPort113c(m, uRoom) !== 0) continue;
+              let d = AI_CalcApproxUnitDistSubtiles113c(m, pUnit, headUnit) | 0;
+              if ((d >>> 0) < 35) {
+                hasNearRawPlayer = true;
+              }
+              if ((d >>> 0) >= 0x37) continue;
+              if (SUNIT_IsDeadOrDying113c(m, headUnit) !== 0) {
+                d = 0x7fffffff;
+              }
+              let cand = headUnit;
+              while (true) {
+                if ((d >>> 0) < (maxDist >>> 0) && UNITS_HasCollisionBetweenUnits113c(m, pUnit, cand, 4) === 0) {
+                  hasVisibleTarget = true;
+                  break;
+                }
+                node = m.u32((node + 0x08) >>> 0) >>> 0;
+                if (node === 0) break;
+                cand = m.u32(node) >>> 0;
+                d = AI_CalcApproxUnitDistSubtiles113c(m, pUnit, cand) | 0;
+              }
+            }
+            if (hasNearRawPlayer && !hasVisibleTarget) {
+              let petNode = m.u32((pGame + 0x111c) >>> 0) >>> 0;
+              while (petNode !== 0) {
+                const pet = m.u32(petNode) >>> 0;
+                if (
+                  pet !== 0 &&
+                  m.u8((pet + 0x18) >>> 0) === monAct &&
+                  UNITS_HasCollisionBetweenUnits113c(m, pUnit, pet, 4) === 0
+                ) {
+                  hasVisibleTarget = true;
+                  break;
+                }
+                petNode = m.u32((petNode + 0x08) >>> 0) >>> 0;
+              }
+            }
+            if (hasNearRawPlayer && !hasVisibleTarget) {
+              return withTownRuntimeGapStack(8, (spOut) => {
+                m.setU32(spOut, 0x7fffffff);
+                m.setU32((spOut + 4) >>> 0, 0);
+                AI_GeneralFindTargetOrThrottle113c(
+                  m,
+                  pGame,
+                  pUnit,
+                  pAiGen,
+                  (spOut + 4) >>> 0,
+                  spOut,
+                  true,
+                );
+                return 1;
+              });
+            }
+          }
+        }
+      }
+    }
+    return 0;
+  }
+  const res = withTownRuntimeGapStack(4, (pAiTickArgsPtr) => {
+    m.setU32(pAiTickArgsPtr, pAiTickArgs);
+    return AI_FollowPackLeaderOrAttack113c(m, pAiTickArgsPtr, pUnit, pGame);
+  });
+  return res !== 0 ? 1 : 0;
+}
+
+// @va D2Game:0x6FCBCFE0
+export function AI_AcquireOrValidateCombatTarget113c(
+  m: Memory113c,
+  pAiTickArgs: number,
+  pUnit: number,
+  pGame: number,
+): number {
+  hitD2GameVa113c(0x6FCBCFE0);
+  const pTarget = m.u32(pAiTickArgs + 8);
+  if (pTarget === 0) {
+    return 0;
+  }
+  if (AI_CheckApproachTauntSound113c(m, pUnit, pAiTickArgs, pGame) !== 0) {
+    return 1;
+  }
+  if (AI_TryMonsterTeleportEscape113c(m, pUnit, pGame, pAiTickArgs) !== 0) {
+    return 1;
+  }
+  const classId = pUnit === 0 ? -1 : i32(m, pUnit + 4);
+  if (MONSTATS_CheckFlagBit113c(m, classId, 1) === 0) {
+    return 0;
+  }
+  if (MONSTATS2_CheckModeBit113c(m, classId, 2) === 0) {
+    return 0;
+  }
+  const pRoom = UNITS_GetRoom113c(m, pUnit);
+  if (pRoom === 0) {
+    return 0;
+  }
+  const levelId = DUNGEON_GetLevelIdFromRoom113c(m, pRoom);
+  const pLevelsTxt = DATATBLS_GetLevelsTxtRecord113c(m, levelId);
+  if (pLevelsTxt === 0) {
+    return 0;
+  }
+  const losDraw = m.u8(pLevelsTxt + 0x2f);
+  if (losDraw <= 0 || m.u32(pAiTickArgs + 0x14) <= (losDraw >>> 0)) {
+    return 0;
+  }
+  const pCurTarget = m.u32(pAiTickArgs + 8);
+  if (MONAI_CheckLineOfWalkFreeCoordsBetweenUnits_6FCD0E90_113c(m, pUnit, pCurTarget) !== 0) {
+    return 0;
+  }
+  const scanRes = withTownRuntimeGapStack(12, (ctx) => {
+    m.setU32(ctx, 0);
+    m.setU32(ctx + 4, 0x7fffffff);
+    m.setU32(ctx + 8, pCurTarget);
+    AITARGET_ScanUnitsByModeTable113c(m, 0x0b, ctx, pGame, pUnit, 0);
+    return [m.u32(ctx), m.u32(ctx + 4)] as const;
+  });
+  const pNewTarget = scanRes[0];
+  const newDist = scanRes[1];
+  if (pNewTarget === 0) {
+    AI_IdleWander113c(m, pGame, pUnit, 4);
+    return 1;
+  }
+  m.setU32(pAiTickArgs + 8, pNewTarget);
+  m.setU32(pAiTickArgs + 0x14, newDist);
+  return 0;
+}
+
+let k4QuestTimerDispatcher:
+  | ((m: Memory113c, pfnTimer: number, pGame: number, pQuestData: number) => number)
+  | null = null;
+
+let armedSliceQuestTimerDefer: { m: Memory113c; pGame: number } | null = null;
+let pendingEndOfFrameSliceQuestTimer: { m: Memory113c; pGame: number } | null = null;
+
+export function armDeferSliceQuestTimers113c(m: Memory113c, pGame: number): void {
+  const game = pGame >>> 0;
+  if (game !== 0 && m.u32((game + 0x10f4) >>> 0) !== 0) {
+    armedSliceQuestTimerDefer = { m, pGame: game };
+  } else {
+    armedSliceQuestTimerDefer = null;
+  }
+}
+
+export function flushDeferredSliceQuestTimers113c(m: Memory113c, pGame: number): void {
+  const game = pGame >>> 0;
+  armedSliceQuestTimerDefer = null;
+  if (
+    pendingEndOfFrameSliceQuestTimer !== null &&
+    pendingEndOfFrameSliceQuestTimer.m === m &&
+    pendingEndOfFrameSliceQuestTimer.pGame === game
+  ) {
+    pendingEndOfFrameSliceQuestTimer = null;
+    if (
+      game !== 0 &&
+      (m.u32((game + 0xa8) >>> 0) % 20) === 0 &&
+      m.u32((game + 0x10f4) >>> 0) !== 0
+    ) {
+      QUESTS_StepQuestTimers113c(m, game);
+    }
+  }
+}
+
+export function registerK4QuestTimerDispatcher113c(
+  dispatcher: ((m: Memory113c, pfnTimer: number, pGame: number, pQuestData: number) => number) | null,
+): void {
+  k4QuestTimerDispatcher = dispatcher;
+}
+
+// @va D2Game:0x6FC53B70
+export function QUESTS_StepQuestTimers113c(
+  m: Memory113c,
+  pGame: number,
+  onQuestTimerCallback?: (m: Memory113c, pfnTimer: number, pGame: number, pQuestData: number) => number,
+): void {
+  hitD2GameVa113c(0x6FC53B70);
+  if (
+    onQuestTimerCallback === undefined &&
+    armedSliceQuestTimerDefer !== null &&
+    armedSliceQuestTimerDefer.m === m &&
+    armedSliceQuestTimerDefer.pGame === (pGame >>> 0)
+  ) {
+    armedSliceQuestTimerDefer = null;
+    pendingEndOfFrameSliceQuestTimer = { m, pGame: pGame >>> 0 };
+    return;
+  }
+  hitD2GameVa113c(0x6FC53B70);
+  const pQuestControl = m.u32(pGame + 0x10f4);
+  if (pQuestControl === 0) {
+    return;
+  }
+  const nextTick = (m.u32(pQuestControl + 0x14) + 1) >>> 0;
+  m.setU32(pQuestControl + 0x14, nextTick);
+  if (nextTick === 0xffffffff) {
+    let pNode = m.u32(pQuestControl + 0x10);
+    while (pNode !== 0) {
+      const oldFire = m.u32(pNode + 8);
+      m.setU32(pNode + 8, (0xffffffff - oldFire) >>> 0);
+      pNode = m.u32(pNode + 0x10);
+    }
+  }
+  let pCurr = m.u32(pQuestControl + 0x10);
+  let pPrev = 0;
+  m.setU32(pQuestControl + 4, 1);
+  while (pCurr !== 0) {
+    const fireTick = m.u32(pCurr + 8);
+    const curTick = m.u32(pQuestControl + 0x14);
+    const pNext = m.u32(pCurr + 0x10);
+    if (fireTick < curTick) {
+      const pfnTimer = m.u32(pCurr) >>> 0;
+      if (pfnTimer === 0) {
+        throw new D2CommonAssertError('QUESTS_StepQuestTimers113c: IsBadCodePtr(pfnTimer)', 0x3f0);
+      }
+      const pQuestData = m.u32(pCurr + 4) >>> 0;
+      let removeFlag = 0;
+      if (onQuestTimerCallback !== undefined) {
+        removeFlag = onQuestTimerCallback(m, pfnTimer, pGame >>> 0, pQuestData) & 0xff;
+      } else if (k4QuestTimerDispatcher !== null) {
+        removeFlag = k4QuestTimerDispatcher(m, pfnTimer, pGame >>> 0, pQuestData) & 0xff;
+      }
+      if (removeFlag === 1) {
+        if (pPrev === 0) {
+          m.setU32(pQuestControl + 0x10, pNext);
+          freeMem(m, pCurr);
+          pCurr = 0;
+        } else {
+          m.setU32(pPrev + 0x10, pNext);
+          freeMem(m, pCurr);
+          pCurr = pPrev;
+        }
+      } else {
+        const postTick = m.u32(pQuestControl + 0x14) >>> 0;
+        const period = m.u32(pCurr + 0xc) >>> 0;
+        m.setU32(pCurr + 8, (postTick + period) >>> 0);
+      }
+    }
+    pPrev = pCurr;
+    pCurr = pNext;
+  }
+  m.setU32(pQuestControl + 4, 0);
+}
+
+// @va D2Game:0x6FC54EA0
+export function QUESTS_CheckNpcQuestInteractAlert113c(
+  m: Memory113c,
+  pPlayer: number,
+  pGame: number,
+  pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC54EA0);
+  if (pPlayer === 0 || m.u32(pPlayer) !== 0) {
+    throw new D2CommonAssertError('QUESTS_CheckNpcQuestInteractAlert113c: invalid player', 0x7ec);
+  }
+  if (pNpc === 0 || m.u32(pNpc) !== 1) {
+    throw new D2CommonAssertError('QUESTS_CheckNpcQuestInteractAlert113c: invalid npc', 0x7ed);
+  }
+  const npcClassId = i32(m, pNpc + 4);
+  if (MONSTATS_CheckFlagBit113c(m, npcClassId, 9) === 0) {
+    return 0;
+  }
+  const pQuestControl = m.u32(pGame + 0x10f4);
+  if (pQuestControl === 0 || m.u32(pQuestControl + 8) === 0) {
+    throw new D2CommonAssertError('QUESTS_CheckNpcQuestInteractAlert113c: quest control uninitialized', 0x7f4);
+  }
+  const pClient = m.u32(UNITS_GetPlayerData113c(m, pPlayer) + 0x9c);
+  const playerAct = SPLAYER_GetClientActNo113c(m, pClient) & 0xff;
+  let pQuest = m.u32(pQuestControl);
+  while (pQuest !== 0) {
+    if (m.u8(pQuest + 8) === playerAct) {
+      const pfnCheck = m.u32(pQuest + 0xec);
+      if (pfnCheck === 0) {
+        throw new D2CommonAssertError('QUESTS_CheckNpcQuestInteractAlert113c: null pfnCheck', 0x813);
+      }
+      const pPlayerData = UNITS_GetPlayerData113c(m, pPlayer);
+      if (pPlayerData === 0) {
+        throw new D2CommonAssertError('QUESTS_CheckNpcQuestInteractAlert113c: null player data', 0x803);
+      }
+      const diff = m.u8(pGame + 0x6d);
+      const pQuestFlags = m.u32(pPlayerData + diff * 4 + 0x10);
+      if (pQuestFlags === 0) {
+        throw new D2CommonAssertError('QUESTS_CheckNpcQuestInteractAlert113c: null quest flags', 0x805);
+      }
+      if ((dispatchQuestNpcAlertCallback(m, pfnCheck, pQuest, pPlayer, npcClassId, pQuestFlags, pNpc) & 0xff) !== 0) {
+        withTownRuntimeGapStack(8, (pkt) => {
+          m.setU8(pkt, 0x8a);
+          m.setU8(pkt + 1, 1);
+          m.setU32(pkt + 2, m.u32(pNpc + 0xc));
+          const sendClient = m.u32(pPlayer) === 0 ? m.u32(UNITS_GetPlayerData113c(m, pPlayer) + 0x9c) : 0;
+          D2NET_SendPacket0x06BytesToClient113c(m, pkt, sendClient);
+        });
+        return 1;
+      }
+    }
+    pQuest = m.u32(pQuest + 0xf4);
+  }
+  return 0;
+}
+
+function dispatchQuestNpcAlertCallback(
+  m: Memory113c,
+  pfnCheck: number,
+  pQuest: number,
+  pPlayer: number,
+  npcClassId: number,
+  pQuestFlags: number,
+  pNpc: number,
+): number {
+  switch (pfnCheck >>> 0) {
+    case 0x6fc80660:
+      return ACT1Q1_CheckDenOfEvilNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc80750:
+      return ACT1Q2_CheckBloodRavenNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc807d0:
+      return ACT1Q0_CheckWarrivIntroNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc80820:
+      return ACT1Q6_CheckTravelEastNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc80940:
+      return ACT1Q5_CheckCharsiImbueNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc80f20:
+      return ACT1Q4_CheckCainTownNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc81750:
+      return ACT1Q4_CheckSearchForCainNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc81b70:
+      return ACT1Q3_CheckMalusNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    case 0x6fc82df0:
+      return ACT1Q2_CheckAkaraIntroNpcAlert113c(m, pQuest, npcClassId, pPlayer, pQuestFlags, pNpc);
+    default:
+      return k4QuestNpcAlertDispatcher !== null
+        ? k4QuestNpcAlertDispatcher(m, pfnCheck, pQuest, pPlayer, npcClassId, pQuestFlags, pNpc)
+        : 0;
+  }
+}
+
+let k4QuestNpcAlertDispatcher:
+  | ((
+      m: Memory113c,
+      pfnCheck: number,
+      pQuest: number,
+      pPlayer: number,
+      npcClassId: number,
+      pQuestFlags: number,
+      pNpc: number,
+    ) => number)
+  | null = null;
+
+export function registerK4QuestNpcAlertDispatcher113c(
+  fn: (
+    m: Memory113c,
+    pfnCheck: number,
+    pQuest: number,
+    pPlayer: number,
+    npcClassId: number,
+    pQuestFlags: number,
+    pNpc: number,
+  ) => number,
+): void {
+  k4QuestNpcAlertDispatcher = fn;
+}
+
+// @va D2Game:0x6FC69DB0
+export function SPLAYER_GetClientActNo113c(m: Memory113c, pClient: number): number {
+  hitD2GameVa113c(0x6FC69DB0);
+  if (pClient === 0) {
+    throw new D2CommonAssertError('SPLAYER_GetClientActNo113c: pClient == NULL', 0x7cb);
+  }
+  return m.u8(pClient + 0x1ac);
+}
+
+// @va D2Game:0x6FC80660
+export function ACT1Q1_CheckDenOfEvilNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  _pPlayer: number,
+  pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC80660);
+  if (nNpcClassId !== 0x96) {
+    return 0;
+  }
+  const questId = i32(m, pQuest + 0xe0);
+  if (checkQuestBitStateHelper(m, pQuestFlags, questId, 0) === 1) {
+    return 0;
+  }
+  if (m.u8(pQuest + 0xc) === 1) {
+    if (checkQuestBitStateHelper(m, pQuestFlags, i32(m, pQuest + 0xe0), 1) === 0) {
+      return 1;
+    }
+  }
+  if (checkQuestBitStateHelper(m, pQuestFlags, i32(m, pQuest + 0xe0), 1) !== 1) {
+    return 0;
+  }
+  return 1;
+}
+
+// @va D2Game:0x6FC80750
+export function ACT1Q2_CheckBloodRavenNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  _pPlayer: number,
+  pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC80750);
+  if (nNpcClassId !== 0x94) {
+    return 0;
+  }
+  const questId = i32(m, pQuest + 0xe0);
+  if (checkQuestBitStateHelper(m, pQuestFlags, questId, 0) === 1) {
+    return 0;
+  }
+  if (m.u8(pQuest + 9) === 1 && m.u8(pQuest + 0xc) === 1) {
+    if (checkQuestBitStateHelper(m, pQuestFlags, i32(m, pQuest + 0xe0), 1) === 0) {
+      return 1;
+    }
+  }
+  if (checkQuestBitStateHelper(m, pQuestFlags, i32(m, pQuest + 0xe0), 1) !== 1) {
+    return 0;
+  }
+  return 1;
+}
+
+// @va D2Game:0x6FC807D0
+export function ACT1Q0_CheckWarrivIntroNpcAlert113c(
+  m: Memory113c,
+  _pQuest: number,
+  nNpcClassId: number,
+  _pPlayer: number,
+  pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC807D0);
+  if (nNpcClassId !== 0x9b) {
+    return 0;
+  }
+  if (checkQuestBitStateHelper(m, pQuestFlags, 0, 0) !== 0) {
+    return 0;
+  }
+  return 1;
+}
+
+// @va D2Game:0x6FC80820
+export function ACT1Q6_CheckTravelEastNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  pPlayer: number,
+  _pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC80820);
+  if (nNpcClassId !== 0x10a) {
+    return 0;
+  }
+  const pGame = m.u32(pQuest + 4);
+  const pQuestControl = m.u32(pGame + 0x10f4);
+  let pQ1 = 0;
+  if (pQuestControl !== 0) {
+    let pCur = m.u32(pQuestControl);
+    while (pCur !== 0) {
+      if (m.u32(pCur) === 1) {
+        pQ1 = pCur;
+        break;
+      }
+      pCur = m.u32(pCur + 0xf4);
+    }
+  }
+  if (pQ1 === 0 || m.u8(pQ1 + 9) === 0) {
+    return 0;
+  }
+  if (pGame === 0) {
+    throw new D2CommonAssertError('ACT1Q6_CheckTravelEastNpcAlert113c: null pGame', 0x820);
+  }
+  if (pQuestControl !== 0) {
+    if (m.u32(pQuestControl + 8) === 0) {
+      throw new D2CommonAssertError('ACT1Q6_CheckTravelEastNpcAlert113c: null quest control state', 0x82c);
+    }
+    const pGlobalFlags = m.u32(pQuestControl + 0xc);
+    if (checkQuestBitStateHelper(m, pGlobalFlags, 1, 0x0d) !== 0) {
+      return 0;
+    }
+  }
+  const pPlayerData = UNITS_GetPlayerData113c(m, pPlayer);
+  const diff = m.u8(pGame + 0x6d);
+  const pPlayerQuestFlags = m.u32(pPlayerData + diff * 4 + 0x10);
+  if (checkQuestBitStateHelper(m, pPlayerQuestFlags, 1, 0) !== 0) {
+    return 0;
+  }
+  if (checkQuestBitStateHelper(m, pPlayerQuestFlags, 1, 0x0d) !== 0) {
+    return 0;
+  }
+  if (checkQuestBitStateHelper(m, pPlayerQuestFlags, 1, 1) !== 0) {
+    return 0;
+  }
+  return 1;
+}
+
+// @va D2Game:0x6FC80940
+export function ACT1Q5_CheckCharsiImbueNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  pPlayer: number,
+  pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC80940);
+  const playerGuid = pPlayer === 0 ? 0xffffffff : m.u32(pPlayer + 0xc);
+  const pQuestData = m.u32(pQuest + 0x18);
+  if (nNpcClassId === 0x109) {
+    const count = m.u16(pQuestData + 0x80);
+    for (let i = 0; i < count; i++) {
+      if (m.u32(pQuestData + i * 4) === playerGuid) {
+        return 1;
+      }
+    }
+    if (checkQuestBitStateHelper(m, pQuestFlags, 6, 0) === 1) {
+      return 0;
+    }
+    if (m.u8(pQuest + 0xc) !== 1) {
+      return 0;
+    }
+    if (checkQuestBitStateHelper(m, pQuestFlags, 6, 1) !== 0) {
+      return 0;
+    }
+    return 1;
+  }
+  if (nNpcClassId === 0x9b) {
+    if (checkQuestBitStateHelper(m, pQuestFlags, 6, 0) === 1) {
+      return 0;
+    }
+    return checkQuestBitStateHelper(m, pQuestFlags, 6, 1) === 1 ? 1 : 0;
+  }
+  if (nNpcClassId === 0x94) {
+    return checkUnitGuidInList0x80(m, (pQuestData + 0x84) >>> 0, playerGuid) !== 0 ? 1 : 0;
+  }
+  if (nNpcClassId === 0x96) {
+    return checkUnitGuidInList0x80(m, (pQuestData + 0x108) >>> 0, playerGuid) !== 0 ? 1 : 0;
+  }
+  return 0;
+}
+
+// @va D2Game:0x6FC80F20
+export function ACT1Q4_CheckCainTownNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  pPlayer: number,
+  _pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC80F20);
+  const pQuestData = m.u32(pQuest + 0x18);
+  const playerGuid = pPlayer === 0 ? 0xffffffff : m.u32(pPlayer + 0xc);
+  const count = m.u16(pQuestData + 0x64);
+  for (let i = 0; i < count; i++) {
+    if (m.u32(pQuestData + 0x34 + i * 4) === playerGuid) {
+      if (nNpcClassId === 0x9b || nNpcClassId === 0x93) {
+        return 0;
+      }
+      return 1;
+    }
+  }
+  return 0;
+}
+
+// @va D2Game:0x6FC81750
+export function ACT1Q4_CheckSearchForCainNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  pPlayer: number,
+  pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC81750);
+  const bBit13 = checkQuestBitStateHelper(m, pQuestFlags, 4, 0x0d);
+  let bBit0 = checkQuestBitStateHelper(m, pQuestFlags, 4, 0);
+  const bBit1 = checkQuestBitStateHelper(m, pQuestFlags, 4, 1);
+  if (nNpcClassId === 0x94) {
+    if (m.u8(pQuest + 0xc) === 4 && bBit0 === 0 && bBit1 === 0) {
+      if ( pPlayer === 0 ) {
+        throw new D2CommonAssertError('ACT1Q4_CheckSearchForCainNpcAlert113c: null player', 0xa2a);
+      }
+      const pGame = m.u32(pPlayer + 0x80);
+      if (findPlayerQuestItemByCode(m, pPlayer, pGame, 0x20736b62) !== 0) {
+        return 1;
+      }
+      bBit0 = 0;
+    }
+    const qState = m.u8(pQuest + 0xc);
+    if (qState === 1 && bBit0 === 0 && bBit1 === 0) {
+      return 1;
+    }
+    if (qState === 6 && bBit13 === 1 && bBit0 === 0) {
+      return 1;
+    }
+    return bBit1 !== 0 ? 1 : 0;
+  }
+  if (nNpcClassId === 0x109) {
+    const pQuestData = m.u32(pQuest + 0x18);
+    const playerGuid = pPlayer === 0 ? 0xffffffff : m.u32(pPlayer + 0xc);
+    const count = m.u16(pQuestData + 0x134);
+    for (let i = 0; i < count; i++) {
+      if (m.u32(pQuestData + 0xb4 + i * 4) === playerGuid) {
+        return 1;
+      }
+    }
+    if (checkUnitGuidInList0x80(m, (pQuestData + 0x138) >>> 0, playerGuid) !== 0) {
+      return 0;
+    }
+    return bBit13 !== 0 ? 1 : 0;
+  }
+  return 0;
+}
+
+// @va D2Game:0x6FC81B70
+export function ACT1Q3_CheckMalusNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  pPlayer: number,
+  pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC81B70);
+  if (nNpcClassId !== 0x9a) {
+    return 0;
+  }
+  if (checkQuestBitStateHelper(m, pQuestFlags, 3, 0) === 1) {
+    return 0;
+  }
+  if (m.u8(pQuest + 0xc) === 1) {
+    if (checkQuestBitStateHelper(m, pQuestFlags, 3, 1) === 0) {
+      return 1;
+    }
+  }
+  if (STATLIST_GetUnitBaseStat113c(m, pPlayer, 0x0c, 0) < 8) {
+    return 0;
+  }
+  if (pPlayer === 0) {
+    throw new D2CommonAssertError('ACT1Q3_CheckMalusNpcAlert113c: null player', 0xa2a);
+  }
+  const pGame = m.u32(pPlayer + 0x80);
+  if (findPlayerQuestItemByCode(m, pPlayer, pGame, 0x206d6468) === 0) {
+    return 0;
+  }
+  return 1;
+}
+
+// @va D2Game:0x6FC82DF0
+export function ACT1Q2_CheckAkaraIntroNpcAlert113c(
+  m: Memory113c,
+  pQuest: number,
+  nNpcClassId: number,
+  pPlayer: number,
+  _pQuestFlags: number,
+  _pNpc: number,
+): number {
+  hitD2GameVa113c(0x6FC82DF0);
+  const pGame = m.u32(pQuest + 4);
+  const pPlayerData = UNITS_GetPlayerData113c(m, pPlayer);
+  const diff = m.u8(pGame + 0x6d);
+  const pFlags = m.u32(pPlayerData + diff * 4 + 0x10);
+  if (checkQuestBitStateHelper(m, pFlags, 1, 0) === 1) {
+    return 0;
+  }
+  if (nNpcClassId !== 0x94) {
+    return 0;
+  }
+  if (checkPlayerNpcIntroBit(m, pPlayer, m.u32(pQuest + 4), nNpcClassId) !== 0) {
+    return 0;
+  }
+  return 1;
+}
+
+// @va D2Game:0x6FC94D50
+export function PLAYER_RecalcTargetUnitPath113c(
+  m: Memory113c,
+  nNewDist: number,
+  pPathSyncState: number,
+  pUnit: number,
+  nPathTypeArg: number,
+): number {
+  hitD2GameVa113c(0x6FC94D50);
+  const pPath = m.u32(pUnit + 0x2c);
+  PATH_SetNewDistance113c(m, pPath, nNewDist);
+  const pTarget = PATH_GetTargetUnit113c(m, pPath);
+  const firstX = PATH_GetFirstPointX113c(m, pPath);
+  const firstY = PATH_GetFirstPointY113c(m, pPath);
+  if (
+    pPathSyncState !== 0 &&
+    (pTarget !== m.u32(pPathSyncState + 4) ||
+      firstX !== i32(m, pPathSyncState + 8) ||
+      firstY !== i32(m, pPathSyncState + 0xc))
+  ) {
+    m.setU32(pPathSyncState + 4, pTarget);
+    m.setU32(pPathSyncState + 8, firstX);
+    m.setU32(pPathSyncState + 0xc, firstY);
+    m.setU8(pPathSyncState, 0);
+    m.setU8(pPathSyncState + 1, 0);
+  }
+  const pathType = (nPathTypeArg | 0) !== 0 ? (nPathTypeArg | 0) : PATH_GetType113c(m, pPath);
+  PATH_SetType113c(m, pPath, pathType);
+  PATH_Compute113c(m, pPath, pUnit, 0);
+  const nPoints = PATH_GetNumberOfPathPoints113c(m, pPath);
+  if (nPoints !== 0) {
+    UNITROOM_RefreshUnit113c(m, pUnit);
+    m.setU32(pUnit + 0xc4, (m.u32(pUnit + 0xc4) | 1) >>> 0);
+    if (pPathSyncState !== 0) {
+      m.setU8(pPathSyncState, 0);
+      m.setU8(pPathSyncState + 1, 0);
+    }
+    return pathType;
+  }
+  if (pathType === 2 || pathType === 7 || pathType === 9 || pathType === 13) {
+    UNITROOM_RefreshUnit113c(m, pUnit);
+    m.setU32(pUnit + 0xc4, (m.u32(pUnit + 0xc4) | 1) >>> 0);
+    PATH_SetType113c(m, pPath, 0x0f);
+    PATH_Compute113c(m, pPath, pUnit, 0);
+    return 0x0f;
+  }
+  return pathType;
+}
+
+// @va D2Game:0x6FCAA770
+export function D2NET_SendPacket0x06BytesToClient113c(m: Memory113c, pPacket6: number, pClient: number): void {
+  hitD2GameVa113c(0x6FCAA770);
+  const buf = townRuntimeGapStackPtr >>> 0;
+  townRuntimeGapStackPtr = (buf + 0x10) >>> 0;
+  try {
+    m.setU32(buf, m.u32(pPacket6));
+    m.setU16(buf + 4, m.u16(pPacket6 + 4));
+    appendClientNetPacketNode(m, pClient, buf, 6);
+  } finally {
+    townRuntimeGapStackPtr = buf;
+  }
+}
+
+// @va D2Game:0x6FCADB00
+export function D2NET_SendUnitPosSync0x15ToClient113c(
+  m: Memory113c,
+  dwUnitId: number,
+  nUnitType: number,
+  pClient: number,
+  bRealign: number,
+  wPosX: number,
+  wPosY: number,
+  bUnkFlag: number,
+  bExtra11 = 0,
+  extraVelPct = 0,
+  maxDistOverride = -1,
+): void {
+  hitD2GameVa113c(0x6FCADB00);
+  if (pClient === 0) {
+    throw new D2CommonAssertError('D2NET_SendUnitPosSync0x15ToClient113c: pClient == NULL', 0x996);
+  }
+  const pGame = m.u32(pClient + 0x1a8);
+  if (pGame === 0) {
+    throw new D2CommonAssertError('D2NET_SendUnitPosSync0x15ToClient113c: pGame == NULL', 0x2d3);
+  }
+  const bucket = dwUnitId & 0x7f;
+  let pMonster = m.u32(pGame + bucket * 4 + 0x1320);
+  while (pMonster !== 0) {
+    if (m.u32(pMonster + 0xc) === (dwUnitId >>> 0)) {
+      break;
+    }
+    pMonster = m.u32(pMonster + 0xe4);
+  }
+  if (pMonster === 0) {
+    return;
+  }
+  const pPath = m.u32(pMonster + 0x2c);
+  let rawPt = pPath !== 0 ? (PATH_GetType113c(m, pPath) & 0xff) : 0;
+  let outX = wPosX & 0xffff;
+  let outY = wPosY & 0xffff;
+  const outStep = bUnkFlag & 0xff;
+  if (rawPt === 5 || rawPt === 6) {
+    rawPt = 1;
+    outX = pPath !== 0 ? (PATH_GetLastPointX113c(m, pPath) & 0xffff) : outX;
+    outY = pPath !== 0 ? (PATH_GetLastPointY113c(m, pPath) & 0xffff) : outY;
+  } else if (rawPt === 8) {
+    rawPt = 0x0b;
+  }
+  let velPct = ((STATLIST_GetUnitStat113c(m, pMonster, 0x43, 0) | 0) + (extraVelPct | 0)) | 0;
+  if (velPct <= -32768) {
+    velPct = -32768;
+  } else if (velPct >= 32767) {
+    velPct = 32767;
+  }
+  const maxDist =
+    maxDistOverride >= 0
+      ? maxDistOverride & 0xff
+      : pPath !== 0
+        ? (PATH_GetMaxDistance113c(m, pPath) & 0xff)
+        : 0;
+  withTownRuntimeGapStack(0x10, (pkt) => {
+    zeroMem(m, pkt, 0x10);
+    m.setU8(pkt, nUnitType & 0xff);
+    m.setU32(pkt + 1, dwUnitId >>> 0);
+    m.setU8(pkt + 5, bRealign & 0xff);
+    m.setU16(pkt + 6, outX & 0xffff);
+    m.setU16(pkt + 8, outY & 0xffff);
+    m.setU8(pkt + 0x0a, outStep & 0xff);
+    m.setU8(pkt + 0x0b, bExtra11 & 0xff);
+    m.setU8(pkt + 0x0c, rawPt & 0xff);
+    m.setU16(pkt + 0x0d, velPct & 0xffff);
+    m.setU8(pkt + 0x0f, maxDist & 0xff);
+    appendClientNetPacketNode(m, pClient, pkt, 0x10);
+  });
+}
+
+// @va D2Game:0x6FCD11A0
+export function AITARGET_IterateRoomActiveClients113c(
+  m: Memory113c,
+  pGame: number,
+  pOriginUnit: number,
+  pCtx: number,
+  pfnCallback: number,
+): number {
+  hitD2GameVa113c(0x6FCD11A0);
+  const pRoom = UNITS_GetRoom113c(m, pOriginUnit);
+  if (pRoom === 0) {
+    return 0;
+  }
+  const [ppRooms, numRooms] = withTownRuntimeGapStack(8, (ppRoomsPtr) => {
+    const pNumRoomsPtr = (ppRoomsPtr + 4) >>> 0;
+    DUNGEON_GetAdjacentRoomsListFromRoom113c(m, pRoom, ppRoomsPtr, pNumRoomsPtr);
+    return [m.u32(ppRoomsPtr), m.u32(pNumRoomsPtr)] as const;
+  });
+  for (let i = 0; i < numRooms; i++) {
+    const pAdjRoom = m.u32(ppRooms + i * 4);
+    const numClients = m.u32(pAdjRoom + 0x78);
+    const ppClients = m.u32(pAdjRoom + 0x48);
+    for (let j = 0; j < numClients; j++) {
+      const pClient = m.u32(ppClients + j * 4);
+      if (pClient === 0) {
+        throw new D2CommonAssertError('AITARGET_IterateRoomActiveClients113c: null client in room list', 0xfb);
+      }
+      let pPlayerUnit = 0;
+      if ((m.u8(pClient + 0x3d4) & 1) !== 0) {
+        pPlayerUnit = m.u32(pClient + 0x174);
+      } else if (m.u32(pClient + 0x174) !== 0) {
+        pPlayerUnit = SUNIT_GetServerUnit113c(
+          m,
+          m.u32(pClient + 0x1a8),
+          i32(m, pClient + 0x16c),
+          i32(m, pClient + 0x170),
+        );
+        if (pPlayerUnit === 0) {
+          m.setU32(pClient + 0x174, 0);
+        }
+      }
+      if (pPlayerUnit !== 0) {
+        const res = dispatchAiTargetCallback(m, pfnCallback, pGame, pOriginUnit, pPlayerUnit, pCtx);
+        if (res !== 0) {
+          return res;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+export { registerAiTargetModeCallback113c, type AiTargetModeCallback113c };
+
+const CB_ID_MODE_4 = 4;
+const CB_ID_MODE_8 = 0x6fcd0df0;
+const CB_ID_MODE_11 = 0x6fcd1520;
+const CB_ID_MODE_12 = 0x6fcd0db0;
+
+function dispatchAiTargetCallback(
+  m: Memory113c,
+  pfnCallback: number,
+  pGame: number,
+  pOriginUnit: number,
+  pCandidateUnit: number,
+  pCtx: number,
+): number {
+  const regCb = getRegisteredAiTargetModeCallback113c(pfnCallback >>> 0);
+  if (regCb !== undefined) {
+    return regCb(m, pGame, pOriginUnit, pCandidateUnit, pCtx);
+  }
+  switch (pfnCallback >>> 0) {
+    case 0x6fd11a90:
+      return AI_FindNearestPlayerCallback113c(m, pGame, pOriginUnit, pCandidateUnit, pCtx);
+    case CB_ID_MODE_4: {
+      if (pCandidateUnit === 0 || m.u32(pCandidateUnit) !== 1 || m.u32(pCandidateUnit + 0x10) !== 0) {
+        return 0;
+      }
+      const dist = AI_CalcApproxUnitDistSubtiles113c(m, pCandidateUnit, pOriginUnit);
+      return dist < i32(m, pCtx) ? pCandidateUnit : 0;
+    }
+    case CB_ID_MODE_8: {
+      if (pCandidateUnit === 0 || m.u32(pCandidateUnit) !== 2) {
+        return 0;
+      }
+      if (UNITS_IsDoor113c(m, pCandidateUnit) === 0 || m.u32(pCandidateUnit + 0x10) !== 0) {
+        return 0;
+      }
+      const dist = UNIT_CalcSqDistSubtiles113c(m, pCandidateUnit, pOriginUnit);
+      if (dist < i32(m, pCtx + 4)) {
+        m.setU32(pCtx, pCandidateUnit);
+        m.setU32(pCtx + 4, dist);
+      }
+      return 0;
+    }
+    case CB_ID_MODE_11: {
+      if (pCandidateUnit === m.u32(pCtx + 8)) {
+        return 0;
+      }
+      if (pCandidateUnit === 0 || SUNIT_IsDeadOrDying113c(m, pCandidateUnit) !== 0) {
+        return 0;
+      }
+      const dist = AI_CalcApproxUnitDistSubtiles113c(m, pCandidateUnit, pOriginUnit);
+      if (dist > 0x30) {
+        return 0;
+      }
+      const alignOrigin = UNIT_GetAlignment113c(m, pOriginUnit);
+      const alignCand = UNIT_GetAlignment113c(m, pCandidateUnit);
+      if (alignOrigin === alignCand) {
+        return 0;
+      }
+      if (dist >= i32(m, pCtx + 4)) {
+        return 0;
+      }
+      if (checkObstacleClearanceBetweenUnits(m, pCandidateUnit, pOriginUnit) !== 0) {
+        m.setU32(pCtx, pCandidateUnit);
+        m.setU32(pCtx + 4, dist);
+      }
+      return 0;
+    }
+    case CB_ID_MODE_12: {
+      if (pCandidateUnit === 0 || m.u32(pCandidateUnit) !== 1) {
+        return 0;
+      }
+      if (i32(m, pCandidateUnit + 4) !== i32(m, pCtx)) {
+        return 0;
+      }
+      if (SUNIT_IsDeadOrDying113c(m, pCandidateUnit) !== 0) {
+        return 0;
+      }
+      const dist = AI_CalcApproxUnitDistSubtiles113c(m, pOriginUnit, pCandidateUnit);
+      if (dist <= i32(m, pCtx + 4)) {
+        m.setU32(pCtx + 8, (m.u32(pCtx + 8) + 1) >>> 0);
+      }
+      return 0;
+    }
+    default:
+      return 0;
+  }
+}
+
+const AITARGET_SCAN_MODE_TABLE: ReadonlyArray<readonly [number, number]> = [
+  [0, 0],
+  [0, 0],
+  [1, 0],
+  [0, 3],
+  [0, CB_ID_MODE_4],
+  [2, 5],
+  [0, 6],
+  [0, 7],
+  [0, CB_ID_MODE_8],
+  [3, 0x6fcd12b0],
+  [3, 0],
+  [2, CB_ID_MODE_11],
+  [0, CB_ID_MODE_12],
+  [0, 0],
+];
+
+// @va D2Game:0x6FCD17B0
+export function AITARGET_ScanUnitsByModeTable113c(
+  m: Memory113c,
+  nScanIndex: number,
+  pCtx: number,
+  pGame: number,
+  pOriginUnit: number,
+  pfnOverrideCallback: number,
+): number {
+  hitD2GameVa113c(0x6FCD17B0);
+  const entry = AITARGET_SCAN_MODE_TABLE[nScanIndex];
+  const mode = entry !== undefined ? entry[0] : 0;
+  const defaultCb = entry !== undefined ? entry[1] : 0;
+  const pfnCb = defaultCb !== 0 ? defaultCb : pfnOverrideCallback;
+  if (pfnCb === 0) {
+    return 0;
+  }
+  if (mode === 1) {
+    return AITARGET_IterateRoomActiveClients113c(m, pGame, pOriginUnit, pCtx, pfnCb);
+  }
+  if (mode === 2) {
+    return MONAI_ForEachUnitInNonTownAdjacentRoomsWithPlayer_6FCD0CE0_113c(
+      m,
+      pOriginUnit,
+      pfnCb,
+      pGame,
+      pCtx,
+      (mem, pg, origin, roomUnit, ctx) =>
+        dispatchAiTargetCallback(mem, pfnCb, pg, origin, roomUnit, ctx),
+    );
+  }
+  if (mode === 3) {
+    return MONAI_ForEachPackMemberWithFilter_6FCD1320_113c(m, pOriginUnit, pGame, pfnCb, pCtx);
+  }
+  return MONAI_ForEachUnitInAdjacentRooms_6FCD0720_113c(
+    m,
+    pOriginUnit,
+    pfnCb,
+    pGame,
+    pCtx,
+    (mem, pg, origin, roomUnit, ctx) =>
+      dispatchAiTargetCallback(mem, pfnCb, pg, origin, roomUnit, ctx),
+  );
+}
+
+// @va D2Game:0x6FD11A90
+export function AI_FindNearestPlayerCallback113c(
+  m: Memory113c,
+  pGame: number,
+  pMonster: number,
+  pCandidatePlayer: number,
+  pCtx: number,
+): number {
+  hitD2GameVa113c(0x6FD11A90);
+  if (pCandidatePlayer === 0 || m.u32(pCandidatePlayer) !== 0) {
+    return 0;
+  }
+  const dist = AI_CalcApproxUnitDistSubtiles113c(m, pMonster, pCandidatePlayer);
+  if (dist > 0x0f) {
+    return 0;
+  }
+  const classId = pMonster === 0 ? -1 : i32(m, pMonster + 4);
+  if (MONSTATS_CheckFlagBit113c(m, classId, 9) === 0) {
+    m.setU32(pCtx + 4, dist);
+    m.setU32(pCtx, pCandidatePlayer);
+    return pCandidatePlayer;
+  }
+  if (QUESTS_CheckNpcQuestInteractAlert113c(m, pCandidatePlayer, pGame, pMonster) !== 0) {
+    if (dist < i32(m, pCtx + 4)) {
+      m.setU32(pCtx + 4, dist);
+      m.setU32(pCtx, pCandidatePlayer);
+      return pCandidatePlayer;
+    }
+  }
+  return 0;
+}
+
+// @va D2Game:0x6FC97FA0
+export function AITHINK_CanPlayerStartSkillOrCast113c(
+  m: Memory113c,
+  pUnit: number,
+  pGame: number,
+  nTargetMode: number,
+  bCheckSkill: number,
+  pTargetSkill: number,
+  onResetNeutralWhenMode1?: () => void,
+): number {
+  hitD2GameVa113c(0x6FC97FA0);
+  if (STATES_CheckState113c(m, pUnit, 0x36) !== 0) {
+    return 0;
+  }
+  if (pUnit === 0) {
+    return 0;
+  }
+  const curMode = m.u32(pUnit + 0x10);
+  if (curMode === 0 || curMode === 0x11) {
+    return 0;
+  }
+  if (nTargetMode === 0 || bCheckSkill === 0) {
+    return 1;
+  }
+  const pUsedSkill = SKILLS_GetUsedSkill113c(m, pUnit);
+  if (pUsedSkill === 0) {
+    return 1;
+  }
+  const skillId = SKILLS_GetSkillIdFromSkill113c(m, pUsedSkill, 0, 0xba);
+  const pSkillsTxt = SKILLS_GetRecordPtrFast113c(m, skillId);
+  if (pSkillsTxt === 0) {
+    return 1;
+  }
+  if (pTargetSkill === pUsedSkill) {
+    const weapClass = m.u16(pSkillsTxt + 0x2e);
+    if (weapClass === 0x43 || weapClass === 0x4c) {
+      return 1;
+    }
+  }
+  const gdwBitMasks = m.u32(D2GAME_IAT_GDW_BITMASKS_VA_113C);
+  const mask7 = gdwBitMasks !== 0 ? m.u8(gdwBitMasks + 0x1c) : 0x80;
+  if ((m.u8(pSkillsTxt + 7) & mask7) !== 0) {
+    let bShouldStop = 0;
+    if (STATES_CheckState113c(m, pUnit, 0x2a) !== 0) {
+      const pStatList = STATLIST_GetStatListFromUnitAndStateMemPort113c(m, pUnit, 0x2a);
+      const concPct = STATLIST_GetStatValue113c(m, pStatList, 0xa4, 0);
+      const roll = SEED_RollLimitedRandomNumber113c(m, (pUnit + 0x20) >>> 0, 100);
+      if (roll < concPct) {
+        bShouldStop = 1;
+      }
+    }
+    if (bShouldStop === 0) {
+      if (STATES_CheckState113c(m, pUnit, 0x0f) === 0) {
+        return 1;
+      }
+    }
+    if (m.u32(pUnit + 0x10) !== 1) {
+      return 0;
+    }
+    if (onResetNeutralWhenMode1 !== undefined) {
+      onResetNeutralWhenMode1();
+    } else {
+      startUnitModeAtCoordsInternal(m, pGame, pUnit, 0, 1, 0, 0, 1);
+    }
+    return 1;
+  }
+  if (m.u32(pUnit + 0x10) === 1) {
+    if (onResetNeutralWhenMode1 !== undefined) {
+      onResetNeutralWhenMode1();
+    } else {
+      startUnitModeAtCoordsInternal(m, pGame, pUnit, 0, 1, 0, 0, 1);
+    }
+    return 1;
+  }
+  if (
+    nTargetMode === 7 ||
+    nTargetMode === 8 ||
+    nTargetMode === 10 ||
+    nTargetMode === 11 ||
+    nTargetMode === 13 ||
+    nTargetMode === 18
+  ) {
+    return MONSTER_IsNextModeEndWithin5Frames113c(m, pUnit, pGame) !== 0 ? 1 : 0;
+  }
+  return 0;
+}
+
+// @va D2Game:0x6FC98340
+export function AITHINK_CanPlayerSwitchToMode113c(
+  m: Memory113c,
+  pUnit: number,
+  pGame: number,
+  nTargetMode: number,
+): number {
+  hitD2GameVa113c(0x6FC98340);
+  const pInventory = m.u32(pUnit + 0x60);
+  if (pInventory !== 0 && INVENTORY_GetCursorItem113c(m, pInventory) !== 0) {
+    if (nTargetMode !== 0 && nTargetMode !== 0x11) {
+      return 0;
+    }
+  }
+  if (nTargetMode === 0 || nTargetMode === 1 || nTargetMode === 5 || nTargetMode === 0x11) {
+    return 1;
+  }
+  const curMode = m.u32(pUnit + 0x10);
+  if (curMode > 0x12) {
+    return 1;
+  }
+  switch (curMode) {
+    case 0:
+    case 4:
+    case 9:
+    case 17:
+      return 0;
+    case 1:
+    case 2:
+    case 3:
+    case 5:
+    case 6:
+    case 14:
+    case 16:
+      return 1;
+    case 7:
+    case 8:
+    case 10:
+    case 11:
+      if (MONSTER_IsNextModeEndWithin5Frames113c(m, pUnit, pGame) !== 0) {
+        return 1;
+      }
+      return nTargetMode === 4 || nTargetMode === 9 ? 1 : 0;
+    case 12:
+      return MONSTER_IsNextModeEndWithin5Frames113c(m, pUnit, pGame) !== 0 ? 1 : 0;
+    case 13:
+      return m.u32(pUnit + 4) !== 0 ? 1 : 0;
+    case 15:
+      return m.u32(pUnit + 4) !== 5 ? 1 : 0;
+    case 18:
+      return PLAYER_CanInterruptCurrentSkillOrEvent113c(m, pUnit, pGame);
+    default:
+      return 1;
+  }
+}
+
+// @va D2Game:0x6FC98610
+export function PLAYER_StartWalkOrRunMode113c(
+  m: Memory113c,
+  nMode: number,
+  pUnit: number,
+  pGame: number,
+): void {
+  hitD2GameVa113c(0x6FC98610);
+  if (pGame === 0) {
+    throw new D2CommonAssertError('PLAYER_StartWalkOrRunMode113c: pGame == NULL', 0x139);
+  }
+  const pPath = m.u32(pUnit + 0x2c);
+  PATH_ResetToDefaultType113c(m, pPath);
+  let resolvedMode = nMode;
+  if (resolvedMode === 3) {
+    if (STATLIST_GetUnitStat113c(m, pUnit, 0x0a, 0) === 0) {
+      const bInTown = DUNGEON_CheckRoomIsTownMemPort113c(m, UNITS_GetRoom113c(m, pUnit));
+      resolvedMode = bInTown !== 0 ? 6 : 2;
+    }
+  } else if (resolvedMode === 2 || resolvedMode === 6) {
+    const bInTown = DUNGEON_CheckRoomIsTownMemPort113c(m, UNITS_GetRoom113c(m, pUnit));
+    resolvedMode = bInTown !== 0 ? 6 : 2;
+  } else if (resolvedMode === 0x13) {
+    PATH_SetType113c(m, pPath, 8);
+    PATH_SetDistance113c(m, pPath, 5);
+  }
+  const nPoints = PATH_Compute113c(m, pPath, pUnit, 0);
+  SKILLS_SetUsedSkill113c(m, pUnit, 0);
+  if (PATH_GetNumberOfPathPoints113c(m, pPath) === 0 || nPoints === 0) {
+    PLAYER_SetNeutralOrTownNeutralMode113c(m, pGame, pUnit, 1, 0, 0);
+    return;
+  }
+  SUNITDMG_FreeAttackerCombatList113c(m, pUnit, pGame);
+  UNITS_ChangeAnimMode113c(m, pUnit, resolvedMode);
+  MONSTER_ClearModeEvents113c(m, pGame, pUnit);
+  MONSTER_RegisterContinuousModeEvent113c(m, pGame, pUnit);
+}
+
+// @va D2Game:0x6FC98710
+export function PLAYER_SetPathTargetCoordsAndWalk113c(
+  m: Memory113c,
+  pGame: number,
+  pUnit: number,
+  nMode: number,
+  nX: number,
+  nY: number,
+): void {
+  hitD2GameVa113c(0x6FC98710);
+  if (pGame === 0) {
+    throw new D2CommonAssertError('PLAYER_SetPathTargetCoordsAndWalk113c: pGame == NULL', 0x17d);
+  }
+  const pPath = m.u32(pUnit + 0x2c);
+  PATH_SetTargetPos113c(m, pPath, nX, nY);
+  PLAYER_StartWalkOrRunMode113c(m, nMode, pUnit, pGame);
+}
+
+// Exact 20-entry `D2Game.dll` `.data` table at `0x6FD279D0..0x6FD27A1F` (`PLAYER_StepAnimationModeTick`).
+const DEFAULT_PLAYER_MODE_TICK_TABLE_6FD279D0: readonly number[] = [
+  0x6fc97940, // 0: DEATH
+  0x6fc97930, // 1: NEUTRAL
+  0x6fc99b90, // 2: WALK
+  0x6fc99b90, // 3: RUN
+  0x6fc97920, // 4: GETHIT
+  0x6fc97930, // 5: TOWN_NEUTRAL
+  0x6fc99b90, // 6: TOWN_WALK
+  0x6fc99170, // 7: ATTACK1
+  0x6fc99170, // 8: ATTACK2
+  0x6fc97920, // 9: BLOCK
+  0x6fc99170, // 10: CAST
+  0x6fc99170, // 11: THROW
+  0x6fc99170, // 12: KICK
+  0x6fc99170, // 13: SKILL1
+  0x6fc99170, // 14: SKILL2
+  0x6fc99170, // 15: SKILL3
+  0x6fc99170, // 16: SKILL4
+  0x6fc97940, // 17: DEAD
+  0x6fc99170, // 18: SEQUENCE
+  0x6fc99b90, // 19: KNOCKBACK
+];
+
+// @va D2Game:0x6FC99A10
+export function PLAYER_StepAnimationModeTick113c(
+  m: Memory113c,
+  pGame: number,
+  pUnit: number,
+  nArg1: number,
+  nArg2: number,
+  onMoveStep?: (m: Memory113c, pGame: number, pUnit: number) => number,
+  onModeHandler?: (
+    m: Memory113c,
+    pfnHandler: number,
+    pGame: number,
+    pUnit: number,
+    nArg1: number,
+    nArg2: number,
+  ) => number,
+): void {
+  hitD2GameVa113c(0x6FC99A10);
+  const mode = pUnit === 0 ? 0 : m.u32(pUnit + 0x10) >>> 0;
+  let pfn = 0;
+  try {
+    pfn = m.u32((0x6fd279d0 + mode * 4) >>> 0) >>> 0;
+  } catch {
+    pfn = 0;
+  }
+  if (pfn === 0 && mode < DEFAULT_PLAYER_MODE_TICK_TABLE_6FD279D0.length) {
+    pfn = DEFAULT_PLAYER_MODE_TICK_TABLE_6FD279D0[mode]! >>> 0;
+  }
+  if (pfn === 0) {
+    return;
+  }
+  let res = 1;
+  if (onModeHandler !== undefined) {
+    res = onModeHandler(m, pfn, pGame >>> 0, pUnit >>> 0, nArg1 | 0, nArg2 | 0) | 0;
+  } else if (pfn === 0x6fc99b90) {
+    res = onMoveStep !== undefined ? onMoveStep(m, pGame, pUnit) : stepPlayerMoveModeTick(m, pGame, pUnit);
+  } else if (pfn === 0x6fc99170) {
+    const pSkill = SKILLS_GetUsedSkill113c(m, pUnit);
+    if (pSkill === 0) {
+      res = 2;
+    } else {
+      PLAYER_ScheduleSkillActionFrameEvents113c(m, pGame, pUnit, 0, 1);
+      res = SUNIT_IsDeadOrDying113c(m, pUnit) !== 0 ? 2 : 1;
+    }
+  } else if (pfn === 0x6fc97940 || pfn === 0x6fc97930 || pfn === 0x6fc97920) {
+    res = 1;
+  }
+  if (res === 2) {
+    PLAYER_FinishModeAndResetToNeutral113c(m, pGame, pUnit, nArg1, nArg2);
+  }
+}
+
+function stepPlayerMoveModeTick(m: Memory113c, pGame: number, pUnit: number): number {
+  SUNIT_UpdateUnitPositionAndRoom113c(m, pGame, pUnit);
+  if (pUnit !== 0 && m.u32(pUnit + 0x10) === 3) {
+    if (STATLIST_GetUnitStat113c(m, pUnit, 0x0a, 0) === 0 && STATES_CheckState113c(m, pUnit, 0x0e) === 0) {
+      PLAYER_StartWalkOrRunMode113c(m, 2, pUnit, pGame);
+    }
+  }
+  if (pUnit === 0) {
+    return 2;
+  }
+  const pPath = m.u32(pUnit + 0x2c);
+  if (pPath === 0 || PATH_GetNumberOfPathPoints113c(m, pPath) === 0) {
+    return 2;
+  }
+  return SUNIT_IsDeadOrDying113c(m, pUnit) !== 0 ? 2 : 1;
+}
+
+// @va D2Game:0x6FCEE150
+export function SPLAYER_BroadcastUnitMovementToClient113c(
+  m: Memory113c,
+  pGame: number,
+  pUnit: number,
+  pClient: number,
+  nModeIdx: number,
+): number {
+  hitD2GameVa113c(0x6FCEE150);
+  if (pClient === 0) {
+    throw new D2CommonAssertError('SPLAYER_BroadcastUnitMovementToClient113c: pClient == NULL', 0xfb);
+  }
+  let pClientPlayer = 0;
+  if ((m.u8(pClient + 0x3d4) & 1) !== 0) {
+    pClientPlayer = m.u32(pClient + 0x174);
+  } else if (m.u32(pClient + 0x174) !== 0) {
+    pClientPlayer = SUNIT_GetServerUnit113c(
+      m,
+      m.u32(pClient + 0x1a8),
+      i32(m, pClient + 0x16c),
+      i32(m, pClient + 0x170),
+    );
+    if (pClientPlayer === 0) {
+      m.setU32(pClient + 0x174, 0);
+    }
+  }
+  if (pUnit === pClientPlayer) {
+    return 0;
+  }
+  const pTarget = PATH_GetTargetUnit113c(m, m.u32(pUnit + 0x2c));
+  if (pTarget !== pUnit && pTarget !== 0) {
+    const pTargetRoom = UNITS_GetRoom113c(m, pTarget);
+    if (pTargetRoom !== 0) {
+      const numClients = m.u32(pTargetRoom + 0x78);
+      const ppClients = m.u32(pTargetRoom + 0x48);
+      for (let i = 0; i < numClients; i++) {
+        if (m.u32(ppClients + i * 4) === (pClient >>> 0)) {
+          const targetGuid = m.u32(pTarget + 0xc);
+          const targetType = m.u32(pTarget);
+          const unitGuid = m.u32(pUnit + 0xc);
+          const curY = UNIT_GetPosY113c(m, pUnit);
+          const curX = UNIT_GetPosX113c(m, pUnit);
+          const row = MODE_DISPATCH_POST_TABLE[nModeIdx & 7]!;
+          withTownRuntimeGapStack(0x10, (pkt) => {
+            zeroMem(m, pkt, 0x10);
+            m.setU8(pkt, 0x10);
+            m.setU8(pkt + 1, 0);
+            m.setU32(pkt + 2, unitGuid);
+            m.setU8(pkt + 6, row[1]);
+            m.setU8(pkt + 7, targetType & 0xff);
+            m.setU32(pkt + 8, targetGuid);
+            m.setU16(pkt + 0x0c, curX & 0xffff);
+            m.setU16(pkt + 0x0e, curY & 0xffff);
+            appendClientNetPacketNode(m, pClient, pkt, 0x10);
+          });
+          return 1;
+        }
+      }
+    }
+  }
+  const pPath = m.u32(pUnit + 0x2c);
+  const curY = UNIT_GetPosY113c(m, pUnit);
+  const curX = UNIT_GetPosX113c(m, pUnit);
+  const lastY = pPath !== 0 ? PATH_GetLastPointY113c(m, pPath) : 0;
+  const lastX = pPath !== 0 ? PATH_GetLastPointX113c(m, pPath) : 0;
+  const row = MODE_DISPATCH_POST_TABLE[nModeIdx & 7]!;
+  withTownRuntimeGapStack(0x10, (pkt) => {
+    zeroMem(m, pkt, 0x10);
+    m.setU8(pkt, 0x0f);
+    m.setU8(pkt + 1, 0);
+    m.setU32(pkt + 2, m.u32(pUnit + 0xc));
+    m.setU8(pkt + 6, row[0]);
+    m.setU16(pkt + 7, lastX & 0xffff);
+    m.setU16(pkt + 9, lastY & 0xffff);
+    m.setU8(pkt + 0x0b, 0);
+    m.setU16(pkt + 0x0c, curX & 0xffff);
+    m.setU16(pkt + 0x0e, curY & 0xffff);
+    appendClientNetPacketNode(m, pClient, pkt, 0x10);
+  });
+  return 1;
+}
+
+// @va D2Game:0x6FC982F0
+export function PLAYER_SetNeutralOrTownNeutralMode113c(
+  m: Memory113c,
+  pGame: number,
+  pUnit: number,
+  nFallbackMode: number,
+  _unused1: number,
+  _unused2: number,
+): void {
+  hitD2GameVa113c(0x6FC982F0);
+  const pRoom = UNITS_GetRoom113c(m, pUnit);
+  let mode = nFallbackMode;
+  if (pRoom !== 0) {
+    const bInTown = DUNGEON_CheckRoomIsTownMemPort113c(m, pRoom);
+    mode = bInTown !== 0 ? 5 : 1;
+  }
+  MONSTER_ClearModeEvents113c(m, pGame, pUnit);
+  SUNITDMG_FreeAttackerCombatList113c(m, pUnit, pGame);
+  UNITS_ChangeAnimMode113c(m, pUnit, mode);
+  SKILLS_SetUsedSkill113c(m, pUnit, 0);
+}
+
+// @va D2Game:0x6FC99850
+export function PLAYER_FinishModeAndResetToNeutral113c(
+  m: Memory113c,
+  pGame: number,
+  pUnit: number,
+  _nArg1: number,
+  _nArg2: number,
+): void {
+  hitD2GameVa113c(0x6FC99850);
+  const curMode = pUnit === 0 ? 0 : m.u32(pUnit + 0x10);
+  let bTriggerPostSkill = 0;
+  if (curMode === 7 || curMode === 8 || curMode === 0x0b) {
+    bTriggerPostSkill = 1;
+  } else {
+    const pSkill = SKILLS_GetUsedSkill113c(m, pUnit);
+    if (pSkill !== 0) {
+      const skillId = SKILLS_GetSkillIdFromSkill113c(m, pSkill, 0, 0x778);
+      if (skillId >= 0) {
+        const sgptPtr = m.u32(D2GAME_IAT_SGPT_DATATABLES_VA_113C);
+        const sgpt = sgptPtr !== 0 ? m.u32(sgptPtr) : 0;
+        if (sgpt !== 0 && skillId < i32(m, sgpt + 0xba0)) {
+          const pSkillsTxt = (m.u32(sgpt + 0xb98) + skillId * 0x23c) >>> 0;
+          if (pSkillsTxt !== 0) {
+            const gdwBitMasks = m.u32(D2GAME_IAT_GDW_BITMASKS_VA_113C);
+            const mask2 = gdwBitMasks !== 0 ? m.u8(gdwBitMasks + 8) : 4;
+            if ((m.u8(pSkillsTxt + 6) & mask2) !== 0) {
+              bTriggerPostSkill = 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  if (bTriggerPostSkill !== 0) {
+    PLAYER_ScheduleSkillActionFrameEvents113c(m, pGame, pUnit);
+    PLAYER_StartModeCast113c(m, pGame, pUnit, 0, '1HS', true);
+  }
+  if (curMode === 0) {
+    PLAYER_HandleDeathCorpseAndSave_6FC99730_113c(m as never, pGame, pUnit, 0, 0, 0x11);
+    return;
+  }
+  if (curMode === 0x13) {
+    PLAYER_StartModeAtCoords113c(m, pGame, pUnit, 4, -1, 0, 0, 0);
+    return;
+  }
+  PLAYER_SetNeutralOrTownNeutralMode113c(m, pGame, pUnit, 1, 0, 0);
+}
+
+// @va D2Game:0x6FCFF620
+export function SUNIT_FindValidNextRoomInAct113c(m: Memory113c, pUnit: number, pGame: number): number {
+  hitD2GameVa113c(0x6FCFF620);
+  const pPath = m.u32(pUnit + 0x2c);
+  const pNextRoom = PATH_GetNextRoom113c(m, pPath);
+  const pCurRoom = UNITS_GetRoom113c(m, pUnit);
+  const levelId = DUNGEON_GetLevelIdFromRoom113c(m, pCurRoom);
+  if (levelId !== 0) {
+    const actNo = DRLG_GetActNoFromLevelId113c(m, levelId) & 0xff;
+    const pDrlgAct = m.u32(pGame + actNo * 4 + 0xbc);
+    let pRoomIter = DUNGEON_GetRoomExFromRoom113c(m, pDrlgAct);
+    while (pRoomIter !== 0) {
+      if (pRoomIter === pNextRoom) {
+        return pNextRoom;
+      }
+      pRoomIter = m.u32(pRoomIter + 0x7c);
+    }
+  }
+  PATH_ClearNextRoom113c(m, pPath);
+  return 0;
+}
+
+let unitEnterClientRoomSyncHook113c:
+  | ((m: Memory113c, pClient: number, pUnit: number, pGame: number) => void)
+  | undefined;
+
+export function registerUnitEnterClientRoomSyncHook113c(
+  fn: (m: Memory113c, pClient: number, pUnit: number, pGame: number) => void,
+): void {
+  unitEnterClientRoomSyncHook113c = fn;
+}
+
+function resolveClientPlayerUnitForRoomDiff113c(m: Memory113c, pClient: number): number {
+  if (pClient === 0) {
+    return 0;
+  }
+  if ((m.u8(pClient + 0x3d4) & 1) !== 0) {
+    return m.u32(pClient + 0x174);
+  }
+  if (m.u32(pClient + 0x174) !== 0) {
+    const pPlr = SUNIT_GetServerUnit113c(
+      m,
+      m.u32(pClient + 0x1a8),
+      i32(m, pClient + 0x16c),
+      i32(m, pClient + 0x170),
+    );
+    if (pPlr === 0) {
+      m.setU32(pClient + 0x174, 0);
+    }
+    return pPlr;
+  }
+  return 0;
+}
+
+// @va D2Game:0x6FD01610
+export function SUNIT_UpdateUnitPositionAndRoom113c(
+  m: Memory113c,
+  pTargetRoomArg: number,
+  pUnit: number,
+  pGame?: number,
+): void {
+  hitD2GameVa113c(0x6FD01610);
+  const gamePtr = pGame !== undefined ? pGame : pTargetRoomArg;
+  const targetRoomIn = pGame !== undefined ? pTargetRoomArg : 0;
+  if (UNITS_GetPathRoomRefreshFlag113c(m, pUnit) === 0) {
+    return;
+  }
+  const pOldRoom = UNITS_GetRoom113c(m, pUnit);
+  let pNewRoom = targetRoomIn;
+  if (pNewRoom === 0) {
+    pNewRoom = SUNIT_FindValidNextRoomInAct113c(m, pUnit, gamePtr);
+    if (pNewRoom !== 0 && pOldRoom === pNewRoom) {
+      return;
+    }
+  } else if (pOldRoom === pNewRoom) {
+    return;
+  }
+  if (pUnit !== 0 && m.u32(pUnit) === 1) {
+    const pMonsterData = m.u32(pUnit + 0x14);
+    if (pMonsterData !== 0) {
+      m.setU32(pMonsterData + 0x50, 0);
+    }
+  }
+  const oldClients = pOldRoom !== 0 ? m.u32(pOldRoom + 0x48) : 0;
+  const oldCount = pOldRoom !== 0 ? m.u32(pOldRoom + 0x78) : 0;
+  const newClients = pNewRoom !== 0 ? m.u32(pNewRoom + 0x48) : 0;
+  const newCount = pNewRoom !== 0 ? m.u32(pNewRoom + 0x78) : 0;
+  let idxOld = 0;
+  let idxNew = 0;
+  while (idxOld < oldCount && idxNew < newCount) {
+    if (oldClients === 0) {
+      throw new D2CommonAssertError('SUNIT_UpdateUnitPositionAndRoom113c: null oldClients', 0x107);
+    }
+    if (newClients === 0) {
+      throw new D2CommonAssertError('SUNIT_UpdateUnitPositionAndRoom113c: null newClients', 0x108);
+    }
+    const pClientOld = m.u32(oldClients + idxOld * 4);
+    const pClientNew = m.u32(newClients + idxNew * 4);
+    if (pClientOld < pClientNew) {
+      if (unitEnterClientRoomSyncHook113c !== undefined && pClientOld !== 0 && m.u8(pUnit) === 3) {
+        const pPlayerOld = resolveClientPlayerUnitForRoomDiff113c(m, pClientOld);
+        if (pUnit !== pPlayerOld) {
+          unitEnterClientRoomSyncHook113c(m, pClientOld, pUnit, pGame ?? 0);
+        }
+      }
+      idxOld++;
+    } else if (pClientOld > pClientNew) {
+      if (pClientNew === 0) {
+        throw new D2CommonAssertError('SUNIT_UpdateUnitPositionAndRoom113c: null pClientNew', 0xfb);
+      }
+      let pPlayerNew = 0;
+      if ((m.u8(pClientNew + 0x3d4) & 1) !== 0) {
+        pPlayerNew = m.u32(pClientNew + 0x174);
+      } else if (m.u32(pClientNew + 0x174) !== 0) {
+        pPlayerNew = SUNIT_GetServerUnit113c(
+          m,
+          m.u32(pClientNew + 0x1a8),
+          i32(m, pClientNew + 0x16c),
+          i32(m, pClientNew + 0x170),
+        );
+        if (pPlayerNew === 0) {
+          m.setU32(pClientNew + 0x174, 0);
+        }
+      }
+      if (pUnit !== pPlayerNew && m.u8(pUnit) !== 3) {
+        withTownRuntimeGapStack(8, (pkt) => {
+          m.setU8(pkt, 0x0a);
+          m.setU8(pkt + 1, m.u8(pUnit));
+          m.setU32(pkt + 2, m.u32(pUnit + 0xc));
+          appendClientNetPacketNode(m, pClientNew, pkt, 6);
+        });
+      }
+      idxNew++;
+    } else {
+      idxOld++;
+      idxNew++;
+    }
+  }
+  while (idxOld < oldCount) {
+    if (oldClients === 0) {
+      throw new D2CommonAssertError('SUNIT_UpdateUnitPositionAndRoom113c: null oldClients tail', 0x11c);
+    }
+    const pClientOld = m.u32(oldClients + idxOld * 4);
+    if (unitEnterClientRoomSyncHook113c !== undefined && pClientOld !== 0 && m.u8(pUnit) === 3) {
+      const pPlayerOld = resolveClientPlayerUnitForRoomDiff113c(m, pClientOld);
+      if (pUnit !== pPlayerOld) {
+        unitEnterClientRoomSyncHook113c(m, pClientOld, pUnit, pGame ?? 0);
+      }
+    }
+    idxOld++;
+  }
+  while (idxNew < newCount) {
+    if (newClients === 0) {
+      throw new D2CommonAssertError('SUNIT_UpdateUnitPositionAndRoom113c: null newClients tail', 0x122);
+    }
+    const pClientNew = m.u32(newClients + idxNew * 4);
+    if (pClientNew === 0) {
+      throw new D2CommonAssertError('SUNIT_UpdateUnitPositionAndRoom113c: null pClientNew tail', 0xfb);
+    }
+    let pPlayerNew = 0;
+    if ((m.u8(pClientNew + 0x3d4) & 1) !== 0) {
+      pPlayerNew = m.u32(pClientNew + 0x174);
+    } else if (m.u32(pClientNew + 0x174) !== 0) {
+      pPlayerNew = SUNIT_GetServerUnit113c(
+        m,
+        m.u32(pClientNew + 0x1a8),
+        i32(m, pClientNew + 0x16c),
+        i32(m, pClientNew + 0x170),
+      );
+      if (pPlayerNew === 0) {
+        m.setU32(pClientNew + 0x174, 0);
+      }
+    }
+    if (pUnit !== pPlayerNew && m.u8(pUnit) !== 3) {
+      withTownRuntimeGapStack(8, (pkt) => {
+        m.setU8(pkt, 0x0a);
+        m.setU8(pkt + 1, m.u8(pUnit));
+        m.setU32(pkt + 2, m.u32(pUnit + 0xc));
+        appendClientNetPacketNode(m, pClientNew, pkt, 6);
+      });
+    }
+    idxNew++;
+  }
+  const pPath = m.u32(pUnit + 0x2c);
+  PATH_SetCurrentRoomInvalid113c(m, pPath, 0);
+}
+
+// @va D2Game:0x6FCAC010
+export function D2NET_SendUnitMovePacket0x10BytesToClient113c(
+  m: Memory113c,
+  nPacketHeader: number,
+  dwUnitId: number,
+  pClient: number,
+  bMoveType: number,
+  wTargetX: number,
+  wTargetY: number,
+  bUnk10: number,
+  bUnk11: number,
+  wCurrentX: number,
+  wCurrentY: number,
+): void {
+  hitD2GameVa113c(0x6FCAC010);
+  const pkt = townRuntimeGapStackPtr >>> 0;
+  townRuntimeGapStackPtr = (pkt + 0x10) >>> 0;
+  try {
+    zeroMem(m, pkt, 0x10);
+    m.setU8(pkt, nPacketHeader & 0xff);
+    m.setU32(pkt + 1, dwUnitId >>> 0);
+    m.setU8(pkt + 5, bMoveType & 0xff);
+    m.setU16(pkt + 6, wTargetX & 0xffff);
+    m.setU16(pkt + 8, wTargetY & 0xffff);
+    m.setU8(pkt + 0x0a, bUnk10 & 0xff);
+    m.setU8(pkt + 0x0b, bUnk11 & 0xff);
+    m.setU16(pkt + 0x0c, wCurrentX & 0xffff);
+    m.setU16(pkt + 0x0e, wCurrentY & 0xffff);
+    appendClientNetPacketNode(m, pClient, pkt, 0x10);
+  } finally {
+    townRuntimeGapStackPtr = pkt;
+  }
+}

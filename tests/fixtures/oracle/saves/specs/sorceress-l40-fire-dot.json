@@ -1,0 +1,6 @@
+{
+  "base": "tests/fixtures/oracle/saves/a1-sorceress-l1.d2s",
+  "exp": 18000000,
+  "skills": [[36, 1], [41, 5], [46, 1], [51, 10], [37, 1]],
+  "stats": [[3, 100], [1, 95]]
+}

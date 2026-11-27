@@ -1,0 +1,865 @@
+{
+ "name": "p52-item-defense",
+ "description": "Paladin L70 equipped with Howltusk (ATD 3, MDR 2, 35% Damage to Mana), Hwanin's Refuge (10% CtC L3 Static Field When Struck, +100 Life), String of Ears (15% DR, MDR 10), Goblin Toe (DR 1, MDR 1), Hellmouth (Fire Absorb +15), and Nord's Tenderizer (Cold Absorb 8%): takes zombie melee hits testing DR/%DR, Damage to Mana, ATD, armor durability, CtC Static Field When Struck, and Thorns aura reflect.",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/paladin-item-defense.d2s",
+ "difficulty": 0,
+ "frames": 1600,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "031e16a116",
+   "note": "run to zombies #9 and #10"
+  },
+  {
+   "frame": 656,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 662,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 668,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 674,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 680,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 686,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 692,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 698,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 704,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 710,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 716,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 722,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 728,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 734,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 740,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 746,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 752,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 758,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 764,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 770,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 776,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 782,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 788,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 794,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 800,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 806,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 812,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 818,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 824,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 830,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 836,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 842,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 848,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 854,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 860,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 866,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 872,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 878,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 884,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 890,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 896,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 902,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 908,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 914,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 920,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 926,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 932,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 938,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 944,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 950,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 956,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 962,
+   "c2s": "032016a416",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 968,
+   "c2s": "031d16a116",
+   "note": "pace near zombies #9/#10 (DR/%DR + Damage to Mana + ATD + CtC rolls)"
+  },
+  {
+   "frame": 980,
+   "c2s": "030a169a16",
+   "note": "lure zombie #11 without crossing western room boundary"
+  },
+  {
+   "frame": 1004,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1010,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1016,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1022,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1028,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1034,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1040,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1046,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1052,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1058,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1064,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1070,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1076,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1082,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1088,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1094,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 (ATD + CtC rolls)"
+  },
+  {
+   "frame": 1099,
+   "c2s": "3c67000000ffffffff",
+   "note": "select Thorns aura (right)"
+  },
+  {
+   "frame": 1100,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1106,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1112,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1118,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1124,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1130,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1136,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1142,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1148,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1154,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1160,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1166,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1172,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1178,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1184,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1190,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1196,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1202,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1208,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1214,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1220,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1226,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1232,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1238,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1244,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1250,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1256,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1262,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1268,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1274,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1280,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1286,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1292,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1298,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1304,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1310,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1316,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1322,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1328,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1334,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1340,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1346,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1352,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1358,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1364,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1370,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1376,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1382,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1388,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1394,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1400,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1406,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1412,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1418,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1424,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1430,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1436,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1442,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1448,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1454,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1460,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1466,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1472,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1478,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1484,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1490,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1496,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1502,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1508,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1514,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1520,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1526,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1532,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1538,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1544,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1550,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1556,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1562,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1568,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1574,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1580,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1586,
+   "c2s": "030d169b16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  },
+  {
+   "frame": 1592,
+   "c2s": "030a169a16",
+   "note": "pace near zombie #11 with Thorns active (ATD + Thorns)"
+  }
+ ]
+}

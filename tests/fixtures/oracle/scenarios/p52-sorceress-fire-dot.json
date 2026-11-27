@@ -1,0 +1,225 @@
+{
+ "name": "p52-sorceress-fire-dot",
+ "description": "Sorceress L40: Fire Wall on the zombies (burning ground DoT, missile lifetime), then Inferno on zombie #11.",
+ "seed": 12345,
+ "save": "tests/fixtures/oracle/saves/sorceress-l40-fire-dot.d2s",
+ "difficulty": 0,
+ "frames": 1800,
+ "inputs": [
+  {
+   "frame": 40,
+   "c2s": "030d161217"
+  },
+  {
+   "frame": 65,
+   "c2s": "0314160617"
+  },
+  {
+   "frame": 90,
+   "c2s": "032016fa16"
+  },
+  {
+   "frame": 115,
+   "c2s": "032116f716"
+  },
+  {
+   "frame": 150,
+   "c2s": "032216e416"
+  },
+  {
+   "frame": 180,
+   "c2s": "032216d316"
+  },
+  {
+   "frame": 210,
+   "c2s": "032116c316"
+  },
+  {
+   "frame": 240,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 270,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 300,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 330,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 360,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 390,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 420,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 450,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 480,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 510,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 540,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 570,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 600,
+   "c2s": "032016b916"
+  },
+  {
+   "frame": 620,
+   "c2s": "3c33000000ffffffff",
+   "note": "select Fire Wall"
+  },
+  {
+   "frame": 630,
+   "c2s": "0c1e16a216",
+   "note": "Fire Wall at the zombies"
+  },
+  {
+   "frame": 690,
+   "c2s": "0c1e16a216",
+   "note": "Fire Wall at the zombies"
+  },
+  {
+   "frame": 750,
+   "c2s": "0c1e16a216",
+   "note": "Fire Wall at the zombies"
+  },
+  {
+   "frame": 810,
+   "c2s": "0c1e16a216",
+   "note": "Fire Wall at the zombies"
+  },
+  {
+   "frame": 870,
+   "c2s": "0c1e16a216",
+   "note": "Fire Wall at the zombies"
+  },
+  {
+   "frame": 900,
+   "c2s": "3c29000000ffffffff",
+   "note": "select Inferno"
+  },
+  {
+   "frame": 910,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 930,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 950,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 970,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 990,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1010,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1030,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1050,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1070,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1090,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1110,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1130,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1150,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1170,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1190,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1210,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1230,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1250,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1270,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  },
+  {
+   "frame": 1290,
+   "c2s": "0d010000000b000000",
+   "note": "Inferno zombie #11"
+  }
+ ]
+}

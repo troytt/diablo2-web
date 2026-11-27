@@ -1,0 +1,65 @@
+{
+  "name": "k4-act5-quest",
+  "description": "Act 5 Quest 3 (Prison of Ice, word 37 = 0x0202 QFLAG_REWARDPENDING | QFLAG_CUSTOM9): Paladin L40 runs from Harrogath spawn (5098, 5023) to Malah (unit #7, hcIdx 513), completes 0x13/0x2F/0x31 (wScrollId 0x4EA4) / 0x30 to receive Scroll of Resistance ('tr2 ' item #9), and consumes it via C2S 0x20 (+10 stats 39/41/43/45 all resists).",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/saves/k4-act5-quest.d2s",
+  "difficulty": 0,
+  "frames": 140,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 10,
+      "c2s": "03dc13a413",
+      "note": "run west-southwest to Malah (#7)"
+    },
+    {
+      "frame": 44,
+      "c2s": "130100000007000000",
+      "note": "C2S 0x13 Interact Malah (#7)"
+    },
+    {
+      "frame": 48,
+      "c2s": "2f0100000007000000",
+      "note": "C2S 0x2F NpcInit Malah (#7)"
+    },
+    {
+      "frame": 52,
+      "c2s": "3107000000a44e0000",
+      "note": "C2S 0x31 A5Q3 Malah reward scroll (0x4EA4 -> mints 'tr2 ' #9)"
+    },
+    {
+      "frame": 56,
+      "c2s": "300100000007000000",
+      "note": "C2S 0x30 NpcCancel Malah (#7)"
+    },
+    {
+      "frame": 68,
+      "c2s": "2009000000dc130000a4130000",
+      "note": "C2S 0x20 UseItem Scroll of Resistance ('tr2 ' #9 -> +10 all resists)"
+    }
+  ]
+}

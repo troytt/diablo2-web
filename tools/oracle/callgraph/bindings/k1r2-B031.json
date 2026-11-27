@@ -1,0 +1,164 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD7D600",
+    "name": "DRLG_GetRoomExFromCoordinates",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_GetRoomExFromCoordinates113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (5 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B350",
+    "name": "DUNGEON_UpdateRoomIdleCounter",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_UpdateRoomIdleCounter113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B3A0",
+    "name": "DUNGEON_VerifyRoomClientsNonNull",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_VerifyRoomClientsNonNull113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B3F0",
+    "name": "DUNGEON_SetRoomFlag2",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_SetRoomFlag2_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B440",
+    "name": "DUNGEON_CheckRoomFlag2",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_CheckRoomFlag2_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B470",
+    "name": "DUNGEON_GetRoomPortalList",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetRoomPortalList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B4A0",
+    "name": "DUNGEON_FreeRoomPortalList",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_FreeRoomPortalList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B500",
+    "name": "DUNGEON_AddRoomPortalNode",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_AddRoomPortalNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B550",
+    "name": "DUNGEON_GetRoomExFromRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetRoomExFromRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8B5B0",
+    "name": "DUNGEON_GetCollisionGridFromRoomFast",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetCollisionGridFromRoomFast113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BA20",
+    "name": "DUNGEON_GetAdjacentRoomsListFromRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetAdjacentRoomsListFromRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BA60",
+    "name": "DUNGEON_GetRoomCoordinates",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetRoomCoordinates113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BD60",
+    "name": "DUNGEON_GetLogicalRoomField30",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetLogicalRoomField30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BE90",
+    "name": "DUNGEON_AreAllAdjacentRoomsActive",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_AreAllAdjacentRoomsActive113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (4 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BF60",
+    "name": "DUNGEON_HasRoomExWaypointFlags",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_HasRoomExWaypointFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8BFB0",
+    "name": "DUNGEON_GetLevelIdIfNotHidden",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_GetLevelIdIfNotHidden113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (4 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C020",
+    "name": "DUNGEON_AcquireRoomExDT1Mask",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_AcquireRoomExDT1Mask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8C330",
+    "name": "DUNGEON_CheckPresetRoomFlag80",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DUNGEON_CheckPresetRoomFlag80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B031-dungeon.test.ts (3 real-DLL vectors; 58 total in tests/fixtures/oracle/k1/b031-vectors.ndjson via k1r2-laneC-it5-emitter.c)"
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD76DB0",
+    "name": "ITEMS_CheckRequirements",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CheckRequirements113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD787D0",
+    "name": "ITEMS_CanUseCharmInInventory",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CanUseCharmInInventory113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91070",
+    "name": "DRLGOUTROOM_SpawnAct5BarricadeWallStrip",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_SpawnAct5BarricadeWallStrip113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91120",
+    "name": "DRLGOUTROOM_SpawnFrigidHighlandsCorner",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_SpawnFrigidHighlandsCorner113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD911E0",
+    "name": "DRLGOUTROOM_TryUpgradeBorderPreset",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_TryUpgradeBorderPreset113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91230",
+    "name": "DRLGOUTROOM_TraceAndSpawnPlateauPerimeter",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_TraceAndSpawnPlateauPerimeter113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD916B0",
+    "name": "DRLGOUTROOM_SpawnHellAct5SpecialCorners",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_SpawnHellAct5SpecialCorners113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91B50",
+    "name": "DRLGOUTROOM_SpawnAct5EdgeTransitions",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTROOM_SpawnAct5EdgeTransitions113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD97DC0",
+    "name": "ITEMS_CraftModAddSockets",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CraftModAddSockets113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9FCB0",
+    "name": "SKILLS_GetSkillBonusLevel",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillBonusLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0560",
+    "name": "SKILLS_GetUnitSkillBonusBySkillId",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetUnitSkillBonusBySkillId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA05C0",
+    "name": "SKILLS_EvaluateSkillLevel",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvaluateSkillLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0AF0",
+    "name": "SKILLS_CheckSkillManaOrCharges",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CheckSkillManaOrCharges113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0EA0",
+    "name": "SKILLS_GetSkillLevelByIdWithBonus",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillLevelByIdWithBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0F00",
+    "name": "SKILLS_CheckUnitEquippedWeaponsMatchSkill",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CheckUnitEquippedWeaponsMatchSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC4000",
+    "name": "DATATBLS_GetItemRatioTxtRecord",
+    "kernFile": "src/d2kern-113c/tables/datatbls-113c.ts",
+    "tsSymbol": "DATATBLS_GetItemRatioTxtRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCECC0",
+    "name": "DRLGOUTWILD_SpawnRiverColumnAndBridge",
+    "kernFile": "src/d2kern-113c/tables/field-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTWILD_SpawnRiverColumnAndBridge113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i10b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r7-laneB-it10-emitter.c) replayed in tests/oracle/k1/laneB-I10B-2.test.ts"
+  }
+]

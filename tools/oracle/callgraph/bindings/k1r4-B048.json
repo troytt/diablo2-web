@@ -1,0 +1,146 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD62450",
+    "name": "UNITS_AreInAdjacentRooms",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_AreInAdjacentRooms113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD62C00",
+    "name": "LOGGING_WriteLockedEntry",
+    "kernFile": "src/d2kern-113c/common/logging.ts",
+    "tsSymbol": "LOGGING_WriteLockedEntry113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneD-ported29.test.ts (real-DLL vectors via k1r13-laneD-ported29-emitter.c -> k1r13-i14d-1.ndjson); tests/oracle/k1/laneA-B048-unit-statlist.test.ts (host-I/O void function calling MSVCRT fwrite/fflush + Fog.#10050/LeaveCriticalSection; verified via direct memory-probe unit tests)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD69A50",
+    "name": "SEED_PickRandomListNode",
+    "kernFile": "src/d2kern-113c/prng.ts",
+    "tsSymbol": "SEED_PickRandomListNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6E4F0",
+    "name": "INVENTORY_AppendItemGuidNode",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_AppendItemGuidNode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80590",
+    "name": "PLAYER_StoreSwitchLeftSkill",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "PLAYER_StoreSwitchLeftSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80600",
+    "name": "PLAYER_StoreSwitchRightSkill",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "PLAYER_StoreSwitchRightSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80670",
+    "name": "PLAYER_StoreLeftSkill",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "PLAYER_StoreLeftSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD806D0",
+    "name": "PLAYER_StoreRightSkill",
+    "kernFile": "src/d2kern-113c/common/quest-record.ts",
+    "tsSymbol": "PLAYER_StoreRightSkill113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80BD0",
+    "name": "UNITS_IsAttackAnimMode",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_IsAttackAnimMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD80EE0",
+    "name": "UNITS_GetUnitSizeY",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetUnitSizeY113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD813F0",
+    "name": "UNITS_IsInMovingMode",
+    "kernFile": "src/d2kern-113c/common/waypoint.ts",
+    "tsSymbol": "UNITS_IsInMovingMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD83990",
+    "name": "UNITS_FreeUnit",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_FreeUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD97020",
+    "name": "ITEMMODS_GetOrCreateStatList",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMMODS_GetOrCreateStatList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB6410",
+    "name": "UNITROOM_UnlinkUnitFromUpdateList",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITROOM_UnlinkUnitFromUpdateList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB6630",
+    "name": "UNITROOM_ValidateUnitInRoom",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITROOM_ValidateUnitInRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB68A0",
+    "name": "UNITROOM_ClearUnitRoom",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITROOM_ClearUnitRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-B048-unit-statlist.test.ts (real-DLL vectors via k1r4-laneA-it9-emitter.c -> b048-vectors.ndjson)"
+  }
+]

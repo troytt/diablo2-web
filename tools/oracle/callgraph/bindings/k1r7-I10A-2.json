@@ -1,0 +1,173 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD6B1D0",
+    "name": "MONSTERS_ApplyClassicConversionStats",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "MONSTERS_ApplyClassicConversionStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD814A0",
+    "name": "UNITS_HasCollisionBetweenUnits",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_HasCollisionBetweenUnits113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD81850",
+    "name": "UNITS_SetCollisionMaskAtCoords",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SetCollisionMaskAtCoords113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD819A0",
+    "name": "UNITS_IsUnitMovingBool",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_IsUnitMovingBool113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82220",
+    "name": "UNITS_GetAnimStartFrame",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetAnimStartFrame113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82C10",
+    "name": "STATES_SetMonsterSkillIconOnUnit",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATES_SetMonsterSkillIconOnUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD82EF0",
+    "name": "UNITS_SyncDualWieldWeaponStatLists",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_SyncDualWieldWeaponStatLists113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD884B0",
+    "name": "STATLIST_GetStatListFromUnitStateOrFlag",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetStatListFromUnitStateOrFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD884F0",
+    "name": "STATLIST_GetStatListFromUnitAndFlag",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetStatListFromUnitAndFlag113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD886E0",
+    "name": "STATLIST_GetExtendedUnitStatsById",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetExtendedUnitStatsById113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD89B60",
+    "name": "STATLIST_UpdateUnitByTimeStats",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_UpdateUnitByTimeStats113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD89CC0",
+    "name": "STATLIST_GetUnitStatBonus",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_GetUnitStatBonus113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8A790",
+    "name": "STATLIST_SetBaseStatExIfValid",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_SetBaseStatExIfValid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8AB30",
+    "name": "STATLIST_ClampUnitPoolStatsToMax",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_ClampUnitPoolStatsToMax113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8AC50",
+    "name": "STATLIST_ClearMonsterSkillIconStatList",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_ClearMonsterSkillIconStatList113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8AD40",
+    "name": "STATLIST_FreeStatListIfNonExtended",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_FreeStatListIfNonExtended113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8AD60",
+    "name": "STATLIST_ExpireOrphanStateSubLists",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_ExpireOrphanStateSubLists113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD8ADD0",
+    "name": "STATLIST_ExpireTimedSubLists",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "STATLIST_ExpireTimedSubLists113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCFCD0",
+    "name": "UNITS_GetDistanceToOtherUnit",
+    "kernFile": "src/d2kern-113c/common/unit.ts",
+    "tsSymbol": "UNITS_GetDistanceToOtherUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneA-I10A-2.test.ts (real-DLL vectors via k1r7-laneA-it10-emitter.c -> i10a-2-vectors.ndjson)"
+  }
+]

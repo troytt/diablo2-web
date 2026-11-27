@@ -1,0 +1,590 @@
+{
+ "case": "p54-barbarian-buffs",
+ "label": "field",
+ "save": "tests/fixtures/oracle/saves/barbarian-l40-warcries.d2s",
+ "fields": [
+  "sheet.level",
+  "sheet.experience",
+  "sheet.nextLevel",
+  "sheet.strength",
+  "sheet.dexterity",
+  "sheet.defense",
+  "sheet.vitality",
+  "sheet.maxStamina",
+  "sheet.stamina",
+  "sheet.maxLife",
+  "sheet.life",
+  "sheet.energy",
+  "sheet.maxMana",
+  "sheet.mana",
+  "sheet.fireRes",
+  "sheet.coldRes",
+  "sheet.lightRes",
+  "sheet.poisonRes",
+  "sheet.leftSkill",
+  "sheet.rightSkill",
+  "sheet.blockChance",
+  "sheet.leftAttackRating",
+  "sheet.rightAttackRating",
+  "skills.list",
+  "skill.0.level",
+  "skill.0.name",
+  "skill.0.damage",
+  "skill.0.attackRating",
+  "skill.1.level",
+  "skill.1.name",
+  "skill.1.damage",
+  "skill.1.attackRating",
+  "skill.2.level",
+  "skill.2.name",
+  "skill.2.damage",
+  "skill.2.attackRating",
+  "skill.3.level",
+  "skill.3.name",
+  "skill.3.damage",
+  "skill.3.attackRating",
+  "skill.4.level",
+  "skill.4.name",
+  "skill.4.damage",
+  "skill.4.attackRating",
+  "skill.5.level",
+  "skill.5.name",
+  "skill.5.damage",
+  "skill.5.attackRating",
+  "skill.126.level",
+  "skill.126.name",
+  "skill.126.damage",
+  "skill.126.attackRating",
+  "skill.130.level",
+  "skill.130.name",
+  "skill.130.damage",
+  "skill.130.attackRating",
+  "skill.137.level",
+  "skill.137.name",
+  "skill.137.damage",
+  "skill.137.attackRating",
+  "skill.138.level",
+  "skill.138.name",
+  "skill.138.damage",
+  "skill.138.attackRating",
+  "skill.139.level",
+  "skill.139.name",
+  "skill.139.damage",
+  "skill.139.attackRating",
+  "skill.146.level",
+  "skill.146.name",
+  "skill.146.damage",
+  "skill.146.attackRating",
+  "skill.149.level",
+  "skill.149.name",
+  "skill.149.damage",
+  "skill.149.attackRating",
+  "skill.154.level",
+  "skill.154.name",
+  "skill.154.damage",
+  "skill.154.attackRating",
+  "skill.155.level",
+  "skill.155.name",
+  "skill.155.damage",
+  "skill.155.attackRating",
+  "skill.217.level",
+  "skill.218.level",
+  "skill.219.level",
+  "skill.220.level",
+  "tooltip.0",
+  "tooltip.1",
+  "tooltip.2",
+  "tooltip.3",
+  "tooltip.4",
+  "tooltip.5",
+  "tooltip.126",
+  "tooltip.130",
+  "tooltip.137",
+  "tooltip.138",
+  "tooltip.139",
+  "tooltip.146",
+  "tooltip.149",
+  "tooltip.154",
+  "tooltip.155",
+  "tooltip.217",
+  "tooltip.218",
+  "tooltip.219",
+  "tooltip.220"
+ ],
+ "original": {
+  "source": "oracle",
+  "classId": 4,
+  "sheet": {
+   "level": "40",
+   "experience": "18,000,000",
+   "nextLevel": "19,235,252",
+   "strength": "80",
+   "dexterity": "65",
+   "defense": "20",
+   "vitality": "125",
+   "maxStamina": "231",
+   "stamina": "231",
+   "maxLife": "533",
+   "life": "533",
+   "energy": "10",
+   "maxMana": "49",
+   "mana": "49",
+   "fireRes": "0",
+   "coldRes": "0",
+   "lightRes": "0",
+   "poisonRes": "0"
+  },
+  "stats": {
+   "0": 80,
+   "1": 10,
+   "2": 65,
+   "3": 125,
+   "5": 8,
+   "6": 136448,
+   "7": 136448,
+   "8": 12544,
+   "9": 12544,
+   "10": 59136,
+   "11": 59136,
+   "12": 40,
+   "13": 18000000,
+   "21": 3,
+   "22": 6,
+   "31": 4,
+   "67": 100,
+   "68": 100,
+   "69": 100,
+   "72": 40,
+   "73": 40,
+   "172": 2
+  },
+  "leftSkill": 0,
+  "rightSkill": 0,
+  "computed": {
+   "blockChance": 15,
+   "leftAttackRating": 310,
+   "rightAttackRating": 310
+  },
+  "skillList": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   126,
+   130,
+   137,
+   138,
+   139,
+   146,
+   149,
+   154,
+   155,
+   217,
+   218,
+   219,
+   220
+  ],
+  "skills": {
+   "0": {
+    "name": "ATTACK",
+    "damage": "5-10",
+    "attackRating": 310
+   },
+   "1": {
+    "name": "KICK TARGET",
+    "damage": "0-1",
+    "attackRating": null
+   },
+   "2": {
+    "name": "THROW",
+    "damage": null,
+    "attackRating": null
+   },
+   "3": {
+    "name": "UNSUMMON",
+    "damage": null,
+    "attackRating": null
+   },
+   "4": {
+    "name": "LEFT THROW",
+    "damage": null,
+    "attackRating": null
+   },
+   "5": {
+    "name": "LEFT SWING",
+    "damage": null,
+    "attackRating": null
+   },
+   "126": {
+    "name": "BASH",
+    "damage": "8-15",
+    "attackRating": 372
+   },
+   "130": {
+    "name": "HOWL",
+    "damage": null,
+    "attackRating": null
+   },
+   "137": {
+    "name": "TAUNT",
+    "damage": null,
+    "attackRating": null
+   },
+   "138": {
+    "name": "SHOUT",
+    "damage": null,
+    "attackRating": null
+   },
+   "139": {
+    "name": "STUN",
+    "damage": "5-11",
+    "attackRating": 356
+   },
+   "146": {
+    "name": "BATTLE CRY",
+    "damage": null,
+    "attackRating": null
+   },
+   "149": {
+    "name": "BATTLE ORDERS",
+    "damage": null,
+    "attackRating": null
+   },
+   "154": {
+    "name": "WAR CRY",
+    "damage": "51-63",
+    "attackRating": null
+   },
+   "155": {
+    "name": "BATTLE CMD",
+    "damage": null,
+    "attackRating": null
+   },
+   "217": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "218": {
+    "name": "IDENTIFY",
+    "damage": null,
+    "attackRating": null
+   },
+   "219": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   },
+   "220": {
+    "name": "TOWNPORTAL",
+    "damage": null,
+    "attackRating": null
+   }
+  },
+  "tooltips": {
+   "0": [
+    "Attack",
+    "normal attack"
+   ],
+   "1": [
+    "Kick",
+    "kick target"
+   ],
+   "2": [
+    "Throw",
+    "throw equipped item"
+   ],
+   "3": [
+    "Unsummon",
+    "relinquishes control",
+    "of one of your creatures"
+   ],
+   "4": [
+    "Left Hand Throw",
+    "throw left hand item"
+   ],
+   "5": [
+    "Left Hand Swing",
+    "swing left hand weapon"
+   ],
+   "126": [
+    "Bash",
+    "powerful blow that increases the damage done",
+    "to enemies and knocks them back",
+    "",
+    "Current Skill Level: 1",
+    "Attack: +20 percent",
+    "Damage: +55 percent",
+    "Damage: +1",
+    "Mana Cost: 2",
+    "",
+    "Next Level",
+    "Attack: +25 percent",
+    "Damage: +60 percent",
+    "Damage: +2",
+    "Mana Cost: 2",
+    "",
+    "Bash Receives Bonuses From:",
+    "Stun: +5% Damage per Level",
+    "Concentrate: +5% Attack Rating per Level"
+   ],
+   "130": [
+    "Howl",
+    "sends nearby monsters",
+    "scrambling away in fear",
+    "",
+    "Current Skill Level: 1",
+    "Enemy runs up to 16 yards",
+    "Enemy runs for 3 seconds",
+    "Mana Cost: 4",
+    "",
+    "Next Level",
+    "Enemy runs up to 19.3 yards",
+    "Enemy runs for 4 seconds",
+    "Mana Cost: 4"
+   ],
+   "137": [
+    "Taunt",
+    "enrages a monster into relentlessly attacking",
+    "",
+    "Current Skill Level: 1",
+    "Target's Damage: -5 percent",
+    "Target's Attack: -5 percent",
+    "Mana Cost: 3",
+    "",
+    "Next Level",
+    "Target's Damage: -7 percent",
+    "Target's Attack: -7 percent",
+    "Mana Cost: 3"
+   ],
+   "138": [
+    "Shout",
+    "warns of impending danger and improves the defense",
+    "rating of you and your party",
+    "",
+    "Current Skill Level: 10",
+    "Defense: +190 percent",
+    "Duration: 165 seconds",
+    "Mana Cost: 6",
+    "",
+    "Next Level",
+    "Defense: +200 percent",
+    "Duration: 175 seconds",
+    "Mana Cost: 6",
+    "",
+    "Shout Receives Bonuses From:",
+    "Battle Orders: +5 Seconds per Level",
+    "Battle Command: +5 Seconds per Level"
+   ],
+   "139": [
+    "Stun",
+    "stuns your target for a short time",
+    "and increases your attack rating",
+    "",
+    "Damage: +8 percent",
+    "",
+    "Current Skill Level: 1",
+    "Attack: 15 percent",
+    "Duration: 1.4 seconds",
+    "Mana Cost: 2",
+    "",
+    "Next Level",
+    "Attack: 20 percent",
+    "Duration: 1.7 seconds",
+    "Mana Cost: 2",
+    "",
+    "Stun Receives Bonuses From:",
+    "Bash: +8% Damage per Level",
+    "Concentrate: +5% Attack Rating per Level",
+    "War Cry: +5% Duration per Level"
+   ],
+   "146": [
+    "Battle Cry",
+    "fearsome cry that decreases",
+    "enemies' defense rating and damage",
+    "",
+    "Current Skill Level: 1",
+    "Duration: 12 seconds",
+    "Defense: -50 percent",
+    "Damage: -25 percent",
+    "Mana Cost: 5",
+    "",
+    "Next Level",
+    "Duration: 14.4 seconds",
+    "Defense: -52 percent",
+    "Damage: -26 percent",
+    "Mana Cost: 5"
+   ],
+   "149": [
+    "Battle Orders",
+    "improves the maximum mana, life and",
+    "stamina of you and your party",
+    "",
+    "Current Skill Level: 10",
+    "Duration: 175 seconds",
+    "Max Stamina: 62 percent",
+    "Max Life: 62 percent",
+    "Max Mana: 62 percent",
+    "Mana Cost: 7",
+    "",
+    "Next Level",
+    "Duration: 185 seconds",
+    "Max Stamina: 65 percent",
+    "Max Life: 65 percent",
+    "Max Mana: 65 percent",
+    "Mana Cost: 7",
+    "",
+    "Battle Orders Receives Bonuses From:",
+    "Shout: +5 Seconds per Level",
+    "Battle Command: +5 Seconds per Level"
+   ],
+   "154": [
+    "War Cry",
+    "injures and stuns all nearby enemies",
+    "",
+    "Current Skill Level: 5",
+    "Damage: 51-63",
+    "Stun Length: 1.8 seconds",
+    "Mana Cost: 14",
+    "",
+    "Next Level",
+    "Damage: 59-70",
+    "Stun Length: 2 seconds",
+    "Mana Cost: 15",
+    "",
+    "War Cry Receives Bonuses From:",
+    "Howl: +6% Damage per Level",
+    "Taunt: +6% Damage per Level",
+    "Battle Cry: +6% Damage per Level"
+   ],
+   "155": [
+    "Battle Command",
+    "increases all current skill levels for you and your party",
+    "",
+    "Current Skill Level: 1",
+    "Duration: 105 seconds",
+    "Mana Cost: 11",
+    "",
+    "Next Level",
+    "Duration: 115 seconds",
+    "Mana Cost: 11",
+    "",
+    "Battle Command Receives Bonuses From:",
+    "Shout: +5 Seconds per Level",
+    "Battle Orders: +5 Seconds per Level"
+   ],
+   "217": [
+    "Scroll of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "218": [
+    "Tome of Identify",
+    "identify a magic item's properties",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "219": [
+    "Scroll of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ],
+   "220": [
+    "Tome of Townportal",
+    "create a magic portal to the nearest town",
+    "",
+    "Current Skill Level: 1",
+    "",
+    "Next Level"
+   ]
+  },
+  "skillLevels": {
+   "0": [
+    1,
+    1
+   ],
+   "1": [
+    1,
+    1
+   ],
+   "2": [
+    1,
+    1
+   ],
+   "3": [
+    1,
+    1
+   ],
+   "4": [
+    1,
+    1
+   ],
+   "5": [
+    1,
+    1
+   ],
+   "126": [
+    1,
+    1
+   ],
+   "130": [
+    1,
+    1
+   ],
+   "137": [
+    1,
+    1
+   ],
+   "138": [
+    10,
+    10
+   ],
+   "139": [
+    1,
+    1
+   ],
+   "146": [
+    1,
+    1
+   ],
+   "149": [
+    10,
+    10
+   ],
+   "154": [
+    5,
+    5
+   ],
+   "155": [
+    1,
+    1
+   ],
+   "217": [
+    1,
+    1
+   ],
+   "218": [
+    1,
+    1
+   ],
+   "219": [
+    1,
+    1
+   ],
+   "220": [
+    1,
+    1
+   ]
+  }
+ }
+}

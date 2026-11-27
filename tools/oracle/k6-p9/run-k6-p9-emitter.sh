@@ -1,0 +1,187 @@
+#!/usr/bin/env bash
+# Build and run tools/oracle/k6-p9/k6-p9-d2game-emitter.c under headless Wine
+# to produce or verify the [K6-P9] Band B (0x6FC70000..0x6FCAFFFF) real-DLL
+# D2Game.dll differential vector fixture:
+#   - tests/fixtures/oracle/k6-p9/k6-p9-d2game-vectors.ndjson.gz
+#
+# Compiles under THREE optimization profiles (-O2, -O2 -fno-omit-frame-pointer, -O1)
+# with -m32 -Wall -Wextra -Werror -static-libgcc, verifies register-only inline-asm
+# constraints (0 "m"/"g"/"o"), runs all 3 against real Diablo II v1.13c DLLs under
+# headless Wine, asserts 3-way SHA-256 identity + exact unique Band B VAs (>= 3
+# cases each, >= 2 distinct output signatures per VA, 0 degenerate VAs), and writes
+# or checks the gzipped fixture.
+#
+# Usage:
+#   bash tools/oracle/k6-p9/run-k6-p9-emitter.sh           # generate fixture
+#   bash tools/oracle/k6-p9/run-k6-p9-emitter.sh --check   # verify reproducibility & compiler-flag parity
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+OUT_DIR="$REPO_ROOT/tests/fixtures/oracle/k6-p9"
+OUT_FILE="$OUT_DIR/k6-p9-d2game-vectors.ndjson.gz"
+DATATBLS_GZ="$REPO_ROOT/tests/fixtures/oracle/k1/d2game-datatbls-113c.img.gz"
+
+ROOT="${D2_ORACLE_ROOT:-$HOME/.local/opt/d2oracle}"
+CC="${CC:-$ROOT/mingw/usr/bin/i686-w64-mingw32-gcc-win32}"
+WINE_DIR="$ROOT/wine/root/usr/lib/x86_64-linux-gnu/wine"
+
+RUN_BASE="${D2_ORACLE_RUN_BASE:-$HOME/.cache/d2oracle-runs}"
+mkdir -p "$OUT_DIR" "$RUN_BASE"
+
+PFX="$(mktemp -d "$RUN_BASE/k6-p9-wine.XXXXXX")"
+cleanup() {
+  WINESERVER="$WINE_DIR/wineserver" WINEPREFIX="$PFX" "$WINE_DIR/wineserver" -k >/dev/null 2>&1 || true
+  rm -rf "$PFX"
+}
+trap cleanup EXIT
+
+# 1. Verify register-only inline-asm constraints (zero "m", "g", "o")
+python3 -B - "$SCRIPT_DIR/k6-p9-d2game-emitter.c" << 'PYEOF'
+import re, sys
+code = open(sys.argv[1], encoding="utf-8").read()
+code = re.sub(r'/\*.*?\*/|//[^\n]*', ' ', code, flags=re.S)
+blocks = re.findall(r'__asm__\s*(?:volatile)?\s*\((.*?)\);', code, re.S)
+bad = []
+for idx, blk in enumerate(blocks):
+    parts = []
+    cur = []
+    in_str = False
+    esc = False
+    for ch in blk:
+        if esc:
+            cur.append(ch); esc = False; continue
+        if ch == '\\' and in_str:
+            cur.append(ch); esc = True; continue
+        if ch == '"':
+            in_str = not in_str; cur.append(ch); continue
+        if ch == ':' and not in_str:
+            parts.append(''.join(cur)); cur = []; continue
+        cur.append(ch)
+    parts.append(''.join(cur))
+    for sec in parts[1:3]:
+        for m in re.finditer(r'"([^"]*)"', sec):
+            cstr = m.group(1)
+            if any(ch in cstr for ch in ('m', 'g', 'o')):
+                bad.append((idx, cstr))
+if bad:
+    raise SystemExit(f"[k6-p9] Forbidden inline-asm constraints found: {bad}")
+print(f"[k6-p9] OK: {len(blocks)} inline-asm block(s) verified (register-only constraints)")
+PYEOF
+
+cp -a "$ROOT/wine/prefix/." "$PFX/"
+mkdir -p "$PFX/drive_c/D2"
+
+D2_DATA_DIR="${D2_DATA_DIR:-$HOME/d2-data}"
+for dll in Storm.dll Fog.dll D2Lang.dll D2CMP.dll D2Common.dll D2Net.dll D2Game.dll; do
+  if [ ! -f "$PFX/drive_c/D2/$dll" ] && [ -f "$D2_DATA_DIR/$dll" ]; then
+    cp "$D2_DATA_DIR/$dll" "$PFX/drive_c/D2/$dll"
+  fi
+done
+
+gzip -dc "$DATATBLS_GZ" > "$PFX/drive_c/D2/d2game-datatbls-113c.img"
+
+CFLAGS_COMMON=(-m32 -Wall -Wextra -Werror -static-libgcc)
+
+echo "[k6-p9] Compiling k6-p9-d2game-emitter.c (-O2, -O2 -fno-omit-frame-pointer, -O1)..."
+"$CC" "${CFLAGS_COMMON[@]}" -O2 \
+  "$SCRIPT_DIR/k6-p9-d2game-emitter.c" \
+  -o "$PFX/drive_c/D2/k6-p9-emitter-o2.exe"
+"$CC" "${CFLAGS_COMMON[@]}" -O2 -fno-omit-frame-pointer \
+  "$SCRIPT_DIR/k6-p9-d2game-emitter.c" \
+  -o "$PFX/drive_c/D2/k6-p9-emitter-fp.exe"
+"$CC" "${CFLAGS_COMMON[@]}" -O1 \
+  "$SCRIPT_DIR/k6-p9-d2game-emitter.c" \
+  -o "$PFX/drive_c/D2/k6-p9-emitter-o1.exe"
+
+export WINEPREFIX="$PFX"
+export WINESERVER="$WINE_DIR/wineserver"
+export WINELOADER="$WINE_DIR/wine"
+export WINEDEBUG="-all"
+export WINEDLLOVERRIDES="mscoree,mshtml=;winex11.drv=;winedbg.exe=d"
+unset DISPLAY || true
+
+run_wine_profile() {
+  local exe="$1"
+  local out_ndjson="$2"
+  local log_file="$PFX/drive_c/D2/${exe}.log"
+  local rc=0
+  (
+    cd "$PFX/drive_c/D2"
+    timeout 120s "$WINE_DIR/wine" "$exe" \
+      "C:\\D2\\d2game-datatbls-113c.img" \
+      "C:\\D2\\$out_ndjson" </dev/null >"$log_file" 2>&1 || rc=$?
+    "$WINE_DIR/wineserver" -k >/dev/null 2>&1 || true
+    exit "$rc"
+  ) || rc=$?
+  cat "$log_file" >&2
+  return "$rc"
+}
+
+echo "[k6-p9] Running k6-p9-emitter-o2.exe under headless Wine..."
+run_wine_profile k6-p9-emitter-o2.exe vectors-o2.ndjson
+
+echo "[k6-p9] Running k6-p9-emitter-fp.exe under headless Wine..."
+run_wine_profile k6-p9-emitter-fp.exe vectors-fp.ndjson
+
+echo "[k6-p9] Running k6-p9-emitter-o1.exe under headless Wine..."
+run_wine_profile k6-p9-emitter-o1.exe vectors-o1.ndjson
+
+SHA_O2="$(sha256sum "$PFX/drive_c/D2/vectors-o2.ndjson" | awk '{print $1}')"
+SHA_FP="$(sha256sum "$PFX/drive_c/D2/vectors-fp.ndjson" | awk '{print $1}')"
+SHA_O1="$(sha256sum "$PFX/drive_c/D2/vectors-o1.ndjson" | awk '{print $1}')"
+
+echo "  k6-p9 -O2: $SHA_O2"
+echo "  k6-p9 -fp: $SHA_FP"
+echo "  k6-p9 -O1: $SHA_O1"
+
+if [ "$SHA_O2" != "$SHA_FP" ] || [ "$SHA_O2" != "$SHA_O1" ]; then
+  echo "[k6-p9] ERROR: Compiler-profile SHA-256 mismatch!" >&2
+  exit 1
+fi
+
+# 2. Validate exact unique Band B VA targets, >= 3 cases each, >= 2 distinct signatures
+EXPECTED_VAS="${K6_P9_EXPECTED_VAS:-149}"
+python3 -B - "$PFX/drive_c/D2/vectors-o2.ndjson" "$EXPECTED_VAS" << 'PYEOF'
+import json, sys
+from collections import defaultdict
+
+expected = int(sys.argv[2])
+by_va = defaultdict(list)
+lines = [l for l in open(sys.argv[1], encoding="utf-8").read().splitlines() if l.strip()]
+for line in lines:
+    row = json.loads(line)
+    va = row["va"]
+    va_num = int(va, 16)
+    if not (0x6FC70000 <= va_num <= 0x6FCAFFFF):
+        raise SystemExit(f"[k6-p9] VA out of Band B range: {va}")
+    sig = (
+        row["asserted"],
+        row["assertLine"],
+        row["ret"],
+        json.dumps(row["postMem"], sort_keys=True),
+        row["heapTop"],
+        row["heapHex"],
+    )
+    by_va[va].append(sig)
+
+under3 = [(va, len(v)) for va, v in sorted(by_va.items()) if len(v) < 3]
+degen  = [(va, len(v), len(set(v))) for va, v in sorted(by_va.items()) if len(set(v)) < 2]
+print(f"[k6-p9] Gate: unique_VAs={len(by_va)}/{expected}, total_vectors={len(lines)}, under3={len(under3)}, degen={len(degen)}")
+if len(by_va) != expected or under3 or degen:
+    raise SystemExit(f"[k6-p9] Vector gate FAILED: unique_VAs={len(by_va)}, under3={under3}, degen={degen}")
+PYEOF
+
+if [ "${1:-}" = "--check" ]; then
+  SHA_OLD="$(gzip -dc "$OUT_FILE" | sha256sum | awk '{print $1}')"
+  echo "  expected:  $SHA_OLD"
+  if [ "$SHA_O2" != "$SHA_OLD" ]; then
+    echo "[k6-p9] ERROR: Reproducibility check failed!" >&2
+    exit 1
+  fi
+  echo "[k6-p9] --check PASSED (100% 3-way SHA-256 identical)."
+  exit 0
+fi
+
+gzip -n -9 -c "$PFX/drive_c/D2/vectors-o2.ndjson" > "$OUT_FILE"
+ls -lh "$OUT_FILE"

@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diablo II: Lord of Destruction · 交易大厅 (Trade Hall)</title>
+    <style>
+      @font-face {
+        font-family: "D2Exocet";
+        src: url("/ui/fonts/D2Exocet.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "D2Formal436";
+        src: url("/ui/fonts/D2Formal436.ttf") format("truetype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: dark;
+        --font-display: "D2Exocet", "Cinzel", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", serif;
+        --font-body: "D2Formal436", "Times New Roman", "Liberation Serif", "Noto Serif", "Songti SC", "Noto Serif SC", serif;
+        --d2-bg: #080706;
+        --d2-panel: #110f0c;
+        --d2-panel-alt: #181510;
+        --d2-panel-elevated: #201b14;
+        --d2-border: #3d3322;
+        --d2-border-bright: #6e5a38;
+        --d2-gold: #c7b377;
+        --d2-gold-bright: #ebd594;
+        --d2-magic-blue: #6969ff;
+        --d2-rare-yellow: #ffff64;
+        --d2-set-green: #00c400;
+        --d2-unique-gold: #c7b377;
+        --d2-craft-orange: #ffa500;
+        --d2-text: #d9d0be;
+        --d2-muted: #938873;
+        --d2-danger: #d44c4c;
+        --d2-danger-bg: rgba(140, 28, 28, 0.28);
+        --d2-warn-bg: rgba(160, 115, 24, 0.25);
+        --d2-ok-bg: rgba(24, 120, 48, 0.25);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: var(--d2-bg);
+        color: var(--d2-text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      #d2-trade-app {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Top Header Bar */
+      .d2-trade-topbar {
+        height: 52px;
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        background: linear-gradient(180deg, #1b1711 0%, #0f0d0a 100%);
+        border-bottom: 1px solid var(--d2-border);
+        gap: 12px;
+      }
+      .d2-trade-topbar__brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .d2-trade-topbar__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 16px;
+        color: var(--d2-gold-bright);
+        letter-spacing: 0.05em;
+      }
+      .d2-trade-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+        background: var(--d2-panel-alt);
+        border: 1px solid var(--d2-border);
+        color: var(--d2-text);
+      }
+      .d2-trade-badge--gold {
+        color: var(--d2-gold-bright);
+        border-color: var(--d2-border-bright);
+      }
+      .d2-trade-badge--ok {
+        color: #65e67d;
+        border-color: #286e36;
+      }
+      .d2-trade-topbar__actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .d2-trade-btn {
+        background: linear-gradient(180deg, #272118 0%, #16130e 100%);
+        color: var(--d2-gold-bright);
+        border: 1px solid var(--d2-border-bright);
+        border-radius: 3px;
+        padding: 6px 11px;
+        font-family: var(--font-body);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: filter 0.12s ease, border-color 0.12s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .d2-trade-btn:hover:not(:disabled) {
+        filter: brightness(1.18);
+        border-color: var(--d2-gold-bright);
+      }
+      .d2-trade-btn:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+      .d2-trade-btn--primary {
+        background: linear-gradient(180deg, #4b3b1f 0%, #2a2010 100%);
+        border-color: var(--d2-gold);
+      }
+      .d2-trade-btn--danger {
+        background: linear-gradient(180deg, #4c1d1d 0%, #2b1010 100%);
+        border-color: #9e3b3b;
+        color: #ffd4d4;
+      }
+      .d2-trade-btn--pulse {
+        animation: d2-pulse-border 1.4s infinite ease-in-out;
+      }
+      @keyframes d2-pulse-border {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(235, 213, 148, 0.45); }
+        50% { box-shadow: 0 0 0 4px rgba(235, 213, 148, 0.15); }
+      }
+
+      /* 3-Column Isolated Scroll Body */
+      .d2-trade-body {
+        flex: 1 1 auto;
+        height: calc(100vh - 52px);
+        display: flex;
+        overflow: hidden;
+      }
+      .d2-trade-col-left {
+        width: 220px;
+        min-width: 200px;
+        max-width: 230px;
+        height: 100%;
+        overflow-y: auto;
+        background: var(--d2-panel);
+        border-right: 1px solid var(--d2-border);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .d2-trade-col-center {
+        flex: 1 1 auto;
+        min-width: 0;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 10px 14px;
+        gap: 8px;
+        background: radial-gradient(circle at 50% 30%, #17130d 0%, #070605 85%);
+        position: relative;
+      }
+      .d2-trade-col-right {
+        width: 240px;
+        min-width: 220px;
+        max-width: 250px;
+        height: 100%;
+        overflow-y: auto;
+        background: var(--d2-panel);
+        border-left: 1px solid var(--d2-border);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      /* Cards & Sections */
+      .d2-trade-card {
+        background: var(--d2-panel-alt);
+        border: 1px solid var(--d2-border);
+        border-radius: 4px;
+        padding: 10px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .d2-trade-card__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(199, 179, 119, 0.18);
+        padding-bottom: 6px;
+      }
+      .d2-trade-card__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 13px;
+        color: var(--d2-gold);
+        letter-spacing: 0.04em;
+      }
+
+      /* Banners in Center Column */
+      .d2-trade-banners {
+        width: 800px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .d2-trade-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 13px;
+        border: 1px solid var(--d2-border-bright);
+        background: var(--d2-panel-elevated);
+        gap: 10px;
+      }
+      .d2-trade-banner--moving {
+        background: linear-gradient(90deg, rgba(84, 64, 24, 0.55) 0%, rgba(36, 28, 12, 0.85) 100%);
+        border-color: var(--d2-gold-bright);
+        color: var(--d2-gold-bright);
+        font-weight: 700;
+      }
+      .d2-trade-banner--danger {
+        background: var(--d2-danger-bg);
+        border-color: var(--d2-danger);
+        color: #ffd0d0;
+      }
+      .d2-trade-banner--warning {
+        background: var(--d2-warn-bg);
+        border-color: #d69e2e;
+        color: #f6e05e;
+      }
+      .d2-trade-banner--success {
+        background: var(--d2-ok-bg);
+        border-color: #38a169;
+        color: #9ae6b4;
+      }
+
+      /* 800x600 Dual-Panel Canvas Stage */
+      .d2-trade-stage-wrap {
+        position: relative;
+        width: min(800px, 100%);
+        aspect-ratio: 4 / 3;
+        border: 2px solid var(--d2-border-bright);
+        border-radius: 4px;
+        background: #050403;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.85);
+        overflow: hidden;
+        user-select: none;
+        flex-shrink: 0;
+      }
+      .d2-trade-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        image-rendering: pixelated;
+      }
+      @media (max-width: 1180px) {
+        .d2-trade-topbar {
+          height: auto;
+          min-height: 44px;
+          padding: 6px 10px;
+          flex-wrap: wrap;
+        }
+        .d2-trade-body {
+          flex-direction: column;
+          overflow-y: auto;
+        }
+        .d2-trade-col-center {
+          order: 1;
+          height: auto;
+          overflow-y: visible;
+          padding: 6px 8px;
+        }
+        .d2-trade-col-left,
+        .d2-trade-col-right {
+          order: 2;
+          width: 100%;
+          min-width: 0;
+          max-width: none;
+          height: auto;
+          overflow-y: visible;
+          border-left: none;
+          border-right: none;
+          border-top: 1px solid var(--d2-border);
+        }
+      }
+      #d2-trade-cursor-canvas {
+        pointer-events: none;
+        z-index: 5;
+      }
+
+      /* Floating Movement Indicator Over Stage Top */
+      .d2-trade-stage-moving-pill {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 6;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(14, 11, 8, 0.92);
+        border: 1px solid var(--d2-gold-bright);
+        color: var(--d2-gold-bright);
+        font-family: var(--font-display);
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+        pointer-events: none;
+      }
+
+      /* Lobby Overlay Drawer inside Center Stage */
+      .d2-trade-lobby-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background: rgba(8, 7, 6, 0.94);
+        display: flex;
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 12px;
+        overflow-y: auto;
+      }
+      .d2-trade-lobby-overlay[hidden] {
+        display: none !important;
+      }
+      .d2-trade-lobby-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .d2-trade-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .d2-trade-field label {
+        font-size: 11px;
+        color: var(--d2-muted);
+      }
+      .d2-trade-input,
+      .d2-trade-select {
+        background: #0c0a08;
+        color: var(--d2-text);
+        border: 1px solid var(--d2-border);
+        border-radius: 3px;
+        padding: 6px 8px;
+        font-family: var(--font-body);
+        font-size: 12px;
+      }
+      .d2-trade-input:focus,
+      .d2-trade-select:focus {
+        outline: none;
+        border-color: var(--d2-gold);
+      }
+
+      /* Room List & Player Roster */
+      .d2-trade-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        max-height: 210px;
+        overflow-y: auto;
+      }
+      .d2-trade-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 9px;
+        background: #100e0b;
+        border: 1px solid var(--d2-border);
+        border-radius: 3px;
+        gap: 8px;
+        font-size: 12px;
+      }
+      .d2-trade-list-item:hover {
+        border-color: var(--d2-border-bright);
+      }
+
+      /* User Journey Steps */
+      .d2-journey-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .d2-journey-step {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+        background: #100e0b;
+        border: 1px solid transparent;
+        color: var(--d2-muted);
+      }
+      .d2-journey-step--active {
+        border-color: var(--d2-gold);
+        color: var(--d2-gold-bright);
+        background: rgba(199, 179, 119, 0.1);
+        font-weight: 600;
+      }
+      .d2-journey-step--done {
+        color: #7ad98c;
+      }
+
+      /* Offer Affix Inspector Cards */
+      .d2-offer-item {
+        padding: 8px 10px;
+        background: #0d0b08;
+        border: 1px solid var(--d2-border);
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .d2-offer-item__title {
+        font-weight: 700;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+      }
+      .d2-offer-item--unique .d2-offer-item__title { color: var(--d2-unique-gold); }
+      .d2-offer-item--set .d2-offer-item__title { color: var(--d2-set-green); }
+      .d2-offer-item--rare .d2-offer-item__title { color: var(--d2-rare-yellow); }
+      .d2-offer-item--magic .d2-offer-item__title { color: var(--d2-magic-blue); }
+      .d2-offer-item--craft .d2-offer-item__title,
+      .d2-offer-item--rune .d2-offer-item__title { color: var(--d2-craft-orange); }
+      .d2-offer-item__meta {
+        font-size: 11px;
+        color: var(--d2-muted);
+      }
+      .d2-offer-item__stats {
+        margin: 2px 0 0;
+        padding-left: 14px;
+        font-size: 11px;
+        color: #8998ff;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      /* Chat Log */
+      .d2-trade-chat-log {
+        height: 150px;
+        overflow-y: auto;
+        background: #0b0907;
+        border: 1px solid var(--d2-border);
+        border-radius: 3px;
+        padding: 6px 8px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .d2-trade-chat-row {
+        display: flex;
+        gap: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d2-trade-app">
+      <!-- Top Header Bar -->
+      <header class="d2-trade-topbar">
+        <div class="d2-trade-topbar__brand">
+          <h1 class="d2-trade-topbar__title">暗黑破坏神 II · 交易大厅 (Trade Hall)</h1>
+          <span id="d2-trade-phase-badge" class="d2-trade-badge">未连接</span>
+          <span id="d2-trade-char-badge" class="d2-trade-badge" hidden>角色: --</span>
+          <span id="d2-trade-room-badge" class="d2-trade-badge" hidden>房间: --</span>
+          <span id="d2-trade-gold-badge" class="d2-trade-badge d2-trade-badge--gold" hidden>
+            随身金币: 0 | 储藏箱: 0
+          </span>
+        </div>
+        <div class="d2-trade-topbar__actions">
+          <button id="d2-trade-toggle-lobby-btn" type="button" class="d2-trade-btn d2-trade-btn--primary">
+            账号与交易房间大厅
+          </button>
+          <button id="d2-trade-open-stash-btn" type="button" class="d2-trade-btn" disabled>
+            前往并打开 A1 储藏箱
+          </button>
+          <button id="d2-trade-return-cursor-btn" type="button" class="d2-trade-btn d2-trade-btn--pulse" hidden>
+            将鼠标物品安全放回背包/箱子
+          </button>
+          <button id="d2-trade-reconnect-btn" type="button" class="d2-trade-btn d2-trade-btn--primary" hidden>
+            断线一键重连原交易房
+          </button>
+          <button id="d2-trade-leave-btn" type="button" class="d2-trade-btn d2-trade-btn--danger" disabled>
+            退出交易房
+          </button>
+          <a href="/play.html" class="d2-trade-btn" title="进入完整游戏">返回完整游戏</a>
+        </div>
+      </header>
+
+      <!-- 3-Column Isolated Scroll Body -->
+      <div class="d2-trade-body">
+        <!-- Left Sidebar: Journey Progress + Room Player Roster + Trade Chat -->
+        <aside class="d2-trade-col-left">
+          <section class="d2-trade-card">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">交易流程指引 (User Journey)</h2>
+              <span style="font-size: 11px; color: var(--d2-muted)">极简美术资源模式</span>
+            </div>
+            <ol id="d2-trade-journey-list" class="d2-journey-steps">
+              <li data-step="1" class="d2-journey-step d2-journey-step--active">1. 登录账号并选择交易角色</li>
+              <li data-step="2" class="d2-journey-step">2. 创建或加入在线交易房间</li>
+              <li data-step="3" class="d2-journey-step">3. 自动走到 A1 储藏箱拿取物品到背包</li>
+              <li data-step="4" class="d2-journey-step">4. 选择房间内玩家发起交易请求</li>
+              <li data-step="5" class="d2-journey-step">5. 从背包放入交易栏并核对双方词条</li>
+              <li data-step="6" class="d2-journey-step">6. 防骗锁定校验通过后点击双勾完成</li>
+            </ol>
+          </section>
+
+          <section class="d2-trade-card">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">房间内玩家 (点击发起交易)</h2>
+              <span id="d2-trade-player-count" style="font-size: 11px; color: var(--d2-muted)">0 人</span>
+            </div>
+            <div id="d2-trade-players-list" class="d2-trade-list">
+              <div style="font-size: 12px; color: var(--d2-muted)">进入交易房间后将在此显示同房玩家。</div>
+            </div>
+          </section>
+
+          <section class="d2-trade-card" style="flex: 1 1 auto">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">交易频道与私聊 (/w)</h2>
+            </div>
+            <div id="d2-trade-chat-log" class="d2-trade-chat-log"></div>
+            <form id="d2-trade-chat-form" class="d2-trade-chat-row">
+              <input
+                id="d2-trade-chat-input"
+                class="d2-trade-input"
+                style="flex: 1"
+                type="text"
+                placeholder="输入报价或 /w 角色名 私聊..."
+              />
+              <button type="submit" class="d2-trade-btn">发送</button>
+            </form>
+          </section>
+        </aside>
+
+        <!-- Center Stage: Status Banners + Authentic 800x600 Dual-Panel Canvas -->
+        <main class="d2-trade-col-center">
+          <div class="d2-trade-banners">
+            <!-- Auto-Move Banner (正在移动。。。。) -->
+            <div id="d2-trade-movement-banner" class="d2-trade-banner d2-trade-banner--moving" hidden>
+              <div>
+                <span id="d2-trade-movement-title">正在移动。。。。</span>
+                <span id="d2-trade-movement-detail" style="margin-left: 8px; font-weight: 400; color: var(--d2-text)"></span>
+              </div>
+              <span style="font-size: 11px">A1 罗格营地自动导航</span>
+            </div>
+
+            <!-- Anti-Scam Diff Alert & 5s Red Lockout Banner -->
+            <div id="d2-trade-diff-banner" class="d2-trade-banner d2-trade-banner--danger" hidden>
+              <div id="d2-trade-diff-text"></div>
+              <button id="d2-trade-diff-dismiss-btn" type="button" class="d2-trade-btn">已知悉</button>
+            </div>
+
+            <!-- General Notice / Fallback Action Banner -->
+            <div id="d2-trade-notice-banner" class="d2-trade-banner" hidden>
+              <div id="d2-trade-notice-text"></div>
+              <div style="display: flex; gap: 6px">
+                <button id="d2-trade-suggest-room-btn" type="button" class="d2-trade-btn d2-trade-btn--primary" hidden>
+                  使用建议房名
+                </button>
+                <button id="d2-trade-retry-stash-btn" type="button" class="d2-trade-btn" hidden>
+                  重试打开储藏箱
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 800x600 Canvas Stage (Left Dock: Stash / Trade / Cube, Right Dock: Inventory) -->
+          <div id="d2-trade-stage" class="d2-trade-stage-wrap">
+            <canvas id="d2-trade-hud-canvas" class="d2-trade-canvas" width="800" height="600"></canvas>
+            <canvas id="d2-trade-cursor-canvas" class="d2-trade-canvas" width="800" height="600"></canvas>
+
+            <div id="d2-trade-stage-moving-pill" class="d2-trade-stage-moving-pill" hidden>
+              正在移动。。。。
+            </div>
+
+            <!-- Online Auth, Character Selection & Trade Room Lobby Overlay -->
+            <div id="d2-trade-lobby-modal" class="d2-trade-lobby-overlay">
+              <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--d2-border); padding-bottom: 8px">
+                <div>
+                  <h2 style="margin: 0; font-family: var(--font-display); font-size: 16px; color: var(--d2-gold-bright)">
+                    战网登录与交易房间大厅 (BNCS / MCP / D2GS)
+                  </h2>
+                  <div style="font-size: 12px; color: var(--d2-muted)">
+                    仅加载物品栏、储藏箱、交易栏与装备词条美术资源 · 进入房间后自动移动到 A1 储藏箱旁
+                  </div>
+                </div>
+                <button id="d2-trade-close-lobby-btn" type="button" class="d2-trade-btn" hidden>
+                  返回面板画布
+                </button>
+              </div>
+
+              <div class="d2-trade-lobby-grid">
+                <!-- Step 1: Login & Character Selection -->
+                <div class="d2-trade-card">
+                  <div class="d2-trade-card__header">
+                    <h3 class="d2-trade-card__title">步骤 1 · 战网账号登录与角色选择</h3>
+                  </div>
+                  <form id="d2-trade-login-form" style="display: flex; flex-direction: column; gap: 8px">
+                    <div class="d2-trade-field">
+                      <label for="d2-trade-host-input">服务器地址 (BNCS Host / WS Bridge)</label>
+                      <input id="d2-trade-host-input" class="d2-trade-input" type="text" value="www.laiseek.xyz" />
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+                      <div class="d2-trade-field">
+                        <label for="d2-trade-user-input">账号 (Username)</label>
+                        <input id="d2-trade-user-input" class="d2-trade-input" type="text" placeholder="输入战网账号" required />
+                      </div>
+                      <div class="d2-trade-field">
+                        <label for="d2-trade-pass-input">密码 (Password)</label>
+                        <input id="d2-trade-pass-input" class="d2-trade-input" type="password" placeholder="输入密码" required />
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 8px">
+                      <button id="d2-trade-login-btn" type="submit" class="d2-trade-btn d2-trade-btn--primary" style="flex: 1">
+                        登录战网
+                      </button>
+                      <button id="d2-trade-register-btn" type="button" class="d2-trade-btn">
+                        注册新账号并登录
+                      </button>
+                    </div>
+                  </form>
+
+                  <div style="border-top: 1px solid var(--d2-border); padding-top: 8px; margin-top: 4px">
+                    <div style="font-size: 12px; color: var(--d2-gold); margin-bottom: 6px">选择交易角色 (Characters)</div>
+                    <div id="d2-trade-char-list" class="d2-trade-list">
+                      <div style="font-size: 12px; color: var(--d2-muted)">请先登录战网账号以加载角色列表。</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2: Trade Room Browser & Create/Join -->
+                <div class="d2-trade-card">
+                  <div class="d2-trade-card__header">
+                    <h3 class="d2-trade-card__title">步骤 2 · 加入或创建交易房间</h3>
+                    <button id="d2-trade-refresh-rooms-btn" type="button" class="d2-trade-btn" disabled>
+                      刷新列表
+                    </button>
+                  </div>
+
+                  <div style="display: flex; gap: 6px; align-items: center">
+                    <input
+                      id="d2-trade-room-search-input"
+                      class="d2-trade-input"
+                      style="flex: 1"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="搜索房间名或挂单描述 (如 O Shako N Ist)..."
+                    />
+                    <label style="font-size: 11px; color: var(--d2-muted); display: flex; align-items: center; gap: 4px; white-space: nowrap">
+                      <input id="d2-trade-only-trade-checkbox" type="checkbox" />
+                      仅看交易房
+                    </label>
+                  </div>
+
+                  <div id="d2-trade-rooms-list" class="d2-trade-list" style="max-height: 155px">
+                    <div style="font-size: 12px; color: var(--d2-muted)">选择角色后可查看公开房间或直接输入房名进入。</div>
+                  </div>
+
+                  <form id="d2-trade-room-form" autocomplete="off" style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--d2-border); padding-top: 8px">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+                      <div class="d2-trade-field">
+                        <label for="d2-trade-room-name-input">房间名 (Room Name)</label>
+                        <input id="d2-trade-room-name-input" class="d2-trade-input" type="text" autocomplete="off" placeholder="如 trade-01" maxlength="15" required />
+                      </div>
+                      <div class="d2-trade-field">
+                        <label for="d2-trade-room-pwd-input">房间密码 (可选)</label>
+                        <input id="d2-trade-room-pwd-input" class="d2-trade-input" type="text" autocomplete="off" placeholder="私密交易密码" maxlength="15" />
+                      </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 8px">
+                      <div class="d2-trade-field">
+                        <label for="d2-trade-room-desc-input">挂单说明 (Offer / Need，建房时展示)</label>
+                        <input id="d2-trade-room-desc-input" class="d2-trade-input" type="text" autocomplete="off" placeholder="如 O Shako N Ist" maxlength="31" />
+                      </div>
+                      <div class="d2-trade-field">
+                        <label for="d2-trade-room-diff-select">难度 (Difficulty)</label>
+                        <select id="d2-trade-room-diff-select" class="d2-trade-select">
+                          <option value="0">普通 (Normal)</option>
+                          <option value="1">噩梦 (Nightmare)</option>
+                          <option value="2">地狱 (Hell)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 8px">
+                      <button id="d2-trade-join-room-btn" type="button" class="d2-trade-btn d2-trade-btn--primary" style="flex: 1" disabled>
+                        加入指定交易房
+                      </button>
+                      <button id="d2-trade-create-room-btn" type="submit" class="d2-trade-btn" style="flex: 1" disabled>
+                        创建交易房并进入
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size: 12px; color: var(--d2-muted); text-align: center">
+            操作提示：储藏箱打开时，左键点击或 <strong style="color: var(--d2-gold)">Shift+左键 / 右键</strong> 将物品从储藏箱移至右侧随身背包；与玩家交易时，将物品从随身背包放入左侧下方我方交易栏，核对无误后点击交易栏右下角勾号确认。
+          </div>
+        </main>
+
+        <!-- Right Sidebar: Live Offer Affix Inspector + Capacity Pre-Check + Receipts -->
+        <aside class="d2-trade-col-right">
+          <section class="d2-trade-card">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">背包空间与金币容量预检</h2>
+              <span id="d2-trade-capacity-badge" class="d2-trade-badge d2-trade-badge--ok">可安全接收</span>
+            </div>
+            <div id="d2-trade-capacity-detail" style="font-size: 12px; color: var(--d2-muted)">
+              系统会自动校核你的 10×4 随身背包剩余格位与等级金币上限。
+            </div>
+          </section>
+
+          <section class="d2-trade-card">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">对方报价词条核对 (Partner Offer)</h2>
+              <span id="d2-trade-partner-summary" style="font-size: 11px; color: var(--d2-gold)">金币: 0</span>
+            </div>
+            <div id="d2-trade-partner-items" style="display: flex; flex-direction: column; gap: 6px">
+              <div style="font-size: 12px; color: var(--d2-muted)">暂无对方放入的交易物品。</div>
+            </div>
+          </section>
+
+          <section class="d2-trade-card">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">我方报价词条核对 (Your Offer)</h2>
+              <span id="d2-trade-self-summary" style="font-size: 11px; color: var(--d2-gold)">金币: 0</span>
+            </div>
+            <div id="d2-trade-self-items" style="display: flex; flex-direction: column; gap: 6px">
+              <div style="font-size: 12px; color: var(--d2-muted)">暂无我方放入的交易物品。</div>
+            </div>
+          </section>
+
+          <section class="d2-trade-card">
+            <div class="d2-trade-card__header">
+              <h2 class="d2-trade-card__title">本场成交凭证 (Trade Receipts)</h2>
+              <span id="d2-trade-receipt-count" style="font-size: 11px; color: var(--d2-muted)">0 笔</span>
+            </div>
+            <div id="d2-trade-receipts-list" style="display: flex; flex-direction: column; gap: 6px">
+              <div style="font-size: 12px; color: var(--d2-muted)">双方点击确认勾号完成交易后，将在此生成双边物品与词条流水记录。</div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script type="module" src="/plugins/trade-hall/standalone.ts"></script>
+  </body>
+</html>

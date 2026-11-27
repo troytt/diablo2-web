@@ -1,0 +1,777 @@
+{
+  "version": "1.13c",
+  "modules": {
+    "D2Game": {
+      "imageBase": "0x6FC20000",
+      "text": { "start": "0x6FC21000", "end": "0x6FD179B4" },
+      "rdata": { "start": "0x6FD18000", "end": "0x6FD1EA57" },
+      "data": { "start": "0x6FD1F000", "end": "0x6FD3B35C" }
+    },
+    "D2Common": {
+      "imageBase": "0x6FD50000",
+      "text": { "start": "0x6FD51000", "end": "0x6FDD87D3" },
+      "rdata": { "start": "0x6FDD9000", "end": "0x6FDE8CA1" },
+      "data": { "start": "0x6FDE9000", "end": "0x6FDF285C" }
+    }
+  },
+  "rootEntryPoints": [
+    {
+      "va": "0x6FC4E050",
+      "name": "GAME_UpdateGameFrame",
+      "module": "D2Game",
+      "description": "Top-level per-frame engine step (dwGameFrame++ and 11 deterministic sub-stages)"
+    },
+    {
+      "va": "0x6FCEC550",
+      "name": "GAME_ProcessNetworkPackets",
+      "module": "D2Game",
+      "description": "Client-to-server gameplay packet dispatcher (opcodes 0x00..0x66 via 0x6FD1A078)"
+    },
+    {
+      "va": "0x6FD10A70",
+      "name": "GAME_ProcessHandshakePacket",
+      "module": "D2Game",
+      "description": "Client-to-server session handshake/join/leave/ping dispatcher (opcodes 0x66..0x6F via 0x6FD1A3B0)"
+    },
+    {
+      "va": "0x6FC4C570",
+      "name": "GAME_CreateGame",
+      "module": "D2Game",
+      "description": "D2Game.#10044 game instance allocation, GAME_InitSeed (0x6FC4A900), act/quest/party/arena/timer init"
+    },
+    {
+      "va": "0x6FC4C2D0",
+      "name": "GAME_CreateEmptyGame",
+      "module": "D2Game",
+      "description": "Single-player / local D2GameStrc initializer calling GAME_InitSeed (0x6FC4A900)"
+    },
+    {
+      "va": "0x6FC4A210",
+      "name": "GAME_SetGlobalSeed",
+      "module": "D2Game",
+      "description": "D2Game.#10017 deterministic -seed override setter ([0x6FD2E354])"
+    }
+  ],
+  "dispatchTables": [
+    {
+      "name": "topLevelStages",
+      "description": "GAME_UpdateGameFrame 0x6FC4E050 sequential sub-stages",
+      "module": "D2Game",
+      "baseAddress": "0x6FC4E0C4",
+      "type": "sequentialCalls",
+      "entries": [
+        { "index": 0, "va": "0x6FC4CA20", "name": "GAME_ProcessActRoomsAndClients", "schedule": "every frame", "evidence": "0x6FC4E0C4 call 0x6fc4ca20 (walks pGame+0xBC pAct[0..4] rooms & client packet queues)" },
+        { "index": 1, "va": "0x6FC49BE0", "name": "GAME_SyncFrameTimerAndPerf", "schedule": "every frame", "evidence": "0x6FC4E0C9 call 0x6fc49be0 (1000ms tick-rate perf counters pGame+0xAC..+0xB4)" },
+        { "index": 2, "va": "0x6FC4CBE0", "name": "DRLG_StreamActRooms", "schedule": "every frame", "evidence": "0x6FC4E0D0 call 0x6fc4cbe0 (walks pGame+0xBC pAct[0..4] +0x54 active rooms)" },
+        { "index": 3, "va": "0x6FCAF070", "name": "EVENT_UpdateTimers", "schedule": "every frame", "evidence": "0x6FC4E0D5 call 0x6fcaf070 (64-slot wheel partitions [2, 0, 1, 3, 4])" },
+        { "index": 4, "va": "0x6FC4D9B0", "name": "CLIENT_UpdateList", "schedule": "every frame", "evidence": "0x6FC4E0DB call 0x6fc4d9b0 (walks pGame+0x88 client list; timeout/keepalive)" },
+        { "index": 5, "va": "0x6FCBD850", "name": "UNITROOM_BroadcastRoomUpdates", "schedule": "every frame", "evidence": "0x6FC4E0E2 call 0x6fcbd850 (walks pAct[0..4] room+0x1C pUpdateList via unit+0xE0 -> 0x6FD00860)" },
+        { "index": 6, "va": "0x6FCBD5B0", "name": "UNITROOM_ClearActRoomUpdateFlags", "schedule": "every frame", "evidence": "0x6FC4E0E9 call 0x6fcbd5b0 (clears room update flags via room+0x7C when act+0x58 != 0)" },
+        { "index": 7, "va": "0x6FC53B70", "name": "ITEMS_UpdateGroundItemDecay", "schedule": "frame % 20 == 0", "evidence": "0x6FC4E101 call 0x6fc53b70 (idiv 0x14; walks ground item decay list pGame+0x10F4)" },
+        { "index": 8, "va": "0x6FC4CF30", "name": "DRLG_UnloadInactiveRooms", "schedule": "frame % 12 == 0", "evidence": "0x6FC4E119 call 0x6fc4cf30 (idiv 0x0C; unloads rooms with inactivity > 10)" },
+        { "index": 9, "va": "0x6FC2B2F4", "name": "ENVIRONMENT_UpdateActs", "schedule": "frame % 11 == 0", "evidence": "0x6FC4E147 call 0x6fc2b2f4 (IAT thunk [0x6FD180C4] -> D2Common.#10007 0x6FD8C800)" },
+        { "index": 10, "va": "0x6FC4C0F0", "name": "NPC_RefreshVendorsPeriodic", "schedule": "every frame (internal frame % 1500 == 0)", "evidence": "0x6FC4E154 call 0x6fc4c0f0 (idiv 0x5DC = 60s vendor refresh across Acts 0..4)" }
+      ]
+    },
+    {
+      "name": "c2sPacketTable",
+      "description": "Client-to-server gameplay packet dispatch table (packets 0x00..0x66)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1A078",
+      "stride": 8,
+      "count": 103,
+      "pointerOffsets": [0],
+      "format": "{pfnHandler: uint32, dwFlags: uint32}",
+      "evidence": "0x6FCEC56B mov eax, dword ptr [edi*8 + 0x6fd1a078]"
+    },
+    {
+      "name": "c2sHandshakePacketTable",
+      "description": "Client-to-server session join/leave/ping packet dispatch table (0x66..0x6F)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1A3B0",
+      "stride": 4,
+      "count": 10,
+      "pointerOffsets": [0],
+      "format": "pfnHandler: uint32",
+      "evidence": "0x6FD10AF7 call dword ptr [ebx*4 + 0x6fd1a3b0]"
+    },
+    {
+      "name": "playerModeChangeTable",
+      "description": "Player animation mode begin/end transition handlers",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1A3F8",
+      "stride": 8,
+      "count": 20,
+      "pointerOffsets": [0, 4],
+      "format": "{pfnStart: uint32, pfnEnd: uint32}",
+      "evidence": "0x6FC985F6 call dword ptr [ebp*8 + 0x6fd1a3f8]; 0x6FC984F2 lea esi, [ebp*8 + 0x6fd1a3fc]"
+    },
+    {
+      "name": "monsterModeEventTable",
+      "description": "Monster animation mode transition & continuous mode event descriptors (16 base + 5 special overrides)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1A498",
+      "stride": 16,
+      "count": 21,
+      "pointerOffsets": [0, 4, 8],
+      "format": "{pfnStart: uint32, pfnTick: uint32, pfnEnd: uint32, bContinuous: uint32}",
+      "evidence": "0x6FC94A8D add eax, 0x6fd1a498; 0x6FC94A21 mov eax, 0x6fd1a5b8; 0x6FC94A37 mov eax, 0x6fd1a5c8; 0x6FC94A43 mov eax, 0x6fd1a5d8; 0x6FC94A77 mov eax, 0x6fd1a598; 0x6FC94A83 mov eax, 0x6fd1a5a8"
+    },
+    {
+      "name": "tradeActionCallbacksTable",
+      "description": "Player-to-player trade button action callbacks (indices 0..3; [0]=NULL, [1]=0x6FC92210, [2]=0x6FC90180, [3]=0x6FC90170)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1A5E8",
+      "stride": 4,
+      "count": 4,
+      "pointerOffsets": [0],
+      "format": "pfnTradeAction: uint32",
+      "evidence": "0x6FC9241E mov eax, dword ptr [ecx*4 + 0x6fd1a5e8]"
+    },
+    {
+      "name": "shrinesEffectDispatchTable",
+      "description": "Shrines.txt OperateFn 2 effect callbacks dispatched from 0x6FC8DA00 (24 entries, rows 0..23, entries 0 and 23 NULL; count [0x6FD27D4C] = 24)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1A5F8",
+      "stride": 12,
+      "count": 24,
+      "pointerOffsets": [0],
+      "format": "{pfnShrineEffect: uint32, dwArg0: uint32, dwArg1: uint32}",
+      "evidence": "0x6FC8DB15 mov eax, dword ptr [ebp*4 + 0x6fd1a5f8]"
+    },
+    {
+      "name": "unitTimerTypeHandlers",
+      "description": "Top-level unit timer queue dispatch by unit type / partition",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1B110",
+      "stride": 4,
+      "count": 13,
+      "pointerOffsets": [0],
+      "format": "pfnTimerDispatch: uint32",
+      "evidence": "0x6FCAEE2C mov eax, dword ptr [ebx*4 + 0x6fd1b110]; 0x6FCAEE49 call dword ptr [ebx*4 + 0x6fd1b110]"
+    },
+    {
+      "name": "missileSubHandlersTable",
+      "description": "Missile secondary creation/impact handler pairs",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1B588",
+      "stride": 8,
+      "count": 14,
+      "pointerOffsets": [0, 4],
+      "format": "{dwParamOrFn: uint32, pfnHandler: uint32}",
+      "evidence": "0x6FCD17B6 mov esi, dword ptr [eax*8 + 0x6fd1b588]; 0x6FCD17BD mov eax, dword ptr [eax*8 + 0x6fd1b58c]"
+    },
+    {
+      "name": "playerEventFunctionsTable",
+      "description": "Player timer wheel event handlers (events 0..14)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1BB74",
+      "stride": 4,
+      "count": 15,
+      "pointerOffsets": [0],
+      "format": "pfnPlayerEvent: uint32",
+      "evidence": "0x6FCAED21 mov eax, dword ptr [eax*4 + 0x6fd1bb74]; 0x6FCAED96 mov eax, dword ptr [eax*4 + 0x6fd1bb74]"
+    },
+    {
+      "name": "monsterEventFunctionsTable",
+      "description": "Monster timer wheel event handlers (events 0..14)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1BC14",
+      "stride": 4,
+      "count": 15,
+      "pointerOffsets": [0],
+      "format": "pfnMonsterEvent: uint32",
+      "evidence": "0x6FC969D6 mov eax, dword ptr [esi*4 + 0x6fd1bc14]"
+    },
+    {
+      "name": "questTimerDispatchTable",
+      "description": "Quest timer wheel callback handlers",
+      "module": "D2Game",
+      "baseAddress": "0x6FD1BDB8",
+      "stride": 4,
+      "count": 12,
+      "pointerOffsets": [0],
+      "format": "pfnQuestTimer: uint32",
+      "evidence": "0x6FC8F5E9 call dword ptr [esi*4 + 0x6fd1bdb8]; 0x6FCAEF7C mov eax, dword ptr [ebx*4 + 0x6fd1bdb8]; 0x6FCAEF99 call dword ptr [ebx*4 + 0x6fd1bdb8]"
+    },
+    {
+      "name": "itemActionPacketSubTable",
+      "description": "Player animation mode (dwAnimMode 0..19 at 0x6FCEB8FA) item-action gate & callback table (row 19 -> 0x6FCEBA20)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD22CE0",
+      "stride": 12,
+      "count": 20,
+      "pointerOffsets": [0],
+      "format": "{pfnAction: uint32, nArg0: uint32, nArg1: uint32}",
+      "evidence": "0x6FCEB900 mov edi, dword ptr [eax*4 + 0x6fd22ce0] (eax = idx * 3)"
+    },
+    {
+      "name": "skillsPassiveAndAuraTable",
+      "description": "Passive mastery & aura state handler pairs",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2723C",
+      "stride": 8,
+      "count": 30,
+      "pointerOffsets": [0, 4],
+      "format": "{pfnApply: uint32, pfnUpdate: uint32}",
+      "evidence": "0x6FCCD210 mov eax, dword ptr [ebx*8 + 0x6fd2723c]"
+    },
+    {
+      "name": "skillsSrvStFuncTable",
+      "description": "Skills.txt SrvStFunc start-phase callbacks (indices 0..91)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD27338",
+      "stride": 4,
+      "count": 92,
+      "pointerOffsets": [0],
+      "format": "pfnSrvStFunc: uint32",
+      "evidence": "0x6FCBFE3E mov eax, dword ptr [eax*4 + 0x6fd27338]"
+    },
+    {
+      "name": "skillsSrvDoFuncTable",
+      "description": "Skills.txt SrvDoFunc action-frame callbacks (indices 0..191)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD274A8",
+      "stride": 4,
+      "count": 192,
+      "pointerOffsets": [0],
+      "format": "pfnSrvDoFunc: uint32",
+      "evidence": "0x6FCB1D4B mov eax, dword ptr [ecx*4 + 0x6fd274a8]"
+    },
+    {
+      "name": "skillsSrvPrgFuncTable",
+      "description": "Skills.txt SrvPrgFunc progressive charge release callbacks (indices 0..31)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD277A8",
+      "stride": 4,
+      "count": 32,
+      "pointerOffsets": [0],
+      "format": "pfnSrvPrgFunc: uint32",
+      "evidence": "0x6FC6FC08 mov eax, dword ptr [eax*4 + 0x6fd277a8]"
+    },
+    {
+      "name": "playerSkillModeHandlersTable",
+      "description": "Player skill cast animation mode action handlers (indices 0..39)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD279D0",
+      "stride": 4,
+      "count": 40,
+      "pointerOffsets": [0],
+      "format": "pfnPlrSkillMode: uint32",
+      "evidence": "0x6FC99A25 mov edx, dword ptr [ecx*4 + 0x6fd279d0]; 0x6FC99A40 call dword ptr [eax*4 + 0x6fd279d0]"
+    },
+    {
+      "name": "questActInitTable",
+      "description": "Per-act quest table initializers",
+      "module": "D2Game",
+      "baseAddress": "0x6FD27B8C",
+      "stride": 4,
+      "count": 10,
+      "pointerOffsets": [0],
+      "format": "pfnActQuestInit: uint32",
+      "evidence": "0x6FC8DD73 mov eax, dword ptr [esi*4 + 0x6fd27b8c]; count [0x6FD27BB4] = 10"
+    },
+    {
+      "name": "questsCallbacksTable",
+      "description": "Quests state machine descriptor initializers for Acts 1..5",
+      "module": "D2Game",
+      "baseAddress": "0x6FD27BB8",
+      "stride": 4,
+      "count": 101,
+      "pointerOffsets": [0],
+      "format": "pfnQuestInit: uint32",
+      "evidence": "0x6FC8A400 call dword ptr [edx*4 + 0x6fd27bb8]"
+    },
+    {
+      "name": "questSequenceTable",
+      "description": "Quest boss/event sequence step callbacks",
+      "module": "D2Game",
+      "baseAddress": "0x6FD27D50",
+      "stride": 12,
+      "count": 21,
+      "pointerOffsets": [0],
+      "format": "{pfnSeqStep: uint32, dwChance: uint32, dwParam: uint32}",
+      "evidence": "0x6FC89ECE call dword ptr [esi + 0x6fd27d50] (esi = idx * 12)"
+    },
+    {
+      "name": "objectsPopulateDispatchTable",
+      "description": "Room object population/spawner handlers dispatched from 0x6FC5F320 (rows 0..8)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2D928",
+      "stride": 8,
+      "count": 9,
+      "pointerOffsets": [0],
+      "format": "{pfnPopulate: uint32, dwArg: uint32}",
+      "evidence": "0x6FC5F431 mov ecx, dword ptr [ebp*8 + 0x6fd2d928]"
+    },
+    {
+      "name": "objectsInitFnTable",
+      "description": "Objects.txt InitFn server spawn callbacks (indices 0..52)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2D970",
+      "stride": 4,
+      "count": 53,
+      "pointerOffsets": [0],
+      "format": "pfnObjectInit: uint32",
+      "evidence": "0x6FC5E4EC call dword ptr [eax*4 + 0x6fd2d970]"
+    },
+    {
+      "name": "objectsOperateFnTable",
+      "description": "Objects.txt OperateFn server interaction callbacks (indices 0..70)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2DA48",
+      "stride": 4,
+      "count": 71,
+      "pointerOffsets": [0],
+      "format": "pfnObjectOperate: uint32",
+      "evidence": "0x6FC5E562 call dword ptr [eax*4 + 0x6fd2da48]"
+    },
+    {
+      "name": "shrinesOperateFnTable",
+      "description": "Shrines.txt Code operate effect callbacks (indices 0..30)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2DB68",
+      "stride": 4,
+      "count": 31,
+      "pointerOffsets": [0],
+      "format": "pfnShrineOperate: uint32",
+      "evidence": "0x6FC5F099 call dword ptr [eax*4 + 0x6fd2db68]"
+    },
+    {
+      "name": "npcDescriptorInitTable",
+      "description": "Town NPC vendor/gamble/hireling descriptor initializers",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2DBF0",
+      "stride": 24,
+      "count": 37,
+      "pointerOffsets": [0],
+      "format": "{pfnNpcInit: uint32, dwAct: uint32, dwWeight: uint32, dwFlags: uint32, wMonId: uint32, dwMenu: uint32}",
+      "evidence": "0x6FC548C0 mov edi, 0x6fd2dbf0; count [0x6FD2DF68] = 0x25"
+    },
+    {
+      "name": "npcActVendorInitTable",
+      "description": "Per-act vendor inventory generation callbacks",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2DF6C",
+      "stride": 8,
+      "count": 4,
+      "pointerOffsets": [0],
+      "format": "{pfnActVendor: uint32, dwAct: uint32}",
+      "evidence": "0x6FC549C1 mov eax, dword ptr [edi*8 + 0x6fd2df6c]; 0x6FC549DF call dword ptr [edi*8 + 0x6fd2df6c]"
+    },
+    {
+      "name": "missilesSrvDoFuncTable",
+      "description": "Missiles.txt SrvDoFunc step callbacks (indices 0..79)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2E050",
+      "stride": 4,
+      "count": 80,
+      "pointerOffsets": [0],
+      "format": "pfnMissileDo: uint32",
+      "evidence": "0x6FC4F43A call dword ptr [eax*4 + 0x6fd2e050]"
+    },
+    {
+      "name": "missilesSrvDmgHitFuncTable",
+      "description": "Missiles.txt SrvDmgFunc and SrvHitFunc impact callbacks",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2E190",
+      "stride": 4,
+      "count": 20,
+      "pointerOffsets": [0],
+      "format": "pfnMissileImpact: uint32",
+      "evidence": "0x6FC4E5A5 call dword ptr [eax*4 + 0x6fd2e190]; 0x6FC4E89C call dword ptr [edi*4 + 0x6fd2e1bc]"
+    },
+    {
+      "name": "cubeSpecialOpsTable",
+      "description": "CubeMain.txt special output recipe handlers (cow portal, uber portals, token)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2E300",
+      "stride": 8,
+      "count": 7,
+      "pointerOffsets": [0],
+      "format": "{pfnCubeOp: uint32, dwFlags: uint32}",
+      "evidence": "0x6FC4EC31 mov eax, dword ptr [eax*8 + 0x6fd2e300]"
+    },
+    {
+      "name": "monUModTable",
+      "description": "SuperUnique / Champion monster unique modifier callbacks (indices 0..42)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2E550",
+      "stride": 4,
+      "count": 43,
+      "pointerOffsets": [0],
+      "format": "pfnMonUMod: uint32",
+      "evidence": "0x6FC41840 mov eax, dword ptr [edx*4 + 0x6fd2e550]"
+    },
+    {
+      "name": "gpHirelingAndPetAiFunctionTable",
+      "description": "Hireling & summoned pet AI dispatch table",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2E668",
+      "stride": 16,
+      "count": 18,
+      "pointerOffsets": [4, 8, 12],
+      "format": "{dwAiId: uint32, pfnAiInit: uint32, pfnAiThink: uint32, pfnAiExtra: uint32}",
+      "evidence": "0x6FCBD134 add eax, 0x6fd2e668"
+    },
+    {
+      "name": "gpMonsterAiFunctionTable",
+      "description": "Monster AI dispatch table (MonAI.txt indices 0..147)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2E788",
+      "stride": 16,
+      "count": 148,
+      "pointerOffsets": [4, 8, 12],
+      "format": "{dwAiFlag: uint32, pfnAiInit: uint32, pfnAiThink: uint32, pfnAiExtra: uint32}",
+      "evidence": "0x6FCBD150 add eax, 0x6fd2e788"
+    },
+    {
+      "name": "monUModCallbackMatrixTable",
+      "description": "MonUMod 43x6 hit/damage/death/event callback matrix dispatched inside 0x6FC468E0",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2F448",
+      "stride": 24,
+      "count": 43,
+      "pointerOffsets": [0, 4, 8, 12, 16, 20],
+      "format": "pfnMonUModEvent[6]: uint32[6]",
+      "evidence": "0x6FC46951 mov esi, dword ptr [ecx*4 + 0x6fd2f448]; 0x6FC46987 mov esi, dword ptr [ecx*8 + 0x6fd2f45c]"
+    },
+    {
+      "name": "npcPathNodeActionTable",
+      "description": "DS1 NPC path-node action callbacks dispatched inside AI_FollowDs1NpcPath (0x6FC3BBC0)",
+      "module": "D2Game",
+      "baseAddress": "0x6FD2F850",
+      "stride": 4,
+      "count": 7,
+      "pointerOffsets": [0],
+      "format": "pfnNpcNodeAction: uint32",
+      "evidence": "0x6FC3BC24 mov esi, dword ptr [ecx*4 + 0x6fd2f850]"
+    },
+    {
+      "name": "drlgOutdoorActPresetTables",
+      "description": "DRLG outdoor border/river/cliff preset builder tables (9 tables x 15 entries)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDDCBE8",
+      "stride": 16,
+      "count": 135,
+      "pointerOffsets": [0],
+      "format": "{pfnPresetRule: uint32, nParam0: int32, nParam1: int32, nParam2: int32}",
+      "evidence": "0x6FD67AED push 0x6fddcbe8; 0x6FD67B01 push 0x6fddccd8; 0x6FD67937 push 0x6fddd278"
+    },
+    {
+      "name": "pathMovementTypeTable",
+      "description": "PATH_ComputePath (#10142) movement type solver table (types 0..16)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDE42F0",
+      "stride": 4,
+      "count": 17,
+      "pointerOffsets": [0],
+      "format": "pfnPathSolver: uint32",
+      "evidence": "0x6FD86489 call dword ptr [edx*4 + 0x6fde42f0]"
+    },
+    {
+      "name": "drlgLevelAlgoTable",
+      "description": "DRLG level generation algorithm dispatch (1=Maze, 2=Preset, 3=Outdoor)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDE6178",
+      "stride": 4,
+      "count": 3,
+      "pointerOffsets": [0],
+      "format": "pfnDrlgAlgo: uint32",
+      "evidence": "0x6FD60EF5 call dword ptr [edi*4 + 0x6fde6178]"
+    },
+    {
+      "name": "collisionSpanTables",
+      "description": "Collision maskfootprint test/set/clear span handlers (2x4 tables)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDE9BE8",
+      "stride": 4,
+      "count": 8,
+      "pointerOffsets": [0],
+      "format": "pfnCollisionSpan: uint32",
+      "evidence": "0x6FDCB943 jmp dword ptr [eax*4 + 0x6fde9bf8]; 0x6FDCB96F jmp dword ptr [esi*4 + 0x6fde9be8]"
+    },
+    {
+      "name": "missilesCalcBuiltinsTable",
+      "description": "Missiles.txt AST formula evaluator builtin functions",
+      "module": "D2Common",
+      "baseAddress": "0x6FDE9C30",
+      "stride": 8,
+      "count": 4,
+      "pointerOffsets": [0],
+      "format": "{pfnCalcBuiltin: uint32, nArgCount: uint32}",
+      "evidence": "0x6FDBB33A push 0x6fde9c30 (Fog.#10253 AST eval, count=4)"
+    },
+    {
+      "name": "skillsCalcBuiltinsTable",
+      "description": "Skills.txt / SkillDesc.txt AST formula evaluator builtin functions (min, max, rand, ln12, dm12, ...)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDE9E24",
+      "stride": 8,
+      "count": 7,
+      "pointerOffsets": [0],
+      "format": "{pfnCalcBuiltin: uint32, nArgCount: uint32}",
+      "evidence": "0x6FDA1723 push 0x6fde9e24 (Fog.#10253 AST eval, count [0x6FDE9E5C] = 7)"
+    },
+    {
+      "name": "itemsPropertyAssignTable",
+      "description": "Properties.txt stat-generation function dispatch table (func 1..36 across 244 slots)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDEA928",
+      "stride": 8,
+      "count": 244,
+      "pointerOffsets": [0],
+      "format": "{pfnAssignProp: uint32, dwSubParam: uint32}",
+      "evidence": "0x6FD95B4F mov ebx, dword ptr [esi*8 + 0x6fdea928]"
+    },
+    {
+      "name": "itemsModFuncTable",
+      "description": "Item stat modifier value generator callbacks (func indices 0..36)",
+      "module": "D2Common",
+      "baseAddress": "0x6FDEB0C8",
+      "stride": 4,
+      "count": 37,
+      "pointerOffsets": [0],
+      "format": "pfnModFunc: uint32",
+      "evidence": "0x6FD959ED mov eax, dword ptr [eax*4 + 0x6fdeb0c8]; count [0x6FDEB15C] = 0x25"
+    },
+    {
+      "name": "pathRayAndStepDirTable",
+      "description": "PATH line-of-sight raycast & directional step callbacks",
+      "module": "D2Common",
+      "baseAddress": "0x6FDEB244",
+      "stride": 4,
+      "count": 6,
+      "pointerOffsets": [0],
+      "format": "pfnPathStep: uint32",
+      "evidence": "0x6FD86A16 call dword ptr [ebp*4 + 0x6fdeb244]; 0x6FD5C3BD call dword ptr [0x6fdeb244]; 0x6FD673DA call dword ptr [0x6fdeb258]"
+    },
+    {
+      "name": "statCalcBuiltinsTable",
+      "description": "ItemStatCost / SetItems AST formula evaluator builtin functions",
+      "module": "D2Common",
+      "baseAddress": "0x6FDED354",
+      "stride": 8,
+      "count": 4,
+      "pointerOffsets": [0],
+      "format": "{pfnCalcBuiltin: uint32, nArgCount: uint32}",
+      "evidence": "0x6FD73D2C push 0x6fded354 (Fog.#10253 AST eval, count=4)"
+    }
+  ],
+  "pruned_roots_and_funcs": {
+    "prunedDataTables": [
+      {
+        "module": "D2Game",
+        "baseAddress": "0x6FD2E368",
+        "stride": 4,
+        "count": 25,
+        "reason": "Unreferenced static D2EventCallbackTableStrc dummy no-op stub table (0x6FC4A460..0x6FC4A5E0); zero .text/.rdata/.data references anywhere in D2Game.dll",
+        "evidence": "0x6FD2E368..0x6FD2E3CC (between gdwGameFrameRate 0x6FD2E360 and 0x6FD2E3CC)"
+      },
+      {
+        "module": "D2Game",
+        "baseAddress": "0x6FD2E3D0",
+        "stride": 4,
+        "count": 5,
+        "reason": "Battle.net Realm / MCP admin callback table dispatched only from pruned D2Game.#10025 REALM_ProcessMcpCallbackQueue (0x6FC4B050) and D2Game.#10014 REALM_SendArenaResults (0x6FC4B160)",
+        "evidence": "0x6FC4B0FC call dword ptr [eax*4 + 0x6fd2e3d0] (#10025); 0x6FC4B315 call dword ptr [edi*4 + 0x6fd2e3d0] (disp @0x6FC4B318 in #10014; #10004 @0x6FCAF277)"
+      },
+      {
+        "module": "D2Game",
+        "baseAddress": "0x6FD2E540",
+        "stride": 4,
+        "count": 4,
+        "reason": "Unreferenced 4-slot static MonUMod helper pointer array ([1]=0x6FC43020, [2]=0x6FC42FA0, both already reachable via monUModTable / direct calls); zero .text/.rdata/.data references to 0x6FD2E540..0x6FD2E54F",
+        "evidence": "0x6FD2E540..0x6FD2E550 immediately preceding monUModTable (0x6FD2E550)"
+      }
+    ],
+    "prunedCallSiteRanges": [
+      {
+        "module": "D2Game",
+        "start": "0x6FC4E069",
+        "end": "0x6FC4E0C1",
+        "containingFn": "0x6FC4E050",
+        "reason": "Intentional crash-test debug branch inside GAME_UpdateGameFrame (nCrashTestFlag [esi+0x1dc8] == 1..4)",
+        "evidence": "0x6FC4E059 mov eax, [esi+0x1dc8]; arms write [0]=0 / [0xC0000001]=0 or call Fog.#10265 (0x6FC4E08C), Fog.#10024 (0x6FC4E097), _exit(-1) (0x6FC22A3C at 0x6FC4E0A1), Fog.#10042 (0x6FC4E0BC) before stage 0 at 0x6FC4E0C4"
+      }
+    ],
+    "prunedCodeRanges": [
+      {
+        "module": "D2Game",
+        "start": "0x6FC22813",
+        "end": "0x6FC2A26E",
+        "category": "msvc_libcmt",
+        "reason": "Statically linked MSVC 6.0 LIBCMT runtime (_exit 0x6FC22A3C on Fog D2_ASSERT fatal paths, _DllMainCRTStartup 0x6FC2373C, _except_handler3 0x6FC240E4, Win32 stdio/heap/TLS)",
+        "evidence": "0x6FC22790 ends Blizzard hash-table helpers at 0x6FC22810; 0x6FC22813 (_stricmp calling _getptd 0x6FC23B93) through 0x6FC2A26D is LIBCMT"
+      },
+      {
+        "module": "D2Game",
+        "start": "0x6FC2A26E",
+        "end": "0x6FC2B46A",
+        "category": "iat_thunks",
+        "reason": "767 6-byte FF 25 IAT import thunks (D2Common thunks resolved directly to D2Common .text targets; Fog/D2Net/Storm/Win32 recorded in externalDeps)",
+        "evidence": "Contiguous jmp dword ptr [IAT] stubs from 0x6FC2A26E (RtlUnwind) to 0x6FC2B464"
+      },
+      {
+        "module": "D2Game",
+        "start": "0x6FD144B0",
+        "end": "0x6FD179B4",
+        "category": "msvc_libcmt",
+        "reason": "Trailing MSVC 6.0 LIBCMT runtime (_alldiv, _local_unwind2, __CxxFrameHandler, x87 _CI* math, SEH unwind filter thunks)",
+        "evidence": "Last D2Game function ends at 0x6FD144A1 ret 0x10 + int3 padding; 0x6FD144B0 starts LIBCMT _alldiv through end of .text"
+      },
+      {
+        "module": "D2Common",
+        "start": "0x6FD51A4A",
+        "end": "0x6FD591FE",
+        "category": "msvc_libcmt",
+        "reason": "Statically linked MSVC 6.0 LIBCMT runtime (_exit 0x6FD51B0D on Fog D2_ASSERT fatal paths, _DllMainCRTStartup 0x6FD52C8F, _except_handler3 0x6FD530A4, Win32 stdio/heap/TLS)",
+        "evidence": "Last inline D2Common helper ends at 0x6FD51A49; 0x6FD51A4A (doexit) / 0x6FD51B0D (_exit) through 0x6FD591FD is LIBCMT"
+      },
+      {
+        "module": "D2Common",
+        "start": "0x6FD591FE",
+        "end": "0x6FD593A4",
+        "category": "iat_thunks",
+        "reason": "Contiguous 6-byte FF 25 IAT import thunks to Fog/Storm/KERNEL32 (recorded in externalDeps)",
+        "evidence": "60 jmp dword ptr [IAT] stubs at 0x6FD591FE..0x6FD593A0 (plus isolated thunks 0x6FD5A67A, 0x6FD6A717)"
+      },
+      {
+        "module": "D2Common",
+        "start": "0x6FDD6220",
+        "end": "0x6FDD87D3",
+        "category": "msvc_libcmt",
+        "reason": "Trailing MSVC 6.0 LIBCMT x87 _CI* floating-point runtime, _ftol, _alldiv, and SEH unwind filter thunks",
+        "evidence": "Last D2Common DRLG helper ends at 0x6FDD6211 jmp 0x6FDD6040 + int3 padding; 0x6FDD6220 starts LIBCMT x87 helpers"
+      }
+    ],
+    "prunedFunctions": [
+      {
+        "va": "0x6FC4E1E0",
+        "module": "D2Game",
+        "name": "GAME_UpdateGames_WallClockDriver",
+        "reason": "D2Game.#10008 host wall-clock GetTickCount/QueryPerformanceCounter loop scheduler; kernel steps frames deterministically via GAME_UpdateGameFrame (0x6FC4E050)",
+        "evidence": "0x6FC4E1F1 call [KERNEL32.QueryPerformanceCounter]; 0x6FC4E1F7 call [WINMM.timeGetTime]"
+      },
+      {
+        "va": "0x6FC4DF10",
+        "module": "D2Game",
+        "name": "GAME_SendClientUpdates_WallClockDriver",
+        "reason": "D2Game.#10024 host wall-clock 40ms client keepalive scheduler using GetTickCount",
+        "evidence": "0x6FC4DF21 call [KERNEL32.QueryPerformanceCounter]; 0x6FC4DF27 call [KERNEL32.GetTickCount]"
+      },
+      {
+        "va": "0x6FC4A9A0",
+        "module": "D2Game",
+        "name": "GAME_CloseGlobalCriticalSections",
+        "reason": "D2Game.#10047 Win32 DeleteCriticalSection server teardown routine",
+        "evidence": "0x6FC4A9A1 mov esi, [KERNEL32.DeleteCriticalSection]; deletes 0x6FD30BB8/BD0/BE8"
+      },
+      {
+        "va": "0x6FC72140",
+        "module": "D2Game",
+        "name": "NET_InitServerCriticalSection",
+        "reason": "D2Game.#10016 Win32 InitializeCriticalSection host startup routine",
+        "evidence": "0x6FC72140 push 0x6fd303a0; call [0x6fd18cf8]"
+      },
+      {
+        "va": "0x6FC72650",
+        "module": "D2Game",
+        "name": "NET_RealmServerWorkerLoop",
+        "reason": "D2Game.#10021 multi-threaded realm server queue worker loop with EnterCriticalSection",
+        "evidence": "0x6FC72651 mov ebx, [KERNEL32.EnterCriticalSection]; push 0x6fd31f58"
+      },
+      {
+        "va": "0x6FC729F0",
+        "module": "D2Game",
+        "name": "NET_EnqueueHostPacket",
+        "reason": "D2Game.#10002 D2GS host network thread queue wrapper",
+        "evidence": "0x6FC72A18 call 0x6fc726f0 (thread-safe host queue push)"
+      },
+      {
+        "va": "0x6FC4B050",
+        "module": "D2Game",
+        "name": "REALM_ProcessMcpCallbackQueue",
+        "reason": "D2Game.#10025 Battle.net Realm / MCP server admin queue processor",
+        "evidence": "0x6FC4B0FC call dword ptr [eax*4 + 0x6fd2e3d0] (bnetRealmCallbackTable)"
+      },
+      {
+        "va": "0x6FC49910",
+        "module": "D2Game",
+        "name": "REALM_Callback0",
+        "reason": "Battle.net Realm / MCP callback entry 0 in 0x6FD2E3D0",
+        "evidence": "0x6FD2E3D0[0] = 0x6FC49910"
+      },
+      {
+        "va": "0x6FC4A630",
+        "module": "D2Game",
+        "name": "REALM_Callback1",
+        "reason": "Battle.net Realm / MCP callback entry 1 in 0x6FD2E3D0",
+        "evidence": "0x6FD2E3D0[1] = 0x6FC4A630"
+      },
+      {
+        "va": "0x6FC498D0",
+        "module": "D2Game",
+        "name": "REALM_Callback2",
+        "reason": "Battle.net Realm / MCP callback entry 2 in 0x6FD2E3D0",
+        "evidence": "0x6FD2E3D0[2] = 0x6FC498D0"
+      },
+      {
+        "va": "0x6FC49890",
+        "module": "D2Game",
+        "name": "REALM_Callback3",
+        "reason": "Battle.net Realm / MCP callback entry 3 in 0x6FD2E3D0",
+        "evidence": "0x6FD2E3D0[3] = 0x6FC49890"
+      },
+      {
+        "va": "0x6FC49880",
+        "module": "D2Game",
+        "name": "REALM_Callback4",
+        "reason": "Battle.net Realm / MCP callback entry 4 in 0x6FD2E3D0",
+        "evidence": "0x6FD2E3D0[4] = 0x6FC49880"
+      },
+      {
+        "va": "0x6FC4B840",
+        "module": "D2Game",
+        "name": "ADMIN_GetGameServerInstanceList",
+        "reason": "D2Game.#10000 D2GS multi-game host admin query",
+        "evidence": "Walks global game hash 0x6FD30C08 for D2GS admin console"
+      },
+      {
+        "va": "0x6FC4B350",
+        "module": "D2Game",
+        "name": "ADMIN_BroadcastServerMessage",
+        "reason": "D2Game.#10001 D2GS host admin broadcast across all games",
+        "evidence": "Locks 0x6FD30BE8 and iterates hosted game table"
+      },
+      {
+        "va": "0x6FC4D820",
+        "module": "D2Game",
+        "name": "ADMIN_DisconnectAllClients",
+        "reason": "D2Game.#10006 D2GS host server shutdown client disconnect",
+        "evidence": "Sends 0xB0 disconnect across hosted game list"
+      },
+      {
+        "va": "0x6FD62A70",
+        "module": "D2Common",
+        "name": "DRLG_OpenDebugLogFile",
+        "reason": "Host filesystem debug log writer (fopen mode 'wt')",
+        "evidence": "0x6FD62A70 push 0x6fde5f5c ('wt'); call LIBCMT fopen (0x6FD52043)"
+      },
+      {
+        "va": "0x6FD62C90",
+        "module": "D2Common",
+        "name": "DRLG_InitDebugLogWithCriticalSection",
+        "reason": "Host filesystem debug log initializer using Win32 CriticalSection + fopen('wt')",
+        "evidence": "0x6FD62C9E call [KERNEL32.InitializeCriticalSection]; 0x6FD62CBD call fopen (0x6FD52043)"
+      },
+      {
+        "va": "0x6FDAD770",
+        "module": "D2Common",
+        "name": "DATATBLS_WriteCompiledBinFile",
+        "reason": "Host disk .bin compiler output writer (DATA\\GLOBAL\\EXCEL\\%s wb); kernel loads precompiled tables",
+        "evidence": "0x6FDAD77C push 'DATA\\GLOBAL\\EXCEL'; 0x6FDAD795 push 'wb'; 0x6FDAD79B call fopen (0x6FD52043)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,493 @@
+{
+  "name": "k6s2-barbarian-skills",
+  "description": "Level 45 Barbarian dual-wield/dual-throw all-3-tree scenario: learns all 30 Barbarian skills (126..155), swaps to dual Rare Javelins, casts all Warcries (Battle Command/Orders/Cry, Shout, Taunt, Howl, War Cry), executes Double Throw, Leap, Leap Attack, Whirlwind, Bash, Double Swing, Stun, Concentrate, Frenzy, Berserk, and targets corpses with Find Potion, Find Item, and Grim Ward.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6-s2/saves/k6s2-barbarian-skills.d2s",
+  "difficulty": 0,
+  "frames": 665,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    31000000
+  ],
+  "oracleSetGold": [
+    2,
+    250000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "jav",
+      11,
+      6,
+      40
+    ],
+    [
+      2,
+      "jav",
+      12,
+      6,
+      40
+    ],
+    [
+      2,
+      "cap",
+      1,
+      6,
+      40
+    ],
+    [
+      2,
+      "lbl",
+      8,
+      6,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 4,
+      "c2s": "3a0045",
+      "note": "+70 Strength"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a013b",
+      "note": "+60 Energy"
+    },
+    {
+      "frame": 6,
+      "c2s": "3a0227",
+      "note": "+40 Dexterity"
+    },
+    {
+      "frame": 7,
+      "c2s": "3a0331",
+      "note": "+50 Vitality"
+    },
+    {
+      "frame": 8,
+      "c2s": "3b7e00",
+      "note": "learn Barbarian skill 126"
+    },
+    {
+      "frame": 9,
+      "c2s": "3b7f00",
+      "note": "learn Barbarian skill 127"
+    },
+    {
+      "frame": 10,
+      "c2s": "3b8000",
+      "note": "learn Barbarian skill 128"
+    },
+    {
+      "frame": 11,
+      "c2s": "3b8100",
+      "note": "learn Barbarian skill 129"
+    },
+    {
+      "frame": 12,
+      "c2s": "3b8200",
+      "note": "learn Barbarian skill 130"
+    },
+    {
+      "frame": 13,
+      "c2s": "3b8300",
+      "note": "learn Barbarian skill 131"
+    },
+    {
+      "frame": 14,
+      "c2s": "3b8400",
+      "note": "learn Barbarian skill 132"
+    },
+    {
+      "frame": 15,
+      "c2s": "3b8500",
+      "note": "learn Barbarian skill 133"
+    },
+    {
+      "frame": 16,
+      "c2s": "3b8600",
+      "note": "learn Barbarian skill 134"
+    },
+    {
+      "frame": 17,
+      "c2s": "3b8700",
+      "note": "learn Barbarian skill 135"
+    },
+    {
+      "frame": 18,
+      "c2s": "3b8800",
+      "note": "learn Barbarian skill 136"
+    },
+    {
+      "frame": 19,
+      "c2s": "3b8900",
+      "note": "learn Barbarian skill 137"
+    },
+    {
+      "frame": 20,
+      "c2s": "3b8a00",
+      "note": "learn Barbarian skill 138"
+    },
+    {
+      "frame": 21,
+      "c2s": "3b8b00",
+      "note": "learn Barbarian skill 139"
+    },
+    {
+      "frame": 22,
+      "c2s": "3b8c00",
+      "note": "learn Barbarian skill 140"
+    },
+    {
+      "frame": 23,
+      "c2s": "3b8d00",
+      "note": "learn Barbarian skill 141"
+    },
+    {
+      "frame": 24,
+      "c2s": "3b8e00",
+      "note": "learn Barbarian skill 142"
+    },
+    {
+      "frame": 25,
+      "c2s": "3b8f00",
+      "note": "learn Barbarian skill 143"
+    },
+    {
+      "frame": 26,
+      "c2s": "3b9000",
+      "note": "learn Barbarian skill 144"
+    },
+    {
+      "frame": 27,
+      "c2s": "3b9100",
+      "note": "learn Barbarian skill 145"
+    },
+    {
+      "frame": 28,
+      "c2s": "3b9200",
+      "note": "learn Barbarian skill 146"
+    },
+    {
+      "frame": 29,
+      "c2s": "3b9300",
+      "note": "learn Barbarian skill 147"
+    },
+    {
+      "frame": 30,
+      "c2s": "3b9400",
+      "note": "learn Barbarian skill 148"
+    },
+    {
+      "frame": 31,
+      "c2s": "3b9500",
+      "note": "learn Barbarian skill 149"
+    },
+    {
+      "frame": 32,
+      "c2s": "3b9600",
+      "note": "learn Barbarian skill 150"
+    },
+    {
+      "frame": 33,
+      "c2s": "3b9700",
+      "note": "learn Barbarian skill 151"
+    },
+    {
+      "frame": 34,
+      "c2s": "3b9800",
+      "note": "learn Barbarian skill 152"
+    },
+    {
+      "frame": 35,
+      "c2s": "3b9900",
+      "note": "learn Barbarian skill 153"
+    },
+    {
+      "frame": 36,
+      "c2s": "3b9a00",
+      "note": "learn Barbarian skill 154"
+    },
+    {
+      "frame": 37,
+      "c2s": "3b9b00",
+      "note": "learn Barbarian skill 155"
+    },
+    {
+      "frame": 38,
+      "c2s": "60",
+      "note": "0x60 swap to dual Rare Javelins (melee + throw)"
+    },
+    {
+      "frame": 42,
+      "c2s": "030d161217",
+      "note": "run to (5645,5906)"
+    },
+    {
+      "frame": 66,
+      "c2s": "0314160617",
+      "note": "run to (5652,5894)"
+    },
+    {
+      "frame": 90,
+      "c2s": "032016fa16",
+      "note": "run to (5664,5882)"
+    },
+    {
+      "frame": 114,
+      "c2s": "032116f716",
+      "note": "run to (5665,5879)"
+    },
+    {
+      "frame": 138,
+      "c2s": "032216e416",
+      "note": "run to (5666,5860)"
+    },
+    {
+      "frame": 164,
+      "c2s": "032216d316",
+      "note": "run to (5666,5843)"
+    },
+    {
+      "frame": 190,
+      "c2s": "032116c316",
+      "note": "run to (5665,5827)"
+    },
+    {
+      "frame": 216,
+      "c2s": "032016b916",
+      "note": "run to (5664,5817)"
+    },
+    {
+      "frame": 242,
+      "c2s": "031e16aa16",
+      "note": "run to (5662,5802)"
+    },
+    {
+      "frame": 266,
+      "c2s": "3c9b000000ffffffff",
+      "note": "select Battle Command (155)"
+    },
+    {
+      "frame": 267,
+      "c2s": "0c1e16aa16",
+      "note": "cast Battle Command"
+    },
+    {
+      "frame": 281,
+      "c2s": "3c95000000ffffffff",
+      "note": "select Battle Orders (149)"
+    },
+    {
+      "frame": 282,
+      "c2s": "0c1e16aa16",
+      "note": "cast Battle Orders"
+    },
+    {
+      "frame": 296,
+      "c2s": "3c8a000000ffffffff",
+      "note": "select Shout (138)"
+    },
+    {
+      "frame": 297,
+      "c2s": "0c1e16aa16",
+      "note": "cast Shout"
+    },
+    {
+      "frame": 311,
+      "c2s": "3c92000000ffffffff",
+      "note": "select Battle Cry (146)"
+    },
+    {
+      "frame": 312,
+      "c2s": "0c1d16a316",
+      "note": "cast Battle Cry"
+    },
+    {
+      "frame": 326,
+      "c2s": "3c89000000ffffffff",
+      "note": "select Taunt (137)"
+    },
+    {
+      "frame": 327,
+      "c2s": "0d010000000a000000",
+      "note": "cast Taunt on zombie #10"
+    },
+    {
+      "frame": 341,
+      "c2s": "3c82000000ffffffff",
+      "note": "select Howl (130)"
+    },
+    {
+      "frame": 342,
+      "c2s": "0c1d16a316",
+      "note": "cast Howl"
+    },
+    {
+      "frame": 356,
+      "c2s": "3c9a000000ffffffff",
+      "note": "select War Cry (154)"
+    },
+    {
+      "frame": 357,
+      "c2s": "0c1d16a316",
+      "note": "cast War Cry"
+    },
+    {
+      "frame": 372,
+      "c2s": "3c8c000080ffffffff",
+      "note": "select Double Throw (140)"
+    },
+    {
+      "frame": 373,
+      "c2s": "06010000000a000000",
+      "note": "Double Throw dual javelins at zombie #10"
+    },
+    {
+      "frame": 392,
+      "c2s": "3c84000000ffffffff",
+      "note": "select Leap (132)"
+    },
+    {
+      "frame": 393,
+      "c2s": "0c1e16a416",
+      "note": "Leap into zombies"
+    },
+    {
+      "frame": 422,
+      "c2s": "3c8f000000ffffffff",
+      "note": "select Leap Attack (143)"
+    },
+    {
+      "frame": 423,
+      "c2s": "0d0100000009000000",
+      "note": "Leap Attack onto zombie #9"
+    },
+    {
+      "frame": 456,
+      "c2s": "3c97000000ffffffff",
+      "note": "select Whirlwind (151)"
+    },
+    {
+      "frame": 457,
+      "c2s": "0c1c169c16",
+      "note": "Whirlwind spin across zombies"
+    },
+    {
+      "frame": 492,
+      "c2s": "3c7e000080ffffffff",
+      "note": "select Bash (126)"
+    },
+    {
+      "frame": 493,
+      "c2s": "06010000000a000000",
+      "note": "Bash zombie #10"
+    },
+    {
+      "frame": 508,
+      "c2s": "3c85000080ffffffff",
+      "note": "select Double Swing (133)"
+    },
+    {
+      "frame": 509,
+      "c2s": "06010000000a000000",
+      "note": "Double Swing zombie #10"
+    },
+    {
+      "frame": 524,
+      "c2s": "3c8b000080ffffffff",
+      "note": "select Stun (139)"
+    },
+    {
+      "frame": 525,
+      "c2s": "060100000009000000",
+      "note": "Stun zombie #9"
+    },
+    {
+      "frame": 540,
+      "c2s": "3c90000080ffffffff",
+      "note": "select Concentrate (144)"
+    },
+    {
+      "frame": 541,
+      "c2s": "060100000009000000",
+      "note": "Concentrate zombie #9"
+    },
+    {
+      "frame": 556,
+      "c2s": "3c93000080ffffffff",
+      "note": "select Frenzy (147)"
+    },
+    {
+      "frame": 557,
+      "c2s": "06010000000b000000",
+      "note": "Frenzy zombie #11"
+    },
+    {
+      "frame": 578,
+      "c2s": "3c98000080ffffffff",
+      "note": "select Berserk (152)"
+    },
+    {
+      "frame": 579,
+      "c2s": "06010000000b000000",
+      "note": "Berserk zombie #11"
+    },
+    {
+      "frame": 602,
+      "c2s": "3c83000000ffffffff",
+      "note": "select Find Potion (131)"
+    },
+    {
+      "frame": 603,
+      "c2s": "0d010000000a000000",
+      "note": "Find Potion on corpse #10"
+    },
+    {
+      "frame": 620,
+      "c2s": "3c8e000000ffffffff",
+      "note": "select Find Item (142)"
+    },
+    {
+      "frame": 621,
+      "c2s": "0d0100000009000000",
+      "note": "Find Item on corpse #9"
+    },
+    {
+      "frame": 638,
+      "c2s": "3c96000000ffffffff",
+      "note": "select Grim Ward (150)"
+    },
+    {
+      "frame": 639,
+      "c2s": "0d010000000b000000",
+      "note": "Grim Ward on corpse #11"
+    }
+  ]
+}

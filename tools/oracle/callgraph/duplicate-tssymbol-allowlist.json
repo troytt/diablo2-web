@@ -1,0 +1,5 @@
+{
+  "description": "Monotonic allowlist of manifest-bound tsSymbols currently defined in >1 file under src/d2kern-113c/**. Only decreases toward 0; adding new symbols or increasing maxCount is forbidden.",
+  "maxCount": 0,
+  "symbols": []
+}

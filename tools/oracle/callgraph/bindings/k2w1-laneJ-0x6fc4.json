@@ -1,0 +1,389 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC43320",
+    "name": "MONUMOD_ScheduleInitialAiAndEvent7_6FC43320",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "MONUMOD_ScheduleInitialAiAndEvent7_6FC43320_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC43390",
+    "name": "MONUMOD_GetHitForceDeathAndScheduleEvent7_6FC43390",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "MONUMOD_GetHitForceDeathAndScheduleEvent7_6FC43390_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC43570",
+    "name": "MONUMOD_RollSelfResurrectEvent7_6FC43570",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "MONUMOD_RollSelfResurrectEvent7_6FC43570_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC43670",
+    "name": "MONUMOD_AddRogueOwnerSecondaryDamageToMissile_6FC43670",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "MONUMOD_AddRogueOwnerSecondaryDamageToMissile_6FC43670_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; K3 golden replay diff-verified (dll\u2229ts, F2..F1700 strict 0-div) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC469F0",
+    "name": "MONUMOD_InitUMod41ScheduleEvent7_6FC469F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "MONUMOD_InitUMod41ScheduleEvent7_6FC469F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC46A30",
+    "name": "PLRMODE_IsDualWieldingClaws_6FC46A30",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "PLRMODE_IsDualWieldingClaws_6FC46A30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC46B30",
+    "name": "PLRMODE_CanCastSkillAtTargetSubtile_6FC46B30",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "PLRMODE_CanCastSkillAtTargetSubtile_6FC46B30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47030",
+    "name": "PLRMODE_SetupRetreatFromSkillTargetPath_6FC47030",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "PLRMODE_SetupRetreatFromSkillTargetPath_6FC47030_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47240",
+    "name": "SKILLS_SrvSt34_CheckSelectableCorpseTarget_6FC47240",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt34_CheckSelectableCorpseTarget_6FC47240_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC47270",
+    "name": "SKILLS_SrvSt33_CheckSelectableCorpseNoState76_6FC47270",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "SKILLS_SrvSt33_CheckSelectableCorpseNoState76_6FC47270_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC479C0",
+    "name": "PLRMODE_ExecuteMonsterMeleeSkillHit_6FC479C0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "PLRMODE_ExecuteMonsterMeleeSkillHit_6FC479C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC49BA0",
+    "name": "GAME_LeaveGameCriticalSection_6FC49BA0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "GAME_LeaveGameCriticalSection_6FC49BA0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4A220",
+    "name": "GAME_ReserveGlobalGameSlot_6FC4A220",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "GAME_ReserveGlobalGameSlot_6FC4A220_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4A2D0",
+    "name": "GAME_CommitGlobalGameSlot_6FC4A2D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "GAME_CommitGlobalGameSlot_6FC4A2D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4A700",
+    "name": "CLIENT_SelectFlag20ClientCallback_6FC4A700",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "CLIENT_SelectFlag20ClientCallback_6FC4A700_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4A9F0",
+    "name": "CLIENT_SendUnitRemoveIfInNearRoom_6FC4A9F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "CLIENT_SendUnitRemoveIfInNearRoom_6FC4A9F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4BED0",
+    "name": "CLIENT_BroadcastPlayerLeftPacket5C_6FC4BED0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "CLIENT_BroadcastPlayerLeftPacket5C_6FC4BED0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E5D0",
+    "name": "OBJECTS_CheckSpawnSpotClearMargin2_6FC4E5D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_CheckSpawnSpotClearMargin2_6FC4E5D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E660",
+    "name": "OBJECTS_CheckSpawnSpotClearMargin7_6FC4E660",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_CheckSpawnSpotClearMargin7_6FC4E660_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E730",
+    "name": "OBJECTS_InitFn26_SetAnimMode1_6FC4E730",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn26_SetAnimMode1_6FC4E730_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4E740",
+    "name": "OBJECTS_InitFn14_SetAnimMode1_6FC4E740",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn14_SetAnimMode1_6FC4E740_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4EC70",
+    "name": "OBJECTS_InitFn34_RandomSetAnimMode1_6FC4EC70",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn34_RandomSetAnimMode1_6FC4EC70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC4EF50",
+    "name": "OBJECTS_InitFn57_InitSpecialChest_6FC4EF50",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn57_InitSpecialChest_6FC4EF50_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC532F0",
+    "name": "OBJECTS_InitFn51_ScheduleEvent9IfOperatingOrOpened_6FC532F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn51_ScheduleEvent9IfOperatingOrOpened_6FC532F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53330",
+    "name": "OBJECTS_InitFn11_InitTownPortal_6FC53330",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn11_InitTownPortal_6FC53330_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53620",
+    "name": "OBJECTS_InitFn59_ActivateAndScheduleEvents7And1_6FC53620",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn59_ActivateAndScheduleEvents7And1_6FC53620_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53680",
+    "name": "OBJECTS_InitFn58_ScheduleRandomEvent8_6FC53680",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn58_ScheduleRandomEvent8_6FC53680_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC536D0",
+    "name": "OBJECTS_InitFn24_ScheduleEvent3_6FC536D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn24_ScheduleEvent3_6FC536D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC536F0",
+    "name": "OBJECTS_InitFn22_InitBrazierAndScheduleEvent0_6FC536F0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn22_InitBrazierAndScheduleEvent0_6FC536F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53740",
+    "name": "OBJECTS_InitFn10_InitRogueFireAndScheduleEvent_6FC53740",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn10_InitRogueFireAndScheduleEvent_6FC53740_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC538D0",
+    "name": "QUESTS_CheckGlobalQuestState_6FC538D0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_CheckGlobalQuestState_6FC538D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53920",
+    "name": "QUESTS_SetGlobalQuestState_6FC53920",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_SetGlobalQuestState_6FC53920_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53970",
+    "name": "QUESTS_CheckNotIntro_6FC53970",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_CheckNotIntro_6FC53970_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53A30",
+    "name": "QUESTS_ResolveDefaultStatusByte_6FC53A30",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_ResolveDefaultStatusByte_6FC53A30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53AF0",
+    "name": "QUESTS_AppendQuestTimer_6FC53AF0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_AppendQuestTimer_6FC53AF0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53C70",
+    "name": "QUESTS_DispatchUnitChainCallbacks_6FC53C70",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_DispatchUnitChainCallbacks_6FC53C70_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; Wave 22 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchD.json) verified in tests/oracle/k2/k2-disasm-verified-wave22-indD.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53D90",
+    "name": "QUESTS_GetQuestSeedPtr_6FC53D90",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_GetQuestSeedPtr_6FC53D90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53F30",
+    "name": "QUESTS_GetQuestData_6FC53F30",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_GetQuestData_6FC53F30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53F80",
+    "name": "QUESTS_AttachQuestToUnit_6FC53F80",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_AttachQuestToUnit_6FC53F80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC53FF0",
+    "name": "QUESTS_FreeUnitQuestChain_6FC53FF0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_FreeUnitQuestChain_6FC53FF0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54370",
+    "name": "OBJECTS_InitFn23_SyncQuest0FObjectAnimMode_6FC54370",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "OBJECTS_InitFn23_SyncQuest0FObjectAnimMode_6FC54370_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; 1:1 D2Game.dll disassembly & behavioral differential verification in tests/oracle/k2/k2-disasm-verified-wave8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC54510",
+    "name": "QUESTS_TriggerItemPickedUp_6FC54510",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_TriggerItemPickedUp_6FC54510_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; Wave 22 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchD.json) verified in tests/oracle/k2/k2-disasm-verified-wave22-indD.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC545A0",
+    "name": "QUESTS_TriggerItemDropped_6FC545A0",
+    "kernFile": "src/d2kern-113c/game/k2-laneJ-0x6fc4-w1-113c.ts",
+    "tsSymbol": "QUESTS_TriggerItemDropped_6FC545A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/laneJ-0x6fc4-w1.test.ts; Wave 22 1:1 PE32 indirect-call audit (vtable_or_struct_table; tools/oracle/callgraph/indirect-audit-batchD.json) verified in tests/oracle/k2/k2-disasm-verified-wave22-indD.test.ts"
+  }
+]

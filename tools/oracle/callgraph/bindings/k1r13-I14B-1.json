@@ -1,0 +1,164 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD67180",
+    "name": "DRLGROOM_SpawnOutdoorBorderPresets",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SpawnOutdoorBorderPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67760",
+    "name": "DRLGROOM_ConnectOutdoorLevelOrthNodes",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_ConnectOutdoorLevelOrthNodes113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67930",
+    "name": "DRLGROOM_SetupAct2OutdoorLinks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetupAct2OutdoorLinks113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67990",
+    "name": "DRLGROOM_SetupAct1OutdoorLinks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetupAct1OutdoorLinks113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67A00",
+    "name": "DRLGROOM_SetupAct3OutdoorLinks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetupAct3OutdoorLinks113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67AA0",
+    "name": "DRLGROOM_SetupAct4OutdoorLinks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetupAct4OutdoorLinks113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67AE0",
+    "name": "DRLGROOM_SetupAct5OutdoorLinks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-room.ts",
+    "tsSymbol": "DRLGROOM_SetupAct5OutdoorLinks113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67D00",
+    "name": "DRLGOUTPLACE_ExpandMazeLinkPath",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLGOUTPLACE_ExpandMazeLinkPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD67EB0",
+    "name": "DRLGOUTPLACE_BuildOutdoorMazeLinkPath",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-ver.ts",
+    "tsSymbol": "DRLGOUTPLACE_BuildOutdoorMazeLinkPath113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD69B60",
+    "name": "DRLG_FindPortalTargetRoomEx",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_FindPortalTargetRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD69FA0",
+    "name": "DRLG_FindWaypointRoomExAndPos",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_FindWaypointRoomExAndPos113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A080",
+    "name": "DRLG_EnsureRoomExActiveAndLoaded",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_EnsureRoomExActiveAndLoaded113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A0D0",
+    "name": "DRLG_FindWarpTargetRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_FindWarpTargetRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD6A130",
+    "name": "DRLG_FindLevelSpawnRoom",
+    "kernFile": "src/d2kern-113c/common/dungeon.ts",
+    "tsSymbol": "DRLG_FindLevelSpawnRoom113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71300",
+    "name": "INVENTORY_UpdateItemBodyLocGfx",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_UpdateItemBodyLocGfx113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD71420",
+    "name": "INVENTORY_UpdateEquippedGfxAndColor",
+    "kernFile": "src/d2kern-113c/common/inventory.ts",
+    "tsSymbol": "INVENTORY_UpdateEquippedGfxAndColor113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7C630",
+    "name": "ITEMMODS_ToggleSetItemStateList",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMMODS_ToggleSetItemStateList113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7C910",
+    "name": "ITEMMODS_UpdateSetItemEquipmentState",
+    "kernFile": "src/d2kern-113c/common/statlist.ts",
+    "tsSymbol": "ITEMMODS_UpdateSetItemEquipmentState113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i14b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r13-laneB-it14-emitter.c) replayed in tests/oracle/k1/laneB-I14B-1.test.ts"
+  }
+]

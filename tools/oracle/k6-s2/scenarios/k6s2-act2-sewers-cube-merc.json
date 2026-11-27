@@ -1,0 +1,605 @@
+{
+  "name": "k6s2-act2-sewers-cube-merc",
+  "description": "Act 2 Lut Gholein + Horadric Cube + Act 2 Desert Mercenary + Sewers L2 scenario: exercises SwapContainer (0x1F), SwapBeltItem (0x25), 3 real Horadric Cube recipes (3x Chipped Amethyst -> Flawed Amethyst, 3x Rejuv -> Full Rejuv, 3x El Rune -> Eld Rune), Lysander/Fara (Trade/Buy socketed weapon + 0x28 Socket Gem + Repair)/Deckard Cain (0x34)/Atma/Elzix (Gamble)/Greiz (0x36 Hire Act 2 Desert Merc + 0x61 Equip Helm & Armor + 0x26 Shift-Heal), Waypoint (0x49) to Sewers Level 2 (area 48) with Desert Merc, and Sewers combat.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6-s2/saves/k6s2-act2-sewers-cube-merc.d2s",
+  "difficulty": 0,
+  "frames": 1290,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetGold": [
+    2,
+    350000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "cap",
+      1,
+      6,
+      40
+    ],
+    [
+      2,
+      "qui",
+      3,
+      6,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 4,
+      "c2s": "40",
+      "note": "0x40 quest log in Act 2"
+    },
+    {
+      "frame": 5,
+      "c2s": "031d144514",
+      "note": "route to Lut Gholein square 1"
+    },
+    {
+      "frame": 25,
+      "c2s": "0324143714",
+      "note": "route to Lut Gholein square 2"
+    },
+    {
+      "frame": 45,
+      "c2s": "0325142914",
+      "note": "route to Lut Gholein square 3"
+    },
+    {
+      "frame": 70,
+      "c2s": "0325142d14",
+      "note": "route to Lut Gholein square 4"
+    },
+    {
+      "frame": 92,
+      "c2s": "0325141f14",
+      "note": "route to Lut Gholein square 5"
+    },
+    {
+      "frame": 114,
+      "c2s": "0324141114",
+      "note": "route to Lut Gholein square 6"
+    },
+    {
+      "frame": 136,
+      "c2s": "0323140314",
+      "note": "route to Lut Gholein square 7"
+    },
+    {
+      "frame": 158,
+      "c2s": "0322140014",
+      "note": "route to Lut Gholein square 8"
+    },
+    {
+      "frame": 180,
+      "c2s": "031414fe13",
+      "note": "route to Lut Gholein square 9"
+    },
+    {
+      "frame": 202,
+      "c2s": "030614fc13",
+      "note": "route to Lut Gholein square 10"
+    },
+    {
+      "frame": 224,
+      "c2s": "03f813ee13",
+      "note": "arrive in Lut Gholein Town Square"
+    },
+    {
+      "frame": 248,
+      "c2s": "1905000000",
+      "note": "pick tsc (#5) to cursor"
+    },
+    {
+      "frame": 250,
+      "c2s": "1f05000000060000000900000002000000",
+      "note": "0x1F swap cursor tsc (#5) with inventory isc (#6)"
+    },
+    {
+      "frame": 252,
+      "c2s": "1806000000090000000300000000000000",
+      "note": "place isc (#6) into inventory"
+    },
+    {
+      "frame": 254,
+      "c2s": "190d000000",
+      "note": "pick rvs (#13) to cursor"
+    },
+    {
+      "frame": 256,
+      "c2s": "250d00000001000000",
+      "note": "0x25 swap cursor rvs (#13) with belt hp1 (#1)"
+    },
+    {
+      "frame": 258,
+      "c2s": "25010000000d000000",
+      "note": "0x25 swap belt rvs (#13) back with hp1 (#1)"
+    },
+    {
+      "frame": 260,
+      "c2s": "180d000000050000000000000000000000",
+      "note": "place rvs (#13) back in inventory"
+    },
+    {
+      "frame": 264,
+      "c2s": "2009000000f8130000ee130000",
+      "note": "0x20 open Horadric Cube (#9)"
+    },
+    {
+      "frame": 266,
+      "c2s": "190a000000",
+      "note": "pick gcv #10"
+    },
+    {
+      "frame": 268,
+      "c2s": "2a0a00000009000000",
+      "note": "0x2A put gcv #10 in Cube"
+    },
+    {
+      "frame": 270,
+      "c2s": "190b000000",
+      "note": "pick gcv #11"
+    },
+    {
+      "frame": 272,
+      "c2s": "2a0b00000009000000",
+      "note": "0x2A put gcv #11 in Cube"
+    },
+    {
+      "frame": 274,
+      "c2s": "190c000000",
+      "note": "pick gcv #12"
+    },
+    {
+      "frame": 276,
+      "c2s": "2a0c00000009000000",
+      "note": "0x2A put gcv #12 in Cube"
+    },
+    {
+      "frame": 278,
+      "c2s": "4f180000000000",
+      "note": "0x4F Transmute 3x gcv -> Flawed Amethyst (#21)!"
+    },
+    {
+      "frame": 282,
+      "c2s": "1915000000",
+      "note": "remove Flawed Amethyst (#21) from Cube"
+    },
+    {
+      "frame": 284,
+      "c2s": "1815000000020000000000000000000000",
+      "note": "place Flawed Amethyst (#21) into inventory"
+    },
+    {
+      "frame": 286,
+      "c2s": "190d000000",
+      "note": "pick rvs #13"
+    },
+    {
+      "frame": 288,
+      "c2s": "2a0d00000009000000",
+      "note": "put rvs #13 in Cube"
+    },
+    {
+      "frame": 290,
+      "c2s": "190e000000",
+      "note": "pick rvs #14"
+    },
+    {
+      "frame": 292,
+      "c2s": "2a0e00000009000000",
+      "note": "put rvs #14 in Cube"
+    },
+    {
+      "frame": 294,
+      "c2s": "190f000000",
+      "note": "pick rvs #15"
+    },
+    {
+      "frame": 296,
+      "c2s": "2a0f00000009000000",
+      "note": "put rvs #15 in Cube"
+    },
+    {
+      "frame": 298,
+      "c2s": "4f180000000000",
+      "note": "0x4F Transmute 3x rvs -> Full Rejuv (#22)!"
+    },
+    {
+      "frame": 302,
+      "c2s": "1916000000",
+      "note": "remove Full Rejuv (#22) from Cube"
+    },
+    {
+      "frame": 304,
+      "c2s": "1816000000030000000000000000000000",
+      "note": "place Full Rejuv (#22) into inventory"
+    },
+    {
+      "frame": 306,
+      "c2s": "1910000000",
+      "note": "pick r01 #16"
+    },
+    {
+      "frame": 308,
+      "c2s": "2a1000000009000000",
+      "note": "put r01 #16 in Cube"
+    },
+    {
+      "frame": 310,
+      "c2s": "1911000000",
+      "note": "pick r01 #17"
+    },
+    {
+      "frame": 312,
+      "c2s": "2a1100000009000000",
+      "note": "put r01 #17 in Cube"
+    },
+    {
+      "frame": 314,
+      "c2s": "1912000000",
+      "note": "pick r01 #18"
+    },
+    {
+      "frame": 316,
+      "c2s": "2a1200000009000000",
+      "note": "put r01 #18 in Cube"
+    },
+    {
+      "frame": 318,
+      "c2s": "4f180000000000",
+      "note": "0x4F Transmute 3x El Rune -> Eld Rune (#23)!"
+    },
+    {
+      "frame": 322,
+      "c2s": "1917000000",
+      "note": "remove Eld Rune (#23) from Cube"
+    },
+    {
+      "frame": 324,
+      "c2s": "1817000000040000000000000000000000",
+      "note": "place Eld Rune (#23) into inventory"
+    },
+    {
+      "frame": 326,
+      "c2s": "4f170000000000",
+      "note": "0x4F Close Cube"
+    },
+    {
+      "frame": 332,
+      "c2s": "13010000000b000000",
+      "note": "0x13 Interact Lysander (#11)"
+    },
+    {
+      "frame": 346,
+      "c2s": "2f010000000b000000",
+      "note": "0x2F NpcInit Lysander"
+    },
+    {
+      "frame": 350,
+      "c2s": "38010000000b00000000000000",
+      "note": "0x38 Open Lysander Trade"
+    },
+    {
+      "frame": 356,
+      "c2s": "30010000000b000000",
+      "note": "0x30 NpcCancel Lysander"
+    },
+    {
+      "frame": 362,
+      "c2s": "03fe13d813",
+      "note": "step right next to Fara (#10)"
+    },
+    {
+      "frame": 396,
+      "c2s": "13010000000a000000",
+      "note": "0x13 Interact Fara (#10)"
+    },
+    {
+      "frame": 408,
+      "c2s": "2f010000000a000000",
+      "note": "0x2F NpcInit Fara"
+    },
+    {
+      "frame": 412,
+      "c2s": "38010000000a00000000000000",
+      "note": "0x38 Open Fara Trade"
+    },
+    {
+      "frame": 416,
+      "c2s": "320a000000280000000000000000000000",
+      "note": "0x32 Buy socketed weapon (#40 -> #114) from Fara"
+    },
+    {
+      "frame": 420,
+      "c2s": "350a000000000000000000000000000080",
+      "note": "0x35 RepairAll at Fara"
+    },
+    {
+      "frame": 424,
+      "c2s": "30010000000a000000",
+      "note": "0x30 NpcCancel Fara"
+    },
+    {
+      "frame": 426,
+      "c2s": "1915000000",
+      "note": "0x19 pick Cube-transmuted Flawed Amethyst (#21) to cursor"
+    },
+    {
+      "frame": 428,
+      "c2s": "281500000072000000",
+      "note": "0x28 Socket Flawed Amethyst (#21) into Fara weapon (#114)!"
+    },
+    {
+      "frame": 432,
+      "c2s": "030514e313",
+      "note": "step right next to Deckard Cain (#9)"
+    },
+    {
+      "frame": 456,
+      "c2s": "130100000009000000",
+      "note": "0x13 Interact Deckard Cain (#9)"
+    },
+    {
+      "frame": 468,
+      "c2s": "2f0100000009000000",
+      "note": "0x2F NpcInit Deckard Cain"
+    },
+    {
+      "frame": 472,
+      "c2s": "3409000000",
+      "note": "0x34 CainIdentifyItems"
+    },
+    {
+      "frame": 476,
+      "c2s": "300100000009000000",
+      "note": "0x30 NpcCancel Cain"
+    },
+    {
+      "frame": 482,
+      "c2s": "03ff13d413",
+      "note": "route north to Atma 1"
+    },
+    {
+      "frame": 506,
+      "c2s": "030514c613",
+      "note": "route north to Atma 2"
+    },
+    {
+      "frame": 530,
+      "c2s": "030e14bd13",
+      "note": "arrive right next to Atma (#15)"
+    },
+    {
+      "frame": 556,
+      "c2s": "13010000000f000000",
+      "note": "0x13 Interact Atma (#15)"
+    },
+    {
+      "frame": 568,
+      "c2s": "2f010000000f000000",
+      "note": "0x2F NpcInit Atma"
+    },
+    {
+      "frame": 572,
+      "c2s": "30010000000f000000",
+      "note": "0x30 NpcCancel Atma"
+    },
+    {
+      "frame": 578,
+      "c2s": "030814d313",
+      "note": "retrace south-west from Atma 1"
+    },
+    {
+      "frame": 604,
+      "c2s": "030014de13",
+      "note": "retrace south-west from Atma 2"
+    },
+    {
+      "frame": 630,
+      "c2s": "03f813ea13",
+      "note": "step south to Lut Gholein plaza avenue"
+    },
+    {
+      "frame": 656,
+      "c2s": "03ea13ea13",
+      "note": "route west along south avenue 1"
+    },
+    {
+      "frame": 682,
+      "c2s": "03df13e413",
+      "note": "route west along south avenue 2"
+    },
+    {
+      "frame": 708,
+      "c2s": "03d113d913",
+      "note": "arrive at Lut Gholein WP #26"
+    },
+    {
+      "frame": 736,
+      "c2s": "03c313e113",
+      "note": "route to Elzix 1"
+    },
+    {
+      "frame": 764,
+      "c2s": "03b513e013",
+      "note": "route to Elzix 2"
+    },
+    {
+      "frame": 792,
+      "c2s": "03a513ec13",
+      "note": "arrive right next to Elzix (#28)"
+    },
+    {
+      "frame": 836,
+      "c2s": "13010000001c000000",
+      "note": "0x13 Interact Elzix (#28)"
+    },
+    {
+      "frame": 850,
+      "c2s": "2f010000001c000000",
+      "note": "0x2F NpcInit Elzix"
+    },
+    {
+      "frame": 854,
+      "c2s": "38020000001c00000000000000",
+      "note": "0x38 Open Elzix Gamble"
+    },
+    {
+      "frame": 862,
+      "c2s": "30010000001c000000",
+      "note": "0x30 NpcCancel Elzix"
+    },
+    {
+      "frame": 868,
+      "c2s": "03b513e013",
+      "note": "step east to west lane"
+    },
+    {
+      "frame": 896,
+      "c2s": "03b813d013",
+      "note": "route north around awning 1"
+    },
+    {
+      "frame": 924,
+      "c2s": "03bc13c213",
+      "note": "route north around awning 2"
+    },
+    {
+      "frame": 952,
+      "c2s": "03b213ba13",
+      "note": "turn west into Greiz courtyard"
+    },
+    {
+      "frame": 980,
+      "c2s": "03ab13b813",
+      "note": "arrive right next to Greiz (#29 at 5033, 5047)"
+    },
+    {
+      "frame": 1012,
+      "c2s": "13010000001d000000",
+      "note": "0x13 Interact Greiz (#29)"
+    },
+    {
+      "frame": 1026,
+      "c2s": "2f010000001d000000",
+      "note": "0x2F NpcInit Greiz"
+    },
+    {
+      "frame": 1032,
+      "c2s": "38030000001d00000000000000",
+      "note": "0x38 Open Greiz Act 2 Desert Merc Hire list"
+    },
+    {
+      "frame": 1040,
+      "c2s": "361d000000fb030000",
+      "note": "0x36 Hire Act 2 Desert Mercenary (0x03FB)!"
+    },
+    {
+      "frame": 1048,
+      "c2s": "30010000001d000000",
+      "note": "0x30 NpcCancel Greiz"
+    },
+    {
+      "frame": 1054,
+      "c2s": "1c0100",
+      "note": "0x1C unequip Rare Cap (#19) to cursor"
+    },
+    {
+      "frame": 1058,
+      "c2s": "610100",
+      "note": "0x61 Equip Rare Cap onto Act 2 Desert Merc helm!"
+    },
+    {
+      "frame": 1062,
+      "c2s": "1c0300",
+      "note": "0x1C unequip Rare Quilted Armor (#20) to cursor"
+    },
+    {
+      "frame": 1066,
+      "c2s": "610300",
+      "note": "0x61 Equip Rare Armor onto Act 2 Desert Merc torso!"
+    },
+    {
+      "frame": 1070,
+      "c2s": "26010000000100000000000000",
+      "note": "0x26 Shift+Belt heal Act 2 Desert Merc!"
+    },
+    {
+      "frame": 1078,
+      "c2s": "03b613bd13",
+      "note": "retrace from Greiz 1"
+    },
+    {
+      "frame": 1106,
+      "c2s": "03c213ca13",
+      "note": "retrace from Greiz 2"
+    },
+    {
+      "frame": 1134,
+      "c2s": "03d013da13",
+      "note": "arrive at Lut Gholein WP #26"
+    },
+    {
+      "frame": 1166,
+      "c2s": "13020000001a000000",
+      "note": "0x13 Interact Lut Gholein WP #26"
+    },
+    {
+      "frame": 1182,
+      "c2s": "491a00000030000000",
+      "note": "0x49 Waypoint -> Sewers Level 2 (area 48)"
+    },
+    {
+      "frame": 1196,
+      "c2s": "3c71000000ffffffff",
+      "note": "activate Concentration aura in Sewers L2"
+    },
+    {
+      "frame": 1200,
+      "c2s": "03681dfa19",
+      "note": "advance into Sewers L2 with Act 2 Merc"
+    },
+    {
+      "frame": 1226,
+      "c2s": "3c6a000080ffffffff",
+      "note": "select Zeal (106)"
+    },
+    {
+      "frame": 1228,
+      "c2s": "056c1dfa19",
+      "note": "Zeal swing in Sewers L2 with Act 2 Merc"
+    },
+    {
+      "frame": 1248,
+      "c2s": "056c1dfa19",
+      "note": "Zeal swing 2 in Sewers L2"
+    }
+  ]
+}

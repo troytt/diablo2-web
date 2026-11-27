@@ -1,0 +1,501 @@
+{
+  "version": "1.13c",
+  "batch": "wave20-indB",
+  "module": "D2Game",
+  "imageBase": "0x6FC20000",
+  "summary": {
+    "totalFunctions": 11,
+    "totalIndirectSites": 13,
+    "functionsByCategory": {
+      "static_table": 8,
+      "caller_callback": 2,
+      "vtable_or_struct_table": 1
+    },
+    "sitesByCategory": {
+      "static_table": 10,
+      "caller_callback": 2,
+      "vtable_or_struct_table": 1
+    }
+  },
+  "functions": [
+    {
+      "va": "0x6FC3BDF0",
+      "module": "D2Game",
+      "name": "AI_HandleSpecialQuestNpcCmd3_6FC3BDF0",
+      "tsSymbol": "AI_HandleSpecialQuestNpcCmd3_6FC3BDF0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w5b1-113c.ts",
+      "size": 360,
+      "indirectSites": [
+        {
+          "iva": "0x6FC3BEF9",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "static_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "tableStride": null,
+          "tableCount": 2,
+          "targetVas": [
+            "0x6FC76A00",
+            "0x6FC80400"
+          ],
+          "proof": "Inline 2-way code-immediate dispatch on pUnit->dwClassId == 0x20F (0x6FC3BED6 cmp dword ptr [esi+4], 0x20f): loads relocated immediate 0x6FC80400 (ACT1Q4_RecordUnitCoordsOnceAt9C_6FC80400) at 0x6FC3BEDD or 0x6FC76A00 (ACT5Q3_RecordAnyaPosition_6FC76A00) at 0x6FC3BEE9 into eax, then calls eax at 0x6FC3BEF9."
+        },
+        {
+          "iva": "0x6FC3BF05",
+          "opcodeHex": "ffd7",
+          "mnemonic": "call",
+          "operand": "edi",
+          "category": "static_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "tableStride": null,
+          "tableCount": 2,
+          "targetVas": [
+            "0x6FC7CC30",
+            "0x6FC863A0"
+          ],
+          "proof": "Inline 2-way code-immediate dispatch on pUnit->dwClassId == 0x20F (0x6FC3BED6): loads relocated immediate 0x6FC863A0 (ACT1Q4_SpawnCainCageAndPortalInTristram_6FC863A0) at 0x6FC3BEE2 or 0x6FC7CC30 (ACT5Q3_TriggerFrozenAnyaSpawn_6FC7CC30) at 0x6FC3BEEE into edi, then calls edi at 0x6FC3BF05 when the record callback returned 0."
+        }
+      ],
+      "bugsFixed": [
+        "Invoke AI_Stall113c(m, game, esi, 1) directly instead of fakeWorld invokeAiStall113c so mode 12 (DEAD) set by AI_StartModeAtCoordsKeepSteps_6FD121E0_113c when recorded==0 is not clobbered back to mode 1."
+      ]
+    },
+    {
+      "va": "0x6FC448A0",
+      "module": "D2Game",
+      "name": "MONUMOD_InitBossAndMinionPackUMods_6FC448A0",
+      "tsSymbol": "MONUMOD_InitBossAndMinionPackUMods_6FC448A0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w4b1-113c.ts",
+      "size": 167,
+      "indirectSites": [
+        {
+          "iva": "0x6FC448D4",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "static_table",
+          "tableBase": "0x6FD2E550",
+          "tableEnd": "0x6FD2E5FC",
+          "tableStride": 4,
+          "tableCount": 43,
+          "targetVas": [
+            "0x6FC41BE0",
+            "0x6FC41E80",
+            "0x6FC421D0",
+            "0x6FC42320",
+            "0x6FC42490",
+            "0x6FC42600",
+            "0x6FC42740",
+            "0x6FC42880",
+            "0x6FC42BC0",
+            "0x6FC42D00",
+            "0x6FC42DA0",
+            "0x6FC42FA0",
+            "0x6FC43020",
+            "0x6FC437C0",
+            "0x6FC43810",
+            "0x6FC43850",
+            "0x6FC441B0",
+            "0x6FC44CD0",
+            "0x6FC469F0"
+          ],
+          "proof": "Loads eax = dword ptr [esi*4 + 0x6FD2E550] at 0x6FC448C3 from the 43-entry .data UMod init table (0x6FD2E550..0x6FD2E5FC, terminated by 0xDEADDEAD sentinel at 0x6FD2E5FC) while looping esi over .rdata base UMod IDs [0x6FD1CE7C..0x6FD1CE8C] = [1, 2, 3, 4] (reaching 0x6FC43020, 0x6FC42FA0, 0x6FC41E80; slot 3 is NULL)."
+        },
+        {
+          "iva": "0x6FC4492A",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "static_table",
+          "tableBase": "0x6FD2E550",
+          "tableEnd": "0x6FD2E5FC",
+          "tableStride": 4,
+          "tableCount": 43,
+          "targetVas": [
+            "0x6FC41BE0",
+            "0x6FC41E80",
+            "0x6FC421D0",
+            "0x6FC42320",
+            "0x6FC42490",
+            "0x6FC42600",
+            "0x6FC42740",
+            "0x6FC42880",
+            "0x6FC42BC0",
+            "0x6FC42D00",
+            "0x6FC42DA0",
+            "0x6FC42FA0",
+            "0x6FC43020",
+            "0x6FC437C0",
+            "0x6FC43810",
+            "0x6FC43850",
+            "0x6FC441B0",
+            "0x6FC44CD0",
+            "0x6FC469F0"
+          ],
+          "proof": "Loads eax = dword ptr [esi*4 + 0x6FD2E550] at 0x6FC44919 from the 43-entry .data UMod init table (0x6FD2E550..0x6FD2E5FC, 19 unique non-NULL handlers) while looping esi = pBoss->pMonsterData->nMonUMod[0..8] (+0x1C) until zero byte or index 9."
+        }
+      ],
+      "bugsFixed": [
+        "Dispatch all 19 UMod init handlers in 0x6FD2E550..0x6FD2E5FC (adding 9 previously missing handlers: 0x6FC43020, 0x6FC42FA0, 0x6FC41E80, 0x6FC42BC0, 0x6FC42880, 0x6FC441B0, 0x6FC44CD0, 0x6FC42D00, 0x6FC469F0) and skip NULL slots without falling through to MONUMOD_ApplyToMinionCallback113c on the boss.",
+        "Pass full 19-handler onMonUMod hook to MONUMOD_ApplyToMinionCallback113c inside both AIGENERAL_ForEachPackMember_6FC41490_113c minion loops so pack minions also receive all UMod handlers.",
+        "Accept and forward optional nMinMinions/nMaxMinions stack arguments (0x6FC448A7..0x6FC448B4) to MONUMOD_SpawnBossMinionPack_6FC445A0_113c."
+      ]
+    },
+    {
+      "va": "0x6FC89E50",
+      "module": "D2Game",
+      "name": "OBJ_RollAndDispatchObjectEffectTable_6FC89E50",
+      "tsSymbol": "OBJ_RollAndDispatchObjectEffectTable_6FC89E50_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w3b7-113c.ts",
+      "size": 142,
+      "indirectSites": [
+        {
+          "iva": "0x6FC89ECE",
+          "opcodeHex": "ff96507dd26f",
+          "mnemonic": "call",
+          "operand": "dword ptr [esi + 0x6fd27d50]",
+          "category": "static_table",
+          "tableBase": "0x6FD27D50",
+          "tableEnd": "0x6FD27E4C",
+          "tableStride": 12,
+          "tableCount": 21,
+          "targetVas": [
+            "0x6FC89650",
+            "0x6FC89670",
+            "0x6FC896B0",
+            "0x6FC896D0",
+            "0x6FC896F0",
+            "0x6FC89710",
+            "0x6FC89730"
+          ],
+          "proof": "Bounds-checks nIndex (cl) < dword ptr [0x6FD27E4C] (= 0x15 = 21) at 0x6FC89E58, computes esi = nIndex * 12, rolls pObject->tSeed % 100 < [esi + 0x6FD27D54], validates !IsBadCodePtr([esi + 0x6FD27D50]), and calls [esi + 0x6FD27D50] across the 21-entry 12-byte .data table 0x6FD27D50..0x6FD27E4C (7 unique handlers)."
+        }
+      ],
+      "bugsFixed": [
+        "Dispatch all 7 static object effect handlers in 0x6FD27D50..0x6FD27E4C when onDispatchEffect is omitted instead of returning dwArg as a stand-in."
+      ]
+    },
+    {
+      "va": "0x6FC8A330",
+      "module": "D2Game",
+      "name": "OBJ_ValidateAndDispatchOperateFn_6FC8A330",
+      "tsSymbol": "OBJ_ValidateAndDispatchOperateFn_6FC8A330_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w3b7-113c.ts",
+      "size": 259,
+      "indirectSites": [
+        {
+          "iva": "0x6FC8A400",
+          "opcodeHex": "ff1495b87bd26f",
+          "mnemonic": "call",
+          "operand": "dword ptr [edx*4 + 0x6fd27bb8]",
+          "category": "static_table",
+          "tableBase": "0x6FD27BB8",
+          "tableEnd": "0x6FD27D4C",
+          "tableStride": 4,
+          "tableCount": 101,
+          "targetVas": [
+            "0x6FC78DA0",
+            "0x6FC79A60",
+            "0x6FC79AB0",
+            "0x6FC79B00",
+            "0x6FC7CD50",
+            "0x6FC7D0A0",
+            "0x6FC7D690",
+            "0x6FC7DF70",
+            "0x6FC7E2A0",
+            "0x6FC7FD00",
+            "0x6FC85B40",
+            "0x6FC85D40",
+            "0x6FC864F0",
+            "0x6FC88D70",
+            "0x6FC88FC0",
+            "0x6FC89A80",
+            "0x6FC89AD0",
+            "0x6FC8A7A0",
+            "0x6FC8A9D0",
+            "0x6FC8B280",
+            "0x6FC8B2E0",
+            "0x6FC8B340",
+            "0x6FC8BB60",
+            "0x6FC8BCB0",
+            "0x6FC8BE40",
+            "0x6FC8CD40",
+            "0x6FC8CE10",
+            "0x6FC8CEE0",
+            "0x6FC8CF90",
+            "0x6FC8D0F0",
+            "0x6FC8D620",
+            "0x6FC8D740",
+            "0x6FC8D7B0",
+            "0x6FC8D8F0",
+            "0x6FC8D960",
+            "0x6FC8DA00",
+            "0x6FC8DE00",
+            "0x6FC8DEC0",
+            "0x6FC8DFC0",
+            "0x6FC8E0E0",
+            "0x6FC8EB40",
+            "0x6FC8EC20",
+            "0x6FC8ECD0",
+            "0x6FC8EDB0",
+            "0x6FC8EF40",
+            "0x6FC8F040",
+            "0x6FC8F4F0",
+            "0x6FC91290",
+            "0x6FCDB550",
+            "0x6FCDB8D0",
+            "0x6FCDBF30",
+            "0x6FCDC4A0",
+            "0x6FCDC510",
+            "0x6FCDC580",
+            "0x6FCE6240",
+            "0x6FCE76B0",
+            "0x6FCE9A80",
+            "0x6FCEA050",
+            "0x6FCEA170",
+            "0x6FCEA290",
+            "0x6FD094C0",
+            "0x6FD095E0",
+            "0x6FD09C80",
+            "0x6FD09F60",
+            "0x6FD0A140",
+            "0x6FD0A390",
+            "0x6FD0A4C0",
+            "0x6FD0A5F0"
+          ],
+          "proof": "Asserts ObjectsTxt.bOperateFn (+0x1B3) < 0x65 (101) at 0x6FC8A3B0, checks non-NULL entry at [edx*4 + 0x6FD27BB8], builds D2ObjectOperateArgsStrc on stack, re-reads bOperateFn at 0x6FC8A3F5, and calls [edx*4 + 0x6FD27BB8] across the 101-entry .data table 0x6FD27BB8..0x6FD27D4C (68 unique non-NULL operate handlers)."
+        }
+      ],
+      "bugsFixed": [
+        "Dispatch all 68 static Object OperateFn handlers in 0x6FD27BB8..0x6FD27D4C when onDispatchOperate is omitted instead of returning the raw pfnOperate VA.",
+        "Re-read ObjectsTxt.bOperateFn (+0x1B3) before dispatch after UNITS_GetRoom per 0x6FC8A3F5."
+      ]
+    },
+    {
+      "va": "0x6FC8DA00",
+      "module": "D2Game",
+      "name": "OBJ_OperateShrine_6FC8DA00",
+      "tsSymbol": "OBJ_OperateShrine_6FC8DA00_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w3b7-113c.ts",
+      "size": 482,
+      "indirectSites": [
+        {
+          "iva": "0x6FC8DB4E",
+          "opcodeHex": "ff14adf8a5d16f",
+          "mnemonic": "call",
+          "operand": "dword ptr [ebp*4 + 0x6fd1a5f8]",
+          "category": "static_table",
+          "tableBase": "0x6FD1A5F8",
+          "tableEnd": "0x6FD1A718",
+          "tableStride": 12,
+          "tableCount": 24,
+          "targetVas": [
+            "0x6FC89770",
+            "0x6FC897A0",
+            "0x6FC89800",
+            "0x6FC89860",
+            "0x6FC898A0",
+            "0x6FC89C00",
+            "0x6FC8AB60",
+            "0x6FC8ABB0",
+            "0x6FC8AC30",
+            "0x6FC8ACE0",
+            "0x6FC8B430",
+            "0x6FC8B8A0",
+            "0x6FC8B9B0",
+            "0x6FC8C200",
+            "0x6FC8C580",
+            "0x6FC8C900"
+          ],
+          "proof": "Bounds-checks pShrineTxt->nCode < dword ptr [0x6FD27D4C] (= 0x18 = 24) at 0x6FC8DB0A, indexes ebp = nCode * 3 into 24-entry 12-byte .rdata table 0x6FD1A5F8..0x6FD1A718 (shrinesEffectDispatchTable in dispatch-tables-113c.json; 16 unique non-NULL handlers, falling back to 0x6FC89C00 when out of range or NULL), validates !IsBadCodePtr, and calls [ebp*4 + 0x6FD1A5F8] at 0x6FC8DB4E."
+        }
+      ],
+      "bugsFixed": [
+        "Fix shrine hover message format from fabricated hex '0x%x' to exact .rdata 0x6FD1BDB4 '%d' decimal string (0x6FC8DA8A).",
+        "Remove fabricated nMaxCode==0 -> 23 fallback at 0x6FC8DB0A so table bound faithfully uses signed nCode < [0x6FD27D4C].",
+        "Dispatch all 16 unique shrine effect handlers in 0x6FD1A5F8..0x6FD1A718 when onShrineEffect is omitted instead of silently no-oping, and check IAT IsBadCodePtr slot 0x6FD18D14."
+      ]
+    },
+    {
+      "va": "0x6FC92220",
+      "module": "D2Game",
+      "name": "D2GAME_Sub_6FC92220",
+      "tsSymbol": "D2Game_6FC92220_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w13b1-113c.ts",
+      "size": 3451,
+      "indirectSites": [
+        {
+          "iva": "0x6FC92437",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "static_table",
+          "tableBase": "0x6FD1A5E8",
+          "tableEnd": "0x6FD1A5F8",
+          "tableStride": 4,
+          "tableCount": 4,
+          "targetVas": [
+            "0x6FC90170",
+            "0x6FC90180",
+            "0x6FC92210"
+          ],
+          "proof": "Checks 0 < pOutDef->bOutputType (+0x08) < 4 at 0x6FC9240C..0x6FC92419, loads eax = [ecx*4 + 0x6FD1A5E8] from 4-entry .rdata table 0x6FD1A5E8..0x6FD1A5F8 ([0]=NULL, [1]=0x6FC92210 CUBE_Op15_SpawnSecretCowLevelPortal, [2]=0x6FC90180, [3]=0x6FC90170), calls eax(pGame, pPlayer) at 0x6FC92437, and stores return value in bHasOutput ([esp+0x38])."
+        }
+      ],
+      "bugsFixed": [
+        "Actually invoke 0x6FD1A5E8[nQuality] (0x6FC92210 Cow Portal / 0x6FC90180 / 0x6FC90170) and store return value in bHasOutput instead of hardcoding bHasOutput=0.",
+        "Set wParam = (fileIdx + 1) & 0xFFFF during (wFlags & 0x40) unique/set item upgrade recipes per 0x6FC9262D..0x6FC92631.",
+        "Use unsigned 32-bit modulo ((stepSeed64At113c(...) >>> 0) % 100) for cube property chance roll per 0x6FC928F7..0x6FC92908.",
+        "Fix inverted ITEMS_SetOrClearCommandFlags113c (D2Common.#10977, +0x18) vs ITEMS_SetItemFlag113c (D2Common.#10892, +0x14) at all 7 flag-write sites (0x6FC92805, 0x6FC92A76, 0x6FC92C7E/EC2, 0x6FC92C93/ED7, 0x6FC92CB9/EFD, 0x6FC92D0B/F5A)."
+      ],
+      "notes": "Intra-function switch jump table at 0x6FC92A4B (jmp dword ptr [eax*4 + 0x6fc92f9c], 6 entries for item qualities 4..9 -> 0x6FC92A52 / 0x6FC92A5E) is already resolved by extract-callgraph.py jt_site_targets."
+    },
+    {
+      "va": "0x6FC96A50",
+      "module": "D2Game",
+      "name": "MONSTER_StartMode8CastA_6FC96A50",
+      "tsSymbol": "MONSTER_StartMode8CastA_6FC96A50_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w3b7-113c.ts",
+      "size": 205,
+      "indirectSites": [
+        {
+          "iva": "0x6FC96B14",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "static_table",
+          "tableBase": "0x6FD1BC1C",
+          "tableEnd": "0x6FD1BC20",
+          "tableStride": 4,
+          "tableCount": 1,
+          "targetVas": [
+            "0x6FCBD3B0"
+          ],
+          "proof": "Loads eax = dword ptr [0x6FD1BC1C] at 0x6FC96B03 from read-only .rdata slot [2] of monsterEventDispatchTable (0x6FD1BC14), which holds relocated constant 0x6FCBD3B0 (AI_RunMonsterAI), and calls eax(pGame, pMonster, 0, 0) at 0x6FC96B14 when !STATES_CheckState(pMonster, 1) || SUNIT_IsDeadOrDying(pMonster)."
+        }
+      ],
+      "bugsFixed": [
+        "Read [0x6FD1BC1C] and dispatch AI_RunMonsterAI113c(m, game, mon, 0, 0) when [0x6FD1BC1C] == 0x6FCBD3B0 and onPostModeCallback is omitted."
+      ]
+    },
+    {
+      "va": "0x6FC96B20",
+      "module": "D2Game",
+      "name": "MONSTER_StartMode8CastB_6FC96B20",
+      "tsSymbol": "MONSTER_StartMode8CastB_6FC96B20_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w3b7-113c.ts",
+      "size": 205,
+      "indirectSites": [
+        {
+          "iva": "0x6FC96BE4",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "static_table",
+          "tableBase": "0x6FD1BC1C",
+          "tableEnd": "0x6FD1BC20",
+          "tableStride": 4,
+          "tableCount": 1,
+          "targetVas": [
+            "0x6FCBD3B0"
+          ],
+          "proof": "Byte-identical twin of 0x6FC96A50: loads eax = dword ptr [0x6FD1BC1C] at 0x6FC96BD3 from read-only .rdata slot [2] of monsterEventDispatchTable (0x6FD1BC14) -> 0x6FCBD3B0 (AI_RunMonsterAI), and calls eax(pGame, pMonster, 0, 0) at 0x6FC96BE4."
+        }
+      ],
+      "bugsFixed": [
+        "Read [0x6FD1BC1C] and dispatch AI_RunMonsterAI113c(m, game, mon, 0, 0) when [0x6FD1BC1C] == 0x6FCBD3B0 and onPostModeCallback is omitted."
+      ]
+    },
+    {
+      "va": "0x6FCBEDB0",
+      "module": "D2Game",
+      "name": "SKILLS_FindClosestUnitCallback_6FCBEDB0",
+      "tsSymbol": "SKILLS_FindClosestUnitCallback_6FCBEDB0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w4b6-113c.ts",
+      "size": 149,
+      "indirectSites": [
+        {
+          "iva": "0x6FCBEDC0",
+          "opcodeHex": "ffd0",
+          "mnemonic": "call",
+          "operand": "eax",
+          "category": "caller_callback",
+          "tableBase": null,
+          "tableEnd": null,
+          "tableStride": null,
+          "tableCount": null,
+          "targetVas": [
+            "0x6FC47130"
+          ],
+          "proof": "Loads caller-supplied filter predicate eax = [[ecx+0x0C] + 0x10] at 0x6FCBEDB5 and calls eax([ecx], edx) at 0x6FCBEDC0. Whole-DLL PE relocation and call scan proves 0x6FCBEDB0 is referenced solely at 0x6FCC1082 inside 0x6FCC1000 (AURA_FindClosestUnitInRadius_6FCC1000), which has sole caller 0x6FC49000 (SKILLS_SrvDo029_ApplySingleTargetMonsterCurse_6FC49000, call 0x6FC490B9) passing 0x6FC47130 (SKILLS_CanUnownedMonsterUseSkillInMode12_6FC47130) at 0x6FC490B1."
+        }
+      ],
+      "bugsFixed": [
+        "Remove permissive ': 1' fallback when pfnFilter != 0 without hooks; directly dispatch 0x6FC47130 to SKILLS_CanUnownedMonsterUseSkillInMode12_6FC47130_113c and fail closed (0) for unknown non-zero filter pointers without a hook."
+      ]
+    },
+    {
+      "va": "0x6FCBEEB0",
+      "module": "D2Game",
+      "name": "SKILLS_ForEachUnitInSearchRadius_6FCBEEB0",
+      "tsSymbol": "SKILLS_ForEachUnitInSearchRadius_6FCBEEB0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w4b6-113c.ts",
+      "size": 296,
+      "indirectSites": [
+        {
+          "iva": "0x6FCBEFB9",
+          "opcodeHex": "ff5620",
+          "mnemonic": "call",
+          "operand": "dword ptr [esi + 0x20]",
+          "category": "caller_callback",
+          "tableBase": null,
+          "tableEnd": null,
+          "tableStride": null,
+          "tableCount": null,
+          "targetVas": [
+            "0x6FC2C8D0",
+            "0x6FC59910",
+            "0x6FC59930"
+          ],
+          "proof": "Validates !IsBadCodePtr([esi+0x20]) at 0x6FCBEF71 and calls [esi+0x20](pGame, pOwnerUnit, pCandidate, nSkillLevel, dwParam1C) per unit at 0x6FCBEFB9. Whole-DLL call/reloc scan proves 0x6FCBEEB0 has exactly 2 callers: (1) 0x6FC2CA20 (SKILLS_SrvDo004_NihlathakCorpseExplosion, call 0x6FC2CB19) storing 0x6FC2C8D0 at 0x6FC2CACC; (2) 0x6FCBF340 (SKILLS_ForEachUnitInCoordsRadius, call 0x6FCBF3A1), whose sole caller 0x6FC5F6D0 (MISSILE_SrvDo_RedemptionCorpsePulseAndStep, call 0x6FC5F7BC) passes 0x6FC59930 or 0x6FC59910."
+        }
+      ],
+      "bugsFixed": [
+        "Dispatch all 3 real caller callbacks (0x6FC2C8D0, 0x6FC59910, 0x6FC59930) when hooks.onIndirectCall is omitted instead of silently skipping every matching unit.",
+        "Also check IAT IsBadCodePtr slot 0x6FD18D14 alongside pfn==0 at 0x6FCBEF71 (line 0x10DB)."
+      ]
+    },
+    {
+      "va": "0x6FCDA5E0",
+      "module": "D2Game",
+      "name": "ACT4Q1_OnNpcMessage_6FCDA5E0",
+      "tsSymbol": "ACT4Q1_OnNpcMessage_6FCDA5E0_113c",
+      "kernFile": "src/d2kern-113c/game/k2-w8b2-113c.ts",
+      "size": 551,
+      "indirectSites": [
+        {
+          "iva": "0x6FCDA6E8",
+          "opcodeHex": "ff96f0000000",
+          "mnemonic": "call",
+          "operand": "dword ptr [esi + 0xf0]",
+          "category": "vtable_or_struct_table",
+          "tableBase": null,
+          "tableEnd": null,
+          "tableStride": null,
+          "tableCount": null,
+          "targetVas": [
+            "0x6FCD8A70"
+          ],
+          "proof": "Validates !IsBadCodePtr([esi+0xF0]) at 0x6FCDA6D2 and invokes D2QuestDataStrc.pfSeqFilter via call dword ptr [esi+0xF0] at 0x6FCDA6E8. Whole-DLL relocation scan proves 0x6FCDA5E0 is registered exclusively at 0x6FCDAEA5 in 0x6FCDAE40 (ACT4Q1_InitQuestData_6FCDAE40), which writes [esi+0xF0] = 0x6FCD8A70 (ACT4Q1_EnsureStartedOrInvokeLinkedQuestCallback_6FCD8A70) at 0x6FCDAEEA; no other D2Game function overwrites ACT4Q1+0xF0."
+        }
+      ],
+      "bugsFixed": [
+        "Fix debug broadcast message at 0x6FCDA635 from fabricated 'tyrael quest state 2' to exact .rdata 0x6FD1CC2C format output 'changing state to 2\\n' and zero-fill the full 0x100-byte stack buffer copied by NET_BroadcastSystemChatMessage_6FCEBE70_113c.",
+        "Dispatch [pQuestData+0xF0] == 0x6FCD8A70 to ACT4Q1_EnsureStartedOrInvokeLinkedQuestCallback_6FCD8A70_113c when pfnQuestCallbackF0 is omitted, and honor IAT IsBadCodePtr slot 0x6FD18D14."
+      ]
+    }
+  ]
+}

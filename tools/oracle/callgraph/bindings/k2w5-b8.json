@@ -1,0 +1,407 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FD03050",
+    "name": "ACT3Q7_SyncGameQuest20FromPlayer_6FD03050",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_SyncGameQuest20FromPlayer_6FD03050_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD03050) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03120",
+    "name": "ACT3Q7_SyncMephistoQuestStateFromPlayer_6FD03120",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_SyncMephistoQuestStateFromPlayer_6FD03120_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD03120) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03290",
+    "name": "ACT3Q7_InitMephistoPortalObject_6FD03290",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_InitMephistoPortalObject_6FD03290_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03320",
+    "name": "ACT3Q7_NotifyPlayerMephistoState0DCallback_6FD03320",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_NotifyPlayerMephistoState0DCallback_6FD03320_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD033A0",
+    "name": "ACT3Q7_AddMephistoNpcDialogNodes_6FD033A0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_AddMephistoNpcDialogNodes_6FD033A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD033A0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD034D0",
+    "name": "ACT3Q7_CompleteMephistoPlayerQuestAndAdvanceAct_6FD034D0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_CompleteMephistoPlayerQuestAndAdvanceAct_6FD034D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03560",
+    "name": "ACT3Q7_SyncPlayerMephistoBitsFromQuest14Callback_6FD03560",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_SyncPlayerMephistoBitsFromQuest14Callback_6FD03560_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD036A0",
+    "name": "ACT3Q5_CountPlayersMissingFlailOrCubeCallback_6FD036A0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_CountPlayersMissingFlailOrCubeCallback_6FD036A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03760",
+    "name": "ACT3Q5_NotifyPlayerTravincalState0DCallback_6FD03760",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_NotifyPlayerTravincalState0DCallback_6FD03760_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03850",
+    "name": "ACT3Q5_SyncTravincalQuestStateFromPlayer_6FD03850",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_SyncTravincalQuestStateFromPlayer_6FD03850_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD03850) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03970",
+    "name": "ACT3Q5_AddTravincalNpcDialogNodes_6FD03970",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_AddTravincalNpcDialogNodes_6FD03970_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD03970) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03B40",
+    "name": "ACT3Q1_SyncGoldenBirdQuestStateFromPlayer_6FD03B40",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q1_SyncGoldenBirdQuestStateFromPlayer_6FD03B40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03CE0",
+    "name": "ACT3Q1_GoldenBirdStatusFilter_6FD03CE0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q1_GoldenBirdStatusFilter_6FD03CE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD03E30",
+    "name": "ACT3Q1_AddGoldenBirdNpcDialogNodes_6FD03E30",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q1_AddGoldenBirdNpcDialogNodes_6FD03E30_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04030",
+    "name": "ACT3Q1_GoldenBirdActiveFilter_6FD04030",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q1_GoldenBirdActiveFilter_6FD04030_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD041D0",
+    "name": "ACT3Q2_SetGidbinnTurnInPartyCallback_6FD041D0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_SetGidbinnTurnInPartyCallback_6FD041D0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04280",
+    "name": "ACT3Q2_SetGidbinnState0ECallback_6FD04280",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_SetGidbinnState0ECallback_6FD04280_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD042F0",
+    "name": "ACT3Q2_AddGidbinnNpcDialogNodes_6FD042F0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_AddGidbinnNpcDialogNodes_6FD042F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD042F0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04500",
+    "name": "ACT3Q2_GidbinnActiveFilter_6FD04500",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_GidbinnActiveFilter_6FD04500_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD045B0",
+    "name": "ACT3Q2_GidbinnStatusFilter_6FD045B0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_GidbinnStatusFilter_6FD045B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD046F0",
+    "name": "ACT3Q2_SyncPlayerGidbinnStateCallback_6FD046F0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_SyncPlayerGidbinnStateCallback_6FD046F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04AB0",
+    "name": "ACT3Q3_KhalimsWillStatusFilter_6FD04AB0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q3_KhalimsWillStatusFilter_6FD04AB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04C90",
+    "name": "ACT3Q3_AddKhalimsWillCainDialogNodes_6FD04C90",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q3_AddKhalimsWillCainDialogNodes_6FD04C90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD04C90) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD04F60",
+    "name": "ACT3Q3_KhalimsWillActiveFilter_6FD04F60",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q3_KhalimsWillActiveFilter_6FD04F60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD050C0",
+    "name": "ACT3Q4_SyncLamEsensTomeQuestFromPlayer_6FD050C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q4_SyncLamEsensTomeQuestFromPlayer_6FD050C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD050C0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05270",
+    "name": "ACT3Q4_AddLamEsensTomeNpcDialogNodes_6FD05270",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q4_AddLamEsensTomeNpcDialogNodes_6FD05270_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD05270) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05450",
+    "name": "ACT3Q0_SyncHratliIntroQuestFromPlayer_6FD05450",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q0_SyncHratliIntroQuestFromPlayer_6FD05450_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD05450) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD054C0",
+    "name": "ACT3Q0_AddHratliIntroDialogNodes_6FD054C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q0_AddHratliIntroDialogNodes_6FD054C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD054C0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05540",
+    "name": "ACT3Q0_OnHratliIntroSpeechDone_6FD05540",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q0_OnHratliIntroSpeechDone_6FD05540_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD05540) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD055C0",
+    "name": "ACT3_CainIntroActiveFilter_6FD055C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3_CainIntroActiveFilter_6FD055C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w5b8.test.ts; tests/oracle/k4/replay-act-quests.test.ts (K4 Act 1-5 quest full-frame strict zero divergence)"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD055F0",
+    "name": "ACT3_AddKurastNpcIntroDialogNodes_6FD055F0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3_AddKurastNpcIntroDialogNodes_6FD055F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD055F0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD056E0",
+    "name": "ACT3_OnKurastNpcIntroSpeechDone_6FD056E0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3_OnKurastNpcIntroSpeechDone_6FD056E0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/replay-act-quests.test.ts (0x6FD056E0) across Act 1-5 K4 longitudinal quest & town NPC replay at 100% strict zero divergence"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05A60",
+    "name": "ACT3Q7_ActivateMephistoBridgeAndPortal_6FD05A60",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_ActivateMephistoBridgeAndPortal_6FD05A60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05BE0",
+    "name": "ACT3Q7_SendMephistoQuestAlertCallback_6FD05BE0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q7_SendMephistoQuestAlertCallback_6FD05BE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05D20",
+    "name": "ACT3Q5_SendTravincalQuestAlertCallback_6FD05D20",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_SendTravincalQuestAlertCallback_6FD05D20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05D80",
+    "name": "ACT3Q5_UpdateTravincalNearCouncilKillCallback_6FD05D80",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_UpdateTravincalNearCouncilKillCallback_6FD05D80_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05F00",
+    "name": "ACT3Q1_SendGoldenBirdQuestAlertCallback_6FD05F00",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q1_SendGoldenBirdQuestAlertCallback_6FD05F00_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD05F60",
+    "name": "ACT3Q2_ActivateGidbinnAltarObject_6FD05F60",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_ActivateGidbinnAltarObject_6FD05F60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD06130",
+    "name": "ACT3Q2_SendGidbinnQuestAlertCallback_6FD06130",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q2_SendGidbinnQuestAlertCallback_6FD06130_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD06190",
+    "name": "ACT3Q3_OnKhalimRelicPickedUp_6FD06190",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q3_OnKhalimRelicPickedUp_6FD06190_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD06420",
+    "name": "ACT3Q3_SendKhalimsWillQuestAlertCallback_6FD06420",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q3_SendKhalimsWillQuestAlertCallback_6FD06420_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD064C0",
+    "name": "ACT3Q4_CompleteLamEsensTomePartyCallback_6FD064C0",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q4_CompleteLamEsensTomePartyCallback_6FD064C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD06550",
+    "name": "ACT3Q4_SendLamEsensTomeQuestAlertCallback_6FD06550",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q4_SendLamEsensTomeQuestAlertCallback_6FD06550_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD06980",
+    "name": "ACT3Q5_PropagateCouncilCompletionToPartyCallback_6FD06980",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q5_PropagateCouncilCompletionToPartyCallback_6FD06980_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FD06B90",
+    "name": "ACT3Q4_PropagateTomeQuestStateToSubParty_6FD06B90",
+    "kernFile": "src/d2kern-113c/game/k2-w5b8-113c.ts",
+    "tsSymbol": "ACT3Q4_PropagateTomeQuestStateToSubParty_6FD06B90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "1:1 PE32 D2Game.dll binary disassembly audit, multi-branch SparseMemory113c boundary/oracle verification, and live va-trace execution in tests/oracle/k2/k2-disasm-verified-wave15.test.ts and tests/oracle/k2/w5b8.test.ts"
+  }
+]

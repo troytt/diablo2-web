@@ -1,0 +1,209 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5A360",
+    "name": "DRLGPRESET_RelinkMapPresetUnitsToRoomEx",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGPRESET_RelinkMapPresetUnitsToRoomEx113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86710",
+    "name": "SEED_GetSeeds",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "SEED_GetSeeds113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86720",
+    "name": "SEED_SetSeeds",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "SEED_SetSeeds113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86730",
+    "name": "SEED_GetLowSeed",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "SEED_GetLowSeed113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD867F0",
+    "name": "DRLGGRID_InitializeGridWindow",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_InitializeGridWindow113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86900",
+    "name": "DRLGGRID_InitializeGridCells",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_InitializeGridCells113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86A60",
+    "name": "DRLGGRID_ApplyBorderCellFlags",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_ApplyBorderCellFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors + PE byte-identity at VA 0x6FDEB244)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86B10",
+    "name": "DRLGGRID_ApplyAllCellFlags",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_ApplyAllCellFlags113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (5 real D2Common.dll vectors + PE byte-identity at VA 0x6FDEB244)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86BD0",
+    "name": "DRLGGRID_OpAndNegated",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_OpAndNegated113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86BE0",
+    "name": "DRLGGRID_OpOverwriteIfZero",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_OpOverwriteIfZero113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86BF0",
+    "name": "DRLGGRID_OpXor",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_OpXor113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86C00",
+    "name": "DRLGGRID_OpAnd",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_OpAnd113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86C10",
+    "name": "DRLGGRID_OpOr",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_OpOr113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86C20",
+    "name": "DRLGGRID_OpOverwrite",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_OpOverwrite113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD86CD0",
+    "name": "DRLGGRID_RasterizeThickLine",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGGRID_RasterizeThickLine113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (12 real D2Common.dll vectors + PE byte-identity at VA 0x6FDEB244)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD90C20",
+    "name": "DRLGOUTROOM_MapAct5PresetId",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGOUTROOM_MapAct5PresetId113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (5 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE36A8)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD90DB0",
+    "name": "DRLGOUTROOM_CheckAct5Preset",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGOUTROOM_CheckAct5Preset113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE36A8)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92920",
+    "name": "DRLGOUTDOORS_PickPresetFileIndex",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGOUTDOORS_PickPresetFileIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (5 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD92A70",
+    "name": "DRLGOUTDOORS_SpawnPresetInGrid",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGOUTDOORS_SpawnPresetInGrid113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD34D0",
+    "name": "DRLGTILESUB_TestStampRoomTemplate",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_TestStampRoomTemplate113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD37F0",
+    "name": "DRLGTILESUB_MatchRoomTemplate",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_MatchRoomTemplate113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (4 real D2Common.dll vectors)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD3990",
+    "name": "DRLGTILESUB_ApplyRoomTemplateCallbacks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_ApplyRoomTemplateCallbacks113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (5 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE36A8)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD3B30",
+    "name": "DRLGTILESUB_CheckRoomTemplateCallbacks",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_CheckRoomTemplateCallbacks113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-B013-drlg-grid.test.ts + tests/fixtures/oracle/k1/laneC/b013-vectors.ndjson (8 real D2Common.dll vectors + PE byte-identity at VA 0x6FDE36A8)"
+  }
+]

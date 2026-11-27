@@ -1,0 +1,110 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD5DC80",
+    "name": "PATH_StopMovementAndSnapToTileCenter",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_StopMovementAndSnapToTileCenter113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD686D0",
+    "name": "PATH_FindNonCollidingTargetPoint",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_FindNonCollidingTargetPoint113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85780",
+    "name": "PATH_ComputeSpecialFlag40000Path",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_ComputeSpecialFlag40000Path113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85800",
+    "name": "PATH_RemoveUnitCollisionFootprint",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RemoveUnitCollisionFootprint113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (8 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD859D0",
+    "name": "PATH_AddUnitCollisionFootprint",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AddUnitCollisionFootprint113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (7 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD85D40",
+    "name": "PATH_NudgeTargetOutOfImmediateCollision",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_NudgeTargetOutOfImmediateCollision113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9D6E0",
+    "name": "COLLISION_MoveUnitCollisionMask",
+    "kernFile": "src/d2kern-113c/common/collision.ts",
+    "tsSymbol": "COLLISION_MoveUnitCollisionMask113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (8 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB6C20",
+    "name": "PATH_RaycastGridLineCollision",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_RaycastGridLineCollision113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (8 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB71B0",
+    "name": "PATH_PickStepDirectionCandidate3",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_PickStepDirectionCandidate3_113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDC08F0",
+    "name": "PATH_IdaStar_SearchLoop",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_IdaStar_SearchLoop113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCB2C0",
+    "name": "PATH_AStar_IsTargetReachableOrHasNoTargetUnit",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_IsTargetReachableOrHasNoTargetUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCB3C0",
+    "name": "PATH_AStar_ExpandNodeNeighbors",
+    "kernFile": "src/d2kern-113c/common/path.ts",
+    "tsSymbol": "PATH_AStar_ExpandNodeNeighbors113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I10C-2.test.ts (6 real-DLL vectors; 79 total in tests/fixtures/oracle/k1/i10c-2-vectors.ndjson via k1r7-laneC-it10-emitter.c)"
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD75810",
+    "name": "ITEMS_AddChargedSkillsCostContribution",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_AddChargedSkillsCostContribution113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD75970",
+    "name": "ITEMS_AddSingleSkillStatsCostContribution",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_AddSingleSkillStatsCostContribution113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD76AD0",
+    "name": "ITEMS_CanItemBeSocketedByQuest",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CanItemBeSocketedByQuest113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD77090",
+    "name": "ITEMS_CanItemBeRepairedByNpc",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CanItemBeRepairedByNpc113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7A480",
+    "name": "ITEMS_GetMissileWeaponVelocity",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetMissileWeaponVelocity113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91340",
+    "name": "DRLGOUTPLACE_ConnectOutdoorsRoomsAndPlaceWalls",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTPLACE_ConnectOutdoorsRoomsAndPlaceWalls113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91730",
+    "name": "DRLGOUTPLACE_SpawnAct5Barricade421Preset",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTPLACE_SpawnAct5Barricade421Preset113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD95E50",
+    "name": "ITEMS_EvalItemPropertyList",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_EvalItemPropertyList113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD96830",
+    "name": "ITEMS_CraftModRollSockets",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_CraftModRollSockets113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9FA30",
+    "name": "SKILLS_CanUnitAllocateSkillPoint",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CanUnitAllocateSkillPoint113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9FB30",
+    "name": "SKILLS_CheckSkillLevelAndPrereqs",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CheckSkillLevelAndPrereqs113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9FE80",
+    "name": "SKILLS_ScaleValueByMasteryAndSkillParam1",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_ScaleValueByMasteryAndSkillParam1113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0C90",
+    "name": "SKILLS_EvalMissileParamCallback",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvalMissileParamCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA0D40",
+    "name": "SKILLS_GetWeaponMasteryPassiveStatId",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetWeaponMasteryPassiveStatId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA1ED0",
+    "name": "SKILLS_RemoveAllCurseAndDebuffStatesFromUnit",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_RemoveAllCurseAndDebuffStatesFromUnit113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i11b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r8-laneB-it11-emitter.c) replayed in tests/oracle/k1/laneB-I11B-2.test.ts"
+  }
+]

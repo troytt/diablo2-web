@@ -1,0 +1,4 @@
+Id	Name	Level	itype1	itype2	mod1code	mod1min	mod1max	mod2code	mod2min	mod2max
+cruel	Cruel	12	weap		maxdamage	30	40			
+sturdy	Sturdy	3	armo		defense	5	9			
+fine	Fine	5	weap	armo	maxdamage	2	4	defense	1	3

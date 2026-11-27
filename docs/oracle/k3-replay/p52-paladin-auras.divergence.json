@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-paladin-auras",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1700,
+  "strictHorizon": 1700,
+  "posHorizon": 1700,
+  "matchedKernelFrames": 1698,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "c544918119b8a6186e9da5b7aa92d9ceceaf6df5f3baaeab430c57a6ec0827a6",
+  "snapshotSha256": "5d754d364d1670994a40e024caa16d03bb35d669f0d75d44a4defe70933a2445"
+}

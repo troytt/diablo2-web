@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-barbarian-warcries",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1600,
+  "strictHorizon": 1600,
+  "posHorizon": 1600,
+  "matchedKernelFrames": 1598,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "e1acd441aa6a6b8114b7b83a7ebba2b9e8f479d26061b55974a26c86f1cdc37e",
+  "snapshotSha256": "ea6f058c2adf6e348754dd1d579e0feb8037fb9a6dc427443cd5cafe2cd404af"
+}

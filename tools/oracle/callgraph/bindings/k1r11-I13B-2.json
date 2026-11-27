@@ -1,0 +1,38 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD78D70",
+    "name": "ITEMS_WriteItemStreamAndSockets",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_WriteItemStreamAndSockets113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD79D00",
+    "name": "ITEMS_SerializeItemToBuffer",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SerializeItemToBuffer113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD79D60",
+    "name": "ITEMS_GetTransactionCost",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetTransactionCost113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-2-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-2.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD7A210",
+    "name": "ITEMS_GetRepairAllCost",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetRepairAllCost113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneD-ported29.test.ts (real-DLL vectors via k1r13-laneD-ported29-emitter.c -> k1r13-i14d-1.ndjson); tests/oracle/k1/laneB-I13B-2.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i13b-2-vectors.ndjson via k1r11-laneB-it13-emitter.c; status ported per sync-gates.py:241 indirectUnknown caller callback)"
+  }
+]

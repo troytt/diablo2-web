@@ -1,0 +1,29 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "types": [],
+    "noEmit": true
+  },
+  "include": [
+    "src/common/**/*.ts",
+    "src/common/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/client",
+    "src/client/**",
+    "src/d2kern-113c",
+    "src/d2kern-113c/**",
+    "src/server",
+    "src/server/**",
+    "src/baker",
+    "src/baker/**",
+    "src/netproto",
+    "src/netproto/**",
+    "tools",
+    "tools/**",
+    "tests",
+    "tests/**"
+  ]
+}

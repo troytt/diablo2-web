@@ -1,0 +1,164 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FDCEDC0",
+    "name": "DRLGOUTWILD_SpawnOptionalBorderPair",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTWILD_SpawnOptionalBorderPair113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCEE50",
+    "name": "DRLGOUTWILD_SpawnSpecialOutdoorEdgesAndWaypoint",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTWILD_SpawnSpecialOutdoorEdgesAndWaypoint113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCF180",
+    "name": "DRLGOUTWILD_SpawnAct1OutdoorPresetsByLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTWILD_SpawnAct1OutdoorPresetsByLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCF3A0",
+    "name": "DRLGOUTWILD_InitAct1OutdoorLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/outdoors.ts",
+    "tsSymbol": "DRLGOUTWILD_InitAct1OutdoorLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD3CA0",
+    "name": "DRLGTILESUB_LoadLvlSubDs1Grids",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_LoadLvlSubDs1Grids113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4190",
+    "name": "DRLGTILESUB_ApplySubThemeByIndex",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_ApplySubThemeByIndex113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4220",
+    "name": "DRLGTILESUB_StampRoomTemplate",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_StampRoomTemplate113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4500",
+    "name": "DRLGTILESUB_StampRandomTemplates",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_StampRandomTemplates113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4890",
+    "name": "DRLGTILESUB_StampMatchedTemplates",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_StampMatchedTemplates113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4AD0",
+    "name": "DRLGTILESUB_InitSubTheme",
+    "kernFile": "src/d2kern-113c/common/drlg/drlg-grid.ts",
+    "tsSymbol": "DRLGTILESUB_InitSubTheme113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD4E40",
+    "name": "DRLGOUTJUNG_SpawnRandomPresetRange",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnRandomPresetRange113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD50D0",
+    "name": "DRLGOUTJUNG_SpawnAct3KurastBazaarBorders",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnAct3KurastBazaarBorders113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD5220",
+    "name": "DRLGOUTJUNG_SpawnAct3LowerKurastBorders",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnAct3LowerKurastBorders113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD5360",
+    "name": "DRLGOUTJUNG_SpawnAct3GreatMarshBorders",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnAct3GreatMarshBorders113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD56C0",
+    "name": "DRLGOUTJUNG_SpawnAct3CityPresetsByLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnAct3CityPresetsByLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD5DF0",
+    "name": "DRLGOUTJUNG_SpawnAct2DryHillsBorders",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_SpawnAct2DryHillsBorders113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD5E20",
+    "name": "DRLGOUTJUNG_InitAct2OutdoorLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_InitAct2OutdoorLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDD61A0",
+    "name": "DRLGOUTJUNG_InitAct4OutdoorLevel",
+    "kernFile": "src/d2kern-113c/common/drlg/out-jung.ts",
+    "tsSymbol": "DRLGOUTJUNG_InitAct4OutdoorLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "tests/oracle/k1/laneC-I14C-3.test.ts (3 real-DLL vectors in tests/fixtures/oracle/k1/i14c-3-vectors.ndjson via k1r13-laneC-it14-emitter.c)"
+  }
+]

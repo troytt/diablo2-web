@@ -1,0 +1,243 @@
+{
+  "name": "k6-items-potions-belt-combat",
+  "description": "Item/belt/potion/scroll/gold & Blood Moor combat scenario: exercises 0x26 belt drink, 0x24/0x23/0x63 belt transfers, 0x17/0x16 ground drop & pickup, 0x19/0x18 inventory grid move, 0x1C/0x1A body unequip/equip, 0x60 weapon swap, 0x50 gold pile drop, 0x20 Town Portal scroll in Blood Moor, and 0x06 Bash kills with t4 item drops.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6/saves/k6-items-potions-belt-combat.d2s",
+  "difficulty": 0,
+  "frames": 340,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    350000000
+  ],
+  "oracleSetGold": [
+    2,
+    250000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "cap",
+      1,
+      4,
+      40
+    ],
+    [
+      2,
+      "lbl",
+      8,
+      4,
+      40
+    ],
+    [
+      2,
+      "lgl",
+      10,
+      4,
+      40
+    ],
+    [
+      2,
+      "spc",
+      11,
+      6,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 4,
+      "c2s": "3a004f",
+      "note": "+80 Strength for melee kill"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a023b",
+      "note": "+60 Dexterity for AR"
+    },
+    {
+      "frame": 6,
+      "c2s": "3a034f",
+      "note": "+80 Vitality"
+    },
+    {
+      "frame": 8,
+      "c2s": "26030000000000000000000000",
+      "note": "0x26 drink belt potion #3"
+    },
+    {
+      "frame": 10,
+      "c2s": "2404000000",
+      "note": "0x24 remove belt potion #4 to cursor"
+    },
+    {
+      "frame": 12,
+      "c2s": "230400000000000000",
+      "note": "0x23 put cursor potion #4 back into belt slot 0"
+    },
+    {
+      "frame": 14,
+      "c2s": "2405000000",
+      "note": "0x24 remove belt potion #5 to cursor"
+    },
+    {
+      "frame": 16,
+      "c2s": "1705000000",
+      "note": "0x17 drop cursor potion #5 to ground (t4 mode 3)"
+    },
+    {
+      "frame": 18,
+      "c2s": "16040000000500000000000000",
+      "note": "0x16 pick ground potion #5 into inventory"
+    },
+    {
+      "frame": 20,
+      "c2s": "6305000000",
+      "note": "0x63 shift-move inventory potion #5 back to belt"
+    },
+    {
+      "frame": 22,
+      "c2s": "1908000000",
+      "note": "0x19 pick identify scroll #8 from inventory to cursor"
+    },
+    {
+      "frame": 24,
+      "c2s": "1808000000020000000200000000000000",
+      "note": "0x18 place identify scroll #8 at inv (2,2)"
+    },
+    {
+      "frame": 26,
+      "c2s": "1c0100",
+      "note": "0x1C unequip helm (slot 1 -> cursor #9)"
+    },
+    {
+      "frame": 28,
+      "c2s": "1a0900000001000000",
+      "note": "0x1A re-equip helm #9 onto slot 1"
+    },
+    {
+      "frame": 30,
+      "c2s": "60",
+      "note": "0x60 swap to secondary weapon tab"
+    },
+    {
+      "frame": 32,
+      "c2s": "60",
+      "note": "0x60 swap back to primary weapon tab"
+    },
+    {
+      "frame": 34,
+      "c2s": "5001000000f4010000",
+      "note": "0x50 drop 500 gold pile onto ground"
+    },
+    {
+      "frame": 38,
+      "c2s": "030d161217",
+      "note": "run to (5645,5906)"
+    },
+    {
+      "frame": 58,
+      "c2s": "0314160617",
+      "note": "run to (5652,5894)"
+    },
+    {
+      "frame": 78,
+      "c2s": "032016fa16",
+      "note": "run to (5664,5882)"
+    },
+    {
+      "frame": 98,
+      "c2s": "032116f716",
+      "note": "run to (5665,5879)"
+    },
+    {
+      "frame": 120,
+      "c2s": "032216e416",
+      "note": "run to (5666,5860)"
+    },
+    {
+      "frame": 142,
+      "c2s": "032216d316",
+      "note": "run to (5666,5843)"
+    },
+    {
+      "frame": 164,
+      "c2s": "032116c316",
+      "note": "run to (5665,5827)"
+    },
+    {
+      "frame": 184,
+      "c2s": "032016b916",
+      "note": "run to (5664,5817)"
+    },
+    {
+      "frame": 202,
+      "c2s": "031e16aa16",
+      "note": "run to (5662,5802)"
+    },
+    {
+      "frame": 215,
+      "c2s": "20070000001e160000aa160000",
+      "note": "0x20 use Scroll of Town Portal (#7) in Blood Moor"
+    },
+    {
+      "frame": 222,
+      "c2s": "3b7e00",
+      "note": "0x3B learn Bash (126)"
+    },
+    {
+      "frame": 224,
+      "c2s": "3c7e000080ffffffff",
+      "note": "0x3C select Bash on left hand"
+    },
+    {
+      "frame": 226,
+      "c2s": "06010000000a000000",
+      "note": "0x06 Bash zombie #10"
+    },
+    {
+      "frame": 246,
+      "c2s": "06010000000a000000",
+      "note": "0x06 Bash zombie #10"
+    },
+    {
+      "frame": 266,
+      "c2s": "060100000009000000",
+      "note": "0x06 Bash zombie #9"
+    },
+    {
+      "frame": 286,
+      "c2s": "060100000009000000",
+      "note": "0x06 Bash zombie #9"
+    },
+    {
+      "frame": 306,
+      "c2s": "06010000000b000000",
+      "note": "0x06 Bash zombie #11"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scenario": "p52-item-defense",
+  "bootFrame": 2,
+  "lastGoldenFrame": 1600,
+  "strictHorizon": 1600,
+  "posHorizon": 1600,
+  "matchedKernelFrames": 1598,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "1e279cc9d75933e93b07bf2e08c9fa83ef0d1b983d3c806c242fae29594ba150",
+  "snapshotSha256": "66dbb0d9a2894d0045c0209d78016ecefb54d24051796ada6544725b007b4325"
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD9E8C0",
+    "name": "SKILLS_GetClassIdFromSkillId",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetClassIdFromSkillId113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9EA00",
+    "name": "SKILLS_EvaluateManaCost256ths",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_EvaluateManaCost256ths113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9EB00",
+    "name": "SKILLS_GetReqLevel",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetReqLevel113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F080",
+    "name": "SKILLS_GetSkillById",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetSkillById113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F0C0",
+    "name": "SKILLS_CalcMaxCallback",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CalcMaxCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F0D0",
+    "name": "SKILLS_CalcMinCallback",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_CalcMinCallback113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F0E0",
+    "name": "SKILLS_GetPassiveState",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetPassiveState113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F4C0",
+    "name": "SKILLS_GetBaseSkillLevelById",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetBaseSkillLevelById113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F510",
+    "name": "SKILLS_GetRequiredLevelForNextRank",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_GetRequiredLevelForNextRank113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD9F780",
+    "name": "SKILLS_MapPlayerAnimModeToMonsterMode",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "SKILLS_MapPlayerAnimModeToMonsterMode113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDA2E00",
+    "name": "DATATBLS_GetMonSeqTableRecord",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "DATATBLS_GetMonSeqTableRecord113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDB9DC0",
+    "name": "MISSILE_EvaluateElementalLength",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "MISSILE_EvaluateElementalLength113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FDCF5E0",
+    "name": "UNITS_GetUnitDistanceToCoordinates",
+    "kernFile": "src/d2kern-113c/common/skills.ts",
+    "tsSymbol": "UNITS_GetUnitDistanceToCoordinates113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/b012-vectors.json replayed in tests/oracle/k1/laneB-B012-skills.test.ts"
+  }
+]

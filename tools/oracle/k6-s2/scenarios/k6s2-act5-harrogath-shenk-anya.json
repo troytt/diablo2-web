@@ -1,0 +1,344 @@
+{
+  "name": "k6s2-act5-harrogath-shenk-anya",
+  "description": "Act 5 Harrogath + Frigid Highlands scenario: interacts with Malah (Trade + 0x32 Buy Tome + 0x29 ScrollToBook), Larzuk (Trade/Repair), Qual-Kehk (0x36 Hire Act 5 Barbarian Merc + 0x61 Equip + 0x26 Shift-Heal), and Deckard Cain (0x34), warps via Waypoint (0x49) with hired Barbarian Merc to Frigid Highlands (area 111), battles SuperUnique Eldritch the Rectifier + Enslaved + Siege Beast + Demon Imps, opens a Town Portal from Tome (0x20), and returns via TP.",
+  "seed": 12345,
+  "save": "tests/fixtures/oracle/k6-s2/saves/k6s2-act5-harrogath-shenk-anya.d2s",
+  "difficulty": 0,
+  "frames": 860,
+  "statIds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    39,
+    41,
+    43,
+    45
+  ],
+  "oracleSetExp": [
+    2,
+    31000000
+  ],
+  "oracleSetGold": [
+    2,
+    350000
+  ],
+  "oracleEquip": [
+    [
+      2,
+      "cap",
+      1,
+      6,
+      40
+    ],
+    [
+      2,
+      "lbl",
+      8,
+      6,
+      40
+    ]
+  ],
+  "oracleSnapshot": [
+    2
+  ],
+  "inputs": [
+    {
+      "frame": 3,
+      "c2s": "3a0009",
+      "note": "+10 Strength"
+    },
+    {
+      "frame": 4,
+      "c2s": "3a0204",
+      "note": "+5 Dexterity"
+    },
+    {
+      "frame": 5,
+      "c2s": "3a0309",
+      "note": "+10 Vitality (25/25 L40->L45 stat pts)"
+    },
+    {
+      "frame": 6,
+      "c2s": "40",
+      "note": "0x40 Act 5 quest log"
+    },
+    {
+      "frame": 10,
+      "c2s": "03dc13a213",
+      "note": "step to Malah (#7)"
+    },
+    {
+      "frame": 34,
+      "c2s": "130100000007000000",
+      "note": "0x13 Interact Malah (#7)"
+    },
+    {
+      "frame": 46,
+      "c2s": "2f0100000007000000",
+      "note": "0x2F NpcInit Malah"
+    },
+    {
+      "frame": 50,
+      "c2s": "38010000000700000000000000",
+      "note": "0x38 Open Malah Trade"
+    },
+    {
+      "frame": 56,
+      "c2s": "32070000002e0000000000000090010000",
+      "note": "0x32 Buy Tome of Town Portal (#46) from Malah"
+    },
+    {
+      "frame": 62,
+      "c2s": "300100000007000000",
+      "note": "0x30 NpcCancel Malah"
+    },
+    {
+      "frame": 66,
+      "c2s": "1905000000",
+      "note": "pick tsc (#5) to cursor"
+    },
+    {
+      "frame": 68,
+      "c2s": "29050000003b000000",
+      "note": "0x29 insert Scroll of TP (#5) into purchased Tome (#59)"
+    },
+    {
+      "frame": 72,
+      "c2s": "03ea139f13",
+      "note": "step back to spawn clearing"
+    },
+    {
+      "frame": 98,
+      "c2s": "03f213ad13",
+      "note": "BFS east to Larzuk 1"
+    },
+    {
+      "frame": 122,
+      "c2s": "030014ad13",
+      "note": "BFS east to Larzuk 2"
+    },
+    {
+      "frame": 146,
+      "c2s": "030e14af13",
+      "note": "BFS east to Larzuk 3"
+    },
+    {
+      "frame": 170,
+      "c2s": "031514ac13",
+      "note": "arrive at Larzuk (#1)"
+    },
+    {
+      "frame": 196,
+      "c2s": "130100000001000000",
+      "note": "0x13 Interact Larzuk (#1)"
+    },
+    {
+      "frame": 208,
+      "c2s": "2f0100000001000000",
+      "note": "0x2F NpcInit Larzuk"
+    },
+    {
+      "frame": 212,
+      "c2s": "38010000000100000000000000",
+      "note": "0x38 Open Larzuk Trade"
+    },
+    {
+      "frame": 218,
+      "c2s": "3501000000000000000000000000000080",
+      "note": "0x35 RepairAll at Larzuk"
+    },
+    {
+      "frame": 222,
+      "c2s": "300100000001000000",
+      "note": "0x30 NpcCancel Larzuk"
+    },
+    {
+      "frame": 228,
+      "c2s": "030f14b813",
+      "note": "Dijkstra Larzuk->Qual-Kehk 1"
+    },
+    {
+      "frame": 254,
+      "c2s": "030414c313",
+      "note": "Dijkstra Larzuk->Qual-Kehk 2"
+    },
+    {
+      "frame": 280,
+      "c2s": "03f813ce13",
+      "note": "Dijkstra Larzuk->Qual-Kehk 3 (past WP #5)"
+    },
+    {
+      "frame": 306,
+      "c2s": "03ec13d213",
+      "note": "Dijkstra Larzuk->Qual-Kehk 4"
+    },
+    {
+      "frame": 332,
+      "c2s": "03e013d213",
+      "note": "Dijkstra Larzuk->Qual-Kehk 5"
+    },
+    {
+      "frame": 358,
+      "c2s": "03d413d213",
+      "note": "Dijkstra Larzuk->Qual-Kehk 6"
+    },
+    {
+      "frame": 384,
+      "c2s": "03c413d513",
+      "note": "arrive within 3 tiles of Qual-Kehk (#10 at 5057, 5078)"
+    },
+    {
+      "frame": 416,
+      "c2s": "13010000000a000000",
+      "note": "0x13 Interact Qual-Kehk (#10)"
+    },
+    {
+      "frame": 430,
+      "c2s": "2f010000000a000000",
+      "note": "0x2F NpcInit Qual-Kehk"
+    },
+    {
+      "frame": 436,
+      "c2s": "38030000000a00000000000000",
+      "note": "0x38 Open Qual-Kehk Hire list"
+    },
+    {
+      "frame": 444,
+      "c2s": "360a000000572a0000",
+      "note": "0x36 Hire Act 5 Barbarian Mercenary (0x2A57)!"
+    },
+    {
+      "frame": 452,
+      "c2s": "30010000000a000000",
+      "note": "0x30 NpcCancel Qual-Kehk"
+    },
+    {
+      "frame": 458,
+      "c2s": "1c0100",
+      "note": "0x1C unequip Rare Cap (#9) to cursor"
+    },
+    {
+      "frame": 464,
+      "c2s": "610100",
+      "note": "0x61 Equip Rare Cap onto Act 5 Barbarian Merc helm!"
+    },
+    {
+      "frame": 470,
+      "c2s": "26010000000100000000000000",
+      "note": "0x26 Shift+Belt heal Act 5 Barbarian Merc!"
+    },
+    {
+      "frame": 478,
+      "c2s": "03d713e013",
+      "note": "step right next to Deckard Cain (#9)"
+    },
+    {
+      "frame": 510,
+      "c2s": "130100000009000000",
+      "note": "0x13 Interact Cain (#9)"
+    },
+    {
+      "frame": 522,
+      "c2s": "2f0100000009000000",
+      "note": "0x2F NpcInit Cain"
+    },
+    {
+      "frame": 526,
+      "c2s": "3409000000",
+      "note": "0x34 CainIdentifyItems"
+    },
+    {
+      "frame": 530,
+      "c2s": "300100000009000000",
+      "note": "0x30 NpcCancel Cain"
+    },
+    {
+      "frame": 536,
+      "c2s": "03e013d213",
+      "note": "route east from Cain 1"
+    },
+    {
+      "frame": 564,
+      "c2s": "03ec13d213",
+      "note": "route east from Cain 2"
+    },
+    {
+      "frame": 592,
+      "c2s": "03f713cc13",
+      "note": "arrive right next to Harrogath WP #5 (5114, 5069)"
+    },
+    {
+      "frame": 622,
+      "c2s": "130200000005000000",
+      "note": "0x13 Interact Harrogath WP #5"
+    },
+    {
+      "frame": 638,
+      "c2s": "49050000006f000000",
+      "note": "0x49 Waypoint -> Frigid Highlands (area 111)"
+    },
+    {
+      "frame": 650,
+      "c2s": "3c7a000000ffffffff",
+      "note": "activate Fanaticism aura (buffs Paladin + Barb Merc!)"
+    },
+    {
+      "frame": 654,
+      "c2s": "03b40ee613",
+      "note": "BFS north to Eldritch 1"
+    },
+    {
+      "frame": 680,
+      "c2s": "03a60ed813",
+      "note": "BFS north to Eldritch 2"
+    },
+    {
+      "frame": 706,
+      "c2s": "03980eca13",
+      "note": "engage Eldritch + Enslaved + Siege Beast + Imps!"
+    },
+    {
+      "frame": 732,
+      "c2s": "3c6a000080ffffffff",
+      "note": "select Zeal"
+    },
+    {
+      "frame": 734,
+      "c2s": "05910ec313",
+      "note": "Zeal Eldritch pack 1"
+    },
+    {
+      "frame": 758,
+      "c2s": "05910ec313",
+      "note": "Zeal Eldritch pack 2"
+    },
+    {
+      "frame": 782,
+      "c2s": "05900eb813",
+      "note": "engage Siege Beast & Demon Imps"
+    },
+    {
+      "frame": 806,
+      "c2s": "203b000000a40e0000d6130000",
+      "note": "0x20 cast Town Portal from Tome (#59) in Frigid Highlands"
+    },
+    {
+      "frame": 826,
+      "c2s": "13020000003a000000",
+      "note": "0x13 Enter Town Portal (#58) back to Harrogath!"
+    }
+  ]
+}

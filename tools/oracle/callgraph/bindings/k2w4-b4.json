@@ -1,0 +1,263 @@
+[
+  {
+    "module": "D2Game",
+    "va": "0x6FC22510",
+    "name": "STORM_TSListArraySetCount_6FC22510",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "STORM_TSListArraySetCount_6FC22510_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC309B0",
+    "name": "ITEMS_FallbackToNormalQualityAndFinalize_6FC309B0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "ITEMS_FallbackToNormalQualityAndFinalize_6FC309B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC8DD60",
+    "name": "OBJ_ScheduleObjectTrapEventOrSound_6FC8DD60",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "OBJ_ScheduleObjectTrapEventOrSound_6FC8DD60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC90FB0",
+    "name": "PLRTRADE_SavePlayerInventorySnapshot_6FC90FB0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "PLRTRADE_SavePlayerInventorySnapshot_6FC90FB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC93860",
+    "name": "PLRTRADE_ValidateTradeItemAndCancelSession_6FC93860",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "PLRTRADE_ValidateTradeItemAndCancelSession_6FC93860_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC96A10",
+    "name": "MONSTER_TickPathStepAndAnim_6FC96A10",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "MONSTER_TickPathStepAndAnim_6FC96A10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FC9CE40",
+    "name": "AI_ThinkWakeOrUnburrowSkill_6FC9CE40",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkWakeOrUnburrowSkill_6FC9CE40_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA1F50",
+    "name": "AI_ThinkMeleeBasic_6FCA1F50",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkMeleeBasic_6FCA1F50_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA2EC0",
+    "name": "AI_ThinkChargerRunOrAttack_6FCA2EC0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkChargerRunOrAttack_6FCA2EC0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA3AC0",
+    "name": "AI_ThinkDualAttackMelee_6FCA3AC0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkDualAttackMelee_6FCA3AC0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA4720",
+    "name": "AI_SelectHostileTargetByMetrics_6FCA4720",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_SelectHostileTargetByMetrics_6FCA4720_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA4800",
+    "name": "AI_ThinkPackFollowerMelee_6FCA4800",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkPackFollowerMelee_6FCA4800_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA77B0",
+    "name": "AI_ThinkBurrowerSpawner_6FCA77B0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkBurrowerSpawner_6FCA77B0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCA7A60",
+    "name": "AI_ThinkMonsterSpawnerNest_6FCA7A60",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "AI_ThinkMonsterSpawnerNest_6FCA7A60_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAA2A0",
+    "name": "NET_FlushPacket16_GroundUnitBatch_6FCAA2A0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_FlushPacket16_GroundUnitBatch_6FCAA2A0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAADE0",
+    "name": "NET_SendPacket7D_SetItemFlags_6FCAADE0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket7D_SetItemFlags_6FCAADE0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCAADE0) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB0F0",
+    "name": "NET_SendPacket9D_ItemActionOwned_6FCAB0F0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket9D_ItemActionOwned_6FCAB0F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCAB0F0) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB470",
+    "name": "NET_SendPacket26_ChatMessage_6FCAB470",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket26_ChatMessage_6FCAB470_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB750",
+    "name": "NET_SendPacket96_WalkVerify_6FCAB750",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket96_WalkVerify_6FCAB750_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCAB750) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB7F0",
+    "name": "NET_SendPacket95_LifeManaStamina_6FCAB7F0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket95_LifeManaStamina_6FCAB7F0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCAB7F0) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAB8C0",
+    "name": "NET_SendPacket18_HpManaPot_6FCAB8C0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket18_HpManaPot_6FCAB8C0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCAB8C0) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCABA90",
+    "name": "NET_SendPacketA3_AuraTargetSkill_6FCABA90",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacketA3_AuraTargetSkill_6FCABA90_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCABA90) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCABB10",
+    "name": "NET_SendPacketA0A1A2_StatDelta_6FCABB10",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacketA0A1A2_StatDelta_6FCABB10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Unit verification in tests/oracle/k2/w4b4.test.ts; Diff-verified 1:1 in dll\u2229ts across full-horizon strict zero-divergence K3 replay (p52-paladin-merc-aura F1700/1700) in tests/oracle/k3/replay-k3-p52-suite.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCABC20",
+    "name": "NET_SendPacket9E9FA0_StatValue_6FCABC20",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket9E9FA0_StatValue_6FCABC20_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCABC20) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCABE10",
+    "name": "NET_SendPacket19_1D1E1F_GoldUpdate_6FCABE10",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket19_1D1E1F_GoldUpdate_6FCABE10_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Live-executed in tests/oracle/k4/exitgate-s2c-vectors.test.ts (0x6FCABE10) across 1,440 real-DLL S2C D2TV binary vectors with 0 mismatches"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC280",
+    "name": "NET_SendPacket13B_UnitCoordEvent_6FCAC280",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket13B_UnitCoordEvent_6FCAC280_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC420",
+    "name": "NET_SendPacket8B_GameHandshake_6FCAC420",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_SendPacket8B_GameHandshake_6FCAC420_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCAC910",
+    "name": "NET_CheckPartyMemberStatSyncDelta_6FCAC910",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "NET_CheckPartyMemberStatSyncDelta_6FCAC910_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  },
+  {
+    "module": "D2Game",
+    "va": "0x6FCACFB0",
+    "name": "PARTY_BroadcastPlayerPartyIdPacket8D_6FCACFB0",
+    "kernFile": "src/d2kern-113c/game/k2-w4b4-113c.ts",
+    "tsSymbol": "PARTY_BroadcastPlayerPartyIdPacket8D_6FCACFB0_113c",
+    "status": "diff-verified",
+    "diffEvidence": "Wave 16 1:1 PE32 D2Game.dll disassembly audit (exact opcodes/offsets/callees verified + live va-trace) in tests/oracle/k2/k2-disasm-verified-wave16.test.ts and tests/oracle/k2/w4b4.test.ts"
+  }
+]

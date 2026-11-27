@@ -1,0 +1,15 @@
+{
+  "scenario": "k4-act1-quest",
+  "bootFrame": 2,
+  "lastGoldenFrame": 160,
+  "strictHorizon": 160,
+  "posHorizon": 160,
+  "matchedKernelFrames": 158,
+  "bootCheck": null,
+  "firstDivergence": null,
+  "firstPosDivergence": null,
+  "unportedHit": null,
+  "context": [],
+  "goldenSha256": "bbbc34234685b10e0b9d614c839f1512d3aa4d597da053da47ab1d93dd66983c",
+  "snapshotSha256": "267201c87786c884970cd6852577d0ec929e4ccc9595f6d72b6a51bafc43ad73"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "module": "D2Common",
+    "va": "0x6FD71EE0",
+    "name": "ITEMS_AutoPlaceIntoBelt",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_AutoPlaceIntoBelt113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD751C0",
+    "name": "ITEMS_GetItemColorColormap",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_GetItemColorColormap113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD77180",
+    "name": "ITEMS_SerializeItemBitstream",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_SerializeItemBitstream113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD78E80",
+    "name": "ITEMS_ComputeTransactionCost",
+    "kernFile": "src/d2kern-113c/common/items.ts",
+    "tsSymbol": "ITEMS_ComputeTransactionCost113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-1.test.ts"
+  },
+  {
+    "module": "D2Common",
+    "va": "0x6FD91A20",
+    "name": "DRLGOUTANIM_PlaceLevelPresets",
+    "kernFile": "src/d2kern-113c/tables/anim-tbls-113c.ts",
+    "tsSymbol": "DRLGOUTANIM_PlaceLevelPresets113c",
+    "status": "diff-verified",
+    "diffEvidence": "Real D2Common.dll differential vectors in tests/fixtures/oracle/k1/i13b-1-vectors.ndjson (emitted by tools/oracle/vectors/k1r11-laneB-it13-emitter.c) replayed in tests/oracle/k1/laneB-I13B-1.test.ts"
+  }
+]
